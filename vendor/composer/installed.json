@@ -1,0 +1,35 @@
+[
+    {
+        "name": "pds/skeleton",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-pds/skeleton.git",
+            "reference": "95e476e5d629eadacbd721c5a9553e537514a231"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-pds/skeleton/zipball/95e476e5d629eadacbd721c5a9553e537514a231",
+            "reference": "95e476e5d629eadacbd721c5a9553e537514a231",
+            "shasum": ""
+        },
+        "time": "2017-01-25T23:30:41+00:00",
+        "bin": [
+            "bin/pds-skeleton"
+        ],
+        "type": "standard",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Pds\\Skeleton\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "CC-BY-SA-4.0"
+        ],
+        "description": "Standard for PHP package skeletons.",
+        "homepage": "https://github.com/php-pds/skeleton"
+    }
+]
