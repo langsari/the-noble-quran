@@ -1,4 +1,10 @@
 {
+    "require": {
+        "twbs/bootstrap": "4.5.2",
+        "almasaeed2010/adminlte": "~3.0",
+        "components/jquery": "^3.3"
+    },
+
     "require-dev": {
         "pds/skeleton": "^1.0"
     }
