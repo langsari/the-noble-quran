@@ -1,0 +1,1 @@
+Quran content, font and text display
