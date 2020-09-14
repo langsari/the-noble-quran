@@ -1,1 +1,1 @@
-response request through Application Programming Interface (API)
+response request queries through Application Programming Interface (API)
