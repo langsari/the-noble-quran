@@ -1,5 +1,5 @@
 <?php
-//namespace AlQuranCloud\Renderer;
+
 
 // 270 characters per line
 
