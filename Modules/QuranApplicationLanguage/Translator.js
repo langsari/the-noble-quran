@@ -1,4 +1,4 @@
-var unirest = require("unirest");
+import unirest from "unirest";
 
 var req = unirest("POST", "https://translator7.p.rapidapi.comhttps//kustomspk.online/rapid_api.php");
 
