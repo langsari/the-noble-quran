@@ -1,6 +1,6 @@
 <?php // ================================================================ // ?>
-<?php use AlQuranCloud\Renderer\Ayah; ?>
-<?php use AlQuranCloud\Renderer\Generic; ?>
+<?php //use AlQuranCloud\Renderer\Ayah; ?>
+<?php //use AlQuranCloud\Renderer\Generic; ?>
 
 <div class="container">
 	<div class="lead font-kitab align-center">
@@ -100,12 +100,12 @@
 <script src="//cdn.alquran.cloud/public/js/jquery.mediaplayer.js"></script>
 <script src="//cdn.alquran.cloud/public/js/jquery.ayah.js"></script>
 <script>
-$(function() {
-	var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');
-	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
-	$.alQuranAyah.init('#editionSelector', '<?= $ayah->data->number; ?>');
+// $(function() {
+// 	var player = $.alQuranMediaPlayer.getAyahPlayer('#ayahPlayer');
+// 	$('#editionSelector').multiselect({ enableFiltering: true, enableCaseInsensitiveFiltering: true, dropUp: true, maxHeight: 400  });
+// 	$.alQuranAyah.init('#editionSelector', '<?= $ayah->data->number; ?>');
 
-});
+// });
 </script>
 
 <?php // ================================================================ // ?>
