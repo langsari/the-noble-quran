@@ -1,6 +1,7 @@
 <?php
 //namespace AlQuranCloud\Renderer;
-namespace QuranSearch;
+//namespace QuranSearch;
+namespace QuranSearch\Renderer;
 class Generic
 {
     public static function filterByLanguage($results, array $languages)
