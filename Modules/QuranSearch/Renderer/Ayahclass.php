@@ -2,7 +2,7 @@
 
 
 // 270 characters per line
-
+namespace QuranSearch\Renderer;
 class Ayah
 {
     public static function renderAyahEndingInArabic($number)

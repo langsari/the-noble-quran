@@ -1,6 +1,6 @@
 <?php
 
-
+namespace QuranSearch\Renderer;
 class Quran
 {
     public static function renderSurahHeaderRow($surah)

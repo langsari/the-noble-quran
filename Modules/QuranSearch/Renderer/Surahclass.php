@@ -1,5 +1,5 @@
 <?php
-namespace AlQuranCloud\Renderer;
+namespace QuranSearch\Renderer;
 
 class Surah
 {
