@@ -4,10 +4,9 @@ UI Language Selection
 Choose Languages using in web app,
 
 Method :
-Get Translator API 
-Export module 
+Use symfony translation library
 
 
-Sources: 
-API
-- https://rapidapi.com/w3care3/api/translator7
+Sources Ref: 
+Symfony
+- https://symfony.com/doc/current/translation.html
