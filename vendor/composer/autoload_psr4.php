@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Contracts\\Translation\\' => array($vendorDir . '/symfony/translation-contracts'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
