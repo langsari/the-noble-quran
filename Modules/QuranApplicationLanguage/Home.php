@@ -5,6 +5,7 @@
 </head>
 <body>
     <?php
+
     use Symfony\Component\Translation\Translator;
     use Symfony\Component\Translation\MessageSelector;
     ?>
