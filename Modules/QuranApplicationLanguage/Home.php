@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Quran.com</title>
 </head>
 <body>
     <?php
+    include ('M:\University Works\Modern Language\the-noble-quran\vendor\autoload.php');
 
-    use Symfony\Component\Translation\Translator;
-    use Symfony\Component\Translation\MessageSelector;
-    ?>
-    <?php
-    $translator = new Translator('fr_FR', new MessageSelector());
-    ?>
-    <?php
-    $translator->addResource('array', array(
-        'Hello World!' => 'Bonjour',
-    ), 'fr_FR');
-    ?>
-    <?php
-    echo "Hello World!";
+    $client = new \Goutte\Client();
+    $scrapping = $client->request('GET', 'https://quran.com/?local=en');
+    $fullhtmlpage = $scrapping->html();
     ?>
 </body>
 </html>
