@@ -19,11 +19,11 @@
             $quran_xpath = new DOMXPath($quran_doc);
 
             //get all the h2's with an id
-            $quran_row = $quran_xpath->query('//div[@class]');
+            $quran_header = $quran_xpath->query('//div[@class="container-fluid"]');
 
-            if($quran_row->length > 0){
-                foreach($quran_row as $row){
-                    echo $row->nodeValue . "<br/>";
+            if($quran_header->length > 0){
+                foreach($quran_header as $row){
+                    echo $row->nodeValue . "<a/>";
                 }
             }
         }
