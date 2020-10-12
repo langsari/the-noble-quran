@@ -5,28 +5,19 @@
 </head>
 <body>
     <?php
-        $html = file_get_contents('https://quran.com/?local=en'); //get the html returned from the following url
+    //Here is webscraping code section 
+        include('M:\University Works\Modern Language\the-noble-quran\src\simple_html_dom.php');
 
-        $quran_doc = new DOMDocument();
+        $quranPage = file_get_html('https://quran.com/?local=en');
+        echo $quranPage->find('title',0)->plaintext;
 
-        libxml_use_internal_errors(TRUE); //disable libxml errors
-
-        if(!empty($html)){ //if any html is actually returned
-
-            $quran_doc->loadHTML($html);
-            libxml_clear_errors(); //remove errors for yucky html
-            
-            $quran_xpath = new DOMXPath($quran_doc);
-
-            //get all the h2's with an id
-            $quran_header = $quran_xpath->query('//div[@class="container-fluid"]');
-
-            if($quran_header->length > 0){
-                foreach($quran_header as $row){
-                    echo $row->nodeValue . "<a/>";
-                }
-            }
+        $nav = $quranPage->find('div[class="container-fluid"]',0);
+        $nav_array = $nav->find('ul');
+        //Iterate over navbar for finding the needed elements inside nav
+        for($i = 0; $i < sizeof($nav_array); $i++){
+            echo $nav_array[$i];
         }
+
     ?>
 </body>
 </html>
