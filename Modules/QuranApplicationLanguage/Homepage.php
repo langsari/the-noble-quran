@@ -58,7 +58,7 @@
                             
     <div class='container-sm'>
                                 <!------------------------------------- Qicklink -------------------------->
-        <ul class="nav justify-content-center">
+        <ul class="nav justify-content-center mb-5">
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Quick links</a>
             </li>
@@ -85,17 +85,117 @@
             </li>
         </ul>
         <div></div>
-        
+
                         <!------------------------------------- Ayat --------------------------------->
-        <div class="container">
+        <!-- Firt row -->
+        <div class="container mb-5">
             <div class="row">
-                <div class="col">col</div>
-                <div class="col">col</div>
-                <div class="w-100"></div>
-                <div class="col">col</div>
-                <div class="col">col</div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
             </div>
-    </div>    
+        </div>
+        <!-- Second row -->
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+            </div>
+        </div>
+        <!-- Second row -->
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+            </div>
+        </div>
+        <!-- Third row -->
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+                    <!------------------------------------footer -------------------------------------------------------------->
+
+    <div class="jumbotron jumbotron-fluid mb-0">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
