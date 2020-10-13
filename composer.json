@@ -5,7 +5,7 @@
         "components/jquery": "^3.3",
         "guzzlehttp/guzzle": "^7.0",
         "league/csv": "^9.6",
-        "symfony/http-foundation": "^5.1"
+        "symfony/http-foundation": "^5.1",
         "symfony/translation": "^5.1",
     },
 
