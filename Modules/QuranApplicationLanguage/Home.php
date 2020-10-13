@@ -14,15 +14,12 @@
                 //Requests via url
                 $quranPage = file_get_html('https://quran.com/?local=en');
 
-                $hello = 'hello';
-                
                 //Navbar Scrp
                 $nav = $quranPage->find('div[class="container-fluid"]',0);
                 $nav_array = $nav->find('ul[class="hidden-xs hidden-sm nav navbar-nav navbar-right"]');
                 //Iterate over navbar for finding the needed elements inside nav
                 for($i = 0; $i < sizeof($nav_array); $i++){
                     echo $nav_array[$i];
-                    echo $hello;
                     echo "<br>";
                 };
             ?>

@@ -13,7 +13,7 @@
   <body>
 
                              <!-------------------------- Navbar ----------------------------------->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="#">Quran.com</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">English</a>
                     <a class="dropdown-item" href="#">Thai</a>
-                    <a class="dropdown-item" href="#">Melayu</a>
+                    <a class="dropdown-item" href="#">Indonesia</a>
                 </div>
             </li>
         </ul>
@@ -92,7 +92,8 @@
             <div class="row">
                 <div class="col mr-5">
                    <h1>سورةالفاتة</h1>
-                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <p class='mb-0'>Surah Al-Fatihah</p>
+                   <p>The Opener</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
                 <div class="col mr-5">
