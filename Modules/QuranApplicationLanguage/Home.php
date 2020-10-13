@@ -28,8 +28,5 @@
             ?>
         </div>
     </div>
-    <?php
-        $quranBody = $quranPage->find('div[class="_3L7utArEPWqCQEMpZxj92J"]')->find('div')
-    ?>
 </body>
 </html>
