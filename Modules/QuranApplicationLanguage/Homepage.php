@@ -41,6 +41,7 @@
             </li>
         </ul>
     </div>
+    
     </nav>
 
                               <!----------------------------- Jumbotron --------------------------------->
@@ -56,7 +57,7 @@
     </div>
 
                             
-    <div class='container-sm'>
+    <div class='container'>
                                 <!------------------------------------- Qicklink -------------------------->
         <ul class="nav justify-content-center mb-5">
             <li class="nav-item">
@@ -84,54 +85,77 @@
                 <a class="nav-link" href="#">Ayat-Kursi</a>
             </li>
         </ul>
-        <div></div>
+
+                     <!------------------------------------------- Sidebar ------------------------------------------------------------------------>
+    <div class="wrapper position-absolute" style="left:50px">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Go by verses</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <p>Select verses</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
                         <!------------------------------------- Ayat --------------------------------->
         <!-- Firt row -->
         <div class="container mb-5">
             <div class="row">
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p class='mb-0'>Surah Al-Fatihah</p>
                    <p>The Opener</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
-                   <h1>سورةالفاتة</h1>
-                   <p>Surah Al-Fatihah (The Opener)</p>
-                   <button type="button" class="btn btn-primary">Read</button>
-                </div>
-            </div>
-        </div>
-        <!-- Second row -->
-        <div class="container mb-5">
-            <div class="row">
-                <div class="col mr-5">
-                   <h1>سورةالفاتة</h1>
-                   <p>Surah Al-Fatihah (The Opener)</p>
-                   <button type="button" class="btn btn-primary">Read</button>
-                </div>
-                <div class="col mr-5">
-                   <h1>سورةالفاتة</h1>
-                   <p>Surah Al-Fatihah (The Opener)</p>
-                   <button type="button" class="btn btn-primary">Read</button>
-                </div>
-                <div class="col mr-5">
-                   <h1>سورةالفاتة</h1>
-                   <p>Surah Al-Fatihah (The Opener)</p>
-                   <button type="button" class="btn btn-primary">Read</button>
-                </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
@@ -141,22 +165,47 @@
         <!-- Second row -->
         <div class="container mb-5">
             <div class="row">
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+            </div>
+        </div>
+        <!-- Second row -->
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col mr-5 border border-primary p-1 rounded">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5 border border-primary p-1 rounded">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5 border border-primary p-1 rounded">
+                   <h1>سورةالفاتة</h1>
+                   <p>Surah Al-Fatihah (The Opener)</p>
+                   <button type="button" class="btn btn-primary">Read</button>
+                </div>
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
@@ -166,22 +215,22 @@
         <!-- Third row -->
         <div class="container mb-5">
             <div class="row">
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
                 </div>
-                <div class="col mr-5">
+                <div class="col mr-5 border border-primary p-1 rounded">
                    <h1>سورةالفاتة</h1>
                    <p>Surah Al-Fatihah (The Opener)</p>
                    <button type="button" class="btn btn-primary">Read</button>
