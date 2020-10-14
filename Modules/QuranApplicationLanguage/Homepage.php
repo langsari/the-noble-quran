@@ -57,7 +57,7 @@
     </div>
 
                             
-    <div class='container'>
+    <div class='container'> 
                                 <!------------------------------------- Qicklink -------------------------->
         <ul class="nav justify-content-center mb-5">
             <li class="nav-item">
@@ -90,13 +90,13 @@
     <div class="wrapper position-absolute" style="left:50px">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Go by verses</h3>
+                <h3>Go by</h3>
             </div>
             <ul class="list-unstyled components">
-                <p>Select verses</p>
+                <p>Select verses and Surah <br> you want to go to</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <a href="#verse" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Verses</a>
+                    <ul class="collapse list-unstyled" id="verse">
                         <li>
                             <a href="#">Home 1</a>
                         </li>
@@ -108,28 +108,21 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+            </ul>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#surah" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Surah</a>
+                    <ul class="collapse list-unstyled" id="surah">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="#">Home 1</a>
                         </li>
                         <li>
-                            <a href="#">Page 2</a>
+                            <a href="#">Home 2</a>
                         </li>
                         <li>
-                            <a href="#">Page 3</a>
+                            <a href="#">Home 3</a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
                 </li>
             </ul>
         </nav>
