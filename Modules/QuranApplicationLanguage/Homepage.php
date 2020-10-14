@@ -64,7 +64,7 @@
                 <a class="nav-link disabled" href="#">Quick links</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Surah Al-Mulk</a>
+                <a class="nav-link" href="#">Surah Al-Fatihah</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">|</a>
