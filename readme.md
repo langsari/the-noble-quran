@@ -12,3 +12,8 @@ download sqlite [here](https://www.sqlite.org/download.html). installation tutor
   [here](https://github.com/langsari/the-noble-quran/blob/quran-database/dbConTest.php)
 
 2.Inside the file, change the file name to your database file. run it on a browser.
+
+```php
+    //change test.db to your database file (.db) name
+    $mypdo = new PDO('sqlite:test.db');
+```
