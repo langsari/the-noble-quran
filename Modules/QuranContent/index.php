@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-<title>The Noble Quran</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="tablestyle.css">
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -17,9 +18,7 @@
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      
+
     </a>
   </div>
 
@@ -35,18 +34,44 @@
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-  
+   
   </div>
 </div>
+<div>
+<?php include 'conn.php';?>
+<table width="650" border="1">
+  <tr>
+    <th width="91"> <div align="center">ID </div></th>
+    <th width="98"> <div align="center">Name</div></th>
+    <th width="198"> <div align="center">Type </div></th>
+    <th width="97"> <div align="center">Verses </div></th>
+    <th width="59"> <div align="center">Page </div></th>
+  </tr>
+<?php
+while($result=mysqli_fetch_array($query,MYSQLI_ASSOC))
+{
+?>
+  <tr>
+    <td><div align="center"><?php echo $result["ID"];?></div></td>
+    <td><?php echo $result["name"];?></td>
+    <td><?php echo $result["type"];?></td>
+    <td><div align="center"><?php echo $result["verses"];?></div></td>
+    <td align="right"><?php echo $result["page"];?></td>
+  </tr>
+<?php
+}
+?>
+</table>
+<?php
+mysqli_close($conn);
+?>
+</div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
- 
-      
-    </div>
 
 
- 
+
+
+
 
 
  
