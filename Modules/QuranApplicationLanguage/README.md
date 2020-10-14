@@ -1,7 +1,8 @@
+Resouces :
+Homepage.php => PHP Webpage for displaying the module
+
 Goals :
-Internationalize application;
-UI Language Selection
-Choose Languages using in web app,
+Change international languages immidiately 
 
 Method :
 Use symfony translation library
@@ -11,5 +12,4 @@ Sources Ref:
 Symfony
 - https://symfony.com/doc/current/translation.html
 
-Resouce :
-Homepage.php => PHP Webpage for displaying the module
+
