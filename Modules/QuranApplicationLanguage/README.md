@@ -1,23 +1,10 @@
 Resouces :
-Homepage.php => PHP Webpage for displaying the module
+index.php => Quran webpage that's used for testing my module
+Quarn_translation => Dir for the module
 
 Goals :
 Change international languages immidiately 
 
 Method :
-Use symfony translation library
-
-
-
-Sources Ref: 
-Symfony
-- https://symfony.com/doc/current/translation.html
-
-
-
-
-
-Sources Ref: 
-Symfony
-- https://symfony.com/doc/current/translation.html
+Use symfony translation library => https://symfony.com/doc/current/translation.html
 
