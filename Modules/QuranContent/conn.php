@@ -7,10 +7,11 @@
     $userPassword = '';
     $dbName = 'quran';
 
+  
     $conn = mysqli_connect($serverName, $userName, $userPassword, $dbName);
 
-    $sql = 'SELECT * FROM quran_nam';
+    $sql = "SELECT * FROM quran_nam  ";
 
     $query = mysqli_query($conn, $sql);
-
+   
 ?>

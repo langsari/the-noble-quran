@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>The Noble Quran</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -25,38 +25,39 @@
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-   
+
   </div>
 </div>
 <div>
 <?php include 'conn.php';?>
-<table width="650" border="1">
+
+<table class="container">
   <tr>
-    <th width="91"> <div align="center">ID </div></th>
-    <th width="98"> <div align="center">Name</div></th>
-    <th width="198"> <div align="center">Type </div></th>
-    <th width="97"> <div align="center">Verses </div></th>
-    <th width="59"> <div align="center">Page </div></th>
+    <th width="20"> <div align="center">ID </div></th>
+    <th width="50"> <div align="center">Name</div></th>
+    <th width="50"> <div align="center">Type </div></th>
+    <th width="20"> <div align="center">Verses </div></th>
+    <th width="20"> <div align="center">Page </div></th>
+    <th width="50"> <div align="center">Read </div></th>
   </tr>
 <?php
 while($result=mysqli_fetch_array($query,MYSQLI_ASSOC))
 {
 ?>
   <tr>
-    <td><div align="center"><?php echo $result["ID"];?></div></td>
-    <td><?php echo $result["name"];?></td>
-    <td><?php echo $result["type"];?></td>
-    <td><div align="center"><?php echo $result["verses"];?></div></td>
-    <td align="right"><?php echo $result["page"];?></td>
+    <td align="center"><?php echo $result["ID"];?></td>
+    <td align="center"><?php echo $result["name"];?></td>
+    <td align="center"><?php echo $result["type"];?></td>
+    <td align="center"><?php echo $result["verses"];?></td>
+    <td align="center"><?php echo $result["page"];?></td>
+    <td align="center"><a href="edit.php?ID=<?php echo $result["ID"];?>">Read</a></td>
   </tr>
 <?php
 }
