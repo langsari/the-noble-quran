@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="tablestyle.css">
@@ -35,9 +36,20 @@
 
   </div>
 </div>
-<div>
+<div class="chapter-list">
+<div >
 <?php include 'conn.php';?>
-
+<div class="container" role="tablist">
+  <ul class="nav nav-tabs">
+    <li>
+    <a class="nav-link active" data-toggle="tab" href="#chapters" role="tab" aria-selected="true" aria-controls="chapters" id="chapters-tab" tabindex="0" data-controller="track" data-name="chapters-tab" data-category="chapters">
+          <span class="ar">سورة</span></a>
+    </li>
+    <li>
+    <a class="nav-link active" data-toggle="tab" href="#chapters" role="tab" aria-selected="true" aria-controls="chapters" id="chapters-tab" tabindex="0" data-controller="track" data-name="chapters-tab" data-category="chapters">
+          <span class="ar">الجزء</span></a>
+    </li>
+  </ul>
 <table class="container">
   <tr>
     <th width="20"> <div align="center">ID </div></th>
@@ -63,6 +75,8 @@ while($result=mysqli_fetch_array($query,MYSQLI_ASSOC))
 }
 ?>
 </table>
+</div>
+</div>
 <?php
 mysqli_close($conn);
 ?>

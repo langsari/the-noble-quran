@@ -6,10 +6,11 @@
         "guzzlehttp/guzzle": "^7.0",
         "league/csv": "^9.6",
         "symfony/http-foundation": "^5.1",
-        "symfony/translation": "^5.1",
+        "symfony/translation": "^5.1"
     },
 
     "require-dev": {
-        "pds/skeleton": "^1.0"
+        "pds/skeleton": "^1.0",
+        "squizlabs/php_codesniffer": "^3.5"
     }
 }
