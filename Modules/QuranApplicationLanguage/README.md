@@ -1,12 +1,10 @@
+Resouces :
+index.php => Quran webpage that's used for testing my module
+Quarn_translation => Dir for the module
+
 Goals :
-Internationalize application;
-UI Language Selection
-Choose Languages using in web app,
+Change international languages immidiately 
 
 Method :
-Use symfony translation library
+Use symfony translation library => https://symfony.com/doc/current/translation.html
 
-
-Sources Ref: 
-Symfony
-- https://symfony.com/doc/current/translation.html
