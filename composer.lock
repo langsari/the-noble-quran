@@ -176,7 +176,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.0-dev",
             "name": "fabpot/goutte",
             "version": "v4.0.0",
             "source": {
@@ -210,7 +210,7 @@
             "autoload": {
                 "psr-4": {
                     "GuzzleHttp\\Stream\\": "src/"
-                }
+                },
                     "Goutte\\": "Goutte"
                 },
                 "exclude-from-classmap": [
@@ -285,8 +285,10 @@
                 }
             ],
             "description": "Fork of guzzle/RingPHP (abandoned) to be used with elasticsearch-php",
-            "time": "2020-02-14T23:51:21+00:00"
+            "time": "2020-02-14T23:51:21+00:00",
 
+            "authors": [
+                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 }
@@ -999,7 +1001,7 @@
             "extra": {
                 "branch-alias": {
 
-                    "dev-master": "5.1-dev"
+                    "dev-master": "5.1-dev",
                     "dev-master": "2.2-dev"
                 },
                 "thanks": {
@@ -1064,7 +1066,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5"
+                "php": ">=7.2.5",
 
             "time": "2020-09-07T11:33:47+00:00"
         },
@@ -1103,7 +1105,7 @@
             "autoload": {
                 "psr-4": {
 
-                    "Symfony\\Component\\CssSelector\\": ""
+                    "Symfony\\Component\\CssSelector\\": "",
 
                     "Symfony\\Component\\ErrorHandler\\": ""
 
@@ -1164,7 +1166,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.1",
 
             "description": "Symfony ErrorHandler Component",
             "homepage": "https://symfony.com",
@@ -1224,8 +1226,8 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "function.php"
+                "files": {
+                    "function.php":'',
 
                     "dev-master": "5.1-dev"
                 }

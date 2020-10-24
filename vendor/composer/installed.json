@@ -174,7 +174,7 @@
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.0-dev"
+                "dev-master": "3.0-dev",
         "name": "fabpot/goutte",
         "version": "v4.0.0",
         "version_normalized": "4.0.0.0",
@@ -207,13 +207,12 @@
                 "dev-master": "4.0-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "dist" ,
         "autoload": {
             "psr-4": {
                 "GuzzleHttp\\Stream\\": "src/"
-            }
-                "Goutte\\": "Goutte"
             },
+            "Goutte\\": "Goutte",
             "exclude-from-classmap": [
                 "Goutte/Tests"
             ]
