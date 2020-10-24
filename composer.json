@@ -22,7 +22,8 @@
         "symfony/finder": "^5.1",
         "symfony/intl": "^5.1",
         "symfony/http-kernel": "^5.1",
-        "symfony/serializer": "^5.1"
+        "symfony/serializer": "^5.1",
+        "twig/twig": "3.0"
 
     },
     "require-dev": {
