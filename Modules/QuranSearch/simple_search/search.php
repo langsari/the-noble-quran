@@ -23,7 +23,7 @@
 	$query = $_GET['query']; 
 	// gets value sent over search form
 	
-	$min_length = 3;
+	$min_length = 1;
 	// you can set minimum length of the query if you want
 	
 	if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
@@ -49,7 +49,8 @@
 			while($results = mysqli_fetch_array($raw_results)){
 			// $results = mysql_fetch_array($raw_results) puts data from database into array, while it's valid it does the loop
 			
-			echo "<p><h3>".$results['title']."</h3>".$results['text']."</p>";
+		
+        echo "<p><p><h3>".$results['title']."</h3>".$results['arabic']."</p>".$results['text']."</p>";   
 				// posts results gotten from database(title and text) you can also show id ($results['id'])
 			}
 			
