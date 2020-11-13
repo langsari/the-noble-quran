@@ -1,13 +1,19 @@
 <?php
 include 'Template.php';
+include 'LangsCatalog.php';
  $template = new Template;
 
- $alhadit = array('Al-Hadith', 'ฮาดิซ', 'Hadis');
+ //Language Changer
+$c = 1;
 
- $template->assign('navbarBrand', 'Quran.com');
- $template->assign('Al-Hadith', $alhadit[1]);
- $template->assign('Al-Quran', 'อัลกุรอ่าน');
-
-
+ //Navbar
+ $template->assign('Al-Hadith', $alhadit[$c]);
+ $template->assign('Al-Quran', $alquran[$c]);
+ $template->assign('As-Sunah', $assunnah[$c]);
+ $template->assign('Languages', $languages[$c]);
+        //Dropdown
+        $template->assign('English', $eng[$c]);
+        $template->assign('Thai', $th[$c]);
+        $template->assign('Malay', $ml[$c]);
  $template->render('index');
 ?>

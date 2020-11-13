@@ -12,6 +12,9 @@
         "guzzlehttp/guzzle": "^7.0",
         "symfony/http-foundation": "^5.1",
         "symfony/translation": "^5.1",
+
+        "elasticsearch/elasticsearch": "^7.9"
+
         "fabpot/goutte": "^4.0"
         "monolog/monolog": "^2.1",
         "symfony/process": "^5.1",
@@ -20,6 +23,7 @@
         "symfony/intl": "^5.1",
         "symfony/http-kernel": "^5.1",
         "symfony/serializer": "^5.1"
+
     },
     "require-dev": {
         "pds/skeleton": "^1.0",
