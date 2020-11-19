@@ -1,0 +1,30 @@
+HTML HOVER SOUND CODE FOR A LINK, AN IMAGE, AND A DIV
+
+
+
+
+ADD THIS CODE TO THE HEAD SECTION OF YOUR HTML PAGE BEFORE THE </head>:
+
+<script type="text/javascript" src="sound-onclick.js"></script>
+
+
+
+
+ADD THIS CODE TO THE BODY OF YOUR HTML PAGE:
+
+<a href="javascript:playclip();" style="font-size: 1.5em;">Click For Sound</a><br>
+
+<a href="javascript:playclip();"><img src="sound-image.jpg" width="150" height="100" border="0" alt="Click for Sound"></a><br>
+
+<div OnClick="playclip();" style="border: #C0C0C0 1px solid; background-color: #F0F0F0; width: 200px; padding: 8px; text-align: center; margin: 0 auto;">Click For Sound Div</div>
+
+
+
+
+PASTE THIS CODE NEAR THE BOTTOM OF YOUR HTML PAGE
+
+<audio>
+<source src="click.mp3" type="audio/mpeg">
+<source src="click.ogg" type="audio/ogg">
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div>

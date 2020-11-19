@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example Sound On Click</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style type="text/css">
+body	{
+	color: #000000;
+	font: 16px arial, sans-serif;
+	font-weight: normal;
+	}
+.td-center	{ text-align: center; }
+</style>
+
+
+<script type="text/javascript" src="sound-onclick.js"></script>
+
+
+</head>
+<body>
+<div id="wrapper" class="td-center">
+<br><br>
+
+
+
+<a href="javascript:playclip();" style="font-size: 1.5em;">Click For Sound</a><br>
+
+<br>
+
+<a href="javascript:playclip();"><img src="sound-image.jpg" width="150" height="100" border="0" alt="Click for Sound"></a><br>
+
+<br>
+
+<div OnClick="playclip();" style="border: #C0C0C0 1px solid; background-color: #F0F0F0; width: 200px; padding: 8px; text-align: center; margin: 0 auto; cursor: pointer;">Click For Sound Div</div>
+
+
+
+
+<audio>
+<source src="click.mp3" type="audio/mpeg">
+<source src="click.ogg" type="audio/ogg">
+</audio>
+<div id="sounddiv"><bgsound id="sound"></div>
+
+
+
+
+</div>
+</body>
+</html>
