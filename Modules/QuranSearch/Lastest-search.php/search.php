@@ -1,18 +1,15 @@
 <?php
-	//$conn = mysqli_connect("localhost", "root", "root", "blogs_sample");	
 	require 'connection.php';
-    //require 'function2.php' ;
-    //$conn = mysqli_connect("localhost", "root", "root", "blogs_sample");	
     require 'highlightword.php';
     ?>
 <html>
 	<head>
 	<title>Quran Search</title>
 	<link rel = "stylesheet" type = "text/css" href = "style.css" >
-</head>
+    </head>
 	<body>
 		<h2>The Noble Quran</h2>
-    <div>      
+        <div>      
 			<form name="frmSearch" method="post" action="">
 			<div class="search-box">
 				<div>
