@@ -7,14 +7,14 @@
 		$wordsCount = count($wordsAry);
 		$queryCondition = " WHERE ";
 		for($i=0;$i<$wordsCount;$i++) {
-			$queryCondition .= "title LIKE '%" . $wordsAry[$i] . "%' OR description LIKE '%" . $wordsAry[$i] . "%'";
+			$queryCondition .= "surah LIKE '%" . $wordsAry[$i] . "%' OR meaning LIKE '%" . $wordsAry[$i] . "%'";
 			if($i!=$wordsCount-1) {
 				$queryCondition .= " OR ";
 			}
 		}
 	}
 	$orderby = " ORDER BY id desc"; 
-	$sql = "SELECT * FROM links " . $queryCondition;
+	$sql = "SELECT * FROM alquran " . $queryCondition;
     $result = mysqli_query($conn,$sql);	
 
 	function highlightKeywords($text, $keyword) {
