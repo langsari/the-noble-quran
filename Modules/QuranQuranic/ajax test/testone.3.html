@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+    <script type="text/javascript">
+  $("button.play").click(function() {
+  var id = $('this').data('id');
+
+  var audio = $('#mysoudclip #'+id)[0];
+      audio.play();
+  });
+</script>
+    
+<body>
+    
+    <audio id="mysoundclip" preload="auto">
+   <source src="soun-03.mp3" id="1"></source>
+</audio>
+<button type="button" class="ci" id="1">play</button>
+    
+</body>
+</html>
