@@ -6,7 +6,7 @@ I used Symfony translation component as a function for translationg message in a
 I stored my translation configuration in config/config.php
 if you run config.php with localhost you'll see the translation work which i changed the word "Hello" into "Selamat"
 
--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 **How it work?
 
@@ -41,7 +41,6 @@ echo $translator->trans('Hello');
 
 I print the word "Hello" but it turn to the word selamat automatically by matching to my translation resource 
 
--------------------------------------------------------------------------------------------------------------------------------------------
 
 **What's the next?
 
@@ -49,5 +48,3 @@ I print the word "Hello" but it turn to the word selamat automatically by matchi
    index.php 
 2. I'll use saperate loader like Yaml or Json 
 3. Creat Routes for different languages by using symfony route
--------------------------------------------------------------------------------------------------------------------------------------------
-kk
