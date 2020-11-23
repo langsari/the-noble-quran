@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Form Quran Translation</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  background-color: #dddddd;
 </head>
 <body>
 
