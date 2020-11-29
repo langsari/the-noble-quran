@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta chaset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=0.1">
+     <title> PROJECT QURAN</title>
+     <link rel="Stylesheet" href="">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="resources/Ayat-index.css">
+     <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="background-color: #f0fffc ;">
+     <nav class="navbar navbar-light bg-info">
+
+          <div class="container-fluid">
+              <a class="navbar-brand" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/index.html#">
+                   <img width="45" height="30" class="d-inline-block align-top" src="file:///E:/imgquran/logo-alquran-png-6.png" alt="" laoding="lazy">
+                   <span class="text-white">Noble Qur-an</span>
+              </a>
+                   
+               <a  class="nav-link bg-info text-white " style="margin-left: auto;" aria-current="page" href="#">Audio</a>
+
+               <div class="dropdown">
+                      <button class=" btn btn-info bg-info dropdown-toggle p-2" style="margin-right:0px" type="button"
+                         id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                         Language
+                    </button>
+                    <ul class="dropdown-menu" style="margin-left:-20px;" aria-labelledby="dropdownMenuButton">
+                         <li><a class="dropdown-item " href="#">English</a></li>
+                         <li><a class="dropdown-item" href="#">Thai</a></li>
+                         <li><a class="dropdown-item" href="">Malay</a></li>
+
+
+                    </ul>
+
+               </div>
+          </div>
+
+     </nav>
+<div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+     <div class="col mt-5 p-0 ">
+          <div class="text-left ml-3 text-white font-weight-bold ">
+               <a href="" style="text-decoration: none;"><h6>SURAH INFO</h6></a>
+               </div>
+               <div class="form-check form-switch mt-3">
+                    
+                    <label class="form-check-label text-white" style="margin-right:100px;" for="flexSwitchCheckDefault">READING MODE</label>
+                    <input class="form-check-input"  type="checkbox" id="flexSwitchCheckDefault">
+                
+                  </div>
+                  <div class="form-check form-switch mt-3">
+                    
+                    <label class="form-check-label text-white" style="margin-right:120px;" for="flexSwitchCheckDefault">NIGHT MODE</label>
+                    <input class="form-check-input"  type="checkbox" id="flexSwitchCheckDefault">
+                
+                  </div>
+               </div>
+               <hr class="mt-5" style="background-color: white;">
+       
+        
+        <div class="col mt-5">
+          <div class="text-left  text-white font-weight-bold ">
+               <h6 class="mt-3">RECITERS</h6>
+               <h6 class="mt-3">TRANSLATE</h6>
+               </div>
+         
+        </div>
+        <hr class="mt-5" style="background-color: white;">
+        <div class="col mt-5">
+          <div class="text-left text-white font-weight-bold ">
+               <h6>Font size</h6>
+               <label for="customRange1" class="form-label">Ayah</label><br>
+               <input type="range" class="form-range" id="customRange1" style="width: 80%;"><br>
+               <label for="customRange1" class="form-label">Translate</label><br>
+               <input type="range" class="form-range" id="customRange1" style="width:80%;">
+
+               </div>
+        </div>
+        </div>
+<div class="container-fluid mt-0 bg-active p-3 ">
+     <div class="d-inline float-left ml-5">
+          <div class="dropdown ">
+               <button class="btn btn-outline-info  dropdown-toggle" id="surahmenu" data-toggle="dropdown" aria-expanded="false" href="">
+                    <strong class="text-info">Al-ฺBaqarah</strong></button>
+               <ul class="dropdown-menu" aria-labelledby="surahmenu">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/Al-fatihah.html"><h6>1.Al-Fatihah</h6><span class="text-info"> (The openner)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/Al-baqarah.html"><h6>2.Al-Baqarah</h6><span class="text-info"> (The cow)</span></a></li>
+                    <li><a class="dropdown-item" href=""><h6>3.Al-Imran</h6><span class="text-info"> (The family of imran)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                    <li><a class="dropdown-item" href=""><h6>4.An-Nisa</h6><span class="text-info"> (The women)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                    <li><a class="dropdown-item" href=""><h6>5.Al-Maida</h6><span class="text-info"> (The food ,The repast ,The table)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                    <li><a class="dropdown-item" href=""><h6>6.Al-An'am</h6><span class="text-info"> (The cattle)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                    <li><a class="dropdown-item" href=""><h6>7.Al-A'raf</h6><span class="text-info"> (The heights ,The faculty of discernment)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+                   
+               </ul>
+          </div>
+     </div>
+               
+     <div class="d-inline float-right mr-5" id="main">
+          
+          <span class="btn btn-outline-info" style="font-size:15px;cursor:pointer" onclick="openNav()">Setting</span>
+        </div>
+        <div class="d-flex justify-content-center mt-0 mr-0">
+            
+             <a class="btn btn-outline-info" role="button" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/Al-baqarah.html" style="height: 40px; width: 160px;"><strong>Reading Mode</strong></a>
+             <a class="btn btn-outline-info ml-4" role="button" href="" style="width: 160px;"><strong>Translate</strong></a>
+        </div>
+        </div>
+   
+    
+     
+          
+       
+          
+
+     </div>
+     
+     <div class="container">
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+          <h6 class="small" style="text-align: right;">PAGE 01</h6>
+          
+          <p style="margin-top: 20px;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+          <p><span> () </span>الٓمٓ</p>
+          <p>ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ</p>
+          <p>ٱلَّذِينَ يُؤْمِنُونَ بِٱلْغَيْبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقْنَٰهُمْ يُنفِقُونَ</p>
+          <p>وَ الَّذِیْنَ یُؤْمِنُوْنَ بِمَاۤ اُنْزِلَ اِلَیْكَ وَ مَاۤ اُنْزِلَ مِنْ قَبْلِكَۚ-وَ بِالْاٰخِرَةِ هُمْ یُوْقِنُوْنَؕ</p>
+          <p>اُولٰٓىٕكَ عَلٰى هُدًى مِّنْ رَّبِّهِمْۗ-وَ اُولٰٓىٕكَ هُمُ الْمُفْلِحُوْنَ</p>
+          <p>اِنَّ الَّذِیْنَ كَفَرُوْا سَوَآءٌ عَلَیْهِمْ ءَاَنْذَرْتَهُمْ اَمْ لَمْ تُنْذِرْهُمْ لَا یُؤْمِنُوْنَ</p>
+          <p> خَتَمَ اللّٰهُ عَلٰى قُلُوْبِهِمْ وَ عَلٰى سَمْعِهِمْؕ-وَ عَلٰۤى اَبْصَارِهِمْ غِشَاوَةٌ٘-وَّ لَهُمْ عَذَابٌ عَظِیْمٌ۠</p>
+          <p>وَ مِنَ النَّاسِ مَنْ یَّقُوْلُ اٰمَنَّا بِاللّٰهِ وَ بِالْیَوْمِ الْاٰخِرِ وَ مَا هُمْ بِمُؤْمِنِیْنَۘ</p>
+          <p>یُخٰدِعُوْنَ اللّٰهَ وَ الَّذِیْنَ اٰمَنُوْا ۚ-وَ مَا یَخْدَعُوْنَ اِلَّاۤ اَنْفُسَهُمْ وَ مَا یَشْعُرُوْنَؕ</p>
+          <p>فِیْ قُلُوْبِهِمْ مَّرَضٌۙ-فَزَادَهُمُ اللّٰهُ مَرَضًاۚ-وَ لَهُمْ عَذَابٌ اَلِیْمٌۢ ﳔ بِمَا كَانُوْا یَكْذِبُوْنَ</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <br><br>
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+          <h6 class="small" style="text-align: right;">PAGE 01</h6>
+
+          </div>
+         
+          <div class="container-fluid">
+               <div class="container-fluid mt-2">
+                    <label for="formControlRange"></label>
+                    <input  type="range" class="form-control-range " id="formControlRange">
+               </div>
+               <div class="container-fluid">
+               <div class="row">
+                    <div class="col-sm mt-4 ml-5">
+                         <span class="text-md text-info font-weight-bold mr-1" style="font-weight: bold; font-size: large;">Ayat</span>&ensp;
+                         <select class="custom-select custom-select-sm font-weight-bolder text-info" style="width: 150px; height: 45px;cursor:pointer">
+                              
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              
+                         </select>
+                         
+                    </div>
+                    <div class="col-sm mt-4 ml-auto mr-auto text-center">
+                         <div class="play-icon text white d-flex justify-content-center">
+                             
+                              <i class="large material-icons mr-2 text-dark" style="font-size: 40px;">skip_previous</i>
+                              <i class="large material-icons mr-2 text-dark"  style="font-size:40px;">play_circle_filled</i>
+                              <i class="large material-icons mr-2 text-dark" style="font-size: 40px;">skip_next</i>
+                                 </div>
+                    </div>
+                    <div class="col-sm mt-4  text-right mr-5 ">
+                         <span class="text-md text-info font-italic-wiegth-bold mr-1   " style="font-weight: bold; font-size: larger;">Riciters</span>
+                         <select class="custom-select custom-select-sm font-weight-light font-weight-bolder text-info" style="width: 150px; height: 45px;cursor:pointer">
+                              
+                           
+                              <option value="1">Muhammad   Nabil</option>
+                              <option value="2">Mubassir   Salafi</option>
+                              <option value="3">Mubassir   Salafi</option>
+                              <option value="4">Mubassir   Salafi</option>
+                              
+          
+                         </select>
+                    </div>
+               </div>
+              
+               <br><hr>
+            
+    
+          
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+     function openNav() {
+       document.getElementById("mySidenav").style.width = "250px";
+       document.getElementById("main").style.marginLeft = "250px";
+     }
+     
+     function closeNav() {
+       document.getElementById("mySidenav").style.width = "0";
+       document.getElementById("main").style.marginLeft= "0";
+     }
+     </script>
+    
+</body>
+
+</html>
