@@ -23,9 +23,9 @@ INSERT INTO `Arabic` (`index_arabic`, `sura_arabic`, `aya_arabic`, `text_arabic`
 (4, 1, 4, 'مَالِكِ يَوْمِ الدِّينِ'),
 (5, 1, 5, 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ'),
 (6, 1, 6, 'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ'),
-(7, 1, 7, 'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ'),
+(7, 1, 7, 'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ');
 
-Table structure for table `Thai`
+
 CREATE TABLE `Thai` (
   `index_thai` int(4) NOT NULL,
   `sura_thai` int(3) NOT NULL DEFAULT 0,
@@ -42,7 +42,7 @@ INSERT INTO `Thai` (`index_thai`, `sura_thai`, `aya_thai`, `text_thai`) VALUES
 (6, 1, 6, 'อิฮ์ดินัศ ศิรอฏ็อล มุสตะกฺีม'),
 (7, 1, 7, 'ศิรอฏ็อล ละซีนะ อันอฺัมตะ อฺะลัยฮิม ฆ็อยริล มัฆฎูบิ อฺะลัยฮิม วะลัฎ ฎอ-ลลีน');
 
-Table structure for table `English`
+
 
 CREATE TABLE `English` (
   `index_english` int(4) NOT NULL,
