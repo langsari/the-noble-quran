@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta chaset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=0.1">
+     <title> PROJECT QURAN</title>
+     <link rel="Stylesheet" href="">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="resources/Ayat-index.css">
+     <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+
+    <div class="container-fluid">
+         <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              
+              </button>
+             
+         <a id="audio" class="nav-link active" aria-current="page" href="#">Audio</a>
+         
+
+         <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" style="margin-right:0px" type="button"
+                   id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                   Language
+              </button>
+              <ul class="dropdown-menu" style="margin-left:-20px;" aria-labelledby="dropdownMenuButton">
+                   <li><a class="dropdown-item " href="#">English</a></li>
+                   <li><a class="dropdown-item" href="#">Thai</a></li>
+                   <li><a class="dropdown-item" href="">Malay</a></li>
+
+
+              </ul>
+
+         </div>
+    </div>
+
+</nav>
+<div class="container-fluid mt-0 bg-info">
+     <div class="d-inline float-left ml-5">
+          <div class="dropdown ">
+               <button class="btn btn-outline-active  dropdown-toggle" id="surahmenu" data-toggle="dropdown" aria-expanded="false" href="">
+                    <strong class="text-white">Al-Fatihah</strong></button>
+               <ul class="dropdown-menu" aria-labelledby="surahmenu">
+                    <li><a class="dropdown-item" href=""><h6>1.Al-Fatihah</h6><span class="text-info"> (The openner)</span></a></li>
+                    <li><hr class="dropdown-driver"></li>
+               </ul>
+          </div>
+     </div>
+               
+     <div class="d-inline float-right mr-5" id="main">
+          
+          <span class="btn btn-info" style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776;</i> Setting</span>
+        </div>
+        <div class="d-flex justify-content-center mt-0 mr-0">
+            
+             <a class="btn btn-info" role="button" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/Al-fatihah.html"><strong>Reading</strong></a>
+             <a class="btn btn-info ml-4" role="button" href="http://127.0.0.1:5500/Modules/QuranUserInterfaceExperience/tranlate.html"><strong>Translate</strong></a>
+        </div>
+        </div>
+   
+    
+     
+          
+       
+          
+
+     </div>
+     
+     <div class="container">
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+          <h6 class="small" style="text-align: right;">PAGE 01</h6>
+          <h2 class="serif" style="text-align: center;margin-top: 20px;" >Al-Fatihah</h2>
+          <p style="margin-top: 20px;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p><p>اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ</p><p>الرَّحْمٰنِ الرَّحِيْمِۙ</p><p>مٰلِكِ يَوْمِ الدِّيْنِۗ</p><p>اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ</p>
+          <p>اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۙ</p><p>صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ</p><p></p>
+          <br><br>
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+          <h6 class="small" style="text-align: right;">PAGE 01</h6>
+
+          </div>
+         
+          <div class="container-fluid">
+               <div class="row">
+                    <div class="col mt-2 ml-5">
+                         Ayat&ensp;
+                         <select class="custom-select custom-select-sm" style="width: 150px;">
+                              
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              
+                         </select>
+                         
+                    </div>
+                    <div class="col mt-2 ml-auto mr-auto text-center">
+                         <div class="play-icon text white d-flex justify-content-center">
+                             
+                              <i class="large material-icons mr-2 text-dark" style="font-size: 40px;">skip_previous</i>
+                              <i class="large material-icons mr-2 text-dark"  style="font-size:40px;">play_circle_filled</i>
+                              <i class="large material-icons mr-2 text-dark" style="font-size: 40px;">skip_next</i>
+                                 </div>
+                    </div>
+                    <div class="col mt-2  text-right mr-5 ">
+                         Riciters&ensp;
+                         <select class="custom-select custom-select-sm" style="width: 150px;">
+                              
+                              <option selected>Riciters</option>
+                              <option value="1">Muhammad   Nabil</option>0
+                              <option value="2">Mubassir   Salafi</option>
+                              <option value="3">Mubassir   Salafi</option>
+                              <option value="4">Mubassir   Salafi</option>
+                              
+          
+                         </select>
+                    </div>
+               </div>
+          
+         
+    
+          
+
+
+
+
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="js/bootstrap.min.js"></script>
+    
+</body>
+
+</html>
