@@ -27,6 +27,8 @@
   <?php
   include('db.php');
   include('select_language.php');
+  include('select_surah.php');
+
   ?>
 
 
@@ -43,9 +45,16 @@
       <tbody>
 
         <?php
+        if (extract($_GET)) {
+          $surah = isset($_GET['surah']) ? $_GET['surah'] : "";
+          if (is_numeric($surah)) {
+          $sql = "SELECT Arabic.*, Spanish.* FROM Arabic,Spanish WHERE Arabic.index_arabic=Spanish.index_Spanish AND sura_arabic=$surah ORDER BY index_arabic ASC";
+          } else if ($surah == "all") {
+            $sql = "SELECT Arabic.*, Spanish.* FROM Arabic,Spanish WHERE Arabic.index_arabic=Spanish.index_Spanish ORDER BY index_arabic ASC";
+          }
+        }
 
 
-        $sql = "SELECT Arabic.*, Spanish.* FROM Arabic,Spanish WHERE Arabic.index_arabic=Spanish.index_spanish ORDER BY index_arabic ASC";
 
         $result = mysqli_query($connect, $sql);
         while ($row = mysqli_fetch_array($result)) {
