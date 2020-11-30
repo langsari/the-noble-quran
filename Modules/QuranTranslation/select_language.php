@@ -35,7 +35,7 @@
 <script>
 var urlmenu = document.getElementById( 'id' );
  urlmenu.onchange = function() {
-  window.location.replace ( this.options[ this.selectedIndex ].value );
+  window.location.replace ( this.options[ this.selectedIndex ].value + "?surah=all");
  };
  </script>
 
