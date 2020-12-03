@@ -34,15 +34,25 @@
     <option value="malayalam.php">Malayalam</option>
     <option value="malay.php">Malay</option>
     <option value="norwegian.php">Norwegian</option>
+    <option value="pashto.php">Pashto</option>
+    <option value="persian.php">Persian</option>
+    <option value="polish.php">Polish</option>
     <option value="portuguese.php">Portuguese</option>
+    <option value="romanian.php">Romanian</option>
     <option value="russian.php">Russian</option>
+    <option value="sindhi.php">Sindhi</option>
+    <option value="somali.php">Somali</option>
     <option value="spanish.php">Spanish</option>
+    <option value="swahili.php">Swahili</option>
     <option value="swedish.php">Swedish</option>
+    <option value="tajik.php">Tajik</option>
+    <option value="tamil.php">Tamil</option>
+    <option value="tatar.php">Tatar</option>
     <option value="thai.php">ภาษาไทย</option>
     <option value="turkish.php">Turkish</option>
     <option value="urdu.php">Urdu</option>
-
-    
+    <option value="uyghur.php">Uyghur</option>
+    <option value="uzbek.php">Uzbek</option>
    
  
     
