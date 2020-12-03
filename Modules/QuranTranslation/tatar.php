@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">Tatar</th>
+        <th width="1">Tatar :	Yakub Ibn Nugman</th>
       </tr>
       <thead>
 

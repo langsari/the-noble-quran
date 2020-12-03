@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">Bengali</th>
+        <th width="1">Bengali : জহুরুল হক</th>
       </tr>
       <thead>
 
