@@ -12,9 +12,14 @@
   <select class="form-control" name="id" id="id">
     <option value="" disabled selected>Select Language</option>
     <option value="albanian.php">Albanian : Efendi Nahi</option> 
+    <option value="sq_mehdiu.php">Albanian : Feti Mehdiu</option> 
     <option value="sq_ahmeti.php">Albanian : Sherif Ahmeti</option> 
-    <option value="amazigh.php">Amazigh</option>
-    <option value="amharic.php">Amharic</option>
+    <option value="amazigh.php">Amazigh : At Mensur</option>
+    <option value="amharic.php">Amharic : ሳዲቅ & ሳኒ ሐቢብ</option>
+    <option value="azerbalijani.php">Azerbalijani : Məmmədəliyev & Bünyadov</option>
+    <option value="az_musayev.php">Azerbalijani : Musayev</option>
+    
+   
     <option value="bengali.php">Bengali</option>
     <option value="bosnian.php">Bosnian</option>
     <option value="bulgarian.php">Bulgarian</option>
@@ -22,9 +27,14 @@
     <option value="czech.php">Czech</option>
     <option value="divehi.php">Divehi</option>
     <option value="dutch.php">Dutch</option>
-    <option value="english.php">English :	Yusuf Ali</option>
     <option value="en_ahmedali.php">English :	Ahmed Ali</option>
     <option value="en_ahmedraza.php">English :	Ahmed Raza</option>
+    <option value="en_arberry.php">English :	Arberry</option>
+    <option value="english.php">English :	Yusuf Ali</option>
+    <option value="en_daryabadi.php">English :	Daryabadi</option>
+    <option value="en_hilali.php">English :	Hilali & Khan</option>
+    <option value="en_shakir.php">English :	Shakir</option>
+    <option value="en_wahiduddin.php">English :	Wahiduddin Khan</option>
     <option value="french.php">French</option>
     <option value="german.php">German : Abu Rida</option>
     <option value="de_zaidan.php">German : Zaidan</option>
@@ -46,8 +56,10 @@
     <option value="russian.php">Russian : Аль-Мунтахаб</option>
     <option value="ru_krachkovsky.php">Russian : Krachkovsky</option>
     <option value="sindhi.php">Sindhi</option>
-    <option value="somali.php">Somali</option>
-    <option value="spanish.php">Spanish</option>
+    <option value="somali.php">Somali</option> 
+    <option value="es_bornez.php">Spanish : Bornez</option> 
+    <option value="es_cortes.php">Spanish : Cortes</option>
+    <option value="spanish.php">Spanish : Garcia</option>
     <option value="swahili.php">Swahili</option>
     <option value="swedish.php">Swedish</option>
     <option value="tajik.php">Tajik</option>

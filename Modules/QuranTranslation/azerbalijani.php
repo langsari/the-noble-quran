@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">Thai</th>
+        <th width="1">Azerbalijani : Məmmədəliyev & Bünyadov</th>
       </tr>
       <thead>
 
@@ -49,9 +49,9 @@
 if (extract($_GET)) {
   $surah = isset($_GET['surah']) ? $_GET['surah'] : "";
   if (is_numeric($surah)) {
-  $sql = "SELECT Arabic.*, Thai.* FROM Arabic,Thai WHERE Arabic.index_arabic=Thai.index_thai AND sura_arabic=$surah ORDER BY index_arabic ASC";
+  $sql = "SELECT Arabic.*, Azerbalijani.* FROM Arabic,Azerbalijani WHERE Arabic.index_arabic=Azerbalijani.index_azerbalijani AND sura_arabic=$surah ORDER BY index_arabic ASC";
   } else if ($surah == "all") {
-    $sql = "SELECT Arabic.*, Thai.* FROM Arabic,Thai WHERE Arabic.index_arabic=Thai.index_thai ORDER BY index_arabic ASC";
+    $sql = "SELECT Arabic.*, Azerbalijani.* FROM Arabic,Azerbalijani WHERE Arabic.index_arabic=Azerbalijani.index_azerbalijani ORDER BY index_arabic ASC";
   }
 }
         $result = mysqli_query($connect, $sql);
@@ -62,10 +62,10 @@ if (extract($_GET)) {
           $aya_arabic = $row["aya_arabic"];
           $text_arabic = $row["text_arabic"];
 
-          $index_thai = $row["index_thai"];
-          $sura_thai = $row["sura_thai"];
-          $aya_thai = $row["aya_thai"];
-          $text_thai = $row["text_thai"];
+          $index_azerbalijani = $row["index_azerbalijani"];
+          $sura_azerbalijani = $row["sura_azerbalijani"];
+          $aya_azerbalijani = $row["aya_azerbalijani"];
+          $text_azerbalijani = $row["text_azerbalijani"];
 
         ?>
 
@@ -74,7 +74,7 @@ if (extract($_GET)) {
             <td><?php echo $index_arabic ?></td>
             <td><?php echo $sura_arabic . ":" . $aya_arabic ?></td>
             <td><?php echo "<div align='right'>" . $text_arabic . "</div>";?></td>
-            <td><?php echo $text_thai ?></td>
+            <td><?php echo $text_azerbalijani ?></td>
           </tr>
         <?php
         }
