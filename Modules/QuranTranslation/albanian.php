@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">Albanian</th>
+        <th width="1">Albanian : Efendi Nahi</th>
       </tr>
       <thead>
 

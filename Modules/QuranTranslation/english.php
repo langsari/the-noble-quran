@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">English</th>
+        <th width="1">English : Yusuf Ali</th>
       </tr>
       <thead>
 

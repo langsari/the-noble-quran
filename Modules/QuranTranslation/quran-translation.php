@@ -37,16 +37,17 @@ include('db.php');
                                     
                                     
                               
-                                  </select></b></p></h2> -->
+                                  </select></b></p></h2>  -->
 
 
                                   <table>
+                                  
                         <thead>
                           <tr>
                             <th width="1">No.</th>
                             <th width="1">Surah:Ayat</th>
                             <th width="1">Quran</th>
-                            <th width="1">Enlish</th>
+                            <th width="1">English</th>
                             <th width="1">Thai</th>
                           </tr>
                           <thead>

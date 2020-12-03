@@ -37,7 +37,7 @@
         <th width="1">No.</th>
         <th width="1">Surah:Ayat</th>
         <th width="1">Quran</th>
-        <th width="1">Tamil</th>
+        <th width="1">English : Ahmed Raza</th>
       </tr>
       <thead>
 
@@ -46,14 +46,14 @@
         <?php
 
 
-if (extract($_GET)) {
-  $surah = isset($_GET['surah']) ? $_GET['surah'] : "";
-  if (is_numeric($surah)) {
-  $sql = "SELECT Arabic.*, Tamil.* FROM Arabic,Tamil WHERE Arabic.index_arabic=Tamil.index_thai AND sura_arabic=$surah ORDER BY index_arabic ASC";
-  } else if ($surah == "all") {
-    $sql = "SELECT Arabic.*, Tamil.* FROM Arabic,Tamil WHERE Arabic.index_arabic=Tamil.index_tamil ORDER BY index_arabic ASC";
-  }
-}
+        if (extract($_GET)) {
+        $surah = isset($_GET['surah']) ? $_GET['surah'] : "";
+        if (is_numeric($surah)) {
+        $sql = "SELECT Arabic.*, En_ahmedraza.* FROM Arabic,En_ahmedraza WHERE Arabic.index_arabic=En_ahmedraza.index_en_ahmedraza AND sura_arabic=$surah ORDER BY index_arabic ASC";
+        } else if ($surah == "all") {
+        $sql = "SELECT Arabic.*, En_ahmedraza.* FROM Arabic,En_ahmedraza WHERE Arabic.index_arabic=En_ahmedraza.index_en_ahmedraza ORDER BY index_arabic ASC";
+        }
+        }
         $result = mysqli_query($connect, $sql);
         while ($row = mysqli_fetch_array($result)) {
 
@@ -62,10 +62,10 @@ if (extract($_GET)) {
           $aya_arabic = $row["aya_arabic"];
           $text_arabic = $row["text_arabic"];
 
-          $index_tamil = $row["index_tamil"];
-          $sura_tamil = $row["sura_tamil"];
-          $aya_tamil = $row["aya_tamil"];
-          $text_tamil = $row["text_tamil"];
+          $index_en_ahmedraza = $row["index_en_ahmedraza"];
+          $sura_en_ahmedraza = $row["sura_en_ahmedraza"];
+          $aya_en_ahmedraza = $row["aya_en_ahmedraza"];
+          $text_en_ahmedraza = $row["text_en_ahmedraza"];
 
         ?>
 
@@ -74,7 +74,7 @@ if (extract($_GET)) {
             <td><?php echo $index_arabic ?></td>
             <td><?php echo $sura_arabic . ":" . $aya_arabic ?></td>
             <td><?php echo "<div align='right'>" . $text_arabic . "</div>";?></td>
-            <td><?php echo $text_tamil ?></td>
+            <td><?php echo $text_en_ahmedraza ?></td>
           </tr>
         <?php
         }
