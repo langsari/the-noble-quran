@@ -11,7 +11,7 @@
  
   <select class="form-control" name="id" id="id">
     <option value="" disabled selected>Select Language</option>
-    <option value="albanian.php">Albanian</option> 
+    <option value="albanian.php">Albanian : Efendi Nahi</option> 
     <option value="amazigh.php">Amazigh</option>
     <option value="amharic.php">Amharic</option>
     <option value="bengali.php">Bengali</option>
@@ -21,7 +21,9 @@
     <option value="czech.php">Czech</option>
     <option value="divehi.php">Divehi</option>
     <option value="dutch.php">Dutch</option>
-    <option value="english.php">English</option>
+    <option value="english.php">English :	Yusuf Ali</option>
+    <option value="en_ahmedali.php">English :	Ahmed Ali</option>
+    <option value="en_ahmedraza.php">English :	Ahmed Raza</option>
     <option value="french.php">French</option>
     <option value="german.php">German</option>
     <option value="hausa.php">Hausa</option>
