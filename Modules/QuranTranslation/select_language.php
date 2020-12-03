@@ -81,8 +81,16 @@
     <option value="tamil.php">Tamil : ஜான் டிரஸ்ட்</option>
     <option value="tatar.php">Tatar :	Yakub Ibn Nugman</option>
     <option value="thai.php">Thai : ภาษาไทย</option>
+    <option value="tr_golpinarli.php">Turkish : Abdulbakî Gölpınarlı </option>
+    <option value="tr_bulac.php">Turkish : Alİ Bulaç</option>
     <option value="turkish.php">Turkish : Çeviriyazı</option>
+    <option value="tr_diyanet.php">Turkish : Diyanet İşleri</option>
+    <option value="tr_vakfi.php">Turkish : Diyanet Vakfı</option>
+    <option value="tr_yuksel.php">Turkish : Edip Yüksel</option>
+    <option value="tr_yazir.php">Turkish : Elmalılı Hamdi Yazır</option>
     <option value="Öztürk.php">Turkish : Öztürk</option>
+    <option value="tr_yildirim.php">Turkish : Suat Yıldırım</option>
+    <option value="tr_ates.php">Turkish : Süleyman Ateş</option>
     <option value="urdu.php">Urdu : ابوالاعلی مودودی</option>
     <option value="ur_kanzuliman.php">Urdu : 	احمد رضا خان</option>
     <option value="ur_ahmedali.php">Urdu : 	احمد علی</option>
