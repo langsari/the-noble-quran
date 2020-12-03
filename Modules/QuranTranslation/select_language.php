@@ -25,7 +25,8 @@
     <option value="en_ahmedali.php">English :	Ahmed Ali</option>
     <option value="en_ahmedraza.php">English :	Ahmed Raza</option>
     <option value="french.php">French</option>
-    <option value="german.php">German</option>
+    <option value="german.php">German : Abu Rida</option>
+    <option value="de_zaidan.php">German : Zaidan</option>
     <option value="hausa.php">Hausa</option>
     <option value="hindi.php">Hindi</option>
     <option value="indonesian.php">Indonesian</option>
