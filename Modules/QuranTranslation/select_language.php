@@ -12,6 +12,7 @@
   <select class="form-control" name="id" id="id">
     <option value="" disabled selected>Select Language</option>
     <option value="albanian.php">Albanian : Efendi Nahi</option> 
+    <option value="sq_ahmeti.php">Albanian : Sherif Ahmeti</option> 
     <option value="amazigh.php">Amazigh</option>
     <option value="amharic.php">Amharic</option>
     <option value="bengali.php">Bengali</option>
@@ -42,7 +43,8 @@
     <option value="polish.php">Polish</option>
     <option value="portuguese.php">Portuguese</option>
     <option value="romanian.php">Romanian</option>
-    <option value="russian.php">Russian</option>
+    <option value="russian.php">Russian : Аль-Мунтахаб</option>
+    <option value="ru_krachkovsky.php">Russian : Krachkovsky</option>
     <option value="sindhi.php">Sindhi</option>
     <option value="somali.php">Somali</option>
     <option value="spanish.php">Spanish</option>
@@ -52,7 +54,8 @@
     <option value="tamil.php">Tamil</option>
     <option value="tatar.php">Tatar</option>
     <option value="thai.php">ภาษาไทย</option>
-    <option value="turkish.php">Turkish</option>
+    <option value="turkish.php">Turkish : Çeviriyazı</option>
+    <option value="Öztürk.php">Turkish : Öztürk</option>
     <option value="urdu.php">Urdu</option>
     <option value="uyghur.php">Uyghur</option>
     <option value="uzbek.php">Uzbek</option>
