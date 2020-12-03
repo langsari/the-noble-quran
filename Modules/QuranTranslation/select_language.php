@@ -63,8 +63,13 @@
     <option value="polish.php">Polish :	Bielawskiego</option>
     <option value="portuguese.php">Portuguese : El-Hayek</option>
     <option value="romanian.php">Romanian : Grigore</option>
+    <option value="ru_abuadel.php">Russian : Абу Адель</option>
     <option value="russian.php">Russian : Аль-Мунтахаб</option>
     <option value="ru_krachkovsky.php">Russian : Krachkovsky</option>
+    <option value="ru_kuliev.php">Russian : Кулиев</option>
+    <option value="ru_osmanov.php">Russian : Османов</option>
+    <option value="ru_porokhova.php">Russian : Порохова</option>
+    <option value="ru_sablukov.php">Russian : Саблуков </option>
     <option value="sindhi.php">Sindhi : امروٽي</option>
     <option value="somali.php">Somali : Abduh </option> 
     <option value="es_bornez.php">Spanish : Bornez</option> 
@@ -79,6 +84,13 @@
     <option value="turkish.php">Turkish : Çeviriyazı</option>
     <option value="Öztürk.php">Turkish : Öztürk</option>
     <option value="urdu.php">Urdu : ابوالاعلی مودودی</option>
+    <option value="ur_kanzuliman.php">Urdu : 	احمد رضا خان</option>
+    <option value="ur_ahmedali.php">Urdu : 	احمد علی</option>
+    <option value="ur_jalandhry.php">Urdu : جالندہری</option>
+    <option value="ur_qadri.php">Urdu :	طاہر القادری</option>
+    <option value="ur_jawadi.php">Urdu : علامہ جوادی</option>
+    <option value="ur_junagarhi.php">Urdu :	محمد جوناگڑھی</option>
+    <option value="ur_najafi.php">Urdu : محمد حسین نجفی</option>
     <option value="uyghur.php">Uyghur : محمد صالح</option>
     <option value="uzbek.php">Uzbek : Мухаммад Содик</option>
    
