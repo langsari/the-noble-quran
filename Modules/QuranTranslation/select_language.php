@@ -60,6 +60,17 @@
     <option value="norwegian.php">Norwegian :	Einar Berg</option>
     <option value="pashto.php">Pashto : عبدالولي </option>
     <option value="persian.php">Persian :	انصاریان</option>
+    <option value="fa_ayati.php">Persian :	آیتی</option>
+    <option value="fa_bahrampour.php">Persian :	بهرام پور</option>
+    <option value="fa_gharaati.php">Persian : قرائتی</option>
+    <option value="fa_ghomshei.php">Persian :	الهی قمشه‌ای</option>
+    <option value="fa_khorramdel.php">Persian :خرمدل</option>
+    <option value="fa_khorramshahi.php">Persian : خرمشاهی</option>
+    <option value="fa_sadeqi.php">Persian :	صادقی تهرانی </option>
+    <option value="fa_fooladvand.php">Persian : فولادوند</option>
+    <option value="fa_mojtabavi.php">Persian : مجتبوی</option>
+    <option value="fa_moezzi.php">Persian :	معزی</option>
+    <option value="fa_makarem.php">Persian :	مکارم شیرازی </option>
     <option value="polish.php">Polish :	Bielawskiego</option>
     <option value="portuguese.php">Portuguese : El-Hayek</option>
     <option value="romanian.php">Romanian : Grigore</option>
