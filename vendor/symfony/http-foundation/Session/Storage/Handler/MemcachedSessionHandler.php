@@ -65,7 +65,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doRead(string $sessionId)
+    protected function doRead($sessionId)
     {
         return $this->memcached->get($this->prefix.$sessionId) ?: '';
     }
@@ -83,7 +83,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doWrite(string $sessionId, string $data)
+    protected function doWrite($sessionId, $data)
     {
         return $this->memcached->set($this->prefix.$sessionId, $data, time() + $this->ttl);
     }
@@ -91,7 +91,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doDestroy(string $sessionId)
+    protected function doDestroy($sessionId)
     {
         $result = $this->memcached->delete($this->prefix.$sessionId);
 

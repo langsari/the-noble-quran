@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
  *
  * @author Jérémy Romey <jeremy@free-agent.fr>
  *
- * @final
+ * @final since Symfony 4.3
  */
 class FileLinkFormatter
 {
@@ -46,7 +46,7 @@ class FileLinkFormatter
         $this->urlFormat = $urlFormat;
     }
 
-    public function format(string $file, int $line)
+    public function format($file, $line)
     {
         if ($fmt = $this->getFileLinkFormat()) {
             for ($i = 1; isset($fmt[$i]); ++$i) {
@@ -75,7 +75,7 @@ class FileLinkFormatter
     /**
      * @internal
      */
-    public static function generateUrlFormat(UrlGeneratorInterface $router, string $routeName, string $queryString): ?string
+    public static function generateUrlFormat(UrlGeneratorInterface $router, $routeName, $queryString)
     {
         try {
             return $router->generate($routeName).$queryString;

@@ -11,6 +11,8 @@
 
 namespace Symfony\Component\ErrorHandler\Exception;
 
+use Symfony\Component\Debug\Exception\FatalThrowableError;
+use Symfony\Component\Debug\Exception\FlattenException as LegacyFlattenException;
 use Symfony\Component\HttpFoundation\Exception\RequestExceptionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
@@ -22,7 +24,7 @@ use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class FlattenException
+class FlattenException extends LegacyFlattenException
 {
     private $message;
     private $code;
@@ -37,17 +39,11 @@ class FlattenException
     private $line;
     private $asString;
 
-    /**
-     * @return static
-     */
     public static function create(\Exception $exception, $statusCode = null, array $headers = []): self
     {
         return static::createFromThrowable($exception, $statusCode, $headers);
     }
 
-    /**
-     * @return static
-     */
     public static function createFromThrowable(\Throwable $exception, int $statusCode = null, array $headers = []): self
     {
         $e = new static();
@@ -75,7 +71,7 @@ class FlattenException
         $e->setStatusCode($statusCode);
         $e->setHeaders($headers);
         $e->setTraceFromThrowable($exception);
-        $e->setClass(get_debug_type($exception));
+        $e->setClass($exception instanceof FatalThrowableError ? $exception->getOriginalClassName() : get_debug_type($exception));
         $e->setFile($exception->getFile());
         $e->setLine($exception->getLine());
 
@@ -228,7 +224,10 @@ class FlattenException
         return $this;
     }
 
-    public function getPrevious(): ?self
+    /**
+     * @return self|null
+     */
+    public function getPrevious()
     {
         return $this->previous;
     }
@@ -236,7 +235,7 @@ class FlattenException
     /**
      * @return $this
      */
-    public function setPrevious(self $previous): self
+    final public function setPrevious(LegacyFlattenException $previous): self
     {
         $this->previous = $previous;
 
@@ -260,6 +259,16 @@ class FlattenException
     public function getTrace(): array
     {
         return $this->trace;
+    }
+
+    /**
+     * @deprecated since 4.1, use {@see setTraceFromThrowable()} instead.
+     */
+    public function setTraceFromException(\Exception $exception)
+    {
+        @trigger_error(sprintf('The "%s()" method is deprecated since Symfony 4.1, use "setTraceFromThrowable()" instead.', __METHOD__), \E_USER_DEPRECATED);
+
+        $this->setTraceFromThrowable($exception);
     }
 
     /**

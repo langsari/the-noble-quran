@@ -72,7 +72,7 @@ class ControllerResolver implements ControllerResolverInterface
 
         if (\is_object($controller)) {
             if (!\is_callable($controller)) {
-                throw new \InvalidArgumentException(sprintf('The controller for URI "%s" is not callable: ', $request->getPathInfo()).$this->getControllerError($controller));
+                throw new \InvalidArgumentException(sprintf('The controller for URI "%s" is not callable: '.$this->getControllerError($controller), $request->getPathInfo()));
             }
 
             return $controller;
@@ -89,7 +89,7 @@ class ControllerResolver implements ControllerResolverInterface
         }
 
         if (!\is_callable($callable)) {
-            throw new \InvalidArgumentException(sprintf('The controller for URI "%s" is not callable: ', $request->getPathInfo()).$this->getControllerError($callable));
+            throw new \InvalidArgumentException(sprintf('The controller for URI "%s" is not callable: '.$this->getControllerError($callable), $request->getPathInfo()));
         }
 
         return $callable;
@@ -98,11 +98,13 @@ class ControllerResolver implements ControllerResolverInterface
     /**
      * Returns a callable for the given controller.
      *
+     * @param string $controller A Controller string
+     *
      * @return callable A PHP callable
      *
      * @throws \InvalidArgumentException When the controller cannot be created
      */
-    protected function createController(string $controller)
+    protected function createController($controller)
     {
         if (false === strpos($controller, '::')) {
             $controller = $this->instantiateController($controller);
@@ -140,9 +142,11 @@ class ControllerResolver implements ControllerResolverInterface
     /**
      * Returns an instantiated controller.
      *
+     * @param string $class A class name
+     *
      * @return object
      */
-    protected function instantiateController(string $class)
+    protected function instantiateController($class)
     {
         return new $class();
     }
@@ -161,11 +165,11 @@ class ControllerResolver implements ControllerResolverInterface
             $availableMethods = $this->getClassMethodsWithoutMagicMethods($callable);
             $alternativeMsg = $availableMethods ? sprintf(' or use one of the available methods: "%s"', implode('", "', $availableMethods)) : '';
 
-            return sprintf('Controller class "%s" cannot be called without a method name. You need to implement "__invoke"%s.', get_debug_type($callable), $alternativeMsg);
+            return sprintf('Controller class "%s" cannot be called without a method name. You need to implement "__invoke"%s.', \get_class($callable), $alternativeMsg);
         }
 
         if (!\is_array($callable)) {
-            return sprintf('Invalid type for controller given, expected string, array or object, got "%s".', get_debug_type($callable));
+            return sprintf('Invalid type for controller given, expected string, array or object, got "%s".', \gettype($callable));
         }
 
         if (!isset($callable[0]) || !isset($callable[1]) || 2 !== \count($callable)) {
@@ -178,7 +182,7 @@ class ControllerResolver implements ControllerResolverInterface
             return sprintf('Class "%s" does not exist.', $controller);
         }
 
-        $className = \is_object($controller) ? get_debug_type($controller) : $controller;
+        $className = \is_object($controller) ? \get_class($controller) : $controller;
 
         if (method_exists($controller, $method)) {
             return sprintf('Method "%s" on class "%s" should be public and non-abstract.', $method, $className);

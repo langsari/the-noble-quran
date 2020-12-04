@@ -66,7 +66,7 @@ class BinaryFileResponse extends Response
      *
      * @return static
      */
-    public static function create($file = null, int $status = 200, array $headers = [], bool $public = true, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true)
+    public static function create($file = null, $status = 200, $headers = [], $public = true, $contentDisposition = null, $autoEtag = false, $autoLastModified = true)
     {
         return new static($file, $status, $headers, $public, $contentDisposition, $autoEtag, $autoLastModified);
     }
@@ -74,13 +74,16 @@ class BinaryFileResponse extends Response
     /**
      * Sets the file to stream.
      *
-     * @param \SplFileInfo|string $file The file to stream
+     * @param \SplFileInfo|string $file               The file to stream
+     * @param string              $contentDisposition
+     * @param bool                $autoEtag
+     * @param bool                $autoLastModified
      *
      * @return $this
      *
      * @throws FileException
      */
-    public function setFile($file, string $contentDisposition = null, bool $autoEtag = false, bool $autoLastModified = true)
+    public function setFile($file, $contentDisposition = null, $autoEtag = false, $autoLastModified = true)
     {
         if (!$file instanceof File) {
             if ($file instanceof \SplFileInfo) {
@@ -150,7 +153,7 @@ class BinaryFileResponse extends Response
      *
      * @return $this
      */
-    public function setContentDisposition(string $disposition, string $filename = '', string $filenameFallback = '')
+    public function setContentDisposition($disposition, $filename = '', $filenameFallback = '')
     {
         if ('' === $filename) {
             $filename = $this->file->getFilename();
@@ -231,33 +234,36 @@ class BinaryFileResponse extends Response
                 $this->headers->set($type, $path);
                 $this->maxlen = 0;
             }
-        } elseif ($request->headers->has('Range')) {
+        } elseif ($request->headers->has('Range') && $request->isMethod('GET')) {
             // Process the range headers.
             if (!$request->headers->has('If-Range') || $this->hasValidIfRangeHeader($request->headers->get('If-Range'))) {
                 $range = $request->headers->get('Range');
 
-                list($start, $end) = explode('-', substr($range, 6), 2) + [0];
+                if (0 === strpos($range, 'bytes=')) {
+                    list($start, $end) = explode('-', substr($range, 6), 2) + [0];
 
-                $end = ('' === $end) ? $fileSize - 1 : (int) $end;
+                    $end = ('' === $end) ? $fileSize - 1 : (int) $end;
 
-                if ('' === $start) {
-                    $start = $fileSize - $end;
-                    $end = $fileSize - 1;
-                } else {
-                    $start = (int) $start;
-                }
+                    if ('' === $start) {
+                        $start = $fileSize - $end;
+                        $end = $fileSize - 1;
+                    } else {
+                        $start = (int) $start;
+                    }
 
-                if ($start <= $end) {
-                    if ($start < 0 || $end > $fileSize - 1) {
-                        $this->setStatusCode(416);
-                        $this->headers->set('Content-Range', sprintf('bytes */%s', $fileSize));
-                    } elseif (0 !== $start || $end !== $fileSize - 1) {
-                        $this->maxlen = $end < $fileSize ? $end - $start + 1 : -1;
-                        $this->offset = $start;
+                    if ($start <= $end) {
+                        $end = min($end, $fileSize - 1);
+                        if ($start < 0 || $start > $end) {
+                            $this->setStatusCode(416);
+                            $this->headers->set('Content-Range', sprintf('bytes */%s', $fileSize));
+                        } elseif ($end - $start < $fileSize - 1) {
+                            $this->maxlen = $end < $fileSize ? $end - $start + 1 : -1;
+                            $this->offset = $start;
 
-                        $this->setStatusCode(206);
-                        $this->headers->set('Content-Range', sprintf('bytes %s-%s/%s', $start, $end, $fileSize));
-                        $this->headers->set('Content-Length', $end - $start + 1);
+                            $this->setStatusCode(206);
+                            $this->headers->set('Content-Range', sprintf('bytes %s-%s/%s', $start, $end, $fileSize));
+                            $this->headers->set('Content-Length', $end - $start + 1);
+                        }
                     }
                 }
             }
@@ -314,7 +320,7 @@ class BinaryFileResponse extends Response
      *
      * @throws \LogicException when the content is not null
      */
-    public function setContent(?string $content)
+    public function setContent($content)
     {
         if (null !== $content) {
             throw new \LogicException('The content cannot be set on a BinaryFileResponse instance.');
@@ -343,9 +349,11 @@ class BinaryFileResponse extends Response
      * If this is set to true, the file will be unlinked after the request is sent
      * Note: If the X-Sendfile header is used, the deleteFileAfterSend setting will not be used.
      *
+     * @param bool $shouldDelete
+     *
      * @return $this
      */
-    public function deleteFileAfterSend(bool $shouldDelete = true)
+    public function deleteFileAfterSend($shouldDelete = true)
     {
         $this->deleteFileAfterSend = $shouldDelete;
 

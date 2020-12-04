@@ -11,9 +11,6 @@
 
 namespace Symfony\Component\HttpKernel\Event;
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\HttpKernelInterface;
-
 /**
  * Allows to create a response for a thrown exception.
  *
@@ -21,56 +18,14 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
  * current request. The propagation of this event is stopped as soon as a
  * response is set.
  *
- * You can also call setThrowable() to replace the thrown exception. This
+ * You can also call setException() to replace the thrown exception. This
  * exception will be thrown if no response is set during processing of this
  * event.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
+ *
+ * @final since Symfony 4.4
  */
-final class ExceptionEvent extends RequestEvent
+class ExceptionEvent extends GetResponseForExceptionEvent
 {
-    private $throwable;
-
-    /**
-     * @var bool
-     */
-    private $allowCustomResponseCode = false;
-
-    public function __construct(HttpKernelInterface $kernel, Request $request, int $requestType, \Throwable $e)
-    {
-        parent::__construct($kernel, $request, $requestType);
-
-        $this->setThrowable($e);
-    }
-
-    public function getThrowable(): \Throwable
-    {
-        return $this->throwable;
-    }
-
-    /**
-     * Replaces the thrown exception.
-     *
-     * This exception will be thrown if no response is set in the event.
-     */
-    public function setThrowable(\Throwable $exception): void
-    {
-        $this->throwable = $exception;
-    }
-
-    /**
-     * Mark the event as allowing a custom response code.
-     */
-    public function allowCustomResponseCode(): void
-    {
-        $this->allowCustomResponseCode = true;
-    }
-
-    /**
-     * Returns true if the event allows a custom response code.
-     */
-    public function isAllowingCustomResponseCode(): bool
-    {
-        return $this->allowCustomResponseCode;
-    }
 }
