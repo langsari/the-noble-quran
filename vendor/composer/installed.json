@@ -5189,17 +5189,17 @@
     },
     {
         "name": "symfony/translation",
-        "version": "v4.4.16",
-        "version_normalized": "4.4.16.0",
+        "version": "v4.4.17",
+        "version_normalized": "4.4.17.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/translation.git",
-            "reference": "73095716af79f610f3b6338b911357393fdd10ab"
+            "reference": "84821e6a14a637e817f25d11147388695b6f790a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/translation/zipball/73095716af79f610f3b6338b911357393fdd10ab",
-            "reference": "73095716af79f610f3b6338b911357393fdd10ab",
+            "url": "https://api.github.com/repos/symfony/translation/zipball/84821e6a14a637e817f25d11147388695b6f790a",
+            "reference": "84821e6a14a637e817f25d11147388695b6f790a",
             "shasum": ""
         },
         "require": {
@@ -5232,7 +5232,7 @@
             "symfony/config": "",
             "symfony/yaml": ""
         },
-        "time": "2020-10-24T11:50:19+00:00",
+        "time": "2020-11-27T06:35:49+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
