@@ -1,1 +1,0 @@
-Quran application database
