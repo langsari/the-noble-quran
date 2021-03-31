@@ -1,0 +1,242 @@
+
+h1 {
+     text-align: center;
+     color: aquamarine;
+     
+   }
+   button{
+        border:2cm;
+        color:red;
+   }
+   #audio{
+        color:white;
+       margin-left: auto;
+       
+       
+
+   }
+   #jb{
+        background-image:url(file:///C:/Users/Asus/Desktop/illus%20AI/%E0%B9%84%E0%B8%9F.png);
+   }
+   
+#ph1{
+     width:40.6cm;
+     height:10cm;
+     margin-left: 1px;
+
+}.div.col.mx-2.a
+{color: white;
+     
+}
+p{
+     color:black    ;
+     text-align: center;
+     text-align: left;
+}
+#ip1{
+     margin-bottom: 40px;
+     
+
+}
+.btn.btn-search{
+     border-radius:0px ;
+     height: 60px;
+     width: 60px;
+     background:white;
+     color: #fff;
+}
+#quran{
+     width:200px ;
+    
+}.form-control.search-control{
+     height: 60px;
+     border-radius: 20px;
+}#nooble
+{
+     text-align: center;
+     text-shadow:green;
+     color: white;
+}.col{
+     
+     font-size:medium;
+     color: white;
+    padding: 5px;
+     height: 110px;
+     
+}
+      
+body
+{
+     background-color: white;
+
+    
+
+}#read-more{
+     margin-left: 18.8cm;
+     margin-top: 20px;
+     border-radius: 20px;
+     background-color: #0d7377;
+     color: white;
+}#surahfont{
+     font-size: medium;
+     text-align: center;
+     color: white;
+
+}
+
+.col-sm a{
+     text-decoration:none;
+     color:#0d7377;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 20px;
+     
+}.div.col-sm
+{
+     padding: 0px 0px 0px 0px;
+
+
+}
+#font-bt{
+     font-size: 20px;
+     
+   
+    
+     
+   
+}
+button h4{
+     margin-top: 10px;
+     font-family: 'Amiri', serif;
+     font-weight: lighter;
+     font-size: 35px;
+
+}.btn{
+    
+     background: rgb(255, 255, 255);
+     
+}span{
+     color:black;
+     font-size: 20px;
+     
+     
+                         
+}img{
+    
+}.btn{
+     padding: 0px 0px;
+}
+ ul li a{
+     text-decoration:none;
+     color: white;
+}.dropdown-menu li a:hover{
+     color: #32e0c4;
+}.sidenav {
+     height: 100%;
+     width: 0%;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     right: 0;
+     background-color:#9be2d6;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 0px;
+     margin-top: 0%;
+     
+     
+    
+   }
+   
+   .sidenav a {
+     
+     text-decoration: none;
+     font-size: 25px;
+     color: white;
+     display: block;
+     transition: 0.3s;
+   }
+   
+   .sidenav a:hover {
+     color: rgb(140, 140, 207);
+     
+   }
+   
+   .sidenav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 25px;
+   }
+   
+   #main {
+     transition: margin-left .5s;
+     padding: 20px;
+     display: inline;
+     margin: right;
+     margin-left:20px;
+     
+     
+   }
+   
+   @media screen and (max-height: 450px) {
+     .sidenav {padding-top: 15px;}
+     .sidenav a {font-size: 18px;}
+   }.dark-mode
+   {
+        background-color: black;
+        color: white;
+   }
+   body{
+        background-color: white;
+        color: #0d7377;
+   }.dark-mode p{
+        color: white;
+       
+   }.dark-mode a{
+        color: white;
+   }.dark-mode .footer{
+        background-color:black;
+        color: #0d7377;
+   }.dark-mode .li{
+        color: white;
+   }.dark-mode .sidenav{
+        background-color: black;
+        color:white;
+   }.dark-mode .page-footer{
+        background-color: rgb(77, 67, 88);   
+        color: black;
+         /*  is working */
+   }.dark-mode .btn{
+        background-color: black;
+   }.dark-mode .btn h4{
+        
+   }.dark-mode .btn span{
+        color:white;
+   }.dark-mode .navbar {
+        background-color:black;
+   }.dark-mode .form-control{
+        background-color:black;
+        color: white;
+        font-weight: bold;
+
+   }footer{
+        background-color:#32e0c4 ;
+   }.dark-mode #ilham{
+        background-color:black;
+   }#ilham{
+     background-color:#32e0c4 ;
+   }.dark-mode .dropdown-menu{
+        background-color:rgb(255, 255, 255);
+        color:black;
+   }.dark-mode {
+        color: #0d7377;
+       
+        
+   }.dark-mode .dropdown-menu{
+
+   }
+   
+       
+
+
