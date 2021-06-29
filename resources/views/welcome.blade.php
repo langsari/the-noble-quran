@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    The Noble Quran
+                    Hasan
                 </div>
 
                 <div class="links">
