@@ -83,6 +83,7 @@
                 <div class="title m-b-md">
                     The Noble Quran
                 </div>
+                <h3>Abdulroman Mohamadsaleh</h3>
                 <br>
                 <br>
 
