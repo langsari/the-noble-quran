@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Hasan
+                    The-nobal-quran
                 </div>
 
                 <div class="links">
