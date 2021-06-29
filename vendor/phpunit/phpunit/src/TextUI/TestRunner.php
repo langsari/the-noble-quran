@@ -14,6 +14,7 @@ use const PHP_SAPI;
 use const PHP_VERSION;
 use function array_diff;
 use function array_map;
+use function array_merge;
 use function assert;
 use function class_exists;
 use function count;
@@ -35,6 +36,7 @@ use PHPUnit\Runner\AfterLastTestHook;
 use PHPUnit\Runner\BaseTestRunner;
 use PHPUnit\Runner\BeforeFirstTestHook;
 use PHPUnit\Runner\DefaultTestResultCache;
+use PHPUnit\Runner\Extension\ExtensionHandler;
 use PHPUnit\Runner\Filter\ExcludeGroupFilterIterator;
 use PHPUnit\Runner\Filter\Factory;
 use PHPUnit\Runner\Filter\IncludeGroupFilterIterator;
@@ -50,7 +52,6 @@ use PHPUnit\Runner\TestSuiteSorter;
 use PHPUnit\Runner\Version;
 use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\FilterMapper;
 use PHPUnit\TextUI\XmlConfiguration\Configuration;
-use PHPUnit\TextUI\XmlConfiguration\ExtensionHandler;
 use PHPUnit\TextUI\XmlConfiguration\Loader;
 use PHPUnit\TextUI\XmlConfiguration\PhpHandler;
 use PHPUnit\Util\Filesystem;
@@ -150,6 +151,8 @@ final class TestRunner extends BaseTestRunner
         }
 
         $this->handleConfiguration($arguments);
+
+        $warnings = array_merge($warnings, $arguments['warnings']);
 
         if (is_int($arguments['columns']) && $arguments['columns'] < 16) {
             $arguments['columns']   = 16;
@@ -880,13 +883,17 @@ final class TestRunner extends BaseTestRunner
     }
 
     /**
-     * @throws Exception
      * @throws \PHPUnit\TextUI\XmlConfiguration\Exception
+     * @throws Exception
      */
     private function handleConfiguration(array &$arguments): void
     {
         if (!isset($arguments['configurationObject']) && isset($arguments['configuration'])) {
             $arguments['configurationObject'] = (new Loader)->load($arguments['configuration']);
+        }
+
+        if (!isset($arguments['warnings'])) {
+            $arguments['warnings'] = [];
         }
 
         $arguments['debug']     = $arguments['debug'] ?? false;
@@ -1021,7 +1028,7 @@ final class TestRunner extends BaseTestRunner
             $extensionHandler = new ExtensionHandler;
 
             foreach ($arguments['configurationObject']->extensions() as $extension) {
-                $this->addExtension($extensionHandler->createHookInstance($extension));
+                $extensionHandler->registerExtension($extension, $this);
             }
 
             foreach ($arguments['configurationObject']->listeners() as $listener) {
@@ -1082,7 +1089,7 @@ final class TestRunner extends BaseTestRunner
         $extensionHandler = new ExtensionHandler;
 
         foreach ($arguments['extensions'] as $extension) {
-            $this->addExtension($extensionHandler->createHookInstance($extension));
+            $extensionHandler->registerExtension($extension, $this);
         }
 
         unset($extensionHandler);

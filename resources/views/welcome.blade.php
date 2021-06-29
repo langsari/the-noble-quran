@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    The Noble Quran
+                    The arabic Noble Quran 
                 </div>
 
                 <div class="links">
