@@ -83,6 +83,8 @@
                 <div class="title m-b-md">
                     The Noble Quran
                 </div>
+                <br>
+                <br>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
