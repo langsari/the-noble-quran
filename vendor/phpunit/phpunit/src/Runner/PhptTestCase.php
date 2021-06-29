@@ -111,10 +111,10 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
     /**
      * Runs a test and collects its result in a TestResult instance.
      *
-     * @throws Exception
      * @throws \SebastianBergmann\CodeCoverage\InvalidArgumentException
      * @throws \SebastianBergmann\CodeCoverage\UnintentionallyCoveredCodeException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     * @throws Exception
      */
     public function run(TestResult $result = null): TestResult
     {
@@ -352,9 +352,9 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
     }
 
     /**
-     * @throws ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
+     * @throws ExpectationFailedException
      */
     private function assertPhptExpectation(array $sections, string $output): void
     {
@@ -604,7 +604,7 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
 
         $composerAutoload = '\'\'';
 
-        if (defined('PHPUNIT_COMPOSER_INSTALL') && !defined('PHPUNIT_TESTSUITE')) {
+        if (defined('PHPUNIT_COMPOSER_INSTALL')) {
             $composerAutoload = var_export(PHPUNIT_COMPOSER_INSTALL, true);
         }
 
@@ -851,10 +851,10 @@ final class PhptTestCase implements Reorderable, SelfDescribing, Test
                     $settings[] = 'xdebug.mode=off';
                 }
             } else {
+                $settings[] = 'xdebug.default_enable=0';
+
                 if ($collectCoverage) {
                     $settings[] = 'xdebug.coverage_enable=1';
-                } else {
-                    $settings[] = 'xdebug.default_enable=0';
                 }
             }
         }
