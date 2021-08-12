@@ -1,0 +1,20 @@
+.play-btn
+{
+    width: 10 px;
+    height: 10 px;
+    position: relative;
+    top: -50%;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+}
+.col-md-4:hover .play-btn
+{
+    opacity: 1;
+}
+.modal-content
+{
+background: : transparent !important;
+border: none
+
+}
