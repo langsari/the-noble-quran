@@ -1,0 +1,28 @@
+/*** Quran section ***/
+
+.surahasContainer
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.surahasContainer .surah 
+{
+    min-height: 100px;
+    min-width: 150px;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    margin-bottom: 8px;
+    text-align: center;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: #232323;
+    font-size: 17px;
+}
+.surahasContainer .surah
+{
+    transform: scale(1.0s);
+}
