@@ -1,0 +1,87 @@
+/*** Quran section ***/
+
+.surahasContainer
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.surahasContainer .surah 
+{
+    min-height: 100px;
+    min-width: 150px;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    margin-bottom: 8px;
+    text-align: center;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: #232323;
+    font-size: 17px;
+}
+.surahasContainer .surah
+{
+    transform: scale(1.0s);
+}
+
+/*** Pop Up ***/
+.surah-popup
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    overflow-y: scroll;
+    transform: translateX(100%);
+}
+.surah-popup.active
+{
+    transform: translateX(0);
+    transition: .7s all ease-in-out;
+}
+.surah-popup::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #43a047;
+}
+.surah-popup::-webkit-scrollbar
+{
+    background-color: #fff;
+}
+.close-popup
+{
+    position: sticky;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #121212;
+    cursor: pointer;
+}
+.surah-popup .ayat
+{
+    padding: 20px;
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    margin-right: 40px;
+    color: #121212;
+    text-align: center;
+}
+.surah-popup .ayat
+{
+    line-height: 2;
+    width: 100%;
+    border-bottom: 2px solid #43a047;
+    margin-bottom: 10px;
+}
