@@ -64,26 +64,30 @@
               <a class="logo" href="/index">
       <strong style="font-weight: bold">Quran</strong>.com</a></div>
 
-      <div class="input-wrapper large">
-  
-        <form action="/search" data-controller="search-form" data-expand=>
-            <input type="search" name="query" value="" placeholder="أبحث هنا  " autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" />
-            <button type="submit" class="quran-icon icon-search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                  </svg>
-</button>
+   
 
 
 
 
 
-            <div id="suggestions"></div>
-        </form>
-
-    </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
           <div class="header-theme-switch">
               <div class="theme-language">
                   <div class="language-wrapper" data-controller="choose-locales">
