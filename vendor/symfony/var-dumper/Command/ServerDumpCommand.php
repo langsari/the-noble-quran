@@ -35,6 +35,7 @@ use Symfony\Component\VarDumper\Server\DumpServer;
 class ServerDumpCommand extends Command
 {
     protected static $defaultName = 'server:dump';
+    protected static $defaultDescription = 'Start a dump server that collects and displays dumps in a single place';
 
     private $server;
 
@@ -58,7 +59,11 @@ class ServerDumpCommand extends Command
 
         $this
             ->addOption('format', null, InputOption::VALUE_REQUIRED, sprintf('The output format (%s)', $availableFormats), 'cli')
+<<<<<<< HEAD
             ->setDescription('Start a dump server that collects and displays dumps in a single place')
+=======
+            ->setDescription(self::$defaultDescription)
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
             ->setHelp(<<<'EOF'
 <info>%command.name%</info> starts a dump server that collects and displays
 dumps in a single place for debugging you application:

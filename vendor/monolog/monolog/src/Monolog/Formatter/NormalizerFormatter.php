@@ -46,7 +46,9 @@ class NormalizerFormatter implements FormatterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     *
+     * @param mixed[] $record
      */
     public function format(array $record)
     {
@@ -54,7 +56,7 @@ class NormalizerFormatter implements FormatterInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function formatBatch(array $records)
     {
@@ -122,8 +124,8 @@ class NormalizerFormatter implements FormatterInterface
     }
 
     /**
-     * @param  mixed                      $data
-     * @return int|bool|string|null|array
+     * @param  mixed                $data
+     * @return null|scalar|array<array|scalar|null>
      */
     protected function normalize($data, int $depth = 0)
     {
@@ -170,11 +172,17 @@ class NormalizerFormatter implements FormatterInterface
             }
 
             if ($data instanceof \JsonSerializable) {
+                /** @var null|scalar|array<array|scalar|null> $value */
                 $value = $data->jsonSerialize();
             } elseif (method_exists($data, '__toString')) {
+                /** @var string $value */
                 $value = $data->__toString();
             } else {
                 // the rest is normalized by json encoding and decoding it
+<<<<<<< HEAD
+=======
+                /** @var null|scalar|array<array|scalar|null> $value */
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
                 $value = json_decode($this->toJson($data, true), true);
             }
 
@@ -189,7 +197,7 @@ class NormalizerFormatter implements FormatterInterface
     }
 
     /**
-     * @return array
+     * @return mixed[]
      */
     protected function normalizeException(Throwable $e, int $depth = 0)
     {
@@ -248,6 +256,9 @@ class NormalizerFormatter implements FormatterInterface
         return Utils::jsonEncode($data, $this->jsonEncodeOptions, $ignoreErrors);
     }
 
+    /**
+     * @return string
+     */
     protected function formatDate(\DateTimeInterface $date)
     {
         // in case the date format isn't custom then we defer to the custom DateTimeImmutable
@@ -259,12 +270,20 @@ class NormalizerFormatter implements FormatterInterface
         return $date->format($this->dateFormat);
     }
 
+<<<<<<< HEAD
     public function addJsonEncodeOption(int $option)
+=======
+    public function addJsonEncodeOption(int $option): void
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
     {
         $this->jsonEncodeOptions |= $option;
     }
 
+<<<<<<< HEAD
     public function removeJsonEncodeOption(int $option)
+=======
+    public function removeJsonEncodeOption(int $option): void
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
     {
         $this->jsonEncodeOptions &= ~$option;
     }

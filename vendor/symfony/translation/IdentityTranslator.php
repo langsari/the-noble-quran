@@ -11,7 +11,7 @@
 
 namespace Symfony\Component\Translation;
 
-use Symfony\Component\Translation\TranslatorInterface as LegacyTranslatorInterface;
+use Symfony\Contracts\Translation\LocaleAwareInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Contracts\Translation\TranslatorTrait;
 
@@ -20,8 +20,9 @@ use Symfony\Contracts\Translation\TranslatorTrait;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class IdentityTranslator implements LegacyTranslatorInterface, TranslatorInterface
+class IdentityTranslator implements TranslatorInterface, LocaleAwareInterface
 {
+<<<<<<< HEAD
     use TranslatorTrait {
         trans as private doTrans;
         setLocale as private doSetLocale;
@@ -74,4 +75,7 @@ class IdentityTranslator implements LegacyTranslatorInterface, TranslatorInterfa
     {
         return PluralizationRules::get($number, $locale, false);
     }
+=======
+    use TranslatorTrait;
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
 }

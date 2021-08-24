@@ -1,0 +1,885 @@
+@font-face {
+    font-family: bismillah;
+    src: url(https://cdn.qurancdn.com/assets/bismillah/bismillah-a45c018f4b0f553b104cc9a11d7c41fab6edcf4ab77b278bd7a49cf58d869698.woff2), url(https://cdn.qurancdn.com/assets/bismillah/bismillah-844d3511bc5f9f060d2a09c12f3f479bded7f06225ec210cd8047d89eef10e6a.eot?#iefix) format("embedded-opentype"), url(https://cdn.qurancdn.com/assets/bismillah/bismillah-6543bb2d9a8154c580ace03754e5d3ba7f71ea8c1a335211592ab0cbeba5e1df.woff) format("woff"), url(https://cdn.qurancdn.com/assets/bismillah/bismillah-7ac73744cb8bcb8fb87dae1714c7ac3f492224b6d8a640311441d368e47093bd.ttf) format("truetype"), url(https://cdn.qurancdn.com/assets/bismillah/bismillah-0a96780dcdbe3f19a70f7729190967777e58a31eb2cc6d35c8056ff0f6242eea.svg#bismillah) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: pdms;
+    src: local("_PDMS_Saleem_QuranFont Regular"), url(https://cdn.qurancdn.com/assets/quran_fonts/pdms/pdms-saleem-quranfont-19f5948c4a230b80ed02c1779e40cc7bd9fcd35ca7aec1e426d78b3c83c06f0f.ttf);
+    font-display: swap
+}
+
+@font-face {
+    font-family: me_quran;
+    src: url(https://cdn.qurancdn.com/assets/quran_fonts/me_quran/me_quran-40c3436c134c511aba4c25355f70915ee2a0b8a850080691742aabd5216dfdbe.ttf);
+    font-display: swap
+}
+
+@font-face {
+    font-family: nafees;
+    src: local("Nafees"), local("Nafees Regular"), url(https://cdn.qurancdn.com/assets/languages/urdu/nafees/nafees-nastaleeq-webfont-8b5a03a69a3bdd17cdbdd3a59778b52d6eb98b4fc69ba09e2bcc24d74de50484.woff2), url(https://cdn.qurancdn.com/assets/languages/urdu/nafees/nafees-nastaleeq-webfont-c9b2c653468851c147759abeb61cb8e98574d7914066df362611e8b39bb4c368.eot?#iefix) format("embedded-opentype"), url(https://cdn.qurancdn.com/assets/languages/urdu/nafees/nafees-nastaleeq-webfont-5c5fed0923a59ee17d1649c26a22e32c43ede7320d3ec8d2cc72f90e2e69e51d.woff) format("woff"), url(https://cdn.qurancdn.com/assets/languages/urdu/nafees/nafees-nastaleeq-webfont-438b74d9fd192baa357c1e8c9f2b07dfc7597d57fb5970bc7fc63094290d8092.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: divehi;
+    src: url(https://cdn.qurancdn.com/assets/languages/dhivehi/akuru/DhivehiAkuru-3bb4c313266466cfba648aa5449b1c8ff3116d5a29587d295855081f468dfdca.woff), url(https://cdn.qurancdn.com/assets/languages/dhivehi/akuru/DhivehiAkuru-a7e4fa9440461126699c676671c76ca9aff833f01c454a07c3e145fa498cb212.otf);
+    font-display: swap
+}
+
+@font-face {
+    font-family: uthmanichafs1-ver17;
+    src: local("KFGQPC HAFS Uthmanic Script Regular. Version 0.17"), url(https://cdn.qurancdn.com/assets/quran_fonts/uthmanic_hafs/UthmanicHafs1-Ver17-d3c10a141267f9807051fb2ca4eaf4411e88dcdb78920c10cdbe1a2c4ffa59a2.woff2), url(https://cdn.qurancdn.com/assets/quran_fonts/uthmanic_hafs/UthmanicHafs1-Ver17-feca3fe4a85b59a718dec776a00acb48e4168dfaf2deda5ea3cb9bf68e3ca6bc.ttf) format("truetype");
+    font-display: swap
+}
+
+@font-face {
+    font-family: icon-surah;
+    src: url(https://cdn.qurancdn.com/assets/surah_names/surah_names-a4fe28198a9e501e7257b87eb8df4a9dd2c812517842197fae5224817e17d800.eot);
+    src: url(https://cdn.qurancdn.com/assets/surah_names/surah_names-a4fe28198a9e501e7257b87eb8df4a9dd2c812517842197fae5224817e17d800.eot?#iefix) format("embedded-opentype"), url(https://cdn.qurancdn.com/assets/surah_names/surah_names-0d8f48bbfd059adcdbf75fd3190bb1826a904a2549d465ca1a218249a86daf38.woff2) format("woff2"), url(https://cdn.qurancdn.com/assets/surah_names/surah_names-d8d31cd4f98ff304649f26105c5bcd99f9dc0ecd1c855408be326c5dd13a867c.woff) format("woff"), url(https://cdn.qurancdn.com/assets/surah_names/surah_names-cdef95f1ef2a9e93cdcfea5832658d26ff983c4e33ecf00f55974522925e3ee7.ttf) format("truetype"), url(https://cdn.qurancdn.com/assets/surah_names/surah_names-e28f0e211a0a84e9fb8d805977856338957c781b216350b4ac4674be94376769.svg#surah_names) format("svg")
+}
+
+[class^=icon-surah],
+[class*=" icon-surah"] {
+    font-family: icon-surah !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-surah-surah:before {
+    content: "\e903"
+}
+
+.icon-surah1:before {
+    content: "\E904"
+}
+
+.icon-surah2:before {
+    content: "\E905"
+}
+
+.icon-surah3:before {
+    content: "\E906"
+}
+
+.icon-surah4:before {
+    content: "\E907"
+}
+
+.icon-surah5:before {
+    content: "\E908"
+}
+
+.icon-surah6:before {
+    content: "\E90b"
+}
+
+.icon-surah7:before {
+    content: "\E90c"
+}
+
+.icon-surah8:before {
+    content: "\E90d"
+}
+
+.icon-surah9:before {
+    content: "\E90e"
+}
+
+.icon-surah10:before {
+    content: "\E90f"
+}
+
+.icon-surah11:before {
+    content: "\E910"
+}
+
+.icon-surah12:before {
+    content: "\E911"
+}
+
+.icon-surah13:before {
+    content: "\E912"
+}
+
+.icon-surah14:before {
+    content: "\E913"
+}
+
+.icon-surah15:before {
+    content: "\E914"
+}
+
+.icon-surah16:before {
+    content: "\E915"
+}
+
+.icon-surah17:before {
+    content: "\E916"
+}
+
+.icon-surah18:before {
+    content: "\E917"
+}
+
+.icon-surah19:before {
+    content: "\E918"
+}
+
+.icon-surah20:before {
+    content: "\E919"
+}
+
+.icon-surah21:before {
+    content: "\E91a"
+}
+
+.icon-surah22:before {
+    content: "\E91b"
+}
+
+.icon-surah23:before {
+    content: "\E91c"
+}
+
+.icon-surah24:before {
+    content: "\E91d"
+}
+
+.icon-surah25:before {
+    content: "\E91e"
+}
+
+.icon-surah26:before {
+    content: "\E91f"
+}
+
+.icon-surah27:before {
+    content: "\E920"
+}
+
+.icon-surah28:before {
+    content: "\E921"
+}
+
+.icon-surah29:before {
+    content: "\E922"
+}
+
+.icon-surah30:before {
+    content: "\E923"
+}
+
+.icon-surah31:before {
+    content: "\E924"
+}
+
+.icon-surah32:before {
+    content: "\E925"
+}
+
+.icon-surah33:before {
+    content: "\E926"
+}
+
+.icon-surah34:before {
+    content: "\E92e"
+}
+
+.icon-surah35:before {
+    content: "\E92f"
+}
+
+.icon-surah36:before {
+    content: "\E930"
+}
+
+.icon-surah37:before {
+    content: "\E931"
+}
+
+.icon-surah38:before {
+    content: "\E909"
+}
+
+.icon-surah39:before {
+    content: "\E90a"
+}
+
+.icon-surah40:before {
+    content: "\E927"
+}
+
+.icon-surah41:before {
+    content: "\E928"
+}
+
+.icon-surah42:before {
+    content: "\E929"
+}
+
+.icon-surah43:before {
+    content: "\E92a"
+}
+
+.icon-surah44:before {
+    content: "\E92b"
+}
+
+.icon-surah45:before {
+    content: "\E92c"
+}
+
+.icon-surah46:before {
+    content: "\E92d"
+}
+
+.icon-surah47:before {
+    content: "\E932"
+}
+
+.icon-surah48:before {
+    content: "\E902"
+}
+
+.icon-surah49:before {
+    content: "\E933"
+}
+
+.icon-surah50:before {
+    content: "\E934"
+}
+
+.icon-surah51:before {
+    content: "\E935"
+}
+
+.icon-surah52:before {
+    content: "\E936"
+}
+
+.icon-surah53:before {
+    content: "\E937"
+}
+
+.icon-surah54:before {
+    content: "\E938"
+}
+
+.icon-surah55:before {
+    content: "\E939"
+}
+
+.icon-surah56:before {
+    content: "\E93a"
+}
+
+.icon-surah57:before {
+    content: "\E93b"
+}
+
+.icon-surah58:before {
+    content: "\E93c"
+}
+
+.icon-surah59:before {
+    content: "\E900"
+}
+
+.icon-surah60:before {
+    content: "\E901"
+}
+
+.icon-surah61:before {
+    content: "\E941"
+}
+
+.icon-surah62:before {
+    content: "\E942"
+}
+
+.icon-surah63:before {
+    content: "\E943"
+}
+
+.icon-surah64:before {
+    content: "\E944"
+}
+
+.icon-surah65:before {
+    content: "\E945"
+}
+
+.icon-surah66:before {
+    content: "\E946"
+}
+
+.icon-surah67:before {
+    content: "\E947"
+}
+
+.icon-surah68:before {
+    content: "\E948"
+}
+
+.icon-surah69:before {
+    content: "\E949"
+}
+
+.icon-surah70:before {
+    content: "\E94a"
+}
+
+.icon-surah71:before {
+    content: "\E94b"
+}
+
+.icon-surah72:before {
+    content: "\E94c"
+}
+
+.icon-surah73:before {
+    content: "\E94d"
+}
+
+.icon-surah74:before {
+    content: "\E94e"
+}
+
+.icon-surah75:before {
+    content: "\E94f"
+}
+
+.icon-surah76:before {
+    content: "\E950"
+}
+
+.icon-surah77:before {
+    content: "\E951"
+}
+
+.icon-surah78:before {
+    content: "\E952"
+}
+
+.icon-surah79:before {
+    content: "\E93d"
+}
+
+.icon-surah80:before {
+    content: "\E93e"
+}
+
+.icon-surah81:before {
+    content: "\E93f"
+}
+
+.icon-surah82:before {
+    content: "\E940"
+}
+
+.icon-surah83:before {
+    content: "\E953"
+}
+
+.icon-surah84:before {
+    content: "\E954"
+}
+
+.icon-surah85:before {
+    content: "\E955"
+}
+
+.icon-surah86:before {
+    content: "\E956"
+}
+
+.icon-surah87:before {
+    content: "\E957"
+}
+
+.icon-surah88:before {
+    content: "\E958"
+}
+
+.icon-surah89:before {
+    content: "\E959"
+}
+
+.icon-surah90:before {
+    content: "\E95a"
+}
+
+.icon-surah91:before {
+    content: "\E95b"
+}
+
+.icon-surah92:before {
+    content: "\E95c"
+}
+
+.icon-surah93:before {
+    content: "\E95d"
+}
+
+.icon-surah94:before {
+    content: "\E95e"
+}
+
+.icon-surah95:before {
+    content: "\E95f"
+}
+
+.icon-surah96:before {
+    content: "\E960"
+}
+
+.icon-surah97:before {
+    content: "\E961"
+}
+
+.icon-surah98:before {
+    content: "\E962"
+}
+
+.icon-surah99:before {
+    content: "\E963"
+}
+
+.icon-surah100:before {
+    content: "\E964"
+}
+
+.icon-surah101:before {
+    content: "\E965"
+}
+
+.icon-surah102:before {
+    content: "\E966"
+}
+
+.icon-surah103:before {
+    content: "\E967"
+}
+
+.icon-surah104:before {
+    content: "\E968"
+}
+
+.icon-surah105:before {
+    content: "\E969"
+}
+
+.icon-surah106:before {
+    content: "\E96a"
+}
+
+.icon-surah107:before {
+    content: "\E96b"
+}
+
+.icon-surah108:before {
+    content: "\E96c"
+}
+
+.icon-surah109:before {
+    content: "\E96d"
+}
+
+.icon-surah110:before {
+    content: "\E96e"
+}
+
+.icon-surah111:before {
+    content: "\E96f"
+}
+
+.icon-surah112:before {
+    content: "\E970"
+}
+
+.icon-surah113:before {
+    content: "\E971"
+}
+
+.icon-surah114:before {
+    content: "\E972"
+}
+
+.fa-help:before {
+    content: ""
+}
+
+.fa-fb:before {
+    content: ""
+}
+
+.fa-messenger:before {
+    content: ""
+}
+
+.fa-pocket:before {
+    content: ""
+}
+
+.fa-line:before {
+    content: ""
+}
+
+.fa-pinterest:before {
+    content: ""
+}
+
+.fa-reddit:before {
+    content: ""
+}
+
+.fa-telegram:before {
+    content: ""
+}
+
+.fa-twitter:before {
+    content: ""
+}
+
+.fa-whatsapp:before {
+    content: ""
+}
+
+.fa-developer:before {
+    content: ""
+}
+
+.fa-bookmark:before {
+    content: ""
+}
+
+.fa-caret-right:before {
+    content: ""
+}
+
+.fa-pause-circle:before {
+    content: ""
+}
+
+.fa-play-circle:before {
+    content: ""
+}
+
+.fa-play-solid:before {
+    content: ""
+}
+
+.fa-step-backward:before {
+    content: ""
+}
+
+.fa-step-forward:before {
+    content: ""
+}
+
+.fa-arrow-alt-left:before {
+    content: ""
+}
+
+.fa-bars-regular:before {
+    content: ""
+}
+
+.fa-chevron-right:before {
+    content: ""
+}
+
+.fa-link-regular:before {
+    content: ""
+}
+
+.fa-long-arrow-left:before {
+    content: ""
+}
+
+.fa-pause-circle-regular:before {
+    content: ""
+}
+
+.fa-play-circle-regular:before {
+    content: ""
+}
+
+.fa-play-regular:before {
+    content: ""
+}
+
+.fa-repeat-regular:before {
+    content: ""
+}
+
+.fa-spinner:before {
+    content: ""
+}
+
+.fa-unlink-regular:before {
+    content: ""
+}
+
+.fa-bars-light:before {
+    content: ""
+}
+
+.fa-bookmark1:before {
+    content: ""
+}
+
+.fa-clipboard-list:before {
+    content: ""
+}
+
+.fa-cog:before {
+    content: ""
+}
+
+.fa-cogs:before {
+    content: ""
+}
+
+.fa-copy:before {
+    content: ""
+}
+
+.fa-edit:before {
+    content: ""
+}
+
+.fa-ellipsis-h:before {
+    content: ""
+}
+
+.fa-ellipsis-v-alt:before {
+    content: ""
+}
+
+.fa-ellipsis-v:before {
+    content: ""
+}
+
+.fa-envelope:before {
+    content: ""
+}
+
+.fa-external-link-alt:before {
+    content: ""
+}
+
+.fa-home:before {
+    content: ""
+}
+
+.fa-info-circle:before {
+    content: ""
+}
+
+.fa-link-light:before {
+    content: ""
+}
+
+.fa-microphone:before {
+    content: ""
+}
+
+.fa-minus-circle:before {
+    content: ""
+}
+
+.fa-mobile:before {
+    content: ""
+}
+
+.fa-music:before {
+    content: ""
+}
+
+.fa-pause-circle-light:before {
+    content: ""
+}
+
+.fa-play-circle-light:before {
+    content: ""
+}
+
+.fa-play-light:before {
+    content: ""
+}
+
+.fa-plus-circle:before {
+    content: ""
+}
+
+.fa-print:before {
+    content: ""
+}
+
+.fa-repeat-light:before {
+    content: ""
+}
+
+.fa-search:before {
+    content: ""
+}
+
+.fa-share-alt:before {
+    content: ""
+}
+
+.fa-share-square:before {
+    content: ""
+}
+
+.fa-tag:before {
+    content: ""
+}
+
+.fa-tags:before {
+    content: ""
+}
+
+.fa-times-circle:before {
+    content: ""
+}
+
+.fa-times:before {
+    content: ""
+}
+
+.fa-tv:before {
+    content: ""
+}
+
+.fa-unlink-light:before {
+    content: ""
+}
+
+.fa-play:before {
+    content: ""
+}
+
+.fa-book:before {
+    content: ""
+}
+
+.fa-donate:before {
+    content: ""
+}
+
+@font-face {
+    font-family: fac;
+    src: url(https://cdn.qurancdn.com/icons/fa.eot);
+    src: url(https://cdn.qurancdn.com/icons/fa.eot#iefix) format("embedded-opentype"), url(https://cdn.qurancdn.com/icons/fa.woff) format("woff"), url(https://cdn.qurancdn.com/icons/fa.ttf) format("truetype"), url(https://cdn.qurancdn.com/icons/fa.svg#icons) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class^=fa-]:before,
+[class*=" fa-"]:before {
+    font-family: fac;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.fa-2x {
+    font-size: 2em
+}
+
+.uighur,
+.uyghur,
+.ur,
+.urdu,
+.persian,
+.hebrew,
+.pashto,
+.arabic,
+divehi,
+.dhivehi {
+    direction: rtl;
+    text-align: right
+}
+
+.uighur .alert-dismissible .close,
+.uyghur .alert-dismissible .close,
+.ur .alert-dismissible .close,
+.urdu .alert-dismissible .close,
+.persian .alert-dismissible .close,
+.hebrew .alert-dismissible .close,
+.pashto .alert-dismissible .close,
+.arabic .alert-dismissible .close,
+divehi .alert-dismissible .close,
+.dhivehi .alert-dismissible .close {
+    left: 0;
+    right: auto
+}
+
+.ur,
+.urdu {
+    font-family: nafees
+}
+
+.divehi,
+.dhivehi,
+.maldivian {
+    font-family: divehi
+}
+
+.indopak,
+.text_indopak {
+    font-family: pdms
+}
+
+.tajweed,
+.uthmani {
+    font-family: me_quran
+}
+
+.muhsaf-qpc_hafs,
+.qpc_hafs {
+    font-family: UthmanicHafs1-Ver17
+}
+
+.muhsaf-qpc_hafs *,
+.qpc_hafs * {
+    unicode-bidi: bidi-override
+}
+
+.lang-ar input,
+.lang-ur input {
+    direction: rtl
+}
+
+.indopak .end,
+.uthmani .end,
+.tajweed .end {
+    font-family: UthmanicHafs1-Ver17;
+    font-size: 35px;
+    unicode-bidi: bidi-override
+}

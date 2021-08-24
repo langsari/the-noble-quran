@@ -1,2 +1,0 @@
-#resources/
-other resource files	

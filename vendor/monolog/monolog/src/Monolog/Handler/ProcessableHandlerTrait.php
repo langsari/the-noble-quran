@@ -12,21 +12,29 @@
 namespace Monolog\Handler;
 
 use Monolog\ResettableInterface;
+use Monolog\Processor\ProcessorInterface;
 
 /**
  * Helper trait for implementing ProcessableInterface
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
+ *
+ * @phpstan-import-type Record from \Monolog\Logger
  */
 trait ProcessableHandlerTrait
 {
     /**
      * @var callable[]
+     * @phpstan-var array<ProcessorInterface|callable(Record): Record>
      */
     protected $processors = [];
 
     /**
+<<<<<<< HEAD
      * {@inheritdoc}
+=======
+     * {@inheritDoc}
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
      */
     public function pushProcessor(callable $callback): HandlerInterface
     {
@@ -36,7 +44,7 @@ trait ProcessableHandlerTrait
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function popProcessor(): callable
     {
@@ -49,6 +57,9 @@ trait ProcessableHandlerTrait
 
     /**
      * Processes a record.
+     *
+     * @phpstan-param  Record $record
+     * @phpstan-return Record
      */
     protected function processRecord(array $record): array
     {

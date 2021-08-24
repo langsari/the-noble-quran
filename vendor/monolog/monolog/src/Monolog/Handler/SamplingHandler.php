@@ -26,13 +26,17 @@ use Monolog\Formatter\FormatterInterface;
  *
  * @author Bryan Davis <bd808@wikimedia.org>
  * @author Kunal Mehta <legoktm@gmail.com>
+ *
+ * @phpstan-import-type Record from \Monolog\Logger
+ * @phpstan-import-type Level from \Monolog\Logger
  */
 class SamplingHandler extends AbstractHandler implements ProcessableHandlerInterface, FormattableHandlerInterface
 {
     use ProcessableHandlerTrait;
 
     /**
-     * @var callable|HandlerInterface $handler
+     * @var HandlerInterface|callable
+     * @phpstan-var HandlerInterface|callable(Record|array{level: Level}|null, HandlerInterface): HandlerInterface
      */
     protected $handler;
 
@@ -42,7 +46,7 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
     protected $factor;
 
     /**
-     * @psalm-param HandlerInterface|callable(array, HandlerInterface): HandlerInterface $handler
+     * @psalm-param HandlerInterface|callable(Record|array{level: Level}|null, HandlerInterface): HandlerInterface $handler
      *
      * @param callable|HandlerInterface $handler Handler or factory callable($record|null, $samplingHandler).
      * @param int                       $factor  Sample factor (e.g. 10 means every ~10th record is sampled)
@@ -67,6 +71,7 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
     {
         if ($this->isHandling($record) && mt_rand(1, $this->factor) === 1) {
             if ($this->processors) {
+                /** @var Record $record */
                 $record = $this->processRecord($record);
             }
 
@@ -80,6 +85,8 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
      * Return the nested handler
      *
      * If the handler was provided as a factory callable, this will trigger the handler's instantiation.
+     *
+     * @phpstan-param Record|array{level: Level}|null $record
      *
      * @return HandlerInterface
      */
@@ -96,22 +103,29 @@ class SamplingHandler extends AbstractHandler implements ProcessableHandlerInter
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setFormatter(FormatterInterface $formatter): HandlerInterface
     {
         $handler = $this->getHandler();
         if ($handler instanceof FormattableHandlerInterface) {
             $handler->setFormatter($formatter);
+<<<<<<< HEAD
 
             return $this;
         }
 
+=======
+
+            return $this;
+        }
+
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
         throw new \UnexpectedValueException('The nested handler of type '.get_class($handler).' does not support formatters.');
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getFormatter(): FormatterInterface
     {

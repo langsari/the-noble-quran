@@ -30,7 +30,11 @@
         "rollbar/rollbar": "^1.3",
         "ruflin/elastica": ">=0.90 <7.0.1",
         "swiftmailer/swiftmailer": "^5.3|^6.0",
+<<<<<<< HEAD
         "phpstan/phpstan": "^0.12.59"
+=======
+        "phpstan/phpstan": "^0.12.91"
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
     },
     "suggest": {
         "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",

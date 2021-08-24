@@ -11,6 +11,15 @@
 
 namespace Symfony\Component\HttpKernel;
 
+use Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent;
+use Symfony\Component\HttpKernel\Event\ControllerEvent;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpKernel\Event\FinishRequestEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
+use Symfony\Component\HttpKernel\Event\TerminateEvent;
+use Symfony\Component\HttpKernel\Event\ViewEvent;
+
 /**
  * Contains all events thrown in the HttpKernel component.
  *
@@ -38,6 +47,7 @@ final class KernelEvents
      * @Event("Symfony\Component\HttpKernel\Event\ExceptionEvent")
      */
     public const EXCEPTION = 'kernel.exception';
+<<<<<<< HEAD
 
     /**
      * The VIEW event occurs when the return value of a controller
@@ -49,6 +59,8 @@ final class KernelEvents
      * @Event("Symfony\Component\HttpKernel\Event\ViewEvent")
      */
     public const VIEW = 'kernel.view';
+=======
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
 
     /**
      * The CONTROLLER event occurs once a controller was found for
@@ -70,6 +82,20 @@ final class KernelEvents
      * @Event("Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent")
      */
     public const CONTROLLER_ARGUMENTS = 'kernel.controller_arguments';
+<<<<<<< HEAD
+=======
+
+    /**
+     * The VIEW event occurs when the return value of a controller
+     * is not a Response instance.
+     *
+     * This event allows you to create a response for the return value of the
+     * controller.
+     *
+     * @Event("Symfony\Component\HttpKernel\Event\ViewEvent")
+     */
+    public const VIEW = 'kernel.view';
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
 
     /**
      * The RESPONSE event occurs once a response was created for
@@ -81,6 +107,19 @@ final class KernelEvents
      * @Event("Symfony\Component\HttpKernel\Event\ResponseEvent")
      */
     public const RESPONSE = 'kernel.response';
+<<<<<<< HEAD
+=======
+
+    /**
+     * The FINISH_REQUEST event occurs when a response was generated for a request.
+     *
+     * This event allows you to reset the global and environmental state of
+     * the application, when it was changed during the request.
+     *
+     * @Event("Symfony\Component\HttpKernel\Event\FinishRequestEvent")
+     */
+    public const FINISH_REQUEST = 'kernel.finish_request';
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
 
     /**
      * The TERMINATE event occurs once a response was sent.
@@ -92,12 +131,22 @@ final class KernelEvents
     public const TERMINATE = 'kernel.terminate';
 
     /**
-     * The FINISH_REQUEST event occurs when a response was generated for a request.
+     * Event aliases.
      *
-     * This event allows you to reset the global and environmental state of
-     * the application, when it was changed during the request.
-     *
-     * @Event("Symfony\Component\HttpKernel\Event\FinishRequestEvent")
+     * These aliases can be consumed by RegisterListenersPass.
      */
+<<<<<<< HEAD
     public const FINISH_REQUEST = 'kernel.finish_request';
+=======
+    public const ALIASES = [
+        ControllerArgumentsEvent::class => self::CONTROLLER_ARGUMENTS,
+        ControllerEvent::class => self::CONTROLLER,
+        ResponseEvent::class => self::RESPONSE,
+        FinishRequestEvent::class => self::FINISH_REQUEST,
+        RequestEvent::class => self::REQUEST,
+        ViewEvent::class => self::VIEW,
+        ExceptionEvent::class => self::EXCEPTION,
+        TerminateEvent::class => self::TERMINATE,
+    ];
+>>>>>>> d06c272759e2a4704771ce39cad34d3612d9ba76
 }
