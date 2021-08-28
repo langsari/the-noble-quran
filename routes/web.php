@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/ayat/{id}', function ($id) {
+    return view('ayat');
+});
 Route::get('/', function () {
-    return view('welcome');
+    return view('Quran');
 });
 
 Route::get('/dashboard', function () {
