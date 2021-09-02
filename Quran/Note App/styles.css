@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+:root {
+    --white: #fff;
+    --black:  #1c2b2d;
+    --blue:  #31326f;
+    --light-blue:  #005490;
+    --color-primary:  #9d0191;
+    --color-sec:  #db6400;
+    --color-gray:  #eee;
+    --color-dark-gray:  #222831;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    background-color: #eee;
+}
+
+p {
+    font-size: 1,6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    line-height: 2;
+}
+
+header form {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+}
+
+form > * {
+    margin-bottom: 5px;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 7px;
+    border: 1px solid #777;
+    border-radius: 3px;
+}
+
+form textarea {
+    padding: 7px 0 40px 5px;
+    font-family: inherit;
+}
+
+::placeholder {
+    font-size: 1.3rem;
+}
+
+form button {
+    background-color: var(--color-sec);
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+form button:hover {
+    background-color: var(--color-primary);
+}
+
+.notes {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 1rem 0; 
+}
+
+.note {
+    margin-bottom: 1rem;
+}
+
+.note-counter,
+.note-title {
+    font-size: 1.4rem;
+}
+
+.note-title {
+    font-size: 1.6rem;
+}
+
+.note-btn {
+    padding: 7px;
+    margin-top: 5px;
+    background-color: orangered;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
