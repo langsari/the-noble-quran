@@ -16,3 +16,8 @@ Route::get('/', function () {
     return view('home');
 
 });
+
+
+Route::get('/surah/{id}', function($id){
+    return view("surah")->with('id',$id);
+});

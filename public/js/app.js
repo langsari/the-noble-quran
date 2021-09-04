@@ -2045,7 +2045,55 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // -----------------START----------------
+// {{-- Javascript For Fetch All Surah Name From External API And Show In Home Page --}}
+
+
+var surahList = document.querySelector('.surah-list');
+
+function getAllSurah() {
+  fetch("https://api.quran.sutanlab.id/surah").then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var dataPrint = '';
+    var suarhs = data.data; // console.log(data.data)
+
+    suarhs.forEach(function (suarh) {
+      // console.log(suarh.name.long)
+      dataPrint += "\n                            <li id=".concat(suarh.number, " data-surah=").concat(suarh.number, " data-title=").concat(suarh.name.transliteration.en, ">\n                                <a href='/surah/").concat(suarh.number, "'>\n                                    <div class='item'>\n                                        <div class='item-id'><span>").concat(suarh.number, "</span></div>\n                                        <div class='item-right'>\n                                            <div class='arabic'>").concat(suarh.name["long"], "</div>\n                                            <div class='verses'>").concat(suarh.numberOfVerses, " Verses</div>\n                                        </div>\n                                        <div class='item-left'>\n                                            <div class='title'>").concat(suarh.name.transliteration.en, "</div>\n                                            <div class='translate'>").concat(suarh.name.translation.en, "</div>\n                                        </div>\n                                        <div class='clear'></div>\n                                    </div>\n                                </a>\n                            </li>\n                        ");
+    });
+    surahList.innerHTML = dataPrint;
+  });
+}
+
+getAllSurah(); // -----------------END----------------
+// -----------------START----------------
+// {{-- Javascript For Fetch All Surah Audio From External API And Show In Surah Page --}}
+
+var url = window.location.href;
+var newUrl = url.split('/');
+var id = newUrl[newUrl.length - 1];
+var ayatList = document.querySelector('.ayat');
+
+function getSurah() {
+  fetch("https://api.quran.sutanlab.id/surah/".concat(id)).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    var verses = data.data.verses;
+    console.log(verses);
+    console.log(data.data);
+    var thai = []; // console.log(verses[1].text.arab)
+
+    var ayats = "";
+
+    for (var index = 0; index < verses.length; index++) {
+      ayats += "\n\n            <li class='text-center '><h5>  ".concat(verses[index].text.arab, " - ").concat(verses[index].number.inSurah, "</h5></li>\n            <audio controls class='text-center'>\n                <source src=\"").concat(verses[index].audio.primary, "\" type=\"audio/ogg\">\n\n                Your browser does not support the audio element.\n            </audio>\n\n            <br>\n            <br>\n            <br>\n            ");
+      ayatList.innerHTML = ayats;
+    }
+  });
+}
+
+getSurah(); // -----------------END----------------
 
 /***/ }),
 
