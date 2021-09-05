@@ -61,6 +61,11 @@ let newUrl = url.split('/');
 let id = newUrl[newUrl.length - 1]
 let ayatList = document.querySelector('.ayat');
 const surah_name= document.getElementById('surah_name')
+const surah_number= document.getElementById('surah_number')
+const numberOfVerses= document.getElementById('numberOfVerses')
+const revelation= document.getElementById('revelation')
+const surah_read= document.getElementById('surah_read')
+let all_sura = "";
 
 function getSurah() {
     fetch(`https://api.quran.sutanlab.id/surah/${id}`)
@@ -69,44 +74,96 @@ function getSurah() {
 
                 let verses = data.data.verses;
                 console.log(data)
-                surah_name.innerHTML=data.data.name.long;
+                surah_name.innerHTML="<h2>" + data.data.name.translation.en+ " - " +data.data.name.long +"</h2>" ;
+                surah_number.innerHTML = "<h5>Surah Number :<span class='font-weight-bold'> " + data.data.number + "</span></h5>";
+                numberOfVerses.innerHTML = "<h5>Number Of Verses :<span class='font-weight-bold'> " + data.data.numberOfVerses  + "</span></h5>";
+                revelation.innerHTML = "<h5>Revelation Place :<span class='font-weight-bold'> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
 
-                // console.log(data.data)
                 const thai = [];
-                // console.log(verses[1].text.arab)
 
                 let ayats = "";
-
                 for (let index = 0; index < verses.length; index++) {
+                    // all_sura +=
+                    //                 `
+                    //                 <div class="container">
+                    //                     <div class="row justify-content-center">
+                    //                         <div class="col-11">
+                    //                             <h3 class="pt-4" style="line-height: 2em;">
+                    //                                 ${verses[index].text.arab}
+                    //                             </h3>
+                    //                         </div>
+                    //                         <div class="col-1 ">
+                    //                             <h5>
+                    //                                 <span class="badge badge-pill badge-secondary"> ${verses[index].number.inSurah}</span>
+                    //                             </h5>
+                    //                         </div>
+                    //                     </div>
+                    //                 </div>
+                    //                 `;
+
+
+                    all_sura +=
+                    `
+                                <span>
+                                    ${verses[index].text.arab}
+                                </span>
+                                <span>
+                                    <span class="badge badge-pill badge-success" > ${verses[index].number.inSurah}</span>
+                                </span>
+                    `;
+
+
+
                     ayats +=
                         `
 
-            <li class='text-center '>
-                <h5>  ${verses[index].text.arab} - ${verses[index].number.inSurah}</h5>
-                <h6>${verses[index].text.transliteration.en}</h6>
-                <p>${verses[index].translation.en}</p>
+                        <div class=" card text-center" >
+                            <div class="card-body">
 
-            </li>
-            <audio id="player${index}"  class='text-center'>
-                <source src="${verses[index].audio.primary}" type="audio/ogg">
+                                <li class='text-center' style="list-style-type: none;">
+                                    <h5  >
+                                        <span class="badge badge-pill badge-secondary"> ${verses[index].number.inSurah}</span>
+                                        </h5>
+                                    <h3 class="pt-4" style="line-height: 2em;">
+                                        ${verses[index].text.arab}
+                                    </h3>
+                                    <div>
+                                        <audio id="player${index}"  class='text-center'>
+                                        <source src="${verses[index].audio.primary}" type="audio/ogg">
+                                        Your browser does not support the audio element.
+                                        </audio>
+                                        <br>
+                                        <div class='text-center '>
+                                            <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()">Play</button>
+                                            <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()">Pause</button>
+                                            <button class="rounded-lg btn btn-dark" onclick="document.getElementById('player${index}').volume+=0.1">+</button>
+                                            <button class="rounded-lg btn btn-dark" onclick="document.getElementById('player${index}').volume-=0.1">-</button>
+                                        </div>
+                                        <br>
+                                        <br>
+                                    </div>
+                                    <h6 class="mb-3 text-black-50">Transliteration</h6>
+                                    <h5 class="text-dark " style="line-height: 2em;">${verses[index].text.transliteration.en}</h5>
+                                    <br>
+                                    <h6 class="mb-3 text-black-50">Translation</h6>
+                                    <h5 class="text-dark "style="line-height: 2em;">
+                                        ${verses[index].translation.en}
+                                    </h5>
+                                </li>
 
-                Your browser does not support the audio element.
-            </audio>
-            <br>
-            <div class='text-center '>
-                <button class="btn btn-success" onclick="document.getElementById('player${index}').play()">Play</button>
-                <button class="btn btn-danger" onclick="document.getElementById('player${index}').pause()">Pause</button>
-                <button class="btn btn-warning" onclick="document.getElementById('player${index}').volume+=0.1">Volume Up</button>
-                <button class="btn btn-warning" onclick="document.getElementById('player${index}').volume-=0.1">Volume Down</button>
-            </div>
-            <br>
-            <br>
-            <br>
+                                <br>
+
+                            </div>
+                        </div>
             `
-                    ayatList.innerHTML = ayats;
+
+
 
 
                 }
+                ayatList.innerHTML = ayats;
+
+                surah_read.innerHTML=all_sura
             }
         )
 }
