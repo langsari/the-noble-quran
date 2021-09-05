@@ -4,6 +4,11 @@
 
     <div class="container my-5">
 
+
+                <h3 class="text-center " id="surah_title"></h3>
+
+
+
         {{-- Start Sub Nav Bar --}}
         <div class="row d-flex justify-content-center  my-5 ">
 
@@ -36,15 +41,15 @@
 
 
         {{-- Start Display Surah Read --}}
-        <div class="row d-flex justify-content-center  my-5">
+        <div class="row d-flex justify-content-center  my-1">
 
             <div class="collapse col-12 w-75" id="surah_read_section">
 
                 <div class="card text-center">
                     <div class="card-body">
 
-                                <h2 id="surah_read" style="line-height: 2.5em;">
-                                </h2>
+                        <h2 id="surah_read" style="line-height: 2.5em;">
+                        </h2>
 
                     </div>
                 </div>
@@ -54,7 +59,7 @@
         {{-- End Display Surah Read --}}
 
         {{-- Start Display Surah Info --}}
-        <div class="row d-flex justify-content-center  my-5" >
+        <div class="row d-flex justify-content-center  my-2">
 
             <div class="collapse col-12 w-75" id="surah_info_section">
 
@@ -85,7 +90,7 @@
 
 
         {{-- Start Display Ayat section --}}
-        <div class="row d-flex justify-content-center  my-5 ">
+        <div class="row d-flex justify-content-center  my-2 ">
             <div class="collapse col-12 w-75" id="surah_tf_section">
 
                 <ul class="ayat" style="padding-left: 0px; list-style:none:">

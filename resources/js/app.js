@@ -60,12 +60,15 @@ let url = window.location.href;
 let newUrl = url.split('/');
 let id = newUrl[newUrl.length - 1]
 let ayatList = document.querySelector('.ayat');
+const surah_title= document.getElementById('surah_title')
 const surah_name= document.getElementById('surah_name')
 const surah_number= document.getElementById('surah_number')
 const numberOfVerses= document.getElementById('numberOfVerses')
 const revelation= document.getElementById('revelation')
 const surah_read= document.getElementById('surah_read')
 let all_sura = "";
+const thai = [];
+
 
 function getSurah() {
     fetch(`https://api.quran.sutanlab.id/surah/${id}`)
@@ -74,33 +77,17 @@ function getSurah() {
 
                 let verses = data.data.verses;
                 console.log(data)
+                surah_title.innerHTML="<h2>" + data.data.name.translation.en+ " - " +data.data.name.long +"</h2>" ;
                 surah_name.innerHTML="<h2>" + data.data.name.translation.en+ " - " +data.data.name.long +"</h2>" ;
                 surah_number.innerHTML = "<h5>Surah Number :<span class='font-weight-bold'> " + data.data.number + "</span></h5>";
                 numberOfVerses.innerHTML = "<h5>Number Of Verses :<span class='font-weight-bold'> " + data.data.numberOfVerses  + "</span></h5>";
                 revelation.innerHTML = "<h5>Revelation Place :<span class='font-weight-bold'> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
 
-                const thai = [];
 
                 let ayats = "";
                 for (let index = 0; index < verses.length; index++) {
-                    // all_sura +=
-                    //                 `
-                    //                 <div class="container">
-                    //                     <div class="row justify-content-center">
-                    //                         <div class="col-11">
-                    //                             <h3 class="pt-4" style="line-height: 2em;">
-                    //                                 ${verses[index].text.arab}
-                    //                             </h3>
-                    //                         </div>
-                    //                         <div class="col-1 ">
-                    //                             <h5>
-                    //                                 <span class="badge badge-pill badge-secondary"> ${verses[index].number.inSurah}</span>
-                    //                             </h5>
-                    //                         </div>
-                    //                     </div>
-                    //                 </div>
-                    //                 `;
 
+                    thai.push(verses[index].text.arab);
 
                     all_sura +=
                     `
@@ -164,6 +151,9 @@ function getSurah() {
                 ayatList.innerHTML = ayats;
 
                 surah_read.innerHTML=all_sura
+
+                
+
             }
         )
 }
