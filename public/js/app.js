@@ -2074,20 +2074,22 @@ var url = window.location.href;
 var newUrl = url.split('/');
 var id = newUrl[newUrl.length - 1];
 var ayatList = document.querySelector('.ayat');
+var surah_name = document.getElementById('surah_name');
 
 function getSurah() {
   fetch("https://api.quran.sutanlab.id/surah/".concat(id)).then(function (res) {
     return res.json();
   }).then(function (data) {
     var verses = data.data.verses;
-    console.log(verses);
-    console.log(data.data);
+    console.log(data);
+    surah_name.innerHTML = data.data.name["long"]; // console.log(data.data)
+
     var thai = []; // console.log(verses[1].text.arab)
 
     var ayats = "";
 
     for (var index = 0; index < verses.length; index++) {
-      ayats += "\n\n            <li class='text-center '><h5>  ".concat(verses[index].text.arab, " - ").concat(verses[index].number.inSurah, "</h5></li>\n            <audio controls class='text-center'>\n                <source src=\"").concat(verses[index].audio.primary, "\" type=\"audio/ogg\">\n\n                Your browser does not support the audio element.\n            </audio>\n\n            <br>\n            <br>\n            <br>\n            ");
+      ayats += "\n\n            <li class='text-center '>\n                <h5>  ".concat(verses[index].text.arab, " - ").concat(verses[index].number.inSurah, "</h5>\n                <h6>").concat(verses[index].text.transliteration.en, "</h6>\n                <p>").concat(verses[index].translation.en, "</p>\n\n            </li>\n            <audio id=\"player").concat(index, "\"  class='text-center'>\n                <source src=\"").concat(verses[index].audio.primary, "\" type=\"audio/ogg\">\n\n                Your browser does not support the audio element.\n            </audio>\n            <br>\n            <div class='text-center '>\n                <button class=\"btn btn-success\" onclick=\"document.getElementById('player").concat(index, "').play()\">Play</button>\n                <button class=\"btn btn-danger\" onclick=\"document.getElementById('player").concat(index, "').pause()\">Pause</button>\n                <button class=\"btn btn-warning\" onclick=\"document.getElementById('player").concat(index, "').volume+=0.1\">Volume Up</button>\n                <button class=\"btn btn-warning\" onclick=\"document.getElementById('player").concat(index, "').volume-=0.1\">Volume Down</button>\n            </div>\n            <br>\n            <br>\n            <br>\n            ");
       ayatList.innerHTML = ayats;
     }
   });

@@ -60,7 +60,7 @@ let url = window.location.href;
 let newUrl = url.split('/');
 let id = newUrl[newUrl.length - 1]
 let ayatList = document.querySelector('.ayat');
-
+const surah_name= document.getElementById('surah_name')
 
 function getSurah() {
     fetch(`https://api.quran.sutanlab.id/surah/${id}`)
@@ -68,8 +68,10 @@ function getSurah() {
         .then(data => {
 
                 let verses = data.data.verses;
-                console.log(verses)
-                console.log(data.data)
+                console.log(data)
+                surah_name.innerHTML=data.data.name.long;
+
+                // console.log(data.data)
                 const thai = [];
                 // console.log(verses[1].text.arab)
 
@@ -79,18 +81,31 @@ function getSurah() {
                     ayats +=
                         `
 
-            <li class='text-center '><h5>  ${verses[index].text.arab} - ${verses[index].number.inSurah}</h5></li>
-            <audio controls class='text-center'>
+            <li class='text-center '>
+                <h5>  ${verses[index].text.arab} - ${verses[index].number.inSurah}</h5>
+                <h6>${verses[index].text.transliteration.en}</h6>
+                <p>${verses[index].translation.en}</p>
+
+            </li>
+            <audio id="player${index}"  class='text-center'>
                 <source src="${verses[index].audio.primary}" type="audio/ogg">
 
                 Your browser does not support the audio element.
             </audio>
-
+            <br>
+            <div class='text-center '>
+                <button class="btn btn-success" onclick="document.getElementById('player${index}').play()">Play</button>
+                <button class="btn btn-danger" onclick="document.getElementById('player${index}').pause()">Pause</button>
+                <button class="btn btn-warning" onclick="document.getElementById('player${index}').volume+=0.1">Volume Up</button>
+                <button class="btn btn-warning" onclick="document.getElementById('player${index}').volume-=0.1">Volume Down</button>
+            </div>
             <br>
             <br>
             <br>
             `
                     ayatList.innerHTML = ayats;
+
+
                 }
             }
         )
