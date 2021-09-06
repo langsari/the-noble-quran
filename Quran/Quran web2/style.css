@@ -231,3 +231,64 @@ section h3::before
     background: transparent;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) inset, 0 7px 10px -5px rgba(76, 175, 88, 4);
 }
+/****lectures section ****/
+.lectures-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.lectures-container .right,
+.lectures-container .left
+{
+    width: 48;
+}
+/** right **/
+.lectures-container .right .lec
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 4);
+    padding: 20px;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+.lectures-container .right .lec:hover
+{
+    transform: scale(.95);
+}
+.lec .lec-text
+{
+    width: calc(100% - 150px);
+    color: #41a161;
+}
+.lec img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: auto;
+}
+.lec-text h4
+{
+    font-size: 19px;
+}
+.lec-text p
+{
+    font-size: 16px;
+}
+/** left **/
+.left
+{
+    position: sticky;
+    top: 0;
+}
+.lectures-container .left iframe
+{
+    width: 100%;
+    height: 400%;
+    border-radius: 6px;
+}

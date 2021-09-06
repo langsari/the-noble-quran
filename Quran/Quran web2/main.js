@@ -42,3 +42,22 @@ function HadithChanger()
         }
     })
 }
+
+// Link Sections
+let Sections = document.querySelectorAll("section");
+    links = document.querySelectorAll('.header ul li');
+links.forEach(link => {
+    link.addEventListener('click',()=>{
+        document.querySelector('.header ul li.active').classList.remove('active');
+        link.classList.add('active');
+        let target = link.dataset.filter;
+        sections.forEach(sections=>{
+            if(sections.classList.contains(target))
+            {
+                section.scrollIntoView({
+                    behavior : "smooth"
+                })
+            }
+        })
+    })  
+})
