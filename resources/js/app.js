@@ -82,21 +82,27 @@ function getSurah() {
                 surah_number.innerHTML = "<h5>Surah Number :<span class='font-weight-bold'> " + data.data.number + "</span></h5>";
                 numberOfVerses.innerHTML = "<h5>Number Of Verses :<span class='font-weight-bold'> " + data.data.numberOfVerses  + "</span></h5>";
                 revelation.innerHTML = "<h5>Revelation Place :<span class='font-weight-bold'> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
+                let i =1;
 
 
                 let ayats = "";
                 for (let index = 0; index < verses.length; index++) {
-
                     thai.push(verses[index].text.arab);
 
                     all_sura +=
                     `
-                                <span>
-                                    ${verses[index].text.arab}
-                                </span>
-                                <span>
-                                    <span class="badge badge-pill badge-success" > ${verses[index].number.inSurah}</span>
-                                </span>
+
+                    <span class="mx-2">
+                    <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
+                    </span>
+                    <span class="text-right">
+                    ${verses[index].text.arab}
+                    </span>
+                    <br>
+
+
+
+
                     `;
 
 
@@ -109,7 +115,7 @@ function getSurah() {
 
                                 <li class='text-center' style="list-style-type: none;">
                                     <h5  >
-                                        <span class="badge badge-pill badge-secondary"> ${verses[index].number.inSurah}</span>
+                                        <span class="badge badge-pill badge-secondary"> ${new Intl.NumberFormat('ar-EG').format(i)}</span>
                                         </h5>
                                     <h3 class="pt-4" style="line-height: 2em;">
                                         ${verses[index].text.arab}
@@ -142,9 +148,9 @@ function getSurah() {
 
                             </div>
                         </div>
-            `
+            `;
 
-
+                        i++;
 
 
                 }
@@ -152,7 +158,7 @@ function getSurah() {
 
                 surah_read.innerHTML=all_sura
 
-                
+
 
             }
         )
