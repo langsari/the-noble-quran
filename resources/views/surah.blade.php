@@ -46,15 +46,6 @@
         </div>
         {{-- End Sub Nav Bar --}}
 
-<!-- Small button groups (default and split) -->
-<div class="btn-group">
-    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Small button
-    </button>
-    <div id="select" class="dropdown-menu">
-
-    </div>
-  </div>
 
 
 
@@ -139,7 +130,18 @@
 
             <div class="collapse col-12 w-75" id="surah_read_section">
 
+                <!-- Start Small button groups (default and split) -->
+                <div class="sticky-top btn-group ">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Small button
+                    </button>
+                    <div id="select" class="dropdown-menu">
+                    </div>
+                </div>
+                <!-- End Small button groups (default and split) -->
                 <div class="card text-center">
+
                     <div class="card-body">
 
                         <h2 id="surah_read" style="line-height: 2.5em;">
@@ -186,6 +188,16 @@
         {{-- Start Display Ayat section --}}
         <div class="row d-flex justify-content-center  my-2 ">
             <div class="collapse col-12 w-75" id="surah_tf_section">
+                <!-- Start Small button groups (default and split) -->
+                <div class="sticky-top btn-group ">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Small button
+                    </button>
+                    <div id="select" class="dropdown-menu">
+                    </div>
+                </div>
+                <!-- End Small button groups (default and split) -->
 
                 <ul class="ayat" style="padding-left: 0px; list-style:none:">
                 </ul>

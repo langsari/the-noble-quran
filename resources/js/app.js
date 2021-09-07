@@ -108,7 +108,7 @@ function getSurah() {
                     `;
 
 
-                    selec+=`<h4><a href="#${i}">${i}</a></h4>`
+                    selec+=`<h4><a href="#${i-1}">${i}</a></h4>`
 
 
 
