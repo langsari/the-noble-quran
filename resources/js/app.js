@@ -66,8 +66,10 @@ const surah_number= document.getElementById('surah_number')
 const numberOfVerses= document.getElementById('numberOfVerses')
 const revelation= document.getElementById('revelation')
 const surah_read= document.getElementById('surah_read')
+const select= document.getElementById('select')
 let all_sura = "";
 const thai = [];
+let selec = "";
 
 
 function getSurah() {
@@ -79,31 +81,34 @@ function getSurah() {
                 console.log(data)
                 surah_title.innerHTML="<h2>" + data.data.name.translation.en+ " - " +data.data.name.long +"</h2>" ;
                 surah_name.innerHTML="<h2>" + data.data.name.translation.en+ " - " +data.data.name.long +"</h2>" ;
-                surah_number.innerHTML = "<h5>Surah Number :<span class='font-weight-bold'> " + data.data.number + "</span></h5>";
-                numberOfVerses.innerHTML = "<h5>Number Of Verses :<span class='font-weight-bold'> " + data.data.numberOfVerses  + "</span></h5>";
-                revelation.innerHTML = "<h5>Revelation Place :<span class='font-weight-bold'> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
+                surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
+                numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses  + "</span></h5>";
+                revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
                 let i =1;
 
 
                 let ayats = "";
                 for (let index = 0; index < verses.length; index++) {
-                    thai.push(verses[index].text.arab);
 
                     all_sura +=
                     `
-
-                    <span class="mx-2">
+                    <div >
                     <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
                     </span>
+                    <br>
                     <span class="text-right">
                     ${verses[index].text.arab}
-                    </span>
-                    <br>
+                    </div>
+                    <hr id="${i}">
+
 
 
 
 
                     `;
+
+
+                    selec+=`<h4><a href="#${i}">${i}</a></h4>`
 
 
 
@@ -157,6 +162,7 @@ function getSurah() {
                 ayatList.innerHTML = ayats;
 
                 surah_read.innerHTML=all_sura
+                select.innerHTML=selec
 
 
 

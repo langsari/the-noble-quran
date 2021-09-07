@@ -2080,8 +2080,10 @@ var surah_number = document.getElementById('surah_number');
 var numberOfVerses = document.getElementById('numberOfVerses');
 var revelation = document.getElementById('revelation');
 var surah_read = document.getElementById('surah_read');
+var select = document.getElementById('select');
 var all_sura = "";
 var thai = [];
+var selec = "";
 
 function getSurah() {
   fetch("https://api.quran.sutanlab.id/surah/".concat(id)).then(function (res) {
@@ -2091,21 +2093,22 @@ function getSurah() {
     console.log(data);
     surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name["long"] + "</h2>";
     surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name["long"] + "</h2>";
-    surah_number.innerHTML = "<h5>Surah Number :<span class='font-weight-bold'> " + data.data.number + "</span></h5>";
-    numberOfVerses.innerHTML = "<h5>Number Of Verses :<span class='font-weight-bold'> " + data.data.numberOfVerses + "</span></h5>";
-    revelation.innerHTML = "<h5>Revelation Place :<span class='font-weight-bold'> " + data.data.revelation.en + " - " + data.data.revelation.arab + "</span></h5>";
+    surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
+    numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses + "</span></h5>";
+    revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data.revelation.arab + "</span></h5>";
     var i = 1;
     var ayats = "";
 
     for (var index = 0; index < verses.length; index++) {
-      thai.push(verses[index].text.arab);
-      all_sura += "\n\n                    <span class=\"mx-2\">\n                    <span class=\" badge badge-pill badge-success\" style=\"font-size: 1rem;\" > ".concat(new Intl.NumberFormat('ar-EG').format(i), "</span>\n                    </span>\n                    <span class=\"text-right\">\n                    ").concat(verses[index].text.arab, "\n                    </span>\n                    <br>\n\n\n\n\n                    ");
+      all_sura += "\n                    <div >\n                    <span class=\" badge badge-pill badge-success\" style=\"font-size: 1rem;\" > ".concat(new Intl.NumberFormat('ar-EG').format(i), "</span>\n                    </span>\n                    <br>\n                    <span class=\"text-right\">\n                    ").concat(verses[index].text.arab, "\n                    </div>\n                    <hr id=\"").concat(i, "\">\n\n\n\n\n\n                    ");
+      selec += "<h4><a href=\"#".concat(i, "\">").concat(i, "</a></h4>");
       ayats += "\n\n                        <div class=\" card text-center\" >\n                            <div class=\"card-body\">\n\n                                <li class='text-center' style=\"list-style-type: none;\">\n                                    <h5  >\n                                        <span class=\"badge badge-pill badge-secondary\"> ".concat(new Intl.NumberFormat('ar-EG').format(i), "</span>\n                                        </h5>\n                                    <h3 class=\"pt-4\" style=\"line-height: 2em;\">\n                                        ").concat(verses[index].text.arab, "\n                                    </h3>\n                                    <div>\n                                        <audio id=\"player").concat(index, "\"  class='text-center'>\n                                        <source src=\"").concat(verses[index].audio.primary, "\" type=\"audio/ogg\">\n                                        Your browser does not support the audio element.\n                                        </audio>\n                                        <br>\n                                        <div class='text-center '>\n                                            <button class=\"rounded-lg btn btn-success\" onclick=\"document.getElementById('player").concat(index, "').play()\">Play</button>\n                                            <button class=\"rounded-lg btn btn-danger\" onclick=\"document.getElementById('player").concat(index, "').pause()\">Pause</button>\n                                            <button class=\"rounded-lg btn btn-dark\" onclick=\"document.getElementById('player").concat(index, "').volume+=0.1\">+</button>\n                                            <button class=\"rounded-lg btn btn-dark\" onclick=\"document.getElementById('player").concat(index, "').volume-=0.1\">-</button>\n                                        </div>\n                                        <br>\n                                        <br>\n                                    </div>\n                                    <h6 class=\"mb-3 text-black-50\">Transliteration</h6>\n                                    <h5 class=\"text-dark \" style=\"line-height: 2em;\">").concat(verses[index].text.transliteration.en, "</h5>\n                                    <br>\n                                    <h6 class=\"mb-3 text-black-50\">Translation</h6>\n                                    <h5 class=\"text-dark \"style=\"line-height: 2em;\">\n                                        ").concat(verses[index].translation.en, "\n                                    </h5>\n                                </li>\n\n                                <br>\n\n                            </div>\n                        </div>\n            ");
       i++;
     }
 
     ayatList.innerHTML = ayats;
     surah_read.innerHTML = all_sura;
+    select.innerHTML = selec;
   });
 }
 
