@@ -44,15 +44,15 @@ function HadithChanger()
 }
 
 // Link Sections
-let Sections = document.querySelectorAll("section");
+let sections = document.querySelectorAll("section");
     links = document.querySelectorAll('.header ul li');
 links.forEach(link => {
     link.addEventListener('click',()=>{
         document.querySelector('.header ul li.active').classList.remove('active');
         link.classList.add('active');
         let target = link.dataset.filter;
-        sections.forEach(sections=>{
-            if(sections.classList.contains(target))
+        sections.forEach(section=>{
+            if(section.classList.contains(target))
             {
                 section.scrollIntoView({
                     behavior : "smooth"
@@ -61,3 +61,31 @@ links.forEach(link => {
         })
     })  
 })
+//PrayTime Api
+let cards = document.querySelector('.cards');
+getPrayTimes();
+function getPrayTimes()
+{
+    fetch("http://api.aladhan.com/v1/timingsByCity?city=Thailand&country=bangkok&method=8")
+    .then(response => response.json())
+    .then(data =>{
+        let times = data.data.timings;
+        cards.innerHTML = "";
+        for (let time in times)
+        {
+            cards.innerHTML+=
+            `
+            <div class="card">
+                <div class="circle">
+                    <svg>
+                        <Circle cx="100" cy="100" r="100"></Circle>
+                    </svg>
+                    <div class="praytime">${times[time]}</div>
+                  </div>
+                  <p>${time}</p>
+                </div>
+            `
+        }
+    })
+  
+}
