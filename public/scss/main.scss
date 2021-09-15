@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+$primary : #09131F;
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    .navbar-nav{
+        .nav-link{
+            //
+        }
+    }
+}
+
+
+
+#landing{
+    .desc{
+        margin-top: 100px;
+
+        @media screen and (max-width: 992px){
+            margin-top: 50px;
+        }
+
+        .btn-dongker{
+            background-color: $primary;
+            color: rgb(151, 14, 14);
+            padding: 15px 20px 15px 20px;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 5px 5px 5px rgb(99, 23, 161);
+
+            @media screen and (max-width: 992px){
+                padding: 15px;
+            }
+        }
+        .btn-outline-dongker{
+            border-color: $primary;
+            color: $primary;
+            padding: 15px 25px 15px 25px;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+            @media screen and (max-width: 992px){
+                padding: 15px;
+            }
+        }
+    }
+}
+
+
+#playlist{
+    .card{
+        &:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            // margin-top: -10px;
+            transition: 0.3s;   
+        }
+
+        .card-body{
+            .audio{
+                //
+            }
+        }
+    }
+}
+
+#jadwal{
+    //
+}
+
