@@ -22,7 +22,15 @@ use PHPUnit\Framework\ExpectationFailedException;
 use SebastianBergmann\Comparator\ComparisonFailure;
 
 /**
- * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
+ * Constraint that asserts that one value is identical to another.
+ *
+ * Identical check is performed with PHP's === operator, the operator is
+ * explained in detail at
+ * {@url https://php.net/manual/en/types.comparisons.php}.
+ * Two values are identical if they have the same value and are of the same
+ * type.
+ *
+ * The expected value is passed in the constructor.
  */
 final class IsIdentical extends Constraint
 {
@@ -54,7 +62,7 @@ final class IsIdentical extends Constraint
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws ExpectationFailedException
      */
-    public function evaluate($other, string $description = '', bool $returnResult = false): ?bool
+    public function evaluate($other, string $description = '', bool $returnResult = false)
     {
         if (is_float($this->value) && is_float($other) &&
             !is_infinite($this->value) && !is_infinite($other) &&
@@ -93,8 +101,6 @@ final class IsIdentical extends Constraint
 
             $this->fail($other, $description, $f);
         }
-
-        return null;
     }
 
     /**

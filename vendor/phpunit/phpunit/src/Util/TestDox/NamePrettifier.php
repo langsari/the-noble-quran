@@ -63,7 +63,7 @@ final class NamePrettifier
      */
     private $useColor;
 
-    public function __construct(bool $useColor = false)
+    public function __construct($useColor = false)
     {
         $this->useColor = $useColor;
     }
@@ -140,14 +140,11 @@ final class NamePrettifier
      */
     public function prettifyTestCase(TestCase $test): string
     {
-        $annotations = Test::parseTestMethodAnnotations(
-            get_class($test),
-            $test->getName(false)
-        );
-
+        $annotations                = $test->getAnnotations();
         $annotationWithPlaceholders = false;
 
-        $callback = static function (string $variable): string {
+        $callback = static function (string $variable): string
+        {
             return sprintf('/%s(?=\b)/', preg_quote($variable, '/'));
         };
 
@@ -318,7 +315,8 @@ final class NamePrettifier
         }
 
         if ($this->useColor) {
-            $providedData = array_map(static function ($value) {
+            $providedData = array_map(static function ($value)
+            {
                 return Color::colorize('fg-cyan', Color::visualizeWhitespace((string) $value, true));
             }, $providedData);
         }

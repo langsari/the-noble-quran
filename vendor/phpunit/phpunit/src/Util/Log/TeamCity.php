@@ -31,7 +31,7 @@ use PHPUnit\Framework\TestFailure;
 use PHPUnit\Framework\TestResult;
 use PHPUnit\Framework\TestSuite;
 use PHPUnit\Framework\Warning;
-use PHPUnit\TextUI\DefaultResultPrinter;
+use PHPUnit\TextUI\ResultPrinter;
 use PHPUnit\Util\Exception;
 use PHPUnit\Util\Filter;
 use ReflectionClass;
@@ -42,7 +42,7 @@ use Throwable;
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
-final class TeamCity extends DefaultResultPrinter
+final class TeamCity extends ResultPrinter
 {
     /**
      * @var bool
@@ -59,6 +59,9 @@ final class TeamCity extends DefaultResultPrinter
      */
     private $flowId;
 
+    /**
+     * @throws \SebastianBergmann\Timer\RuntimeException
+     */
     public function printResult(TestResult $result): void
     {
         $this->printHeader($result);
@@ -160,7 +163,7 @@ final class TeamCity extends DefaultResultPrinter
         }
     }
 
-    public function printIgnoredTest(string $testName, Throwable $t, float $time): void
+    public function printIgnoredTest($testName, Throwable $t, float $time): void
     {
         $this->printEvent(
             'testIgnored',

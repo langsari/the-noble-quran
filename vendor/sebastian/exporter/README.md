@@ -1,23 +1,9 @@
-# sebastian/exporter
+Exporter
+========
 
-[![CI Status](https://github.com/sebastianbergmann/exporter/workflows/CI/badge.svg)](https://github.com/sebastianbergmann/exporter/actions)
-[![Type Coverage](https://shepherd.dev/github/sebastianbergmann/exporter/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/exporter)
+[![Build Status](https://secure.travis-ci.org/sebastianbergmann/exporter.png?branch=master)](https://travis-ci.org/sebastianbergmann/exporter)
 
 This component provides the functionality to export PHP variables for visualization.
-
-## Installation
-
-You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):
-
-```
-composer require sebastian/exporter
-```
-
-If you only need this library during development, for instance to run your project's test suite, then you should add it as a development-time dependency:
-
-```
-composer require --dev sebastian/exporter
-```
 
 ## Usage
 
@@ -172,3 +158,14 @@ space
 LONG_STRING
 );
 ```
+
+## Installation
+
+You can add this library as a local, per-project dependency to your project using [Composer](https://getcomposer.org/):
+
+    composer require sebastian/exporter
+
+If you only need this library during development, for instance to run your project's test suite, then you should add it as a development-time dependency:
+
+    composer require --dev sebastian/exporter
+

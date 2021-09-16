@@ -71,8 +71,10 @@ final class TestFailure
 
     /**
      * Constructs a TestFailure with the given test and exception.
+     *
+     * @param Throwable $t
      */
-    public function __construct(Test $failedTest, Throwable $t)
+    public function __construct(Test $failedTest, $t)
     {
         if ($failedTest instanceof SelfDescribing) {
             $this->testName = $failedTest->toString();
