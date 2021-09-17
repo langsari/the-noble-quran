@@ -14,7 +14,7 @@
                 <a style="color: white;" class="nav-link me-5 {{ request()->is('/') ? ' active' : '' }}" data-aos="fade-down"
                     data-aos-duration="1000" href="/">Home</a>
                 <a style="color: white;" class="nav-link me-5 {{ request()->is('surah') ? ' active' : '' }}" data-aos="fade-down"
-                    data-aos-duration="1500" href="/surah">List surah</a>
+                    data-aos-duration="1500" href="/#">List surah</a>
                 <a style="color: white;" class="nav-link me-5 {{ request()->is('jadwalSholat') ? ' active' : '' }}" data-aos="fade-down"
                     data-aos-duration="2000" href="/time-pray">Time Pray</a>
                 <a style="color: white;" class="nav-link" data-aos="fade-down" data-aos-duration="2500" href="#">About us</a>

@@ -2,14 +2,25 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+h3{
+  color: white;
+}
 h4{
+ 
+  color: white;
+}
+h5{
   color: white;
 }
 p{
   color: white;
 }
+a{
+  color: #fff;
+  text-align: center;
+}
 a:hover {
-  background-color: rgb(122, 59, 143);
+  background-color: rgb(18, 20, 136);
 }
 
 #landing .desc {
@@ -23,7 +34,7 @@ a:hover {
 }
 
 #landing .desc .btn-dongker {
-  background-color: #09131F;
+  background-color: #104585;
   color: #fff;
   padding: 15px 20px 15px 20px;
   border-radius: 30px;
@@ -39,7 +50,7 @@ a:hover {
 
 #landing .desc .btn-outline-dongker {
   border-color: #09131F;
-  color: #09131F;
+  color: #ffffff;
   padding: 15px 25px 15px 25px;
   border-radius: 30px;
   margin-top: 20px;

@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::view('/time-pray', 'time-pray');
 
