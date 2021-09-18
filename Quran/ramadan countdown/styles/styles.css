@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300,400;700&display=swap');
+
+:root {
+    --default-padding: 15px;
+    --color-white: #fff;
+    --color-bg: #e9e9e9;
+    --font-size-normal: 16px;
+    --font-size-medium: 20px;
+    --font-size-large: 32px;
+    --font-size-xLarge: 45px;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+    font-weight: var(--font-weight-normal);
+}
+
+.container {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    background: url('../images/bg-pattern.svg');
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(closest-side, rgba(5, 119, 103, .85), rgba(3, 73, 73, .95));
+}
+
+.container__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--default-padding);
+    color: var(--color-white);
+    z-index: 1;
+}
+
+.container__text {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    margin: calc(var(--default-padding) * 3) 0 var(--default-padding);
+}
+
+.container__specialWord {
+    color: #EBC882;
+    text-shadow: 2px 2px 5px #EBC882;
+}
+
+.container__remaining {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-bold);
+}
+
+.container__remainingTime {
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-xLarge);
+}
+
+.container__textFrom {
+    display: none;
+}
+
+.container--duringRamadan .container__textTo {
+    display: none;
+}
+
+.container--duringRamadan .container__textFrom {
+    display: inline-block;
+}
+
+.container__moon {
+    z-index: 1;
+}
+
+.container__shapes {
+    display: flex;
+}
+
+.container__shape:nth-child(1) {
+    transform: translate(25px, -50px) scale(.85);
+}
+
+.container__shape:nth-child(2) {
+    transform: translate(0px, -3px) scale(1);
+}
+
+.container__shape:nth-child(3) {
+    transform: translate(-20px, -60px) scale(.8);
+}
+
+.container__stars {
+    position: absolute;
+    display: flex;
+}
+
+.container__star:nth-child(1) {
+    transform: translate(35px, -10px);
+}
+
+.container__star:nth-child(2) {
+    transform: translate(70px, 25px) scale(.85);
+    animation-delay: .6s;
+}
+
+.container__star:nth-child(3) {
+    transform: translate(23px, 15px) scale(.8);
+    animation-delay: .5s;
+}
+
+.container__star:nth-child(4) {
+    transform: translate(30px, 50px);
+    animation-delay: .3s;
+}
+
+.container__star:nth-child(5) {
+    transform: translate(0px, 15px) scale(.7);
+    animation-delay: .4s;
+}
+
+.container__star:nth-child(6) {
+    transform: translate(20px, 50px) scale(.85);
+    animation-delay: .2s;
+}
+
+.container__star:nth-child(7) {
+    transform: translate(-40px, 30px) scale(.9);
+    animation-delay: .5s;
+}
+
+.container__star:nth-child(8) {
+    transform: translate(0px, -10px);
+    animation-delay: .1s;
+}
+
+.container__star {
+    animation: fade 1s infinite alternate ease-in-out;
+}
+
+.container__shapeImg {
+    animation: spin 1s infinite alternate ease-in-out;
+    animation-delay: .15s;
+    transform-origin: top;
+}
+
+.container__shape:nth-child(1) .container__shapeImg {
+    animation-delay: .1s;
+}
+
+.container__shape:nth-child(2) .container__shapeImg {
+    animation-delay: .3s;
+}
+
+.container__shape:nth-child(3) .container__shapeImg {
+    animation-delay: .5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(-3deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
+}
