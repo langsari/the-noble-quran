@@ -67,9 +67,11 @@ const numberOfVerses= document.getElementById('numberOfVerses')
 const revelation= document.getElementById('revelation')
 const surah_read= document.getElementById('surah_read')
 const select= document.getElementById('select')
+const selecAll= document.getElementById('selecAll')
 let all_sura = "";
 const thai = [];
 let selec = "";
+let seleca = "";
 
 
 function getSurah() {
@@ -85,6 +87,7 @@ function getSurah() {
                 numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses  + "</span></h5>";
                 revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data.revelation.arab  + "</span></h5>";
                 let i =1;
+                let j =500;
 
 
                 let ayats = "";
@@ -92,6 +95,8 @@ function getSurah() {
 
                     all_sura +=
                     `
+                    <hr id="${j}">
+
                     <div >
                     <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
                     </span>
@@ -99,7 +104,7 @@ function getSurah() {
                     <span class="text-right">
                     ${verses[index].text.arab}
                     </div>
-                    <hr id="${i}">
+
 
 
 
@@ -107,15 +112,15 @@ function getSurah() {
 
                     `;
 
-
-                    selec+=`<h4 class="btn  dropdown-item"><a href="#${i-1}">${i}</a></h4>`
+                    selec+=`<a class="btn  dropdown-item" href="#${i-1}"><h4>${i}</h4></a>`
+                    seleca +=`<a class="btn  dropdown-item" href="#${j}"><h4>${i}</h4></a>`
 
 
 
                     ayats +=
                         `
 
-                        <div class=" card text-center" >
+                        <div class=" card text-center" id="${i-1}" >
                             <div class="card-body">
 
                                 <li class='text-center' style="list-style-type: none;">
@@ -156,6 +161,7 @@ function getSurah() {
             `;
 
                         i++;
+                        j++;
 
 
                 }
@@ -163,6 +169,7 @@ function getSurah() {
 
                 surah_read.innerHTML=all_sura
                 select.innerHTML=selec
+                selecAll.innerHTML=seleca
 
 
 

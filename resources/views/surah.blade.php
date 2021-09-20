@@ -136,7 +136,7 @@
                         aria-haspopup="true" aria-expanded="false">
                         Ayat
                     </button>
-                    <div id="select" class="dropdown-menu" >
+                    <div id="selecAll" class="dropdown-menu" >
                     </div>
                 </div>
                 <!-- End Small button groups (default and split) -->
@@ -192,7 +192,7 @@
                 <div class="sticky-top btn-group ">
                     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Small button
+                        Ayat
                     </button>
                     <div id="select" class="dropdown-menu">
                     </div>
