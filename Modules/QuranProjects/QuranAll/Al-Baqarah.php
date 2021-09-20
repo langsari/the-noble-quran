@@ -17,7 +17,7 @@
                <div class="dropdown ">
                     <button class="btn btn-outline-info  dropdown-toggle" id="surahmenu" data-toggle="dropdown"
                          aria-expanded="false" href="">
-                         <strong class="text-info">Al-Fatihah</strong></button>
+                         <strong class="text-info">ALFATIHAH</strong></button>
                     <ul class="dropdown-menu dropdown-menu" style="width:350px; height:auto;margin-top:110px;"
                          aria-labelledby="surahmenu">
                          <li><a class="dropdown-item" href="Al-fatihah.php">
