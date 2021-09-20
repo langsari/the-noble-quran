@@ -1,1 +1,112 @@
 //
+/*** Quran section ***/
+
+.surahasContainer
+{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+.surahasContainer .surah 
+{
+    min-height: 100px;
+    width: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    margin-bottom: 8px;
+    text-align: center;
+    display:  block;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: #232323;
+    font-size: 20px;
+    font-weight: bold;
+}
+.surahasContainer .surah
+{
+    transform: scale(1.0s);
+}
+
+
+/*** Pop Up ***/
+.surah-popup
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    overflow-y: scroll;
+    transform: translateX(100%);
+}
+.surah-popup.active
+{
+    transform: translateX(0);
+    transition: .7s transform all ease-in-out;
+}
+.surah-popup::-webkit-scrollbar
+{   
+    width: 10px;
+    background-color: #43a047;
+}
+.surah-popup::-webkit-scrollbar
+{
+    background-color: #fff;
+}
+.surah-popup .close-popup
+{
+    position: sticky;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #121212;
+    cursor: pointer;
+}
+.surah-popup .ayat
+{
+    padding: 20px;
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    margin-right: 40px;
+    color: #121212;
+    text-align: center;
+}
+.surah-popup .ayat p
+{
+    line-height: 2;
+    width: 100%;
+    border-bottom: 2px solid #4c9be6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.SurahNum
+{
+    background: url(https://www.al-quran.cc/images/system/num-bg.png) center center no-repeat;
+    text-align: center;
+    
+    background-size: 60px 60px;
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+.SurahNum span
+{
+    display:inherit;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 18px;
+}
