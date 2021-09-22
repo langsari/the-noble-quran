@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qur'an Al-Kareem</title>
+    <!--bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!--Quran css-->
     <link rel="stylesheet" type="text/css" href="https://www.al-quran.cc/css/layout.css" />
     <!--font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Droid+Serif">
-    <!--bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}"> 
 </head>
-
+@include('navbar')
 <body>
     <!--quran section-->
     <section class="quran">
@@ -73,11 +73,9 @@
         <!-- End Sub Nav Bar -->
    
        <div class="ayat text-center">
-           
-
         </div>
 
     <!-- Js File-->
-    <script src="{{asset(js/app.js)}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>
