@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/bootstrap.min.css " rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <title>Qur'an Al-Kareem</title>
+    <!--Quran css-->
+    <link rel="stylesheet" type="text/css" href="https://www.al-quran.cc/css/layout.css" />
+    <!--font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Droid+Serif">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}"> 
 </head>
+
 <body>
     <!--quran section-->
     <section class="quran">
@@ -33,12 +39,45 @@
         <div class="close-popup">
             <i class="fas fa-times">X</i>
         </div>
-        <div class="ayat">
-            <p>بسم الله الرحمن الرحيم</p>
-            <!-- Where Ayat is viewed-->
+            <div class="container my-5">
+
+
+        <p class="text-center " id="surah_title"></p>
+               
+
+        <!-- Start Sub Nav Bar -->
+        <div class="row d-flex justify-content-center  my-5 text-center">
+
+            <nav class="navbar navbar-light bg-light">
+                <p class=" text-center">
+
+                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_info_section"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Surah Info
+                    </button>
+
+                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Video
+                    </button>
+
+                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_read_section"
+                        aria-expanded="false" aria-controls="collapseExample" id="ReadSurah">
+                        Read Surah
+                    </button>
+
+
+                </p>
+            </nav>
         </div>
-    </div>
+        <!-- End Sub Nav Bar -->
+   
+       <div class="ayat text-center">
+           
+
+        </div>
+
     <!-- Js File-->
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset(js/app.js)}}"></script>
 </body>
 </html>
