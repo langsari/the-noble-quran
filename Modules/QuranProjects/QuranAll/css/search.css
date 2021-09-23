@@ -1,0 +1,36 @@
+body{
+    width: 600px;
+    font-family: "Segoe UI",Optima,Helvetica,Arial,sans-serif;
+    line-height: 25px;
+}
+.search-box {
+    padding: 30px;
+    background-color: #C0FBDA;
+    border-radius: 5px;
+}
+
+.demoInputBox {    
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    margin: 0px 5px 15px;
+    width: 250px;
+}
+.btnSearch{    
+    padding: 10px;
+    background: #8A8A8A;
+    border: 0;
+    border-radius: 4px;
+    margin: 0px 5px;
+    color: #FFF;
+    width: 150px;
+}
+.result-title {
+    color: #e613e6;
+}
+.result-arabic {
+    color: #0c0111;
+}
+.result-description{
+    margin: 5px 0px 15px;
+}
