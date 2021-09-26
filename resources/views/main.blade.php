@@ -34,9 +34,19 @@
     <li class="nav-item">
       <a class="nav-link" href="#">Log-in</a>
     </li>
+    <li class="nav-item">
+    <button type="button" class="btn btn-outline-light text-black" href="#">Sign-up!</button>
+</li>
   </ul>
-  <button type="button" class="btn btn-outline-light text-light">Sign-up</button>
-</nav>
+  </nav>
+
+<div class="jumbotron text-center">
+<img src="bismillah.png" width="304" height="236">
+  <h1>Al-Qur'an</h1>
+</div>
+<a href="#">Surah</a>
+
+
     
 </body>
 </html>
