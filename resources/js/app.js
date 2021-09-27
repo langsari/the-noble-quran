@@ -120,7 +120,7 @@ function getSurah() {
                     ayats +=
                         `
 
-                        <div class=" card text-center" id="${i-1}" >
+                        <div class=" box-shadow my-3 card text-center" id="${i-1}" >
                             <div class="card-body">
 
                                 <li class='text-center' style="list-style-type: none;">

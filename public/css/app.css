@@ -10002,4 +10002,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
-
+.search-result {
+  z-index: 2;
+  color: aquamarine;
+}

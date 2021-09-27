@@ -8,10 +8,8 @@
 
     }
 
-    #select{
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-    }
+    .box-shadow{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 10px 0px;    }
 
     #navbarTogglerDemo02 > form{
         width: 40%;
@@ -34,6 +32,7 @@
 
     .border-no-padding:hover{
         background: #f2f2f2;
+        cursor: pointer
     }
 
     .pos-rel{
@@ -45,7 +44,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light container my-3">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

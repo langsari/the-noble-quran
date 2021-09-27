@@ -133,7 +133,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 Ayat
                             </button>
-                            <div id="select" class="dropdown-menu">
+                            <div  id="select" class="dropdown-menu box-shadow">
                             </div>
                         </div>
                         <!-- End Small button groups (default and split) -->
@@ -208,7 +208,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 Ayat
                             </button>
-                            <div id="selecAll" class="dropdown-menu">
+                            <div id="selecAll" class="dropdown-menu box-shadow">
                             </div>
                         </div>
                         <!-- End Small button groups (default and split) -->
