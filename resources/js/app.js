@@ -151,7 +151,7 @@ function getSurah() {
                                     <h6 class="mb-3 text-black-50">Translation</h6>
                                     <h5 class="text-dark "style="line-height: 2em;">
                                         ${verses[index].translation.en}
-                                    </h5>
+
                                 </li>
 
                                 <br>

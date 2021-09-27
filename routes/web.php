@@ -12,11 +12,16 @@
 |
 */
 
+use App\Ayat;
+use App\Http\Controllers\AyatController;
+
 Route::get('/', function () {
     return view('home');
 
 });
 
+
+// Route::get('surah/thi/{id}',[AyatController::class,'show'])->where();
 
 Route::get('/surah/{id}', function($id){
     return view("surah")->with('id',$id);

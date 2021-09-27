@@ -1,35 +1,83 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">The Holy Quran</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<style>
+    .search-result-box {
+        background: #fbfdfee6;
+        position: absolute;
+        width: 100%;
+        color: black;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    }
+
+    #select{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    }
+
+    #navbarTogglerDemo02 > form{
+        width: 40%;
+    }
+
+    @media screen and (max-width: 992px) {
+        #navbarTogglerDemo02 > form{
+        width: 100%;
+    }
+
+}
+    .card-body.border-no-padding a{
+        text-decoration: none;
+        color: #343a40;
+    }
+
+    .border-no-padding {
+        /* border-bottom: solid #0000000f; */
+    }
+
+    .border-no-padding:hover{
+        background: #f2f2f2;
+    }
+
+    .pos-rel{
+        position: relative;
+        border-radius: 10px;
+    }
+</style>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
-
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        {{-- Start Display Search Surah --}}
+        <form class="pos-rel">
+
+            <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
+                placeholder="Enter Surah Name">
+            <div class="search-result-box text-center">
+
+                <div  id="list_surah" class="text-center">
+
+
+                </div>
+            </div>
         </form>
+
+        {{-- End Search Surah --}}
     </div>
 </nav>
