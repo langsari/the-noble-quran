@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAyatsTable extends Migration
+class CreateVerseTranslatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateAyatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ayats', function (Blueprint $table) {
+        Schema::create('verse_translates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->mediumText('verse');
-            $table->integer('verse_number');
-            $table->integer('surah_id');
+            $table->mediumText('translate_th');
+            $table->mediumText('translate_en')->nullable();
+            $table->integer('surah_id')->unsigned();
+            $table->integer('verse_number')->unsigned();
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateAyatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ayats');
+        Schema::dropIfExists('verse_translates');
     }
 }

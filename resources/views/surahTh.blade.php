@@ -1,70 +1,233 @@
-@extends('layouts.l')
+@extends('layouts.app')
 
 @section('content')
 
+
     <div class="container my-5">
 
+        <h3 class="text-center " id="surah_title"></h3>
+
+        <div class="row d-flex justify-content-center  my-5 ">
+
+        </div>
+
+    </div>
 
 
 
 
 
-        {{-- Start Display Ayat section --}}
-        <div class="row d-flex justify-content-center  my-2 ">
-            <div class=" col-12 w-75" id="surah_tf_section">
-                <!-- Start Small button groups (default and split) -->
-                <div class="sticky-top btn-group ">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Ayat
-                    </button>
-                    <div id="select" class="dropdown-menu">
-                    </div>
-                </div>
-                <!-- End Small button groups (default and split) -->
+    {{-- Start Nav Tablist Plii --}}
+    <div class="container">
 
-                <ul class="ayat" style="padding-left: 0px; list-style:none:">
+        <ul class="justify-content-center  nav nav-pills mb-3 py-4" id="pills-tab" role="tablist">
 
-                    @forelse ($ayats as $ayat)
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Ayat</a>
+            </li>
 
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">surah info</a>
+            </li>
 
-                        <div class=" card text-center" id="{{ $ayat->id }}">
-                            <div class="card-body">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                    aria-controls="pills-contact" aria-selected="false">Read</a>
+            </li>
 
-                                <li class='text-center' style="list-style-type: none;">
-                                    <h5>
-                                        <span class="badge badge-pill badge-secondary"> {{ $ayat->id }}</span>
-                                    </h5>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-Video-tab" data-toggle="pill" href="#pills-Video" role="tab"
+                    aria-controls="pills-Video" aria-selected="false">Video</a>
+            </li>
 
-                                    <div class="ayatt{{ $ayat->id }}">
+        </ul>
+        {{-- Start pills-tabContent --}}
+        <div class="tab-content" id="pills-tabContent">
+
+            {{-- Start translate surah --}}
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                {{-- Start Display Ayat section --}}
+                {{-- Start Display Ayat section --}}
+                <div class="row d-flex justify-content-center  my-2 ">
+                    <div class=" col-12 w-75" id="surah_tf_section">
+                        <!-- Start Small button groups (default and split) -->
+                        <div class="sticky-top btn-group ">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Ayat
+                            </button>
+                            <div id="select" class="dropdown-menu box-shadow">
+                            </div>
+                        </div>
+                        <!-- End Small button groups (default and split) -->
+
+                        <ul class="ayat" style="padding-left: 0px; list-style:none:">
+
+                            @forelse ($ayats as $ayat)
+
+                                <div class=" card text-center hover-change-color" id="{{ $ayat->id }}">
+                                    <div class="card-body">
+
+                                        <li class='text-center' style="list-style-type: none;">
+                                            <h5>
+                                                <span class="badge badge-pill badge-secondary"> {{ $ayat->id }}</span>
+                                            </h5>
+
+                                            <div class="ayatt{{ $ayat->id }}">
+
+                                            </div>
+
+                                            <h5>{{ $ayat->translate_th }}</h5>
+
+                                        </li>
+
+                                        <br>
 
                                     </div>
-
-
-                                    <h5>{{ $ayat->verse }}</h5>
-
-
-
-
-
-
-                                </li>
-
+                                </div>
                                 <br>
+                            @empty
+                                Not yet
+                            @endforelse
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                {{-- End Display Ayat section --}}
+
+                {{-- End Display Ayat section --}}
+
+
+
+
+
+
+            </div>
+            {{-- End translate surah --}}
+
+            {{-- Startsurah info --}}
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+
+                {{-- Start Display Surah Info --}}
+                <div class="row d-flex justify-content-center  my-2">
+
+                    <div class=" col-12 w-75" id="surah_info_section">
+
+
+                        <div class="card text-center ">
+                            <div class="card-body ">
+                                <h5 id="surah_name" class="card-title"></h5>
+                                {{-- <p class="card-text">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p> --}}
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li id="surah_number" class="list-group-item"></li>
+                                <li class="list-group-item" id="numberOfVerses"></li>
+                                <li class="list-group-item" id="revelation"></li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                {{-- End Display Surah Info --}}
+
+
+
+            </div>
+            {{-- End Startsurah info --}}
+
+            {{-- Start Read Surah --}}
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+
+
+                {{-- Start Display Surah Read --}}
+                <div class="row d-flex justify-content-center  my-1">
+
+                    <div class=" col-12 w-75" id="surah_read_section">
+
+                        <!-- Start Small button groups (default and split) -->
+                        <div class="sticky-top btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Ayat
+                            </button>
+                            <div id="selecAll" class="dropdown-menu box-shadow">
+                            </div>
+                        </div>
+                        <!-- End Small button groups (default and split) -->
+                        <div class="card text-center">
+
+                            <div class="card-body">
+
+                                <h2 id="surah_read" style="line-height: 2.5em;">
+                                </h2>
 
                             </div>
                         </div>
-                        <br>
-                    @empty
-                        Not yet
-                    @endforelse
+                    </div>
+                </div>
 
-                </ul>
+                {{-- End Display Surah Read --}}
+
+
+
+            </div>
+            {{-- End Read Surah --}}
+
+            {{-- Start Video Surah --}}
+            <div class="tab-pane fade" id="pills-Video" role="tabpanel" aria-labelledby="pills-Video-tab">
+
+
+
+                {{-- Start Display Video --}}
+                @foreach ($videos as $video)
+
+                <div class="container">
+                    <div class="card-body text-center">
+                    <iframe width="80%" height="315" src="{{ $video->url_th }}"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <h6>{{ $video->description }}</h6>
+                @endforeach
 
             </div>
 
+                {{-- End Display Video --}}
+
+            </div>
+            {{-- End Video --}}
+
+
         </div>
-        {{-- End Display Ayat section --}}
+        {{-- End pills-tabContent --}}
+
+
+
+
+        {{-- End Nav Tablist Plii --}}
+
+
+
+
+
+
+
+
 
 
     </div>
@@ -101,27 +264,16 @@
                 .then(res => res.json())
                 .then(data => {
 
-                        let verses = data.data.verses;
-                        // console.log(data)
-                        // surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
-                        //     "</h2>";
-                        // surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
-                        //     "</h2>";
-                        // surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
-                        // numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
-                        //     "</span></h5>";
-                        // revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data
-                        //     .revelation.arab + "</span></h5>";
+                    let verses = data.data.verses;
 
+                    let ayats = "";
+                    for (let index = 0; index < verses.length; index++) {
+                        let gg = `.ayatt${index +1}`;
+                        let ayatList = document.querySelector(gg);
+                        console.log(ayatList)
 
-                        let ayats = "";
-                        for (let index = 0; index < verses.length; index++) {
-                            let gg = `.ayatt${index +1}`;
-                            let ayatList = document.querySelector(gg);
-                            console.log(ayatList)
-
-                            ayats =
-                                `
+                        ayats =
+                            `
 
                                     <h3 class="pt-4" style="line-height: 2em;">
                                         ${verses[index].text.arab}
@@ -133,10 +285,9 @@
                                         </audio>
                                         <br>
                                         <div class='text-center '>
-                                            <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()">Play</button>
-                                            <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()">Pause</button>
-                                            <button class="rounded-lg btn btn-dark" onclick="document.getElementById('player${index}').volume+=0.1">+</button>
-                                            <button class="rounded-lg btn btn-dark" onclick="document.getElementById('player${index}').volume-=0.1">-</button>
+                                            <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                                <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+                                               
                                         </div>
                                         <br>
                                         <br>
@@ -150,14 +301,13 @@
                                 `;
 
 
-                            ayatList.innerHTML = ayats;
+                        ayatList.innerHTML = ayats;
 
-                        }
                     }
-                    )
-                }
+                })
+        }
 
-                getSurah()
+        getSurah()
     </script>
 
 @endsection

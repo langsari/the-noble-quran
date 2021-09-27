@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ayat extends Model
+class verse_translate extends Model
 {
     //
 }

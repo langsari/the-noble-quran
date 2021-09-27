@@ -18,11 +18,12 @@ use App\Http\Controllers\AyatController;
 Route::get('/', function () {
     return view('home');
 
-});
+})->name('home');
 
 
-// Route::get('surah/thi/{id}',[AyatController::class,'show'])->where();
+
+Route::get('surah/thi/{id}',[AyatController::class,'show'])->middleware('CheckSurahId');
 
 Route::get('/surah/{id}', function($id){
     return view("surah")->with('id',$id);
-});
+})->middleware('CheckSurahId');

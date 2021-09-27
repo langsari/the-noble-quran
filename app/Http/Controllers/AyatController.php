@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Ayat;
+use App\verse_translate;
+use App\Video;
 use Illuminate\Http\Request;
 
 class AyatController extends Controller
 {
     public function show($id){
-        $ayats = Ayat::where('surah_id',$id)->get();
+        $ayats = verse_translate::where('surah_id',$id)->get();
 
-        return view('surahTh',['ayats'=>$ayats]);
+        $videos = Video::where('surah_id',$id)->get();
+
+        return view('surahTh',['ayats'=>$ayats,'videos'=>$videos]);
     }
 }

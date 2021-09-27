@@ -4,92 +4,11 @@
 
     <div class="container my-5">
 
-
-
-        {{-- Start Display Search Surah --}}
-        {{-- <div class="row d-flex justify-content-center  my-1">
-            <div class=" col-12 w-75" id="search_surah">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="text"
-                            placeholder="Enter Surah Name">
-                        <div class="my-4" id="list_surah">
-                            <div class="my-3">
-                                <h4>
-                                </h4>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        {{-- End Search Surah --}}
-
-
         <h3 class="text-center " id="surah_title"></h3>
 
-
-        {{-- @foreach ($ayats as $ayat)
-            <h3>{{ $ayat->verse }}</h3>
-        @endforeach --}}
-
-
-
-        {{-- Start Sub Nav Bar --}}
         <div class="row d-flex justify-content-center  my-5 ">
 
-
-
-
-
-
-            {{-- <nav class="navbar navbar-light bg-light">
-                <p class=" text-center">
-
-                    <button class="btn btn-primary acitve-br " type="button" data-toggle="collapse"
-                        data-target="#surah_info_section" aria-expanded="false" aria-controls="collapseExample"
-                        aria-current="true">
-                        Surah Info
-                    </button>
-
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseExample"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Video
-                    </button>
-
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_read_section"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Read Surah
-                    </button>
-
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_tf_section"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        TF Surah
-                    </button>
-
-
-
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#search_surah"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Search Surah
-                    </button>
-
-
-                </p>
-            </nav> --}}
         </div>
-        {{-- End Sub Nav Bar --}}
-
-
-
-
-
-
-
-
-
-
 
     </div>
 
@@ -121,7 +40,7 @@
         {{-- Start pills-tabContent --}}
         <div class="tab-content" id="pills-tabContent">
 
-            {{-- Start translate surah  --}}
+            {{-- Start translate surah --}}
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                 {{-- Start Display Ayat section --}}
@@ -133,7 +52,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 Ayat
                             </button>
-                            <div  id="select" class="dropdown-menu box-shadow">
+                            <div id="select" class="dropdown-menu box-shadow">
                             </div>
                         </div>
                         <!-- End Small button groups (default and split) -->
@@ -152,7 +71,7 @@
 
 
             </div>
-            {{-- End translate surah  --}}
+            {{-- End translate surah --}}
 
             {{-- Startsurah info --}}
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -190,7 +109,7 @@
 
 
             </div>
-            {{-- End Startsurah info   --}}
+            {{-- End Startsurah info --}}
 
             {{-- Start Read Surah --}}
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
@@ -229,13 +148,13 @@
 
 
             </div>
-            {{-- End Read Surah   --}}
+            {{-- End Read Surah --}}
 
         </div>
         {{-- End pills-tabContent --}}
 
 
-    {{-- End Nav Tablist Plii --}}
+        {{-- End Nav Tablist Plii --}}
 
 
 
@@ -249,60 +168,144 @@
 
 
 
-        {{-- Start Script searh surah --}}
+
+
+
+    @endsection
+
+
+    @section('script')
+
         <script>
-            const input_search_surah = document.querySelector('#input_search_surah');
-            const list_surah = document.querySelector('#list_surah');
-
-            //search from suarah api and filter it by surah name
-            const searchSurah = async searchtext => {
-                if (searchtext == "") {
-                    return list_surah.innerHTML = "";
-                }
-                const res = await fetch("https://api.quran.sutanlab.id/surah");
-                const data = await res.json();
-                const t = data.data
-
-                const tt = t.map((item) => {
-                    return item
-                })
-                // console.log(tt);
-                let gg = '';
-                //     //get match to current input
-                let matches = tt.filter((surah) => {
-
-                    const regex = new RegExp(`^${searchtext}`, 'gi');
-                    return surah.name.short
-                        .match(regex) || surah.name.translation.en.match(regex)
+            // -----------------START----------------
+            // Javascript For Fetch All Surah Audio From External API And Show In Surah Page
 
 
+            let url = window.location.href;
+            let newUrl = url.split('/');
+            let id = newUrl[newUrl.length - 1]
+            let ayatList = document.querySelector('.ayat');
+            const surah_title = document.getElementById('surah_title')
+            const surah_name = document.getElementById('surah_name')
+            const surah_number = document.getElementById('surah_number')
+            const numberOfVerses = document.getElementById('numberOfVerses')
+            const revelation = document.getElementById('revelation')
+            const surah_read = document.getElementById('surah_read')
+            const select = document.getElementById('select')
+            const selecAll = document.getElementById('selecAll')
+            let all_sura = "";
+            const thai = [];
+            let selec = "";
+            let seleca = "";
+
+
+            function getSurah() {
+                fetch(`https://api.quran.sutanlab.id/surah/${id}`)
+                    .then(res => res.json())
+                    .then(data => {
+
+                        let verses = data.data.verses;
+                        console.log(data)
+                        surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                            "</h2>";
+                        surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                            "</h2>";
+                        surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
+                        numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
+                            "</span></h5>";
+                        revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data
+                            .revelation.arab + "</span></h5>";
+                        let i = 1;
+                        let j = 500;
+
+
+                        let ayats = "";
+                        for (let index = 0; index < verses.length; index++) {
+
+                            all_sura +=
+                                `
+                        <hr id="${j}">
+
+                        <div class="hover-change-color" >
+                        <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
+                        </span>
+                        <br>
+                        <span class="text-right">
+                        ${verses[index].text.arab}
+                        </div>
 
 
 
-                })
 
-                console.log(matches);
 
-                matches.forEach(sss => {
 
-                    gg += `
-                            <div class=" card-body border-no-padding p-2 my-1">
-                                <h6>
-                                    <a href="/surah/${sss.number}">${sss.name.translation.en} - ${sss.name.short}</a>
-                                </h6>
+                        `;
+
+                            selec += `<a class="btn  dropdown-item" href="#${i-1}"><h4>${i}</h4></a>`
+                            seleca += `<a class="btn  dropdown-item" href="#${j}"><h4>${i}</h4></a>`
+
+
+
+                            ayats +=
+                                `
+
+                            <div class=" box-shadow my-3 card text-center" id="${i-1}" >
+                                <div class="card-body hover-change-color">
+
+                                    <li class='text-center' style="list-style-type: none;">
+                                        <h5  >
+                                            <span class="badge badge-pill badge-secondary"> ${new Intl.NumberFormat('ar-EG').format(i)}</span>
+                                            </h5>
+                                        <h3 class="pt-4" style="line-height: 2em;">
+                                            ${verses[index].text.arab}
+                                        </h3>
+                                        <div>
+                                            <audio id="player${index}"  class='text-center'>
+                                            <source src="${verses[index].audio.primary}" type="audio/ogg">
+                                            Your browser does not support the audio element.
+                                            </audio>
+                                            <br>
+                                            <div class='text-center '>
+                                                <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                                <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+                                                
+                                            </div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <h6 class="mb-3 text-black-50">Transliteration</h6>
+                                        <h5 class="text-dark " style="line-height: 2em;">${verses[index].text.transliteration.en}</h5>
+                                        <br>
+                                        <h6 class="mb-3 text-black-50">Translation</h6>
+                                        <h5 class="text-dark "style="line-height: 2em;">
+                                            ${verses[index].translation.en}
+
+                                    </li>
+
+                                    <br>
+
+                                </div>
                             </div>
-                `
-                });
+                `;
 
-                list_surah.innerHTML = gg;
+                            i++;
+                            j++;
 
-            };
 
-            input_search_surah.addEventListener('input', () => searchSurah(input_search_surah.value));
+                        }
+                        ayatList.innerHTML = ayats;
+
+                        surah_read.innerHTML = all_sura
+                        select.innerHTML = selec
+                        selecAll.innerHTML = seleca
+
+
+
+                    })
+            }
+
+            getSurah()
+
+            // -----------------END----------------
         </script>
-        {{-- End Script searh surah --}}
-
-
-
-
     @endsection
