@@ -47,6 +47,13 @@
     .surah-list .item:hover {
     background: #f0f3f8;
 }
+
+
+
+.custom-play-audio-position{
+    position: absolute;
+    left:1rem;
+}
 </style>
 
 
@@ -72,6 +79,15 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
+
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+            <li class="nav-item">
+                <a class="nav-link "  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            </li>
+        @endforeach
+
         </ul>
         {{-- Start Display Search Surah --}}
         <form class="pos-rel">

@@ -15,15 +15,26 @@
 use App\Ayat;
 use App\Http\Controllers\AyatController;
 
-Route::get('/', function () {
-    return view('home');
 
-})->name('home');
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+], function () {
 
 
 
-Route::get('surah/thi/{id}',[AyatController::class,'show'])->middleware('CheckSurahId');
+    Route::get('/', function () {
+        return view('home');
+    })->name('home');
 
-Route::get('/surah/{id}', function($id){
-    return view("surah")->with('id',$id);
-})->middleware('CheckSurahId');
+
+
+
+    if (LaravelLocalization::getCurrentLocale() === 'th') {
+
+        Route::get('/surah/{id}', [AyatController::class, 'showTh'])->middleware('CheckSurahId');
+
+    } else {
+        Route::get('surah/{id}', [AyatController::class, 'showEn'])->middleware('CheckSurahId');
+    }
+});

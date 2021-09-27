@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.4",
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5",
+        "mcamara/laravel-localization": "^1.6",
         "twbs/bootstrap": "4.6.0"
     },
     "require-dev": {

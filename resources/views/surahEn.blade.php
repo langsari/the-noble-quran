@@ -249,30 +249,29 @@
                             ayats +=
                                 `
 
-                            <div class=" box-shadow my-3 card text-center" id="${i-1}" >
-                                <div class="card-body hover-change-color">
+                            <div class="container box-shadow my-3 card text-center" id="${i-1}" >
+                                <div class=" card-body hover-change-color">
+                                    <div class='custom-play-audio-position'>
+                                            <audio id="player${index}"  class='text-center'>
+                                            <source src="${verses[index].audio.primary}" type="audio/ogg">
+                                            Your browser does not support the audio element.
+                                            </audio>
 
-                                    <li class='text-center' style="list-style-type: none;">
+                                            <div class='text-center '>
+                                                <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                                <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+
+                                            </div>
+
+                                        </div>
+                                    <li class='text-center ' style="list-style-type: none;">
                                         <h5  >
                                             <span class="badge badge-pill badge-secondary"> ${new Intl.NumberFormat('ar-EG').format(i)}</span>
                                             </h5>
                                         <h3 class="pt-4" style="line-height: 2em;">
                                             ${verses[index].text.arab}
                                         </h3>
-                                        <div>
-                                            <audio id="player${index}"  class='text-center'>
-                                            <source src="${verses[index].audio.primary}" type="audio/ogg">
-                                            Your browser does not support the audio element.
-                                            </audio>
-                                            <br>
-                                            <div class='text-center '>
-                                                <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
-                                                <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
-                                                
-                                            </div>
-                                            <br>
-                                            <br>
-                                        </div>
+
                                         <h6 class="mb-3 text-black-50">Transliteration</h6>
                                         <h5 class="text-dark " style="line-height: 2em;">${verses[index].text.transliteration.en}</h5>
                                         <br>
