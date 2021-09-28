@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +14,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::view('/jadwalSholat', 'jadwal');
-Route::get('/surah', 'appController@index');
-Route::get('/detail/{id}', 'appController@detail')
-    ->name('surah.detail');

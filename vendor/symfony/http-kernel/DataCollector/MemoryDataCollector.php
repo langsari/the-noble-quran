@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  *
- * @final
+ * @final since Symfony 4.4
  */
 class MemoryDataCollector extends DataCollector implements LateDataCollectorInterface
 {
@@ -30,8 +30,10 @@ class MemoryDataCollector extends DataCollector implements LateDataCollectorInte
 
     /**
      * {@inheritdoc}
+     *
+     * @param \Throwable|null $exception
      */
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
+    public function collect(Request $request, Response $response/*, \Throwable $exception = null*/)
     {
         $this->updateMemoryUsage();
     }
@@ -102,9 +104,9 @@ class MemoryDataCollector extends DataCollector implements LateDataCollectorInte
 
         $memoryLimit = strtolower($memoryLimit);
         $max = strtolower(ltrim($memoryLimit, '+'));
-        if (str_starts_with($max, '0x')) {
+        if (0 === strpos($max, '0x')) {
             $max = \intval($max, 16);
-        } elseif (str_starts_with($max, '0')) {
+        } elseif (0 === strpos($max, '0')) {
             $max = \intval($max, 8);
         } else {
             $max = (int) $max;

@@ -79,7 +79,7 @@ class Parser implements ParserInterface
                 return [2, 0];
             case 'n' === $joined:
                 return [1, 0];
-            case !str_contains($joined, 'n'):
+            case false === strpos($joined, 'n'):
                 return [0, $int($joined)];
         }
 

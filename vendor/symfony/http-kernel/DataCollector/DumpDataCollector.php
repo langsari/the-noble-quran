@@ -27,7 +27,7 @@ use Symfony\Component\VarDumper\Server\Connection;
 /**
  * @author Nicolas Grekas <p@tchwork.com>
  *
- * @final
+ * @final since Symfony 4.3
  */
 class DumpDataCollector extends DataCollector implements DataDumperInterface
 {
@@ -100,14 +100,19 @@ class DumpDataCollector extends DataCollector implements DataDumperInterface
         }
     }
 
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
+    /**
+     * {@inheritdoc}
+     *
+     * @param \Throwable|null $exception
+     */
+    public function collect(Request $request, Response $response/*, \Throwable $exception = null*/)
     {
         if (!$this->dataCount) {
             $this->data = [];
         }
 
         // Sub-requests and programmatic calls stay in the collected profile.
-        if ($this->dumper || ($this->requestStack && $this->requestStack->getMainRequest() !== $request) || $request->isXmlHttpRequest() || $request->headers->has('Origin')) {
+        if ($this->dumper || ($this->requestStack && $this->requestStack->getMasterRequest() !== $request) || $request->isXmlHttpRequest() || $request->headers->has('Origin')) {
             return;
         }
 
@@ -115,11 +120,11 @@ class DumpDataCollector extends DataCollector implements DataDumperInterface
         if (!$this->requestStack
             || !$response->headers->has('X-Debug-Token')
             || $response->isRedirection()
-            || ($response->headers->has('Content-Type') && !str_contains($response->headers->get('Content-Type'), 'html'))
+            || ($response->headers->has('Content-Type') && false === strpos($response->headers->get('Content-Type'), 'html'))
             || 'html' !== $request->getRequestFormat()
             || false === strripos($response->getContent(), '</body>')
         ) {
-            if ($response->headers->has('Content-Type') && str_contains($response->headers->get('Content-Type'), 'html')) {
+            if ($response->headers->has('Content-Type') && false !== strpos($response->headers->get('Content-Type'), 'html')) {
                 $dumper = new HtmlDumper('php://output', $this->charset);
                 $dumper->setDisplayOptions(['fileLinkFormat' => $this->fileLinkFormat]);
             } else {
@@ -187,12 +192,12 @@ class DumpDataCollector extends DataCollector implements DataDumperInterface
         self::__construct($this->stopwatch, \is_string($fileLinkFormat) || $fileLinkFormat instanceof FileLinkFormatter ? $fileLinkFormat : null, \is_string($charset) ? $charset : null);
     }
 
-    public function getDumpsCount(): int
+    public function getDumpsCount()
     {
         return $this->dataCount;
     }
 
-    public function getDumps(string $format, int $maxDepthLimit = -1, int $maxItemsPerDepth = -1): array
+    public function getDumps($format, $maxDepthLimit = -1, $maxItemsPerDepth = -1)
     {
         $data = fopen('php://memory', 'r+');
 
@@ -219,7 +224,7 @@ class DumpDataCollector extends DataCollector implements DataDumperInterface
         return $dumps;
     }
 
-    public function getName(): string
+    public function getName()
     {
         return 'dump';
     }

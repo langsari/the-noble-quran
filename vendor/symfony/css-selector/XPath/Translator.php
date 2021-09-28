@@ -63,11 +63,11 @@ class Translator implements TranslatorInterface
 
     public static function getXpathLiteral(string $element): string
     {
-        if (!str_contains($element, "'")) {
+        if (false === strpos($element, "'")) {
             return "'".$element."'";
         }
 
-        if (!str_contains($element, '"')) {
+        if (false === strpos($element, '"')) {
             return '"'.$element.'"';
         }
 
@@ -203,7 +203,7 @@ class Translator implements TranslatorInterface
     /**
      * @throws ExpressionErrorException
      */
-    public function addAttributeMatching(XPathExpr $xpath, string $operator, string $attribute, ?string $value): XPathExpr
+    public function addAttributeMatching(XPathExpr $xpath, string $operator, string $attribute, $value): XPathExpr
     {
         if (!isset($this->attributeMatchingTranslators[$operator])) {
             throw new ExpressionErrorException(sprintf('Attribute matcher operator "%s" not supported.', $operator));

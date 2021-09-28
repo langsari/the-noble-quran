@@ -57,7 +57,6 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function close()
     {
         return $this->memcached->quit();
@@ -66,7 +65,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doRead(string $sessionId)
+    protected function doRead($sessionId)
     {
         return $this->memcached->get($this->prefix.$sessionId) ?: '';
     }
@@ -74,7 +73,6 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function updateTimestamp($sessionId, $data)
     {
         $this->memcached->touch($this->prefix.$sessionId, time() + $this->ttl);
@@ -85,7 +83,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doWrite(string $sessionId, string $data)
+    protected function doWrite($sessionId, $data)
     {
         return $this->memcached->set($this->prefix.$sessionId, $data, time() + $this->ttl);
     }
@@ -93,7 +91,7 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     /**
      * {@inheritdoc}
      */
-    protected function doDestroy(string $sessionId)
+    protected function doDestroy($sessionId)
     {
         $result = $this->memcached->delete($this->prefix.$sessionId);
 
@@ -101,13 +99,12 @@ class MemcachedSessionHandler extends AbstractSessionHandler
     }
 
     /**
-     * @return int|false
+     * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function gc($maxlifetime)
     {
         // not required here because memcached will auto expire the records anyhow.
-        return 0;
+        return true;
     }
 
     /**

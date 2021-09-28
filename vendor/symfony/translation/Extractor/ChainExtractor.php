@@ -29,8 +29,10 @@ class ChainExtractor implements ExtractorInterface
 
     /**
      * Adds a loader to the translation extractor.
+     *
+     * @param string $format The format of the loader
      */
-    public function addExtractor(string $format, ExtractorInterface $extractor)
+    public function addExtractor($format, ExtractorInterface $extractor)
     {
         $this->extractors[$format] = $extractor;
     }
@@ -38,7 +40,7 @@ class ChainExtractor implements ExtractorInterface
     /**
      * {@inheritdoc}
      */
-    public function setPrefix(string $prefix)
+    public function setPrefix($prefix)
     {
         foreach ($this->extractors as $extractor) {
             $extractor->setPrefix($prefix);

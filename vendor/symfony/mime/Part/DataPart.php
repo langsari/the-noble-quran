@@ -39,10 +39,8 @@ class DataPart extends TextPart
 
         parent::__construct($body, null, $subtype, $encoding);
 
-        if (null !== $filename) {
-            $this->filename = $filename;
-            $this->setName($filename);
-        }
+        $this->filename = $filename;
+        $this->setName($filename);
         $this->setDisposition('attachment');
     }
 

@@ -88,18 +88,22 @@ class CliDumper extends AbstractDumper
 
     /**
      * Enables/disables colored output.
+     *
+     * @param bool $colors
      */
-    public function setColors(bool $colors)
+    public function setColors($colors)
     {
-        $this->colors = $colors;
+        $this->colors = (bool) $colors;
     }
 
     /**
      * Sets the maximum number of characters per line for dumped strings.
+     *
+     * @param int $maxStringWidth
      */
-    public function setMaxStringWidth(int $maxStringWidth)
+    public function setMaxStringWidth($maxStringWidth)
     {
-        $this->maxStringWidth = $maxStringWidth;
+        $this->maxStringWidth = (int) $maxStringWidth;
     }
 
     /**
@@ -125,7 +129,7 @@ class CliDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    public function dumpScalar(Cursor $cursor, string $type, $value)
+    public function dumpScalar(Cursor $cursor, $type, $value)
     {
         $this->dumpKey($cursor);
 
@@ -150,7 +154,7 @@ class CliDumper extends AbstractDumper
                     case is_nan($value):  $value = 'NAN'; break;
                     default:
                         $value = (string) $value;
-                        if (!str_contains($value, $this->decimalPoint)) {
+                        if (false === strpos($value, $this->decimalPoint)) {
                             $value .= $this->decimalPoint.'0';
                         }
                         break;
@@ -179,7 +183,7 @@ class CliDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    public function dumpString(Cursor $cursor, string $str, bool $bin, int $cut)
+    public function dumpString(Cursor $cursor, $str, $bin, $cut)
     {
         $this->dumpKey($cursor);
         $attr = $cursor->attr;
@@ -195,7 +199,7 @@ class CliDumper extends AbstractDumper
                 'length' => 0 <= $cut ? mb_strlen($str, 'UTF-8') + $cut : 0,
                 'binary' => $bin,
             ];
-            $str = $bin && false !== strpos($str, "\0") ? [$str] : explode("\n", $str);
+            $str = explode("\n", $str);
             if (isset($str[1]) && !isset($str[2]) && !isset($str[1][0])) {
                 unset($str[1]);
                 $str[0] .= "\n";
@@ -267,7 +271,7 @@ class CliDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    public function enterHash(Cursor $cursor, int $type, $class, bool $hasChild)
+    public function enterHash(Cursor $cursor, $type, $class, $hasChild)
     {
         if (null === $this->colors) {
             $this->colors = $this->supportsColors();
@@ -308,7 +312,7 @@ class CliDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    public function leaveHash(Cursor $cursor, int $type, $class, bool $hasChild, int $cut)
+    public function leaveHash(Cursor $cursor, $type, $class, $hasChild, $cut)
     {
         if (empty($cursor->attr['cut_hash'])) {
             $this->dumpEllipsis($cursor, $hasChild, $cut);
@@ -324,7 +328,7 @@ class CliDumper extends AbstractDumper
      * @param bool $hasChild When the dump of the hash has child item
      * @param int  $cut      The number of items the hash has been cut by
      */
-    protected function dumpEllipsis(Cursor $cursor, bool $hasChild, int $cut)
+    protected function dumpEllipsis(Cursor $cursor, $hasChild, $cut)
     {
         if ($cut) {
             $this->line .= ' …';
@@ -428,7 +432,7 @@ class CliDumper extends AbstractDumper
      *
      * @return string The value with style decoration
      */
-    protected function style(string $style, string $value, array $attr = [])
+    protected function style($style, $value, $attr = [])
     {
         if (null === $this->colors) {
             $this->colors = $this->supportsColors();
@@ -441,7 +445,7 @@ class CliDumper extends AbstractDumper
 
         if (isset($attr['ellipsis'], $attr['ellipsis-type'])) {
             $prefix = substr($value, 0, -$attr['ellipsis']);
-            if ('cli' === \PHP_SAPI && 'path' === $attr['ellipsis-type'] && isset($_SERVER[$pwd = '\\' === \DIRECTORY_SEPARATOR ? 'CD' : 'PWD']) && str_starts_with($prefix, $_SERVER[$pwd])) {
+            if ('cli' === \PHP_SAPI && 'path' === $attr['ellipsis-type'] && isset($_SERVER[$pwd = '\\' === \DIRECTORY_SEPARATOR ? 'CD' : 'PWD']) && 0 === strpos($prefix, $_SERVER[$pwd])) {
                 $prefix = '.'.substr($prefix, \strlen($_SERVER[$pwd]));
             }
             if (!empty($attr['ellipsis-tail'])) {
@@ -475,7 +479,7 @@ class CliDumper extends AbstractDumper
             } else {
                 $value = "\033[{$this->styles[$style]}m".$value;
             }
-            if ($cchrCount && str_ends_with($value, $endCchr)) {
+            if ($cchrCount && $endCchr === substr($value, -\strlen($endCchr))) {
                 $value = substr($value, 0, -\strlen($endCchr));
             } else {
                 $value .= "\033[{$this->styles['default']}m";
@@ -523,14 +527,12 @@ class CliDumper extends AbstractDumper
                         case '--color=yes':
                         case '--color=force':
                         case '--color=always':
-                        case '--colors=always':
                             return static::$defaultColors = true;
 
                         case '--no-ansi':
                         case '--color=no':
                         case '--color=none':
                         case '--color=never':
-                        case '--colors=never':
                             return static::$defaultColors = false;
                     }
                 }
@@ -546,7 +548,7 @@ class CliDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    protected function dumpLine(int $depth, bool $endOfValue = false)
+    protected function dumpLine($depth, $endOfValue = false)
     {
         if ($this->colors) {
             $this->line = sprintf("\033[%sm%s\033[m", $this->styles['default'], $this->line);
@@ -602,7 +604,17 @@ class CliDumper extends AbstractDumper
                 || 'xterm' === getenv('TERM');
         }
 
-        return stream_isatty($stream);
+        if (\function_exists('stream_isatty')) {
+            return @stream_isatty($stream);
+        }
+
+        if (\function_exists('posix_isatty')) {
+            return @posix_isatty($stream);
+        }
+
+        $stat = @fstat($stream);
+        // Check if formatted mode is S_IFCHR
+        return $stat ? 0020000 === ($stat['mode'] & 0170000) : false;
     }
 
     /**
@@ -619,7 +631,7 @@ class CliDumper extends AbstractDumper
             || 'xterm' === getenv('TERM')
             || 'Hyper' === getenv('TERM_PROGRAM');
 
-        if (!$result) {
+        if (!$result && \PHP_VERSION_ID >= 70200) {
             $version = sprintf(
                 '%s.%s.%s',
                 PHP_WINDOWS_VERSION_MAJOR,

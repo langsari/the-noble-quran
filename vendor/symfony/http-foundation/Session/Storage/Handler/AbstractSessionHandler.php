@@ -31,7 +31,6 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     /**
      * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function open($savePath, $sessionName)
     {
         $this->sessionName = $sessionName;
@@ -43,24 +42,30 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     }
 
     /**
+     * @param string $sessionId
+     *
      * @return string
      */
-    abstract protected function doRead(string $sessionId);
+    abstract protected function doRead($sessionId);
+
+    /**
+     * @param string $sessionId
+     * @param string $data
+     *
+     * @return bool
+     */
+    abstract protected function doWrite($sessionId, $data);
+
+    /**
+     * @param string $sessionId
+     *
+     * @return bool
+     */
+    abstract protected function doDestroy($sessionId);
 
     /**
      * @return bool
      */
-    abstract protected function doWrite(string $sessionId, string $data);
-
-    /**
-     * @return bool
-     */
-    abstract protected function doDestroy(string $sessionId);
-
-    /**
-     * @return bool
-     */
-    #[\ReturnTypeWillChange]
     public function validateId($sessionId)
     {
         $this->prefetchData = $this->read($sessionId);
@@ -81,7 +86,6 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     /**
      * @return string
      */
-    #[\ReturnTypeWillChange]
     public function read($sessionId)
     {
         if (null !== $this->prefetchId) {
@@ -105,7 +109,6 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     /**
      * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function write($sessionId, $data)
     {
         if (null === $this->igbinaryEmptyData) {
@@ -123,7 +126,6 @@ abstract class AbstractSessionHandler implements \SessionHandlerInterface, \Sess
     /**
      * @return bool
      */
-    #[\ReturnTypeWillChange]
     public function destroy($sessionId)
     {
         if (!headers_sent() && filter_var(ini_get('session.use_cookies'), \FILTER_VALIDATE_BOOLEAN)) {

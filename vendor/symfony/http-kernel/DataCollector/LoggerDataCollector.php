@@ -18,9 +18,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Log\DebugLoggerInterface;
 
 /**
+ * LogDataCollector.
+ *
  * @author Fabien Potencier <fabien@symfony.com>
  *
- * @final
+ * @final since Symfony 4.4
  */
 class LoggerDataCollector extends DataCollector implements LateDataCollectorInterface
 {
@@ -29,7 +31,7 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
     private $currentRequest;
     private $requestStack;
 
-    public function __construct(object $logger = null, string $containerPathPrefix = null, RequestStack $requestStack = null)
+    public function __construct($logger = null, string $containerPathPrefix = null, RequestStack $requestStack = null)
     {
         if (null !== $logger && $logger instanceof DebugLoggerInterface) {
             $this->logger = $logger;
@@ -41,10 +43,12 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
 
     /**
      * {@inheritdoc}
+     *
+     * @param \Throwable|null $exception
      */
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
+    public function collect(Request $request, Response $response/*, \Throwable $exception = null*/)
     {
-        $this->currentRequest = $this->requestStack && $this->requestStack->getMainRequest() !== $request ? $request : null;
+        $this->currentRequest = $this->requestStack && $this->requestStack->getMasterRequest() !== $request ? $request : null;
     }
 
     /**
@@ -120,7 +124,7 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
 
     private function getContainerDeprecationLogs(): array
     {
-        if (null === $this->containerPathPrefix || !is_file($file = $this->containerPathPrefix.'Deprecations.log')) {
+        if (null === $this->containerPathPrefix || !file_exists($file = $this->containerPathPrefix.'Deprecations.log')) {
             return [];
         }
 
@@ -146,7 +150,7 @@ class LoggerDataCollector extends DataCollector implements LateDataCollectorInte
 
     private function getContainerCompilerLogs(string $compilerLogsFilepath = null): array
     {
-        if (!is_file($compilerLogsFilepath)) {
+        if (!file_exists($compilerLogsFilepath)) {
             return [];
         }
 

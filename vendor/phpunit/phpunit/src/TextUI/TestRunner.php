@@ -1174,8 +1174,7 @@ final class TestRunner extends BaseTestRunner
             $filterFactory->addFilter(
                 new ReflectionClass(IncludeGroupFilterIterator::class),
                 array_map(
-                    static function (string $name): string
-                    {
+                    static function (string $name): string {
                         return '__phpunit_covers_' . $name;
                     },
                     $arguments['testsCovering']
@@ -1187,8 +1186,7 @@ final class TestRunner extends BaseTestRunner
             $filterFactory->addFilter(
                 new ReflectionClass(IncludeGroupFilterIterator::class),
                 array_map(
-                    static function (string $name): string
-                    {
+                    static function (string $name): string {
                         return '__phpunit_uses_' . $name;
                     },
                     $arguments['testsUsing']

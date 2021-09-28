@@ -11,6 +11,7 @@ namespace SebastianBergmann\CodeCoverage\Report\Html;
 
 use function array_pop;
 use function count;
+use function phpversion;
 use function sprintf;
 use function str_repeat;
 use function substr_count;
@@ -304,11 +305,29 @@ abstract class Renderer
     {
         $runtime = new Runtime;
 
-        return sprintf(
+        $buffer = sprintf(
             '<a href="%s" target="_top">%s %s</a>',
             $runtime->getVendorUrl(),
             $runtime->getName(),
             $runtime->getVersion()
         );
+
+        if ($runtime->hasPHPDBGCodeCoverage()) {
+            return $buffer;
+        }
+
+        if ($runtime->hasPCOV()) {
+            $buffer .= sprintf(
+                ' with <a href="https://github.com/krakjoe/pcov">PCOV %s</a>',
+                phpversion('pcov')
+            );
+        } elseif ($runtime->hasXdebug()) {
+            $buffer .= sprintf(
+                ' with <a href="https://xdebug.org/">Xdebug %s</a>',
+                phpversion('xdebug')
+            );
+        }
+
+        return $buffer;
     }
 }
