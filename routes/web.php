@@ -14,3 +14,37 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/content', function () {
+    return view('content');
+});
+
+Route::get('/in', function () {
+    return view('in');
+});
+
+Route::get('/main', function () {
+    return view('main');
+});
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::get('/sidebar', function () {
+    return view('sidebar');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

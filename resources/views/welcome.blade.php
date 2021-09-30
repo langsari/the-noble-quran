@@ -84,6 +84,8 @@
                     The Noble Quran
                 </div>
 
+                <p>{{ date("d/m/Y H:i:s")}}</p>  <!--แก้ที่ config/app.php-->
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
