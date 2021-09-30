@@ -7,56 +7,237 @@
   \*****************************/
 /***/ (() => {
 
-///Surah Api
-var SurahsContainer = document.querySelector('.surahasContainer');
-getSurahs();
+// -----------------START----------------
+//  Javascript For Fetch All Surah Name From External API And Show In Home Page
+///Surah container
+// -----------------START----------------
+//  Javascript For Fetch All Surah Name From External API And Show In Home Page
+   
+///Surah container
+let SurahsContainer = document.querySelector('.surahsContainer')
 
-function getSurahs() {
-  ///fetch surahs meta data {Name of Surahs}
-  fetch("http://api.alquran.cloud/v1/meta").then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    var surahs = data.data.surahs.references;
-    var numberOfSurahs = 114;
-    SurahsContainer.innerHTML = "";
-
-    for (var i = 0; i < numberOfSurahs; i++) {
-      SurahNum = i + 1;
-      SurahsContainer.innerHTML += "   \n            <div class=\"surah\"> \n            <br>\n            <div class=\"SurahNum\"><span>".concat(SurahNum, "</span></div>\n            <p class=\"SurahName\">").concat(surahs[i].name, "</p>\n            <p>").concat(surahs[i].englishName, "</p>\n            <br>\n            </div>\n            ");
+getSurahs()
+function getSurahs()
+{
+    ///fetch surahs meta data {Name of Surahs}
+    fetch(`http://api.alquran.cloud/v1/meta`)
+    .then(response => response.json())
+    .then(data=>{
+        let surahs = data.data.surahs.references;
+        let numberOfSurahs = 114;
+        SurahsContainer.innerHTML = "";
+        for (let i = 0; i < numberOfSurahs; i++) {
+            SurahNum= i+1;
+            SurahsContainer.innerHTML += 
+            `   
+            <div class="surah"> 
+            <br>
+            <div class="SurahNum"><span>${SurahNum}</span></div>
+            <p class="SurahName">${surahs[i].name}</p>
+            <p>${surahs[i].englishName}</p>
+            <br>
+            </div>
+            ` 
     }
-    /* Ayat Text */
+    
+ 
+        /*
+        surahs.forEach(sura => {
+
+            SurahNum= sura.length;
+            SurahsContainer.innerHTML += 
+            `   
+            <div class="surah"> 
+            <br><a href='surah/${SurahNum}'>
+            <div class="SurahNum"><span>${SurahNum}</span></div>
+            <p class="SurahName">${sura[i].name}</p>
+            <p>${sura[i].englishName}</p>
+            <br></a>
+            </div>
+            `
+        });*/
+
+ 
+     
+        
+
+// -----------------END----------------
 
 
-    var engAyatContainer = document.querySelector('.ayateng');
-    var newTitle = document.getElementById('surah_title');
-    var SurahsTitels = document.querySelectorAll('.surah');
-    var popup = document.querySelector('.surah-popup'),
-        AyatContainer = document.querySelector('.ayat');
-    SurahsTitels.forEach(function (title, index) {
-      title.addEventListener('click', function () {
-        fetch("https://api.quran.sutanlab.id/surah/".concat(index + 1)).then(function (response) {
-          return response.json();
+
+
+
+
+// -----------------START----------------
+// Javascript For Fetch All Surah Audio From External API And Show In Surah Page
+            /* Surah Title display */
+        let DisTitle = document.getElementById('surah_title');
+            /* Surah for fetching into it */
+        let SurahsTitels = document.querySelectorAll('.surah');
+            /* White boared that displays as background when ayat are displayed */
+        let popup = document.querySelector('.surah-popup'),
+              /* Ayat Container */
+            AyatCont = document.querySelector('.ayat');   
+             /* Translate Ayat Container */
+        let TransCont = document.querySelector('.TransContainer');     
+            /* Audio container */
+        let AudioCont = document.querySelector('.AudioContainer')
+
+            /* Fetching and displaying Ayat proccess */       
+          SurahsTitels.forEach((title,index)=>{
+              
+                title.addEventListener('click',()=>{
+                    fetch(`https://api.quran.sutanlab.id/surah/${index + 1}`)
+                    .then(response => response.json())
+                    .then(data=>{
+                        AyatCont.innerHTML = "";
+                        TransCont.innerHTML = "";
+                        AudioCont.innerHTML="";
+                        TransCont.style.display="none";
+                        DisTitle.innerHTML ="";
+                        DisTitle.innerHTML =
+                        surahs[index].name + `<br><br>` + surahs[index].englishName;
+                        AyatCont.innerHTML += `<img  class="text-center" src="/img/basmalah.png" width="300" />`;
+                        TransCont.innerHTML += `<img  class="text-center" src="/img/basmalah.png" width="300" />`;
+                        
+                        let Ayat = data.data.verses;
+                        Ayat.forEach((aya)=>{
+                            popup.classList.add('active');
+                            let i = aya.number.inSurah;
+
+                            AyatCont.innerHTML +=
+                            `
+                            <h5>(${i})</h5> 
+                           <audio id="player${i}"  class='text-center'>
+                             <source src="${aya.audio.primary}" type="audio/ogg">
+                             Your browser does not support the audio element.
+                             </audio>
+                             <br>
+                             <div class='audio text-center '>
+                                 <button class="play  btn btn-success" onclick="document.getElementById('player${i}').play()"></buttom>
+                             
+                                 <button class="pause  btn btn-danger" onclick="document.getElementById('player${i}').pause()"></button>
+                            </div>
+
+                            <p  class="ayatarb"> ${aya.text.arab}</p>   
+                              
+                             `;      
+
+                             TransCont.innerHTML += 
+                             `
+                             <h5>(${i})</h5> 
+                             <audio id="player${i}"  class='text-center'>
+                             <source src="${aya.audio.primary}" type="audio/ogg">
+                             Your browser does not support the audio element.
+                             </audio>
+                             <br>
+                             <div class='audio text-center '>
+                                 <button class="play  btn btn-success" onclick="document.getElementById('player${i}').play()"></buttom>
+                            
+                                 <button class="pause btn btn-danger" onclick="document.getElementById('player${i}').pause()"></button>
+                            </div>
+
+                             <p id="arb" class="ayatarba"> ${aya.text.arab}</p>
+                             <p id="id" class="ayatid">${aya.translation.id}</p>
+                             <p id="en" class="ayateng">${aya.translation.en}</p>  
+                        
+                             ` ;
+
+                        
+                                  })     
+                                  
+                                  let readAll = document.getElementById("ReadSurah");
+                                  readAll.addEventListener('click',()=>{
+                                                      
+                                                                     
+                                     for (let index=0; index < Ayat.length; index++){
+                                        
+                                         let surahNum=index + 1;
+                                         AudioCont.innerHTML +=
+                                          `
+                                      <audio controls autoplay id="player${surahNum}"  class='text-center'>
+                                      <source src="${Ayat[surahNum].audio.primary}" type="audio/ogg">
+                                      </audio>
+                                      `
+                                     }     
+                                  })
+                    })
+                })
+                
+            })
+
+                let transBtn = document.getElementById("TranslateSurah");
+                transBtn.addEventListener('click',()=>{
+              
+              if(TransCont.style.display === 'none'){
+                  TransCont.style.display = "block";
+                  AyatCont.style.display = "none";
+                
+              
+              }else{
+                  AyatCont.style.display="block";
+                  TransCont.style.display = "none";
+                
+                  }
+    
+              
+               })
+    
+    
+           
+                let closePopup = document.querySelector('.close-popup');
+                closePopup.addEventListener('click',()=>{
+                    popup.classList.remove('active');
+                    AyatCont.style.display="block";
+                    TransCont.style.display = "none";
+                })
+            
+            
+
+
+            
+
         })
-        /* Ayat Arabic Original */
-        .then(function (data) {
-          AyatContainer.innerHTML = "";
-          AyatContainer.innerHTML += " <img  class=\"text-center\" src=\"https://www.sqorebda3.com/vb/attachments/9954/\" width=\"300\" />";
-          newTitle.innerHTML = "";
-          newTitle.innerHTML = surahs[index].name + "<br><br>" + surahs[index].englishName;
-          var Ayat = data.data.verses;
-          Ayat.forEach(function (aya) {
-            popup.classList.add('active');
-            AyatContainer.innerHTML += "\n                            <p class=\"ayatarb\">(".concat(aya.number.inSurah, ") <br> ").concat(aya.text.arab, "</p>\n                            <p class=\"ayateng\">").concat(aya.translation.en, "</p\n                            ");
-          });
-        });
-      });
-    });
-    var closePopup = document.querySelector('.close-popup');
-    closePopup.addEventListener('click', function () {
-      popup.classList.remove('active');
-    });
-  });
-}
+        }           
+  
+
+
+
+         
+
+
+    
+
+
+      
+
+
+
+// -----------------END----------------
+
+
+
+/*let transButt = document.getElementById("TranslateSurah");
+transButt.addEventListener('click',()=>{   
+                        let id = document.getElementById("idT");
+                        let en = document.getElementById("enT");
+                        let arb = document.getElementById("arbT"); 
+                        id.classList.add('active');
+                        en.classList.add('active');
+                        arb.classList.add('active');
+        
+                        })*/ // -----------------END----------------
+
+/*let transButt = document.getElementById("TranslateSurah");
+transButt.addEventListener('click',()=>{   
+                        let id = document.getElementById("idT");
+                        let en = document.getElementById("enT");
+                        let arb = document.getElementById("arbT"); 
+                        id.classList.add('active');
+                        en.classList.add('active');
+                        arb.classList.add('active');
+        
+                        })*/
 
 /***/ }),
 
@@ -64,153 +245,21 @@ function getSurahs() {
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve './img/Play.png' in 'C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\resources\\sass'\n    at finishWithoutResolve (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:293:18)\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:362:15\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\DescriptionFilePlugin.js:87:43\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at eval (eval at create (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\enhanced-resolve\\lib\\Resolver.js:410:5\n    at processResult (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\webpack\\lib\\NormalModule.js:713:19)\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\webpack\\lib\\NormalModule.js:819:5\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\GITHUB\\the-noble-quran-New\\node_modules\\css-loader\\dist\\index.js:155:5)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			for(moduleId in moreModules) {
-/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 				}
-/******/ 			}
-/******/ 			if(runtime) var result = runtime(__webpack_require__);
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	__webpack_modules__["./resources/js/app.js"]();
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./resources/sass/app.scss"]();
 /******/ 	
 /******/ })()
 ;

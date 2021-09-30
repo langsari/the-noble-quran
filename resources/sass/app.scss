@@ -1,13 +1,13 @@
 /*** Quran section ***/
 
-.surahasContainer
+.surahsContainer
 {
     display:flex;
     flex-wrap:wrap;
     justify-content: space-between;
 
 }
-.surahasContainer .surah 
+.surahsContainer .surah 
 {
     min-height: 100px;
     width: 50%;
@@ -23,7 +23,7 @@
     color: #232323;
     font-size: 18px;
 }
-.surahasContainer .surah
+.surahsContainer .surah
 {
     transform: scale(1.0s);
 }
@@ -73,39 +73,133 @@
 }
 .surah-popup .ayat 
 {
-    
+   
     width: calc(100% - 40px);
     color: #121212;
     text-align: center;
     
 }
-.surah-popup .ayat .ayatarb
-{
+h5{
+    padding-top:10px; 
+    margin-top: 10px;
+}
+.ayatarb
+{   padding: 10px;
     font-size: 200%;
     line-height: 2;
     width: 100%;
+    border-bottom:2px solid #4c9be6;
+    border-radius: 15px;
+      margin: auto;
     
 }
 
-.surah-popup .ayat .ayateng
+.ayatarba
 {
-    font-size: 160%;
+    font-size: 200%;
+    line-height: 2;
+    border-bottom:1px solid #4c9be6;
+     width:fit-content;
+     border-radius: 0px;
+      margin: auto;
+    
+}
+
+
+.ayateng
+{    
+    font-size: 150%;
+    line-height: 2;
     padding: 5px;
     width: calc(100% - 40px);
-    margin-right: 40px;
     color: #121212;
     text-align: center;
-    border-bottom: 2px solid #4c9be6;
+    border-bottom: 3px solid #4c9be6;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.ayatid{
+
+    font-size: 150%;
+    line-height: 2;
+    border-bottom:1px solid #4c9be6;
+     width:fit-content;
+     border-radius: 0px;
+      margin: auto;
+}
+
+.TransContainer{
+
+    width: calc(100% - 40px);
+    color: #121212;
+    text-align: center;
+   
+
+}
+
+.AudioContainer{
+    width: calc(100% - 40px);
+    color: #121212;
+    text-align: center;
+}
+
+
+.audio .play {
+    background: #28a745 url(img/Play.png) center center no-repeat ;
+    display:inline;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    float: center;
+    border-radius: 15px;
+    width: 20px;
+    margin-right: 1px;
+}
+
+
+
+.audio .pause {
+    background: #dc3545 url(img/Pause.png) center center no-repeat ;
+    display:inline;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    float: center;
+    width: 20px;
+    border-radius: 20px;
+    margin-left: 1px;
+}
+
+
+/*.surah-popup .ayat .ayateng.active
+{    display: block;
+    font-size: 150%;
+    padding: 5px;
+    width: calc(100% - 40px);
+    color: #121212;
+    text-align: center;
+    border-bottom: 3px solid #4c9be6;
     border-radius: 15px;
 }
 
+.surah-popup .ayat .ayatid.active{
+    display: block;
+     font-size: 150%;
+    padding: 5px;
+    width: calc(100% - 40px);
+    color: #121212;
+    text-align: center;
+    border-bottom: 3px solid #4c9be6;
+    border-radius: 15px;
+}*/
 
 
 .SurahNum
 {
     background: url(https://www.al-quran.cc/images/system/num-bg.png) center center no-repeat;
     text-align: center;
-    
+
     background-size: 60px 60px;
     width: 60px;
     height: 60px;
@@ -122,4 +216,5 @@
 
 #surah_title{
     font-size: 330%;
+    left:30%;
 }

@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}"> 
 </head>
 @include('navbar')
-<body>
-    <!--quran section-->
+<body>    <!--quran section-->
     <section class="quran">
         <div id="main">
             <div id="content  ">
@@ -27,14 +26,16 @@
         </div>
     
         <div class="container">
-            <div class="surahasContainer">
-                <!-- Where Ayat are viewed-->
+            <div class="surahsContainer">
+                <!-- Where Surahs are viewed-->
             </div>
             
         </div>
     </section>
     <!--End of Quran sectionn -->
-    <!-- Pop UP-->
+
+
+
     <div class="surah-popup">
         <div class="close-popup">
             <i class="fas fa-times">X</i>
@@ -45,36 +46,50 @@
         <p class="text-center " id="surah_title"></p>
                
 
-        <!-- Start Sub Nav Bar -->
+        
         <div class="row d-flex justify-content-center  my-5 text-center">
 
             <nav class="navbar navbar-light bg-light">
                 <p class=" text-center">
 
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_info_section"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Surah Info
-                    </button>
+        
+                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_info_section"
+                        aria-expanded="false" aria-controls="collapseExample" id="TranslateSurah">
+                        translation  
+                    </button> 
 
+        
                     <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseExample"
                         aria-expanded="false" aria-controls="collapseExample">
                         Video
                     </button>
 
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_read_section"
+        
+                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_read_section"
                         aria-expanded="false" aria-controls="collapseExample" id="ReadSurah">
-                        Read Surah
-                    </button>
-
-
+                        Read All
+                    </button> 
                 </p>
             </nav>
         </div>
-        <!-- End Sub Nav Bar -->
-   
+        
+
+
+
+        
+        <!--Ayat Container-->
        <div class="ayat text-center">
+        <!-- Where Ayat are displayed-->
         </div>
 
+        <!--Translation Container-->
+        <div class="TransContainer text-center">
+        <!-- Where Translation are displayed-->    
+        </div>
+
+        <div class="AudioContainer" style="display: none;">
+
+        </div>
     <!-- Js File-->
     <script src="{{asset('js/app.js')}}"></script>
 </body>
