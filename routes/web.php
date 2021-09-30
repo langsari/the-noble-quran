@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');});
+Route::view('/jadwalSholat', 'jadwal');
+Route::get('/surah', 'appController@index');
+Route::get('/detail/{id}', 'appController@detail')
+    ->name('surah.detail');
