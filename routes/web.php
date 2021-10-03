@@ -1,5 +1,6 @@
 <?php
-
+/*use App\Http\Controllers\TestController;*/
+use App\Http\Controllers\homeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Home/index',[HomeController::class,'index']);
