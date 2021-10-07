@@ -11,6 +11,10 @@
 |
 */
 
+use App\Http\Controllers\SurahController;
+
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/surah/{id}',[SurahController::class,'showSurah']);

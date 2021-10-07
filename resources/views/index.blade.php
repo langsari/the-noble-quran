@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Droid+Serif">
     <link rel="stylesheet" href="{{asset('css/app.css')}}"> 
 </head>
+
+<body>
+
 @include('navbar')
-<body>    <!--quran section-->
+    <!--quran section-->
     <section class="quran">
         <div id="main">
             <div id="content  ">
@@ -35,61 +38,6 @@
     <!--End of Quran sectionn -->
 
 
-
-    <div class="surah-popup">
-        <div class="close-popup">
-            <i class="fas fa-times">X</i>
-        </div>
-            <div class="container my-5">
-
-
-        <p class="text-center " id="surah_title"></p>
-               
-
-        
-        <div class="row d-flex justify-content-center  my-5 text-center">
-
-            <nav class="navbar navbar-light bg-light">
-                <p class=" text-center">
-
-        
-                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_info_section"
-                        aria-expanded="false" aria-controls="collapseExample" id="TranslateSurah">
-                        translation  
-                    </button> 
-
-        
-                    <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseExample"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Video
-                    </button>
-
-        
-                  <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#surah_read_section"
-                        aria-expanded="false" aria-controls="collapseExample" id="ReadSurah">
-                        Read All
-                    </button> 
-                </p>
-            </nav>
-        </div>
-        
-
-
-
-        
-        <!--Ayat Container-->
-       <div class="ayat text-center">
-        <!-- Where Ayat are displayed-->
-        </div>
-
-        <!--Translation Container-->
-        <div class="TransContainer text-center">
-        <!-- Where Translation are displayed-->    
-        </div>
-
-        <div class="AudioContainer" style="display: none;">
-
-        </div>
     <!-- Js File-->
     <script src="{{asset('js/app.js')}}"></script>
 </body>
