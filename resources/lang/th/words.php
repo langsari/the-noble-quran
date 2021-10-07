@@ -18,5 +18,6 @@ return [
     'Read' => 'อ่าน',
     'surah info' => 'ข้อมูล Surah',
     'Admin Did Not Add The translation yet' => 'แอดมินยังไม่ได้เพิ่มคำแปล',
+    'No Video Added Yet' => 'ยังไม่ได้เพิ่มวิดีโอ',
 
 ];

@@ -59,7 +59,6 @@
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                     {{-- Start Display Ayat section --}}
-                    {{-- Start Display Ayat section --}}
                     <div class="row d-flex justify-content-center  my-2 ">
                         <div class=" col-12 w-75" id="surah_tf_section">
                             <!-- Start Small button groups (default and split) -->
@@ -77,7 +76,7 @@
 
                                 @foreach ($ayats as $ayat)
 
-                                    <div class=" card text-center hover-change-color" id="{{ $ayat->verse_number }}">
+                                    <div class=" card text-center hover-change-color box-shadow" id="{{ $ayat->verse_number }}">
                                         <div class="card-body">
 
                                             <li class='text-center' style="list-style-type: none;">
@@ -86,7 +85,7 @@
                                                         {{ $ayat->verse_number }}</span>
                                                 </h5>
 
-                                                <div class="ayatt{{ $ayat->verse_number }}">
+                                                <div class=" ayatt{{ $ayat->verse_number }}">
 
                                                 </div>
 
@@ -107,12 +106,6 @@
 
                     </div>
                     {{-- End Display Ayat section --}}
-
-                    {{-- End Display Ayat section --}}
-
-
-
-
 
 
                 </div>
@@ -201,18 +194,16 @@
 
 
                     {{-- Start Display Video --}}
-                    @foreach ($videos as $video)
 
                         <div class="container">
                             <div class="card-body text-center">
-                                <iframe width="780" height="439" src="{{ $video->url_th }}" title="YouTube video player"
+                                <iframe width="780" height="439" src="{{ $video->url }}" title="YouTube video player"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                                 <h4 class="p-4">{{ $video->description }}</h4>
 
                             </div>
-                    @endforeach
 
                 </div>
 
@@ -220,9 +211,10 @@
 
             </div>
             {{-- End Video --}}
+            @else
+            <h2 class="text-center">{{ __('words.Admin Did Not Add The translation yet') }}</h2>
 
             @endif
-            <h2 class="text-center">{{ __('words.Admin Did Not Add The translation yet') }}</h2>
         </div>
         {{-- End pills-tabContent --}}
 
@@ -232,6 +224,61 @@
         {{-- End Nav Tablist Plii --}}
 
 
+
+
+
+        {{-- ------------------------ Start Add note Section ------------------------------------------- --}}
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalLabel">My Notes</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="">
+                            <div class="form-group">
+                                <label for="note-title" class="col-form-label">Note title:</label>
+                                <input type="text" class="form-control" id="note-title" placeholder="Note title">
+                            </div>
+                            <div class="form-group">
+                                <label for="note-text" class="col-form-label">Note details:</label>
+                                <textarea class="form-control" id="note-text" placeholder="Note details"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="add-btn">Add Note</button>
+                    </div>
+
+                </div>
+                <!-- View all note -->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel">Your Notes</h2>
+                        </div>
+                        <div class="modal-body">
+                            <hr>
+                            <div id="notes" class="notes">
+
+                                <!-- Display all Your note Here -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        {{-- ------------------------ End Add note Section ------------------------------------------- --}}
 
 
 
@@ -294,8 +341,9 @@
                                         </audio>
                                         <br>
                                         <div class='text-center '>
-                                            <button class="rounded-lg btn btn-success" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
-                                                <button class="rounded-lg btn btn-danger" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+                                            <button class="rounded-lg btn btn btn-success btn-sm btn-lg" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                            <button class="rounded-lg btn btn-danger btn-sm" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+                                            <button type="button" class="rounded-lg btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><i class="fas fa-edit fa-sm"></i></button>
 
                                         </div>
                                         <br>
@@ -317,6 +365,124 @@
             }
 
             getSurah()
+            ///-------- End Add Note -------------///
+
+
+            ///-------- Start Add Note -------------///
+
+            let addBtn = document.getElementById("add-btn");
+            let addTitle = document.getElementById("note-title")
+            let addTxt = document.getElementById("note-text")
+
+
+
+            addBtn.addEventListener("click", (e) => {
+                if (addTitle.value == "" || addTxt.value == "") {
+                    return alert("Please add note title and details");
+                }
+
+                let notes = localStorage.getItem("notes");
+                if (notes == null) {
+                    notesObj = []
+                } else {
+                    notesObj = JSON.parse(notes);
+                }
+                let myObj = {
+                    title: addTitle.value,
+                    text: addTxt.value
+                }
+                notesObj.push(myObj);
+                localStorage.setItem("notes", JSON.stringify(notesObj));
+                addTitle.value = "";
+                addTxt.value = "";
+
+                showNotes();
+            })
+
+
+            // show notes on the page
+            function showNotes() {
+                let notes = localStorage.getItem("notes");
+                if (notes == null) {
+                    notesObj = []
+                } else {
+                    notesObj = JSON.parse(notes);
+                }
+
+                let html = "";
+                notesObj.forEach(function(element, index) {
+                    html += `
+        <div id="note">
+            <div class="card">
+                <h5 class="card-header">Note ${index + 1}</h5>
+                <div class="card-body">
+                    <h5 class="card-title">${element.title}</h5>
+                    <p class="card-text">${element.text}.</p>
+
+                    <button id="${index}" onclick= "deleteNote(this.id)" class="btn btn-danger">Delete Note</button>
+                    <button id="${index}" onclick= "editNote(this.id)" class="btn btn-info">Edit Note</button>
+                </div>
+            </div>
+
+    </div>
+                `
+                });
+
+                let noteElm = document.getElementById("notes");
+                if (notesObj.length != 0) {
+                    noteElm.innerHTML = html;
+                } else {
+                    noteElm.innerHTML = "Not Notes Yet! Add a note using the form above";
+                }
+            }
+
+            // Function to delete notes
+            function deleteNote(index) {
+                let confirmDel = confirm("You are deleting this note!!");
+
+                if (confirmDel == true) {
+                    let notes = localStorage.getItem("notes");
+                    if (notes == null) {
+                        notesObj = [];
+                    } else {
+                        notesObj = JSON.parse(notes);
+                    }
+
+                    notesObj.splice(index, 1);
+                    localStorage.setItem("notes", JSON.stringify(notesObj));
+                    showNotes();
+                }
+            }
+
+
+            // function to edit the notes
+            function editNote(index) {
+                let notes = localStorage.getItem("notes");
+                if (addTitle.value !== "" || addTxt.value !== "") {
+                    return alert("Please clear the form before editting a not");
+                }
+                if (notes == null) {
+                    notesObj = [];
+                } else {
+                    notesObj = JSON.parse(notes);
+                }
+                // console.log(notesObj);
+                notesObj.findIndex((element, index) => {
+                    addTitle.value = element.title;
+                    addTxt.value = element.text;
+                })
+                notesObj.splice(index, 1);
+                localStorage.setItem("notes", JSON.stringify(notesObj));
+                showNotes();
+            }
+
+            showNotes();
+
+
+            ///-------- End Add Note -------------///
+
+
+
         </script>
 
     @endsection

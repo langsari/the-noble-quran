@@ -17,5 +17,6 @@ return [
     'Video' => 'Video',
     'Read' => 'Read',
     'Admin Did Not Add The translation yet' => 'Admin Did Not Add The translation yet',
+    'No Video Added Yet' => 'No Video Added Yet',
 
 ];
