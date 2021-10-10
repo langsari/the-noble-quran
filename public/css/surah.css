@@ -1,0 +1,78 @@
+#navSelect
+{
+    border: 5;
+    background:none;
+  
+    font-weight: bold;
+    font-size: 1px;
+  
+}.dark-mode{
+ background-color:black;
+ color: white;
+}body{
+ background-color:#5892e9;
+ color: #363013;
+ font-size: 35;
+}.dark-mode .sidenav{
+ background-color:black;
+ color: rgb(216, 189, 37);
+}.dark-mode #navSelect{
+ background-color:black;
+ color:white;
+}.dark-mode #audioControl .container-fluid{
+ background-color:aqua;
+ color: white;
+}.dark-mode .hr{
+ background-color: #fff;
+}#kk{
+ margin-bottom: 150px;
+}i{
+ cursor: pointer;
+}.dropdown-item  h6:hover{
+ color: rgb(88, 0, 84);
+ opacity: 50%;
+}.dropdown-menu a:hover{
+ opacity: 80%;
+ 
+}
+
+
+h4{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+  
+.grid-container {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: 50px;
+  
+  }
+  
+  .grid-item {
+    background-color:#f8f9fa;
+    border: 0px solid rgba(209, 102, 14, 0.8);
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+    block-size: 5cm;
+    
+  
+  }
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
+   
+}
+
