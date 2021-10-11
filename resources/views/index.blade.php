@@ -22,7 +22,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white mb-10">إِنَّاۤ أَنزَلۡنَا عَلَیۡكَ ٱلۡكِتَـٰبَ لِلنَّاسِ بِٱلۡحَقِّۖ فَمَنِ ٱهۡتَدَىٰ فَلِنَفۡسِهِۦۖ وَمَن ضَلَّ فَإِنَّمَا یَضِلُّ عَلَیۡهَاۖ وَمَاۤ أَنتَ عَلَیۡهِم بِوَكِیلٍ</p>
-                <a class="btn btn-primary btn-xl" href="/surah">Read Al-Quran</a>
+                <a class="btn btn-primary btn-xl" href="/quran">Read Al-Quran</a>
             </div>
         </div>
     </div>

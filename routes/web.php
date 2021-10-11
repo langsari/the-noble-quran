@@ -10,13 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Http\Controllers\ayatController;
 Route::get('/', function () {
     return view('index');});
 
         Route::view('/home', 'home');
 
-        Route::view('/surah', 'surah');
+        Route::view('/quran', 'quran');
+
+        Route::get('/surah/{id}',[ayatController::class,'showSurah']);
 
         Route::view('/salawat', 'salawat');
         
