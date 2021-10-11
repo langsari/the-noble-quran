@@ -1,35 +1,34 @@
 @extends('main')
 
-@section('title', 'IslamicPedia')
+@section('title', 'the-Nobal-Quran')
 
 @section('content')
 
 @include('layouts.navbar')
 
 
-<section id="landing">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl- text-center desc">
-                <h4 class="text-center mb-3" data-aos="fade-down" data-aos-duration="2000">بِسْمِ اللَّهِ الرَّحْمَنِ
-                    الرَّحِيم</h4>
-                <h4 style="text-align:center" data-aos="fade-down" data-aos-duration="1500">“Alquran adalah seorang
-                    sahabat, yang tidak akan pernah mengecewakanmu,
-                    baik di
-                    dunia ini maupun di
-                    akhirat kelak.”</h4>
-                <p class="fs-5 text-center text-secondary mt-4" data-aos="fade-down" data-aos-duration="1000">Dengan
-                    Al-quran hidup menjadi tenang</p>
-                <a href="/surah" class="btn btn-dongker " data-aos="zoom-in" data-aos-duration="2000">Baca
-                    Al-quran</a>
-                <a href="/jadwalsholat" class="btn btn-outline-dongker " data-aos="zoom-in"
-                    data-aos-duration="2200">Jadwal Sholat</a>
+
+
+
+ <!-- Masthead-->
+ <header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <div style="text-align: center">
+                    <img src="https://www.al-quran.cc/images/system/al-quran.png" width="200" />
+                </div>
+                <hr class="divider" />
             </div>
-           
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white mb-10">إِنَّاۤ أَنزَلۡنَا عَلَیۡكَ ٱلۡكِتَـٰبَ لِلنَّاسِ بِٱلۡحَقِّۖ فَمَنِ ٱهۡتَدَىٰ فَلِنَفۡسِهِۦۖ وَمَن ضَلَّ فَإِنَّمَا یَضِلُّ عَلَیۡهَاۖ وَمَاۤ أَنتَ عَلَیۡهِم بِوَكِیلٍ</p>
+                <a class="btn btn-primary btn-xl" href="/surah">Read Al-Quran</a>
+            </div>
         </div>
     </div>
-    
+</header>
 
-</section>
+
 @endsection
+
 

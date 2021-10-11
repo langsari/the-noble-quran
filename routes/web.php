@@ -13,7 +13,17 @@
 
 Route::get('/', function () {
     return view('index');});
-Route::view('/jadwalSholat', 'jadwal');
-Route::get('/surah', 'appController@index');
-Route::get('/detail/{id}', 'appController@detail')
-    ->name('surah.detail');
+
+        Route::view('/home', 'home');
+
+        Route::view('/surah', 'surah');
+
+        Route::view('/salawat', 'salawat');
+        
+        Route::view('/hadith', 'hadith');
+
+        Route::view('/about', 'about');
+
+
+
+ 

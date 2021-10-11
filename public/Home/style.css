@@ -1,0 +1,489 @@
+/*****
+    font-family:'thuluth-decorated';
+    font-family:'cairo-bold';
+*****/
+/** Global Style **/
+*
+/**
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'cairo-bold';
+    outline: none;
+}
+::-webkit-scrollbar
+{
+    width: 0;
+}
+body
+{
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+ul,li
+{
+    list-style: none;
+
+}
+.container
+{
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+
+}
+section
+{
+    padding: 70px 0;
+}
+section h3
+{
+    font-size: 30px;
+    text-align: center;
+    color: #43a047;
+    margin-bottom: 50px;
+    position: relative;
+}
+section h3::after,
+section h3::before
+{
+    content: "";
+    position: absolute;
+    background-color: #43a047;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section h3::after
+{
+    width: 50px;
+    bottom: -10px;
+}
+section h3::before
+{
+    width: 100px;
+    bottom: 0px;
+}
+/*** Header **/
+/**
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: .5s all ease-in-out;
+    width: 100%;
+    background: #45607ecc;
+
+
+}
+.header .nav
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    color: #fff;
+    transition: .5s all ease-in-out;
+    padding: 11px;
+}
+.header .active
+{
+    background-color: fff;
+}
+.header.active .nav
+{
+    height: 60px;
+}
+.header ul
+{
+    display: flex;
+}
+.header ul li
+{
+    position: relative;
+    cursor: pointer;
+}
+.header ul li a
+{
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: aliceblue;
+}
+.header ul li::after
+{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+
+    background-color: rgb(184, 184, 184);
+    height: 4px;
+    transition: .3s all ease-in-out;
+    width: 0;
+}
+.header li.active::after,
+.header li.hover::after
+{
+    width: 50px;
+}
+.header .bars
+{
+    display: none;
+}
+.header li:not(:first-of-type),
+.header li:not(:last-of-type)
+{
+    margin: 0 15px;
+}
+.header .logo
+{
+    font-family:'thuluth-decorated';
+    font-size: 2.6rem;
+    cursor: pointer;
+}**/
+/**_* main Section ***/
+/**_* Start contants Section ***/
+/**
+
+.box{
+    background: rgb(226,152,66);
+    background: radial-gradient(circle, rgba(226,152,66,1) 19%, rgba(148,187,233,1) 100%);
+       width: 300px;
+    margin: 2rem 0;
+    text-align: center;
+    padding: 40px;
+    border-radius: 30px  ;
+    -webkit-box-shadow: 10px 9px 15px -6px rgba(0,0,0,0.61);
+    -moz-box-shadow: 10px 9px 15px -6px rgba(0,0,0,0.61);
+    box-shadow: 10px 9px 15px -6px rgba(0,0,0,0.61);
+    direction: ltr;
+    cursor: pointer;
+}
+
+.box h3{
+
+        font-size: 27px;
+        text-align: center;
+        color: #eee;
+        position: relative;
+        margin-bottom: 25px;
+
+}
+.box p{
+
+    margin-bottom: revert;
+
+}
+
+.box h3::after, .box h3::before {
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.myButton {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.myButton:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+a.myButton{
+    font-size: 0.9rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.contants a{
+    text-decoration: none;
+    color: inherit;
+}
+**/
+/**_* End contants Section ***/
+/**
+.main
+{
+    background: url(./images/5.jpg) center center/cover no-repeat;
+    padding: 0;
+}
+.main .container
+{
+    min-height: 100vh;
+}
+.main .title
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.main .title h2
+{
+    line-height: 1.9;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.title .btn
+{
+    border: 2px solid#fff;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s all ease-in-out;
+    padding: 5px 15px;
+}
+.title .btn i
+{
+    font-size: 25px;
+    margin-right: 20px;
+}
+.title .btn::after
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background-color: #fff;
+    z-index: -1;
+}
+.title .btn:hover
+{
+    color: #232323;
+}
+.title .btn:hover::after
+{
+    width: 100%;
+}
+
+**/
+/*** Hadith Section ***/
+.hadithContainer
+{
+    min-height: 350px;
+    position: relative;
+    box-shadow: 4px 4px 4px 0 #d1d9e6 inset ,
+    -4px -4px 4px 0px #d1d9e6 inset;
+    color: #232323;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    padding-top: 70px;
+}
+
+.hadith .buttons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hadith .buttons div
+{
+    background: linear-gradient(60deg , #66bb6a , #43a047);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) , 0 7px 10px -5px rgba(76, 175, 88, 4);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.hadith .buttons .number
+{
+    padding: 10px 20px ;
+    color: #43a047;
+    background: transparent;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) inset, 0 7px 10px -5px rgba(76, 175, 88, 4);
+}
+/**** lectures Section ****/
+.lectures-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.lectures-container .right,
+.lectures-container .left
+{
+    width: 48%;
+}
+/** right **/
+.lectures-container .right .lec
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 4);
+    padding: 20px;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+.lectures-container .right .lec:hover
+{
+    transform: scale(.95);
+}
+.lec .lec-text
+{
+    width: calc(100% - 150px);
+    color: #41a161;
+}
+.lec img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: auto;
+}
+.lec-text h4
+{
+    font-size: 19px;
+}
+.lec-text p
+{
+    font-size: 16px;
+}
+/** left **/
+.left
+{
+    position: sticky;
+    top: 0;
+}
+.lectures-container .left iframe
+{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+/*** Pray Time ***/
+.pray .cards
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards .card
+{
+    width: 250px;
+    min-height: 320px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 4);
+    padding: 30px 20px;
+    margin: 20px auto;
+}
+.card .circle
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle svg
+{
+    width: 210px;
+    height: 210px;
+}
+.circle svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #43a047;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 2;
+    stroke-dashoffset: 1000;
+    animation: dash 2s linear infinite;
+}
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+.circle .praytime
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #43a047;
+    font-size: 40px;
+    font-family: cursive;
+}
+.card p
+{
+    color: #43a047;
+    font-size: 25px;
+    font-family: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+}
+/*** Footer **/
+.footer
+{
+    padding: 0;
+}
+.footer svg
+{
+    fill: #43a047;
+    transform: translateY(10px);
+}
+.footer .social
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #43a047;
+}
+.footer .social a
+{
+    margin: 15px;
+    font-size: 35px;
+    color: #fff;
+}
+
+
+.full-width{
+    width:220%;
+}
+
+
