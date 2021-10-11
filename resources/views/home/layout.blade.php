@@ -33,8 +33,9 @@ img {
 <div>
         <div class="header-dark">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                <div class="container"><a class="navbar-brand" href="home/index.blade.php">อัลกุรอาน</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <a href="#" class="button">Sign-in</a>
+                <div class="container"><a class="navbar-brand" href="home/index">อัลกุรอาน</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <a href="#" class="button">Language</a>
+                <a href="#" class="button">SignIn</a>
                 <div class="collapse navbar-collapse"
                         id="navcol-1">
                      
@@ -58,8 +59,8 @@ img {
  <div class="container hero">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                       <!-- <h1 class="text-center">القرآن</h1>-->
-                       <img class="col-lg-6 text-white showcase-img" src="/image/paris.png"/>
+                      <h1 class="text-center">القرآن</h1>
+                      <!--   <img class="col-lg-6 text-white showcase-img" src="/image/paris.png"/>-->
                       
                         <hr style="height:5px;border-width:0;color:white;background-color:white"> 
             <!--  ใส่ยูทูป <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hAAlDoAtV7Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>-->
@@ -73,6 +74,7 @@ img {
   <div id="suggestions"></div>
 </form>-->
 <div class="row">
+                                               
                                     <div class="col">
                                         <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="ค้นหาซูเราะห์" data-sb-validations="required,email" />
                                     </div>

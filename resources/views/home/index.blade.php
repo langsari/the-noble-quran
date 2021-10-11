@@ -11,7 +11,7 @@
        </p>
          <div class="grid-container">
          <div class="grid-item">
-               <a href="Al-fatihah.php"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info" ><span>1.  Al-Fatihah</span>  <h4>ٱلْفَاتِحَة</h4></button></a>
+               <a href="/fatihah"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info" ><span>1.  Al-Fatihah</span>  <h4>ٱلْفَاتِحَة</h4></button></a>
          </div>
 
          <div class="grid-item">
@@ -604,7 +604,7 @@
               <a href="##"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>114.  Al-Naas</span> 
               <h4>	ٱلنَّاس</h4></button></a>
          </div>
-        
+         @yield('content')
 </div>
 </div>
 </body>
