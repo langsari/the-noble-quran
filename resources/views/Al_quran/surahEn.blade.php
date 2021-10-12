@@ -43,6 +43,8 @@
     </style>
 
     <div class="container">
+
+        {{-- #####################  Start Display Surah Title ##################### --}}
         <div class="container my-5">
 
             <h3 class="text-center " id="surah_title"></h3>
@@ -52,42 +54,49 @@
             </div>
 
         </div>
+        {{-- #####################  End Display Surah Title ##################### --}}
 
 
-        {{-- Start Bookmarke --}}
-        <h5>Your bookmarke in this surah</h5>
-        <ul id="bookmark">
+        {{-- #####################  Start Display your Bookmarke  ##################### --}}
+        <div>
+            <h5>Your bookmarke in this surah</h5>
+            <ul id="bookmark">
 
-        </ul>
-        <hr>
-        {{-- End Bookmarke --}}
+            </ul>
+            <hr>
+        </div>
+        {{-- #####################  End Display your Bookmarke ##################### --}}
+
 
         {{-- #####################  Start Nav Tablist Plii ##################### --}}
         <div class="container">
 
-            <ul style="font-size: medium;" class="box-shadow justify-content-center  nav nav-pills mb-5 py-3 " id="pills-tab" role="tablist">
+            <div>
+                <ul style="font-size: medium;" class="box-shadow justify-content-center  nav nav-pills mb-5 py-3 " id="pills-tab" role="tablist">
 
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                        aria-controls="pills-home" aria-selected="true">Ayat</a>
-                </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                            aria-controls="pills-home" aria-selected="true">Ayat</a>
+                    </li>
 
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">surah info</a>
-                </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">surah info</a>
+                    </li>
 
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                        aria-controls="pills-contact" aria-selected="false">Read</a>
-                </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                            aria-controls="pills-contact" aria-selected="false">Read</a>
+                    </li>
 
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-Video-tab" data-toggle="pill" href="#pills-Video" role="tab"
-                        aria-controls="pills-Video" aria-selected="false">{{ __('words.Video') }}</a>
-                </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="pills-Video-tab" data-toggle="pill" href="#pills-Video" role="tab"
+                            aria-controls="pills-Video" aria-selected="false">{{ __('words.Video') }}</a>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+        {{-- #####################  End Nav Tablist Plii ##################### --}}
 
 
             {{-- ##################### Start pills-tabContent ##################### --}}
@@ -236,10 +245,6 @@
 
 
 
-
-
-
-
             {{-- ##################### Start Popup Add note Section ##################### --}}
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -299,17 +304,6 @@
         </div>
 
     @endsection
-
-
-
-
-
-
-
-
-
-
-
 
 
     @section('script')

@@ -17,52 +17,67 @@ use App\Http\Controllers\AyatController;
 use App\Http\Controllers\HomeController;
 
 
+#################################      Admin section        #######################################
+
 Route::group(['prefix' => 'admin'],function () {
 
-Auth::routes();
-
-
-    }
+                Auth::routes();
+        }
 );
-
 
 Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('auth');;
 
+#################################      End Admin section        #######################################
 
 
-//  prefix Form mlti Lang
+
+#################################      prefix Form mlti Lang        #######################################
+
+
 Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-], function () {
-
-
-    #################################      Home_Page section        #######################################
-
-    Route::get('/', [HomeController::class, 'homePage'])->name('Home');
+                'prefix' => LaravelLocalization::setLocale(),
+                'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+            ], function () {
 
 
 
-    #################################      End Home section        #######################################
+    #################################      Home_Page Of our website section        #######################################
+
+    Route::get('/', [HomeController::class,'homePage'])->name('Home');
+
+    #################################      End Home_Page Of our website section    #######################################
+
+
 
     #################################      AL-quran section        #######################################
 
     Route::group(
-        ['prefix' => 'alquran'],
-        function () {
-
-
-            Route::get('/', function () {
-                return view('Al_quran.home');
-            })->name('Al_quran.home');
+                ['prefix' => 'alquran'],
+                function () {
 
 
 
-            ////////                       \\\\\\\
-            if (LaravelLocalization::getCurrentLocale() === 'th') {
+        #################################      Home page AL-quran section        #######################################
+
+        Route::get('/', function () { return view('Al_quran.home'); })->name('Al_quran.home');
+
+        #################################      Home page AL-quran section        #######################################
+
+
+
+        
+        #################################      Check Current lang then decide wich method to call en or th         #######################################
+
+        if (LaravelLocalization::getCurrentLocale() === 'th') {
+
+                #################################      method showTh Means show in thai style         #######################################
 
                 Route::get('/surah/{id}', [AyatController::class, 'showTh'])->middleware('CheckSurahId')->name('surah');
+
             } else {
+
+                #################################      method showTh Means show in Eng style         #######################################
+
                 Route::get('/surah/{id}', [AyatController::class, 'showEn'])->middleware('CheckSurahId')->name('surah');
             }
         }
@@ -71,9 +86,6 @@ Route::group([
 
 
     );
-
-
-
     #################################      End AL-quran section        #######################################
 
 
