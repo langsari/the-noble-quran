@@ -56,7 +56,7 @@
             <div class="container">
 
 
-                <ul class="box-shadow justify-content-center  nav nav-pills mb-5 py-3" id="pills-tab" role="tablist">
+                <ul  style="font-size: medium;" class="box-shadow justify-content-center  nav nav-pills mb-5 py-3" id="pills-tab" role="tablist">
 
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
