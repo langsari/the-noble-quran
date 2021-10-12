@@ -2,9 +2,7 @@
             // {{-- Javascript For Fetch All Surah Audio From External API And Show In Surah Page --}}
 
 
-            let url = window.location.href;
-            let newUrl = url.split('/');
-            let id = newUrl[newUrl.length - 1]
+
             const surah_title = document.getElementById('surah_title')
             const surah_name = document.getElementById('surah_name')
             const surah_number = document.getElementById('surah_number')
@@ -31,7 +29,7 @@
                         for (let index = 0; index < verses.length; index++) {
                             let gg = `.ayatt${index +1}`;
                             let ayatList = document.querySelector(gg);
-                            console.log(ayatList)
+                            // console.log(ayatList)
 
 
                             //  Start Get all vesres of surah for read only

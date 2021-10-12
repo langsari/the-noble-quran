@@ -2,9 +2,7 @@
 
 
 
-        let url = window.location.href;
-        let newUrl = url.split('/');
-        let id = newUrl[newUrl.length - 1]
+
         let ayatList = document.querySelector('.ayat');
         const surah_title = document.getElementById('surah_title')
         const surah_name = document.getElementById('surah_name')

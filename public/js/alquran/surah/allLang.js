@@ -1,9 +1,9 @@
 
             //############################## Start make Bookmark ##############################///
-            // let url = window.location.href;
-            // let newUrl = url.split('/');
-            // let id = newUrl[newUrl.length - 1]
-
+            let url = window.location.href;
+            let newUrl = url.split('/');
+            let id = newUrl[newUrl.length - 1]
+            console.log(id)
 
             let mybookMark = JSON.parse(localStorage.getItem('quran-bookmark-store')) // fetch all bookmark in the localstorage
             if(mybookMark==null){ // if  bookmark in the localstorage
@@ -21,6 +21,10 @@
                             if(book.id == e.currentTarget.dataset.bookmark){
                                 //e.currentTarget.dataset.bookmark will get the value of the bookmark
                                   searchResult = 1
+                                  console.log(mybookMark.indexOf(book.id))
+                                  mybookMark.splice(book.id, 1);
+                                  localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
+                                  alert('Deleted')
                             }
 
                         })
@@ -34,7 +38,6 @@
                             localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
                             alert('Bookmark Added Successfully')
                         }else{  // if  doblecate bookmark it will fail
-                            alert('Bookmark Already Exist')
 
                         }
 
@@ -55,6 +58,8 @@
             let bookmarkli = document.getElementById('bookmark')
             let mybookMark1 = JSON.parse(localStorage.getItem('quran-bookmark-store'))
             let bb = "";
+
+
             mybookMark.forEach(b => {
                 let idd = b.id
                 let neww = idd.split(':');

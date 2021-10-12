@@ -10,7 +10,24 @@
 
             }
 
+            @media (max-width: 992px) {
+                .sticky-top {
+                    position: sticky;
+                    top: 78px;
+                    z-index: 1020;
+                }
 
+            }
+
+            .rounded-lg {
+                border-radius: 1.3rem !important;
+            }
+
+            .sticky-top {
+                position: sticky;
+                top: 86px;
+                z-index: 1020;
+            }
 
         </style>
 
@@ -142,13 +159,18 @@
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <li id="surah_number" class="list-group-item">
-                                            <h5>{{ __('words.Surah Number') }} :<span>{{ $surah->surah_num }}</span></h5>
+                                            <h5>{{ __('words.Surah Number') }} :<span>{{ $surah->surah_num }}</span>
+                                            </h5>
                                         </li>
                                         <li class="list-group-item" id="numberOfVerses">
-                                            <h5>{{ __('words.Number Of Verses') }} : <span>{{ $surah->number_of_verses }}</span></h5>
+                                            <h5>{{ __('words.Number Of Verses') }} :
+                                                <span>{{ $surah->number_of_verses }}</span>
+                                            </h5>
                                         </li>
                                         <li class="list-group-item" id="revelation">
-                                            <h5>{{ __('words.Revelation Place') }} : <span>{{ $surah->revelation_th }}</span></h5>
+                                            <h5>{{ __('words.Revelation Place') }} :
+                                                <span>{{ $surah->revelation_th }}</span>
+                                            </h5>
                                         </li>
                                     </ul>
                                 </div>
@@ -216,8 +238,8 @@
 
                         <div class="container">
                             <div class="card-body text-center">
-                                <iframe class="vid" width="780" height="439" src="{{ $tfasir->url }}" title="YouTube video player"
-                                    frameborder="0"
+                                <iframe class="vid" width="780" height="439" src="{{ $tfasir->url }}"
+                                    title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                                 <h4 class="my-3 p-3 alert alert-info">{{ $tfasir->description }}</h4>
@@ -253,19 +275,24 @@
 
                                 <form action="">
                                     <div class="form-group">
-                                        <label for="note-title" class="col-form-label">{{ __('words.Note title') }}:</label>
-                                        <input type="text" class="form-control" id="note-title" placeholder="{{ __('words.Note title') }}">
+                                        <label for="note-title"
+                                            class="col-form-label">{{ __('words.Note title') }}:</label>
+                                        <input type="text" class="form-control" id="note-title"
+                                            placeholder="{{ __('words.Note title') }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="note-text" class="col-form-label">{{ __('words.Note details') }}:</label>
+                                        <label for="note-text"
+                                            class="col-form-label">{{ __('words.Note details') }}:</label>
                                         <textarea class="form-control" id="note-text"
                                             placeholder="{{ __('words.Note details') }}"></textarea>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ __('words.Close') }}</button>
-                                <button type="button" class="btn btn-primary" id="add-btn">{{ __('words.Add Note') }}</button>
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">{{ __('words.Close') }}</button>
+                                <button type="button" class="btn btn-primary"
+                                    id="add-btn">{{ __('words.Add Note') }}</button>
                             </div>
 
                         </div>
