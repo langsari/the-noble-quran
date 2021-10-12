@@ -1,4 +1,79 @@
 
+            //############################## Start make Bookmark ##############################///
+            // let url = window.location.href;
+            // let newUrl = url.split('/');
+            // let id = newUrl[newUrl.length - 1]
+
+
+            let mybookMark = JSON.parse(localStorage.getItem('quran-bookmark-store')) // fetch all bookmark in the localstorage
+            if(mybookMark==null){ // if  bookmark in the localstorage
+                mybookMark=[]
+            }
+            let bookfun = function() {
+                let bookMarkBtn = document.querySelectorAll(".bookmark");
+                // let bookMarkObj=[]
+
+                bookMarkBtn.forEach((Btn) => {
+                    Btn.addEventListener('click', (e) => { // when user click the bookmark button
+
+                        let searchResult = 0
+                        mybookMark.forEach(book=>{ //check if the bookmark exist in local storage if found the searchResult will be 1 and not add the bookmark
+                            if(book.id == e.currentTarget.dataset.bookmark){
+                                //e.currentTarget.dataset.bookmark will get the value of the bookmark
+                                  searchResult = 1
+                            }
+
+                        })
+
+                        if(searchResult == 0){ // if not doblecate bookmark it will add
+                            let myBook = {
+                                "id": e.currentTarget.dataset.bookmark,
+                            }
+                            mybookMark.push(myBook)
+
+                            localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
+                            alert('Bookmark Added Successfully')
+                        }else{  // if  doblecate bookmark it will fail
+                            alert('Bookmark Already Exist')
+
+                        }
+
+                    })
+
+                })
+            }
+            // whit to feth suah form api
+            setTimeout(bookfun, 500)
+
+            //############################## End make Bookmark ##############################///
+
+
+
+
+
+            //--------- Start GET BookMark Of Specific surah From local storage -----------------//
+            let bookmarkli = document.getElementById('bookmark')
+            let mybookMark1 = JSON.parse(localStorage.getItem('quran-bookmark-store'))
+            let bb = "";
+            mybookMark.forEach(b => {
+                let idd = b.id
+                let neww = idd.split(':');
+                console.log(neww[0]);
+                let idaftersplit = id.split('#')
+                console.log(idaftersplit[0]);
+                if (idaftersplit[0] == neww[0]) {
+                    bb += `
+                        <a class="btn btn-danger btn-sm my-2" href='#${neww[1]}' >Ayah : ${neww[1]}<a>
+                    `
+                }
+
+
+            })
+            if (bb == "") {
+                bb = '<h6 aletr>No Bookmark yet</h6>'
+            }
+            bookmarkli.innerHTML = bb;
+            //--------- Start GET BookMark Of Specific surah From local storage -----------------//
 
 
           // ############################## Start Script searh surah ##############################
@@ -52,6 +127,9 @@
 
           input_search_surah.addEventListener('input', () => searchSurah(input_search_surah.value));
           // ##############################  End Script searh surah ##############################
+
+
+
 
 
 
@@ -167,3 +245,7 @@
 
 
 //           ///##################### End Add Note #####################///
+
+
+
+
