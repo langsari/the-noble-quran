@@ -32,6 +32,14 @@
             z-index: 1020;
         }
 
+        .movetoSpe{
+
+            overflow: scroll;
+            min-height: fit-content;
+            max-height: 453px;
+
+        }
+
     </style>
 
     <div class="container">
@@ -97,7 +105,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Ayat
                                 </button>
-                                <div id="select" class="move-to-spec dropdown-menu box-shadow">
+                                <div id="select" class="move-to-spec movetoSpe dropdown-menu box-shadow">
                                 </div>
                             </div>
                             <!-- End Small button groups (default and split) -->
@@ -166,7 +174,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Ayat
                                 </button>
-                                <div id="selecAll" class="move-to-spec dropdown-menu box-shadow">
+                                <div id="selecAll" class="move-to-spec movetoSpe dropdown-menu box-shadow">
                                 </div>
                             </div>
                             <!-- End Small button groups (default and split) -->

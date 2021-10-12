@@ -33,6 +33,14 @@
                 z-index: 1020;
             }
 
+            .movetoSpe {
+
+                overflow: scroll;
+                min-height: fit-content;
+                max-height: 453px;
+
+            }
+
         </style>
 
         <div class="container my-5">
@@ -56,7 +64,8 @@
             <div class="container">
 
 
-                <ul  style="font-size: medium;" class="box-shadow justify-content-center  nav nav-pills mb-5 py-3" id="pills-tab" role="tablist">
+                <ul style="font-size: medium;" class="box-shadow justify-content-center  nav nav-pills mb-5 py-3"
+                    id="pills-tab" role="tablist">
 
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
@@ -94,7 +103,7 @@
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {{ __('words.verse') }}
                                     </button>
-                                    <div id="select" class="move-to-spec dropdown-menu box-shadow">
+                                    <div id="select" class="move-to-spec  movetoSpe dropdown-menu box-shadow">
                                         @for ($i = 1; $i < $surah->number_of_verses; $i++)
                                             <a class="btn  dropdown-item" href="#{{ $i }}">
                                                 <h4>{{ $i }}</h4>
@@ -205,7 +214,7 @@
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Ayat
                                     </button>
-                                    <div id="selecAll" class="dropdown-menu box-shadow">
+                                    <div id="selecAll" class="movetoSpe dropdown-menu box-shadow">
                                         {{-- //  Start Move to specific Ayat in read with translation --}}
                                         @for ($i = 1; $i < $surah->number_of_verses; $i++)
                                             <a class="btn  dropdown-item" href="#all{{ $i }}">

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Ayat;
 use App\Surah;
 use LaravelLocalization;
-use App\verse_translate;
+use App\Verse_translate;
 use App\Tfasir;
 use Illuminate\Http\Request;
 
