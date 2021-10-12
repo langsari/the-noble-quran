@@ -3,6 +3,9 @@
 @section('content')
 
     <style>
+        body{
+            direction: ltr;
+        }
         .custom-play-audio-position {
             top: 10px;
 
@@ -10,23 +13,22 @@
         }
 
         @media (max-width: 992px) {
-                .sticky-top {
-                    position: sticky;
-                    top: 78px;
-                    z-index: 1020;
-                }
-            }
-            .rounded-lg {
-    border-radius: 1.3rem !important;
-}
-
             .sticky-top {
-    position: sticky;
-    top: 86px;
-    z-index: 1020;
-}
+                position: sticky;
+                top: 60pxpx !important;
+                z-index: 1020;
+            }
+        }
 
+        .rounded-lg {
+            border-radius: 1.4rem !important;
+        }
 
+        .sticky-top {
+            position: sticky;
+            top: 69px !important;
+            z-index: 1020;
+        }
 
     </style>
 
@@ -302,7 +304,7 @@
 
     @section('script')
 
-    <script src="{{ asset('js/alquran/surah/allLang.js') }}"></script>
+        <script src="{{ asset('js/alquran/surah/allLang.js') }}"></script>
         <script src="{{ asset('js/alquran/surah/surahEn.js') }}"></script>
 
     @endsection

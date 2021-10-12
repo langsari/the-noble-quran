@@ -21,7 +21,7 @@
                             if(book.id == e.currentTarget.dataset.bookmark){
                                 //e.currentTarget.dataset.bookmark will get the value of the bookmark
                                   searchResult = 1
-                                  console.log(mybookMark.indexOf(book.id))
+                                //   console.log(mybookMark.indexOf(book.id))
                                   mybookMark.splice(book.id, 1);
                                   localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
                                   alert('Deleted')

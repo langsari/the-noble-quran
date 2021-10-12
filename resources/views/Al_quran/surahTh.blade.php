@@ -5,6 +5,10 @@
     @if ($ayats->count() > 0)
 
         <style>
+            body {
+                direction: ltr;
+            }
+
             .custom-play-audio-position {
                 top: 10px;
 
@@ -13,7 +17,7 @@
             @media (max-width: 992px) {
                 .sticky-top {
                     position: sticky;
-                    top: 78px;
+                    top: 60px;
                     z-index: 1020;
                 }
 
@@ -25,7 +29,7 @@
 
             .sticky-top {
                 position: sticky;
-                top: 86px;
+                top: 69px;
                 z-index: 1020;
             }
 

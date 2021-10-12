@@ -10002,3 +10002,68 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.search-result {
+  z-index: 2;
+  color: aquamarine;
+}
+
+/** Global Style **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "cairo-bold";
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+section {
+  padding: 70px 0;
+}
+
+section h3 {
+  font-size: 30px;
+  text-align: center;
+  color: #43a047;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+section h3::after,
+section h3::before {
+  content: "";
+  position: absolute;
+  background-color: #43a047;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section h3::after {
+  width: 50px;
+  bottom: -10px;
+}
+
+section h3::before {
+  width: 100px;
+  bottom: 0px;
+}
