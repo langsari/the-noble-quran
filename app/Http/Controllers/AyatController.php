@@ -1,28 +1,37 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Ayat;
+use App\Surah;
 use LaravelLocalization;
 use App\verse_translate;
-use App\Video;
+use App\Tfasir;
 use Illuminate\Http\Request;
+
 
 class AyatController extends Controller
 {
+
+
     public function showTh($id){
+
+        $surah = Surah::where('surah_num',$id)->first();
         $ayats = verse_translate::where('surah_id',$id)->get();
 
-        $video = Video::select('url_'.LaravelLocalization::getCurrentLocale().' as url','description')->where('surah_id',$id)->first();
+        $tfasir = Tfasir::select('url_'.LaravelLocalization::getCurrentLocale().' as url','description_'.LaravelLocalization::getCurrentLocale().' as description')->where('surah_id',$id)->first();
 
-
-        return view('Al_quran.surahTh',['ayats'=>$ayats,'video'=>$video]);
+        return view('Al_quran.surahTh',['ayats'=>$ayats,'tfasir'=>$tfasir,'surah'=>$surah]);
     }
+
+
 
     public function showEn($id){
 
-        $video = Video::select('url_'.LaravelLocalization::getCurrentLocale().' as url','description')->where('surah_id',$id)->first();
-            if(!isset($video) || $video->url == 0  )
-            return view('Al_quran.surahEn',['id'=> $id,'video'=>'no']);
+        $tfasir = Tfasir::select('url_'.LaravelLocalization::getCurrentLocale().' as url','description_'.LaravelLocalization::getCurrentLocale().' as description')->where('surah_id',$id)->first();
+            if(!isset($tfasir) || $tfasir->url == 0  )
+            return view('Al_quran.surahEn',['id'=> $id,'tfasir'=>'no']);
 
-        return view('Al_quran.surahEn',['id'=> $id,'video'=>$video]);
+        return view('Al_quran.surahEn',['id'=> $id,'tfasir'=>$tfasir]);
     }
 }

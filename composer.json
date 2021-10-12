@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2.5|^8.0",
         "fideloper/proxy": "^4.4",
+        "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5",
         "mcamara/laravel-localization": "^1.6",

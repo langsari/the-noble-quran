@@ -151,8 +151,7 @@ section h3::before
 
 
 .box{
-    background: rgb(226,152,66);
-    background: radial-gradient(circle, rgba(226,152,66,1) 19%, rgba(148,187,233,1) 100%);
+    background-color: #3c3c3c;
        width: 300px;
     margin: 2rem 0;
     text-align: center;
@@ -177,6 +176,7 @@ section h3::before
 .box p{
 
     margin-bottom: revert;
+    color: white;
 
 }
 

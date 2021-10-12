@@ -13,11 +13,12 @@ class CreateVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function (Blueprint $table) {
+        Schema::create('tfasirs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('url_th');
             $table->longText('url_en');
-            $table->mediumText('description');
+            $table->mediumText('description_th');
+            $table->mediumText('description_en');
             $table->integer('surah_id')->unsigned();
             $table->integer('user_id')->unsigned();
 
@@ -31,6 +32,6 @@ class CreateVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::dropIfExists('tfasirs');
     }
 }

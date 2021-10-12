@@ -27,7 +27,6 @@
     }
 
 
-
     #ss {
         text-decoration: none;
         color: #343a40;
@@ -169,118 +168,66 @@
 
     <div class="header">
 
-    <nav class="navbar navbar-expand-lg navbar-dark  container" style="direction: ltr">
-        <a class="logo navbar-brand" href="{{ route('Home') }}">دعوة<span
-                style="font-size:1.2rem; margin-right:15px">DAKWAH</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-dark  container" style="direction: ltr">
+            <a class="logo navbar-brand" href="{{ route('Home') }}">دعوة<span
+                    style="font-size:1.2rem; margin-right:15px">DA`WAH</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('Al_quran.home') }}">QURAN<span
-                            class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Home') }}">HOME PAGE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Home') }}" data-filter="hadith">HADITHS</a>
-                </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> --}}
-                {{-- <li data-filter="main" class="active">HOME PAGE</li>
-                <li data-filter="hadith">HADITHS</li>
-                <li data-filter="lectures">LECTURES</li>
-                <li data-filter=""><a href="{{ route('Al_quran.home') }}">QURAN</a></li>
-                <li data-filter="pray">PRAY TIME</li>
-                <li data-filter="footer">CONTACT US</li> --}}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ LaravelLocalization::getCurrentLocale() }}
-                      </a>
-                      <div class="dropdown-menu">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ route('Al_quran.home') }}">{{ __('words.QURAN') }}<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Home') }}">{{ __('words.HOME PAGE') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('Home') }}" data-filter="hadith">{{ __('words.HADITH') }}</a>
+                    </li>
 
-                @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    {{-- <li class="nav-item"> --}}
-                        <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
-                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }}
+                    {{-- Start Switch the language --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            {{ LaravelLocalization::getCurrentLocale() }}
                         </a>
-                    {{-- </li> --}}
-                @endforeach
-                      </div>
-            </li>
+                        <div class="dropdown-menu">
 
-            </ul>
-            {{-- Start Display Search Surah --}}
-            <form class="pos-rel">
+                            @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                {{-- <li class="nav-item"> --}}
+                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                                {{-- </li> --}}
+                            @endforeach
+                        </div>
+                    </li>
+                    {{-- End Switch the language --}}
 
-                <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
-                    placeholder="Enter Surah Name">
-                <div class="search-result-box text-center">
 
-                    <div id="list_surah" class="text-center">
+                </ul>
+                {{-- Start Display Search Surah --}}
+                <form class="pos-rel">
+
+                    <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
+                        placeholder="{{ __('words.Enter Surah Name') }}">
+                    <div class="search-result-box text-center">
+
+                        <div id="list_surah" class="text-center">
 
 
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
 
-            {{-- End Search Surah --}}
-        </div>
+                {{-- End Search Surah --}}
+            </div>
 
     </div>
     </nav>
 </div>
-
-
-
-
-{{-- <div style="margin-bottom: 100px;" class="navbar navbar-expand-lg navbar-dark bg-dark container">
-    <header class="header " style="direction: ltr">
-        <div class="nav ">
-
-            <a class="logo " href="{{ route('Home') }}">دعوة<span
-                    style="font-size:1.2rem; margin-right:15px">DAKWAH</span></a>
-
-            <ul>
-                <li data-filter="main" class="active">HOME PAGE</li>
-                <li data-filter="hadith">HADITHS</li>
-                <li data-filter="lectures">LECTURES</li>
-                <li data-filter=""><a href="{{ route('Al_quran.home') }}">QURAN</a></li>
-                <li data-filter="footer">CONTACT US</li>
-
-
-                    @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                        <li >
-                            <a  rel="alternate" hreflang="{{ $localeCode }}"
-                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                {{ $properties['native'] }}
-                            </a>
-                        </li>
-                    @endforeach
-
-
-            </ul>
-                        {{-- Start Display Search Surah --}}
-
-{{-- <form class="pos-rel">
-
-        <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
-            placeholder="Enter Surah Name">
-        <div class="search-result-box text-center">
-
-            <div id="list_surah" class="text-center">
-
-
-            </div>
-        </div>
-    </form> --}}
-{{-- End Search Surah --}}
-{{-- </div>
-</header>
-</div> --}}
