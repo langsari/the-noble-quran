@@ -1,4 +1,4 @@
-@extends('home.layout')
+@extends('home.style')
 @section('content')
 <div id="kk" class="container">
           <hr style="height:2px;border-width:0;color:gray;background-color:gray">
