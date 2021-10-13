@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\quran_arController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ Route::get('/', function () {
 });
 
 
-/*Route::get('/content', function () {
-    return view('content');
-});*/
+Route::get('/content', [quran_arController::class,'checkDb']);
 
 
 /*Route::get('/in', function () {
