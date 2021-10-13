@@ -102,10 +102,18 @@
         <div class="home_content">
            <div class="text">Home Content</div>
 
-           <div class="row text-center">
-               <div class="col-sm">
+           <div class="surah_card">
+              <div class="surah-card__number">
+                 1
+              </div>
+              <div class="surah_card__text">
                     
-                    <a href="Al-fatihah.html"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" ><span>Al-Fatihah</span> (The openner) <h4>ٱلْفَاتِحَة</h4></button></a>
+                    <a href="Al-fatihah.html"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" >
+                    <span class="text_name">Al-Fatihah</span> 
+                    (The openner)
+                     <h4>ٱلْفَاتِحَة</h4>
+                    </button>
+                  </a>
                </div>
                <div class="col-sm">
                     <a href="Al-baqarah.html"><button style="height: 120px; width:320px;"  type="button" class="btn btn-outline-info"> <span>Al-Baqarah</span> (The cow,the cow) 

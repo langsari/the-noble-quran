@@ -16,13 +16,18 @@ Route::get('/', function () {
 });
 
 
-Route::get('/content', function () {
+/*Route::get('/content', function () {
     return view('content');
-});
+});*/
 
-Route::get('/in', function () {
+
+‏
+
+
+
+/*Route::get('/in', function () {
     return view('in');
-});
+});*/
 
 Route::get('/main', function () {
     return view('main');
@@ -48,3 +53,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+

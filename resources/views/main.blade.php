@@ -32,11 +32,11 @@
   <h1>Jumbotron Example</h1>
   <p>Lorem ipsum...</p>
 </div>
-          <!--<h2 id="nooble">Noble Quran</h2>-->
+          <h2 id="nooble">Noble Quran</h2>-->
           <div class="co-md-6 col-lg-6 col-11 mx-auto my-auto search-box">
                <div class="input-group form-container">
                     <input id="ip1" type="text" name="search" class="form-control search-control" placeholder="Search"
-                         autofocus="autofocus" autocomplete="off"></input>
+                         autofocus="autofocus" autocomplete="off">
                     <span class="input-group-btn">
                          <button class="btn btn-search">
                               <img style="margin-top: -5px;" src="imgquran/search.png"
@@ -74,7 +74,7 @@
                <h4>آلِ عِمْرَان</h4></button></a>
                </div>
           </div>
-          <div class="row text-center mt-4">
+          <div class="row"><!--text-center mt-4-->
                <div class="col-sm">
                     
                     <a href="Al-fatihah.html"><button style="height: 120px; width:320px;"  type="buttom" class="btn btn-outline-info"><span>An-Nisa</span> (The women)

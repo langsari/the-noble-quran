@@ -246,3 +246,30 @@ body{
 .backdrop--active{
     display: block;
 }*/
+/*.row {
+    position: relative;
+    top: 30px;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    /*background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    
+}*/
+
+.col-sm a{
+    text-decoration:none;
+    color:#0d7377;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    
+}.div.col-sm
+{
+    padding: 0px 0px 0px 0px;
+
+
+}
+#font-bt{
+    font-size: 20px;
+}
