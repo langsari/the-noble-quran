@@ -2655,8 +2655,11 @@
                     The Noble Quran
                 </div>
 
+<<<<<<< HEAD
                 <p>{{ date("d/m/Y H:i:s")}}</p>  แก้ที่ config/app.php----
 
+=======
+>>>>>>> parent of e0ce2ac (try)
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

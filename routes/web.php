@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 
 
 /*Route::get('/content', function () {
@@ -56,3 +57,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+=======
+>>>>>>> parent of e0ce2ac (try)
