@@ -30,7 +30,7 @@ addBtn.addEventListener("click", (e) => {
 
 // show notes on the page
 function showNotes() {
-    let notes = localStorage.getItem("notes");
+    let notes = localStorage.getItem("notes")
     if (notes == null) {
         notesObj = []
     } else {

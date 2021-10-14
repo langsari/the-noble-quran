@@ -9,8 +9,16 @@ let exploreBtn = document.querySelector('.title .btn'),
 
 
 let fixedNav = document.querySelector('.header');
+     scrollBtn = document.querySelector('.scrollBtn');
 window.addEventListener("scroll",()=>{
     window.scrollY > 100 ? fixedNav.classList.add('active') : fixedNav.classList.remove('active');
+    window.scrollY > 500 ? scrollBtn.classList.add('active') : scrollBtn.classList.remove('active');
+})
+scrollBtn.addEventListener('click',()=>{
+    window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+    })
 })
 //Hadith Chapter
 let hadithContainer = document.querySelector('.hadithContainer'),
@@ -89,3 +97,9 @@ function getPrayTimes()
     })
   
 }
+//Active SideBar
+let bars = document.querySelector('.bars'),
+    SideBar = document.querySelector('.header ul');
+    bars.addEventListener('click',()=>{
+        SideBar.classList.toggle("active")
+    })
