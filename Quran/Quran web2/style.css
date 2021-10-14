@@ -383,7 +383,7 @@ section h3::before
 .scrollBtn
 {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     right: 20px;
     color: #fff;
     width: 50px;
