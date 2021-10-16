@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controller\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,8 @@
 Route::get('/', function () {
     return view('main');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin/home',[HomeController::class,'adminhome'] )->name('admin.home')->middleware('is_admin');
