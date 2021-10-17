@@ -8,6 +8,28 @@
     body{
         font-family: cairo-bold !important;
     }
+    /*** Scroll Btn ***/
+.scrollBtn
+{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #45607ecc;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: 1s bottom ease-in-out;
+    bottom: -50px;
+}
+.scrollBtn.active
+{
+    bottom: 20px;
+}
 
 </style>
 <head>
@@ -26,7 +48,6 @@
     <!-- Cairo Font-->
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cairo-bold" />
     <!-- scrollBtn css-->
-    <link rel="stylesheet" href="{{ asset("css/scrollBtn.css") }}">
 
 
 

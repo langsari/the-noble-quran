@@ -208,10 +208,15 @@
                             @endforeach
                         </div>
                     </li>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" onclick="changeMode()">
+                            <span class="slider"></i></span>
+                        </label>
+                    </li>
                     {{-- End Switch the language --}}
-
-
                 </ul>
+
                 {{-- Start Display Search Surah --}}
                 <div class="bars">
                     <i class="fas fa-bars"></i>

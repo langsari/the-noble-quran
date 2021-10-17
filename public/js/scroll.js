@@ -18,3 +18,9 @@ SideBar = document.querySelector('.header ul');
 bars.addEventListener('click',()=>{
    SideBar.classList.toggle("active")
 })
+
+
+function changeMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}

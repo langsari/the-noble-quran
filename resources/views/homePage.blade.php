@@ -41,10 +41,18 @@
                     <li data-filter="footer">CONTACT US</li>
 
                 </ul>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" onclick="changeMode()">
+                        <span class="slider"></i></span>
+                    </label>
+                </li>
                 <div class="bars">
                     <i class="fas fa-bars"></i>
+
                 </div>
             </div>
+
         </header>
     </div>
     <!--Main Section -->
@@ -68,7 +76,7 @@
     <section class="Contents" style="height: height: 100vh;">
         <h3>Content</h3>
         <div class="Contents"
-            style="display: flex; justify-content: space-evenly;flex-wrap: wrap;margin: 3rem 0;">
+            style="display: flex; justify-content: space-evenly;flex-wrap: wrap;margin: 3rem 0;gap: 50px;">
 
             <ul style="display: contents;">
                 <a href="{{ route('Al_quran.home') }}">
@@ -292,5 +300,6 @@
     <!--End Ramadan countdown Section-->
     <script src="Home/main.js"></script>
     <script src="js/scroll.js"></script>
+
 
 </body>
