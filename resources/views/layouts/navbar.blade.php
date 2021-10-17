@@ -75,7 +75,7 @@
         transition: .5s all ease-in-out;
         width: 100%;
         background: rgb(0 0 0 / 75%);
-        padding: 11px;
+        /* padding: 11px; */
 
 
     }
@@ -169,7 +169,7 @@
     <div class="header">
 
         <nav class="navbar navbar-expand-lg navbar-dark  container" style="direction: ltr">
-            <a class="logo navbar-brand" href="{{ route('Home') }}">دعوة<span
+            <a class="logo navbar-brand" href="{{ route('homePage') }}">دعوة<span
                     style="font-size:1.2rem; margin-right:15px">DA`WAH</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -184,10 +184,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('Home') }}">{{ __('words.HOME PAGE') }}</a>
+                        <a class="nav-link" href="{{ route('homePage') }}">{{ __('words.HOME PAGE') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('Home') }}" data-filter="hadith">{{ __('words.HADITH') }}</a>
+                        <a class="nav-link" href="{{ route('homePage') }}" data-filter="hadith">{{ __('words.HADITH') }}</a>
                     </li>
 
                     {{-- Start Switch the language --}}

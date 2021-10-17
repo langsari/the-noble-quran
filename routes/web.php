@@ -42,7 +42,7 @@ Route::group([
 
     #################################      Home_Page Of our website section        #######################################
 
-    Route::get('/', [HomeController::class,'homePage'])->name('Home');
+    Route::get('/', [HomeController::class,'homePage'])->name('homePage');
 
     #################################      End Home_Page Of our website section    #######################################
 
@@ -93,6 +93,8 @@ Route::group([
 
 
 }); //  End prefix Form mlti Lang
+
+
 
 
 

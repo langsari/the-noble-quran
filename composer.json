@@ -13,13 +13,14 @@
         "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^1.0",
         "mcamara/laravel-localization": "^1.6",
         "twbs/bootstrap": "4.6.0"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",
         "fakerphp/faker": "^1.9.1",
-        "laravel/ui": "^1.0",
+        
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^8.5.8|^9.3.3"

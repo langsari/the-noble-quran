@@ -26,7 +26,8 @@
     <!-- Cairo Font-->
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cairo-bold" />
     <!-- scrollBtn css-->
-    <link rel="stylesheet" href="{{ asset("js/scroll.js") }}">
+    <link rel="stylesheet" href="{{ asset("css/scrollBtn.css") }}">
+
 
 
 </head>

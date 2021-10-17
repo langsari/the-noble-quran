@@ -7537,7 +7537,6 @@
         "fakerphp/faker",
         "filp/whoops",
         "hamcrest/hamcrest-php",
-        "laravel/ui",
         "mockery/mockery",
         "myclabs/deep-copy",
         "nunomaduro/collision",
