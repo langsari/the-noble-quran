@@ -25,6 +25,9 @@
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=thuluth-decorated" />
     <!-- Cairo Font-->
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cairo-bold" />
+    <!-- scrollBtn css-->
+    <link rel="stylesheet" href="{{ asset("js/scroll.js") }}">
+
 
 </head>
 
@@ -37,6 +40,7 @@
 
 
 
+    @include('layouts.footer')
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>

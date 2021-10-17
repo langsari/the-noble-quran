@@ -112,3 +112,6 @@
 
         input_search_surah.addEventListener('input', () => searchSurah(input_search_surah.value));
         // ##############################  End Script searh surah ##############################
+
+
+        let fixedNav = document.querySelector('.header');

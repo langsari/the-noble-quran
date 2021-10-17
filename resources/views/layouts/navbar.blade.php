@@ -213,6 +213,9 @@
 
                 </ul>
                 {{-- Start Display Search Surah --}}
+                <div class="bars">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <form class="pos-rel">
 
                     <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
@@ -232,3 +235,4 @@
     </div>
     </nav>
 </div>
+

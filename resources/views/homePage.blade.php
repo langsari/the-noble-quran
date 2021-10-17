@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="Home/style.css">
     <!--Start Ramadan countdown Section-->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/scrollBtn.css">
 
 
     <!--End Ramadan countdown Section-->
@@ -26,7 +27,7 @@
 
 <body>
     <div class="full-width">
-        <header class="header " style="direction: ltr">
+        <header class="header" style="direction: ltr">
             <div class="nav">
 
                 <div class="logo btn">دعوة<span style="font-size:1.2rem; margin-right:15px">DAKWAH</span></div>
@@ -278,6 +279,10 @@
         </div>
     </section>
     <!--End Footer-->
+            <!--Scroll Top-->
+            <div class="scrollBtn active">
+                <i class="fas fa-angle-double-up"></i>
+            </div>
     <!--js File-->
     <!--Start Ramadan countdown Section-->
     <script src="scripts/moment.js"></script>
@@ -286,5 +291,6 @@
 
     <!--End Ramadan countdown Section-->
     <script src="Home/main.js"></script>
+    <script src="js/scroll.js"></script>
 
 </body>

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e
+class ComposerStaticInit0644c42b5b680aad369c911b616e0f7d
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -26,10 +26,10 @@ class ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -462,7 +462,6 @@ class ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e
     );
 
     public static $classMap = array (
-        'App\\Ayat' => __DIR__ . '/../..' . '/app/Ayat.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -491,7 +490,6 @@ class ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e
         'App\\Surah' => __DIR__ . '/../..' . '/app/Surah.php',
         'App\\Tfasir' => __DIR__ . '/../..' . '/app/Tfasir.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
-        'App\\verse_translate' => __DIR__ . '/../..' . '/app/verse_translate.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonConverterInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonConverterInterface.php',
@@ -4955,10 +4953,10 @@ class ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitb280e4d07afc8d8eca8b9e21d39de58e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0644c42b5b680aad369c911b616e0f7d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0644c42b5b680aad369c911b616e0f7d::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit0644c42b5b680aad369c911b616e0f7d::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit0644c42b5b680aad369c911b616e0f7d::$classMap;
 
         }, null, ClassLoader::class);
     }

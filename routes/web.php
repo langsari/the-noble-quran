@@ -24,7 +24,6 @@ Route::group(['prefix' => 'admin'],function () {
                 Auth::routes();
         }
 );
-
 Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('auth');;
 
 #################################      End Admin section        #######################################
@@ -65,7 +64,7 @@ Route::group([
 
 
 
-        
+
         #################################      Check Current lang then decide wich method to call en or th         #######################################
 
         if (LaravelLocalization::getCurrentLocale() === 'th') {
