@@ -3,7 +3,6 @@
 use App\http\Controllers\HomeController;
 use App\Http\Controllers\surahController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +20,10 @@ Route::get('/', function () {
 
 Route::get('home/index',[HomeController::class,'index']);
 
-Route::get('surah/fatihah',[surahController::class,'fatihah']);
+
 
 Route::get('/fatihah', function () {
     return view('fatihah');
 });
+
+
