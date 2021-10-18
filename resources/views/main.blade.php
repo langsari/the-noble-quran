@@ -13,6 +13,14 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
+ <!-- Favicon-->
+ <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -46,13 +54,10 @@
  
      </nav>
      <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
          
                     <hr class="mt-5" style="background-color: white;">
-                   
-            
-             
-             <div class="col mt-5">
+                      
               
               
              </div>
@@ -61,23 +66,16 @@
 
 
 
-     <div id="ilham">
-          <br>
-          <br>
-
-          <img id="quran" class="rounded mx-auto d-block" src="imgquran/quran.png" alt=""
-               width="20">
-          <br>
-          <br>
-          <h2 id="nooble">Noble Quran</h2>
+          
+          <h1 class="text-center">อัล-กุรอ่าน</h1>
+          <br><br>
           <div class="co-md-6 col-lg-6 col-11 mx-auto my-auto search-box">
                <div class="input-group form-container">
                     <input id="ip1" type="text" name="search" class="form-control search-control" placeholder="Search"
                          autofocus="autofocus" autocomplete="off"></input>
                     <span class="input-group-btn">
-                         <button class="btn btn-search">
-                              <img style="margin-top: -5px;" src="imgquran/search.png"
-                                   alt="" width="30">
+                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Search</button></div>
+                             
 
                          </button>
                     </span>
@@ -85,22 +83,16 @@
                </div>
           </div>
      </div>
-     <br>
+     <br><br><br>
 
      <div class="container"> 
           
-          <p>Quick links :&nbsp;&nbsp;<a style="text-decoration: none;" href="Al-fatihah.html">Al-Fatihah</a>&nbsp;<a href="" style="text-decoration:none">.....</a>&nbsp;&nbsp;|</p>
-          
-          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-          
-
-               <P>Surah (Chapter) | Juzz</P>
-               <hr style="width:11.6%;text-align:left;margin-left:0px;"><br>
+         
              
           <div class="row text-center">
                <div class="col-sm">
                     
-                    <a href="Al-fatihah.html"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" ><span>Al-Fatihah</span> (The openner) <h4>ٱلْفَاتِحَة</h4></button></a>
+                    <a href="Fatihah.blade.php"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" ><span>Al-Fatihah</span> (The openner) <h4>ٱلْفَاتِحَة</h4></button></a>
                </div>
                <div class="col-sm">
                     <a href="Al-baqarah.html"><button style="height: 120px; width:320px;"  type="button" class="btn btn-outline-info"> <span>Al-Baqarah</span> (The cow,the cow) 
@@ -748,33 +740,17 @@
                <div class="container text-center text-md-left">
                <div class="row">
                <div class="col-md-6 mt-md-0 mt-3">
-               <h5 class="text-uppercase text-white">NOOBLE QURAN</h5>
-                     <p></p>
-               </div>
                
-               <hr class="clearfix w-100 d-md-none pb-3">
-               <div class="col-md-3 mb-md-0 mb-3">
-               <h5 class="text-uppercase text-white">CONTACT</h5>
-                   <ul class="list-unstyled">
-                      <li class="text-white">
-                           Facebook : Noble-Quran
-                      </li>
-                     
-                      <br>
-                      <li class="text-white">
-                           E-mail : Noble-Quran@gmail.com    
-                      </li>
-                   </ul>
-               </div>
+               
+              
+                   
                   
-               <div class="col-md-3 mb-md-0 mb-3">
-               <h5 class="text-uppercase text-white">ABOUT US</h5>
-                     <p></p>
+               
                </div>
                </div>
                </div>
-               <div class="footer-copyright text-center py-3 bg-info">© 2020 Copyright:
-                 <a style="text-decoration: none; color: aliceblue;" href="index.html"> NB-QR.com</a>
+               <div class="footer-copyright text-center py-3 bg-info">อัลกุรอ่าน ภาษาไทย
+                 <a style="text-decoration: none; color: aliceblue;" href="index.html"> AL-QURAN.co.th</a>
                </div>
                </footer>
              
