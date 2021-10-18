@@ -14,19 +14,15 @@
 
 use App\Ayat;
 use App\Http\Controllers\AyatController;
-use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 
 #################################      Admin section        #######################################
 
-Route::group(['prefix' => 'admin'],function () {
 
-                Auth::routes();
-        }
-);
-Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('auth');;
 
 #################################      End Admin section        #######################################
+
 
 
 
@@ -39,10 +35,42 @@ Route::group([
             ], function () {
 
 
+                Auth::routes();
+
+
+#################################      User login section        #######################################
+
+Route::prefix('user')->name('user.')->group(function(){
+    // guest to check First if u guest or not
+    Route::middleware(['guest','PreventBackHistory'])->group(function(){
+
+        Route::view('/login','dashboard.user.login')->name('login');
+        Route::view('/register','dashboard.user.register')->name('register');
+        Route::POST('/create',[UserController::class,'create'])->name('create');
+        Route::POST('/check',[UserController::class,'check'])->name('check');
+
+    });
+
+        // guest to check First if u auth or not
+    Route::middleware(['auth','PreventBackHistory'])->group(function(){
+
+        Route::view('/home','dashboard.user.home')->name('home');
+        Route::POST('/logout',[UserController::class,'logout'])->name('logout');
+
+    });
+    });
+#################################      End User login  section        #######################################
+
+
+
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
 
     #################################      Home_Page Of our website section        #######################################
 
-    Route::get('/', [HomeController::class,'homePage'])->name('homePage');
+    Route::get('/', [PageController::class,'index'])->name('homePage');
 
     #################################      End Home_Page Of our website section    #######################################
 
@@ -93,6 +121,8 @@ Route::group([
 
 
 }); //  End prefix Form mlti Lang
+
+
 
 
 

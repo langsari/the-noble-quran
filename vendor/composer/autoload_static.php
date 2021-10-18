@@ -80,6 +80,11 @@ class ComposerStaticInit0644c42b5b680aad369c911b616e0f7d
         array (
             'Ramsey\\Uuid\\' => 12,
         ),
+        'Q' => 
+        array (
+            'Qirolab\\Theme\\Database\\Factories\\' => 33,
+            'Qirolab\\Theme\\' => 14,
+        ),
         'P' => 
         array (
             'Psy\\' => 4,
@@ -284,6 +289,14 @@ class ComposerStaticInit0644c42b5b680aad369c911b616e0f7d
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Qirolab\\Theme\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qirolab/laravel-themer/database/factories',
+        ),
+        'Qirolab\\Theme\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qirolab/laravel-themer/src',
         ),
         'Psy\\' => 
         array (
@@ -3821,6 +3834,18 @@ class ComposerStaticInit0644c42b5b680aad369c911b616e0f7d
         'Psy\\VersionUpdater\\GitHubChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/GitHubChecker.php',
         'Psy\\VersionUpdater\\IntervalChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
         'Psy\\VersionUpdater\\NoopChecker' => __DIR__ . '/..' . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
+        'Qirolab\\Theme\\Commands\\MakeThemeCommand' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/MakeThemeCommand.php',
+        'Qirolab\\Theme\\Commands\\Presets\\AuthScaffolding' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/AuthScaffolding.php',
+        'Qirolab\\Theme\\Commands\\Presets\\Bootstrap' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/Bootstrap.php',
+        'Qirolab\\Theme\\Commands\\Presets\\PresetTrait' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/PresetTrait.php',
+        'Qirolab\\Theme\\Commands\\Presets\\React' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/React.php',
+        'Qirolab\\Theme\\Commands\\Presets\\TailwindCSS' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/TailwindCSS.php',
+        'Qirolab\\Theme\\Commands\\Presets\\Vue' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Commands/Presets/Vue.php',
+        'Qirolab\\Theme\\SolutionProviders\\ThemeViewNotFoundSolutionProvider' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/SolutionProviders/ThemeViewNotFoundSolutionProvider.php',
+        'Qirolab\\Theme\\Theme' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Theme.php',
+        'Qirolab\\Theme\\ThemeServiceProvider' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/ThemeServiceProvider.php',
+        'Qirolab\\Theme\\ThemeViewFinder' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/ThemeViewFinder.php',
+        'Qirolab\\Theme\\Trails\\HandleFiles' => __DIR__ . '/..' . '/qirolab/laravel-themer/src/Trails/HandleFiles.php',
         'Ramsey\\Uuid\\BinaryUtils' => __DIR__ . '/..' . '/ramsey/uuid/src/BinaryUtils.php',
         'Ramsey\\Uuid\\Builder\\DefaultUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DefaultUuidBuilder.php',
         'Ramsey\\Uuid\\Builder\\DegradedUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DegradedUuidBuilder.php',

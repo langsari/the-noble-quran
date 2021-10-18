@@ -5,10 +5,21 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">User Register</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    @if (Session::get('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
+                    @if (Session::get('fail'))
+                        <div class="alert alert-danger">
+                            {{ Session::get('fail') }}
+                        </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('user.create') }}">
                         @csrf
 
                         <div class="form-group row">

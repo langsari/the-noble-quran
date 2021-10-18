@@ -190,6 +190,7 @@
                         <a class="nav-link" href="{{ route('homePage') }}" data-filter="hadith">{{ __('words.HADITH') }}</a>
                     </li>
 
+
                     {{-- Start Switch the language --}}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -215,6 +216,7 @@
                         </label>
                     </li>
                     {{-- End Switch the language --}}
+
                 </ul>
 
                 {{-- Start Display Search Surah --}}
@@ -235,6 +237,7 @@
                 </form>
 
                 {{-- End Search Surah --}}
+                
             </div>
 
     </div>

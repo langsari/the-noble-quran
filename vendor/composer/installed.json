@@ -3763,6 +3763,80 @@
             "install-path": "../psy/psysh"
         },
         {
+            "name": "qirolab/laravel-themer",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qirolab/laravel-themer.git",
+                "reference": "0e6cce2b05978db3f3bedd6ed0a1caa37b0dec7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qirolab/laravel-themer/zipball/0e6cce2b05978db3f3bedd6ed0a1caa37b0dec7b",
+                "reference": "0e6cce2b05978db3f3bedd6ed0a1caa37b0dec7b",
+                "shasum": ""
+            },
+            "require": {
+                "facade/ignition-contracts": "^1.0",
+                "illuminate/support": "~5.8|^6.0|^7.0|^8.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "orchestra/testbench": "~3.8.0|^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.3|^9.0",
+                "vimeo/psalm": "^4.0"
+            },
+            "time": "2021-01-02T14:33:44+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Qirolab\\Theme\\ThemeServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Qirolab\\Theme\\": "src",
+                    "Qirolab\\Theme\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Harish Kumar",
+                    "email": "harish@qirolab.com",
+                    "homepage": "https://qirolab.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel theme manager, that will help you organize and maintain your themes inside Laravel projects.",
+            "homepage": "https://qirolab.com",
+            "keywords": [
+                "laravel",
+                "laravel-theme",
+                "qirolab",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/qirolab/laravel-themer/issues",
+                "source": "https://github.com/qirolab/laravel-themer/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/qirolab",
+                    "type": "other"
+                }
+            ],
+            "install-path": "../qirolab/laravel-themer"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "version_normalized": "3.0.3.0",
@@ -7533,7 +7607,6 @@
         "doctrine/instantiator",
         "facade/flare-client-php",
         "facade/ignition",
-        "facade/ignition-contracts",
         "fakerphp/faker",
         "filp/whoops",
         "hamcrest/hamcrest-php",
