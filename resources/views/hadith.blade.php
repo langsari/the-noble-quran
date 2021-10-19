@@ -2,7 +2,7 @@
 
 @section('title', 'The-Nobal-Quran | Hadith')
 
-@section('content')
+@section('content1')
 
 @include('layouts.navbar')
 
@@ -10,7 +10,7 @@
 
 
 
-
+<div class="intro">
 <section class="hadith">
     <h3>HADITHS</h3>
     <div class="container">
@@ -23,6 +23,7 @@
          </div>
     </div>
 </section>
+</div>
 
 
 

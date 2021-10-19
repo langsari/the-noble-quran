@@ -5,9 +5,11 @@
 
 @section('title', 'The-Nobal-Quran | Surah')
 
-@section('content')
+@section('content1')
 
 @include('layouts.navbar')
+
+<div class="bg-dark">
 
 
     <div class="container my-5">
@@ -218,19 +220,19 @@ var id = newUrl[newUrl.length - 1];
 
                              arbtxt+=
                             `
-                            <h5>(${index+1})</h5> 
+                            <h5 style="color: #ffffff;">(${index+1})</h5> 
                              <audio id="player${index+1}"  class='text-center'>
                              <source src="${Ayat[index].audio.primary}" type="audio/ogg">
                              Your browser does not support the audio element.
                              </audio>
                              <br>
-                             <div class='audio text-center '>
+                             <div class="audio text-center">
                                  <button class="play  btn btn-success" onclick="document.getElementById('player${index+1}').play()"></buttom>
                             
                                  <button class="pause btn btn-danger" onclick="document.getElementById('player${index+1}').pause()"></button>
-                            </div>
+                           
                             <p  class="ayatarb"> ${Ayat[index].text.arab}</p>   
-                              
+                   
                              `;      
 
                              audioaya+= 
@@ -240,7 +242,7 @@ var id = newUrl[newUrl.length - 1];
 
                             trans+= 
                              `
-                             <h5>(${index+1})</h5> 
+                             <h5 style="color: #ffffff;">(${index+1})</h5> 
                              <audio id="player${index+1}"  class='text-center'>
                              <source src="${Ayat[index].audio.primary}" type="audio/ogg">
                              Your browser does not support the audio element.
@@ -251,15 +253,40 @@ var id = newUrl[newUrl.length - 1];
                             
                                  <button class="pause btn btn-danger" onclick="document.getElementById('player${index+1}').pause()"></button>
                             </div>
+                            <div class="text-center justify-content-center" style="margin:auto; width:80%;">
                              <p id="arb" class="ayatarba"> ${Ayat[index].text.arab}</p>
+                             <p class="ayatliter">${Ayat[index].text.transliteration.en}</p> 
+                             <br> 
+                             <p style="font-size=16px; color:#f4623a;">Indonisian</p>
                              <p id="id" class="ayatid">${Ayat[index].translation.id}</p>
-                             <p id="en" class="ayateng">${Ayat[index].translation.en}</p>  
+                             <br>
+                             <p class="text-center" style="font-size=16px; color:#f4623a;">English</p>
+                             <p id="en" class="ayateng">${Ayat[index].translation.en}</p>
+                            </div>
                         
                              ` ;}
                              
                              
                              AyatCont.innerHTML=  arbtxt;
                              TransCont.innerHTML= trans;
+
+
+                             let verses = data.data.verses;
+                      console.log(data)
+
+                      //surah info
+                      surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                          "</h2>";
+                      surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                          "</h2>";
+                      surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
+                      numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
+                          "</span></h5>";
+                      revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data
+                          .revelation.arab + "</span></h5>";
+                      let i = 1;
+                      let j = 500;
+
 
                         
                                   })     
@@ -275,8 +302,7 @@ var id = newUrl[newUrl.length - 1];
 
 
 
-
-
+</div>
 
 
 

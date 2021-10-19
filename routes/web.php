@@ -14,7 +14,6 @@ use App\Http\Controllers\ayatController;
 Route::get('/', function () {
     return view('index');});
 
-        Route::view('/home', 'home');
 
         Route::view('/quran', 'quran');
 
@@ -29,3 +28,7 @@ Route::get('/', function () {
 
 
  
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

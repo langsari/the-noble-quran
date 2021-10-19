@@ -49,7 +49,7 @@
     <body>
 
 
-        @yield('content')
+        @yield('content1')
 
 
 

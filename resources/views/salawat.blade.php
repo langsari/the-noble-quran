@@ -3,9 +3,10 @@
 
 @section('title', 'The-Nobal-Quran | Salawat')
 
-@section('content')
+@section('content1')
 
 @include('layouts.navbar')
+<div class="intro">
 
 <section class="pray">
     <h3>PRAY TIME</h3>
@@ -23,5 +24,6 @@
         </div>
     </div>
 </section>
+</div>
 
 @endsection

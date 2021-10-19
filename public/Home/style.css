@@ -299,10 +299,11 @@ a {
 /*** Hadith Section ***/
 .hadithContainer
 {
+    background-color: #ffffff87;
+    font-size: 20px;
     min-height: 350px;
     position: relative;
-    box-shadow: 4px 4px 4px 0 #d1d9e6 inset ,
-    -4px -4px 4px 0px #d1d9e6 inset;
+    box-shadow: 4px 4px 4px 0 #f4623a inset, -4px -4px 4px 0px #f4623a inset;
     color: #232323;
     text-align: center;
     display: flex;
@@ -320,8 +321,8 @@ a {
 }
 .hadith .buttons div
 {
-    background: linear-gradient(60deg , #66bb6a , #43a047);
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) , 0 7px 10px -5px rgba(76, 175, 88, 4);
+    background: linear-gradient(60deg , #f4623a , #f4623a);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0) inset, 0 7px 10px -5px #f4623a;
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
@@ -329,9 +330,10 @@ a {
 .hadith .buttons .number
 {
     padding: 10px 20px ;
-    color: #43a047;
-    background: transparent;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) inset, 0 7px 10px -5px rgba(76, 175, 88, 4);
+    font-size: 20px;
+    color: #f4623a;
+    background: white;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0) inset, 0 7px 10px -5px #f4623a;
 }
 /**** lectures Section ****/
 .lectures-container
@@ -364,7 +366,7 @@ a {
 .lec .lec-text
 {
     width: calc(100% - 150px);
-    color: #41a161;
+    color: #f4623a;
 }
 .lec img
 {
@@ -427,7 +429,7 @@ a {
     height: 100%;
     fill: none;
     stroke-width: 10;
-    stroke: #43a047;
+    stroke: #ffffff;
     transform: translate(5px, 5px);
     stroke-dasharray: 2;
     stroke-dashoffset: 1000;
@@ -444,13 +446,13 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    color: #43a047;
+    color: #ffffff;
     font-size: 40px;
     font-family: cursive;
 }
 .card p
 {
-    color: #43a047;
+    color: #ffffff;
     font-size: 25px;
     font-family: 20px;
     text-align: center;
@@ -485,5 +487,6 @@ a {
 .full-width{
     width:220%;
 }
+
 
 

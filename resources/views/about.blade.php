@@ -6,7 +6,7 @@
 
 @section('title', 'The-Nobal-Quran | About')
 
-@section('content')
+@section('content1')
 
 @include('layouts.navbar')
 
@@ -80,7 +80,7 @@
       <div class="col-lg-4">
        
        
-        <img  class="bd-placeholder-img rounded-circle" src="/img/Abdul-alhadi.jfif" width="140" height="140" />
+        <img  class="bd-placeholder-img rounded-circle" src="/img/Hadi.jfif" width="140" height="140" />
         
         <h2 >Abdul-Al-hadi</h2>
         <p>information technology student
@@ -89,7 +89,7 @@
         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img  class="bd-placeholder-img rounded-circle" src="/img/Eyad.jpg" width="140" height="140" />
+        <img  class="bd-placeholder-img rounded-circle" src="/img/Eyad2.jfif" width="140" height="140" />
         
         <h2>Eyad</h2>
         <p>information technology student

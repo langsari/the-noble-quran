@@ -2,7 +2,7 @@
 
 @section('title', 'the-Nobal-Quran')
 
-@section('content')
+@section('content1')
 
 @include('layouts.navbar')
 
