@@ -16,12 +16,7 @@ use App\Ayat;
 use App\Http\Controllers\AyatController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
-
-#################################      Admin section        #######################################
-
-
-
-#################################      End Admin section        #######################################
+use App\Http\Controllers\AdminController;
 
 
 
@@ -60,6 +55,28 @@ Route::prefix('user')->name('user.')->group(function(){
     });
     });
 #################################      End User login  section        #######################################
+
+#################################      Admin section        #######################################
+
+Route::prefix('admin')->name('admin.')->group(function(){
+    // guest to check First if u guest or not
+    Route::middleware(['guest:admin','PreventBackHistory'])->group(function(){
+
+        Route::view('/login','dashboard.admin.login')->name('login');
+        Route::POST('/check',[AdminController::class,'check'])->name('check');
+
+    });
+
+        // guest to check First if u auth or not
+    Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
+
+        Route::GET('/home',[AdminController::class,'index'])->name('home');
+        Route::POST('/logout',[AdminController::class,'logout'])->name('logout');
+
+    });
+    });
+
+#################################      End Admin section        #######################################
 
 
 

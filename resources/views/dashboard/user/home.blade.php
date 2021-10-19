@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">User | Dashboard</div>
+                    <div class="card-header"><h3>User | Dashboard</h3></div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -13,7 +13,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
+                            <h6>Your Profile</h6>
                         <table class="table table-hover">
                             <thead class="thead-dark">
                                 <tr>

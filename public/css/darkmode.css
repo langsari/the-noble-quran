@@ -1,0 +1,37 @@
+.dark-mode .container.py-2 img{
+    background: #909090;
+    /* padding: 100px; */
+    border-radius: 10%;
+}
+
+.dark-mode .container.py-2 h6{
+        color: #f7f0e9;
+    }
+
+.dark-mode .navbar-dark .navbar-nav .nav-link {
+        color: rgb(255 255 255 / 83%);
+    }
+
+.dark-mode .hover-change-color-alq {
+    box-shadow: 0 0 5px #767676;
+   }
+
+.dark-mode #surah_title h2{
+    color: #ddd;
+
+}
+
+
+.dark-mode .ayat .container{
+    background: #0b0a14;
+    color: #ddd;
+}
+
+.dark-mode .container h5{
+    color: #ddd;
+
+}
+.dark-mode .card-body li h5,.dark-mode .card-body li h6{
+    color: #eee !important;
+
+}

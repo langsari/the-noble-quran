@@ -47,7 +47,8 @@
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=thuluth-decorated" />
     <!-- Cairo Font-->
     <link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cairo-bold" />
-    <!-- scrollBtn css-->
+    <!-- Darkmode css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/darkmode.css') }}" />
 
 
 

@@ -122,3 +122,18 @@ input:checked + .slider:before {
 .dark-mode h1 {
   color: #f7f0e9;
 }
+
+.dark-mode .hadithContainer {
+  color: #ddd;
+}
+
+.dark-mode .lectures-container {
+    box-shadow: 0 0 5px #767676;
+}
+.dark-mode .lectures-container .right .lec{
+    box-shadow: 0 0 5px #767676;
+}
+
+.dark-mode .pray .cards .card{
+    box-shadow: 0 0 5px #767676;
+}
