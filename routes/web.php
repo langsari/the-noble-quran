@@ -11,6 +11,8 @@
 |
 */
 use App\Http\Controllers\ayatController;
+
+
 Route::get('/', function () {
     return view('index');});
 
@@ -31,4 +33,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('.home');
