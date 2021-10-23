@@ -17,9 +17,7 @@ use App\Http\Controllers\AyatController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-
-
-
+use App\Http\Controllers\NasihaController;
 
 #################################      prefix Form mlti Lang        #######################################
 
@@ -33,47 +31,48 @@ Route::group([
                 Auth::routes();
 
 
-#################################      User login section        #######################################
+#################################      User  section        #######################################
 
-Route::prefix('user')->name('user.')->group(function(){
-    // guest to check First if u guest or not
-    Route::middleware(['guest','PreventBackHistory'])->group(function(){
+    Route::prefix('user')->name('user.')->group(function(){
+        // guest to check First if u guest or not
+        Route::middleware(['guest','PreventBackHistory'])->group(function(){
 
-        Route::view('/login','dashboard.user.login')->name('login');
-        Route::view('/register','dashboard.user.register')->name('register');
-        Route::POST('/create',[UserController::class,'create'])->name('create');
-        Route::POST('/check',[UserController::class,'check'])->name('check');
+            Route::view('/login','dashboard.user.login')->name('login');
+            Route::view('/register','dashboard.user.register')->name('register');
+            Route::POST('/create',[UserController::class,'create'])->name('create');
+            Route::POST('/check',[UserController::class,'check'])->name('check');
 
+        });
+
+            // auth to check First if u auth or not
+        Route::middleware(['auth','PreventBackHistory'])->group(function(){
+
+            Route::GET('/home',[UserController::class,'index'])->name('home');
+            Route::POST('/logout',[UserController::class,'logout'])->name('logout');
+
+        });
     });
 
-        // guest to check First if u auth or not
-    Route::middleware(['auth','PreventBackHistory'])->group(function(){
+#################################      End Usersection        #######################################
 
-        Route::view('/home','dashboard.user.home')->name('home');
-        Route::POST('/logout',[UserController::class,'logout'])->name('logout');
+#################################      Admin section                  #######################################
 
-    });
-    });
-#################################      End User login  section        #######################################
+    Route::prefix('admin')->name('admin.')->group(function(){
+        // guest to check First if u guest or not
+        Route::middleware(['guest:admin','PreventBackHistory'])->group(function(){
 
-#################################      Admin section        #######################################
+            Route::view('/login','dashboard.admin.login')->name('login');
+            Route::POST('/check',[AdminController::class,'check'])->name('check');
 
-Route::prefix('admin')->name('admin.')->group(function(){
-    // guest to check First if u guest or not
-    Route::middleware(['guest:admin','PreventBackHistory'])->group(function(){
+        });
 
-        Route::view('/login','dashboard.admin.login')->name('login');
-        Route::POST('/check',[AdminController::class,'check'])->name('check');
+            // guest to check First if u auth or not
+        Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
 
-    });
+            Route::GET('/home',[AdminController::class,'index'])->name('home');
+            Route::POST('/logout',[AdminController::class,'logout'])->name('logout');
 
-        // guest to check First if u auth or not
-    Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
-
-        Route::GET('/home',[AdminController::class,'index'])->name('home');
-        Route::POST('/logout',[AdminController::class,'logout'])->name('logout');
-
-    });
+        });
     });
 
 #################################      End Admin section        #######################################
@@ -133,8 +132,22 @@ Route::prefix('admin')->name('admin.')->group(function(){
     #################################      End AL-quran section        #######################################
 
 
+    #################################      Nasiha section        #######################################
+
+    Route::prefix('nasiha')->group(function () {
 
 
+        Route::get('/',[NasihaController::class,'index'])->name('nasiha.index');
+        Route::get('/create',[NasihaController::class,'create'])->name('nasiha.create');
+        Route::POST('',[NasihaController::class,'store'])->name('nasiha.store');
+
+
+
+
+
+    });
+
+    #################################      End Nasiha section        #######################################
 
 
 }); //  End prefix Form mlti Lang

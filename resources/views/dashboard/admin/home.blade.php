@@ -2,8 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+
                 <div class="card">
                     <div class="card-header">
                         <h3> Admin | Dashboard</h3>
@@ -17,7 +16,7 @@
                         @endif
                         <h5>Your Profile</h5>
 
-                        <table class="table table-hover border">
+                        <table class="table table-hover border table-bordered">
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Name</th>
@@ -43,7 +42,7 @@
                     <hr>
                     <div class="card-body">
                         <h5>All Members</h5>
-                        <table class="table table-striped border">
+                        <table class="table table-hover border table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -64,8 +63,6 @@
                         </table>
                     </div>
 
-                </div>
-            </div>
         </div>
     </div>
 @endsection

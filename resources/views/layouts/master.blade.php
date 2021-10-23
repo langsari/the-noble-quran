@@ -31,6 +31,10 @@
     bottom: 20px;
 }
 
+.invalid-feedback {
+    display: block;
+
+}
 </style>
 <head>
     <meta charset="utf-8">

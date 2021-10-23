@@ -28,6 +28,10 @@ class AyatController extends Controller
                                 ->where('surah_id',$id)->first();
 
 
+                            //    dd($ayats[0]->verse_number);
+
+
+
         return view('Al_quran.surahTh',['ayats'=>$ayats,
                                         'tfasir'=>$tfasir,
                                         'surah'=>$surah

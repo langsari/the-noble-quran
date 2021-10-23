@@ -1,6 +1,16 @@
 <style>
     /*** Header **/
 
+    .custom {
+        direction: ltr;
+        max-width: 95%;
+        margin: auto;
+
+    }
+
+    .navbar {
+        padding: 0.3rem 1rem !important;
+    }
 
     .search-result-box {
         background: #fbfdfee6;
@@ -99,6 +109,7 @@
 
     .header ul {
         display: flex;
+        align-items: center;
     }
 
     .header ul li {
@@ -111,7 +122,6 @@
         position: relative;
         cursor: pointer;
         text-decoration: none;
-        color: rgb(0, 0, 0);
     }
 
     .header ul li::after {
@@ -163,12 +173,12 @@
 </style>
 
 
-<div class="container" style="    margin-bottom: 150px;
+<div style="    margin-bottom: 150px;
 ;">
 
     <div class="header">
 
-        <nav class="navbar navbar-expand-lg navbar-dark  container" style="direction: ltr">
+        <nav class="navbar navbar-expand-lg navbar-dark  custom" style="direction: ltr">
             <a class="logo navbar-brand" href="{{ route('homePage') }}">دعوة<span
                     style="font-size:1.2rem; margin-right:15px">DA`WAH</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -187,14 +197,22 @@
                         <a class="nav-link" href="{{ route('homePage') }}">{{ __('words.HOME PAGE') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('homePage') }}" data-filter="hadith">{{ __('words.HADITH') }}</a>
+                        <a class="nav-link" href="{{ route('homePage') }}"
+                            data-filter="hadith">{{ __('words.HADITH') }}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('nasiha.index') }}"
+                            data-filter="hadith">Nasiha</a>
                     </li>
 
 
+
                     {{-- Start Switch the language --}}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown" style="list-style: none;">
+                        <a style="font-size: font-size: 1rem;" class="nav-link dropdown-toggle" href="#"
+                            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             {{ LaravelLocalization::getCurrentLocale() }}
                         </a>
                         <div class="dropdown-menu">
@@ -208,22 +226,62 @@
                                 {{-- </li> --}}
                             @endforeach
                         </div>
+
                     </li>
-                    <li>
-                        <label class="switch">
-                            <input type="checkbox" onclick="changeMode()">
-                            <span class="slider"></i></span>
-                        </label>
-                    </li>
+
+
                     {{-- End Switch the language --}}
 
+
+                    @guest
+                        <li class="nav-item" style="list-style: none;">
+                            <a style="text-decoration: none;font-size: initial;color: rgba(255, 255, 255, 0.5);"
+                                class="" href="{{ route('user.login') }}">{{ __('Login') }}</a>
+                        </li>
+                        {{-- @if (Route::has('user.register'))
+    <li class="nav-item" style="list-style: none;">
+        <a style="text-decoration: none;font-size: initial;"  class="" href="{{ route('user.register') }}">{{ __('Register') }}</a>
+    </li>
+@endif --}}
+                    @else
+
+                        <li class="nav-item dropdown" style="display: inherit;" style="list-style: none;">
+                            <a style="font-size: initial;" id="navbarDropdown" class="nav-link dropdown-toggle"
+                                href="{{ route('user.home') }}" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a style="margin-left: 10px;" class="dropdown-item" href="{{ route('user.home') }} ">
+                                    Profile
+                                </a>
+
+                                <a style="margin-left: 10px;" class="dropdown-item" href="{{ route('logout') }} "
+                                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
+
+                            </div>
+
+                        </li>
+                    @endguest
+
                 </ul>
+
 
                 {{-- Start Display Search Surah --}}
                 <div class="bars">
                     <i class="fas fa-bars"></i>
                 </div>
-                <form class="pos-rel">
+
+                <form style="margin: auto;" class="pos-rel">
 
                     <input id="input_search_surah" class="form-control mr-sm-2 my-1" type="search" aria-label="Search"
                         placeholder="{{ __('words.Enter Surah Name') }}">
@@ -237,10 +295,23 @@
                 </form>
 
                 {{-- End Search Surah --}}
-                
+
+
+
+
+
+
+
             </div>
+            {{-- Start Switch Darkmode --}}
+
+            <li>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeMode()">
+                    <span class="slider"></i></span>
+                </label>
+            </li>
+            {{-- End Switch Darkmode --}}
+        </nav>
 
     </div>
-    </nav>
-</div>
-

@@ -44,12 +44,12 @@
 
         </style>
 
-        <div class="container my-5">
+        <div class="container my-5" style="margin-top: 100px;" >
 
             {{-- #####################  Start Display Surah Title ##################### --}}
             <div class="row d-flex justify-content-center  my-5 ">
 
-                <h2 class="text-center " id="surah_title">{{ $surah->name_th }}-{{ $surah->name }}</h2>
+                <h2 style="margin-top: 42px;" class="text-center " id="surah_title">{{ $surah->name_th }}-{{ $surah->name }}</h2>
 
             </div>
             {{-- #####################  End Display Surah Title ##################### --}}
@@ -99,7 +99,7 @@
 
 
         {{-- ##################### Start pills-tabContent ##################### --}}
-        <div class="container">
+        <div class="container" >
         <div class="tab-content" id="pills-tabContent">
 
             {{-- ##################### Start translate surah ##################### --}}
@@ -352,6 +352,11 @@
                 <h2 class="text-center alert alert-danger">{{ __('words.Admin Did Not Add The translation yet') }}</h2>
             </div>
     @endif
+{{--
+    @for ($i = 0; $i < $quransArab->count(); $i++)
+                {{ $quransArab[$i]->ayatText }}
+                {{ $quransThi[$i]->ayatText }}
+@endfor --}}
 
 @endsection
 
@@ -367,3 +372,7 @@
 
     @endif
 @endsection
+
+
+
+
