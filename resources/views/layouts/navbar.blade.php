@@ -238,11 +238,7 @@
                             <a style="text-decoration: none;font-size: initial;color: rgba(255, 255, 255, 0.5);"
                                 class="" href="{{ route('user.login') }}">{{ __('Login') }}</a>
                         </li>
-                        {{-- @if (Route::has('user.register'))
-    <li class="nav-item" style="list-style: none;">
-        <a style="text-decoration: none;font-size: initial;"  class="" href="{{ route('user.register') }}">{{ __('Register') }}</a>
-    </li>
-@endif --}}
+
                     @else
 
                         <li class="nav-item dropdown" style="display: inherit;" style="list-style: none;">
@@ -315,3 +311,5 @@
         </nav>
 
     </div>
+
+</div>

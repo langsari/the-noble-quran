@@ -4,7 +4,7 @@
 {{-- Contetn To Show All Sutah Name --}}
 @section('content')
     <br>
-    <div class="container py-2" style="margin-top: 100px;">
+    <div class="container py-2">
 
         <div id="main">
             <div id="content  ">

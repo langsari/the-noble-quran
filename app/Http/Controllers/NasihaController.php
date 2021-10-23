@@ -12,7 +12,9 @@ class NasihaController extends Controller
 
     function index()
     {
-        return view('Nasiha.index');
+        $nasihas = Nasiha::all();
+
+        return view('Nasiha.index')->with('nasihas',$nasihas);
 
 
     }
@@ -46,5 +48,14 @@ class NasihaController extends Controller
 
 
 
+    }
+
+
+
+
+    function show($id){
+
+        $nasiha = Nasiha::find($id);
+        return view('Nasiha.show')->with('nasiha',$nasiha);
     }
 }

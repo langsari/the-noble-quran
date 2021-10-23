@@ -138,6 +138,7 @@ Route::group([
 
 
         Route::get('/',[NasihaController::class,'index'])->name('nasiha.index');
+        Route::get('/{id}/show',[NasihaController::class,'show'])->name('nasiha.show');
         Route::get('/create',[NasihaController::class,'create'])->name('nasiha.create');
         Route::POST('',[NasihaController::class,'store'])->name('nasiha.store');
 

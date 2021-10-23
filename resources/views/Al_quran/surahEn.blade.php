@@ -42,7 +42,7 @@
 
     </style>
 
-    <div class="container" style="margin-top: 100px;">
+    <div class="container" >
 
         {{-- #####################  Start Display Surah Title ##################### --}}
         <div class="container my-5">
