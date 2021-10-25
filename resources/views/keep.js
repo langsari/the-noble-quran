@@ -2446,4 +2446,24 @@
 
 
 
+      -----------------------------------------------------------------
+
       
+<?php
+if (!empty($_GET['id'])){
+    $url = ' https://api.alquran.cloud/v1/surah'.$_GET['id'] '/ar.alafasy';
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    curl_setopt($ch, CURLOPT_URL,$url);
+
+    $result=curl_exe($ch);
+
+    $data = json_decode($result, true);
+    if (!empty($data) && $data['status'] == 'OK'){
+        print_r($data);
+    }
+}
+
+-------------------------------------------------------------------------------------

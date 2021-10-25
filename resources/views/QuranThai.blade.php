@@ -112,7 +112,10 @@
        margin-top: 2rem;
        margin-left: 7rem;
    }
-   
+   .bx .bx-play{
+       position: absolute;
+   }
+  
 
    </style>
    
@@ -134,10 +137,13 @@
 
      <div class="ayah">{{ $quransarab[$i]->AyahText }}</div>
      <div class="ayah__number"> {{$quransarab[$i]->VerseID}} </div>
-        <img src="{{asset('img/Box.png')}}" alt="" class="box">
-        <img src="{{asset('img/Box.png')}}" alt="" class="box1">
+        
+        <img  src="{{asset('img/Box.png')}}" alt="" class="box" >
+        <img src="{{asset('img/Box.png')}}" alt="" class="box1" > 
         <img src="{{asset('img/Box.png')}}" alt="" class="box2">
         <img src="{{asset('img/Box.png')}}" alt="" class="box3">
+
+
      <div class="lang_th">{{ $quransthai[$i]->AyahText }}  </div>
         <br>
         <hr>
@@ -152,6 +158,5 @@
     </div>
     
     @endforeach --}}
-
-  
+          
 
