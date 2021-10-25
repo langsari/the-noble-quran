@@ -11,6 +11,14 @@
         <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 
         <title>The Noble Quran</title>
+        <style>
+        .header__img {
+ 
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,.4); -------------
+}
+
+         </style>   
     </head>
     <body>
         <!--========== HEADER ==========-->
@@ -35,7 +43,7 @@
         <div class="nav" id="navbar">
             <nav class="nav__container">
                 <div>
-                    <a href="#" class="nav__link nav__logo">
+                    <a href="{{ url('/') }}" class="nav__link nav__logo">
                         <i class='bx bxs-disc nav__icon' ></i>
                         <span class="nav__logo-name">The Noble Quran</span>
                     </a>

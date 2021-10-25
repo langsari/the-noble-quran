@@ -337,7 +337,8 @@ img {
   }
 
   /*surah_card*/
-  .container__surah__card{
+  /*.container__surah__card*/
+  .surah-list{ 
     /*position: relative;*/
     display: flex;
     /*padding: 2rem;*/

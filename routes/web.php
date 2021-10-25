@@ -17,7 +17,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/content', [quran_arController::class,'checkDb']);
+//Route::get('/content/{id}', [quran_arController::class,'checkDb']);
+//Route::get('ayah','Qurans@Quran');
+Route::get('/ayah/{id}','Qurans@Quran');
+Route::get('/th/{id}','Qurans@QuranThai');
+
 
 
 /*Route::get('/in', function () {
