@@ -98,17 +98,6 @@
 
 
 
-              
-              <form class="pos-rel">
-
-                <input id="input_search_surah" class="form-control" type="search" aria-label="Search" placeholder="Enter Surah Name">
-                <div class="search-result-box text-center">
-
-                    <div id="list_surah" class="text-center">
-                    </div>
-                </div>
-            </form>
-
             {{-- End Search Surah --}}
 
 

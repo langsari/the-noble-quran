@@ -8,8 +8,8 @@
 @section('content1')
 
 @include('layouts.navbar')
-
-<div class="bg-dark">
+<body style="background-color: #212529;">
+    
 
 
     <div class="container my-5">
@@ -20,7 +20,6 @@
 
         </div>
 
-    </div>
 
 
 
@@ -97,6 +96,7 @@
     <div class="card text-center ">
         <div class="card-body ">
             <h5 id="surah_name" class="card-title"></h5>
+            
             {{-- <p class="card-text">
                     Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p> --}}
@@ -275,9 +275,9 @@ var id = newUrl[newUrl.length - 1];
                       console.log(data)
 
                       //surah info
-                      surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                      surah_title.innerHTML = `<h2 style="color:white;">` + data.data.name.translation.en + " - " + data.data.name.long +
                           "</h2>";
-                      surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                      surah_name.innerHTML = `<h2 style="color:white;">` + data.data.name.translation.en + " - " + data.data.name.long +
                           "</h2>";
                       surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
                       numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
@@ -305,7 +305,7 @@ var id = newUrl[newUrl.length - 1];
 </div>
 
 
-
+</body>
 
     @endsection
 
