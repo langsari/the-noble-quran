@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>The Noble Quran</title>
+        <title>อัลกุรอาน ภาษาไทย</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -63,6 +63,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
         </style>
     </head>
     <body>
@@ -83,14 +84,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    The Noble Quran 
+                   อัลกุรอาน ภาษาไทย
                 </div>
 
                 <div class="links">
-                    <a href="home/index">Quran</a>
-                    <a href="">about</a>
+                    <a href="/playtime">PRAYER TIME</a>
+                    <a href="https://github.com/langsari/the-noble-quran/tree/Ameen_branch">about</a>
                   
-                    <a href="https://github.com/langsari/the-noble-quran/tree/Ameen_branch">GitHub</a>
+                   
                 </div>
             </div>
         </div>

@@ -33,8 +33,8 @@ img {
 <div>
         <div class="header-dark">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                <div class="container"><a class="navbar-brand" href="http://127.0.0.1:8000">อัลกุรอาน</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <a href="#" class="button">Language</a>
+                <div class="container"><a class="navbar-brand" href="http://127.0.0.1:8000">อัลกุรอาน</a>
+                
                 <!--<a href="#" class="button">SignIn</a>-->
                 <div class="collapse navbar-collapse"
                         id="navcol-1">
@@ -75,8 +75,8 @@ img {
 </form>-->
 <div class="row">
                                                
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="ค้นหาซูเราะห์" data-sb-validations="required,email" />
+                                    <div action="" class="col">
+                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="ค้นหา Al-Fatihah" data-sb-validations="required,email" />
                                     </div>
                                   
                                     <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">ค้นหา</button></div>

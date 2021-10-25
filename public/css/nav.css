@@ -1,4 +1,4 @@
-.button {
+h11 {
     background-color:#0d6efd;
     border: none;
     color: white;
@@ -9,8 +9,24 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    
+    margin-left: 1150px;
+    text-decoration-color: #ebeff1;
   }
+  h12 {
+    background-color:#0d6efd;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 2px;
+    text-decoration-color: #ebeff1;
+  }
+  
   .form-control-lg {
     min-height: calc(1em + 1.5rem + 1.5px);
     padding: 1rem 1.25rem;
@@ -259,4 +275,8 @@
   .header-dark .hero .embed-responsive iframe {
     background-color:#f0f0f0;
   }
-  
+  t{
+    margin-left:10px;
+    
+}
+

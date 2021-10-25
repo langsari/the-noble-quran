@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\fatihahController;
+use App\Http\Controllers\FatihahTHController;
 use App\http\Controllers\HomeController;
 use App\Http\Controllers\surahController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +23,18 @@ Route::get('/', function () {
 
 Route::get('home/index',[HomeController::class,'index']);
 
+Route::get('fatihah/fatihah',[fatihahController::class,'fatihah']);
 
+/*Route::get('fatihah/fatihahTH','FatihahController@TH');*/
+Route::get('/fatihahEN', function () {
+    return view('fatihahEN');
+});
+Route::get('/fatihahTH', function () {
+    return view('fatihahTH');
+});
 
-Route::get('/fatihah', function () {
-    return view('fatihah');
+Route::get('/playtime', function () {
+    return view('playtime');
 });
 
 

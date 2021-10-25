@@ -11,7 +11,7 @@
        </p>
          <div class="grid-container">
          <div class="grid-item">
-               <a href="/fatihah"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info" ><span>1.  Al-Fatihah</span>  <h4>ٱلْفَاتِحَة</h4></button></a>
+               <a href="/fatihah/fatihah"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info" ><span>1.  Al-Fatihah</span>  <h4>ٱلْفَاتِحَة</h4></button></a>
          </div>
 
          <div class="grid-item">
