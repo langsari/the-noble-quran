@@ -1079,6 +1079,63 @@
             "install-path": "../laravel/tinker"
         },
         {
+            "name": "laravel/ui",
+            "version": "1.x-dev",
+            "version_normalized": "1.9999999.9999999.9999999-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "21dc7e58896db977aad246e710b4810aaab9a968"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/21dc7e58896db977aad246e710b4810aaab9a968",
+                "reference": "21dc7e58896db977aad246e710b4810aaab9a968",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.8|^6.0",
+                "illuminate/filesystem": "~5.8|^6.0",
+                "illuminate/support": "~5.8|^6.0",
+                "php": "^7.1.3|^8.0"
+            },
+            "time": "2020-11-03T19:38:34+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/ui/issues",
+                "source": "https://github.com/laravel/ui/tree/1.x"
+            },
+            "install-path": "../laravel/ui"
+        },
+        {
             "name": "league/commonmark",
             "version": "1.6.6",
             "version_normalized": "1.6.6.0",
@@ -6802,5 +6859,50 @@
             "install-path": "../webmozart/assert"
         }
     ],
-    "dev": true
+    "dev": true,
+    "dev-package-names": [
+        "doctrine/instantiator",
+        "facade/flare-client-php",
+        "facade/ignition",
+        "facade/ignition-contracts",
+        "fakerphp/faker",
+        "filp/whoops",
+        "hamcrest/hamcrest-php",
+        "mockery/mockery",
+        "myclabs/deep-copy",
+        "nunomaduro/collision",
+        "phar-io/manifest",
+        "phar-io/version",
+        "php-parallel-lint/php-console-color",
+        "php-parallel-lint/php-console-highlighter",
+        "phpdocumentor/reflection-common",
+        "phpdocumentor/reflection-docblock",
+        "phpdocumentor/type-resolver",
+        "phpspec/prophecy",
+        "phpunit/php-code-coverage",
+        "phpunit/php-file-iterator",
+        "phpunit/php-invoker",
+        "phpunit/php-text-template",
+        "phpunit/php-timer",
+        "phpunit/phpunit",
+        "scrivo/highlight.php",
+        "sebastian/cli-parser",
+        "sebastian/code-unit",
+        "sebastian/code-unit-reverse-lookup",
+        "sebastian/comparator",
+        "sebastian/complexity",
+        "sebastian/diff",
+        "sebastian/environment",
+        "sebastian/exporter",
+        "sebastian/global-state",
+        "sebastian/lines-of-code",
+        "sebastian/object-enumerator",
+        "sebastian/object-reflector",
+        "sebastian/recursion-context",
+        "sebastian/resource-operations",
+        "sebastian/type",
+        "sebastian/version",
+        "theseer/tokenizer",
+        "webmozart/assert"
+    ]
 }

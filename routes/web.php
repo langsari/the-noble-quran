@@ -167,3 +167,11 @@ Route::get('/v27',[VideoController::class,'v27']);
 Route::get('/v28',[VideoController::class,'v28']);
 
 Route::get('/v71',[VideoController::class,'v71']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
