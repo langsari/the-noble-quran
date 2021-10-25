@@ -29,7 +29,7 @@
 
           <div class="container-fluid">
               
-                   <span class="text-white">AL-QUR'AN</span>
+                   <h4><span class="text-white">AL-QUR'AN</span></h4>
               </a>
                    
                <a  class="nav-link bg-info text-white " style="margin-left: auto;" aria-current="page" href="/login">LOGIN</a>
@@ -43,8 +43,6 @@
                          <ul class="dropdown-menu dropdown-menu-info" aria-labelledby="language" style="margin-right:0px">
                             <li><a class="dropdown-item" href="">Audio</a></li>
                             <li><a class="dropdown-item" href="">Tafsir</a></li>
-                            
-                            
 
                          </ul>
 
@@ -57,24 +55,21 @@
           
          
                     <hr class="mt-5" style="background-color: white;">
-                      
-              
-              
-             </div>
-              
-             </div>
+                    </div>
+ </div>
 
 
 
           
           <h1 class="text-center">อัล-กุรอ่าน</h1>
           <br><br>
+          
           <div class="co-md-6 col-lg-6 col-11 mx-auto my-auto search-box">
                <div class="input-group form-container">
                     <input id="ip1" type="text" name="search" class="form-control search-control" placeholder="Search"
-                         autofocus="autofocus" autocomplete="off"></input>
+                         autofocus="autofocus" autocomplete="off"></input> 
                     <span class="input-group-btn">
-                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Search</button></div>
+                    <div class="col-auto"><button class="btn btn-primary btn-sm" id="submitButton" type="submit">Search</button></div>
                              
 
                          </button>
@@ -92,7 +87,7 @@
           <div class="row text-center">
                <div class="col-sm">
                     
-                    <a href="Fatihah.blade.php"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" ><span>Al-Fatihah</span> (The openner) <h4>ٱلْفَاتِحَة</h4></button></a>
+                    <a href="/fatihah"><button style="height: 120px; width:320px;"   type="buttom" class="btn btn-outline-info" ><span>Al-Fatihah</span> (The openner) <h4>ٱلْفَاتِحَة</h4></button></a>
                </div>
                <div class="col-sm">
                     <a href="Al-baqarah.html"><button style="height: 120px; width:320px;"  type="button" class="btn btn-outline-info"> <span>Al-Baqarah</span> (The cow,the cow) 
@@ -328,7 +323,7 @@
           <div class="row text-center mt-4">
                <div class="col-sm">
                     
-                    <a href="#"><button style="height: 120px; width:320px;"  type="buttom" class="btn btn-outline-info"><span>	Az-Zukhruf</span> (The Gold Adornments, The Ornaments of Gold, Luxury, Gold)
+                    <a href="#"><button style="height: 120px; width:320px;"  type="buttom" class="btn btn-outline-info"><span>Az-Zukhruf</span> (The Gold Adornments, The Ornaments of Gold, Luxury, Gold)
                     <h4>ٱلْزُّخْرُف</h4></button></a>
                </div>
                <div class="col-sm">
@@ -735,6 +730,7 @@
 </div>
 </div>
 </div>
+
 
           <footer  class="page-footer font-small pt-4 mt-5">
                <div class="container text-center text-md-left">

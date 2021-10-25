@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are admin.
+                    You are Admin.
                 </div>
             </div>
         </div>
