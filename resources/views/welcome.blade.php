@@ -310,3 +310,4 @@
     getAllSurah()
 </script>
 </html>
+
