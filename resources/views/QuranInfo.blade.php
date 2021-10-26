@@ -52,12 +52,16 @@
 <div>
 
     @foreach($quransinfo as $quran)
+
     
-    <div class="Ayah">   
+    <div class="Ayah">  
      <li>{{$quran->SuraName}} &emsp;<span class="#"> จำนวนอายะห์  : {{$quran->VerseID}}</span> 
-        &emsp;<span class="#"> ประทานที่  : {{$quran->Place}}</span></li>   
-     <i><span class="#">{{$quran->Name}}</span> </li>   <br><br>
-     <i><span class="#"> {{$quran->Info}}</span> </li> 
+        &emsp;<span class="#"> ประทานที่  : {{$quran->Place}}</span></li>  
+        <li><iframe width="560" height="315" src="{{$quran->Link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </li>
+     <li><span class="#">{{$quran->Name}}</span> </li>   
+     <hr width="50%" "
+     >
+     <li><span class="#"> {{$quran->Info}}</span> </li> 
     </div>
   
     @endforeach 

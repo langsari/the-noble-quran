@@ -117,18 +117,17 @@
    .bx .bx-play{
        position: absolute;
    }
-   #play{
+   /*#play{
        position: absolute;
        width:1000px;
      
 
-       /*z-index: -10;*/
+       z-index: -10;
        margin-top: 0.6rem;
-       margin-left: 15.6rem;
+       margin-left: 15.6rem;*/
 
 
    }
-  
 
    </style>
    
@@ -155,7 +154,7 @@
             
         </div>
         {{-- <img  src="{{asset('img/Box.png')}}" alt="" class="box" >
-        <a href="#"><i class='bx bx-play' id="play"></i><img src="{{asset('img/Box.png')}}" alt="" class="box1" > </a>
+        <img src="{{asset('img/Box.png')}}" alt="" class="box1" > 
         <img src="{{asset('img/Box.png')}}" alt="" class="box2">
         <img src="{{asset('img/Box.png')}}" alt="" class="box3"> --}}
 
@@ -201,9 +200,9 @@
                                     </audio>
                                     <br>
                                     <div class='text-center '>
-                                        <button title="Playe" class="rounded-lg btn btn btn-success btn-sm btn-lg" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
-                                        <button title="Pause" class="rounded-lg btn btn-danger btn-sm" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
-
+                                        <button title="Playe" class="rounded-lg btn btn  btn-sm btn-lg" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                        <button title="Pause" class="rounded-lg btn  btn-sm" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+                                        </div>
                                            
                                             
                                     </div>
@@ -216,3 +215,9 @@
                  
      
      </script>
+
+
+{{-- <div class='text-center '>
+    <button title="Playe" class="rounded-lg btn btn btn-success btn-sm btn-lg" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+    <button title="Pause" class="rounded-lg btn btn-danger btn-sm" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+    </div> --}}
