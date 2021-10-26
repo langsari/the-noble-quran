@@ -1,6 +1,7 @@
 <?php
 
-use App\http\Controllers\HomeController;
+use App\http\Controllers\BasicControllers\HomeController;
+use App\http\Controllers\BasicControllers\BasicControllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('home/index',[HomeController::class,'index']);
+
+Route::get('surah/1',[surahControllers::class,'1']);
