@@ -43,7 +43,7 @@
                          <ul class="dropdown-menu dropdown-menu-info" aria-labelledby="language" style="margin-right:0px">
                             <li><a class="dropdown-item" href="">Audio</a></li>
                             <li><a class="dropdown-item" href="">Tafsir</a></li>
-
+                            <li><a class="dropdown-item" href="/aboutus">About Us</a></li>
                          </ul>
 
                </div>

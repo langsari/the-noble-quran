@@ -26,6 +26,9 @@ Route::get('/fatihah', function () {
     return view('fatihah');
 });
 
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
 
 
 /*Auth::routes();
