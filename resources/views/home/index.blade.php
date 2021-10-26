@@ -132,7 +132,7 @@
       </div>
 
       <a class="logo" href="/">
-        <strong style="font-weight: bold">Quran</strong>.Th <!-- logo quran.Th -->
+        <strong style="font-weight: bold">อัลกุรอาน</strong><!-- logo quran.Th -->
 </a>    </div>
 
 
@@ -377,6 +377,7 @@
     </div>
   </div>
 </div>
+-->
 
 <div class="container space-y-32 hidden" data-controller="bookmarks">
   <p class="no-margin">
@@ -388,7 +389,7 @@
     </div>
   </div>
 </div>
--->
+
 
   <div class="container content-page__center col">
     <div class="">
@@ -411,6 +412,16 @@
            aria-controls="juz-list"
            aria-selected="false">
           <span class='en '>แสดงยุซ</span>
+        </a>
+
+        <a id="tab--video"
+           class="tabs__item show-juz"
+           data-target="#video-list"
+           data-tab="home-tabs"
+           role="tab"
+           aria-controls="video-list"
+           aria-selected="false">
+          <span class='th '>วีดีโอตัฟซีร</span>
         </a>
       </div>
     </div>
@@ -2929,6 +2940,2523 @@
   </div>
 </a>
   </div>
+
+
+  <!-- Viedo -->
+  <div class="surah-section" data-tab-group="home-tabs" id="video-list">
+          <a data-controller="track" data-name="chapters" data-category="1-Al-Fatihah" href="/v1">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            1
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-Fatihah</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Opener</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah1"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="2-Al-Baqarah" href="/v2">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            2
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-Baqarah</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Cow</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah2"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="3-Ali &#39;Imran" href="/v3">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            3
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Ali &#39;Imran</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">Family of Imran</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah3"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="4-An-Nisa" href="/v4">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            4
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video An-Nisa</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Women</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah4"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="5-Al-Ma&#39;idah" href="/v5">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            5
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-Ma&#39;idah</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Table Spread</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah5"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="6-Al-An&#39;am" href="/v6">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            6
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-An&#39;am</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Cattle</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah6"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="7-Al-A&#39;raf" href="/v7">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            7
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-A&#39;raf</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Heights</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah7"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="8-Al-Anfal" href="/v8">
+        <div class="surah-card">
+          <div class="surah-card__number">
+            8
+          </div>
+
+          <div class="surah-card__text">
+            <div class="surah-card__latin">
+              <h5>Video Al-Anfal</h5>
+              <div class="ayah-number-wrapper">
+                <p class="english">The Spoils of War</p>
+              </div>
+            </div>
+
+            <div class="surah-card__arabic">
+              <p>
+                <span class="icon-surah icon-surah8"></span>
+                <span class="icon-surah icon-surah-surah"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a><a data-controller="track" data-name="chapters" data-category="9-At-Tawbah" href="/v9">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          9
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video At-Tawbah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Repentance</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah9"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="10-Yunus" href="/v10">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          10
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Yunus</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Jonah</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah10"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="11-Hud" href="/v11">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          11
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Hud</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Hud</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah11"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="12-Yusuf" href="/v12">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          12
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Yusuf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Joseph</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah12"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="13-Ar-Ra&#39;d" href="/v13">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          13
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Ar-Ra&#39;d</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Thunder</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah13"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="14-Ibrahim" href="/v14">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          14
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Ibrahim</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Abraham</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah14"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="15-Al-Hijr" href="/v15">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          15
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Hijr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Rocky Tract</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah15"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="16-An-Nahl" href="/v16">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          16
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video An-Nahl</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Bee</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah16"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="17-Al-Isra" href="/v17">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          17
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Isra</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Night Journey</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah17"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="18-Al-Kahf" href="/v18">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          18
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Kahf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Cave</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah18"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="19-Maryam" href="/v19">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          19
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Maryam</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Mary</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah19"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="20-Taha" href="/v20">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          20
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Taha</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Ta-Ha</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah20"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="21-Al-Anbya" href="/v21">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          21
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Anbya</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Prophets</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah21"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="22-Al-Hajj" href="/v22">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          22
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Hajj</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Pilgrimage</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah22"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="23-Al-Mu&#39;minun" href="/v23">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          23
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Mu&#39;minun</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Believers</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah23"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="24-An-Nur" href="/v24">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          24
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video An-Nur</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Light</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah24"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="25-Al-Furqan" href="/v25">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          25
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Furqan</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Criterion</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah25"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="26-Ash-Shu&#39;ara" href="/v26">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          26
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Ash-Shu&#39;ara</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Poets</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah26"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="27-An-Naml" href="/v27">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          27
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video An-Naml</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Ant</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah27"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="28-Al-Qasas" href="/v28">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          28
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-Qasas</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Stories</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah28"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="29-Al-&#39;Ankabut" href="/v29">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          29
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Al-&#39;Ankabut</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Spider</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah29"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="30-Ar-Rum" href="/v30">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          30
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Ar-Rum</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Romans</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah30"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="31-Luqman" href="/v31">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          31
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video Luqman</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Luqman</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah31"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="32-As-Sajdah" href="/v32">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          32
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Video As-Sajdah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Prostration</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah32"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="33-Al-Ahzab" href="/v33">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          33
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ahzab</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Combined Forces</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah33"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="34-Saba" href="/v34">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          34
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Saba</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Sheba</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah34"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="35-Fatir" href="/v35">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          35
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Fatir</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Originator</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah35"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="36-Ya-Sin" href="/v36">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          36
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ya-Sin</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Ya Sin</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah36"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="37-As-Saffat" href="/v37">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          37
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>As-Saffat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Those who set the Ranks</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah37"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="38-Sad" href="/v38">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          38
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Sad</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Letter &quot;Saad&quot;</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah38"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="39-Az-Zumar" href="/v39">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          39
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Az-Zumar</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Troops</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah39"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="40-Ghafir" href="/v40">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          40
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ghafir</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Forgiver</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah40"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="41-Fussilat" href="/v41">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          41
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Fussilat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Explained in Detail</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah41"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="42-Ash-Shuraa" href="/v42">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          42
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ash-Shuraa</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Consultation</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah42"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="43-Az-Zukhruf" href="/v43">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          43
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Az-Zukhruf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Ornaments of Gold</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah43"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="44-Ad-Dukhan" href="/v44">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          44
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ad-Dukhan</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Smoke</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah44"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="45-Al-Jathiyah" href="/v45">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          45
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Jathiyah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Crouching</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah45"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="46-Al-Ahqaf" href="/v46">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          46
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ahqaf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Wind-Curved Sandhills</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah46"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="47-Muhammad" href="/v47">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          47
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Muhammad</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Muhammad</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah47"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="48-Al-Fath" href="/v48">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          48
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Fath</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Victory</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah48"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="49-Al-Hujurat" href="/v49">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          49
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Hujurat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Rooms</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah49"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="50-Qaf" href="/v50">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          50
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Qaf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Letter &quot;Qaf&quot;</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah50"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="51-Adh-Dhariyat" href="/v51">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          51
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Adh-Dhariyat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Winnowing Winds</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah51"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="52-At-Tur" href="/v52">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          52
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Tur</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Mount</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah52"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="53-An-Najm" href="/v53">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          53
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>An-Najm</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Star</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah53"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="54-Al-Qamar" href="/v54">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          54
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Qamar</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Moon</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah54"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="55-Ar-Rahman" href="/v55">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          55
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ar-Rahman</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Beneficent</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah55"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="56-Al-Waqi&#39;ah" href="/v56">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          56
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Waqi&#39;ah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Inevitable</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah56"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="57-Al-Hadid" href="/v57">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          57
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Hadid</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Iron</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah57"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="58-Al-Mujadila" href="/v58">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          58
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Mujadila</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Pleading Woman</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah58"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="59-Al-Hashr" href="/v59">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          59
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Hashr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Exile</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah59"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="60-Al-Mumtahanah" href="/v60">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          60
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Mumtahanah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">She that is to be examined</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah60"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="61-As-Saf" href="/v61">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          61
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>As-Saf</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Ranks</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah61"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="62-Al-Jumu&#39;ah" href="/v62">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          62
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Jumu&#39;ah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Congregation, Friday</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah62"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="63-Al-Munafiqun" href="/v63">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          63
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Munafiqun</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Hypocrites</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah63"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="64-At-Taghabun" href="/v64">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          64
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Taghabun</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Mutual Disillusion</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah64"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="65-At-Talaq" href="/v65">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          65
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Talaq</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Divorce</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah65"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="66-At-Tahrim" href="/v66">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          66
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Tahrim</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Prohibition</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah66"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="67-Al-Mulk" href="/v67">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          67
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Mulk</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Sovereignty</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah67"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="68-Al-Qalam" href="/v68">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          68
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Qalam</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Pen</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah68"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="69-Al-Haqqah" href="/v69">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          69
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Haqqah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Reality</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah69"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="70-Al-Ma&#39;arij" href="/v70">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          70
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ma&#39;arij</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Ascending Stairways</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah70"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="71-Nuh" href="/v71">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          71
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Nuh</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Noah</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah71"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="72-Al-Jinn" href="/v72">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          72
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Jinn</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Jinn</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah72"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="73-Al-Muzzammil" href="/v73">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          73
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Muzzammil</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Enshrouded One</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah73"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="74-Al-Muddaththir" href="/v74">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          74
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Muddaththir</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Cloaked One</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah74"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="75-Al-Qiyamah" href="/v75">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          75
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Qiyamah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Resurrection</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah75"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="76-Al-Insan" href="/v76">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          76
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Insan</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Man</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah76"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="77-Al-Mursalat" href="/v77">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          77
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Mursalat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Emissaries</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah77"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="78-An-Naba" href="/v78">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          78
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>An-Naba</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Tidings</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah78"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="79-An-Nazi&#39;at" href="/v79">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          79
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>An-Nazi&#39;at</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Those who drag forth</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah79"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="80-&#39;Abasa" href="/v80">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          80
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>&#39;Abasa</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">He Frowned</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah80"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="81-At-Takwir" href="/v81">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          81
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Takwir</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Overthrowing</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah81"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="82-Al-Infitar" href="/v82">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          82
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Infitar</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Cleaving</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah82"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="83-Al-Mutaffifin" href="/v83">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          83
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Mutaffifin</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Defrauding</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah83"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="84-Al-Inshiqaq" href="/v84">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          84
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Inshiqaq</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Sundering</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah84"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="85-Al-Buruj" href="/v85">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          85
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Buruj</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Mansions of the Stars</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah85"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="86-At-Tariq" href="/v86">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          86
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Tariq</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Nightcommer</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah86"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="87-Al-A&#39;la" href="/v87">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          87
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-A&#39;la</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Most High</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah87"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="88-Al-Ghashiyah" href="/v88">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          88
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ghashiyah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Overwhelming</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah88"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="89-Al-Fajr" href="/v89">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          89
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Fajr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Dawn</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah89"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="90-Al-Balad" href="/v90">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          90
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Balad</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The City</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah90"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="91-Ash-Shams" href="/v91">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          91
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ash-Shams</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Sun</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah91"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="92-Al-Layl" href="/v92">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          92
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Layl</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Night</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah92"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="93-Ad-Duhaa" href="/v93">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          93
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ad-Duhaa</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Morning Hours</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah93"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="94-Ash-Sharh" href="/v94">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          94
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Ash-Sharh</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Relief</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah94"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="95-At-Tin" href="/v95">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          95
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Tin</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Fig</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah95"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="96-Al-&#39;Alaq" href="/v96">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          96
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-&#39;Alaq</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Clot</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah96"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="97-Al-Qadr" href="/v97">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          97
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Qadr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Power</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah97"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="98-Al-Bayyinah" href="/v98">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          98
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Bayyinah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Clear Proof</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah98"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="99-Az-Zalzalah" href="/v99">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          99
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Az-Zalzalah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Earthquake</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah99"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="100-Al-&#39;Adiyat" href="/v100">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          100
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-&#39;Adiyat</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Courser</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah100"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="101-Al-Qari&#39;ah" href="/v101">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          101
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Qari&#39;ah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Calamity</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah101"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="102-At-Takathur" href="/v102">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          102
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>At-Takathur</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Rivalry in world increase</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah102"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="103-Al-&#39;Asr" href="/v103">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          103
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-&#39;Asr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Declining Day</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah103"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="104-Al-Humazah" href="/v104">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          104
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Humazah</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Traducer</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah104"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="105-Al-Fil" href="/v105">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          105
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Fil</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Elephant</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah105"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="106-Quraysh" href="/v106">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          106
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Quraysh</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Quraysh</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah106"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="107-Al-Ma&#39;un" href="/v107">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          107
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ma&#39;un</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Small kindnesses</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah107"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="108-Al-Kawthar" href="/v108">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          108
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Kawthar</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Abundance</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah108"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="109-Al-Kafirun" href="/v109">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          109
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Kafirun</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Disbelievers</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah109"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="110-An-Nasr" href="/v110">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          110
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>An-Nasr</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Divine Support</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah110"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="111-Al-Masad" href="/v111">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          111
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Masad</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Palm Fiber</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah111"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="112-Al-Ikhlas" href="/v112">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          112
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Ikhlas</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Sincerity</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah112"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="113-Al-Falaq" href="/v113">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          113
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>Al-Falaq</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">The Daybreak</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah113"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a><a data-controller="track" data-name="chapters" data-category="114-An-Nas" href="/v114">
+      <div class="surah-card">
+        <div class="surah-card__number">
+          114
+        </div>
+
+        <div class="surah-card__text">
+          <div class="surah-card__latin">
+            <h5>An-Nas</h5>
+            <div class="ayah-number-wrapper">
+              <p class="english">Mankind</p>
+            </div>
+          </div>
+
+          <div class="surah-card__arabic">
+            <p>
+              <span class="icon-surah icon-surah114"></span>
+              <span class="icon-surah icon-surah-surah"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+      </div>
+
+
+      
 
   <div class="juz-section hidden" data-tab-group="home-tabs" id="juz-list">
     <div class="juz-card">

@@ -20,8 +20,14 @@
 <link href="https://cdn.qurancdn.com/assets/icons/safari-pinned-tab-9bb986c8b275684620bf32be446c9fda62508626e8944285d906ed13642e1921.svg" title="Quran.com" type="image/x-icon" rel="mask-icon" color="theme-color" />
 <link href="https://cdn.qurancdn.com/assets/icons/apple-touch-icon-ccdcf7ce609c965533799cd0c53919a65f02265d68bf08d40a8a7f34dc2c2e3b.png" title="Quran.com" type="image/png" rel="apple-touch-icon" color="theme-color" />
 
+<!-- Boostrap -->
+<!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-<title>Surah Al-Fatihah - 1-7 | Quran.com</title>
+
+<title>Surah Al-Fatihah - 1-7 | อัลกุรอาน</title>
 <meta name="description" content="Surah Al-Fatihah(الفاتحة) 1:1 In the Name of Allah—the Most Compassionate, Most Merciful.">
 <meta name="keywords" content="the opener, سورة الفاتحة, সূচনা, pembukaan, l&#39;aprente, അല്‍ഫാതിഹ, pristup, de opening, открывающая коран, la apertura, öppningen, 开端章, l&#39;ouverture, کھولنے والی, kitabı açan, fâtiha, القران الكريم, القرآن, قران, quran">
 <link rel="canonical" href="https://quran.com/al-fatihah?locale=th&amp;font=v1&amp;reading=false&amp;translations=131%2C20">
@@ -53,7 +59,7 @@
 <meta name="twitter:site" content="@Quran">
 <meta name="twitter:creator" content="@Quran">
 
-<meta name="theme-color" content="#00acc1">
+<meta name="theme-color" content="#B9F9C1"> <!--B9F9C1 00acc1-->
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Quran.com">
@@ -63,11 +69,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="application-name" content="Quran.com" />
 <meta name="msapplication-TileImage" content="https://cdn.qurancdn.com/assets/icons/apple-touch-icon-ccdcf7ce609c965533799cd0c53919a65f02265d68bf08d40a8a7f34dc2c2e3b.png">
-<meta name="msapplication-TileColor" content="#00acc1">
+<meta name="msapplication-TileColor" content="#B9F9C1">
 <meta name="msapplication-config" content="http://quran.com/static/msapplication_config.xml">
 <meta name="msapplication-tooltip" content="Quran.com" />
 <meta name="msapplication-starturl" content="https://www.quran.com" />
-<meta name="msapplication-navbutton-color" content="#00acc1" />
+<meta name="msapplication-navbutton-color" content="#B9F9C1" />
 <meta name="rating" content="General">
 <meta name="robots" content="all, index, follow, archive">
 <meta name="revisit-after" content="30 days">
@@ -131,8 +137,8 @@
         <img id="site-menu--trigger" class="sidebar-btns" alt="quran.com menu" src="https://cdn.qurancdn.com/assets/icon/hamburger-b328bd84b5f4e6621c239ea54e3511632642ebf56db943aa8b04cce4af6e6f7d.svg" />
       </div>
 
-      <a class="logo" href="/">
-        <strong style="font-weight: bold">Quran</strong>.com
+      <a class="logo" href="/home/index">
+        <strong style="font-weight: bold">อัลกุรอาน</strong>
 </a>    </div>
 
       <div class="header-input">
@@ -362,7 +368,7 @@
             </p>
 </a>        </div>
 
-        <div class="menu-item">
+        <!-- <div class="menu-item"> 
           <a class="menu-item__link" href="/">
             <span class="quran-icon icon-home"></span>
             <p class="text text--grey text--large text--semibold">
@@ -458,7 +464,7 @@
           <a class="menu-item__link" href="https://quranreflect.com" target="_blank" rel="noopener">
             <p class="text text--grey text--large text--semibold">QuranReflect.com</p>
           </a>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -2483,7 +2489,7 @@
         </div>
       </div>
     </div>
-    <div class="nav-tabs">
+    <!-- <div class="nav-tabs"> 
       <div class="tabs" data-controller="tabs">
         <a class="tabs__item translation-tab tabs__item--selected"
            href="/1/1-7?reading=false"
@@ -2512,7 +2518,7 @@
       <button id="open-settings" class="btn btn--darkgrey btn--settings sidebar-btns">
         <span class='th sidebar-btns'>การตั้งค่า</span>
       </button>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -2603,6 +2609,31 @@
         <i class="quran-icon icon-qr-2" style="font-size: 26px"></i>
       </a>
 
+      <!-- Boostrap Modal for Short Note -->
+        <!-- Javascript widget -->
+        <!-- Modal -->
+       <br><button class="btn btn-primary" data-bs-target="#showNote" data-bs-toggle="modal">โน๊ต</button><br>
+
+        <div class="modal fade" id="showNote">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="text-white">
+                <div class="modal-header">
+                <h5 align="center">โน๊ต (1:1) </h5>
+                </div>  
+                <div class="modal-body">
+                  <label for="note" class="form-label">โน๊ตเลย!</label>
+                  <input type="text" class="form-control" id="note">
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">บันทึก</button>
+                  <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <div class="actions-menu">
         <a class="translation__icon"
            id=open-actions
@@ -2633,14 +2664,14 @@
               <span class='th '>คัดลอก</span>
             </a>
 
-            <a class="translation__icon"
+            <!-- <a class="translation__icon" 
                data-controller="ajax-modal"
                data-url="/advance_copy/copy_options?font=v1&amp;translations=131%2C20&amp;verse=1:1&amp;chapter=1&amp;range=1-7"
                data-controller="track"
                data-name='ayah-action'>
               <i class="quran-icon icon-copy"></i>
               <span class='th '>Advanced Copy</span>
-            </a>
+            </a> -->
 
             <a class="translation__icon"
                data-controller="ajax-modal"
@@ -2652,7 +2683,7 @@
               <span class='th '>ตัฟซีร</span>
             </a>
 
-            <a class="translation__icon"
+            <!-- <a class="translation__icon" 
                data-controller="ajax-modal"
                data-url="/verses/1/share"
                data-controller="track"
@@ -2660,7 +2691,7 @@
                data-category="share-list">
               <i class="quran-icon icon-share-2"></i>
               <span class='th '>แชร์อายะห์นี้</span>
-            </a>
+            </a> -->
 
             <a class="translation__icon"
                href="https://quranreflect.com/1/1?feed=true"
@@ -2761,9 +2792,10 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    In the Name of Allah—the Most Compassionate, Most Merciful.
+  ด้วยพระนามของอัลลอฮฺ ผู้ทรงกรุณาปราณี ผู้ทรงเมตตาเสมอ
   </p>
-  <p class="text text--green text--medium text--regular english">
+
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -2777,7 +2809,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p>-->
   <div id="footnotes"></div>
 </div>
 
@@ -2980,9 +3012,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    All praise is for Allah—Lord of all worlds,<sup foot_note=76373>1</sup>
+  การสรรเสริญทั้งหลายนั้น เป็นสิทธิของอัลลอฮฺผู้เป็นพระเจ้าแห่งสากลโลก <!-- เลขยกกำลัง <sup foot_note=76373>1</sup> -->
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -2996,7 +3028,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p> -->
   <div id="footnotes"></div>
 </div>
 
@@ -3175,9 +3207,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    the Most Compassionate, Most Merciful,
+  ผู้ทรงกรุณาปราณี ผู้ทรงเมตตาเสมอ
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -3191,7 +3223,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p> -->
   <div id="footnotes"></div>
 </div>
 
@@ -3382,9 +3414,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    Master of the Day of Judgment.
+   ผู้ทรงอภิสิทธิ์แห่งวันตอบแทน
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -3398,7 +3430,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p>-->
   <div id="footnotes"></div>
 </div>
 
@@ -3601,9 +3633,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    You ˹alone˺ we worship and You ˹alone˺ we ask for help.
+  เฉพาะพระองค์เท่านั้นที่พวกข้าพระองค์เคารพอิบาดะฮฺ และเฉพาะพระองค์เท่านั้นที่พวกข้าพระองค์ขอความช่วยเหลือ
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -3617,7 +3649,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p> -->
   <div id="footnotes"></div>
 </div>
 
@@ -3808,9 +3840,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    Guide us along the Straight Path,
+  ขอพระองค์ทรงแนะนำพวกข้าพระองค์ซึ่งทางอันเที่ยงตรง
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -3824,7 +3856,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p> -->
   <div id="footnotes"></div>
 </div>
 
@@ -4087,9 +4119,9 @@
       data-resource-content-id='131'
      data-controller="translation">
   <p class="text text--grey text--medium text--regular translation">
-    the Path of those You have blessed—not those You are displeased with, or those who are astray.<sup foot_note=76374>1</sup> 
+  (คือ) ทางของบรรดาผู้ที่พระองค์ได้ทรงโปรดปราณแก่พวกเขา มิใช่ในทางของพวกที่ถูกกริ้ว และมิใช่ทางของพวกที่หลงผิด <!--<sup foot_note=76374>1</sup> -->
   </p>
-  <p class="text text--green text--medium text--regular english">
+  <!-- <p class="text text--green text--medium text--regular english"> 
     — Dr. Mustafa Khattab, the Clear Quran
   </p>
   <div id="footnotes"></div>
@@ -4103,7 +4135,7 @@
   </p>
   <p class="text text--green text--medium text--regular english">
     — Saheeh International
-  </p>
+  </p> -->
   <div id="footnotes"></div>
 </div>
 
@@ -4271,11 +4303,11 @@
 
 </main>
 
-<div class="footer">
+<div class="footer"> 
   <div class="container">
     <div class="content-page">
       <div class="footer-links">
-        <div>
+        <!--<div>
           <h5><span class='th '>นำทาง</span></h5>
           <a href="/about-us"><span class='th '>เกี่ยวกับเรา</span></a>
           <a href="/support"><span class='th '>แนะนำติชม</span></a>
@@ -4311,10 +4343,10 @@
             &copy; 2021
             <a href="https://quran.com" style="display: inline;" >Quran.com</a>. <span class='th '>สงวนลิขสิทธิ์</span>
           </p>
-        </div>
+        </div>-->
       </div>
     </div>
-  </div>
+  </div> 
 </div>
 
 </body>

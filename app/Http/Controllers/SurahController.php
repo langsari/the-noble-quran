@@ -276,76 +276,76 @@ class SurahController extends Controller
     public function ninety(){
         return view('surah.90');
     }
-    public function eightnine(){
+    public function ninetyone(){
         return view('surah.91');
     }
-    public function eightnine(){
+    public function ninetytwo(){
         return view('surah.92');
     }
-    public function eightnine(){
+    public function ninetythree(){
         return view('surah.93');
     }
-    public function eightnine(){
+    public function ninetyfour(){
         return view('surah.94');
     }
-    public function eightnine(){
+    public function ninetyfive(){
         return view('surah.95');
     }
-    public function eightnine(){
+    public function ninetysix(){
         return view('surah.96');
     }
-    public function eightnine(){
+    public function ninetyseven(){
         return view('surah.97');
     }
-    public function eightnine(){
+    public function ninetyeight(){
         return view('surah.98');
     }
-    public function eightnine(){
+    public function ninetynine(){
         return view('surah.99');
     }
-    public function eightnine(){
+    public function onehundred(){
         return view('surah.100');
     }
-    public function eightnine(){
+    public function onehundredone(){
         return view('surah.101');
     }
-    public function eightnine(){
+    public function onehundredtwo(){
         return view('surah.102');
     }
-    public function eightnine(){
+    public function onehundredthree(){
         return view('surah.103');
     }
-    public function eightnine(){
+    public function onehundredfour(){
         return view('surah.104');
     }
-    public function eightnine(){
+    public function onehundredfive(){
         return view('surah.105');
     }
-    public function eightnine(){
+    public function onehundredsix(){
         return view('surah.106');
     }
-    public function eightnine(){
+    public function onehundredseven(){
         return view('surah.107');
     }
-    public function eightnine(){
+    public function onehundredeight(){
         return view('surah.108');
     }
-    public function eightnine(){
+    public function onehundrednine(){
         return view('surah.109');
     }
-    public function eightnine(){
+    public function onehundredten(){
         return view('surah.110');
     }
-    public function eightnine(){
+    public function onehundredeleven(){
         return view('surah.111');
     }
-    public function eightnine(){
+    public function onehundredtwelve(){
         return view('surah.112');
     }
-    public function eightnine(){
+    public function onehundredthirteen(){
         return view('surah.113');
     }
-    public function eightnine(){
+    public function onehundredfourteen(){
         return view('surah.114');
     }
 
