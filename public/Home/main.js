@@ -8,10 +8,7 @@ let exploreBtn = document.querySelector('.title .btn'),
 })
 
 
-let fixedNav = document.querySelector('.header');
-window.addEventListener("scroll",()=>{
-    window.scrollY > 100 ? fixedNav.classList.add('active') : fixedNav.classList.remove('active');
-})
+
 //Hadith Chapter
 let hadithContainer = document.querySelector('.hadithContainer'),
     next = document.querySelector('.buttons .next'),

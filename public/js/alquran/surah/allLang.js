@@ -4,9 +4,44 @@ let newUrl = url.split('/');
 let id = newUrl[newUrl.length - 1]
 // console.log(id)
 
+// ############################## Start GET BookMark Of Specific surah From local storage ##############################
+
+
+let bookmarkli = document.getElementById('bookmark')
+function getBookmark()
+{
+    let mybookMark1 = JSON.parse(localStorage.getItem('quran-bookmark-store'))
+    let bb = "";
+
+    mybookMark1.forEach(b => {
+        let idd = b.id // get id of surah from localstorage
+        let neww = idd.split(':');
+        // console.log(neww[0]);// print id of surah from localstorage
+
+        let idaftersplit = id.split('#')// get id of surah from url
+        // console.log(idaftersplit[0]);// get id of surah from url
+
+        if (idaftersplit[0] == neww[0]) {
+            bb += `
+                <a class="btn btn-danger btn-sm my-2" href='#${neww[1]}' >Ayah : ${neww[1]}<a>
+            `
+        }
+
+
+    })
+    if (bb == "") {
+        bb = '<h6 aletr>No Bookmark yet</h6>'
+    }
+
+    bookmarkli.innerHTML = bb;
+}
+getBookmark()
+
+
+// ############################## End GET BookMark Of Specific surah From local storage ##############################
+
+
 //############################## Start make Bookmark ##############################///
-
-
 
     let mybookMark = JSON.parse(localStorage.getItem('quran-bookmark-store')) // fetch all bookmark in the localstorage
 
@@ -31,6 +66,7 @@ let id = newUrl[newUrl.length - 1]
                         mybookMark.splice(book.id, 1);
                         localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
                         alert('Deleted')
+                        getBookmark()
                     }
                 })
 
@@ -41,6 +77,7 @@ let id = newUrl[newUrl.length - 1]
                     mybookMark.push(myBook)
                     localStorage.setItem('quran-bookmark-store', JSON.stringify(mybookMark))
                     alert('Bookmark Added Successfully')
+                    getBookmark()
                 }else{  // if  doblecate bookmark it will fail
                 }
 
@@ -53,40 +90,6 @@ let id = newUrl[newUrl.length - 1]
     setTimeout(bookfun, 500)
 
 //############################## End make Bookmark ##############################///
-
-
-
-
-// ############################## Start GET BookMark Of Specific surah From local storage ##############################
-
-            let bookmarkli = document.getElementById('bookmark')
-            let mybookMark1 = JSON.parse(localStorage.getItem('quran-bookmark-store'))
-            let bb = "";
-
-            mybookMark.forEach(b => {
-                let idd = b.id // get id of surah from localstorage
-                let neww = idd.split(':');
-                console.log(neww[0]);// print id of surah from localstorage
-
-                let idaftersplit = id.split('#')// get id of surah from url
-                console.log(idaftersplit[0]);// get id of surah from url
-
-                if (idaftersplit[0] == neww[0]) {
-                    bb += `
-                        <a class="btn btn-danger btn-sm my-2" href='#${neww[1]}' >Ayah : ${neww[1]}<a>
-                    `
-                }
-
-
-            })
-            if (bb == "") {
-                bb = '<h6 aletr>No Bookmark yet</h6>'
-            }
-
-            bookmarkli.innerHTML = bb;
-
-// ############################## End GET BookMark Of Specific surah From local storage ##############################
-
 
 
 // ############################## Start Script searh surah ##############################
@@ -117,7 +120,7 @@ let id = newUrl[newUrl.length - 1]
 
         })
 
-        console.log(matches);
+        // console.log(matches);
 
         matches.forEach(sss => {
 
@@ -137,10 +140,6 @@ let id = newUrl[newUrl.length - 1]
 
     input_search_surah.addEventListener('input', () => searchSurah(input_search_surah.value));
     // ##############################  End Script searh surah ##############################
-
-
-
-
 
 
     ///##################### Start Add Note #####################///

@@ -1,4 +1,5 @@
 
+let fixedNav = document.querySelector('.header');
 
 let scrollBtn = document.querySelector('.scrollBtn');
 window.addEventListener("scroll",()=>{

@@ -114,4 +114,3 @@
         // ##############################  End Script searh surah ##############################
 
 
-        let fixedNav = document.querySelector('.header');

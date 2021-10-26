@@ -18,60 +18,60 @@
         let idaftersplit = id.split('#')
 
 
-          function getSurah() {
-              fetch(`https://api.quran.sutanlab.id/surah/${id}`)
-                  .then(res => res.json())
-                  .then(data => {
+            function getSurah() {
+                fetch(`https://api.quran.sutanlab.id/surah/${id}`)
+                    .then(res => res.json())
+                    .then(data => {
 
-                      let verses = data.data.verses;
-                      console.log(data)
+                        let verses = data.data.verses;
+                    //   console.log(data)
 
-                      //surah info
-                      surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
-                          "</h2>";
-                      surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
-                          "</h2>";
-                      surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
-                      numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
-                          "</span></h5>";
-                      revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data
-                          .revelation.arab + "</span></h5>";
-                      let i = 1;
-                      let j = 500;
+                        //surah info
+                        surah_title.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                            "</h2>";
+                        surah_name.innerHTML = "<h2>" + data.data.name.translation.en + " - " + data.data.name.long +
+                            "</h2>";
+                        surah_number.innerHTML = "<h5>Surah Number :<span> " + data.data.number + "</span></h5>";
+                        numberOfVerses.innerHTML = "<h5>Number Of Verses :<span> " + data.data.numberOfVerses +
+                            "</span></h5>";
+                        revelation.innerHTML = "<h5>Revelation Place :<span> " + data.data.revelation.en + " - " + data.data
+                            .revelation.arab + "</span></h5>";
+                        let i = 1;
+                        let j = 500;
 
 
-                      let ayats = "";
-                      for (let index = 0; index < verses.length; index++) {
+                        let ayats = "";
+                        for (let index = 0; index < verses.length; index++) {
 
+                            //  Start Git all vesres of surah for read only
+                            all_sura +=
+                                `
+                        <hr id="${j}">
+                        <div class="hover-change-color" >
+                            <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
+                            </span>
+                            <br>
+                            <span class="text-right">
+                            ${verses[index].text.arab}
+                        </div>
+                        `;
                           //  Start Git all vesres of surah for read only
-                          all_sura +=
-                              `
-                      <hr id="${j}">
-                      <div class="hover-change-color" >
-                          <span class=" badge badge-pill badge-success" style="font-size: 1rem;" > ${new Intl.NumberFormat('ar-EG').format(i)}</span>
-                          </span>
-                          <br>
-                          <span class="text-right">
-                          ${verses[index].text.arab}
-                      </div>
-                      `;
-                          //  Start Git all vesres of surah for read only
 
 
-                          //  Start Move to specific Ayat in read with translation
-                          selec += `<a class="btn  dropdown-item" href="#${i}"><h4>${i}</h4></a>`
-                          //  End Move to specific Ayat in read with translation
+                            //  Start Move to specific Ayat in read with translation
+                            selec += `<a class="btn  dropdown-item" href="#${i}"><h4>${i}</h4></a>`
+                            //  End Move to specific Ayat in read with translation
 
 
-                          //  Start Move to specific Ayat in read with translation
-                          seleca += `<a class="btn  dropdown-item" href="#${j}"><h4>${i}</h4></a>`
-                          //  End Move to specific Ayat in only
+                            //  Start Move to specific Ayat in read with translation
+                            seleca += `<a class="btn  dropdown-item" href="#${j}"><h4>${i}</h4></a>`
+                            //  End Move to specific Ayat in only
 
 
-                          //  Start Get all vesres With transilation
+                            //  Start Get all vesres With transilation
 
-                          ayats +=
-                              `
+                            ayats +=
+                                `
 
                             <div class="hover-change-color container box-shadow my-3 card text-center" id="${i}" >
                                 <div class=" card-body ">
@@ -113,26 +113,26 @@
 
                                 </div>
                             </div>
-              `;
-                          //  End Get all vesres of surah With transilation
+                `;
+                            //  End Get all vesres of surah With transilation
 
-                          i++;
-                          j++;
-
-
-                      }
-                      ayatList.innerHTML = ayats;
-
-                      surah_read.innerHTML = all_sura
-                      select.innerHTML = selec
-                      selecAll.innerHTML = seleca
+                            i++;
+                            j++;
 
 
+                        }
+                        ayatList.innerHTML = ayats;
 
-                  })
-          }
+                        surah_read.innerHTML = all_sura
+                        select.innerHTML = selec
+                        selecAll.innerHTML = seleca
 
-          getSurah()
+
+
+                    })
+            }
+
+            getSurah()
 
           /// #####################  END  ##################### ///
 
