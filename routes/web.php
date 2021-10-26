@@ -2,7 +2,6 @@
 
 use App\http\Controllers\HomeController;
 use App\http\Controllers\SurahController;
-use App\http\Controllers\VideoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home/index',[HomeController::class,'index']);
+Route::get('quran/home', [QuransController::class, 'homepage'])->name('homepage');
 
+Route::get('home/index',[HomeController::class,'index']);
 Route::get('surah/1',[SurahController::class,'one']);
 Route::get('surah/2',[SurahController::class,'two']);
 Route::get('surah/3',[SurahController::class,'three']);
@@ -118,7 +118,7 @@ Route::get('surah/95',[SurahController::class,'ninetyfive']);
 Route::get('surah/96',[SurahController::class,'ninetysix']);
 Route::get('surah/97',[SurahController::class,'ninetyseven']);
 Route::get('surah/98',[SurahController::class,'ninetyeight']);
-Route::get('surah/99',[SurahController::class,'ninetynine']);
+Route::get('surah/99',[SurahController::class,'fortynine']);
 Route::get('surah/100',[SurahController::class,'onehundred']);
 Route::get('surah/101',[SurahController::class,'onehundredone']);
 Route::get('surah/102',[SurahController::class,'onehundredtwo']);
@@ -134,44 +134,3 @@ Route::get('surah/111',[SurahController::class,'onehundredeleven']);
 Route::get('surah/112',[SurahController::class,'onehundredtwelve']);
 Route::get('surah/113',[SurahController::class,'onehundredthirteen']);
 Route::get('surah/114',[SurahController::class,'onehundredfourteen']);
-
-
-//video
-Route::get('/v1',[VideoController::class,'v1']);
-Route::get('/v2',[VideoController::class,'v2']);
-Route::get('/v3',[VideoController::class,'v3']);
-Route::get('/v4',[VideoController::class,'v4']);
-Route::get('/v5',[VideoController::class,'v5']);
-Route::get('/v6',[VideoController::class,'v6']);
-Route::get('/v7',[VideoController::class,'v7']);
-Route::get('/v8',[VideoController::class,'v8']);
-Route::get('/v9',[VideoController::class,'v9']);
-Route::get('/v10',[VideoController::class,'v10']);
-Route::get('/v11',[VideoController::class,'v11']);
-Route::get('/v12',[VideoController::class,'v12']);
-Route::get('/v13',[VideoController::class,'v13']);
-Route::get('/v14',[VideoController::class,'v14']);
-Route::get('/v15',[VideoController::class,'v15']);
-Route::get('/v16',[VideoController::class,'v16']);
-Route::get('/v17',[VideoController::class,'v17']);
-Route::get('/v18',[VideoController::class,'v18']);
-Route::get('/v19',[VideoController::class,'v19']);
-Route::get('/v20',[VideoController::class,'v20']);
-Route::get('/v21',[VideoController::class,'v21']);
-Route::get('/v22',[VideoController::class,'v22']);
-Route::get('/v23',[VideoController::class,'v23']);
-Route::get('/v24',[VideoController::class,'v24']);
-Route::get('/v25',[VideoController::class,'v25']);
-Route::get('/v26',[VideoController::class,'v26']);
-Route::get('/v27',[VideoController::class,'v27']);
-Route::get('/v28',[VideoController::class,'v28']);
-
-Route::get('/v71',[VideoController::class,'v71']);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

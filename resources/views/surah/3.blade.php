@@ -131,8 +131,8 @@
         <img id="site-menu--trigger" class="sidebar-btns" alt="quran.com menu" src="https://cdn.qurancdn.com/assets/icon/hamburger-b328bd84b5f4e6621c239ea54e3511632642ebf56db943aa8b04cce4af6e6f7d.svg" />
       </div>
 
-      <a class="logo" href="/home/index">
-        <strong style="font-weight: bold">อัลกุรอาน</strong>
+      <a class="logo" href="/">
+        <strong style="font-weight: bold">Quran</strong>.com
 </a>    </div>
 
       <div class="header-input">
