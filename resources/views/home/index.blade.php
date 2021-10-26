@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="sFFJpHgL1v/HlC/CmMnZojEtpKUAQFKv2EGEIDfaXbfedLcjxpdRyfy3Ox6TBbAFuBYCWkDqakqVyo9mOyRJsw==" />
+<meta name="csrf-token" content="E7/noCRUez2B2VYdbQGWXCvmM3VyxIGQwbCpiCo0mM/DvFc349i1y/PzjL6GjEkcn3qB89MQes3/bApmvm2tWQ==" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="th">
 <meta name="distribution" content="Global"/>
 
 <link href="https://cdn.qurancdn.com" rel="preconnect" crossorigin>
@@ -21,74 +20,11 @@
 <link href="https://cdn.qurancdn.com/assets/icons/apple-touch-icon-ccdcf7ce609c965533799cd0c53919a65f02265d68bf08d40a8a7f34dc2c2e3b.png" title="Quran.com" type="image/png" rel="apple-touch-icon" color="theme-color" />
 
 
-<title>คัมภีร์อัลกุรอาน | Quran.th</title>
+<title>อัลกุรอาน | The-noble-quran</title>
 <meta name="description" content="The Quran and the explanation of the Quran in many language, available in a simple and easy application">
 <meta name="keywords" content="القران الكريم, قران كريم, القرآن, قران, quran, qur&#39;an, koran, kareem, surah, yasin, yaseen, kahf, mulk, rahman, muslim, islam, allah">
-<link rel="canonical" href="https://quran.com/?locale=en">
-<meta property="og:title" content="The Noble Quran">
-<meta property="og:description" content="The Quran and the explanation of the Quran in many language, available in a simple and easy application">
-<meta property="og:url" content="https://quran.com/?locale=en">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://cdn.qurancdn.com/assets/thumbnail-ec80239763fa45a73aaa6e10c68709faaf0636e8c4df8376503879093e204a5f.png">
-<meta property="og:image:alt" content="Quran.com">
-<meta property="al:web:url" content="https://quran.com/?locale=en">
-<meta property="al:ios:url" content="https://itunes.apple.com/us/app/quran-by-quran.com-qran/id1118663303">
-<meta property="al:ios:app_store_id" content="1118663303">
-<meta property="al:ios:app_name" content="Quran - by Quran.com - قرآن">
-<meta property="al:android:url" content="https://play.google.com/store/apps/details?id=com.quran.labs.androidquran">
-<meta property="al:android:app_name" content="Quran for Android">
-<meta property="al:android:package" content="com.quran.labs.androidquran">
-<meta name="twitter:creator" content="@app_quran">
-<meta name="twitter:site" content="@app_auran">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="fb:app_id" content="342185219529773">
-<meta property="fb:pages" content="603289706669016">
-<meta property="fb:article_style" content="quran">
-<meta name="image" content="https://cdn.qurancdn.com/assets/thumbnail-ec80239763fa45a73aaa6e10c68709faaf0636e8c4df8376503879093e204a5f.png">
-<meta name="apple-itunes-app" content="app-id=1118663303">
-<meta name="google" content="notranslate" />
+<link rel="canonical" href="https://quran.com/?locale=th">
 
-<meta property="og:rich_attachment"     content="true">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@Quran">
-<meta name="twitter:creator" content="@Quran">
-
-<meta name="theme-color" content="#00acc1">   
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Quran.com">
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="format-detection" content="telephone=no">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="application-name" content="Quran.com" />
-<meta name="msapplication-TileImage" content="https://cdn.qurancdn.com/assets/icons/apple-touch-icon-ccdcf7ce609c965533799cd0c53919a65f02265d68bf08d40a8a7f34dc2c2e3b.png">
-<meta name="msapplication-TileColor" content="#00acc1">
-<meta name="msapplication-config" content="http://quran.com/static/msapplication_config.xml">
-<meta name="msapplication-tooltip" content="Quran.com" />
-<meta name="msapplication-starturl" content="https://www.quran.com" />
-<meta name="msapplication-navbutton-color" content="#00acc1" />
-<meta name="rating" content="General">
-<meta name="robots" content="all, index, follow, archive">
-<meta name="revisit-after" content="30 days">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8496014-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-8496014-1');
-    document.addEventListener('turbolinks:load', function (event) {
-        if (typeof gtag === 'function') {
-            gtag('config', 'UA-8496014-1', {
-                'page_location': event.data.url
-            });
-        }
-    });
-</script>
 
 <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6%2CPromise%2Csmoothscroll%2Cdefault%2Ces2015%2Ces2018%2Cfetch%2CMutationObserver%2CIntersectionObserver%2CIntersectionObserverEntry&flags=gated"></script>
 
@@ -104,14 +40,14 @@
 
   <link rel="stylesheet" media="all" href="https://cdn.qurancdn.com/packs/css/application-e8385bfc.chunk.css" data-turbolinks-track="reload" />
   <link rel="stylesheet" media="all" href="https://cdn.qurancdn.com/assets/font-faces-ce31844729f73b6891355c245709cf3751c315aeb572c074ac6445ad0be7dd4b.css" data-turbolinks-track="reload" />
-  <script src="https://cdn.qurancdn.com/packs/js/runtime~application-f848c1e8866281756c01.js" data-turbolinks-track="reload" defer="defer"></script>
-<script src="https://cdn.qurancdn.com/packs/js/vendors~application-3bb3a9d354456a43d3b3.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
-<script src="https://cdn.qurancdn.com/packs/js/application-24ae2e4b816b6088c062.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
+  <script src="https://cdn.qurancdn.com/packs/js/runtime~application-6618d7403728137c7de0.js" data-turbolinks-track="reload" defer="defer"></script>
+<script src="https://cdn.qurancdn.com/packs/js/vendors~application-d509465f261f60d4ab04.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
+<script src="https://cdn.qurancdn.com/packs/js/application-0b6a1a927ed00fbe424c.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
 </head>
 
-<div class="home show lang-en" id="home-show" data-controller="setting spinner">
+<body class="home show lang-th" id="home-show" data-controller="setting spinner">
 <script>
-  window.locale = 'en';
+  window.locale = 'th';
 </script>
 <noscript>
   <div class="row">
@@ -128,20 +64,20 @@
     <div class="header-inner__firstpart">
       <div class="header-inner__firstpart__menu">
         <!-- TODO add hamburger to fonts -->
-        <!-- <img id="site-menu--trigger" class="sidebar-btns" alt="quran.com menu" src="https://cdn.qurancdn.com/assets/icon/hamburger-b328bd84b5f4e6621c239ea54e3511632642ebf56db943aa8b04cce4af6e6f7d.svg" /> -->
+        <img id="site-menu--trigger" class="sidebar-btns" alt="quran.com menu" src="https://cdn.qurancdn.com/assets/icon/hamburger-b328bd84b5f4e6621c239ea54e3511632642ebf56db943aa8b04cce4af6e6f7d.svg" />
       </div>
 
       <a class="logo" href="/">
-        <strong style="font-weight: bold">Quran</strong>.Th <!-- logo quran.Th -->
+        <strong style="font-weight: bold">The-Noble-Quran</strong>
 </a>    </div>
 
 
-    <!-- <div class="header-theme-switch"> 
+    <div class="header-theme-switch">
       <div class="theme-language">
         <div class="language-wrapper" data-controller="choose-locales">
   <select class="language" name="locale" id="language">
       <option value="en"
-              selected>
+              >
         English
       </option>
       <option value="ur"
@@ -189,7 +125,7 @@
         Shqip
       </option>
       <option value="th"
-              >
+              selected>
         ภาษาไทย
       </option>
       <option value="tr"
@@ -206,7 +142,7 @@
       </option>
   </select>
 </div>
--->
+
 <div class="theme-switch" data-controller="theme">
   <div class="theme-switch__buttons">
     <a class="theme-switch__button dark" data-theme="dark"></a>
@@ -214,7 +150,7 @@
   </div>
 
   <div class="theme-switch__labels">
-    <p class="theme-switch__label">โหมด</p>
+    <p class="theme-switch__label">Mode</p>
   </div>
 </div>
 
@@ -223,9 +159,9 @@
   </div>
 </div>
 
-<!-- <div class="menus hidden" id=menus-wrapper> -->
+<div class="menus hidden" id=menus-wrapper>
   
-<!--  
+
   <div class="menus__right-tab hidden side-menu"
        data-controller="menu"
        data-trigger="#site-menu--trigger"
@@ -240,7 +176,7 @@
         <div class="language-wrapper" data-controller="choose-locales">
   <select class="language" name="locale" id="language">
       <option value="en"
-              selected>
+              >
         English
       </option>
       <option value="ur"
@@ -288,7 +224,7 @@
         Shqip
       </option>
       <option value="th"
-              >
+              selected>
         ภาษาไทย
       </option>
       <option value="tr"
@@ -319,30 +255,75 @@
 
       </div>
 
+      <div class="site-menu__items">
+        <div class="menu-item d-none" data-controller="percentage-show" data-percentage="2">
+          <a class="menu-item__link" data-controller="track" data-name="Clicked" data-action="Clicked" data-category="next.quran.com" href="https://next.quran.com">
+            <span class="">
+              <img width="22" src="https://cdn.qurancdn.com/assets/sparkle-c5c6a2ac2b7aa7ed2218e4f2d587835f51ea9b299e11b4168aac9cadd24ac664.svg" />
+            </span>
+            <p class="text text--grey text--large text--semibold">
+              Try The New Website!
+            </p>
+</a>        </div>
+
+        <div class="menu-item">
+          <a class="menu-item__link" href="/">
+            <span class="quran-icon icon-home"></span>
+            <p class="text text--grey text--large text--semibold">
+              <span class='th '>หน้าหลัก</span>
+            </p>
+</a>        </div>
+
+              <div class="menu-item">
+          <a class="menu-item__link" href="/about-us">
+            <span class="quran-icon icon-about"></span>
+            <p class="text text--grey text--large text--semibold">
+              <span class='th '>เกี่ยวกับเรา</span>
+            </p>
+</a>        </div>
+
+        <div class="menu-item">
+          <a class="menu-item__link" href="/support">
+            <span class="quran-icon icon-help"></span>
+            <p class="text text--grey text--large text--semibold">
+              <span class='th '>แนะนำติชม</span>
+            </p>
+</a>        </div>
+
+      </div>
+
+      <div class="site-menu__sites">
+        <p class="text text--large2 text--black text--semibold">
+          <span class='th '>เว็บไซต์ที่เกี่ยวข้อง</span>
+        </p>
+
+       
+      </div>
+
     </div>
   </div>
 </div>
--->
 
-    <!-- ส่วนของหน้าหลัก -->
+
+
 <main>
-    <!-- ส่วนของรูปภาพกุรอาน -->
+
   <div class="container content-page">
   <div class="content-page__center col">
     <img class="quran-logo" alt="quran.com logo" src="https://cdn.qurancdn.com/assets/quran-logo-f5d0f128f5aa2a1949a3157d96bbd04a184e4a4ee0e05d464a3f2ae8d0bdcbdf.png" />
-    <!-- ส่วนของคำใต้รูปภาพกุรอาน -->
+
     <h1 class="green space-y-32">
-      <span class='en '>อัลกุรอาน</span>
+      <span class='th '>อัลกุรอาน</span>
     </h1>
 
     <div class="space-y-8">
       <div class="input-wrapper large">
-    <!-- ส่วนของค้นหา -->
+        
 <form action="/search" data-controller="search-form" data-expand=>
   <input type="search"
          name="query"
          value=""
-         placeholder="ค้นหา &quot;Al-Qiyamah&quot;"
+         placeholder="ค้นหา &quot;นุห์&quot;"
          autocapitalize="none"
          autocomplete="off"
          autocorrect="off"
@@ -359,28 +340,28 @@
       </div>
     </div>
   </div>
-    <!--  
+
   <div class="container space-y-32">
   <p class="no-margin">
-    <span class='en '>Popular Searches</span>
+    <span class='th '>คำค้นหายอดนิยม</span>
   </p>
 
   <div class="popular-searches">
     <div>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/ayatul-kursi" href="/ayatul-kursi"><span class='en '>Ayatul Kursi</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-ya-sin" href="/surah-ya-sin"><span class='en '>Surah Yaseen</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-mulk" href="/surah-al-mulk"><span class='en '>Surah Al Mulk</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-ar-rahman" href="/surah-ar-rahman"><span class='en '>Surah Ar-Rahman</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-waqiah" href="/surah-al-waqiah"><span class='en '>Surah Al Waqi'ah</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-kahf" href="/surah-al-kahf"><span class='en '>Surah Al Kahf</span></a>
-        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-muzzammil" href="/surah-al-muzzammil"><span class='en '>Surah Al Muzzammil</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/ayatul-kursi" href="/ayatul-kursi"><span class='th '>อายะห์กุรซี</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-ya-sin" href="/surah-ya-sin"><span class='th '>ซูเราะห์ยาซีน</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-mulk" href="/surah-al-mulk"><span class='th '>ซูเราะห์อัลมุลกฺ</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-ar-rahman" href="/surah-ar-rahman"><span class='th '>ซูเราะห์อัรรอหฺมาน</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-waqiah" href="/surah-al-waqiah"><span class='th '>ซูเราะห์อัลวากิอะฮฺ</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-kahf" href="/surah-al-kahf"><span class='th '>ซูเราะห์อัลกะฮฺฟฺ</span></a>
+        <a class="btn btn--lightgreen btn--large" data-controller="track" data-name="popular-search" data-category="/surah-al-muzzammil" href="/surah-al-muzzammil"><span class='th '>ซูเราะห์อัลมุซซัมมิล</span></a>
     </div>
   </div>
 </div>
 
 <div class="container space-y-32 hidden" data-controller="bookmarks">
   <p class="no-margin">
-    <span class='en '>Your Bookmarks</span>
+    <span class='th '>Your Bookmarks</span>
   </p>
 
   <div class="popular-searches">
@@ -388,7 +369,7 @@
     </div>
   </div>
 </div>
--->
+
 
   <div class="container content-page__center col">
     <div class="">
@@ -400,7 +381,7 @@
            role="tab"
            aria-controls="surah-list"
            aria-selected="true">
-          <span class='en '>แสดงซูเราะฮฺ</span>
+          <span class='th '>Show Surah</span>
         </a>
 
         <a id="tab--juz"
@@ -410,21 +391,21 @@
            role="tab"
            aria-controls="juz-list"
            aria-selected="false">
-          <span class='en '>แสดงยุซ</span>
+          <span class='th '>Show Juz</span>
         </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container space-y-32"> <!-- container of surah al fatihah-->
+<div class="container space-y-32">
   <div class="surah-section" data-tab-group="home-tabs" id="surah-list">
-    <a data-controller="track" data-name="chapters" data-category="1-Al-Fatihah" href="/1">
+    <a data-controller="track" data-name="chapters" data-category="1-Al-Fatihah" href="/resources/views/surah/1.blade.php">
   <div class="surah-card">
-    <div class="surah-card__number">  <!--number of surah--> 
+    <div class="surah-card__number">
       1
     </div>
-
+ 
     <div class="surah-card__text">
       <div class="surah-card__latin">
         <h5>Al-Fatihah</h5>
@@ -433,10 +414,10 @@
         </div>
       </div>
 
-      <div class="surah-card__arabic">  <!-- การจัดแถว เป็นสองแถว-->
+      <div class="surah-card__arabic">
         <p>
-          <span class="icon-surah icon-surah1"></span>  <!-- รูปคำฟาตีฮะห ภาษาอาหรับ-->
-          <span class="icon-surah icon-surah-surah"></span> <!-- รูปคำซูเราะห์ ภาษาอาหรับ-->
+          <span class="icon-surah icon-surah1"></span>
+          <span class="icon-surah icon-surah-surah"></span>
         </p>
       </div>
     </div>
@@ -2933,7 +2914,7 @@
   <div class="juz-section hidden" data-tab-group="home-tabs" id="juz-list">
     <div class="juz-card">
   <h5 class="juz-card__title">
-    <a href="/juz/1">1</a> 
+    <a href="/juz/1">1</a>
   </h5>
 
 
@@ -5680,7 +5661,8 @@
   </div>
 </div>
 
-
 </main>
+
+
 </body>
 </html>
