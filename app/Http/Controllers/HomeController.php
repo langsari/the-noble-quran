@@ -25,7 +25,9 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
-    public function read(){
-        return view('home.index');
+    public function read()
+    {
+        return view('home');
     }
+
 }

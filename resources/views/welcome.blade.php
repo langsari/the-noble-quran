@@ -8,8 +8,8 @@
  <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
-       
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -17,8 +17,10 @@
         <!-- Styles -->
         <style>
             html, body {
+                background-image: url("https://t4.ftcdn.net/jpg/03/86/09/09/240_F_386090901_xfWY6yRfppcoP9im3LflAp3WrqdJVLzJ.jpg");no-repeat center fixed;
+                background-size: cover;
                 background-color: #87AAB0;85C9E4 96DAF5
-                color: #636b6f; 
+                color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -68,7 +70,7 @@
                 color: #fff; E9F1F6
             }
         </style>
-    
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -88,17 +90,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    อัลกุรอาน 
+                    อัลกุรอาน
 
-                
+
                 </div>
-               
-
-            
-            <a href="/home/index" class="btn btn-warning stretched-link">read</a>
 
 
-                <!-- <div class="links"> 
+
+            <a href="/home/index" class="btn btn-warning stretched-link">ถัดไป</a>
+
+
+                <!-- <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
