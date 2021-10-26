@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Quran;
 use App\QuranThai;
+use App\QuranInfo;
 
 class Qurans extends Controller
 {
@@ -31,6 +32,22 @@ class Qurans extends Controller
         $quransarab= Quran::where('SuraID',$id)->get();
         $quransthai= QuranThai::where('SuraID',$id)->get();
       return view('QuranThai',['quransthai'=>$quransthai,'quransarab'=>$quransarab,'id'=>$id]);
+
+
+      //$qurans=DB::table('quran_ar')
+       // ->where('SuraID',$id)
+       // ->get();
+        //print_r($qurans);
+       // foreach($qurans as $quran){echo $quran->AyahText."<br>";}
+
+        //return view('content',['qurans'=>$qurans]);                      
+    }
+    function QuranInfo($id)
+    {
+        //return Quran::all();
+
+       $quransinfo= QuranInfo::where('SuraID',$id)->get();
+      return view('QuranInfo',['quransinfo'=>$quransinfo,'id'=>$id]);
 
 
       //$qurans=DB::table('quran_ar')

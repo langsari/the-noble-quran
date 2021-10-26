@@ -21,6 +21,7 @@ Route::get('/', function () {
 //Route::get('ayah','Qurans@Quran');
 Route::get('/ayah/{id}','Qurans@Quran');
 Route::get('/th/{id}','Qurans@QuranThai');
+Route::get('/info/{id}','Qurans@QuranInfo');
 
 /*Route::get('/ayah/{id}','QuranAudio');*/
 

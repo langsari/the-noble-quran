@@ -51,12 +51,15 @@
 
 <div>
 
-    @foreach($qurans as $quran)
+    @foreach($quransinfo as $quran)
     
     <div class="Ayah">   
-     <li>{{$quran->AyahText}} &emsp;<span class="Number"> {{$quran->VerseID}}</span> </li>   
+     <li>{{$quran->SuraName}} &emsp;<span class="#"> จำนวนอายะห์  : {{$quran->VerseID}}</span> 
+        &emsp;<span class="#"> ประทานที่  : {{$quran->Place}}</span></li>   
+     <i><span class="#">{{$quran->Name}}</span> </li>   <br><br>
+     <i><span class="#"> {{$quran->Info}}</span> </li> 
     </div>
-    
+  
     @endforeach 
 
 </div>   

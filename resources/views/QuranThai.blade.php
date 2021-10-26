@@ -137,7 +137,8 @@
     <div class="button">
         <a href="/th/{{ $id}}"><span>Translation</span></a> &emsp; 
         <a href="/ayah/{{$id}}"><span>Reading</span></a>&emsp;
-        <span>Surah Info</span>
+        <a href="/info/{{$id}}"><span>Surah Info</span></a>&emsp;
+        {{-- <span>Surah Info</span> --}}
 
     </div>
 
