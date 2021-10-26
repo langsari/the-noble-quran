@@ -9,7 +9,7 @@ use App\QuranThai;
 class Qurans extends Controller
 {
     //
-    function Qurans($id)
+    function Quran($id)
     {
         //return Quran::all();
         $qurans= Quran::where('SuraID',$id)->get();
