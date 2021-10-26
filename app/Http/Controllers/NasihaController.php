@@ -85,7 +85,7 @@ class NasihaController extends Controller
 
         $delete = DB::table('nasihas')->where('id', $id)->delete();
         if ($delete) {
-            dd($delete);
+            // unset('public/post_img/'.$delete->img);
             return redirect()->back()->with('suc', 'Post Appeoved Successfully');
         } else {
             return redirect()->back()->with('fai', 'Post Unappeoved Successfully');
