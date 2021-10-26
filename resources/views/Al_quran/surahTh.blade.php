@@ -44,7 +44,7 @@
 
         </style>
 
-        <div class="container my-5" " >
+        <div class="container my-5" >
 
             {{-- #####################  Start Display Surah Title ##################### --}}
             <div class="row d-flex justify-content-center  my-5 ">

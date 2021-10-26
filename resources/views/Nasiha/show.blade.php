@@ -2,9 +2,20 @@
 
 
 @section('content')
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Comunity</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ asset("styles/styles_nasiha.css")}}" rel="stylesheet" />
+</head>
     {{-- <h1 class="text-center">NASIHA</h1> --}}
     <!-- Page content-->
-    <div class="container mt-5">
+    <div class="container mt-1">
         <div class="row">
             <div class="col-lg-8">
                 <!-- Post content-->
@@ -12,10 +23,10 @@
                     <!-- Post header-->
                     <header class="mb-4">
                         <!-- Post title-->
-                        <h1 class="fw-bolder mb-4">{{ $nasiha->title }}</h1>
+                        <h2 class="fw-bolder mb-4">{{ $nasiha->title }}</h2>
                         <!-- Post meta content-->
                         <div class="text-muted fst-italic mb-2">{{ $nasiha->created_at }}</div>
-                        <div class="text-muted fst-italic mb-2">{{ $nasiha->user_id }}</div>
+                        <div class="text-muted fst-italic mb-2">By : {{ $nasiha->user->name}}</div>
                     </header>
                     <!-- Preview image figure-->
                     <figure class="mb-4"><img class="img-fluid rounded"
@@ -23,7 +34,7 @@
                             alt="..." /></figure>
                     <!-- Post content-->
                     <section class="mb-5">
-                        {{ $nasiha->description }}
+                        {!! $nasiha->description !!}
                     </section>
                 </article>
                 <!-- Comments section-->

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNasihasTable extends Migration
+class CreateQuranThsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateNasihasTable extends Migration
      */
     public function up()
     {
-        Schema::create('nasihas', function (Blueprint $table) {
+        Schema::create('quran_th', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('title');
-            $table->longText('description');
-            $table->longText('img')->nullable();
-            $table->tinyInteger('approved')->default(0);
-            $table->integer('user_id')->unsigned();
             $table->timestamps();
-
+            $table->integer('surah_id');
+            $table->integer('verse_number');
+            $table->mediumText('ayah_text');
+            $table->text('audio');
         });
     }
 
@@ -32,6 +30,6 @@ class CreateNasihasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nasihas');
+        Schema::dropIfExists('quran_th');
     }
 }

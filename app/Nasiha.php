@@ -8,8 +8,14 @@ class Nasiha extends Model
 {
 
     protected $fillable = [
-        'title', 'description', 'approved','user_id',
+        'title', 'description', 'approved','user_id','img',
     ];
+
+
+    function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
 
 

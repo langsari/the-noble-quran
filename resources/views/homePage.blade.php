@@ -37,7 +37,7 @@
                     <li data-filter="hadith">HADITHS</li>
                     <li data-filter="lectures">LECTURES</li>
                     <li data-filter=""><a href="{{ route('Al_quran.home') }}">QURAN</a></li>
-                    <li data-filter=""><a href="{{ route('nasiha.index') }}">NASIHA</a></li>
+                    <li data-filter=""><a href="{{ route('nasiha.index') }}">BLOG</a></li>
                     <li data-filter="pray">PRAY TIME</li>
                     <li data-filter="footer">CONTACT US</li>
                     <!-- Authentication Links -->

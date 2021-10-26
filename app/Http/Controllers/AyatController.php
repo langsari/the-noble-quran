@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Ayat;
+use App\QuranTh;
 use App\Surah;
 use LaravelLocalization;
 use App\Verse_translate;
 use App\Tfasir;
 use Illuminate\Http\Request;
-
+use QuranSearch\Renderer\Quran;
 
 class AyatController extends Controller
 {
@@ -20,6 +21,7 @@ class AyatController extends Controller
         $surah = Surah::where('surah_num',$id)->first();
 
         $ayats = verse_translate::where('surah_id',$id)->get();
+        // $ayats = QuranTh::where('surah_id',$id)->get();
 
         $tfasir = Tfasir::select(
                                     'url_'.LaravelLocalization::getCurrentLocale().' as url',

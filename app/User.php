@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function nasiha()
+    {
+        return $this->hasMany(Nasiha::class, 'user_id');
+    }
 }

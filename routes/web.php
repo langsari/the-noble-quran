@@ -141,6 +141,9 @@ Route::group([
         Route::get('/{id}/show',[NasihaController::class,'show'])->name('nasiha.show');
         Route::get('/create',[NasihaController::class,'create'])->name('nasiha.create');
         Route::POST('',[NasihaController::class,'store'])->name('nasiha.store');
+        Route::GET('{id}/approve',[NasihaController::class,'approve'])->name('nasiha.approve');
+        Route::GET('{id}/unapprove',[NasihaController::class,'unApprove'])->name('nasiha.unApprove');
+        Route::GET('{id}/detele',[NasihaController::class,'detele'])->name('nasiha.detele');
 
 
 

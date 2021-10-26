@@ -11007,3 +11007,9 @@ input:checked + .slider:before {
 .dark-mode h1 {
   color: #f7f0e9;
 }
+
+a {
+    text-decoration: none !important;
+    cursor: pointer !important;
+
+}

@@ -96,3 +96,42 @@
 
 
 
+
+
+
+
+
+
+
+            let verses = data.data.verses;
+
+                        let audio = "";
+                        for (let index = 0; index < verses.length; index++) {
+                            let audioDivSelect = `.audio${index}`;
+                            let audioDiv = document.querySelector('.audioDivSelect');
+
+                             //  Start Get all vesres With transilation
+                                audio =
+                                `
+                                <div  class='custom-play-audio-position'>
+                                    <audio id="player${index}"  class='text-center'>
+                                    <source src="${verses[index].audio.primary}" type="audio/ogg">
+                                    Your browser does not support the audio element.
+                                    </audio>
+                                    <br>
+                                    <div class='text-center '>
+                                        <button title="Playe" class="rounded-lg btn btn btn-success btn-sm btn-lg" onclick="document.getElementById('player${index}').play()"><i class="fas fa-play  fa-sm"></i></button>
+                                        <button title="Pause" class="rounded-lg btn btn-danger btn-sm" onclick="document.getElementById('player${index}').pause()"><i class="fas fa-pause fa-1x"></i></button>
+
+                                            <button title="Add Note" type="button" class="rounded-lg btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"><i class="fas fa-edit fa-sm"></i></button>
+                                            <button title="Make Bookmark" style="background-color: #83ccf7;" type="button" class="rounded-lg btn  btn-sm bookmark" data-bookmark="${idaftersplit[0]}:${index+1}" ><i class="far fa-bookmark fa-1x"></i></button>
+                                    </div>
+                            `;
+                            //  End Get all vesres of surah With transilation
+
+                            audioDiv.innerHTML = audio;
+                            };
+
+
+
+

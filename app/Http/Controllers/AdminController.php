@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Nasiha;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -35,7 +36,12 @@ class AdminController extends Controller
 
    function index(){
         $users = User::all();
+        $nasihasApproved = Nasiha::where('approved',1)->get();
+        $nasihasNotApproved = Nasiha::where('approved',0)->get();
         // dd($users);
-        return view('dashboard.admin.home',['users'=>$users]);
-   }
+        return view('dashboard.admin.home',[
+                                            'users'=>$users,
+                                            'nasihasApproved'=>$nasihasApproved,
+                                            'nasihasNotApproved'=>$nasihasNotApproved]);
+        }
 }

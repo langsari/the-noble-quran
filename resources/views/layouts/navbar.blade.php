@@ -203,7 +203,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('nasiha.index') }}"
-                            data-filter="hadith">Nasiha</a>
+                            data-filter="hadith">Blog</a>
                     </li>
 
 
