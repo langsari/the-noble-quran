@@ -2,8 +2,8 @@
 Web Application of the Noble Qur'an
 
 requirement
--composer
--nodejs
+    -composer
+    -nodejs
 
 
 1-To run the Project you need to set up the database
@@ -16,4 +16,18 @@ requirement
     3-run npm insatall
 
 Note you must have internet connection because this project used external API
+
+Admin panel 
+you can use admin panel by login in this url (http://127.0.0.1:8000/en/admin/login) 
+use this email and password to login as admin
+email : admintest@gmail.com
+password : 12345
+note use admin login form to login becasue its deffrint from user login form
+
+
+
+you can use this account to login as user 
+email : usertest@gmail.com
+password : 12345
+
 
