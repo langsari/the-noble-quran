@@ -54,6 +54,18 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
+      
+.caution {
+        
+  font-size: 12px;
+  font-weight: normal;
+  direction: ltr;
+  padding: 0 5px;
+  margin: 0;
+  color: red;
+
+}
+  
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
@@ -465,7 +477,7 @@ mark,
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {

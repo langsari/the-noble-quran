@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+ 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('เข้าสู่ระบบ') }}</div>
 
@@ -68,6 +70,9 @@
                                         {{ __('ลืมรหัสผ่าน') }}
                                     </a>
                                 @endif
+                                <hr>
+                                <p class="caution" "text-danger">*หากยังไม่มีเคยมีบัญชีผู้ใช้ กรุณาสมัครก่อน*</p>
+                               
                             </div>
                         </div>
                     </form>

@@ -1,8 +1,21 @@
-@extends('posts.layout')
+@extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+              
 
-<div class="row mt-5">
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+
+<div class="row mt-2">
     <div class ="col-md-12">
       <h2>แก้ไข</h2>
           <a href ="{{ route('posts.index') }}" class ="btn btn-success my-3">กลับ</a>

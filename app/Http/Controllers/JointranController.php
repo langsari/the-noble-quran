@@ -9,10 +9,10 @@ class JointranController extends Controller
 {
     public function index()
     {
-        $tran = DB::table('arabicquran')
-        ->join('th_thai','th_thai.index','=','arabicquran.index')
+        $tran = DB::table('arabics')
+        ->join('thais','thais.arabic_id','=','arabics.arabic_id')
         //->join('th_thai','th_thai.index','=','arabicquran.index')
-        ->select('arabicquran.Text', 'th_thai.text','th_thai.audio')
+        ->select('arabics.arabic_id', 'arabics.text','thais.text')
         //->where('arabic.index','=',$index_id)
         ->get();
         //return dd($tran);

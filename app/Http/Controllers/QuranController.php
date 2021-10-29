@@ -16,60 +16,105 @@ class QuranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    // public function index($id)
+    // {
+        
+    //         $datasurahs = Datasurah::with('arabic.thais')->find($id);
+    //        // $arabics = Datasurah::with('arabic.thais')->find($id);
+    //         return dd($datasurahs);
+    //         return view('qurans.index', [
+    //             'datasurahs' => $datasurahs
+    //            // 'arabics' => $arabics
+    //         ]);
+        
+    // }
+
+    // public function alls($id)
+    // {
+    //     $arabics = Datasurah::with('arabic.thais')->find($id);
+    //    // ->firstOrFail();
+
+    //    // $plucked = $ayats->pluck('ayat.text', 'trans.text');
+        
+    //    // dd($arabics->toArray());
+      
+    //    // return dd($arabics);
+      
+    //    //return view('test.detail', [
+    //     //dd($ayats->toArray());
+    //     //'ayats' => $ayats]);
+       
+    //   return view('qurans.detail',compact('arabics'));
+    //     //    'ayats' => $ayats
+    //     //]);
+    // }
+
+    // public function all($id)
+    // {
+    //     $arabics = Datasurah::with('arabic.thais')->find($id);
+    //    // ->firstOrFail();
+
+    //    // $plucked = $ayats->pluck('ayat.text', 'trans.text');
+        
+    //     //dd($arabics->toArray());
+      
+    //    // return dd($arabics);
+      
+    //    //return view('test.detail', [
+    //     //dd($ayats->toArray());
+    //     //'ayats' => $ayats]);
+       
+    //   return view('qurans.detail',compact('arabics'));
+    //     //    'ayats' => $ayats
+    //     //]);
+    // }
+    public function homeuser()
     {
         
-            $datasurahs = Datasurah::with('arabic.thais')->find($id);
-           // $arabics = Datasurah::with('arabic.thais')->find($id);
-            return dd($datasurahs);
-            return view('qurans.index', [
+            $datasurahs = Datasurah::all();
+            //return dd($datasurahs);
+            return view('enduser.homeuser', [
                 'datasurahs' => $datasurahs
-               // 'arabics' => $arabics
             ]);
         
     }
 
-    public function alls($id)
-    {
-        $arabics = Datasurah::with('arabic.thais')->find($id);
-       // ->firstOrFail();
+    public function surah($id)
 
-       // $plucked = $ayats->pluck('ayat.text', 'trans.text');
+    { 
+        $arabics = Datasurah::with('arabic.thais')->find($id);
+        $datas = Datasurah::all();
+        $datasurah = Datasurah::with('tafseer')->find($id);
+     
+    
+      return view('enduser.detailuser',compact('datas','arabics','datasurah'));
+  
+    }
+
+ 
+    public function tafseer_homeuser()
+    {
         
-        dd($arabics->toArray());
+            $datasurahs = Datasurah::paginate(20);
+           //return dd($datasurahs);
+            return view('enduser.tafseer_homeuser', [
+                'datasurahs' => $datasurahs
+            ]);
+        
+    }
+    public function tafseer_detailuser($id)
+    {
+        $tafseers = Datasurah::with('tafseer')->find($id);
       
-       // return dd($arabics);
+        
+       //dd($tafseers->toArray());
       
-       //return view('test.detail', [
-        //dd($ayats->toArray());
-        //'ayats' => $ayats]);
+    
        
-      return view('qurans.detail',compact('arabics'));
+      return view('enduser.tafseer_detailuser',compact('tafseers'));
         //    'ayats' => $ayats
         //]);
     }
-
-    public function all($id)
-    {
-        $arabics = Datasurah::with('arabic.thais')->find($id);
-       // ->firstOrFail();
-
-       // $plucked = $ayats->pluck('ayat.text', 'trans.text');
-        
-        //dd($arabics->toArray());
-      
-       // return dd($arabics);
-      
-       //return view('test.detail', [
-        //dd($ayats->toArray());
-        //'ayats' => $ayats]);
-       
-      return view('qurans.detail',compact('arabics'));
-        //    'ayats' => $ayats
-        //]);
-    }
-
-
 
     /**
      * Show the form for creating a new resource.

@@ -48,7 +48,7 @@ class PostController extends Controller
         Post::create($request->all());
      
         return redirect()->route('posts.index')
-                        ->with('success','Post created successfully.');
+                        ->with('success','สร้างโน้ตใหม่สำเร็จ');
     }
 
     /**
@@ -92,7 +92,7 @@ class PostController extends Controller
         $post->update($request->all());
     
         return redirect()->route('posts.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','อัตเดตโน้ตสำเร็จ');
     }
 
     /**
@@ -107,7 +107,7 @@ class PostController extends Controller
         $post->delete();
     
         return redirect()->route('posts.index')
-                        ->with('success','Post deleted successfully');
+                        ->with('success','ลบโน้ตสำเร็จ');
     }
 }
 

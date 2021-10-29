@@ -12,10 +12,16 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\exController;
 use App\Http\Controllers\Jointrancontroller;
 use App\Http\Controllers\QuranController;
+use App\Http\Controllers\CauseController;
+
 
 use App\Http\Controllers\QuransController;
 use App\Http\Controllers\TafseersController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SearchuserController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +43,20 @@ return view('quran.home');
 
 
 
-Route::resource('posts',PostController::class);
+//Route::resource('posts',PostController::class);
+//Route::resource('posts','PostController');
+
+//posts
+// Route::get('posts',[PostController::class,'index'])->name('posts.index');
+// Route::post('posts',[PostController::class,'store'])->name('posts.store');
+// Route::get('posts/create ',[PostController::class,'create'])->name('posts.create');
+// Route::get('posts/{post} ',[PostController::class,'show'])->name('posts.show');
+// Route::put('posts/{post}',[PostController::class,'update'])->name('posts.update');
+// Route::delete('posts/{post}',[PostController::class,'destroy'])->name('posts.destroy');
+// Route::get('posts/{post}/edit',[PostController::class,'edit'])->name('posts.edit');
+
+
+
 //Route::resource('posts','App\Http\Controllers\PostController');
 //Route::resource('mqurans',MquranController::class);
 
@@ -62,8 +81,9 @@ Route::get('/view/{is}',[PageController::class,'viewtafseer']);
 
 Auth::routes();
 
-Route::get ('/home' ,[App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get ('/home' ,[HomeController::class, 'index'])->name('home');
 Route::get ('admin/adminHome',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
+
 
 //Route::get('join_table', [JointableController::class, 'index']);
 //Route::get('quran/v_translation', [JoinTranslationController::class, 'index']);
@@ -79,20 +99,24 @@ Route::get('/', function () {
 Route::get('quran/nav', [DetailController::class, 'index']);
 
 //่join q text w q tran
-Route::get('join/jointran', [JointranController::class, 'index']);
+//Route::get('join/jointran', [JointranController::class, 'index']);
 
 //show q text x tran
 Route::get('/', [QuransController::class, 'homepage']);
-Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
+//Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
+//Route::get('/tran{arabics}', [QuransController::class, 'tran'])->name('tran');
  //Route::get('/arabic/{datasurah}/tafseer_detail/{data}', function (Arabic $datasurah, Tafseer $data) {
 //   //
  //})->name('quran.detail');
 
 Route::get('quran/home', [QuransController::class, 'homepage'])->name('homepage');
-Route::get('quran/tafseer_vdo', [QuransController::class, 'tafseer_vdo'])->name('tafseer_vdo');
-
+Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
 Route::get('/quran/tafseer_home', [QuransController::class, 'tafseer_home'])->name('tafseer_home');
 Route::get('/quran/tafseer_detail{data}', [QuransController::class, 'tafseer_detail'])->name('tafseer_detail');
+//Route::get('quran/tafseer_vdo', [QuransController::class, 'tafseer_vdo'])->name('tafseer_vdo');
+
+// Route::get('/quran/tafseer_home', [QuransController::class, 'tafseer_home'])->name('tafseer_home');
+// Route::get('/quran/tafseer_detail{data}', [QuransController::class, 'tafseer_detail'])->name('tafseer_detail');
 
 Route::get('quran/navbar', [QuransController::class, 'navbar'])->name('navbar');
 Route::get('quran/data', [QuranController::class, 'index']);
@@ -104,13 +128,58 @@ Route::get('quran/join_surah', [JoinTranslationController::class, 'index']);
 
 //Test using model
 Route::get('/qurans/index{datasurah}', [QuranController::class, 'index']);
+
 //Route::get('/alls/{datasurah}', [QuranController::class, 'alls'])->name('alls');
 
 //Route::get ('admin/adminHome' ,[AdminController::class, 'adminhome'])->name('adminhome');
 
+//Route role users
 Route::get ('admin/adminHome',[HomeController::class,'adminhome'])->name('adminhome')->middleware('is_admin');
 Route::get ('admin/approvalHome',[HomeController::class,'approvalhome'])->name('approvalhome')->middleware('is_admin');
 Route::get ('admin/staffHome',[HomeController::class,'staffhome'])->name('staffhome')->middleware('is_admin');
 
 
 Route::get ('admin/m.quran' ,[HomeController::class, 'adminmnquran'])->name('adminmnquran');
+
+//search
+// Route::get('/people', [SearchController::class, 'index']);
+// Route::get('/people/simple', [SearchController::class, 'index'])->name('simple_search');
+// Route::get('/people/advance',[SearchController::class, 'advance'])->name('advance_search');
+
+//livesearch
+// Route::get('/live_search', [LiveSearch::class, 'index']);
+// Route::get('/live_search/action', [LiveSearch::class, 'action'])->name('live_search.action');
+
+//simple search
+Route::get('/search',[SearchController::class, 'search'])->name('web.search');
+Route::get('/find',[SearchController::class, 'find'])->name('web.find');
+
+//jointable
+Route::get('join_table', [JointableController::class, 'index']);
+
+//posts
+Route::resource('posts','PostController');
+
+//dropdown
+// Route::get('causes_cat', 'CauseController@index');
+// Route::get('GetSubCatAgainstMainCatEdit/{id}', 'CauseController@GetSubCatAgainstMainCatEdit');
+
+//new dropdown X detail
+// Route::get('quran/detail',[QuransController::class, 'index'])->name('causes_cat');
+// Route::get('GetSubCatAgainstMainCatEdit/{id}', [QuransController::class, 'GetSubCatAgainstMainCatEdit'])->name('sub.dropdown');
+
+
+Route::get ('/managequran{datasurah}',[AdminController::class,'managequran'])->name('managequran');
+Route::get ('admin/manageuser',[AdminController::class,'manageuser'])->name('manageuser');
+Route::get ('admin/managetafseer',[AdminController::class,'managetafseer'])->name('managetafseer');
+Route::get ('admin/managenote',[AdminController::class,'managenote'])->name('managenote');
+
+//
+Route::get('enduser/homeuser',[QuranController::class, 'homeuser'])->name('homeuser');
+Route::get('/surah{datasurah}', [QuranController::class, 'surah'])->name('surah');
+Route::get('/enduser/tafseer_homeuser', [QuranController::class, 'tafseer_homeuser'])->name('tafseer_homeuser');
+Route::get('/enduser/tafseer_detailuser{data}', [QuranController::class, 'tafseer_detailuser'])->name('tafseer_detailuser');
+
+////simple search end user
+Route::get('/searchuser',[SearchuserController::class, 'searchuser'])->name('web.searchuser');
+Route::get('/findsearch',[SearchuserController::class, 'findsearch'])->name('web.findsearch');

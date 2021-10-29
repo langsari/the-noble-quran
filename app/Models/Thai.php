@@ -13,6 +13,6 @@ class Thai extends Model
     ];
     public function thais()
     {
-        return $this->belongsTo('App/Models/Arabic');
+        return $this->belongsTo(Arabic::class);
     }
 }
