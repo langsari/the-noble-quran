@@ -1,22 +1,23 @@
+
 h11 {
     background-color:#0d6efd;
     border: none;
     color: white;
-    padding: 10px 30px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    margin-left: 1150px;
+    margin-left: 1120px;
     text-decoration-color: #ebeff1;
   }
   h12 {
     background-color:#0d6efd;
     border: none;
     color: white;
-    padding: 10px 30px;
+    padding:  5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

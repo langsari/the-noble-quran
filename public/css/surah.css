@@ -51,10 +51,10 @@ span{
   
 .grid-container {
     display: grid;
-    grid-column-gap: 80px;
-    grid-template-columns: auto auto auto auto;
-    margin-left: 50px;
-    margin-right: 50px;
+    grid-column-gap: 95px;
+    grid-template-columns: auto auto auto ;
+    margin-left: 100px;
+    margin-right: 100px;
     margin: 50px;
   
   }
@@ -66,6 +66,7 @@ span{
     font-size: 30px;
     text-align: center;
     block-size: 5cm;
+   
     
   
   }

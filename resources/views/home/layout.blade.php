@@ -26,11 +26,17 @@ img {
   height:294px;
   
 }
+<style>
+img {
+  width:600px;
+  height:294px;
+  
+}
 .button {
     background-color:#0d6efd;
     border: none;
     color: white;
-    padding: 10px 30px;
+    padding:  5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -38,8 +44,9 @@ img {
     margin: 4px 2px;
     cursor: pointer;
     margin-left: 1150px;
-    
+    text-decoration-color: #ebeff1;
   }
+</style>
 </style>
 </head>
 

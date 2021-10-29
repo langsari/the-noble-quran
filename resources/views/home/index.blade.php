@@ -25,7 +25,7 @@
 
     <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>4.  An-Nisa</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>4.  An-Nisa</span> 
               <h4>ٱلنِّسَاء</h4></button></a>
          </div>
          <div class="grid-item">
@@ -34,14 +34,14 @@
          </div>
          <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>6.  Al-An'am</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>6.  Al-An'am</span> 
               <h4>ٱلْأَنْعَام</h4></button></a>
          </div>
         
  
     <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>7.  Al-A'raf</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>7.  Al-A'raf</span> 
               <h4>ٱلْأَعْرَاف</h4></button></a>
          </div>
          <div class="grid-item">
@@ -50,14 +50,14 @@
          </div>
          <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>9.  At-Tawbah</span> 
+              <a href="#"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>9.  At-Tawbah</span> 
                    <h4>ٱلتَّوْبَة</h4></button></a>
          </div>
         
    
     <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>10.  Al-Yunus</span> 
+              <a href="#"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>10.  Al-Yunus</span> 
               <h4>يُونُس</h4></button></a>
          </div>
          <div class="grid-item">
@@ -66,14 +66,14 @@
          </div>
          <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>12.  Yusuf</span> 
+              <a href="#"><button style="height: 100px; width:290px;"  type="button" class="btn btn-outline-info"><span>12.  Yusuf</span> 
               <h4>	يُوسُف</h4></button></a>
          </div>
         
 
     <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>13.  Ar-Raʿd</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>13.  Ar-Raʿd</span> 
               <h4>	ٱلرَّعْد</h4></button></a>
          </div>
          <div class="grid-item">
@@ -82,7 +82,7 @@
          </div>
          <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>15.  Al-Hijr</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>15.  Al-Hijr</span> 
               <h4>ٱلْحِجْر</h4></button></a>
          </div>
         
@@ -105,7 +105,7 @@
   
     <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>19.  Maryam</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>19.  Maryam</span> 
               <h4>	مَرْيَم</h4></button></a>
          </div>
          <div class="grid-item">
@@ -114,7 +114,7 @@
          </div>
          <div class="grid-item">
               
-              <a href="Al-fatihah.html"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>21.  Al-Anbia</span> 
+              <a href="#"><button style="height: 100px; width:290px;"   type="button" class="btn btn-outline-info"><span>21.  Al-Anbia</span> 
               <h4>ٱلْأَنْبِيَاء</h4></button></a>
          </div>
         
@@ -605,6 +605,8 @@
               <h4>	ٱلنَّاس</h4></button></a>
          </div>
          @yield('content')
+         <br></br>
+       
 </div>
 </div>
 </body>

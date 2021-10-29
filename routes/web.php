@@ -27,10 +27,10 @@ Route::get('fatihah/fatihah',[fatihahController::class,'fatihah']);
 
 /*Route::get('fatihah/fatihahTH','FatihahController@TH');*/
 Route::get('/fatihahEN', function () {
-    return view('fatihahEN');
+    return view('fatihah.fatihahEN');
 });
 Route::get('/fatihahTH', function () {
-    return view('fatihahTH');
+    return view('fatihah.fatihahTH');
 });
 
 Route::get('/playtime', function () {

@@ -35,10 +35,9 @@ img {
         <div class="header-dark">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <div class="container"><a class="navbar-brand" href="http://127.0.0.1:8000">อัลกุรอาน</a>
-                <a href="home/index">SURAH</a> 
-                <a href="/fatihahTH" class="button" ><h11>TH</h11></a> &
-                <a href="/fatihahEN" class="button"><h12>EN</h12> </a>
-                <!--<a href="#" class="button">SignIn</a>-->
+                <a href="/home/index">SURAH</a> 
+             <a href="/fatihahEN"><t> TRANSLATE <t></a>  
+         
                 <div class="collapse navbar-collapse"
                         id="navcol-1">
                      
@@ -90,17 +89,17 @@ img {
         
 
           </audio>
-          <p class="text-center mt-5">(2)  اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ</p>
+          <p class="text-center mt-5">(2)  اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ</p>
          
          
-          <p class="text-center mt-5"> (4)  الرَّحْمٰنِ الرَّحِيْمِۙ   (3)   مٰلِكِ يَوْمِ الدِّيْنِۗ</p> <!--<p class="text-center mt-5">(4)   مٰلِكِ يَوْمِ الدِّيْنِۗ </p>-->
+          <p class="text-center mt-5"> (4)  الرَّحْمٰنِ الرَّحِيْمِ  (3)   مٰلِكِ يَوْمِ الدِّيْنِ</p> 
 
   
 
         
          
     
-          <p class="text-center mt-5">   اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ(5)   اهدِنَا 
+          <p class="text-center mt-5">   اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُ(5)   اهدِنَا 
        
           <p class="text-center mt-5"> الصِّراطَ المُستَقيمَ(6)   صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ  غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ
             </p></p>
