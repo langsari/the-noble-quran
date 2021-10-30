@@ -39,3 +39,5 @@ Route::get('home/index',[HomeController::class,'index']);
 
 //text
 Route::get('/text', [QurantextController::class, 'index']);
+
+Route::get('/text/{id}', [QurantextController::class, 'show']);
