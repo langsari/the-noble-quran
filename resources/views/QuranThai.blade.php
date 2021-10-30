@@ -148,6 +148,8 @@
     <div class="translation"> 
     @for ($i = 0; $i < $quransarab->count(); $i++)
 
+    
+
      <div class="ayah">{{ $quransarab[$i]->AyahText }}</div>
      <div class="ayah__number"> {{$quransarab[$i]->VerseID}} </div>
         <div class="audio{{$i}}">
