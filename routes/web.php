@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\QurantextController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,5 @@ Route::get('/home', function () {
 
 Route::get('home/index',[HomeController::class,'index']);
 
+//text
+Route::get('/text', [QurantextController::class, 'index']);
