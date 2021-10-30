@@ -8,15 +8,19 @@ class QurantextController extends Controller
 {
     public function index(){
 
-        $title = 'Welcome to my website';
-        $description = 'This is the test to print text';
+        
 
-        $data = [
-            'product1' => 'Apple',
-            'product2' => 'Max'
-        ];
+        $ayah1 = 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ';
+        $ayah2 = 'ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ';
+        $ayah3 ='ٱلرَّحْمَٰنِ ٱلرَّحِيمِ';
+        $ayah4 ='مَٰلِكِ يَوْمِ ٱلدِّينِ';
+        $ayah5 ='إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ';
+        $ayah6 ='ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ';
+        $ayah7 ='صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ';
+        
+        
          return view('home.qurantext', 
-         compact('title', 'description'));
+         compact('ayah1', 'ayah2', 'ayah3', 'ayah4', 'ayah5', 'ayah6', 'ayah7'));
 
         
     }
