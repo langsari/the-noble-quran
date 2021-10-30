@@ -20,7 +20,7 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <a class="btn-login" href="#"><button>Login</button></a>
+        <a class="btn-login" href="login"><button>Login</button></a>
     </header>
 </body>
 </html>
