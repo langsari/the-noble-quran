@@ -1,1 +1,190 @@
-//
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(60, 88, 88);
+}
+
+li, a, button{
+    font-family: 'montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    color: #ecf0f1;
+    font-size: 175%;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3 ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #0088a9;
+}
+
+button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-login button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+//home css
+
+
+h1{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+body{
+    background-color: rgb(240, 255, 251);
+}
+
+/* button into read the book*/
+.col-sm{
+    padding: 2px 2px;
+    display: inline-block;
+}
+
+button{
+    padding: "10px" "25px";
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: 0px;
+    background: transparent;
+    position: relative;
+    margin: 2.5px;
+    transition: all 0.25s ease;
+    height: 115px;
+    width: 250px;
+    text-align: left;
+}
+.btn-outline-info{
+    background: rgb(143, 235, 212);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.btn-outline-info:hover{
+    transform: translate(-12px, -12px);
+}
+.btn-outline-info:hover::after{
+    transform: translate(6px,6px);
+}
+.btn-outline-info:hover::before{
+    transform: translate(12px, 12px);
+}
+.btn-outline-info::after{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    border-radius: inherit;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all 0.25s ease;
+    z-index: -1;
+}
+
+.surah-text {
+    display: block;
+    justify-content: space-between;
+}
+a{
+    color: #00acc1;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.surah-block{
+    border-radius: 15%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.num{
+    margin-right: 16px;
+    background-color: #e1e1e4;
+    border-radius: 25%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333647;
+    font-size: 90%;
+}
+.surah-name{
+    justify-content: space-around;
+}
+
+.arabic {
+    align-items: center;
+    font-size: 20px;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: bold;
+}
+
+.surah-name .eng-name{
+    display: flex;
+    align-items: center;
+    font-size: 12.5px;
+}
+
+
+/*
+.num{
+    display: flex;
+}
+
+.surah-arabic{
+    text-align: right;
+}*/
+
+
+/*Serch-bar////////////////////*/
+
