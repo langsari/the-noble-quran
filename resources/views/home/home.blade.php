@@ -24,7 +24,7 @@
             <div class="row text-center">
                 <!--01 Surah Al-Fatihah------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                    <a href="1.php"><button class="btn-outline-info">
+                    <a href="text"><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 1
