@@ -27,7 +27,7 @@ Route::get('/dashboard', [AuthController::class, 'dashboardView'])->name('dashbo
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home/home');
 });
 
 //home
