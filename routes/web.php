@@ -1,6 +1,7 @@
 <?php
 
 use App\http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('home/index',[HomeController::class,'index']);
+
