@@ -198,9 +198,6 @@ class Process implements \IteratorAggregate
         return $process;
     }
 
-    /**
-     * @return array
-     */
     public function __sleep()
     {
         throw new \BadMethodCallException('Cannot serialize '.__CLASS__);
@@ -622,7 +619,6 @@ class Process implements \IteratorAggregate
      *
      * @return \Generator
      */
-    #[\ReturnTypeWillChange]
     public function getIterator($flags = 0)
     {
         $this->readPipesForOutput(__FUNCTION__, false);
@@ -1399,7 +1395,7 @@ class Process implements \IteratorAggregate
         ob_start();
         phpinfo(\INFO_GENERAL);
 
-        return self::$sigchild = str_contains(ob_get_clean(), '--enable-sigchild');
+        return self::$sigchild = false !== strpos(ob_get_clean(), '--enable-sigchild');
     }
 
     /**
@@ -1586,7 +1582,7 @@ class Process implements \IteratorAggregate
                 if (isset($varCache[$m[0]])) {
                     return $varCache[$m[0]];
                 }
-                if (str_contains($value = $m[1], "\0")) {
+                if (false !== strpos($value = $m[1], "\0")) {
                     $value = str_replace("\0", '?', $value);
                 }
                 if (false === strpbrk($value, "\"%!\n")) {
@@ -1647,7 +1643,7 @@ class Process implements \IteratorAggregate
         if ('\\' !== \DIRECTORY_SEPARATOR) {
             return "'".str_replace("'", "'\\''", $argument)."'";
         }
-        if (str_contains($argument, "\0")) {
+        if (false !== strpos($argument, "\0")) {
             $argument = str_replace("\0", '?', $argument);
         }
         if (!preg_match('/[\/()%!^"<>&|\s]/', $argument)) {

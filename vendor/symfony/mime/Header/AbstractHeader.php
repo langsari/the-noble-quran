@@ -164,14 +164,14 @@ abstract class AbstractHeader implements HeaderInterface
             if ($this->tokenNeedsEncoding($token)) {
                 $encodedToken .= $token;
             } else {
-                if ('' !== $encodedToken) {
+                if (\strlen($encodedToken) > 0) {
                     $tokens[] = $encodedToken;
                     $encodedToken = '';
                 }
                 $tokens[] = $token;
             }
         }
-        if ('' !== $encodedToken) {
+        if (\strlen($encodedToken)) {
             $tokens[] = $encodedToken;
         }
 

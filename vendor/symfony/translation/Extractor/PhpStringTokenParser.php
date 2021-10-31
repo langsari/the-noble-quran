@@ -133,7 +133,7 @@ class PhpStringTokenParser
         $str = preg_replace('~(\r\n|\n|\r)$~', '', $str);
 
         // nowdoc string
-        if (str_contains($startToken, '\'')) {
+        if (false !== strpos($startToken, '\'')) {
             return $str;
         }
 

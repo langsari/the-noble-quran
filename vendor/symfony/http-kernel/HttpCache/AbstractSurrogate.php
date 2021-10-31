@@ -57,7 +57,7 @@ abstract class AbstractSurrogate implements SurrogateInterface
             return false;
         }
 
-        return str_contains($value, sprintf('%s/1.0', strtoupper($this->getName())));
+        return false !== strpos($value, sprintf('%s/1.0', strtoupper($this->getName())));
     }
 
     /**

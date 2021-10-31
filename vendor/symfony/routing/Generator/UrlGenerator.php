@@ -221,9 +221,9 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
         // so we need to encode them as they are not used for this purpose here
         // otherwise we would generate a URI that, when followed by a user agent (e.g. browser), does not match this route
         $url = strtr($url, ['/../' => '/%2E%2E/', '/./' => '/%2E/']);
-        if (str_ends_with($url, '/..')) {
+        if ('/..' === substr($url, -3)) {
             $url = substr($url, 0, -2).'%2E%2E';
-        } elseif (str_ends_with($url, '/.')) {
+        } elseif ('/.' === substr($url, -2)) {
             $url = substr($url, 0, -1).'%2E';
         }
 

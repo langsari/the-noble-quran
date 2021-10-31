@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 2.3.5 (2021-10-01)
 
   * Fixed regression in StreamHandler since 2.3.3 on systems with the memory_limit set to >=20GB (#1592)
@@ -29,6 +30,8 @@
   * Fixed SyslogUdpHandler not setting the timezone correctly on DateTimeImmutable instances (#1540)
   * Fixed StreamHandler thread safety - chunk size set to 2GB now to avoid interlacing when doing concurrent writes (#1553)
 
+=======
+>>>>>>> parent of 01bbed27 (Test)
 ### 2.2.0 (2020-12-14)
 
   * Added JSON_PARTIAL_OUTPUT_ON_ERROR to default json encoding flags, to avoid dropping entire context data or even records due to an invalid subset of it somewhere
@@ -131,10 +134,6 @@
   * Added a `$dateFormat` option to the PsrLogMessageProcessor which lets you format DateTime instances nicely
   * Added support for the PHP 7.x `mongodb` extension in the MongoDBHandler
   * Fixed many minor issues in various handlers, and probably added a few regressions too
-
-### 1.26.1 (2021-05-28)
-
-  * Fixed PHP 8.1 deprecation warning
 
 ### 1.26.0 (2020-12-14)
 

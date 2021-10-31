@@ -48,7 +48,7 @@
 
             .content {
                 text-align: center;
-                margin-top:350rem;
+                margin-top:290rem;
             }
 
             .title {
@@ -69,14 +69,14 @@
                 margin-bottom:100rem;
             }
             .surah-list{
-    /*position: relative;*/
-    display: flex;
-    /*padding: 2rem;*/
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 3rem 0 0 6rem;
-  }
+            /*position: relative;*/
+            display: flex;
+            /*padding: 2rem;*/
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+             margin: 3rem 0 0 6rem;
+            }
         </style>
     </head>
     <body>
@@ -131,8 +131,8 @@
 
 
 
-                  <div class="container__surah__card">
-          <!--<div class="surah-section" data-tab-group="home-tabs" id="surah-list">-->
+                <div class="container__surah__card">
+                <!--<div class="surah-section" data-tab-group="home-tabs" id="surah-list">-->
               <div class="surah-list">
 
               </div>

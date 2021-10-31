@@ -43,7 +43,7 @@ final class ClassString extends String_ implements PseudoType
     /**
      * Returns the FQSEN associated with this object.
      */
-    public function getFqsen(): ?Fqsen
+    public function getFqsen() : ?Fqsen
     {
         return $this->fqsen;
     }
@@ -51,7 +51,7 @@ final class ClassString extends String_ implements PseudoType
     /**
      * Returns a rendered output of the Type as it would be used in a DocBlock.
      */
-    public function __toString(): string
+    public function __toString() : string
     {
         if ($this->fqsen === null) {
             return 'class-string';

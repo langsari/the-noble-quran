@@ -16,7 +16,6 @@ use Prophecy\Doubler\Generator\Node\ReturnTypeNode;
 use Prophecy\Exception\InvalidArgumentException;
 use Prophecy\Exception\Doubler\ClassMirrorException;
 use ReflectionClass;
-use ReflectionIntersectionType;
 use ReflectionMethod;
 use ReflectionNamedType;
 use ReflectionParameter;
@@ -152,10 +151,6 @@ class ClassMirror
             $returnTypes = $this->getTypeHints($method->getReturnType(), $method->getDeclaringClass(), $method->getReturnType()->allowsNull());
             $node->setReturnTypeNode(new ReturnTypeNode(...$returnTypes));
         }
-        elseif (method_exists($method, 'hasTentativeReturnType') && $method->hasTentativeReturnType()) {
-            $returnTypes = $this->getTypeHints($method->getTentativeReturnType(), $method->getDeclaringClass(), $method->getTentativeReturnType()->allowsNull());
-            $node->setReturnTypeNode(new ReturnTypeNode(...$returnTypes));
-        }
 
         if (is_array($params = $method->getParameters()) && count($params)) {
             foreach ($params as $param) {
@@ -201,7 +196,7 @@ class ClassMirror
             return true;
         }
 
-        return $parameter->isOptional() || ($parameter->allowsNull() && $parameter->getType() && \PHP_VERSION_ID < 80100);
+        return $parameter->isOptional() || ($parameter->allowsNull() && $parameter->getType());
     }
 
     private function getDefaultValue(ReflectionParameter $parameter)
@@ -223,12 +218,6 @@ class ClassMirror
         }
         elseif ($type instanceof ReflectionUnionType) {
             $types = $type->getTypes();
-        }
-        elseif ($type instanceof ReflectionIntersectionType) {
-            throw new ClassMirrorException('Doubling intersection types is not supported', $class);
-        }
-        elseif(is_object($type)) {
-            throw new ClassMirrorException('Unknown reflection type ' . get_class($type), $class);
         }
 
         $types = array_map(

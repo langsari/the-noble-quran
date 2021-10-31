@@ -15,8 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ayat/{id}','AyattextController@AyatArab');
-
+Route::get('/ayat/{id}','AyattextController@Ayat');
 
 Auth::routes();
 

@@ -52,7 +52,7 @@ class ProphecySubjectPatch implements ClassPatchInterface
                 continue;
             }
 
-            if (!$method->getReturnTypeNode()->hasReturnStatement()) {
+            if ($method->getReturnTypeNode()->isVoid()) {
                 $method->setCode(
                     '$this->getProphecy()->makeProphecyMethodCall(__FUNCTION__, func_get_args());'
                 );

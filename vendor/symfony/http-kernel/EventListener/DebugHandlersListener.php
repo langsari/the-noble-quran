@@ -60,7 +60,7 @@ class DebugHandlersListener implements EventSubscriberInterface
 
         $this->exceptionHandler = $exceptionHandler;
         $this->logger = $logger;
-        $this->levels = $levels ?? \E_ALL;
+        $this->levels = null === $levels ? \E_ALL : $levels;
         $this->throwAt = \is_int($throwAt) ? $throwAt : (null === $throwAt ? null : ($throwAt ? \E_ALL : null));
         $this->scream = $scream;
         $this->fileLinkFormat = $fileLinkFormat;

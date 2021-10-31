@@ -78,6 +78,6 @@ class Gitignore
 
         return ($isAbsolute ? '' : '(?:[^/]+/)*')
             .$regex
-            .(!str_ends_with($gitignoreLine, '/') ? '(?:$|/)' : '');
+            .('/' !== substr($gitignoreLine, -1) ? '(?:$|/)' : '');
     }
 }

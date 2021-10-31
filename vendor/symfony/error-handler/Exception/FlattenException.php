@@ -62,17 +62,11 @@ class FlattenException extends LegacyFlattenException
     /** @var string|null */
     private $asString;
 
-    /**
-     * @return static
-     */
     public static function create(\Exception $exception, $statusCode = null, array $headers = []): self
     {
         return static::createFromThrowable($exception, $statusCode, $headers);
     }
 
-    /**
-     * @return static
-     */
     public static function createFromThrowable(\Throwable $exception, int $statusCode = null, array $headers = []): self
     {
         $e = new static();
@@ -100,7 +94,7 @@ class FlattenException extends LegacyFlattenException
         $e->setStatusCode($statusCode);
         $e->setHeaders($headers);
         $e->setTraceFromThrowable($exception);
-        $e->setClass($exception instanceof FatalThrowableError ? $exception->getOriginalClassName() : \get_class($exception));
+        $e->setClass($exception instanceof FatalThrowableError ? $exception->getOriginalClassName() : get_debug_type($exception));
         $e->setFile($exception->getFile());
         $e->setLine($exception->getLine());
 

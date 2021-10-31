@@ -14,9 +14,9 @@ class AyattextController extends Controller
     //     $ayats= AyatArab::where('SuraID',$id)->get();
     //     return view('AyatAr',['ayats'=>$ayats,'id'=>$id]);
     // }
-    function AyatArab($id)
+    function Ayat($id)
     {
-        $ayats= AyatArab::where('SuraID',$id)->get();
+        $ayats= Ayat::where('SuraID',$id)->get();
         return view('AyatAr',['ayats'=>$ayats,'id'=>$id]);
     }
 }
