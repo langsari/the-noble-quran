@@ -2,29 +2,14 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Quran</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <link rel="stylesheet" href="css.home.css">
-    </body>
-
-
     <!---<a href="something" class="button3">It's getting old</a>-->
     <main>
         <div class="container">
-            <hr style="height:2px; border-width:0; color: gray;background-color: gray;"><br>
-
-
+       
             <div class="row text-center">
                 <!--01 Surah Al-Fatihah------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                    <a href=text/1 ><button class="btn-outline-info">
+                    <a href="text/1"><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 1
@@ -42,7 +27,7 @@
                 </div>
                 <!--02 Surah Al-Baqarah------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                <a href=text/2><button class="btn-outline-info">
+                    <a href="text/2"><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 2
@@ -60,7 +45,7 @@
                 </div>
                 <!--03 Surah Ali 'Imran------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                    <a href="text"><button class="btn-outline-info">
+                    <a href="text/3"><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 3
@@ -2082,6 +2067,8 @@
     
     </main>
 </html>
+
+
 
 @endsection
 

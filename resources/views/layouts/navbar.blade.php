@@ -15,7 +15,7 @@
         <div class="logo">The Noble Quran</div>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Surah</a></li>
+                <li><a href="home">Surah</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
