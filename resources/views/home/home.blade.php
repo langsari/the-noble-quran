@@ -24,7 +24,7 @@
             <div class="row text-center">
                 <!--01 Surah Al-Fatihah------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                    <a href=1 ><button class="btn-outline-info">
+                    <a href=text/1 ><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 1
@@ -42,7 +42,7 @@
                 </div>
                 <!--02 Surah Al-Baqarah------------------------------------------------------------------------------------------------>
                 <div class="col-sm"> 
-                <a href=2><button class="btn-outline-info">
+                <a href=text/2><button class="btn-outline-info">
                         <div class="surah-block">
                             <div class="num">
                                 2
