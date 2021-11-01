@@ -23,6 +23,15 @@ use Monolog\Utils;
  */
 class StreamHandler extends AbstractProcessingHandler
 {
+<<<<<<< HEAD
+    /** @const int */
+    protected const MAX_CHUNK_SIZE = 2147483647;
+    /** @const int 10MB */
+    protected const DEFAULT_CHUNK_SIZE = 10 * 1024 * 1024;
+    /** @var int */
+    protected $streamChunkSize;
+=======
+>>>>>>> parent of 01bbed27 (Test)
     /** @var resource|null */
     protected $stream;
     protected $url;
@@ -44,6 +53,23 @@ class StreamHandler extends AbstractProcessingHandler
     public function __construct($stream, $level = Logger::DEBUG, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
     {
         parent::__construct($level, $bubble);
+<<<<<<< HEAD
+
+        if (($phpMemoryLimit = Utils::expandIniShorthandBytes(ini_get('memory_limit'))) !== false) {
+            if ($phpMemoryLimit > 0) {
+                // use max 10% of allowed memory for the chunk size, and at least 100KB
+                $this->streamChunkSize = min(static::MAX_CHUNK_SIZE, max((int) ($phpMemoryLimit / 10), 100 * 1024));
+            } else {
+                // memory is unlimited, set to the default 10MB
+                $this->streamChunkSize = static::DEFAULT_CHUNK_SIZE;
+            }
+        } else {
+            // no memory limit information, set to the default 10MB
+            $this->streamChunkSize = static::DEFAULT_CHUNK_SIZE;
+        }
+
+=======
+>>>>>>> parent of 01bbed27 (Test)
         if (is_resource($stream)) {
             $this->stream = $stream;
         } elseif (is_string($stream)) {
