@@ -15,6 +15,15 @@ class MquranController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // public function editquran($id){
+    //     $arabics = Datasurah::with('arabic.thais')->find($id);
+       
+
+    //   return view('admin.editquran',compact('arabics'));
+    //   //return view('admin.edit-quran');
+   
+    //  }
     public function index()
     {
         //

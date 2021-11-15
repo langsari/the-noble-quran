@@ -34,24 +34,28 @@ class SearchController extends Controller
               'query'=>'required|min:1'
            ]);
   
-           $search_text = $request->input('query');
+           $query = $request->input('query');
 
            $texts =  DB::table('datasurahs')
            ->join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
            ->join('thais', 'thais.arabic_id', '=', 'arabics.arabic_id')
         
-           ->select('datasurahs.th_name','datasurahs.id','arabics.arabic_id', 'arabics.text','thais.Text',)
-                      ->where('arabics.text','LIKE','%'.$search_text.'%')
+           ->select('datasurahs.th_name','datasurahs.id','arabics.arabic_id', 'arabics.text','thais.Text','arabics.ayat')
+           // $arabics = Datasurah::with('arabic.thais')->find($id);
+           // $tafseer = Tafseer::with('data')->get();
+                      ->where('arabics.text','LIKE','%'.$query.'%')
                      //->orWhere('id','<', 114)
-                      ->orWhere('thais.Text','like','%'.$search_text.'%')
-                   
-                      ->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
-                      ->orWhere('datasurahs.th_name','like','%'.$search_text.'%')
+                     // ->orWhere('thais.Text','like','%'.$search_text.'%')
+                     ->orWhere('thais.Text','like','%'.$query.'%')
+                     
+                      ->orWhere('arabics.datasurah_id','like','%'.$query.'%')
+                      //->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
+                      ->orWhere('datasurahs.th_name','like','%'.$query.'%')
                      
                       ->paginate(10);
 
          
-                     // return dd($countries);
+                      //return dd($texts);
                  //    $arabics = Datasurah::with('arabic.thais')->find($id);
    //                   $data = Datasurah::join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
    //  ->join('thais', 'thais.arabic_id', '=', 'arabics.arabic_id')
@@ -60,6 +64,9 @@ class SearchController extends Controller
 
                      
             return view('search',['texts'=>$texts]);
+            //return response()->view('your_view', compact('variableName'));
+          //  return response()->view('search', compact('texts'));
+             //return response()->json($texts);
 
                 //   $countries =  Datasurah::whereHas('tran', function($query) use($search_text) {
           
@@ -79,11 +86,11 @@ class SearchController extends Controller
 // // or this option  
 // //$name = $request->input('q');
 
-// $products = DB::table('products')           
-//     ->select('products.*')              
-//     ->where('products.name' , 'like', '%'.$name.'%') //Error in this line   
+// $tafseers = DB::table('tafseers')           
+//     ->select('tafseers.*')              
+//     ->where('tafseers.name' , 'like', '%'.$name.'%') //Error in this line   
 
-// return view('product',compact('products'));
+// return view('tafseer',compact('tafseers'));
 //     }
 }
 

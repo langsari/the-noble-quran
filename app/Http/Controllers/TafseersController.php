@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Arabic;
-use App\Models\Datasurah;
-use App\Models\Thai;
+
+use App\Models\Tafseer;
 
 class TafseersController extends Controller
 {
@@ -17,7 +16,9 @@ class TafseersController extends Controller
      */
     public function index()
     {
-        //
+        //$tafseer = Tafseer::with('data')->get();
+        $tafseers = Tafseer::paginate(5);
+          return view('tafseers.index',compact('tafseers'));
     }
 
 
@@ -59,7 +60,7 @@ class TafseersController extends Controller
      */
     public function create()
     {
-        //
+        return view('tafseers.create');
     }
 
     /**
@@ -70,7 +71,18 @@ class TafseersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'datasurah_id' => 'required',
+            'youtubeId' => 'required',
+        ]);
+
+        Tafseer::create($data);
+
+      
+       // Tafseer::create($request->all());
+
+        return redirect()->route('tafseers.index')->with('success', 'เพิ่มวิดีโอตัฟซีรสำเร็จ');
     }
 
     /**
@@ -79,9 +91,9 @@ class TafseersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tafseer $tafseer)
     {
-        //
+        return view('tafseers.show', ['tafseer' =>  $tafseer]);
     }
 
     /**
@@ -90,9 +102,9 @@ class TafseersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tafseer $tafseer)
     {
-        //
+        return view('tafseers.edit',compact('tafseer'));
     }
 
     /**
@@ -102,10 +114,22 @@ class TafseersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tafseer $tafseer)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'datasurah_id' => 'required',
+            'youtubeId' => 'required'
+           
+        ]);
+        $tafseer->name = $request->name;
+        $tafseer->youtubeId = $request->youtubeId;
+        $tafseer->datasurah_id = $request->datasurah_id;
+        $tafseer->save();
+       // $tafseer->update($request->all());
+        return redirect()->route('tafseers.index');
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -113,8 +137,9 @@ class TafseersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tafseer $tafseer)
     {
-        //
+        $tafseer->delete();
+        return back();
     }
 }

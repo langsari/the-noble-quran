@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
     
@@ -18,18 +19,17 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a>
+      </li>
+     
       <li class="nav-item">
-        <a class="nav-link" href="QuranVideos.php">จัดการกุรอาน</a>
+      <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="hometest.php">จัดารผู้ใช้</a>
+        <a class="nav-link" href="{{ route('approvalstatus') }}">ตรวจสอบสถานะ</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login-form.html">จัดการตัฟซัร</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login-form.html">จัดการโน้ต</a>
-      </li>
+   
    
     </ul>
 </nav>
@@ -43,38 +43,43 @@
                     @endif
 </div>
 <div class ="container">
-  <table class="table table-hover table-bordered border-success table-striped">
+  <table class="table table-hover table-bordered  ">
   
     <thead >
-    <tr class="table-success">
+    <tr class="table">
         <th scope="col">ลำดับที่</th>
-        <th scope="col">ชื่อซูเราะห์</th>
-        <th scope="col">ชื่อภาษาอาหรับ</th>
-        <th scope="col">ประทานที่</th>
-        <th scope="col">จำนวนอายะห์</th>
+        <th scope="col">ชื่อ</th>
+        <th scope="col">ไอดียูทูป</th>
+        <th scope="col">ซูเราะห์</th>
+        <th scope="col">action</th>
+      
      </tr> 
   
    <thead>
   <tbody>
 
-  @foreach($datasurahs as $datasurah)  
-  <tr class="table-success ">
-      <td>{{ $datasurah->id}}</td>
-      <td>
-     
-        <a href ="{{ route('adminmnquran') }}" class="link-dark" >
-        {{ $datasurah->th_name}}</a></td>
-      <td>{{ $datasurah->surah_arab}})</td>
-      <td>{{ $datasurah->type}}</td>
-      <td>{{ $datasurah->whole_ayah}}</td>
+  @foreach($tafseer as $tafseers )  
+  <tr class="table ">
+      <td>{{ $tafseers->id}}</td>
+      <td width=50%> {{ $tafseers->name}}</a></td>
+      <td>{{ $tafseers->youtubeId}}</td>
+      <td>{{ $tafseers->data->th_name}}</td>
+      <td >
+                      
+            
+                      <a href="{{ route('editquran') }}" class="btn btn-warning">แก้ไข</a>
+                      <a href="{{ route('editquran') }}" class="btn btn-primary">ดู</a>
+                      <a href="{{ route('editquran') }}" class="btn btn-danger">ลบ</a>
+                
+                                 </td>
   </tr> 
   @endforeach
   </tbody> 
   </table>
-  {{$datasurahs->links()}}
+
+ 
+
 
 </div>
+
 @endsection
-
-
-

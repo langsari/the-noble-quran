@@ -18,7 +18,7 @@
     <div class ="col-md-12">
         <center>
       <h2>ยินดีต้อนรับเข้าสู่ Quran.th</h2>
-          <a href ="{{ route('posts.create')}}" class ="btn btn-dark my-3"> สร้างโน้ตใหม่ </a>
+          <a href ="{{ route('notes.index')}}" class ="btn btn-dark my-3"> สร้างโน้ตใหม่ </a>
           <a href ="{{ route('homeuser')}}" class ="btn btn-dark my-3"> Quran.th </a>
 </center>
     </div>      

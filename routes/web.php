@@ -2,13 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\MquranController;
+use App\Http\Controllers\TypeaheadAutocompleteController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JointableController;
 use App\Http\Controllers\JoinTranslationController;
 use App\Http\Controllers\DetailController;
-use App\Http\Controllers\TestController;
+
 use App\Http\Controllers\exController;
 use App\Http\Controllers\Jointrancontroller;
 use App\Http\Controllers\QuranController;
@@ -20,8 +20,13 @@ use App\Http\Controllers\TafseersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SearchuserController;
+use App\Http\Controllers\ApprovalController;
+use App\Http\Controllers\StaffController;
+//use App\Http\Controllers\MquranController;
+use App\Http\Controllers\ManageUserController;
+use App\Http\Controllers\ManageQuranController;
 
-
+use App\Http\Controllers\NoteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +41,8 @@ use App\Http\Controllers\SearchuserController;
 Route::get('/', function () {
 return view('quran.home');
 });
+
+
 
 //Route::get('/', function () {
   //return view('welcome');
@@ -83,6 +90,7 @@ Auth::routes();
 
 Route::get ('/home' ,[HomeController::class, 'index'])->name('home');
 Route::get ('admin/adminHome',[HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
+
 
 
 //Route::get('join_table', [JointableController::class, 'index']);
@@ -134,9 +142,8 @@ Route::get('/qurans/index{datasurah}', [QuranController::class, 'index']);
 //Route::get ('admin/adminHome' ,[AdminController::class, 'adminhome'])->name('adminhome');
 
 //Route role users
-Route::get ('admin/adminHome',[HomeController::class,'adminhome'])->name('adminhome')->middleware('is_admin');
-Route::get ('admin/approvalHome',[HomeController::class,'approvalhome'])->name('approvalhome')->middleware('is_admin');
-Route::get ('admin/staffHome',[HomeController::class,'staffhome'])->name('staffhome')->middleware('is_admin');
+Route::get ('thai/index',[HomeController::class,'adminhome'])->name('adminhome')->middleware('is_admin');
+
 
 
 Route::get ('admin/m.quran' ,[HomeController::class, 'adminmnquran'])->name('adminmnquran');
@@ -170,9 +177,10 @@ Route::resource('posts','PostController');
 
 
 Route::get ('/managequran{datasurah}',[AdminController::class,'managequran'])->name('managequran');
-Route::get ('admin/manageuser',[AdminController::class,'manageuser'])->name('manageuser');
+//Route::get ('admin/manageuser',[AdminController::class,'manageuser'])->name('manageuser');
 Route::get ('admin/managetafseer',[AdminController::class,'managetafseer'])->name('managetafseer');
 Route::get ('admin/managenote',[AdminController::class,'managenote'])->name('managenote');
+Route::get ('admin/editquran',[AdminController::class,'editquran'])->name('editquran');
 
 //
 Route::get('enduser/homeuser',[QuranController::class, 'homeuser'])->name('homeuser');
@@ -183,3 +191,36 @@ Route::get('/enduser/tafseer_detailuser{data}', [QuranController::class, 'tafsee
 ////simple search end user
 Route::get('/searchuser',[SearchuserController::class, 'searchuser'])->name('web.searchuser');
 Route::get('/findsearch',[SearchuserController::class, 'findsearch'])->name('web.findsearch');
+
+//staff
+Route::get ('thai/index',[StaffController::class,'staffhome'])->name('staffhome')->middleware('is_admin');
+Route::get ('/staffmanagequran{datasurah}',[StaffController::class,'staffmanagequran'])->name('staffmanagequran');
+Route::get ('staff/staffmanagetafseer',[StaffController::class,'staffmanagetafseer'])->name('staffmanagetafseer');
+Route::get ('staff/viewstatus',[StaffController::class,'viewstatus'])->name('viewstatus');
+
+//approval
+Route::get ('thai/index',[ApprovalController::class,'approvalhome'])->name('approvalhome')->middleware('is_admin');
+Route::get ('/approvalmanagequran{datasurah}',[ApprovalController::class,'approvalmanagequran'])->name('approvalmanagequran');
+Route::get ('approval/approvalmanagetafseer',[ApprovalController::class,'approvalmanagetafseer'])->name('approvalmanagetafseer');
+Route::get ('approval/approvalstatus',[ApprovalController::class,'approvalstatus'])->name('approvalstatus');
+
+//hl search
+Route::get('user/typeahead_autocomplete', [TypeaheadAutocompleteController::class, 'index']);
+
+Route::get('/typeahead_autocomplete/action', [TypeaheadAutocompleteController::class, 'action'])->name('typeahead_autocomplete.action');
+
+//tafseers
+Route::resource('tafseers','TafseersController');
+
+//adminmanageuser
+
+Route::resource('user','ManageUserController');
+
+//adminmanageQuran
+Route::resource('thai','ManageQuranController');
+
+//designeditquran
+
+
+//note
+Route::resource('notes','NoteController');

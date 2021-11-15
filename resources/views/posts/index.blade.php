@@ -13,8 +13,21 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-
+                    
+                    if(auth()->attempt(array('email' => $input['email'],'password' => $input['password']))){
+        if (auth()->user()->is_admin ==1 ){
+            return redirect()->route('adminhome');
+        }else if (auth()->user()->is_admin ==2 ){
+            return redirect()->route('approvalhome');
+        }else if (auth()->user()->is_admin ==3 ){
+            return redirect()->route('staffhome');
+        }else {
+            return redirect()->route('homeuser');
+        }
+    }else {
+            return redirect()->route('login')->with('error','อีเมลล์หรือรหัสผ่านไม่ถูกต้อง');
+        }
+    }
 <div class="row mt-2">
     <div class ="col-md-12">
     <center>

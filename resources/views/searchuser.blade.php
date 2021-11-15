@@ -1,4 +1,4 @@
-@extends('enduser.shortnav')
+@extends('enduser.navuser')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,8 @@
     <div class="container">
        <div class="row">
           <div class="col-md-12" style="margin-top:40px">
+          <br>
+          <br>
              <h4> ค้นหาในอัลกุรอาน...</h4><hr>
              <form action="{{ route('web.find') }}" method="GET">
         
@@ -31,14 +33,12 @@
              <br>
              @if(isset($texts))
 
-               <table class="table table">
+               <table class="table table table-bordered">
                    <thead>
                    <tr class="table-success">
-      <th style="width:7%" scope="col">ซูเราะห์ที่</th>
-        <th style="width:10%" scope="col">ชื่อซูเราะห์</th>
-        <th scope="col">ภาษาอาหรับ</th>
-        <th scope="col">คำแปล</th>
-        <th style="width:7%" scope="col">อายะห์ที่</th>
+   
+        <th style="width:10%" scope="col">ผลการค้นหา</th>
+     
      </tr> 
                    </thead>
                    <tbody>
@@ -46,13 +46,8 @@
                        @if(count($texts) > 0)
                            @foreach($texts as $text)
                               <tr>
-                              <td><a href="{{ route('arabic',$text->id) }}" class="link-dark" >{{$text->id}} </a></td>
-                              
-                                  <td><a href="{{ route('arabic',$text->id) }}" class="link-dark" >{{$text->th_name}} </a></td>
-                            
-                                  <td>{{ $text->text }}</td>
-                                  <td>{{ $text->Text }}</td>
-                                  <td>{{ $text->arabic_id}}</td>
+                              <td><a href="{{ route('arabic',$text->id) }}" class="link-dark" >{{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] </a><br> {{ $text->text }}
+                                  <br> {{ $text->Text }}</td>
                               </tr>
                            @endforeach
                        @else

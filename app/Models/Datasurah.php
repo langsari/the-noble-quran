@@ -28,4 +28,9 @@ class Datasurah extends Model
     {
         return $this->hasMany(Thai::class,'datasurah_id');
     }
+    public function qurantafseer()
+    {
+        return $this->hasMany(Qurantafseer::class,'datasurah_id');
+    }
+
 }

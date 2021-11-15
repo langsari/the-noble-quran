@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Arabic;
 use App\Models\Datasurah;
 use App\Models\Thai;
-use App\Models\Tafseer;
+
 
 class SearchuserController extends Controller
 {
@@ -40,12 +40,12 @@ class SearchuserController extends Controller
            ->join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
            ->join('thais', 'thais.arabic_id', '=', 'arabics.arabic_id')
         
-           ->select('datasurahs.th_name','datasurahs.id','arabics.arabic_id', 'arabics.text','thais.Text',)
+           ->select('datasurahs.th_name','datasurahs.id','arabics.arabic_id', 'arabics.text','thais.Text','arabics.ayat')
                       ->where('arabics.text','LIKE','%'.$search_text.'%')
                      //->orWhere('id','<', 114)
                       ->orWhere('thais.Text','like','%'.$search_text.'%')
-                   
-                      ->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
+                      ->orWhere('arabics.datasurah_id','like','%'.$search_text.'%')
+                      //->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
                       ->orWhere('datasurahs.th_name','like','%'.$search_text.'%')
                      
                       ->paginate(10);
@@ -79,11 +79,11 @@ class SearchuserController extends Controller
 // // or this option  
 // //$name = $request->input('q');
 
-// $products = DB::table('products')           
-//     ->select('products.*')              
-//     ->where('products.name' , 'like', '%'.$name.'%') //Error in this line   
+// $tafseers = DB::table('tafseers')           
+//     ->select('tafseers.*')              
+//     ->where('tafseers.name' , 'like', '%'.$name.'%') //Error in this line   
 
-// return view('product',compact('products'));
+// return view('tafseer',compact('tafseers'));
 //     }
 }
 

@@ -1,4 +1,4 @@
-@extends('enduser.navuser')
+@extends('enduser.shortnav')
 @section('content')
 <br>
 <h3 class="text-center">{{$tafseers->th_name}}</h3>

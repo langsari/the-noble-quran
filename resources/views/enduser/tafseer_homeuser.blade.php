@@ -1,4 +1,4 @@
-@extends('enduser.navuser')
+@extends('enduser.shortnav')
 @section('content')
 <br>
 <br>

@@ -85,9 +85,9 @@ class QuranController extends Controller
         $arabics = Datasurah::with('arabic.thais')->find($id);
         $datas = Datasurah::all();
         $datasurah = Datasurah::with('tafseer')->find($id);
-     
+        $tafseers =Datasurah::with('qurantafseer')->find($id);
     
-      return view('enduser.detailuser',compact('datas','arabics','datasurah'));
+      return view('enduser.detailuser',compact('datas','arabics','datasurah','tafseers'));
   
     }
 

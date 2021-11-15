@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
 
+
  
     
     
@@ -25,7 +26,8 @@
 
 <body>
 
-<div class="topnav">
+<div class="topnav fixed-top ">
+  
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
   <a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
 
@@ -40,10 +42,34 @@
       <button type="submit">ค้นหา</button>
     </form>
 
+
     
   </div>
+  
   </div>
 </div>
+<div style = background-color:#9be2cd; class=" row text-center ">
+
+      <!-- Header -->
+      <header class="masthead  text-white text-center">
+
+<div style = background-color:#9be2cd;>
+  <h1 class="jumbotron-heading"></h1>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <br>
+    <br>
+      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <br><br>
+      <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
+      <div class="col-md-3"></div>
+    </div>
+
+  </div>
+</div>
+</div>
+</header>
 </div>
 
 @yield('content')

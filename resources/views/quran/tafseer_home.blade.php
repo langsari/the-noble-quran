@@ -1,5 +1,6 @@
-@extends('quran.navbar')
+@extends('quran.nav')
 @section('content')
+
 <br>
 <br>
 

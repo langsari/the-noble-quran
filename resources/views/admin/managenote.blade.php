@@ -1,116 +1,156 @@
-@extends('layouts.app')
+@extends('layouts.adminmanageuser')
+
+
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-    
-            <div class="card">
-                <div class="card-header">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <div class="col-md-12">
+            <!-- <div class="card"> -->
+             
 
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('adminhome') }}">จัดการกุรอาน</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('manageuser') }}">จัดการผู้ใช้</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('managetafseer') }}">จัดการตัฟซีร</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('managenote') }}">จัดการโน้ต</a>
-      </li>
-   
-    </ul>
-</nav>
-</div>
-
-<div class="card-body">
+                <!-- <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
+                    @endif -->
+
+
+<div class="row mt-2">
+    <div class ="col-md-12">
+    <div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">จัดการโน้ต</h1>
+
+                        </div>
+         
+    </div>      
+</div> 
+
+@if($message = Session::get('success'))
+    <div class ="alert alert-success">
+        {{$message}}
 </div>
-<table class="table table-bordered">
 
-<tr>
-   <th>ที่</th>
-   <th>หัวข้อ</th>
-   <th>คำอธิบาย</th>
-   <th width="5%">Action</th>
-</tr>
+@endif
 
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+ <tr>
+    <th scope="col">ที่</th>
+    <th scope="col">หัวข้อ</th>
+    <th scope="col">คำอธิบาย</th>
+    <th scope="col">Action</th>
+ </tr>
+ </thead>
+    <tbody>
+ @foreach ($data as $key => $value)
     <tr>
-       <td>1</td>
-       <td>vafr</td>
-       <td>vefg</td>
-       <td>
-         <form action="http://127.0.0.1:8000/posts/3" method="post">
-            <a href="http://127.0.0.1:8000/posts/3" class="btn btn-primary">ดู</a>
-            <input type="hidden" name="_token" value="h5zGlROZN7twSWTp9wg0z0PrSow3NC1gFmEa2mgg">     
-         </form>
-       </td>
-   </tr>    
-    <tr>
-       <td>2</td>
-       <td>s g</td>
-       <td> sg</td>
-       <td>
-         <form action="http://127.0.0.1:8000/posts/5" method="post">
-            <a href="http://127.0.0.1:8000/posts/5" class="btn btn-primary">ดู</a>
-         
-            <input type="hidden" name="_token" value="h5zGlROZN7twSWTp9wg0z0PrSow3NC1gFmEa2mgg">     
-         </form>
-       </td>
-   </tr>    
-    <tr>
-       <td>3</td>
-       <td>vf</td>
-       <td>vf</td>
-       <td>
-         <form action="http://127.0.0.1:8000/posts/7" method="post">
-            <a href="http://127.0.0.1:8000/posts/7" class="btn btn-primary">ดู</a>
-         
-            <input type="hidden" name="_token" value="h5zGlROZN7twSWTp9wg0z0PrSow3NC1gFmEa2mgg">     
-         </form>
-       </td>
-   </tr>    
-    <tr>
-       <td>4</td>
-       <td>bgd bm</td>
-       <td>njn,jgh</td>
-       <td>
-         <form action="http://127.0.0.1:8000/posts/8" method="post">
-            <a href="http://127.0.0.1:8000/posts/8" class="btn btn-primary">ดู</a>
+        <td>{{ ++$i }}</td>
+        <td>{{ $value->title }}</td>
+        <td>{{ Str::limit($value->description, 100) }}</td>
+        <td>
+ 
+
+                       
+                        <form action="{{ route('posts.destroy', $value->id) }}">
+                              
+                       
+
+                                 <!-- read -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal">
+  ดู
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel{{$value->id}}"></h4>
+      </div>
+      <div class="modal-body">
+     
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-14 col-md-9">
+              <div class="card o-hidden border-0 shadow-lg my-0">
+                <div class="card-body p-0 bg-gray-500">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="p-5">
+                        <div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">ดูโน้ต</h1>
+                        </div>
+                        <form class="form-group text-right">
+
+                        <div class="form row">
+                            <div class="col-sm-3">
+                              <span class="h7 text-gray-900 mb-4 form-text">ลำดับที่ :</span>
+                            </div>
+                        
+                            <div class="col-sm-4">
+                              <input class="form-control" id="{{$value->id}}" name="id"  type="text" value="{{$value->id}}" readonly autocomplete="off">
+                            </div>
+                            </div>
+                  
+
            
-            <input type="hidden" name="_token" value="h5zGlROZN7twSWTp9wg0z0PrSow3NC1gFmEa2mgg">     
-         </form>
-       </td>
-   </tr>    
-    <tr>
-       <td>5</td>
-       <td>hgnbm</td>
-       <td>bjuknkh</td>
-       <td>
-         <form action="http://127.0.0.1:8000/posts/9" method="post">
-            <a href="http://127.0.0.1:8000/posts/9" class="btn btn-primary">ดู</a>
-          
-            <input type="hidden" name="_token" value="h5zGlROZN7twSWTp9wg0z0PrSow3NC1gFmEa2mgg">         
-         </form>
-       </td>
-   </tr>    
 
-</table>  
+                          <div class="form-group row">
+                            <div class="col-sm-3">
+                              <span class="h7 text-gray-900 mb-4 form-text">ชื่อเรื่อง:</span>
+                            </div>
+                            <div class="col-sm-9">
+                            <textarea class="form-control" style="height: 150px" name="text"   readonly >{{ $value->title }}</textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <div class="col-sm-3">
+                              <span class="h7 text-gray-900 mb-4 form-text">คำอธิบาย:</span>
+                            </div>
+                            <div class="col-sm-9">
+                            <textarea class="form-control" style="height: 150px" name="Txet" readonly   >{{ Str::limit($value->description, 100) }}</textarea>
+                            </div>
+                          </div>
+                         
+                         
+                          
+                         
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="result" style="padding-top: 50px; width: 100%"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+       
+      </div>
+</div>                              
+                            </form>
+                
+                            
+
+                    
+        </td>
+    </tr>    
+ @endforeach
+
+ </tbody>
+</table>
+
+
+
+{!! $data->links() !!}
 
 @endsection

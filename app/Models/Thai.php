@@ -9,10 +9,10 @@ class Thai extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'arabic_id', 'text',
+        'arabic_id', 'Text','ayat','audio'
     ];
-    public function thais()
-    {
-        return $this->belongsTo(Arabic::class);
-    }
+    // public function trans()
+    // {
+    //     return $this->belongsTo('App/Models/Arabic');
+    // }
 }

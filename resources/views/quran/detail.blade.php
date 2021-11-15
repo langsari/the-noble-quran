@@ -1,4 +1,4 @@
-@extends('quran.nav')
+@extends('quran.navbar')
 @section('content')
 <!--<h3 class="text-center text-dark">{{$arabics->th_name}}</h3> -->
 
@@ -36,12 +36,53 @@
         padding: 0 5px;
         margin: 0;
         color: red;
+      }
+        .cautions2 {
+        
+        font-size: 13px;
+        font-weight: normal;
+        direction: ltr;
+        padding: 0 5px;
+        margin: 0;
+        color: blue;
 
     }
+    .t {
+  background-color: white;
+  color: grey;
+  font-family:  serif;
+        font-size: 15px;
+        font-weight: normal;
+        direction: rtl;
+        padding: 0;
+        margin: 0;
+}
+    @font-face {
+    font-family: quran-font;
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/font/AmiriQuranColored.woff') format('truetype');
+  }
+  
+  .quran-font {
+    font-family: quran-font;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .quran-font-intro  p{
+     font-family: quran-font;
+     direction: rtl;
+     font-size: 26px;
+     line-height: 200%;
+     color: #FFFFFF;
+   }
+
         
      
 
       </style>
+       <br>
+    <br>
  <div style = background-color:#00000; class="search-area">
     <div class="container col-md-8">
   
@@ -159,16 +200,91 @@ $(document).ready(function(){
 
  
 
-  <ul class="list-group list-group-horizontal">
-  <!--VDO Tafseer -->
+  <ul class="list-group bg-white list-group-horizontal  ">
+
+
+
+<!-- read -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal">
+  โหมดอ่านอัลกุรอาน
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
+      </div>
+      <div class="modal-body">
+       
+
+      <div class="quran-font-intro ">
+        <p>
+        @foreach($arabics->arabic as $arabic ) 
+      {{$arabic->text}} 
+       [{{$arabic->thais->ayat}}]
+      @endforeach</p>
+      </div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- read -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal2">
+  ตัฟซีรอัลกุรอาน
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        @foreach($tafseers->qurantafseer as $tafseer ) <h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
+      </div>
+      <div class="modal-body">
+       
+
+   
+        <p>
+       
+      {{$tafseer->qurantafseer}} 
+     
+      </p>
+    <hr>
+    <div class ="card-text">   
+        <strong>แปลโดย : </strong>
+        {{ $tafseer->translator_name }}
+      </div> 
+      @endforeach
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!--VDO Tafseer -->
   
 
 
 
   <div class="bs-example">
             <a href="#Geeks2"
-               class="btn  btn-light"
-               data-toggle="modal">วิดีโอตัฟซีร</a>
+               class="btn  btn-dark"
+               data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
  
             <div id="Geeks2" class="modal fade">
                 <div class="modal-dialog">
@@ -182,12 +298,14 @@ $(document).ready(function(){
                         </div>
                         <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
+                        <p>{{$tafseer->name}}</p>
                             <iframe id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
                             frameborder="0" allowfullscreen>
                             </iframe>
                             <br>
                             <br>
+                          
                             
                             @endforeach
                         </div>
@@ -214,40 +332,8 @@ $(document).ready(function(){
     </script>
 
 
-<!-- read -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-light " data-toggle="modal" data-target="#myModal">
-  โหมดอ่านอัลกุรอาน
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
-      </div>
-      <div class="modal-body">
-      <p class="arabic">@foreach($arabics->arabic as $arabic ) 
-      {{$arabic->text}} [{{$arabic->thais->ayat}}]
-      @endforeach</p>  
-    
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
-      </div>
-    </div>
-  </div>
-</div>
-
-
-   
-
-
 <!-- dropdown : can not link
-           <li class="list-group-item  list-group-item-secondary">	<select id="surahlist" class="surah-list">  @foreach($datas as $data) <option  value={{$data->id}}>
+           <li class="list-group-item bg-dark list-group-item-secondary">	<select id="surahlist" class="surah-list bg-dark">  @foreach($datas as $data) <option  value={{$data->id}}>
     <li><a href="{{ route('arabic', $data) }}">{{$data->th_name}}</a></li>
     @endforeach</option></select> </li>
 
@@ -265,31 +351,50 @@ $(document).ready(function(){
         }
         getSelectValue();
 
-    </script>
-    -->
+    </script> -->
+   
 
     <!-- dropdown : can link-->
-    <div class="col-md-3">
+    <div class="col-md-3 ">
              
-             <div class="form-s2">
+             <div class="form-s2 ">
                  <div>
    
-    <select class="form-control" name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
-    <option value="#">ซูเราะห์</option>
+    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
+    <option value="#" style="color:white">ซูเราะห์</option>
     @foreach($datas as $data)
-    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">{{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
+    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
+{{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
+
+<!-- <script>
+(document).ready(function() {
+    $('#select').css('color','gray');
+    $('#select').change(function() {
+       var current = $('#select').val();
+       if (current != 'null') {
+           $('#select').css('color','black');
+       } else {
+           $('#select').css('color','gray');
+       }
+    }); 
+});
+     </script> -->
       
     </div>
     </div>
     </div>
 
-    <div class="col-md-3">
-    <select class="form-control" name="menu1" id="{{$data->id}}">
-    <option value="#">อายะห์</option>
+    <div class ="col-md-3 ">
+   
+    <select class="form-control  " name="menu1" id="{{$data->id}}">
+    <option value="#" >อายะห์</option>
     @foreach($arabics->arabic as $arabic )  
    <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option> 
     @endforeach
    </select>
+
+
+   
 
 
 <script>var urlmenu = document.getElementById( 'menu1' );
@@ -299,6 +404,9 @@ $(document).ready(function(){
 
 
 
+
+    
+ 
 
     <!-- Example single danger button 
 <div class="btn-group">
@@ -319,7 +427,8 @@ $(document).ready(function(){
           </ul>
 
   <br>
-         <h4 class="arabic text-center ">{{$arabics->th_name}}</h4>
+  <br>
+         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
          <br> 
          
          <div class="col-sm-3">
@@ -327,11 +436,16 @@ $(document).ready(function(){
                 </div>
                 </div>
                 @foreach($arabics->arabic as $arabic )
+      <div class="quran-font-intro ">
+        <p>
+        {{$arabic->text}}
+        </p>
       
-            <p class="arabic">{{$arabic->text}}[{{$arabic->thais->ayat}}]<span class="arabic_number"></span></p>
+      </div>
+      <p class="t">{{$arabic->transliteration}}</p>
    
             <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
-            
+          
             <br>
             <audio controls >
                 <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
@@ -370,17 +484,86 @@ $(document).ready(function(){
             <textarea class="form-control" id="message-text"></textarea>
           </div>
         
-          <p class="cautions">*กรุณาเข้าสู่ระบบก่อนสร้างโน้ต*</p>
+          <p class="cautions">*กรุณาเข้าสู่ระบบก่อนสร้างโน้ต*</p>  <a class="cautions2" href="{{ route('login') }}">ไปที่หน้าเข้าสู่ระบบ</a>
+         
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
-        <button type="button" class="btn btn-success">บันทึก</button>
+      <!-- <a href ="{{ route('login')}}" class ="btn btn-dark my-3">ไปหน้าเข้าสู่ระบบ</a> -->
+      <button type="button" class="btn btn-dark">บันทึก</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+        
+        
       </div>
     </div>
   </div>
 </div>
 
+<!-- //Create Note
+@if ($errors->any())
+ <div class="alert alert-danger">
+     <strong>อุปส์</strong>
+     มีบางอย่างผิดพลาด <br><br>
+<ul>
+    @foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+  Note 
+ <form action="{{ route('notes.store') }}" method="post">
+    @csrf
+ <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['arabic_id']}}" data-whatever="@mdo">โน๊ต</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
+            <input type="text" class="form-control" name="title" >
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">คำอธิบาย :</label>
+            <textarea class="form-control"name="description"></textarea>
+          </div> -->
+          <!-- <div class="form-group">
+            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
+            <input type="text" class="form-control" name="datasurah_id" >
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
+            <input type="text" class="form-control" name="arabic_id" >
+          </div>
+        
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
+            <input type="text" class="form-control" name="users_id" >
+          </div>
+         -->
+        
+<!--        
+
+          <p class="cautions">*กรุณาเข้าสู่ระบบก่อนสร้างโน้ต*</p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+        <button type="submit" class="btn btn-success">บันทึก</button>
+
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+</form> -->
 
 
 

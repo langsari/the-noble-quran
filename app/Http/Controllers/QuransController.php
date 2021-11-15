@@ -8,6 +8,8 @@ use App\Models\Arabic;
 use App\Models\Datasurah;
 use App\Models\Thai;
 use App\Models\Tafseer;
+use App\Models\Qurantafseer;
+use App\Models\Note;
 
 use DB;
 
@@ -49,24 +51,34 @@ class QuransController extends Controller
     { 
         $datas = Datasurah::all();
         $datasurah = Datasurah::with('tafseer')->find($id);
+        $tafseers =Datasurah::with('qurantafseer')->find($id);
         $arabics = Datasurah::with('arabic.thais')->find($id);
+       
          //function for ayat arabic
-         function format_arabic_number($number)
-         {
-             $ayat = 1;
-             $arabic_number = array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
-             $jum_karakter = strlen($number);
-            $temp = "";
+        //  function format_arabic_number($number)
+        //  {
+        //      $ayat = 1;
+        //      $arabic_number = array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
+        //      $jum_karakter = strlen($number);
+        //     $temp = "";
  
-             for ($i =0; $i< $jum_karakter; $i++) {
-                 $char = substr($number, $i, 1);
-                 $temp .= $arabic_number[$char];
+        //      for ($i =0; $i< $jum_karakter; $i++) {
+        //          $char = substr($number, $i, 1);
+        //          $temp .= $arabic_number[$char];
  
-             }
-             return '<span class="arabic_number">' .$temp. ' </span>';            
-         } 
+        //      }
+        //      return '<span class="arabic_number">' .$temp. ' </span>';            
+        //  } 
      
-       // ->firstOrFail();
+      
+      return view('quran.detail',compact('datas','arabics','datasurah','tafseers'));
+    //   [
+    //    //'datasurahs' => $datasurahs,
+    //    'arabics' => $arabics
+    // ]);
+    //     //    'ayats' => $ayats
+    //     //]);
+     // ->firstOrFail();
 
        // $plucked = $ayats->pluck('ayat.text', 'trans.text');
         
@@ -78,13 +90,6 @@ class QuransController extends Controller
         //dd($ayats->toArray());
         //'ayats' => $ayats]);
     
-      return view('quran.detail',compact('datas','arabics','datasurah'));
-    //   [
-    //    //'datasurahs' => $datasurahs,
-    //    'arabics' => $arabics
-    // ]);
-    //     //    'ayats' => $ayats
-    //     //]);
     }
     
 

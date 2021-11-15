@@ -25,10 +25,10 @@
 
 <body>
 
-<div class="topnav">
+<div class="topnav fixed-top ">
 <a class="active" href="{{ route('homeuser') }}">Quran.th</a>
   <a href="{{ route('tafseer_homeuser') }}">ตัฟซีร</a>
-  <a href="{{ route('posts.index')}}">โน้ต</a>
+  <a href="{{ route('notes.index')}}">โน้ตของคุณ</a>
   <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -53,6 +53,27 @@
   </div>
   </div>
 </div>
+<div style = background-color:#9be2cd; class=" row text-center ">
+      <!-- Header -->
+      <header class="masthead  text-white text-center">
+
+<div style = background-color:#9be2cd;>
+  <h1 class="jumbotron-heading"></h1>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+    <br>
+    <br>
+      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <br><br>
+      <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
+      <div class="col-md-3"></div>
+    </div>
+
+  </div>
+</div>
+</div>
+</header>
 </div>
 
 @yield('content')
