@@ -182,6 +182,7 @@ Route::get ('/managequran{datasurah}',[AdminController::class,'managequran'])->n
 //Route::get ('admin/manageuser',[AdminController::class,'manageuser'])->name('manageuser');
 Route::get ('admin/managetafseer',[AdminController::class,'managetafseer'])->name('managetafseer');
 Route::get ('admin/managenote',[AdminController::class,'managenote'])->name('managenote');
+Route::get ('admin/shownote',[AdminController::class,'shownote'])->name('shownote');
 Route::get ('admin/editquran',[AdminController::class,'editquran'])->name('editquran');
 
 //

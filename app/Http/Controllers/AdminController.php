@@ -75,6 +75,11 @@ class AdminController extends Controller
     //   return view('admin.managenote');
   
     }
+    public function shownote(Note $note)
+    {
+        $data = Note::paginate(5);
+        return view('admin.shownote',compact('data'));
+    }
      public function editquran(){
        //  $arabics = Datasurah::with('arabic.thais')->find($id);
         //return dd($arabics->toArray());

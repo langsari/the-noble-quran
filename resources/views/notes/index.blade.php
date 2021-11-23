@@ -60,7 +60,10 @@
 
 <div class="row mt-2">
     <div class ="col-md-12">
-        
+    <!-- <h class="font-semibold text-xl text-gray-800 leading-tight">
+    ยินดีต้องรับคุณ{{Auth::user()->name}}
+
+        </h>   -->
     <center>
       <h2>โน้ตของคุณ</h2>
 </center>
@@ -83,14 +86,17 @@
     <th class="font-weight-bold" >ที่</th>
     <th class="font-weight-bold">หัวข้อ</th>
     <th class="font-weight-bold">คำอธิบาย</th>
+    <th  class="font-weight-bold" >ชื่อผู้ใช้</th>
     <th  class="font-weight-bold" >Action</th>
+    
  </tr>
 
  @foreach ($data as $key => $value)
     <tr>
-        <td>{{ $loop->iteration }}</td>
+        <td>{{ $data->firstItem()+$loop->index}} </td>
         <td>{{ $value->title }}</td>
         <td>{{ Str::limit($value->description, 100) }}</td>
+        <td>{{$value->user->name}}</td>
         <td>
          <!-- <form action="{{ route('notes.destroy', $value->id) }}" method="post">
              <a href="{{ route('notes.show', $value->id) }}" class="btn btn-primary">ดู</a>

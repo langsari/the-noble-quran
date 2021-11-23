@@ -20,7 +20,7 @@
 <div class="row mt-2">
     <div class ="col-md-12">
     <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-4">จัดการโน้ต</h1>
+                          <h1 class="h4 text-gray-900 mb-4">ดูโน้ต</h1>
 
                         </div>
          
@@ -40,17 +40,28 @@
     <th scope="col">ที่</th>
     <th scope="col">หัวข้อ</th>
     <th scope="col">คำอธิบาย</th>
-    <th scope="col">Action</th>
+    <th scope="col">ชื่อผู้ใช้</th>
+    <!-- <th scope="col">Action</th> -->
  </tr>
  </thead>
     <tbody>
  @foreach ($data as $key => $value)
     <tr>
-        <td>{{ ++$i }}</td>
+    <td>{{ $data->firstItem()+$loop->index}} </td>
         <td>{{ $value->title }}</td>
         <td>{{ Str::limit($value->description, 100) }}</td>
-        <td>
- 
+        <td>{{$value->user->name}}</td>
+        <!-- <td>
+        <div class="dropdown"> {{-- Dropdown --}}
+                    <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        Action
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+                        <li><a class="dropdown-item" href="{{ route('shownote', $value->id) }}">ดู</a></li> {{-- View --}}
+                     
+                    </ul>
+                </div>
 
                        
                         <form action="{{ route('posts.destroy', $value->id) }}">
@@ -58,13 +69,13 @@
                        
 
                                  <!-- read -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal">
+<!-- Button trigger modal 
+<button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal{{$data['id']}}">
   ดู
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- Modal 
+<div class="modal fade" id="myModal{{$data['id']}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -86,7 +97,7 @@
                         </div>
                         <form class="form-group text-right">
 
-                        <div class="form row">
+                       <div class="form row">
                             <div class="col-sm-3">
                               <span class="h7 text-gray-900 mb-4 form-text">ลำดับที่ :</span>
                             </div>
@@ -116,8 +127,21 @@
                             <textarea class="form-control" style="height: 150px" name="Txet" readonly   >{{ Str::limit($value->description, 100) }}</textarea>
                             </div>
                           </div>
-                         
-                         
+                          
+                        
+                          <div class="row">
+    <div class ="card p-3"> 
+      <div class ="card-title"> 
+        <strong>หัวข้อ : </strong>
+        {{ $value->title }}
+      </div>
+
+      <div class ="card-text">   
+        <strong>คำอธิบาย : </strong>
+        {{$value->description}}
+      </div>  
+    </div>  
+</div> 
                           
                          
                         </form>
@@ -142,7 +166,7 @@
                             
 
                     
-        </td>
+        </td> -->
     </tr>    
  @endforeach
 
