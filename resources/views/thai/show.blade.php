@@ -45,28 +45,28 @@
 </nav>
 </div>    
 <br>
-<h1 class="h4 text-gray-900 mb-4">ข้อมูลผู้ใช้งาน</h1>
+<h1 class="h4 text-gray-900 mb-4">รายละเอียด</h1>
     <hr/>
 
     <div class="bg-dark text-white rounded p-3">
     <div class ="card-text">   
-        <strong>ที่ : </strong>
+        <strong>อายะห์ที่ : </strong>
         {{ $thai->ayat }}
       </div> 
       <br>
         <div class ="card-text">   
-        <strong>ชื่อ : </strong>
+        <strong>คำแปล : </strong>
         {{ $thai->Text }}
       </div> 
       <br>
       <div class ="card-text">   
-        <strong>ดีกรี : </strong>
+        <strong>เสียง : </strong>
         {{ $thai->audio }}
       </div> 
       <br>
         <div class ="card-text">   
-        <strong>อีเมลล์ : </strong>
-        {{ $thai->arabic_id }}
+        <strong>ซูเราะห์ที่ : </strong>
+        {{ $thai->id }}
       </div>  
       <br>
      

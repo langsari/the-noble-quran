@@ -9,6 +9,6 @@ class Note extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title', 'description','datasurah_id','arabic_id','users_id'
+        'title', 'description','datasurah_id','id','users_id'
     ];
 }

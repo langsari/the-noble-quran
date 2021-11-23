@@ -38,14 +38,14 @@ class SearchuserController extends Controller
 
            $texts =  DB::table('datasurahs')
            ->join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
-           ->join('thais', 'thais.arabic_id', '=', 'arabics.arabic_id')
+           ->join('thais', 'thais.id', '=', 'arabics.id')
         
-           ->select('datasurahs.th_name','datasurahs.id','arabics.arabic_id', 'arabics.text','thais.Text','arabics.ayat')
+           ->select('datasurahs.th_name','datasurahs.id','arabics.id', 'arabics.text','thais.Text','arabics.ayat')
                       ->where('arabics.text','LIKE','%'.$search_text.'%')
                      //->orWhere('id','<', 114)
                       ->orWhere('thais.Text','like','%'.$search_text.'%')
                       ->orWhere('arabics.datasurah_id','like','%'.$search_text.'%')
-                      //->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
+                      //->orWhere('arabics.id','like','%'.$search_text.'%')
                       ->orWhere('datasurahs.th_name','like','%'.$search_text.'%')
                      
                       ->paginate(10);
@@ -54,7 +54,7 @@ class SearchuserController extends Controller
                      // return dd($countries);
                  //    $arabics = Datasurah::with('arabic.thais')->find($id);
    //                   $data = Datasurah::join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
-   //  ->join('thais', 'thais.arabic_id', '=', 'arabics.arabic_id')
+   //  ->join('thais', 'thais.id', '=', 'arabics.id')
    //  ->get([ 'datasurahs.th_name','arabics.arabic_text', 'thais.text']);
 
 
@@ -66,7 +66,7 @@ class SearchuserController extends Controller
         //     $query      ->where('text','LIKE','%'.$search_text.'%');})
         //              //->orWhere('id','<', 114)
         //               ->orWhere('th_name','like','%'.$search_text.'%')->get();
-        //              // ->orWhere('arabics.arabic_id','like','%'.$search_text.'%')
+        //              // ->orWhere('arabics.id','like','%'.$search_text.'%')
         //               //->paginate(10);
         //              //return dd($countries);
         //     return view('search',['countries'=>$countries]);

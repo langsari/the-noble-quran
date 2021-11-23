@@ -102,13 +102,13 @@ class ManageQuranController extends Controller
 
     public function update(Request $request, Thai $thai) {
         $request->validate([
-            'arabic_id' => 'required',
+            'datasurah_id' => 'required',
             'Text' => 'required',
             'audio' => 'required',
             'ayat' => 'required'
             // 'description' => 'required'
         ]);
-        $thai->arabic_id = $request->arabic_id;
+        $thai->datasurah_id = $request->datasurah_id;
         $thai->Text = $request->Text ;
         $thai->audio = $request->audio;
         $thai->ayat = $request->ayat ;
@@ -119,7 +119,7 @@ class ManageQuranController extends Controller
 
     public function store(Request $request) {
         $data = $request->validate([
-            'arabic_id' => 'required',
+            'datasurah_id' => 'required',
             'Text' => 'required',
             'audio' => 'required',
             'ayat' => 'required'

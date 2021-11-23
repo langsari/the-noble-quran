@@ -27,6 +27,8 @@ use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\ManageQuranController;
 
 use App\Http\Controllers\NoteController;
+
+use App\Http\Controllers\HighlightController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -224,3 +226,9 @@ Route::resource('thai','ManageQuranController');
 
 //note
 Route::resource('notes','NoteController');
+
+//keyword
+Route::get('highlightkeywords', function () {
+  return view('highlightkeywords');
+  });
+  Route::get('/search_keywords', [HighlightController::class,'search_keywords']);

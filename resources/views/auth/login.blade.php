@@ -65,11 +65,11 @@
                                     {{ __('เข้าสู่ระบบ') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                <!-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('ลืมรหัสผ่าน') }}
                                     </a>
-                                @endif
+                                @endif  -->
                                 <hr>
                                 <p class="caution" "text-danger">*หากยังไม่มีเคยมีบัญชีผู้ใช้ กรุณาสมัครก่อน*</p>
                                

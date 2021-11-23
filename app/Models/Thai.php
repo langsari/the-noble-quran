@@ -9,7 +9,7 @@ class Thai extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'arabic_id', 'Text','ayat','audio'
+        'id', 'Text','ayat','audio'
     ];
     // public function trans()
     // {

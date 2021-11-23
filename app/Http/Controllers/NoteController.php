@@ -119,7 +119,7 @@ class NoteController extends Controller
             'title' => 'required',
             'description' => 'required'
             // 'datasurah_id' => 'required',
-            // 'arabic_id' => 'required',
+            // 'id' => 'required',
             // 'users_id' => 'required'
         ]);
         Note::create($request->all());
@@ -166,7 +166,7 @@ class NoteController extends Controller
             'title' => 'required',
             'description' => 'required'
             // 'datasurah_id' => 'required',
-            // 'arabic_id' => 'required',
+            // 'id' => 'required',
             // 'users_id' => 'required'
         ]);
         $note->update($request->all());

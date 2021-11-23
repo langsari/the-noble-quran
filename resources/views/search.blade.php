@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="{{ asset('bootstrap-3.1.1/css/bootstrap.min.css')}}">
     
 </head>
+   
+<style>
+    .highlight{ 
+  background:#00FF00; 
+  padding:1px; 
+  border:#00CC00 dotted 1px; 
+}
+</style>
+
 <body>
     <div class="container">
        <div class="row">
@@ -17,6 +26,7 @@
           <br>
           <br>
              <h4> ค้นหาในอัลกุรอาน...</h4><hr>
+             <body>
              <form action="{{ route('web.find') }}" method="GET">
         
                 <div class="form-group">
@@ -27,10 +37,12 @@
                 <div class="form-group">
                  <button type="submit" class="btn btn-primary">ค้นหา</button>
                 </div>
+                
              </form>
            
              <hr>
              <br>
+             
              @if(isset($texts))
 
                <table class="table table table-bordered ">
@@ -49,7 +61,10 @@
                               <tr>
                             
                               
-                                  <td><a href="{{ route('arabic',$text->id) }}" class="link-dark" >{{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] </a><br> {{ $text->text }}
+                                  <td><a href="{{ route('arabic',$text->id) }}" class="link-dark">
+                                    {{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] </a>
+                                   
+                                     <br> {{ $text->text }}
                                   <br> {{ $text->Text }}</td>
                             
                                 
@@ -65,6 +80,7 @@
                
                    </tbody>
                </table>
+               </body>
                <!-- <script>
 
 var path = "{{ url('web.find') }}";

@@ -44,8 +44,8 @@
                         Action
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-                        <li><a class="dropdown-item" href="{{ route('thai.show', $thai->arabic_id) }}">ดู</a></li> {{-- View --}}
-                        <li><a class="dropdown-item" href="{{ route('thai.edit', $thai->arabic_id) }}">แก้ไข</a></li> {{-- Edit --}}
+                        <li><a class="dropdown-item" href="{{ route('thai.show', $thai->id) }}">ดู</a></li> {{-- View --}}
+                        <li><a class="dropdown-item" href="{{ route('thai.edit', $thai->id) }}">แก้ไข</a></li> {{-- Edit --}}
                       
                     </ul>
                 </div>

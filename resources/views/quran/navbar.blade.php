@@ -13,7 +13,13 @@
 
  
     
-    
+    <style>
+    .highlight{ 
+  background:#00FF00; 
+  padding:1px; 
+  border:#00CC00 dotted 1px; 
+}
+</style>
 
    
 
@@ -26,21 +32,90 @@
 <body>
 
 <div class="topnav fixed-top ">
+  
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
   <a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
 
   <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
   <a href="{{ route('register') }}">สมัคร</a>
 
-
-
-     <div class="search-container">
+  <div class="search-container">
      <form action="{{ route('web.find') }}" method="GET">
       <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
       <button type="submit">ค้นหา</button>
     </form>
+
+
+
+     <!-- <body>
+  <input type="text" id="searchtxt" />
+  <input type="button" value="search" onClick="replaceText();" id="highlightButton" />
+  <p>
     
+  </p> 
+ </body> -->
+
+  <!-- <form action="{{ route('web.find') }}" method="GET"> 
+
+      <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+      <button type="submit">ค้นหา</button>
+
+      
+    </form>  -->
     
+    <!-- <div class="search-container">
+    <body>
+  <input type="text" id="searchtxt" />
+  <input type="button" value="search" onClick="replaceText();" id="highlightButton" />
+  <p>
+    
+  </p>  -->
+<!--  
+
+  <form action="{{ route('web.find') }}" method="GET"> 
+    
+      <input type="text" id="searchtxt" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+      <button type="submit" onClick="replaceText();" id="highlightButton">ค้นหา</button>
+    <input type="button" value="search" onClick="replaceText();" id="highlightButton" /> 
+
+      
+    </form> 
+    </body> 
+   <script>
+   function replaceText() {
+
+$("body").find(".highlight").removeClass("highlight");
+
+var searchword = $("#searchtxt").val();
+
+var custfilter = new RegExp(searchword, "ig");
+var repstr = "<span class='highlight'>" + searchword + "</span>";
+
+// if (searchword != "") {
+//     $('body').each(function() {
+//         $(this).html($(this).html().replace(custfilter, repstr));
+//     })
+// }
+}
+   </script>
+    <!-- <script>
+   function replaceText() { 
+
+$("body").find(".highlight").removeClass("highlight");
+
+var searchword = $("#searchtxt").val();
+
+var custfilter = new RegExp(searchword, "ig");
+var repstr = "<span class='highlight'>" + searchword + "</span>";
+
+if (searchword != "") {
+    $('body').each(function() {
+        $(this).html($(this).html().replace(custfilter, repstr));
+    })
+}
+}
+   </script>
+     --> 
 
   </div>
   </div>

@@ -95,10 +95,9 @@
         <!-- Sidebar -->
 		<!-- {{-- @yield('menu') --}} -->
 		<!-- /Sidebar -->
-        
-            
+       
             @yield('content')
-   
+            
         
 		<!-- /Header -->
 		<!-- Sidebar -->
@@ -107,6 +106,7 @@
 		<!-- Page Wrapper -->
 		
 		<!-- /Page Wrapper -->
+
 	</div>
 
  

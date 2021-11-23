@@ -15,6 +15,6 @@ class Arabic extends Model
 
     public function thais()
     {
-        return $this->hasOne(Thai::class,'arabic_id','arabic_id');
+        return $this->hasOne(Thai::class,'id','id');
     }
 }

@@ -61,7 +61,7 @@
           </div>
           <div class="form-group">
             <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="arabic_id" >
+            <input type="text" class="form-control" name="id" >
           </div>
         
           <div class="form-group">

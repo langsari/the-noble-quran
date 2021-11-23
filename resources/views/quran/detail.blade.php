@@ -2,7 +2,14 @@
 @section('content')
 <!--<h3 class="text-center text-dark">{{$arabics->th_name}}</h3> -->
 
-
+<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
 <style>
       @font-face {
         font-family:'Uthmani' ;
@@ -76,7 +83,11 @@
      line-height: 200%;
      color: #FFFFFF;
    }
-
+   .highlight{ 
+  background:#00FF00; 
+  padding:1px; 
+  border:#00CC00 dotted 1px; 
+}
         
      
 
@@ -84,7 +95,39 @@
        <br>
     <br>
  <div style = background-color:#00000; class="search-area">
-    <div class="container col-md-8">
+ <div class="row">
+    <div class="col-md-8 mx-auto">
+  
+      
+    <!-- <body>
+  <input type="text" id="searchtxt" />
+  <input type="button" value="search" onClick="replaceText();" id="highlightButton" />
+  <p>
+    The ACM Digital Library, a part of the ACM Portal, contains a comprehensive archive of the organization's journals, magazines, and conference proceedings. Online services include a forum called Ubiquity and Tech News digest.
+    
+    ACM requires the copyright of all submissions to be assigned to the organization as a condition of publishing the work.[2] Authors may post the documents on their own websites, but they are required to link back to the digital library's reference page for the paper. Though authors are not allowed to charge for access to copies of their work, downloading a copy from the ACM site requires a paid subscription.
+  </p> 
+ </body>
+
+ <script>
+   function replaceText() {
+
+$("body").find(".highlight").removeClass("highlight");
+
+var searchword = $("#searchtxt").val();
+
+var custfilter = new RegExp(searchword, "ig");
+var repstr = "<span class='highlight'>" + searchword + "</span>";
+
+if (searchword != "") {
+    $('body').each(function() {
+        $(this).html($(this).html().replace(custfilter, repstr));
+    })
+}
+}
+   </script> -->
+  
+
   
  <!--  vdo Tafseer link all
     <a href="{{ route('tafseer_detail',$datasurah) }}" class="link-dark" >วิดีโอตัฟซีร ซูเราะห์ {{$arabics->th_name}} </a>
@@ -197,6 +240,7 @@ $(document).ready(function(){
 
 
 <br>
+<br>
 
  
 
@@ -250,22 +294,23 @@ $(document).ready(function(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        @foreach($tafseers->qurantafseer as $tafseer ) <h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
+       <h4 class="modal-title" id="myModalLabel2"></h4>
       </div>
       <div class="modal-body">
        
-
+      @foreach($tafseers->qurantafseer as $tafseer ) <h4>{{$tafseer->name}}</h4>
    
         <p>
        
       {{$tafseer->qurantafseer}} 
      
       </p>
-    <hr>
+   
     <div class ="card-text">   
-        <strong>แปลโดย : </strong>
+        <strong>ที่มา : </strong>
         {{ $tafseer->translator_name }}
       </div> 
+      <hr>
       @endforeach
       </div>
       <div class="modal-footer">
@@ -294,7 +339,7 @@ $(document).ready(function(){
                                     class="close"
                                     data-dismiss="modal"
                                     aria-hidden="true">×</button>
-                                    <h4 class="modal-title">ตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>
+                                    <h4 class="modal-title">วิดีโอตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>
                         </div>
                         <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
@@ -463,10 +508,10 @@ $(document).ready(function(){
  -->
 
    <!-- Note -->
-   <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['arabic_id']}}" data-whatever="@mdo">โน๊ต</button>
+   <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
 
 
-<div class="modal fade" id="exampleModal{{$arabic['arabic_id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -499,6 +544,8 @@ $(document).ready(function(){
   </div>
 </div>
 
+
+
 <!-- //Create Note
 @if ($errors->any())
  <div class="alert alert-danger">
@@ -513,7 +560,7 @@ $(document).ready(function(){
   Note 
  <form action="{{ route('notes.store') }}" method="post">
     @csrf
- <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['arabic_id']}}" data-whatever="@mdo">โน๊ต</button>
+ <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -539,7 +586,7 @@ $(document).ready(function(){
           </div>
           <div class="form-group">
             <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="arabic_id" >
+            <input type="text" class="form-control" name="id" >
           </div>
         
           <div class="form-group">
@@ -569,10 +616,10 @@ $(document).ready(function(){
 
                 <!-- Button trigger modal TAFSEER _TEXT
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" 
-            data-bs-target="#staticBackdrop{{$arabic['arabic_id']}}">ตัฟซีร</button>
+            data-bs-target="#staticBackdrop{{$arabic['id']}}">ตัฟซีร</button>
 
 <!-- Modal 
-<div class="modal fade" id="staticBackdrop{{$arabic['arabic_id']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop{{$arabic['id']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -598,10 +645,10 @@ $(document).ready(function(){
   <!-- Button trigger modal TAFSEER _TEXT2-->
 
  
-<button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['arabic_id']}}" aria-expanded="false" aria-controls="collapseExample">
+<button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
 ตัฟซีร
 </button>
-<div class="collapse" id="collapseExample{{$arabic['arabic_id']}}">
+<div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
   <p>{{$arabic->thais->tafseer}}</p>
   </div>

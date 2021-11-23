@@ -450,10 +450,10 @@ $(document).ready(function(){
  -->
 
    <!-- Note -->
-    <!-- <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['arabic_id']}}" data-whatever="@mdo">โน๊ต</button>
+    <!-- <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
 
 
-<div class="modal fade" id="exampleModal{{$arabic['arabic_id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -496,10 +496,10 @@ $(document).ready(function(){
   <!-- Note  -->
  <form action="{{ route('notes.store') }}" method="post">
     @csrf
- <button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['arabic_id']}}" data-whatever="@mdo">โน๊ต</button>
+ <button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
 
 
-<div class="modal fade" id="exampleModal{{$arabic['arabic_id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -522,7 +522,7 @@ $(document).ready(function(){
           </div>
           <div class="form-group">
             <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="arabic_id" >
+            <input type="text" class="form-control" name="id" >
           </div>
         
           <div class="form-group">
@@ -554,10 +554,10 @@ $(document).ready(function(){
 
                 <!-- Button trigger modal TAFSEER _TEXT
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" 
-            data-bs-target="#staticBackdrop{{$arabic['arabic_id']}}">ตัฟซีร</button>
+            data-bs-target="#staticBackdrop{{$arabic['id']}}">ตัฟซีร</button>
 
 <!-- Modal 
-<div class="modal fade" id="staticBackdrop{{$arabic['arabic_id']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop{{$arabic['id']}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
@@ -583,10 +583,10 @@ $(document).ready(function(){
   <!-- Button trigger modal TAFSEER _TEXT2-->
 
  
-<form><button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['arabic_id']}}" aria-expanded="false" aria-controls="collapseExample">
+<form><button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
 ตัฟซีร
 </button>
-<div class="collapse" id="collapseExample{{$arabic['arabic_id']}}">
+<div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
   <p>{{$arabic->thais->tafseer}}</p>
   </div>
