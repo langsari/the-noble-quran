@@ -15,15 +15,15 @@
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
-  
+  <li class="nav-item">
+ <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a> 
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('qurantafseers.index') }}">จัดการกุรอานตัฟซีร</a>   
+   </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a>
-    </li>
- 
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a>
-    </li>
-   
+    <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a> 
+   </li>
     @if (Auth::user()->is_admin=='1')
     <li class="nav-item">
       <a class="nav-link" href="{{ route('user.index') }}">จัดการผู้ใช้</a>
@@ -33,14 +33,16 @@
     </li> 
     @elseif (Auth::user()->is_admin=='2')
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('approvalstatus') }}">ตรวจสอบสถานะ</a>
+        <a class="nav-link" href="{{ route('showquran') }}">ตรวจสอบสถานะกุรอาน</a>
       </li>
-      @elseif (Auth::user()->is_admin=='3')
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
+      </li>
       <li class="nav-item">
-      <a class="nav-link" href="{{ route('viewstatus') }}">ติดตามสถานะ</a>
-    </li>
+        <a class="nav-link" href="{{ route('showtafseer') }}">ตรวจสอบสถานะตัฟซีร</a>
+      </li>
+      
                   @endif
- 
   </ul>
 </nav>
 </div>    
@@ -69,6 +71,7 @@
             <th scope="col">คำแปล</th> 
             <th scope="col">เสียง</th>
             <th style="width:8%" scope="col">ซูเราะห์ที่</th>
+            <th scope="col">สถานะ</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -81,6 +84,7 @@
             <td>{{ $thai->Text }}</td>
             <td>{{ $thai->audio }}</td>
             <td>{{ $thai->datasurah_id }}</td>
+            <td>{{ $thai->status }}</td>
             <td>
 
                 <div class="dropdown"> {{-- Dropdown --}}
@@ -102,4 +106,5 @@
 </table>
 
 {{$thais->links()}}
+</div>
 @endsection

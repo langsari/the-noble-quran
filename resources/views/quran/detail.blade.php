@@ -298,8 +298,9 @@ $(document).ready(function(){
       </div>
       <div class="modal-body">
        
-      @foreach($tafseers->qurantafseer as $tafseer ) <h4>{{$tafseer->name}}</h4>
-   
+      @foreach($tafseers->qurantafseer as $tafseer ) 
+      @if($tafseer->status == 'อนุมัติ') 
+      <h4>{{$tafseer->name}}</h4>
         <p>
        
       {{$tafseer->qurantafseer}} 
@@ -308,9 +309,10 @@ $(document).ready(function(){
    
     <div class ="card-text">   
         <strong>ที่มา : </strong>
-        {{ $tafseer->translator_name }}
+        {{ $tafseer->resource }}
       </div> 
       <hr>
+      @endif  
       @endforeach
       </div>
       <div class="modal-footer">
@@ -343,6 +345,7 @@ $(document).ready(function(){
                         </div>
                         <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
+                           @if($tafseer->status == 'อนุมัติ') 
                         <p>{{$tafseer->name}}</p>
                             <iframe id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
@@ -351,7 +354,7 @@ $(document).ready(function(){
                             <br>
                             <br>
                           
-                            
+                          @endif  
                             @endforeach
                         </div>
 
@@ -375,6 +378,8 @@ $(document).ready(function(){
             });
         });
     </script>
+
+
 
 
 <!-- dropdown : can not link
@@ -406,7 +411,7 @@ $(document).ready(function(){
                  <div>
    
     <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
-    <option value="#" style="color:white">ซูเราะห์</option>
+    <option value="#" style="color:white" >ซูเราะห์</option>
     @foreach($datas as $data)
     <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
 {{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
@@ -481,6 +486,8 @@ $(document).ready(function(){
                 </div>
                 </div>
                 @foreach($arabics->arabic as $arabic )
+                
+
       <div class="quran-font-intro ">
         <p>
         {{$arabic->text}}
@@ -488,9 +495,10 @@ $(document).ready(function(){
       
       </div>
       <p class="t">{{$arabic->transliteration}}</p>
-   
+      <!-- checked ststus before display on screen if user CRUD Quran -->
+      @if($arabic->thais->status == 'อนุมัติ') 
             <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
-          
+      @endif
             <br>
             <audio controls >
                 <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
@@ -645,17 +653,20 @@ $(document).ready(function(){
   <!-- Button trigger modal TAFSEER _TEXT2-->
 
  
-<button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
+<button class="open-button2 "  type="button" data-toggle="collapse"
+ data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
 ตัฟซีร
 </button>
 <div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
+  @if($arabic->thais->tafseer == '')  <p class="cautions">*อายะห์นี้ยังไม่มีตัฟซีรภาษาไทย*</p> @endif
   <p>{{$arabic->thais->tafseer}}</p>
   </div>
 </div>
 
 
 <hr>
+
 @endforeach
 </div> 
 

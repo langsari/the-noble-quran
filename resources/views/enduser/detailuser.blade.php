@@ -1,7 +1,14 @@
 @extends('enduser.navuser')
 @section('content')
 
-
+<!-- <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script> -->
 
 <style>
       @font-face {
@@ -256,7 +263,9 @@ $(document).ready(function(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        @foreach($tafseers->qurantafseer as $tafseer ) <h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
+        @foreach($tafseers->qurantafseer as $tafseer ) 
+        @if($tafseer->status == 'อนุมัติ') 
+<h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
       </div>
       <div class="modal-body">
        
@@ -270,8 +279,9 @@ $(document).ready(function(){
     <hr>
     <div class ="card-text">   
         <strong>แปลโดย : </strong>
-        {{ $tafseer->translator_name }}
+        {{ $tafseer->resource }}
       </div> 
+      @endif
       @endforeach
       </div>
       <div class="modal-footer">
@@ -431,8 +441,10 @@ $(document).ready(function(){
         </p>
       </div>
       <p class="t">{{$arabic->transliteration}}</p>
+        <!-- checked ststus before display on screen if user CRUD Quran -->
+        @if($arabic->thais->status == 'อนุมัติ') 
             <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
-            
+        @endif  
             <br>
             <audio controls >
                 <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
@@ -583,11 +595,13 @@ $(document).ready(function(){
   <!-- Button trigger modal TAFSEER _TEXT2-->
 
  
-<form><button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
+<form><button class="open-button2 "  type="button" data-toggle="collapse"
+ data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
 ตัฟซีร
 </button>
 <div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
+  @if($arabic->thais->tafseer == '')  <p class="cautions">*อายะห์นี้ยังไม่มีตัฟซีรภาษาไทย*</p> @endif
   <p>{{$arabic->thais->tafseer}}</p>
   </div>
 </div>

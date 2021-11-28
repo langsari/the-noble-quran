@@ -7,8 +7,12 @@ use App\Models\Arabic;
 use App\Models\Datasurah;
 use App\Models\Thai;
 use App\Models\Tafseer;
+use App\Models\Qurantafseer;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Note;
+
+
 
 use Illuminate\Support\Facades\DB;
 
@@ -25,7 +29,17 @@ class AdminController extends Controller
     {
         //
     }
-
+    public function managenote(){
+        
+        // $data = Note::paginate(5);
+        // return view('admin.managenote', compact('data'))
+        //         ->with('i', (request()->input('page', 1) - 1) * 5);
+    //   return view('admin.managenote');
+    $datas = Note::paginate(5);
+    // return dd($datas);
+    return view('admin.managenote',compact('datas'));
+  
+    }
     public function managequran($id){
         
 
@@ -67,14 +81,22 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function managenote(){
+    // public function managenote(){
         
-        $data = Note::paginate(5);
-        return view('admin.managenote', compact('data'))
-                ->with('i', (request()->input('page', 1) - 1) * 5);
-    //   return view('admin.managenote');
+    //     $data = Note::all();
+    //     // if(Auth::id()){
+    //        // $tafseers =Qurantafseer::latest()->paginate(5);
+    //     //     $userid=Auth::user()->id;
+    //     //     $data = Note::where('user_id',$userid)->get();
+    //     //     return view('admin.managenote', compact('data'));
+    //     // }
+    //     return view('admin.managenote', compact('data'));
+    //     //         ->with('i', (request()->input('page', 1) - 1) * 5);
+    // //   return view('admin.managenote');
   
-    }
+    // }
+
+   
     public function shownote(Note $note)
     {
         $data = Note::paginate(5);

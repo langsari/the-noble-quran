@@ -28,7 +28,10 @@ use App\Http\Controllers\ManageQuranController;
 
 use App\Http\Controllers\NoteController;
 
-use App\Http\Controllers\HighlightController;
+//use App\Http\Controllers\HighlightController;
+
+use App\Http\Controllers\QurantafseerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -101,9 +104,9 @@ Route::get ('admin/adminHome',[HomeController::class,'adminHome'])->name('admin.
 
 //Route::get('admin/index',[AdminController::class,'index']);
 
-Route::get('/', function () {
-  return redirect()->route('homepage');
-  });
+// Route::get('/', function () {
+//   return redirect()->route('homepage');
+//   });
 
 //detail
 Route::get('quran/nav', [DetailController::class, 'index']);
@@ -112,14 +115,14 @@ Route::get('quran/nav', [DetailController::class, 'index']);
 //Route::get('join/jointran', [JointranController::class, 'index']);
 
 //show q text x tran
-Route::get('/', [QuransController::class, 'homepage']);
+Route::get('/', [QuransController::class, 'homepage'])->name('homepage');
 //Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
 //Route::get('/tran{arabics}', [QuransController::class, 'tran'])->name('tran');
  //Route::get('/arabic/{datasurah}/tafseer_detail/{data}', function (Arabic $datasurah, Tafseer $data) {
 //   //
  //})->name('quran.detail');
 
-Route::get('quran/home', [QuransController::class, 'homepage'])->name('homepage');
+// Route::get('quran/home', [QuransController::class, 'homepage'])->name('homepage');
 Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
 Route::get('/quran/tafseer_home', [QuransController::class, 'tafseer_home'])->name('tafseer_home');
 Route::get('/quran/tafseer_detail{data}', [QuransController::class, 'tafseer_detail'])->name('tafseer_detail');
@@ -144,7 +147,7 @@ Route::get('/qurans/index{datasurah}', [QuranController::class, 'index']);
 //Route::get ('admin/adminHome' ,[AdminController::class, 'adminhome'])->name('adminhome');
 
 //Route role users
-Route::get ('thai/index',[HomeController::class,'adminhome'])->name('adminhome')->middleware('is_admin');
+Route::get ('qurantafseers/index',[HomeController::class,'adminhome'])->name('adminhome')->middleware('is_admin');
 
 
 
@@ -182,7 +185,7 @@ Route::get ('/managequran{datasurah}',[AdminController::class,'managequran'])->n
 //Route::get ('admin/manageuser',[AdminController::class,'manageuser'])->name('manageuser');
 Route::get ('admin/managetafseer',[AdminController::class,'managetafseer'])->name('managetafseer');
 Route::get ('admin/managenote',[AdminController::class,'managenote'])->name('managenote');
-Route::get ('admin/shownote',[AdminController::class,'shownote'])->name('shownote');
+Route::get ('admin/shownote',[AdminController::class,'note'])->name('shownote');
 Route::get ('admin/editquran',[AdminController::class,'editquran'])->name('editquran');
 
 //
@@ -233,3 +236,24 @@ Route::get('highlightkeywords', function () {
   return view('highlightkeywords');
   });
   Route::get('/search_keywords', [HighlightController::class,'search_keywords']);
+
+  //approveVDOtafseer
+  Route::get('approval/showvdotafseer',[ApprovalController::class,'showvdotafseer'])->name('showvdotafseer');
+  Route::get('/approvedvdotafseer/{id}',[ApprovalController::class,'approvedvdotafseer']);
+  Route::get('/cancledvdotafseer/{id}',[ApprovalController::class,'cancledvdotafseer']);
+
+  //Qurantafseer
+Route::resource('qurantafseers','QurantafseerController');
+
+  //approveQurantafseer
+  Route::get('approval/showtafseer',[ApprovalController::class,'showtafseer'])->name('showtafseer');
+  Route::get('/approvedtafseer/{id}',[ApprovalController::class,'approvedtafseer']);
+  Route::get('/cancledtafseer/{id}',[ApprovalController::class,'cancledtafseer']);
+
+   //approveQuran
+   Route::get('approval/showquran',[ApprovalController::class,'showquran'])->name('showquran');
+   Route::get('/approvedquran/{id}',[ApprovalController::class,'approvedquran']);
+   Route::get('/cancledquran/{id}',[ApprovalController::class,'cancledquran']);
+
+   //main
+   Route::get('quran/main', [QuransController::class, 'main']);

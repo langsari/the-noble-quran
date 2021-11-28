@@ -5,6 +5,7 @@
 
 <h3 class="text-center">{{$tafseers->th_name}}</h3>
 @foreach($tafseers->tafseer as $tafseer )
+@if($tafseer->status == 'อนุมัติ') 
   <div class="container hero">
   <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -16,6 +17,7 @@
               allowfullscreen></iframe><hr><br>
               </div>
               </div>
+              @endif
 @endforeach
      
 </div>

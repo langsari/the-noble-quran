@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Tafseer;
 
@@ -15,11 +15,20 @@ class TafseersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //$tafseer = Tafseer::with('data')->get();
-        $tafseers = Tafseer::paginate(5);
-          return view('tafseers.index',compact('tafseers'));
+   // $tafseers =Tafseer::all();
+{
+
+    if(Auth::id()){
+        $userid=Auth::user()->id;
+        $tafseers = Tafseer::where('user_id',$userid)->get();
+        return view('tafseers.index',compact('tafseers'));
     }
+  
+    // {
+    //     //$tafseer = Tafseer::with('data')->get();
+    //     $tafseers = Tafseer::paginate(5);
+    //       return view('tafseers.index',compact('tafseers'));
+ }
 
 
     // public function tafseer_home()
@@ -75,11 +84,22 @@ class TafseersController extends Controller
             'name' => 'required',
             'datasurah_id' => 'required',
             'youtubeId' => 'required',
+           
         ]);
 
-        Tafseer::create($data);
+        //Tafseer::create($data);
 
-      
+        $data = new Tafseer;
+        $data->name=$request->name;
+        $data->datasurah_id=$request->datasurah_id;
+        $data->youtubeId=$request->youtubeId;
+        $data->status='รอตรวจสอบ';
+        if(Auth::id()){
+          
+            $data->user_id=Auth::user()->id;
+        }
+        // 
+        $data->save();
        // Tafseer::create($request->all());
 
         return redirect()->route('tafseers.index')->with('success', 'เพิ่มวิดีโอตัฟซีรสำเร็จ');
@@ -125,6 +145,8 @@ class TafseersController extends Controller
         $tafseer->name = $request->name;
         $tafseer->youtubeId = $request->youtubeId;
         $tafseer->datasurah_id = $request->datasurah_id;
+        $tafseer->status='รอตรวจสอบ';
+
         $tafseer->save();
        // $tafseer->update($request->all());
         return redirect()->route('tafseers.index');

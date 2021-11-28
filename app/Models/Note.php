@@ -12,9 +12,11 @@ class Note extends Model
     use HasFactory;
     // use SoftDeletes;
     protected $fillable = [
-        'title', 'description','datasurah_id','id','user_id'
+        'title', 'description','datasurah_id','user_id'
     ];
     public function user(){
         return $this->hasOne(User::class,'id','user_id');
     }
+
+
 }

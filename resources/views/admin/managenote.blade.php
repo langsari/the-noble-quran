@@ -1,38 +1,58 @@
-@extends('layouts.adminmanageuser')
-
-
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
-            <!-- <div class="card"> -->
-             
+    
+            <div class="card">
+                <div class="card-header">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-                <!-- <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('qurantafseers.index') }}">จัดการกุรอานตัฟซีร</a>
+      </li>
+     
+      <li class="nav-item">
+      <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.index') }}">จัดการผู้ใช้</a>
+      </li>
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('managenote') }}">จัดการโน้ต</a>
+      </li>
+    
+  </ul>
+</nav>
+</div>    
+<br>
+<div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">จัดการโน้ต</h1>
+
                         </div>
-                    @endif -->
+<!-- <a class="btn btn-link float-end" href="{{ route('tafseers.create') }}">เพิ่มตัฟซีร</a> -->
+<!-- <a href ="{{ route('thai.create')}}" class ="btn btn-dark my-3"> เพิ่มผู้ใช้งาน </a> -->
 
-
-<div class="row mt-2">
-    <div class ="col-md-12">
-    <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-4">ดูโน้ต</h1>
-
-                        </div>
-         
-    </div>      
-</div> 
-
-@if($message = Session::get('success'))
-    <div class ="alert alert-success">
-        {{$message}}
-</div>
-
+{{-- Display message --}}
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
 @endif
+
+
+
 
 <table class="table table-striped table-hover table-bordered">
     <thead>
@@ -45,128 +65,15 @@
  </tr>
  </thead>
     <tbody>
- @foreach ($data as $key => $value)
+    @foreach ($datas as $data)
     <tr>
-    <td>{{ $data->firstItem()+$loop->index}} </td>
-        <td>{{ $value->title }}</td>
-        <td>{{ Str::limit($value->description, 100) }}</td>
-        <td>{{$value->user->name}}</td>
-        <!-- <td>
-        <div class="dropdown"> {{-- Dropdown --}}
-                    <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
-                        data-mdb-toggle="dropdown" aria-expanded="false">
-                        Action
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-                        <li><a class="dropdown-item" href="{{ route('shownote', $value->id) }}">ดู</a></li> {{-- View --}}
-                     
-                    </ul>
-                </div>
-
-                       
-                        <form action="{{ route('posts.destroy', $value->id) }}">
-                              
-                       
-
-                                 <!-- read -->
-<!-- Button trigger modal 
-<button type="button" class="btn btn-danger " data-toggle="modal" data-target="#myModal{{$data['id']}}">
-  ดู
-</button>
-
-<!-- Modal 
-<div class="modal fade" id="myModal{{$data['id']}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel{{$value->id}}"></h4>
-      </div>
-      <div class="modal-body">
-     
-      <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-14 col-md-9">
-              <div class="card o-hidden border-0 shadow-lg my-0">
-                <div class="card-body p-0 bg-gray-500">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="p-5">
-                        <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-4">ดูโน้ต</h1>
-                        </div>
-                        <form class="form-group text-right">
-
-                       <div class="form row">
-                            <div class="col-sm-3">
-                              <span class="h7 text-gray-900 mb-4 form-text">ลำดับที่ :</span>
-                            </div>
-                        
-                            <div class="col-sm-4">
-                              <input class="form-control" id="{{$value->id}}" name="id"  type="text" value="{{$value->id}}" readonly autocomplete="off">
-                            </div>
-                            </div>
-                  
-
-           
-
-                          <div class="form-group row">
-                            <div class="col-sm-3">
-                              <span class="h7 text-gray-900 mb-4 form-text">ชื่อเรื่อง:</span>
-                            </div>
-                            <div class="col-sm-9">
-                            <textarea class="form-control" style="height: 150px" name="text"   readonly >{{ $value->title }}</textarea>
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <div class="col-sm-3">
-                              <span class="h7 text-gray-900 mb-4 form-text">คำอธิบาย:</span>
-                            </div>
-                            <div class="col-sm-9">
-                            <textarea class="form-control" style="height: 150px" name="Txet" readonly   >{{ Str::limit($value->description, 100) }}</textarea>
-                            </div>
-                          </div>
-                          
-                        
-                          <div class="row">
-    <div class ="card p-3"> 
-      <div class ="card-title"> 
-        <strong>หัวข้อ : </strong>
-        {{ $value->title }}
-      </div>
-
-      <div class ="card-text">   
-        <strong>คำอธิบาย : </strong>
-        {{$value->description}}
-      </div>  
-    </div>  
-</div> 
-                          
-                         
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="result" style="padding-top: 50px; width: 100%"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
        
-      </div>
-</div>                              
-                            </form>
-                
-                            
-
-                    
-        </td> -->
+        <td>{{ $loop->iteration }} </td> 
+        <td>{{ $data->title }}</td>
+        <td>{{ Str::limit($data->description, 100) }}</td>
+        <td>{{$data->user->name}}</td>
+        
+       
     </tr>    
  @endforeach
 
@@ -175,6 +82,6 @@
 
 
 
-{!! $data->links() !!}
+
 
 @endsection

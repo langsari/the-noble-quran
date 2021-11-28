@@ -62,9 +62,9 @@
                             
                               
                                   <td><a href="{{ route('arabic',$text->id) }}" class="link-dark">
-                                    {{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] </a>
+                                    {{$text->th_name}}[{{$text->datasurah_id}}:{{ $text->ayat}}] </a>
                                    
-                                     <br> {{ $text->text }}
+                                    <!--  <br> {{ $text->text }} -->
                                   <br> {{ $text->Text }}</td>
                             
                                 

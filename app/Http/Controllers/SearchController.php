@@ -40,7 +40,7 @@ class SearchController extends Controller
            ->join('arabics','arabics.datasurah_id', '=', 'datasurahs.id')
            ->join('thais', 'thais.id', '=', 'arabics.id')
         
-           ->select('datasurahs.th_name','datasurahs.id','arabics.id', 'arabics.text','thais.Text','arabics.ayat')
+           ->select('datasurahs.th_name','datasurahs.id','arabics.id', 'arabics.text','thais.Text','arabics.ayat','thais.datasurah_id')
       
                       ->where('arabics.text','LIKE','%'.$query.'%')
                      //->orWhere('id','<', 114)

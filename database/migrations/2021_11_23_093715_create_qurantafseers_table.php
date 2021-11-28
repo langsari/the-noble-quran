@@ -19,7 +19,7 @@ class CreateQurantafseersTable extends Migration {
 			$table->string('name', 225);
 			$table->text('qurantafseer');
 			$table->integer('arabic_id')->index('arabic_id');
-			$table->string('translator_name');
+			$table->string('resource');
 			$table->integer('datasurah_id')->index('datasurah_id');
 		});
 	}

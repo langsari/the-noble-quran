@@ -18,14 +18,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('approvalhome') }}">จัดการกุรอาน</a>
+    <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('qurantafseers.index') }}">จัดการกุรอานตัฟซีร</a>
       </li>
      
       <li class="nav-item">
       <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="{{ route('showquran') }}">ตรวจสอบสถานะกุรอาน</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('showtafseer') }}">ตรวจสอบสถานะกุรอานตัฟซีร</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('approvalstatus') }}">ตรวจสอบสถานะ</a>
+        <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
       </li>
    
     </ul>

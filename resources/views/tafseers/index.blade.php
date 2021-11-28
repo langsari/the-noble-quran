@@ -14,15 +14,17 @@
 </button>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-  
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a>
-    </li>
+<ul class="navbar-nav mr-auto">
  
+<li class="nav-item">
+ <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a> 
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{ route('qurantafseers.index') }}">จัดการกุรอานตัฟซีร</a>   
+   </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a>
-    </li>
+    <a class="nav-link" href="{{ route('tafseers.index') }}">จัดการวิดีโอตัฟซีร</a> 
+   </li>
    
     @if (Auth::user()->is_admin=='1')
     <li class="nav-item">
@@ -33,15 +35,17 @@
     </li> 
     @elseif (Auth::user()->is_admin=='2')
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('approvalstatus') }}">ตรวจสอบสถานะ</a>
+        <a class="nav-link" href="{{ route('showquran') }}">ตรวจสอบสถานะกุรอาน</a>
       </li>
-      @elseif (Auth::user()->is_admin=='3')
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
+      </li>
       <li class="nav-item">
-      <a class="nav-link" href="{{ route('viewstatus') }}">ติดตามสถานะ</a>
-    </li>
+        <a class="nav-link" href="{{ route('showtafseer') }}">ตรวจสอบสถานะตัฟซีร</a>
+      </li>
+      
                   @endif
- 
-  </ul>
+</ul>
 </nav>
 </div>    
 <br>
@@ -52,7 +56,7 @@
 <!-- <a class="btn btn-link float-end" href="{{ route('tafseers.create') }}">เพิ่มตัฟซีร</a> -->
 <div class="row mt-2">
     <div class ="col-md-12">
-    <a href ="{{ route('tafseers.create')}}" class ="btn btn-dark my-3"> เพิ่มตัฟซีร </a>
+    <a href ="{{ route('tafseers.create')}}" class ="btn btn-dark my-3"> เพิ่มวิดีโอตัฟซีร </a>
 
 
 {{-- Display message --}}
@@ -69,6 +73,7 @@
             <th scope="col">ที่</th>
             <th scope="col">ชื่อซูเราะห์</th>
             <th scope="col">YoutubeID</th>
+            <th scope="col">สถานะ</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -79,6 +84,7 @@
             <th scope="row">{{ $loop->iteration }}</th>
             <td>{{ $tafseer->name }}</td>
             <td>{{ $tafseer->youtubeId }}</td>
+            <td>{{ $tafseer->status }}</td>
             <td>
 
                 <div class="dropdown"> {{-- Dropdown --}}
@@ -107,6 +113,5 @@
 
     </tbody>
 </table>
-{{$tafseers->links()}}
 
 @endsection

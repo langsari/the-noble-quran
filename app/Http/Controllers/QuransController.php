@@ -30,6 +30,15 @@ class QuransController extends Controller
         public function GetSubCatAgainstMainCatEdit($id){
             echo json_encode(DB::table('arabics')->where('datasurah_id', $id)->get());
         }
+
+        public function main()
+    {
+        $datasurahs = Datasurah::all();
+        return view('quran.main', [
+            'datasurahs' => $datasurahs
+        ]);
+        
+    }
     
 
     public function homepage()

@@ -5,6 +5,10 @@ use App\Models\Note;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\Arabic;
+use App\Models\Datasurah;
+use App\Models\Thai;
+
 class NoteController extends Controller
 {
     // /**
@@ -86,15 +90,22 @@ class NoteController extends Controller
     public function index()
     {
         //
-       
-        $data = Note::paginate(5);
+        $datas = Datasurah::all();
+       // $data = Note::paginate(5);
+
+        if(Auth::id()){
+            $userid=Auth::user()->id;
+            $data = Note::where('user_id',$userid)->get();
+            return view('notes.index', compact('data','datas'));
+        }
+        // $data = Note::with('user')->find($id);
         // return view('notes.index', compact('data'))
         //         ->with('i', (request()->input('page', 1) - 1) * 5);
 
                 // $users = User::paginate(5);
                 // $tafseers = Tafseer::paginate(5);
                 
-                return view('notes.index', compact('data'));
+               // return view('notes.index', compact('data'));
     }
 
     /**
