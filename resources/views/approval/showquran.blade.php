@@ -39,7 +39,7 @@
 </div>    
 <br>
 <div class="text-center">
-                          <h1 class="h4 text-gray-900 mb-4">จัดการอัลกุรอาน</h1>
+                          <h1 class="h4 text-gray-900 mb-4">ตรวจสอบสถานะอัลกุรอาน</h1>
 
                         </div>
 <!-- <a class="btn btn-link float-end" href="{{ route('tafseers.create') }}">เพิ่มตัฟซีร</a> -->

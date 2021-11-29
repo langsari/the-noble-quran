@@ -17,4 +17,5 @@ class Arabic extends Model
     {
         return $this->hasOne(Thai::class,'id','id');
     }
+   
 }

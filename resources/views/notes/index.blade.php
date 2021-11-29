@@ -72,6 +72,8 @@
 
 <!-- <a href="javascript:history.back()" class="btn btn-warning">กลับไปหน้าซูเราะห์</a> -->
           <a href ="{{ route('homeuser')}}" class ="btn btn-dark my-3"> Quran.th </a>
+          <a href ="javascript:history.back()"  class ="btn btn-dark my-3"> กลับ </a>
+
           <!-- <a href="javascript:history.back()" class="btn btn-primary">กลับ</a> -->
     </div>      
 </div> 
@@ -89,7 +91,7 @@
     <th class="font-weight-bold" >ที่</th>
     <th class="font-weight-bold">หัวข้อ</th>
     <th class="font-weight-bold">คำอธิบาย</th>
-    <th  class="font-weight-bold" >ชื่อผู้ใช้</th>
+    <!-- <th  class="font-weight-bold" >ชื่อผู้ใช้</th> -->
     <th  class="font-weight-bold" >Action</th>
     
  </tr>
@@ -100,7 +102,7 @@
         <td>{{ $loop->iteration }} </td> 
         <td>{{ $value->title }}</td>
         <td>{{ Str::limit($value->description, 100) }}</td>
-        <td>{{$value->user->name}}</td>
+        <!-- <td>{{$value->user->name}}</td> -->
         <td>
          <!-- <form action="{{ route('notes.destroy', $value->id) }}" method="post">
              <a href="{{ route('notes.show', $value->id) }}" class="btn btn-primary">ดู</a>
@@ -141,6 +143,7 @@
  @endforeach
 
 </table>   
+
 
 
 

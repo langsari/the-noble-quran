@@ -91,7 +91,7 @@ class NoteController extends Controller
     {
         //
         $datas = Datasurah::all();
-       // $data = Note::paginate(5);
+        $data = Note::paginate(5);
 
         if(Auth::id()){
             $userid=Auth::user()->id;
@@ -117,7 +117,7 @@ class NoteController extends Controller
     {
         //
         // return view('notes.create');
-        return view('enduser.detailuse');
+        return view('enduser.detailuser');
     }
 
     /**

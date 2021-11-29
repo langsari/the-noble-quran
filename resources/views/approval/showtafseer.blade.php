@@ -40,6 +40,12 @@
     </ul>
 </nav>
 </div>
+<br>
+
+<div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">ตรวจสอบสถานะอัลกุรอานตัฟซีร</h1>
+
+                        </div>
 
 <div class="card-body">
                     @if (session('status'))

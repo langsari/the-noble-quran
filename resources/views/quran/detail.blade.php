@@ -1,6 +1,5 @@
 @extends('quran.navbar')
 @section('content')
-<!--<h3 class="text-center text-dark">{{$arabics->th_name}}</h3> -->
 
 <link rel="stylesheet" href=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -300,7 +299,7 @@ $(document).ready(function(){
        
       @foreach($tafseers->qurantafseer as $tafseer ) 
       @if($tafseer->status == 'อนุมัติ') 
-      <h4>{{$tafseer->name}}</h4>
+      <h4>{{$tafseer->name}}(อายะห์ที่ {{$tafseer->arabic_id}})</h4>
         <p>
        
       {{$tafseer->qurantafseer}} 
@@ -415,6 +414,7 @@ $(document).ready(function(){
     @foreach($datas as $data)
     <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
 {{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
+
 
 <!-- <script>
 (document).ready(function() {

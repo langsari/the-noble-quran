@@ -32,14 +32,15 @@
       <a class="nav-link" href="{{ route('managenote') }}">จัดการโน้ต</a>
     </li> 
     @elseif (Auth::user()->is_admin=='2')
-    <li class="nav-item">
+    </li> <li class="nav-item">
         <a class="nav-link" href="{{ route('showquran') }}">ตรวจสอบสถานะกุรอาน</a>
       </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('showtafseer') }}">ตรวจสอบสถานะกุรอานตัฟซีร</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('showtafseer') }}">ตรวจสอบสถานะตัฟซีร</a>
+        <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
       </li>
       
                   @endif

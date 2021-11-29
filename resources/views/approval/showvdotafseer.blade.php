@@ -49,6 +49,10 @@
                     @endif
 </div>
 
+<div class="text-center">
+                          <h1 class="h4 text-gray-900 mb-4">ตรวจสอบสถานะวิดีโอตัฟซีร</h1>
+
+                        </div>
 
 
 <table class="table table-striped table-hover table-bordered">
@@ -56,7 +60,7 @@
         <tr></tr>
         <tr>
             <th scope="col">ที่</th>
-            <th scope="col">ชื่อซูเราะห์</th>
+            <th scope="col">ชื่อ</th>
             <th scope="col">YoutubeID</th>
             <th scope="col">ชื่อผู้ใช้</th>
 

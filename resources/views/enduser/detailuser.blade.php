@@ -494,7 +494,7 @@ $(document).ready(function(){
   </div>
 </div>  -->
 
- <!-- //Create Note -->
+ <!-- //Create Note
 @if ($errors->any())
  <div class="alert alert-danger">
      <strong>อุปส์</strong>
@@ -504,7 +504,7 @@ $(document).ready(function(){
     <li>{{ $error }}</li>
     @endforeach
 </ul>
-@endif
+@endif -->
   <!-- Note  -->
  <form action="{{ route('notes.store') }}" method="post">
     @csrf
@@ -516,7 +516,7 @@ $(document).ready(function(){
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h4>
+        <h4 class="modal-title" id="exampleModalLabel{{$arabic['id']}}">สร้างโน้ต</h4>
       </div>
       <div class="modal-body">
         <form>

@@ -62,6 +62,7 @@ class QuransController extends Controller
         $datasurah = Datasurah::with('tafseer')->find($id);
         $tafseers =Datasurah::with('qurantafseer')->find($id);
         $arabics = Datasurah::with('arabic.thais')->find($id);
+       //
        
          //function for ayat arabic
         //  function format_arabic_number($number)
