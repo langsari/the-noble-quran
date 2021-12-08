@@ -86,20 +86,7 @@
                 <a class="btn btn-danger"href="
                 {{url('cancledquran',$thai->id)}}">ยกเลิก</a>
             </td>
-            <!-- <td>
-
-                <div class="dropdown"> {{-- Dropdown --}}
-                    <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
-                        data-mdb-toggle="dropdown" aria-expanded="false">
-                        Action
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-                        <li><a class="dropdown-item" href="{{ route('thai.show', $thai->id) }}">ดู</a></li> {{-- View --}}
-                        <li><a class="dropdown-item" href="{{ route('thai.edit', $thai->id) }}">แก้ไข</a></li> {{-- Edit --}}
-                      
-                    </ul>
-                </div>
-            </td> -->
+           ]
         </tr>
         @endforeach
 

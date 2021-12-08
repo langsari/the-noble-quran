@@ -14,8 +14,8 @@ class TafseersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-   // $tafseers =Tafseer::all();
+ public function index()
+
 {
 
     if(Auth::id()){
@@ -24,45 +24,8 @@ class TafseersController extends Controller
         return view('tafseers.index',compact('tafseers'));
     }
   
-    // {
-    //     //$tafseer = Tafseer::with('data')->get();
-    //     $tafseers = Tafseer::paginate(5);
-    //       return view('tafseers.index',compact('tafseers'));
- }
-
-
-    // public function tafseer_home()
-    // {
-        
-    //         $datasurahs = Datasurah::paginate(20);
-    //         //return dd($datasurahs);
-    //         return view('quran.tafseer_home', [
-    //             'datasurahs' => $datasurahs
-    //         ]);
-        
-    // }
-
-    // public function tafseer_detail($id)
-    // {
-    //     $tafseers = Datasurah::with('tafseer')->find($id);
-    //    // ->firstOrFail();
-
-    //    // $plucked = $ayats->pluck('ayat.text', 'trans.text');
-        
-    //    // dd($tafseers->toArray());
-      
-    //    //return dd($arabics);
-      
-    //    //return view('test.detail', [
-    //     //dd($ayats->toArray());
-    //     //'ayats' => $ayats]);
-       
-    //   return view('quran.tafseer_detail',compact('tafseers'));
-    //     //    'ayats' => $ayats
-    //     //]);
-    // }
-
-    /**
+   
+ }    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -86,9 +49,6 @@ class TafseersController extends Controller
             'youtubeId' => 'required',
            
         ]);
-
-        //Tafseer::create($data);
-
         $data = new Tafseer;
         $data->name=$request->name;
         $data->datasurah_id=$request->datasurah_id;
@@ -99,10 +59,8 @@ class TafseersController extends Controller
             $data->user_id=Auth::user()->id;
         }
         // 
-        $data->save();
-       // Tafseer::create($request->all());
-
-        return redirect()->route('tafseers.index')->with('success', 'เพิ่มวิดีโอตัฟซีรสำเร็จ');
+         $data->save();
+            return redirect()->route('tafseers.index')->with('success', 'เพิ่มวิดีโอตัฟซีรสำเร็จ');
     }
 
     /**

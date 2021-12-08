@@ -1,14 +1,14 @@
 @extends('enduser.navuser')
 @section('content')
 
-<!-- <link rel="stylesheet" href=
+<link rel="stylesheet" href=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script>
     <script src=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script> -->
+    </script>
 
 <style>
       @font-face {
@@ -97,7 +97,8 @@
        <br>
     <br>
  <div style = background-color:#00000; class="search-area">
-    <div class="container col-md-8">
+ <div class="row">
+    <div class="col-md-8 mx-auto">
   
  <!--  vdo Tafseer link all
     <a href="{{ route('tafseer_detail',$datasurah) }}" class="link-dark" >วิดีโอตัฟซีร ซูเราะห์ {{$arabics->th_name}} </a>
@@ -219,6 +220,7 @@ $(document).ready(function(){
 
 <!-- read -->
 <!-- Button trigger modal -->
+ 
 <button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal">
   โหมดอ่านอัลกุรอาน
 </button>
@@ -379,7 +381,7 @@ $(document).ready(function(){
     <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
     <option value="#"  style="color:white bg-black" >ซูเราะห์</option>
     @foreach($datas as $data)
-    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
+    <option value="{{ route('surah', $data) }}" title="{{$data->th_name}}">
 {{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
       
     </div>
@@ -494,8 +496,8 @@ $(document).ready(function(){
   </div>
 </div>  -->
 
- <!-- //Create Note
-@if ($errors->any())
+ <!-- //Create Note  -->
+ @if ($errors->any())
  <div class="alert alert-danger">
      <strong>อุปส์</strong>
      มีบางอย่างผิดพลาด <br><br>
@@ -504,14 +506,14 @@ $(document).ready(function(){
     <li>{{ $error }}</li>
     @endforeach
 </ul>
-@endif -->
-  <!-- Note  -->
- <form action="{{ route('notes.store') }}" method="post">
+@endif 
+  <!-- Note   -->
+<form action="{{ route('notes.store') }}" method="post">
     @csrf
- <button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
+  <button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
 
 
-<div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+ <div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -528,39 +530,68 @@ $(document).ready(function(){
             <label for="message-text" class="control-label">คำอธิบาย :</label>
             <textarea class="form-control"name="description"></textarea>
           </div>
-          <!-- <div class="form-group">
-            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="datasurah_id" >
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="id" >
-          </div>
-        
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">ชื่อเรื่อง :</label>
-            <input type="text" class="form-control" name="users_id" >
-          </div>
-          -->
-        
+
+       </form>
        
+
+
+
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secodary" data-dismiss="modal">ปิด</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
         <button type="submit" class="btn btn-success">บันทึก</button>
 
-    
+
       </div>
-      
+
+    </div>
+  </div>
+ </div>
+</form>
+
+ <!-- //Create Note  -->
+ <!-- @if ($errors->any())
+ <div class="alert alert-danger">
+     <strong>อุปส์</strong>
+     มีบางอย่างผิดพลาด <br><br>
+<ul>
+    @foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif 
+  <!-- Note  
+
+<form action="{{ route('notes.store') }}" method="post">
+    @csrf
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$arabic['id']}}" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      \
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">ชื่อเรื่อง :</label>
+            <input type="text" class="form-control" id="recipient-name" name="title" >
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">คำอธิบาย :</label>
+            <textarea class="form-control" id="message-text" name="description" ></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <button type="submit" class="btn btn-primary">บันทึก</button>
+      </div>
     </div>
   </div>
 </div>
 
-</form>
-
-
-
+</form> -->
 
 
 
@@ -607,9 +638,9 @@ $(document).ready(function(){
 </div>
 <form>
 
-<hr>
+<hr></form>
+
 @endforeach
-</form>
 </div> 
 
 

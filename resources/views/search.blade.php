@@ -49,57 +49,28 @@
                    <thead>
                    <tr class="table-success">
        
-        <th style="width:10%" scope="col">ผลการค้นหา</th>
-      
-        
-     </tr> 
-                   </thead>
-                   <tbody>
+                <th style="width:10%" scope="col">ผลการค้นหา</th>
+                   </tr> 
+                </thead>
+                <tbody>
                        
                    @if(count($texts) > 0)
                            @foreach($texts as $text)
                               <tr>
-                            
-                              
-                                  <td><a href="{{ route('arabic',$text->id) }}" class="link-dark">
-                                    {{$text->th_name}}[{{$text->datasurah_id}}:{{ $text->ayat}}] </a>
-                                   
-                                     <br> {{ $text->text }}
+                                    <td>
+                                    {{$text->th_name}}[{{$text->datasurah_id}}:{{ $text->ayat}}] 
+                                   <br> {{ $text->text }}
                                   <br> {{ $text->Text }}</td>
-                            
-                                
-                                 
-                              </tr>
+                             </tr>
                            @endforeach
                            @else
 
                           <tr><td>No result found!</td></tr>
                           @endif
-
-                         
-               
-                   </tbody>
+                        </tbody>
                </table>
                </body>
-               <!-- <script>
 
-var path = "{{ url('web.find') }}";
-
-$('#card-text').typeahead({
-
-    source: function(query, process){
-
-        return $.get(path, {query:query}, function(request){
-
-            return process(request);
-
-        });
-
-    }
-
-});
-
-</script> -->
 
                <div class="pagination-block">
                    <?php //{{ $texts->links('layouts.paginationlinks') }} ?>

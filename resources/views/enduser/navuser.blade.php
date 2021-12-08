@@ -58,6 +58,7 @@
 </div>
 </header>
 </div>
+<br>
 
 @yield('content')
 

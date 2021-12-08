@@ -55,9 +55,6 @@
 
 <h class="h4 text-gray-900 mb-4">เพิ่มวิดีโอตัฟซีร</h>
 <hr/>
-
-
-
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>

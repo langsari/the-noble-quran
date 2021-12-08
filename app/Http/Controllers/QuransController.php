@@ -43,107 +43,37 @@ class QuransController extends Controller
 
     public function homepage()
     {
-        
-            $datasurahs = Datasurah::all();
-            //return dd($datasurahs);
+        $datasurahs = Datasurah::all();
             return view('quran.home', [
                 'datasurahs' => $datasurahs
             ]);
-        
     }
 
-   
-
-
     public function arabic($id)
-
     { 
         $datas = Datasurah::all();
         $datasurah = Datasurah::with('tafseer')->find($id);
         $tafseers =Datasurah::with('qurantafseer')->find($id);
         $arabics = Datasurah::with('arabic.thais')->find($id);
-       //
-       
-         //function for ayat arabic
-        //  function format_arabic_number($number)
-        //  {
-        //      $ayat = 1;
-        //      $arabic_number = array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
-        //      $jum_karakter = strlen($number);
-        //     $temp = "";
- 
-        //      for ($i =0; $i< $jum_karakter; $i++) {
-        //          $char = substr($number, $i, 1);
-        //          $temp .= $arabic_number[$char];
- 
-        //      }
-        //      return '<span class="arabic_number">' .$temp. ' </span>';            
-        //  } 
-     
-      
-      return view('quran.detail',compact('datas','arabics','datasurah','tafseers'));
-    //   [
-    //    //'datasurahs' => $datasurahs,
-    //    'arabics' => $arabics
-    // ]);
-    //     //    'ayats' => $ayats
-    //     //]);
-     // ->firstOrFail();
+        return view('quran.detail',compact('datas','arabics','datasurah','tafseers'));
+     }
 
-       // $plucked = $ayats->pluck('ayat.text', 'trans.text');
-        
-        //dd($arabics->toArray());
-      
-       //return dd($datasurahs);
-       //return dd($arabics);
-       //return view('test.detail', [
-        //dd($ayats->toArray());
-        //'ayats' => $ayats]);
-    
-    }
-    
-
-
-
-    public function tafseer_home()
+     public function tafseer_home()
     {
-        
             $datasurahs = Datasurah::paginate(20);
-           //return dd($datasurahs);
             return view('quran.tafseer_home', [
                 'datasurahs' => $datasurahs
             ]);
         
     }
   
-
     public function tafseer_detail($id)
     {
         $tafseers = Datasurah::with('tafseer')->find($id);
-      
-        
-       //dd($tafseers->toArray());
-      
-    
-       
-      return view('quran.tafseer_detail',compact('tafseers'));
-        //    'ayats' => $ayats
-        //]);
+       return view('quran.tafseer_detail',compact('tafseers'));
     }
   
-    // public function detail()
-    // {
-    //     return view('quran.detail');
-    // }
-    // public function homepage()
-    // {
-    //     $surahs = DB::table('datasurahs')
-    //     ->select('th_name')
-    //     ->get();
-
-    //     return view('quran.home',compact('surahs'));
-    //     //return view('quran.home');
-    // } 
+ 
     public function tafseer_vdo()
     {
         return view('quran.tafseer_vdo');

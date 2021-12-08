@@ -79,8 +79,7 @@
         </tr>
     </thead>
     <tbody>
-
-        @foreach ($tafseers as $tafseer) {{-- Loop tafseers --}}
+         @foreach ($tafseers as $tafseer) {{-- Loop tafseers --}}
         <tr>
             <th scope="row">{{ $loop->iteration }}</th>
             <td>{{ $tafseer->name }}</td>
@@ -111,7 +110,6 @@
             </td>
         </tr>
         @endforeach
-
     </tbody>
 </table>
 

@@ -89,25 +89,7 @@
                 <a class="btn btn-danger"href="
                 {{url('cancledvdotafseer',$tafseer->id)}}">ยกเลิก</a>
             </td>
-            <!-- <td>
-
-                <div class="dropdown"> {{-- Dropdown --}}
-                    <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
-                        data-mdb-toggle="dropdown" aria-expanded="false">
-                        Action
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-        
-                        <li>
-                            <form action="{{ route('tafseers.destroy', $tafseer->id) }}" method="post"> {{-- Delete --}}
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="dropdown-item">Delete</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </td> -->
+       
         </tr>
         @endforeach
 

@@ -55,7 +55,6 @@
 
 <h class="h4 text-gray-900 mb-4">เเก้ไขวิดีโอตัฟซีร</h>
 <hr/>
-
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>

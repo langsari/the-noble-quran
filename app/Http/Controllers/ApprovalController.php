@@ -82,11 +82,6 @@ class ApprovalController extends Controller
   public function showtafseer(){
     $tafseers =Qurantafseer::latest()->paginate(5);
 
- // {
- 
- //    if(Auth::id()){
- //        $userid=Auth::user()->id;
- //        $tafseers = Tafseer::where('user_id',$userid)->get();
   return view('approval.showtafseer',compact('tafseers'));
      }
    

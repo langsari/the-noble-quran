@@ -46,7 +46,11 @@
                        @if(count($texts) > 0)
                            @foreach($texts as $text)
                               <tr>
-                              <td><a href="{{ route('arabic',$text->id) }}" class="link-dark" >{{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] </a><br> {{ $text->text }}
+                              <td>
+                                 <!-- <a href="{{ route('arabic',$text->id) }}" class="link-dark" > -->
+                                    {{$text->th_name}}[{{$text->id}}:{{ $text->ayat}}] 
+                                 <!-- </a> -->
+                                 <br> {{ $text->text }}
                                   <br> {{ $text->Text }}</td>
                               </tr>
                            @endforeach

@@ -15,10 +15,10 @@
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
+   <li class="nav-item">
+   <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a> 
+   </li>
   <li class="nav-item">
- <a class="nav-link" href="{{ route('thai.index') }}">จัดการกุรอาน</a> 
-</li>
-<li class="nav-item">
     <a class="nav-link" href="{{ route('qurantafseers.index') }}">จัดการกุรอานตัฟซีร</a>   
    </li>
     <li class="nav-item">
@@ -41,9 +41,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('showvdotafseer') }}">ตรวจสอบสถานะวิดีโอตัฟซีร</a>
-      </li>
-      
-                  @endif
+      </li>    
+  @endif
   </ul>
 </nav>
 </div>    
