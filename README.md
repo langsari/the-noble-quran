@@ -1,3 +1,2 @@
 # The Noble Qur'an
-Hi
-I'm farhah!
+"I'm" farhah!
