@@ -1,8 +1,8 @@
 # The Noble Qur'an
 Web Application of the Noble Qur'an
 
-Hello Teacher
+Hello there, this is my branch
 
-" This is Zulkiflee Tuelayaena branch "
+" Zulkiflee Tuelayaena "
 
 
