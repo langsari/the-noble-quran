@@ -5,4 +5,4 @@ Hello Teacher
 
 " This is Zulkiflee Tuelayaena branch "
 
-Are you OK! OK OK OK วอเอ๊ะๆ!
+
