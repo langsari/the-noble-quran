@@ -1,7 +1,7 @@
 # The Noble Qur'an
 Web Application of the Noble Qur'an
 
-# Figure of Al-Quran App
+#  Al-Quran Application
 -	Dua’ in daily life
 -	Tafsir/Translate the Quran into Thaiหลักการตัจวีด
 -	Listen Al-Quran
