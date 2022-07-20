@@ -2,7 +2,7 @@
 Web Application of the Noble Qur'an
 
 # Quran Application 
--Translation
+- Translation
 -Meaning of word
 -Tajweed
 -Tafseer
