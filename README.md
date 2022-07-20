@@ -3,7 +3,7 @@ Web Application of the Noble Qur'an
 
 #  Al-Quran Application
 -	Dua’ in daily life
--	Tafsir/Translate the Quran into Thaiหลักการตัจวีด
+-	Tafsir/Translate the Quran into Thai language
 -	Listen Al-Quran
 -	Qi blat
 -	Prayer time & Azan 
