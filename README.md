@@ -3,7 +3,7 @@
 I'm farhah!
 it's mean happy woman
 
-“ Figure of Al-quran app “ 
+# “ Figure of Al-quran app “ 
 * There is a translate system Thai/English. 
 * Interpret the meaning with informal, easy to understand words. 
 * There is a history of stories about that Surah. 
