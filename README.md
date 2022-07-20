@@ -1,7 +1,7 @@
 # The Noble Qur'an
 Web Application of the Noble Qur'an
 
-## list function of the-noble-quran
+## List function of the-noble-quran
 
 - สามารถโชว์เนื้อหาหรืออายะหอัลกุรอานที่ตรงกับเรื่องราวหรือปัญหาปัจจุบันที่หน้าเว็บไซต์
 - สามารถบอกที่มาของอายะหหรือซูเราะห ว่าลงช่วงเหตุการณ์ไหนของท่านนบี
