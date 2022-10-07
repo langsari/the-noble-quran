@@ -1,0 +1,331 @@
+/***** 
+    font-family:'thuluth-decorated';
+    font-family:'cairo-bold';
+*****/
+/** Global Style **/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'cairo-bold';
+    outline: none;
+}
+::-webkit-scrollbar
+{
+    width: 0;
+}
+body
+{
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+ul,li
+{
+    list-style: none;
+
+}
+.container
+{
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+section
+{
+    padding: 70px 0;
+}
+section h3
+{
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50px;
+    position: relative;
+}
+section h3::after,
+
+section h3::after
+{
+    width: 50px;
+    bottom: -10px;
+}
+section h3::before
+{
+    width: 100px;
+    bottom: 0px;
+}
+/*** Header **/
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: .5s all ease-in-out;
+    background-color:#fff;
+}
+.header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    color: rgb(0, 0, 0);
+    transition: .5s all ease-in-out;
+}
+.header .active
+{
+    background-color: fff;
+}
+.header.active .container
+{
+    height: 80px;
+}
+.header ul
+{
+    display: flex;
+}
+.header ul li
+{
+    position: relative;
+    cursor: pointer;
+}
+.header ul li::after
+{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    
+
+    background-color: rgb(4, 4, 4);
+    height: 4px;
+    transition: .3s all ease-in-out;
+    width: 0;
+}
+.header li.active::after,
+.header li.hover::after
+{
+    width: 50px;
+}
+.header .bars
+{
+    display: none;
+}
+.header li:not(:first-of-type),
+.header li:not(:last-of-type)
+{
+    margin: 0 15px;
+}
+.header .logo
+{
+    font-family:'thuluth-decorated';
+    font-size: 55px;
+    cursor: pointer;
+}
+/**_* main Section ***/
+.main
+{
+    background: url(./images/Q1.webp) center center/cover no-repeat;
+    padding: 0;
+}
+.main .container
+{
+    min-height: 100vh;
+}
+.main .title
+{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+}
+.main .title h2
+{
+    
+    line-height: 1.9;
+    
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.title .btn
+{
+    border: 2px solid#fff;
+    background: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s all ease-in-out;
+    padding: 5px 15px;
+}
+.title .btn i
+{
+    font-size: 25px;
+    margin-right: 20px;
+}
+.title .btn::after
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background-color: #000;
+    z-index: -1;
+}
+.title .btn:hover
+{
+    color: #232323;
+}
+.title .btn:hover::after
+{
+    width: 100%;
+}
+/*** Hadith Section ***/
+.hadithContainer
+{
+    min-height: 350px;
+    position: relative;
+    box-shadow: 4px 4px 4px 0 #d1d9e6 inset ,   
+    -4px -4px 4px 0px #d1d9e6 inset;
+    color: #232323;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    padding-top: 70px;
+}
+
+.hadith .buttons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.hadith .buttons div
+{
+    background: linear-gradient(60deg , #66bb6a , #43a047);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) , 0 7px 10px -5px rgba(76, 175, 88, 4);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.hadith .buttons .number
+{
+    padding: 10px 20px ;
+    color: #43a047;
+    background: transparent;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) inset, 0 7px 10px -5px rgba(76, 175, 88, 4);
+}
+
+/*** Pray Time ***/
+.card
+{
+    min-height: 250px;
+    position: relative;
+    box-shadow:3px 3px 3px 0 #d1d9e6 inset ,   
+    -1px -6px -3px 0px #264370 inset;
+    color: #232323;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/Q1.webp) center center/cover no-repeat;
+    padding: 0;
+
+}
+
+/*** Footer **/
+.footer
+{
+    padding: 0;
+}
+.footer svg
+{
+    fill: #2b385a;
+    transform: translateY(10px);
+}
+.footer .social
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.footer .social a
+{
+    margin: 15px;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+}
+/*** Scroll Btn ***/
+.scrollBtn
+{
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: 1s bottom ease-in-out;
+    bottom: -50px;
+}
+.scrollBtn.active
+{
+    bottom: 20px;
+}
+/*** Responsive ***/
+@media (max-width : 1024px)
+{
+    .lectures-container .right .lectures-container .left
+     {
+         width: 98%
+     }
+     .header .bars
+     {
+        
+         display: block;
+         font-size: 25px;
+     }
+     .header ul
+     {
+         position: absolute;
+        left: 0;
+         top: 80px;
+         width: 220px;
+         background-color: rgba(254, 255, 255, 0.445);
+         color: black;
+         flex-direction: column;
+         padding: 0 50px;
+         text-align: center;
+         transform: translateX(-100%);
+         transition: .7s transform ease-in-out;
+     }
+     .header ul.active
+     {
+         transform: translateX(0);
+     }
+     .header li:not(:first-of-type),
+     .header li:not(:last-of-type)
+     {
+         margin: 15px 0;
+     }
+}
