@@ -233,16 +233,16 @@ section h3::before
 /*** Pray Time ***/
 .card
 {
-    min-height: 250px;
+    min-height:350px;
     position: relative;
-    box-shadow:3px 3px 3px 0 #d1d9e6 inset ,   
-    -1px -6px -3px 0px #264370 inset;
-    color: #232323;
+    box-shadow:7px 3px 7px 0 #1a4fa4 inset ,   
+    -7px 3px -7px 0px #114eab inset;
+    color: #020202;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./images/Q1.webp) center center/cover no-repeat;
+    background: url(./images/masjed.jpg) center center/cover no-repeat;
     padding: 0;
 
 }
