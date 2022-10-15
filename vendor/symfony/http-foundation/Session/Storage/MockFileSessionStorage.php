@@ -13,8 +13,7 @@ namespace Symfony\Component\HttpFoundation\Session\Storage;
 
 /**
  * MockFileSessionStorage is used to mock sessions for
- * functional testing where you may need to persist session data
- * across separate PHP processes.
+ * functional testing when done in a single PHP process.
  *
  * No PHP session is actually started since a session can be initialized
  * and shutdown only once per PHP execution cycle and this class does

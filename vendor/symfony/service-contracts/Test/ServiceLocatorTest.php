@@ -17,9 +17,6 @@ use Symfony\Contracts\Service\ServiceLocatorTrait;
 
 abstract class ServiceLocatorTest extends TestCase
 {
-    /**
-     * @return ContainerInterface
-     */
     protected function getServiceLocator(array $factories)
     {
         return new class($factories) implements ContainerInterface {

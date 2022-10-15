@@ -30,22 +30,6 @@ use Symfony\Contracts\Translation\TranslatorTrait;
  */
 class TranslatorTest extends TestCase
 {
-    private $defaultLocale;
-
-    protected function setUp(): void
-    {
-        $this->defaultLocale = \Locale::getDefault();
-        \Locale::setDefault('en');
-    }
-
-    protected function tearDown(): void
-    {
-        \Locale::setDefault($this->defaultLocale);
-    }
-
-    /**
-     * @return TranslatorInterface
-     */
     public function getTranslator()
     {
         return new class() implements TranslatorInterface {
@@ -69,6 +53,7 @@ class TranslatorTest extends TestCase
     public function testTransChoiceWithExplicitLocale($expected, $id, $number)
     {
         $translator = $this->getTranslator();
+        $translator->setLocale('en');
 
         $this->assertEquals($expected, $translator->trans($id, ['%count%' => $number]));
     }
@@ -80,18 +65,9 @@ class TranslatorTest extends TestCase
      */
     public function testTransChoiceWithDefaultLocale($expected, $id, $number)
     {
-        $translator = $this->getTranslator();
+        \Locale::setDefault('en');
 
-        $this->assertEquals($expected, $translator->trans($id, ['%count%' => $number]));
-    }
-
-    /**
-     * @dataProvider getTransChoiceTests
-     */
-    public function testTransChoiceWithEnUsPosix($expected, $id, $number)
-    {
         $translator = $this->getTranslator();
-        $translator->setLocale('en_US_POSIX');
 
         $this->assertEquals($expected, $translator->trans($id, ['%count%' => $number]));
     }
@@ -99,6 +75,7 @@ class TranslatorTest extends TestCase
     public function testGetSetLocale()
     {
         $translator = $this->getTranslator();
+        $translator->setLocale('en');
 
         $this->assertEquals('en', $translator->getLocale());
     }
@@ -324,7 +301,7 @@ class TranslatorTest extends TestCase
     {
         return [
             ['1', ['ay', 'bo', 'cgg', 'dz', 'id', 'ja', 'jbo', 'ka', 'kk', 'km', 'ko', 'ky']],
-            ['2', ['nl', 'fr', 'en', 'de', 'de_GE', 'hy', 'hy_AM', 'en_US_POSIX']],
+            ['2', ['nl', 'fr', 'en', 'de', 'de_GE', 'hy', 'hy_AM']],
             ['3', ['be', 'bs', 'cs', 'hr']],
             ['4', ['cy', 'mt', 'sl']],
             ['6', ['ar']],
@@ -362,7 +339,7 @@ class TranslatorTest extends TestCase
         foreach ($matrix as $langCode => $data) {
             $indexes = array_flip($data);
             if ($expectSuccess) {
-                $this->assertCount($nplural, $indexes, "Langcode '$langCode' has '$nplural' plural forms.");
+                $this->assertEquals($nplural, \count($indexes), "Langcode '$langCode' has '$nplural' plural forms.");
             } else {
                 $this->assertNotEquals((int) $nplural, \count($indexes), "Langcode '$langCode' has '$nplural' plural forms.");
             }

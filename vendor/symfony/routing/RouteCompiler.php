@@ -152,7 +152,7 @@ class RouteCompiler implements RouteCompilerInterface
 
             if ($isSeparator && $precedingText !== $precedingChar) {
                 $tokens[] = ['text', substr($precedingText, 0, -\strlen($precedingChar))];
-            } elseif (!$isSeparator && '' !== $precedingText) {
+            } elseif (!$isSeparator && \strlen($precedingText) > 0) {
                 $tokens[] = ['text', $precedingText];
             }
 
