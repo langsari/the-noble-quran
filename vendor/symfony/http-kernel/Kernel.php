@@ -76,11 +76,11 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
 
     private static $freshCache = [];
 
-    public const VERSION = '4.4.47';
-    public const VERSION_ID = 40447;
+    public const VERSION = '4.4.32';
+    public const VERSION_ID = 40432;
     public const MAJOR_VERSION = 4;
     public const MINOR_VERSION = 4;
-    public const RELEASE_VERSION = 47;
+    public const RELEASE_VERSION = 32;
     public const EXTRA_VERSION = '';
 
     public const END_OF_MAINTENANCE = '11/2022';
@@ -237,7 +237,7 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
     /**
      * {@inheritdoc}
      */
-    public function locateResource($name/* , $dir = null, $first = true, $triggerDeprecation = true */)
+    public function locateResource($name/*, $dir = null, $first = true, $triggerDeprecation = true*/)
     {
         if (2 <= \func_num_args()) {
             $dir = func_get_arg(1);
@@ -528,7 +528,9 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
             is_dir($cacheDir) ?: mkdir($cacheDir, 0777, true);
 
             if ($lock = fopen($cachePath.'.lock', 'w')) {
-                if (!flock($lock, \LOCK_EX | \LOCK_NB, $wouldBlock) && !flock($lock, $wouldBlock ? \LOCK_SH : \LOCK_EX)) {
+                flock($lock, \LOCK_EX | \LOCK_NB, $wouldBlock);
+
+                if (!flock($lock, $wouldBlock ? \LOCK_SH : \LOCK_EX)) {
                     fclose($lock);
                     $lock = null;
                 } elseif (!is_file($cachePath) || !\is_object($this->container = include $cachePath)) {

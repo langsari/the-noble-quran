@@ -25,7 +25,7 @@ interface LocaleAwareInterface
     /**
      * Returns the current locale.
      *
-     * @return string
+     * @return string The locale
      */
     public function getLocale();
 }
