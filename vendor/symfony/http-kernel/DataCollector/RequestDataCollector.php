@@ -39,7 +39,7 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
      *
      * @param \Throwable|null $exception
      */
-    public function collect(Request $request, Response $response/*, \Throwable $exception = null*/)
+    public function collect(Request $request, Response $response/* , \Throwable $exception = null */)
     {
         // attributes are serialized and as they can be anything, they need to be converted to strings.
         $attributes = [];
@@ -150,7 +150,7 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
                     'method' => $request->getMethod(),
                     'controller' => $this->parseController($request->attributes->get('_controller')),
                     'status_code' => $statusCode,
-                    'status_text' => Response::$statusTexts[(int) $statusCode],
+                    'status_text' => Response::$statusTexts[$statusCode],
                 ]),
                 0, '/', null, $request->isSecure(), true, false, 'lax'
             ));
