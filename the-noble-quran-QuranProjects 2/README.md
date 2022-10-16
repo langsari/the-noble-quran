@@ -68,3 +68,5 @@ The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
 
 ttttttt
+
+1
