@@ -1,5 +1,0 @@
-Quran Translations,
-Translation support more languages,
-Translate by word by word, 
-Select languages meaning,
-Translate many languages all in one,
