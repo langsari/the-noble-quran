@@ -78,6 +78,11 @@ class QuransController extends Controller
     {
         return view('quran.tafseer_vdo');
     }
+
+    public function dua()
+    {
+        return view('quran.dua');
+    }
     // public function tafseer_home()
     // {
     //     return view('quran.tafseer_home');

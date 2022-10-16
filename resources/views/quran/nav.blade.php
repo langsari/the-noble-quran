@@ -30,6 +30,7 @@
   
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
   <a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
+  <a href="{{ route('dua') }}">ดูอา</a>
 
   <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
   <a href="{{ route('register') }}">สมัคร</a>
@@ -53,14 +54,14 @@
       <!-- Header -->
       <header class="masthead  text-white text-center">
 
-<div style = background-color:#9be2cd;>
+<div style = background-color:#379683;>
   <h1 class="jumbotron-heading"></h1>
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
     <br>
     <br>
-      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <img class="img" src="{{ URL::to('img/logo-lg-w.png') }}">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="col-md-3"></div>
@@ -79,7 +80,7 @@
 <style>footer {
 text-align: center;
 padding: 3px;
-background-color:#9be2cd;
+background-color:#379683;
 color: white;
 }</style>
 <body>

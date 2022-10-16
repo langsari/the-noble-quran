@@ -73,14 +73,14 @@
   .quran-font {
     font-family: quran-font;
     font-size: 26px;
-    color: #FFFFFF;
+    color: #000000;
   }
   .quran-font-intro  p{
      font-family: quran-font;
      direction: rtl;
      font-size: 26px;
      line-height: 200%;
-     color: #FFFFFF;
+     color: #000000;
    }
    .highlight{ 
   background:#00FF00; 
@@ -278,6 +278,8 @@
       
        </div>
        <p class="t">{{$arabic->transliteration}}</p>
+       <p class="t">{{$arabic->thais->Text}}</p>
+
        <!-- checked ststus before display on screen if user CRUD Quran -->
        @if($arabic->thais->status == 'อนุมัติ') 
       <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>

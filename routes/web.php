@@ -104,5 +104,6 @@ Route::get('approval/showquran',[ApprovalController::class,'showquran'])->name('
 Route::get('/approvedquran/{id}',[ApprovalController::class,'approvedquran']);
 Route::get('/cancledquran/{id}',[ApprovalController::class,'cancledquran']);
 
-
+//dua
+Route::get('/dua',[QuransController::class,'dua'])->name('dua');
 
