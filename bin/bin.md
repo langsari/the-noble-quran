@@ -1,2 +1,0 @@
-#/bin 
-command-line executables
