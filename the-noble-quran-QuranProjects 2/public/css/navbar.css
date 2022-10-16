@@ -1,0 +1,266 @@
+
+ @font-face {
+  font-family: 'Roboto Condensed', sans-serif;
+  src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
+}
+.arabic{
+   font-family: 'Uthmani', serif;
+   font-size: 23px;
+   font-weight: normal;
+   direction: rtl;
+   padding: 0 5px;
+   margin: 0;
+}
+.latin{
+  font-family:  serif;
+  font-size: 17px;
+  font-weight: normal;
+  direction: ltr;
+  padding: 0;
+  margin: 0;
+}
+.arabic_number {
+  font-size: 28px;
+  font-weight: normal;
+}
+  .cautions {
+  
+  font-size: 13px;
+  font-weight: normal;
+  direction: ltr;
+  padding: 0 5px;
+  margin: 0;
+  color: red;
+
+}
+.foot {
+  text-align: center;
+  padding: 3px;
+  background-color:#cf911e;
+  color: white;
+  }
+.open-button {
+  /* โน๊ต */
+  background-color:#008997 ;
+  color: #F2F5F5;
+  padding: 14px 16px;
+  border-radius:25px;
+  border: 2px solid #7B7D7D;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 10px;
+  right: 20px;
+  width: 60px;
+}
+.open-button2 {
+  /* ตัฟซัร */
+  background-color: #008997;
+  color: #F2F5F5;
+  padding: 14px 16px;
+  border-radius:25px;
+  border: 2px solid #7B7D7D;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 10px;
+  right: 20px;
+  width: 100px;
+}
+.open-button3 {
+  background-color: #9be2cd;;
+  color: #16f7f7;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 10px;
+  right: 20px;
+  width: 100px;
+}
+.open-button4 {
+  background-color: #e42968;;
+  color: #F2F5F5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  
+}
+.open-button5 {
+  background-color:#008997;
+  color: #F2F5F5;
+  padding: 14px 16px;
+  margin-bottom: 2px;
+  border-radius:25px;
+  border: 3px solid #7B7D7D;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 10px;
+  right: 20px;
+  width: 100px;
+}
+
+
+
+.latin2{
+  font-family:  serif;
+  font-size: 20px;
+  font-weight: normal;
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+}
+ .arabic_number {
+   font-size: 28px;
+   font-weight: normal;
+   
+}
+
+.footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#480950;
+    color: white;
+  }.text {
+    
+    color: white;
+    font-size: 10vw; 
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .header-dark {
+    background-color:#cf157b;
+    background-size:cover;
+    padding-bottom:80px;
+  }
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+ font-family: 'Roboto Condensed', sans-serif;
+}
+/* เนฟบา ตัฟซีร เข้าสูระบบ */
+.topnav {
+  overflow: hidden;
+  background-color:#7B7D7D;
+}
+/* เนฟบา ตัวอักษร ตัฟซีร เข้าสูระบบ */
+.topnav a {
+  float: left;
+  margin-top: 12px;
+  display: block;
+  color: rgb(253, 252, 252);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+/* เนฟบา ตัวชี้  ตัฟซีร เข้าสูระบบ */
+.topnav a:hover {
+  background-color: #008997;
+  color: black;
+}
+/* เนฟบา Quran.th */
+.topnav a.active {
+  background-color:#008997;
+  color: white;
+  border-radius:25px;
+  border: 2px solid #7B7D7D;
+  margin: 8px;
+}
+/* ช่องการค้นหา */
+.topnav .search-container {
+  float: right;
+  
+  
+}
+/* ช่องการค้นหาสีขาว */
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 15px;
+  margin-right: 3px;
+  font-size: 17px;
+  border-radius:25px;
+  border: 2px solid #7B7D7D;
+}
+/* ช่องกาารกด ค้นหา */
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 15px;
+  margin-right: 16px;
+  background:#008997;
+  font-size: 17px;
+  border-radius:25px;
+  border: 2px solid #7B7D7D;
+  cursor: pointer;
+}
+/* ตัวชี้ การกดค้นหา */
+.topnav .search-container button:hover {
+  background: rgb(253, 253, 253);
+  
+}
+.img{
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  body {margin:2rem;}
+
+.modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+  }
+
+
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+.bs-example{
+  margin: 20px;
+}
+.modal-dialog iframe{
+    margin: 0 auto;
+    display: block;
+}
+}
+

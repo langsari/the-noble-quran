@@ -1,0 +1,60 @@
+@font-face {
+    font-family: quran-font;
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/AmiriQuranColored.woff') format('truetype');
+  }
+  
+  .quran-font {
+    font-family: quran-font;
+    font-size: 260px;
+    color: #fcf9f9;
+  }
+  .quran-font-intro p {
+     font-family: quran-font;
+     font-size: 26px;
+     line-height: 200%;
+     color: #FFFFFF;
+   }
+  .quran-font-quran-world p {
+    font-family: quran-font;
+    font-size: 20px;
+    line-height: 200%;
+    /*color: #FFFFFF;*/
+  }
+  .quran-font-quran-world-language {
+    font-family: quran-font;
+    font-size: 20px;
+    line-height: 200%;
+    /*color: #FFFFFF;*/
+  }
+  
+  .quran-translate {
+    font-family: quran-font;
+    font-size: 26px;
+    /*line-height: 200%;*/
+    /*direction: rtl;*/
+    /*text-align: justify;*/
+    /*text-align-last: center;*/
+  
+    /*width: 1200px;*/
+  
+    /*color: #FFFFFF;*/
+  
+  }
+  .quran-translate tr td p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  
+  
+  }
+  
+  .table-quran-translate p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  
+  }
