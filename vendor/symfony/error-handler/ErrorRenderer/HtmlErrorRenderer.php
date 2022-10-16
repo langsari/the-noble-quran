@@ -58,8 +58,8 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         }
 
         $this->debug = $debug;
-        $this->charset = $charset ?: (ini_get('default_charset') ?: 'UTF-8');
-        $this->fileLinkFormat = $fileLinkFormat ?: (ini_get('xdebug.file_link_format') ?: get_cfg_var('xdebug.file_link_format'));
+        $this->charset = $charset ?: (\ini_get('default_charset') ?: 'UTF-8');
+        $this->fileLinkFormat = $fileLinkFormat ?: (\ini_get('xdebug.file_link_format') ?: get_cfg_var('xdebug.file_link_format'));
         $this->projectDir = $projectDir;
         $this->outputBuffer = $outputBuffer;
         $this->logger = $logger;
@@ -215,7 +215,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     /**
      * Returns the link for a given file/line pair.
      *
-     * @return string|false A link or false
+     * @return string|false
      */
     private function getFileLink(string $file, int $line)
     {
@@ -262,8 +262,6 @@ class HtmlErrorRenderer implements ErrorRendererInterface
      * @param string $file       A file path
      * @param int    $line       The selected line number
      * @param int    $srcContext The number of displayed lines around or -1 for the whole file
-     *
-     * @return string An HTML string
      */
     private function fileExcerpt(string $file, int $line, int $srcContext = 3): string
     {
@@ -325,7 +323,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
         if ($context && false !== strpos($message, '{')) {
             $replacements = [];
             foreach ($context as $key => $val) {
-                if (is_scalar($val)) {
+                if (\is_scalar($val)) {
                     $replacements['{'.$key.'}'] = $val;
                 }
             }
