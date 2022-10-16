@@ -66,11 +66,3 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Quran.th
 The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
-
-ttttttt
-
-<<<<<<< HEAD
-1230303404040040030
-=======
-1
->>>>>>> 8cc79b48b29d36db3b2355bd80004ed11d3e6e9e
