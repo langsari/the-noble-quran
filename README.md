@@ -82,5 +82,4 @@ The Quran Web application in Thai Language : My final project of IT student
 ### Review
 
 
-=======
 ## Modern Language Programing
