@@ -54,7 +54,7 @@
       <!-- Header -->
       <header class="masthead  text-white text-center">
 
-<div style = background-color:#9be2cd;>
+<div style = background-color:#B3B6B7;>
   <h1 class="jumbotron-heading"></h1>
   <div class="row">
     <div class="col-md-3"></div>
