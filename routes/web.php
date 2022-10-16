@@ -31,6 +31,13 @@ Route::get('/', function () {
 return view('quran.home');
 });
 
+
+//้hadith
+Route::get('/hadith', function () {
+    return view('hadith');
+    })->name('hadith');
+
+
 //auth
 Auth::routes();
 

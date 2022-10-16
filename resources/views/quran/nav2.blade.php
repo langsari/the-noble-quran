@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
 
+
  
     
     
@@ -26,47 +27,42 @@
 <body>
 
 <div class="topnav fixed-top ">
-<a class="active" href="{{ route('homeuser') }}">Quran.th</a>
-  <a href="{{ route('tafseer_homeuser') }}">ตัฟซีร</a>
-  <a href="{{ route('notes.index')}}">โน้ตของคุณ</a>
-  <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('ออกจากระบบ') }}
-                                    </a>
+  
+<a class="active" href="{{ route('homepage') }}">Quran.th</a>
+  <a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-
-
-                            
+  <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
+  <a href="{{ route('register') }}">สมัคร</a>
+  <a href="{{ route('hadith') }}">หาดีส</a>
 
 
      <div class="search-container">
-     <form action="{{ route('web.findsearch') }}" method="GET">
+     <form action="{{ route('web.find') }}" method="GET">
       <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
       <button type="submit">ค้นหา</button>
     </form>
 
+
     
   </div>
+  
   </div>
 </div>
-<div style = background-color:#0082b4; class=" row text-center ">
+<div style = background-color:#9be2cd; class=" row text-center ">
+
       <!-- Header -->
       <header class="masthead  text-white text-center">
 
-<div style = background-color:#0082b4;>
+<div style = background-color:#9be2cd;>
   <h1 class="jumbotron-heading"></h1>
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
     <br>
     <br>
-      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <img src="">
       <br><br>
-      <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
+      <h2 class="text-capitalize lead">Hadith</h2>
       <div class="col-md-3"></div>
     </div>
 
@@ -90,7 +86,7 @@ color: white;
 
 <footer>
 <p>Quran.th<br>
-<p>suraiya1707@gmail.com<p></p>
+<p>Fatoni University<p></p>
 </footer>
 
 </body>

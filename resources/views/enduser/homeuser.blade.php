@@ -41,7 +41,7 @@
       </style>
    
  
-<div style = background-color:#9be2cd; class=" row text-center ">
+<div style = background-color:#0082b4; class=" row text-center ">
 
       @foreach($datasurahs as $datasurah)     
 <div class="col-sm-3">

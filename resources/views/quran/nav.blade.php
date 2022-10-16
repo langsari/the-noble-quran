@@ -33,7 +33,7 @@
 
   <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
   <a href="{{ route('register') }}">สมัคร</a>
-
+  <a href="{{ route('hadith') }}">หาดีส</a>
 
 
      <div class="search-container">

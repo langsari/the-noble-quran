@@ -73,14 +73,14 @@
   .quran-font {
     font-family: quran-font;
     font-size: 26px;
-    color: #FFFFFF;
+    color: #000000;
   }
   .quran-font-intro  p{
      font-family: quran-font;
      direction: rtl;
      font-size: 26px;
      line-height: 200%;
-     color: #FFFFFF;
+     color: #000000;
    }
    .highlight{ 
   background:#00FF00; 
