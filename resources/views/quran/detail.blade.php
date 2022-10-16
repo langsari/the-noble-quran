@@ -54,7 +54,7 @@
 
     }
     .t {
-  background-color: #D0D3D4;
+  background-color: #B3B6B7;
   color: Black;
   font-family:  serif;
         font-size: 15px;
