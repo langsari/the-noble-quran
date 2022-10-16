@@ -94,7 +94,7 @@
        <br>
     <br>
     <!-- ภาพพิ้นหลัง กุรอาน -->
- <div style = background-color:#D0D3D4; class="search-area">
+ <div style = background-color:#B3B6B7; class="search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>

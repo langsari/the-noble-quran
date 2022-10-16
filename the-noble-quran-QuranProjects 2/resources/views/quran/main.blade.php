@@ -42,7 +42,7 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Page content -->
 
-<div class="w3-content" style="background-color:#9be2cd;" width="100%;" margin-top="46px">
+<div class="w3-content" style="background-color:#B3B6B7;" width="100%;" margin-top="46px">
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">

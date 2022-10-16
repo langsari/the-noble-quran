@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quran-th</title>
+    <title>Al-quran </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,7 +41,7 @@
 
   <div class="search-container">
      <form action="{{ route('web.find') }}" method="GET">
-      <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+      <input type="text" placeholder="Enter surah name..." name="query" value="{{ request()->input('query') }}">
       <button type="submit">Search</button>
     </form>
 
@@ -133,7 +133,7 @@ if (searchword != "") {
 <style>footer {
 text-align: center;
 padding: 3px;
-background-color:#9be2cd;
+background-color:#B3B6B7;
 color: white;
 }</style>
 <body>
