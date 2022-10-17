@@ -28,8 +28,9 @@
 <div class="topnav fixed-top ">
 <a class="active" href="{{ route('homeuser') }}">Quran.th</a>
   <a href="{{ route('tafseer_homeuser') }}">ตัฟซีร</a>
+  <a href="{{ route('Azkars') }}">อัซกัร</a>
   <a href="{{ route('notes.index')}}">โน้ตของคุณ</a>
-  <a href="{{ route('logout') }}"></a>
+  <a href="{{ route('logout') }}"
   
   
                                        onclick="event.preventDefault();
