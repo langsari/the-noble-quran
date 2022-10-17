@@ -42,6 +42,10 @@
   padding:1px; 
   border:#00CC00 dotted 1px; 
 }
+   .title{
+    text-align: center;
+
+}
 </style>
 <br>
     <br>
@@ -51,7 +55,8 @@
 <br>
 
    
-        <h1>คำที่ควรสังเกตในอัลกุรอาน</h1>
+        <h1 class="title">คำที่ควรสังเกตในอัลกุรอาน</h1>
+        <br>
         
         <div class="ayat"><p>وَٱللَّهُ يَقْبِضُ <span class="kalimah">وَيَبْصُۜطُ</span> وَإِلَيْهِ تُرْجَعُونَ </p></div>
         <p class="t">พยัญชนะขึ้นที่อยู่บนพยัญชนะสอด จะอ่านด้วยพยัญชนะขึ้นอย่างเดียว</p>
@@ -67,7 +72,7 @@
         <p>(อัฏ-ฏูร : 37)</p>
         <br>
       <audio controls >
-      <source src="" type="">
+      <source src="114001.mp3" type="audio/mpeg">
       </audio>
       <br>
         
