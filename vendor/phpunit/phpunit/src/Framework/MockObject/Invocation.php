@@ -13,8 +13,6 @@ use function array_map;
 use function explode;
 use function get_class;
 use function implode;
-use function in_array;
-use function interface_exists;
 use function is_object;
 use function sprintf;
 use function strpos;
@@ -22,7 +20,7 @@ use function strtolower;
 use function substr;
 use Doctrine\Instantiator\Instantiator;
 use PHPUnit\Framework\SelfDescribing;
-use PHPUnit\Util\Cloner;
+use PHPUnit\Util\Type;
 use SebastianBergmann\Exporter\Exporter;
 use stdClass;
 use Throwable;
@@ -92,7 +90,7 @@ final class Invocation implements SelfDescribing
 
         foreach ($this->parameters as $key => $value) {
             if (is_object($value)) {
-                $this->parameters[$key] = Cloner::clone($value);
+                $this->parameters[$key] = $this->cloneObject($value);
             }
         }
     }
@@ -123,17 +121,12 @@ final class Invocation implements SelfDescribing
             return null;
         }
 
-        $intersection               = false;
-        $union                      = false;
-        $unionContainsIntersections = false;
+        $intersection = false;
+        $union        = false;
 
         if (strpos($this->returnType, '|') !== false) {
             $types = explode('|', $this->returnType);
             $union = true;
-
-            if (strpos($this->returnType, '(') !== false) {
-                $unionContainsIntersections = true;
-            }
         } elseif (strpos($this->returnType, '&') !== false) {
             $types        = explode('&', $this->returnType);
             $intersection = true;
@@ -143,7 +136,7 @@ final class Invocation implements SelfDescribing
 
         $types = array_map('strtolower', $types);
 
-        if (!$intersection && !$unionContainsIntersections) {
+        if (!$intersection) {
             if (in_array('', $types, true) ||
                 in_array('null', $types, true) ||
                 in_array('mixed', $types, true) ||
@@ -227,28 +220,38 @@ final class Invocation implements SelfDescribing
             }
         }
 
-        if ($intersection && $this->onlyInterfaces($types)) {
-            try {
-                return (new Generator)->getMockForInterfaces($types);
-            } catch (Throwable $t) {
-                throw new RuntimeException(
-                    sprintf(
-                        'Return value for %s::%s() cannot be generated: %s',
-                        $this->className,
-                        $this->methodName,
-                        $t->getMessage(),
-                    ),
-                    (int) $t->getCode(),
-                );
-            }
-        }
-
         $reason = '';
 
         if ($union) {
             $reason = ' because the declared return type is a union';
         } elseif ($intersection) {
             $reason = ' because the declared return type is an intersection';
+
+            $onlyInterfaces = true;
+
+            foreach ($types as $type) {
+                if (!interface_exists($type)) {
+                    $onlyInterfaces = false;
+
+                    break;
+                }
+            }
+
+            if ($onlyInterfaces) {
+                try {
+                    return (new Generator)->getMockForInterfaces($types);
+                } catch (Throwable $t) {
+                    throw new RuntimeException(
+                        sprintf(
+                            'Return value for %s::%s() cannot be generated: %s',
+                            $this->className,
+                            $this->methodName,
+                            $t->getMessage(),
+                        ),
+                        (int) $t->getCode(),
+                    );
+                }
+            }
         }
 
         throw new RuntimeException(
@@ -285,17 +288,12 @@ final class Invocation implements SelfDescribing
         return $this->object;
     }
 
-    /**
-     * @psalm-param non-empty-list<string> $types
-     */
-    private function onlyInterfaces(array $types): bool
+    private function cloneObject(object $original): object
     {
-        foreach ($types as $type) {
-            if (!interface_exists($type)) {
-                return false;
-            }
+        if (Type::isCloneable($original)) {
+            return clone $original;
         }
 
-        return true;
+        return $original;
     }
 }

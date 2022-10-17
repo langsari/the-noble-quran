@@ -12,6 +12,7 @@ use App\Models\Qurantafseer;
 use App\Models\Note;
 
 use DB;
+use Illuminate\Support\Facades\Route;
 
 class QuransController extends Controller
 {
@@ -73,6 +74,16 @@ class QuransController extends Controller
        return view('quran.tafseer_detail',compact('tafseers'));
     }
   
+    //public function dua($id)
+    //{
+    //    $dualists = Datasurah::with('tafseer')->find($id);
+    //   return view('quran.dua',compact('tafseers'));
+    //}
+
+    public function dua() {
+        $tafseers = Datasurah::with('tafseer');
+        return view('quran.dua',compact('tafseers'));
+    }
  
     public function tafseer_vdo()
     {
@@ -86,6 +97,18 @@ class QuransController extends Controller
     // {
     //     return view('quran.tafseer_detail');
     // }
+
+
+
+    Public function dualists() {
+        
+        $dualist = DB::table("arabics")->where("id", 5)->select("text")->first();
+
+        echo "<pre>";
+
+        print_r($dualist);;
+    }
+
     public function navbar()
     {
         return view('quran.navbar');

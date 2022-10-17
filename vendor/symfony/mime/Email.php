@@ -463,7 +463,7 @@ class Email extends Message
 
         $this->ensureValidity();
 
-        [$htmlPart, $otherParts, $relatedParts] = $this->prepareParts();
+        [$htmlPart, $attachmentParts, $inlineParts] = $this->prepareParts();
 
         $part = null === $this->text ? null : new TextPart($this->text, $this->textCharset);
         if (null !== $htmlPart) {
@@ -474,15 +474,15 @@ class Email extends Message
             }
         }
 
-        if ($relatedParts) {
-            $part = new RelatedPart($part, ...$relatedParts);
+        if ($inlineParts) {
+            $part = new RelatedPart($part, ...$inlineParts);
         }
 
-        if ($otherParts) {
+        if ($attachmentParts) {
             if ($part) {
-                $part = new MixedPart($part, ...$otherParts);
+                $part = new MixedPart($part, ...$attachmentParts);
             } else {
-                $part = new MixedPart(...$otherParts);
+                $part = new MixedPart(...$attachmentParts);
             }
         }
 
@@ -502,44 +502,42 @@ class Email extends Message
         }
 
         // usage of reflection is a temporary workaround for missing getters that will be added in 6.2
+        $dispositionRef = new \ReflectionProperty(TextPart::class, 'disposition');
+        $dispositionRef->setAccessible(true);
         $nameRef = new \ReflectionProperty(TextPart::class, 'name');
         $nameRef->setAccessible(true);
-        $otherParts = $relatedParts = [];
+        $attachmentParts = $inlineParts = [];
         foreach ($this->attachments as $attachment) {
             $part = $this->createDataPart($attachment);
             if (isset($attachment['part'])) {
                 $attachment['name'] = $nameRef->getValue($part);
             }
 
-            $related = false;
             foreach ($names as $name) {
                 if ($name !== $attachment['name']) {
                     continue;
                 }
-                if (isset($relatedParts[$name])) {
+                if (isset($inlineParts[$name])) {
                     continue 2;
                 }
                 $part->setDisposition('inline');
-                $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html, $count);
-                if ($count) {
-                    $related = true;
-                }
+                $html = str_replace('cid:'.$name, 'cid:'.$part->getContentId(), $html);
                 $part->setName($part->getContentId());
 
                 break;
             }
 
-            if ($related) {
-                $relatedParts[$attachment['name']] = $part;
+            if ('inline' === $dispositionRef->getValue($part)) {
+                $inlineParts[$attachment['name']] = $part;
             } else {
-                $otherParts[] = $part;
+                $attachmentParts[] = $part;
             }
         }
         if (null !== $htmlPart) {
             $htmlPart = new TextPart($html, $this->htmlCharset, 'html');
         }
 
-        return [$htmlPart, $otherParts, array_values($relatedParts)];
+        return [$htmlPart, $attachmentParts, array_values($inlineParts)];
     }
 
     private function createDataPart(array $attachment): DataPart

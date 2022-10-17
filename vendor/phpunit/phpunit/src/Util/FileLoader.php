@@ -60,7 +60,6 @@ final class FileLoader
 
         /**
          * @noinspection PhpIncludeInspection
-         *
          * @psalm-suppress UnresolvableInclude
          */
         include_once $filename;

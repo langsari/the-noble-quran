@@ -11,14 +11,12 @@ namespace PHPUnit\TextUI\XmlConfiguration;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
- *
  * @psalm-immutable
  */
 final class Extension
 {
     /**
      * @var string
-     *
      * @psalm-var class-string
      */
     private $className;

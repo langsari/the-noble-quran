@@ -100,7 +100,6 @@ final class ExtensionHandler
         if ($extensionConfiguration->hasSourceFile()) {
             /**
              * @noinspection PhpIncludeInspection
-             *
              * @psalm-suppress UnresolvableInclude
              */
             require_once $extensionConfiguration->sourceFile();

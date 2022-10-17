@@ -10,9 +10,7 @@
 namespace PHPUnit\Framework;
 
 use const PHP_EOL;
-use function class_exists;
 use function count;
-use function extension_loaded;
 use function function_exists;
 use function get_class;
 use function sprintf;

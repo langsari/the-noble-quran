@@ -15,6 +15,8 @@ use App\Http\Controllers\ManageQuranController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\QurantafseerController;
 
+use App\Models\Arabic;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +44,7 @@ Route::get('/', [QuransController::class, 'homepage'])->name('homepage');
 Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
 Route::get('/quran/tafseer_home', [QuransController::class, 'tafseer_home'])->name('tafseer_home');
 Route::get('/quran/tafseer_detail{data}', [QuransController::class, 'tafseer_detail'])->name('tafseer_detail');
+Route::get('/dua', [QuransController::class, 'dua'])->name('dua');
 
 
 //adminhome
@@ -104,5 +107,31 @@ Route::get('approval/showquran',[ApprovalController::class,'showquran'])->name('
 Route::get('/approvedquran/{id}',[ApprovalController::class,'approvedquran']);
 Route::get('/cancledquran/{id}',[ApprovalController::class,'cancledquran']);
 
+//dua
+//Route::get('/dua',[QuransController::class,'dua'])->name('dua');
 
+//Route::get("duaa",[QuransController::class,"dualists"]);
+
+//Route::get('/dua', function () {
+//    $duaaa=Arabic::all();
+//    return view ('quran.dua',compact('duaaa'));
+//    })->name('dua');
+    
+
+//Route::get('/dua', [QuransController::class, 'dua'])->name('dua');
+
+//Route::get('/dua',fucntion () {
+//    $duaaa=Arabic::all()
+//    return view('quran.dua');
+//})->name('dua');
+
+
+//Route::get('/dua',[QuransController::class,'dua']) {
+//    $duaaa=Arabic::all()
+//}->name('dua');
+
+//Route::get('/dua', function () {
+//    $post = app/Models/Arabic::where('id',1)->first();
+//    return $post;
+//    });
 

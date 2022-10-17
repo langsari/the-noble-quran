@@ -9,7 +9,6 @@
  */
 namespace PHPUnit\Util\Xml;
 
-use function count;
 use ArrayIterator;
 use Countable;
 use DOMNode;

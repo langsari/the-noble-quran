@@ -1321,9 +1321,7 @@ abstract class Assert
      * @throws ExpectationFailedException
      *
      * @psalm-template ExpectedType
-     *
      * @psalm-param ExpectedType $expected
-     *
      * @psalm-assert =ExpectedType $actual
      */
     public static function assertSame($expected, $actual, string $message = ''): void
@@ -1366,9 +1364,7 @@ abstract class Assert
      * @throws ExpectationFailedException
      *
      * @psalm-template ExpectedType of object
-     *
      * @psalm-param class-string<ExpectedType> $expected
-     *
      * @psalm-assert =ExpectedType $actual
      */
     public static function assertInstanceOf(string $expected, $actual, string $message = ''): void
@@ -1392,9 +1388,7 @@ abstract class Assert
      * @throws ExpectationFailedException
      *
      * @psalm-template ExpectedType of object
-     *
      * @psalm-param class-string<ExpectedType> $expected
-     *
      * @psalm-assert !ExpectedType $actual
      */
     public static function assertNotInstanceOf(string $expected, $actual, string $message = ''): void

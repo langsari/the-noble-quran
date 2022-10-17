@@ -103,10 +103,7 @@ class ByteString extends AbstractString
     public function camel(): parent
     {
         $str = clone $this;
-
-        $parts = explode(' ', trim(ucwords(preg_replace('/[^a-zA-Z0-9\x7f-\xff]++/', ' ', $this->string))));
-        $parts[0] = 1 !== \strlen($parts[0]) && ctype_upper($parts[0]) ? $parts[0] : lcfirst($parts[0]);
-        $str->string = implode('', $parts);
+        $str->string = lcfirst(str_replace(' ', '', ucwords(preg_replace('/[^a-zA-Z0-9\x7f-\xff]++/', ' ', $this->string))));
 
         return $str;
     }

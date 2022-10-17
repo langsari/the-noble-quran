@@ -11,7 +11,6 @@ namespace PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Filter;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
- *
  * @psalm-immutable
  */
 final class Directory
