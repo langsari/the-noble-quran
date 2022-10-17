@@ -1,1 +1,0 @@
-Create, Retrieve, Update, and Delete life Cycle
