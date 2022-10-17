@@ -25,7 +25,7 @@
     <h1 class="taj"> Tajweed</h1>
 
 <h2> 1. นูนตาย </h2>
-<p> Nun-Sakeenah is fibngobingobnbiosdfnboinionioavnoibnioagni there are 5</p>
+<p> อักษรนูนตาย หรือตันวีน ไปพบอักษรในภาษาอาหรับทั้งหมด จะเกิดบรรดาฮุดม 5 ฮุกม </p>
 
 <div>
 <h5> 1.1 อิซฮาร ฮากีกีย์ </h5>
