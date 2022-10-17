@@ -107,10 +107,10 @@ Route::get('/cancledquran/{id}',[ApprovalController::class,'cancledquran']);
 
 //specificwords
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
-
+Route::get('/arabic{datasurah}', [QuransController::class, 'arabic'])->name('arabic');
 
 //specificwords database
-Route::get('/specific{datasurah}', [QuransController::class, 'specific'])->name('specific');
+//Route::get('/specific{datasurah}', [QuransController::class, 'specific'])->name('specific');
 
 //Route::get('enduser/specificword',[QuranController::class, 'specificword'])->name('specificword');//
 
