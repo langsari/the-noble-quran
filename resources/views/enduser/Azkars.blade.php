@@ -1,5 +1,4 @@
-@extends('enduser.shortnav')
-@section('content')
+@extends('enduser.navuser')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,46 +68,6 @@ function showSlides(n, no) {
         background-color: #FBFCFC;
         color: black;
         }
-
-        * {box-sizing: border-box}
-        .mySlides2 {display: none}
-        img {vertical-align: middle;}
-
-        /* Slideshow container */
-        .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-        padding-bottom: 60%;
-        }
-
-        /* Next & previous buttons */
-        .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-        }
-
-        /* On hover, add a grey background color */
-        .prev:hover, .next:hover {
-        background-color: #f1f1f1;
-        color: black;
-        }
     </style>
 </head>
 <body>
@@ -118,19 +77,8 @@ function showSlides(n, no) {
     </div>
     <div class="slideshow-container">
   <div class="mySlides2">
-    <img src="/img/1.jpg" style="width:100%">
+    <img src="/img/1.jpg">
   </div>
-
-  <div class="mySlides2">
-    <img src="2.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides2">
-  <img src="3.jpg" style="width:100%">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 </div>
     
 

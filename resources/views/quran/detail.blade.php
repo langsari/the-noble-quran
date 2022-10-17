@@ -83,13 +83,14 @@
      line-height: 200%;
      color: #FFFFFF;
    }
+   .quran-font-intro {
+     background-color: #34495E;
+   }
    .highlight{ 
   background:#00FF00; 
   padding:1px; 
   border:#00CC00 dotted 1px; 
 }
-        
-     
 
       </style>
        <br>

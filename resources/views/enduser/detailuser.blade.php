@@ -79,6 +79,9 @@
     font-size: 26px;
     color: #FFFFFF;
   }
+  .quran-font-intro {
+     background-color: #34495E;
+   }
   .quran-font-intro  p{
      font-family: quran-font;
      direction: rtl;
