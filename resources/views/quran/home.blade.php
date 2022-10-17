@@ -43,7 +43,7 @@
       </style>
 
 
-<div style = background-color:#9be2cd; class=" row text-center ">
+<div style = background-color:#9be2cd0; class=" row text-center ">
   @foreach($datasurahs as $datasurah)     
 <div class="col-sm-3">
  <a href="{{ route('arabic', $datasurah) }}">
