@@ -11,19 +11,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        
-        .Tajweed{
+
+    <Style>
+        .taj{
             text-align:center;
+            color:#008997;
         }
-       
-    </style>
+
+    </Style>
+
 </head>
 <body>
+    <h1 class="taj"> Tajweed</h1>
 
-<h1 class="Tajweed"> Tajweed</h1>
+<h2>1. Nun-Sakeenah</h2>
+<p> Nun-Sakeenah is fibngobingobnbiosdfnboinionioavnoibnioagni there are 5</p>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vero fugit explicabo dolorem eaque modi ab ea, minus porro exercitationem dolore, placeat ex accusamus ad tempore, sequi qui maiores consequatur!</p>
-    
+<h5> 1.1 Ghunna (Nasalisation)</h5>
+
+
+
 </body>
 </html>
