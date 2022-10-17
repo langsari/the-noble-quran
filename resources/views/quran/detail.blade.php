@@ -122,7 +122,7 @@ Quran reading mode
       <div class="quran-font-intro ">
         <p>
         @foreach($arabics->arabic as $arabic )
-      {{$arabic->text}} 
+      {{$arabic->text}}
        [{{$arabic->thais->ayat}}]
       @endforeach</p>
       </div>
