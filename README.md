@@ -54,7 +54,8 @@ So we want to continue this project to make this project more complete and add s
 - Surah page
  ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
 - tajweed page
-![tajweed page](https://user-images.githubusercontent.com/93647715/196516045-e49f4cd7-7301-4838-b16a-87cab5afee2b.jpg)
+![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
+
 
 # Database :
 ![data](https://user-images.githubusercontent.com/93647715/196516299-926192fc-a13a-42de-98fe-c28d497b4d9c.jpg)
