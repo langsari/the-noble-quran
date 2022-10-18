@@ -1,9 +1,13 @@
 @extends('quran.navbar')
+
+<p>{{$tajweed}}</p>
+
 <br>
 <br>
 <br>
 <br>
 <br>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -10,6 +10,7 @@ use App\Models\Thai;
 use App\Models\Tafseer;
 use App\Models\Qurantafseer;
 use App\Models\Note;
+use App\Models\Tajweed;
 
 use DB;
 
@@ -88,7 +89,8 @@ class QuransController extends Controller
     // }
 
     public function Tajweed(){
-        return view('quran.Tajweed');
+        $tajweed=Tajweed::all();
+        return view('quran.Tajweed', compact('tajweed'));
     }
     public function navbar()
     {
