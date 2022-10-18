@@ -28,7 +28,7 @@ So we want to continue this project to make this project more complete and add s
 | Software  | Version   |
 |---------  |---------  |
 | Laravel   |  8.1      |
-| php       | 8.0       |
+| php       | 7.4.27    |
 | Vs code   |1.72.0     |
 
 
