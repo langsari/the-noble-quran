@@ -110,4 +110,4 @@ Route::get('/cancledquran/{id}', [ApprovalController::class,'cancledquran']);
 // Route::get('/Azkar', [QuransController::class, 'Azkar'])->name('Azkar');
 
 //Azkar users
-Route::get('enduser/Azkars', [QuranController::class, 'Azkars'])->name('Azkars');
+Route::get('enduser/Azkars', [QuranController::class, 'dictionary'])->name('Azkars');

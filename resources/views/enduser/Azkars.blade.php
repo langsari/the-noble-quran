@@ -197,10 +197,53 @@ function showSlides(n, no) {
 
   <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-</div> -->
+</div> 
+
   <center>
   <iframe style='width:900px;height:500px' src='https://online.pubhtml5.com/hpnum/pyju/'  seamless='seamless' scrolling='no' frameborder='0' allowtransparency='true' allowfullscreen='true' ><span class="box">Azkar</span></iframe>
   </center>
+  <center>
+  <a href="https://publuu.com/flip-book/49403/148078/page/1?cover" class="show-publuu-viewer" style="width: auto; height: 240px; position: relative; display: inline-block;"><img src="https://g2.publuu.com/cover.php?iid=148078&pid=49403&page=1&time=1666084313" style="height: 100%;"></a><script src="https://cms1.publuu.com/js/embed-viewer.js"></script>
+  </center> -->
+
+  <div class="py-12">
+      <div class="container">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">คำศัพท์</th>
+                <th scope="col">คำอ่าน</th>
+                <th scope="col">ความหมาย</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              @php($i=1)
+              @foreach($dictionary as $row)
+              <tr>
+                  <th>{{$i++}}</th>
+                  <td>{{$row->vocab}}</td>
+                  <td>{{$row->read}}</td>
+                  <td>{{$row->meaning}}</td>
+                  <td>{{$row->english}}</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
