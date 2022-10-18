@@ -35,6 +35,12 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 |  Laragon  |5.0.0      |
 
 
+# Software Method :
+* Use Case Diagram
+* Data Flow Diagram
+* Activity diagram
+* Class Diagram
+
 # interface  
 
 ![quran](https://user-images.githubusercontent.com/96815756/196480309-d460ca2c-f642-45cf-ab0f-85c429549d61.png)
