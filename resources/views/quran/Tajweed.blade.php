@@ -19,14 +19,48 @@
     <title>Tajweed</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
         .tajweed{
             text-align:center;
             color:#008997;
-            margin-top:50px;
+            margin-top:20px;
+            font-family: 'Mitr', sans-serif;
+            font-size:100px;
         }
         .sakinah{
             margin-left:70px;
             margin-top:25px;
+            font-family: 'Mitr', sans-serif;
+            font-size:50px;
+            color:#008997;
+            
+        }
+        .memsakinah{
+            margin-left:70px;
+            margin-top:40px;
+            font-family: 'Mitr', sans-serif;
+            font-size:50px;
+            color:#008997;
+
+        }
+        .hukum{
+            margin-left:100px;
+            margin-top:25px;
+            font-family: 'Mitr', sans-serif;
+            font-size:25px;
+
+        }
+        .expain{
+            margin-left:100px;
+            font-family: 'Mitr', sans-serif;
+            font-size:15px;
+
+        }
+        .ayat{
+            margin-left:250px;
+            margin-top:20px;
+            font-size:20px;
+
         }
 
     </style>
@@ -38,10 +72,10 @@
 <h2 class="sakinah">นูนซากีนะห์</h2>
     @foreach($tajweed as $row)
     <div>
-    <h5>{{$row->name}} </h5>
-<p>  {{$row->audio}}</p>
-<p> {{$row->ayat}}</p>
-<h2 class="sakinah"> {{$row->hukum}}</h2>
+    <h5 class="hukum">{{$row->name}} </h5>
+<p class="expain"> {{$row->audio}}</p>
+<p class="ayat"> {{$row->ayat}}</p>
+<h2 class="memsakinah"> {{$row->hukum}}</h2>
 </div>@endforeach
 <br>
 <br>
