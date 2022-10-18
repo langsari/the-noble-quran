@@ -74,3 +74,15 @@ The Quran Web application in Thai Language : My final project of IT student
 # Requirements
 
 # Constraints
+
+# Software Method
+
+# Use case diagram
+
+# Activity Diagram
+
+# Data Diagram
+
+# User Interface Disign
+
+# Database
