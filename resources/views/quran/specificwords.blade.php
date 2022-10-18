@@ -446,13 +446,21 @@
       <br>
     
       <div class="ayat">وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ <span class="kalimah">   لُّمَزَةٍ (1) ٱلَّذِى  </span> جَمَعَ مَالًۭا وَعَدَّدَهُۥ  (2)<p></div>
-        <p class="t"></p>
-        <p>( :)</p> <br>
+        <p class="t">เมื่ออ่านต่อเนื่องจะอ่าน ลูมาตีนิลลาซี</p>
+        <p>( อัล-ฮูมาซะฮฺ : 1,2 )</p> <br>
       <audio controls >
       <source src="" type="">
       </audio>
       <br>
    
+       
+      <div class="ayat">   (2)قُلْ هُوَ ٱللَّهُ <span class="kalimah">  أَحَدٌ (1) ٱللَّهُ </span> ٱلصَّمَدُ <p></div>
+        <p class="t">เมื่ออ่านต่อเนื่องจะอ่าน อาฮานิลละฮฺ</p>
+        <p>( อัล-อิคลาศ : 1,2 )</p> <br>
+      <audio controls >
+      <source src="" type="">
+      </audio>
+      <br>
 
       <div class="ayat"><p></div>
         <p class="t"></p>
@@ -462,7 +470,7 @@
       </audio>
       <br>
    
-      <span class="kalimah">   لُّمَزَةٍ (1) ٱلَّذِى  </span>
+      <span class="kalimah">  เมื่ออ่านต่อเนื่องจะอ่าน อาฮานิลละฮฺ</span>
 
 
 </div>
