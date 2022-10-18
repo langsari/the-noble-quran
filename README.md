@@ -54,5 +54,6 @@ So we want to continue this project to make this project more complete and add s
 
 
 # Conclusion
+- This project is developed so that everyone can read the Quran. Anyone can come and study the meaning of the Quran, listen to the Quran. They can also study and learn how to read correctly.
 
 
