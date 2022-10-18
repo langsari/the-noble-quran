@@ -19,16 +19,16 @@
     <title>Tajweed</title>
 
     <style>
-        
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mitr:wght@300&display=swap');
         .tajweed{
             text-align:center;
             color:#008997;
             margin-top:20px;
-            font-family: 'Archivo Black', sans-serif;
-            font-size:100px;
-            font-size:150px;
+            margin-bottom:20px;
+            font-family: 'Kanit', sans-serif;
+            font-size:70px;
         }
         .sakinah{
             margin-left:70px;
@@ -73,8 +73,9 @@
 
 
 <body>
-    <h1 class="tajweed">Tajweed</h1>
-<h2 class="sakinah">นูนซากีนะห์</h2>
+    <h1 class="tajweed"> <strong> Tajweed </strong>  </h1>
+    <hr>
+<h2 class="sakinah">( นูนซากีนะห์ )</h2>
     @foreach($tajweed as $row)
     <div>
     <h5 class="hukum">{{$row->name}} </h5>
