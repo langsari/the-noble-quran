@@ -14,6 +14,7 @@
       @font-face {
         font-family:'Uthmani' ;
         src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
+        
       }
      .arabic{
          font-family: 'Uthmani', serif;
