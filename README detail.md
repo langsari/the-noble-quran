@@ -13,6 +13,13 @@ As for the features that we have added it's reset password funtion and azkar for
 
     The purpose we put the password reset function is because when the user changes the password. can change immediately will make app users more convenient And besides, we have added Thai meaning for users to know the meaning of that verse as well and also we add azkar too.
 
+# Software Requirement : 
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   |  8.1      |
+| php       | 7.4.19    |
+| Laragon   | 5.0.0     |
+| Vs code   |1.72.0     |
 
 # Requirement :
 
@@ -70,5 +77,4 @@ As for the features that we have added it's reset password funtion and azkar for
 # Conclutsion :
 
     Our project summary is We have seen some flaws in the project. So we added some functions and added some things to the project. 
-That is to add a password reset function, add azkar, edit background and alphabet color for more clear on website, add meaning thai of quran, and add audio for each verses. 
-Finally, all of this that we have added. It is to provide users with the most convenient use of our website. 
+That is to add a password reset function, add azkar, edit background and alphabet color for more clear on website, add meaning thai of quran, and add audio for each verses. Finally, all of this that we have added. It is to provide users with the most convenient use of our website. 
