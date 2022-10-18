@@ -60,8 +60,8 @@ Many people who read the Qur'an also distort some of the words in a specific ver
  All this to make it easy for all of us to search Quran and learn Quran.
  
  # OBJECTIVE
- -To design and develop Quran Web Application in Thai language.
- -To make convenience for user in learning The Quran.
- -To be a resource for anyone interested in studying the Quran.
- -Add a feature about  specific words in the Quran  to educate about those words  
- -To make things easy for all of us to make the website for the Quran more thorough.
+ - To design and develop Quran Web Application in Thai language.
+ - To make convenience for user in learning The Quran.
+ - To be a resource for anyone interested in studying the Quran.
+ - Add a feature about  specific words in the Quran  to educate about those words  
+ - To make things easy for all of us to make the website for the Quran more thorough.
