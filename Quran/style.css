@@ -192,8 +192,8 @@ section h3::before
 {
     width: 100%;
 }
-/*** Hadith Section ***/
-.hadithContainer
+/*** Azkar Section ***/
+.AzkarContainer
 {
     min-height: 350px;
     position: relative;
@@ -208,24 +208,24 @@ section h3::before
     padding-top: 70px;
 }
 
-.hadith .buttons
+.Azkar .buttons
 {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-.hadith .buttons div
+.Azkar .buttons div
 {
-    background: linear-gradient(60deg , #66bb6a , #43a047);
+    background: linear-gradient(60deg , #5d69aa , #4754d1);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) , 0 7px 10px -5px rgba(76, 175, 88, 4);
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
 }
-.hadith .buttons .number
+.Azkar .buttons .number
 {
     padding: 10px 20px ;
-    color: #43a047;
+    color: #6f90d1;
     background: transparent;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 14) inset, 0 7px 10px -5px rgba(76, 175, 88, 4);
 }
