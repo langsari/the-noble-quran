@@ -62,6 +62,8 @@ Route::get('enduser/homeuser',[QuranController::class, 'homeuser'])->name('homeu
 Route::get('/surah{datasurah}', [QuranController::class, 'surah'])->name('surah');
 Route::get('/enduser/tafseer_homeuser', [QuranController::class, 'tafseer_homeuser'])->name('tafseer_homeuser');
 Route::get('/enduser/tafseer_detailuser{data}', [QuranController::class, 'tafseer_detailuser'])->name('tafseer_detailuser');
+Route::get('/enduser/dua', [QuranController::class, 'duaa'])->name('duaa');
+
 
 ////simple search end user
 Route::get('/searchuser',[SearchuserController::class, 'searchuser'])->name('web.searchuser');

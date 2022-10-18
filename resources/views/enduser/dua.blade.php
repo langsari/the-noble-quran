@@ -1,6 +1,5 @@
-@extends('quran.nav')
+@extends('enduser.shortnav')
 @section('content')
-
 <br>
 <br>
 <br>
@@ -34,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($dua as $row)
+                        @foreach($duaa as $row)
                         <tr>
                             <th>{{$row->id}}</th>
                             <td>{{$row->surah_num}}</td>

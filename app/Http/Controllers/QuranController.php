@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Arabic;
 use App\Models\Datasurah;
 use App\Models\Thai;
-
+use App\Models\Dua;
 
 class QuranController extends Controller
 {
@@ -64,6 +64,11 @@ class QuranController extends Controller
       return view('enduser.tafseer_detailuser',compact('tafseers'));
         //    'ayats' => $ayats
         //]);
+    }
+
+    public function duaa() {
+        $duaa=Dua::all();
+        return view('enduser.dua' ,compact('duaa'));
     }
 
     /**
