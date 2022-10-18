@@ -41,6 +41,14 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 * Activity diagram
 * Class Diagram
 
+# Activity diagram
+
+![ativity](https://user-images.githubusercontent.com/96815756/196511272-445f4f1d-d61a-4df3-8697-6ed04071c4a9.png)
+
+# Sequence diagram
+
+![Sequesnce dr](https://user-images.githubusercontent.com/96815756/196511736-3faa287f-e733-40e2-931c-327a6722f615.png)
+
 # interface  
 
 ![quran](https://user-images.githubusercontent.com/96815756/196480309-d460ca2c-f642-45cf-ab0f-85c429549d61.png)
