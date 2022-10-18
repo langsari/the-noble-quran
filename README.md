@@ -57,6 +57,6 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Conclusion
 
-    The Quran is considered the life of everyone.  A person who has the Quran is a person who lives, and in the Noble Quran there are many functions.  which we have added is  specific words in the Quran  It's a word that we come across very often, and most importantly, there are still a lot of people who misread about them.  So there was an idea to add that function.  to educate about those words
+   The Quran is considered the life of everyone.  A person who has the Quran is a person who lives, and in the Noble Quran there are many functions.  which we have added is  specific words in the Quran  It's a word that we come across very often, and most importantly, there are still a lot of people who misread about them.  So there was an idea to add that function.  to educate about those words
   All this to make it easy for all of us to search Quran and learn Quran.
 
