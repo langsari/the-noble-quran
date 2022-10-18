@@ -1,10 +1,5 @@
 
 
-
-# Quran.th
-The Quran Web application in Thai Language : My final project of IT student
-
-
 # Overview
 
 All praise belongs to Allah.  Who gave His servants the Scriptures, and He did not make any distortions.  I praise You, Subhanah, for making Your Book a guide for the believers.  And I praise to whom the Qur'an is revealed to light your heart.  and a radiance to your bosom.  and have adhered to the right path
