@@ -9,6 +9,10 @@ So we want to continue this project to make this project more complete and add s
 # Objective
 
 # Requirements
+- TO provide convenience for people who want to read Al-Quran 
+- For everyone can understand the meaning of Al-Quran
+- For everyone to learn how to read correctly
+- For  everyone can listen to Al-Quran
 
 # Constraints
 
