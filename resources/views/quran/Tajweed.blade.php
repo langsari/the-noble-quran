@@ -21,6 +21,9 @@
             text-align:center;
 
         }
+        h5{
+            margin-left:20;
+        }
 
     </Style>
 
