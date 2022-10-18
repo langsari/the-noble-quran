@@ -67,18 +67,23 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 # User Interface Design :
 : Homepage 
+
 ![image](https://user-images.githubusercontent.com/96815487/196363754-f637c1f7-5598-4f61-b578-cf68245a1a15.png)
 
 : Login Page 
+
 ![image](https://user-images.githubusercontent.com/96815487/196363877-81eaa878-fccc-47d3-8943-2f737debcc3e.png)
 
-: Put Email to reset password Page 
+: Put Email to reset password Page
+
 ![image](https://user-images.githubusercontent.com/96815487/196363960-b7d6cf59-2083-4bf6-9d77-70ada36a6b26.png)
 
 : Receive link to reset password
+
 ![image](https://user-images.githubusercontent.com/96815487/196364057-c84d1add-fa8a-482d-ab9a-c9661cb4f9fe.png)
 
 : Reset Password Page 
+
 ![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
 
 # Conclutsion :
