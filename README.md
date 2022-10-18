@@ -13,9 +13,15 @@ So we want to continue this project to make this project more complete and add s
 - For  everyone can listen to Al-Quran.
 
 # Requirements
+- Function tajweed.
+- Function translate the meaning of the Quran into English and Thai.
+- Audio Quran recitation.
 
 
 # Constraints
+- Can only open on website, can't open in phone
+- There is only one audio file of Czech.
+- No tabsir.
 
 # Software Method
 - Use case diagram
