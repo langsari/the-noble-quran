@@ -71,3 +71,7 @@ The limitation of the password reset function that we have done is Let users acc
 
 # Conclutsion :
 
+Our project summary is We have seen some flaws in the project. So we added some functions and added some things to the project. 
+That is to add a password reset function, add azkar, edit background and alphabet color for more clear on website, add meaning thai of quran, and add audio for each verses. 
+Finally, all of this that we have added. It is to provide users with the most convenient use of our website. 
+We therefore try to add functions and build on it as best we can.
