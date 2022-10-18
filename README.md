@@ -67,6 +67,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
 # Introduction 
+This project is a development from a project that seniors have done in the past. We have seen the imperfections of the project. for example Translations that are not shown , Incomplete audio files, colors and pages of the web page are not interested.
+So we want to continue this project to make this project more complete and add some functions.
 
 # Problem Definition
 
