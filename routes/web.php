@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SearchuserController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\ManageQuranController;
@@ -33,6 +34,7 @@ Route::get('/', function () {
 
 //auth
 Auth::routes();
+//Route::get('/login', [LoginController::class, 'redirectTo'])->name('login');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('admin/adminHome', [HomeController::class,'adminHome'])->name('admin.home')->middleware('is_admin');
