@@ -7,16 +7,9 @@ As for the features that we have added it's reset password funtion and azkar for
 
 # Problem Definition :
 
-<<<<<<< HEAD
 Problems or bugs with this website are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
-
-Objective
-=======
-Problems or bugs with this app are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
-
 
 # Objective :
->>>>>>> 2a9261bb6d25913172346f427702c0e7f50b9d7c
 
 The purpose we put the password reset function is because when the user changes the password. can change immediately will make app users more convenient And besides, we have added Thai meaning for users to know the meaning of that verse as well and also we add azkar too.
 
