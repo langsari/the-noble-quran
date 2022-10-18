@@ -65,3 +65,9 @@ Many people who read the Qur'an also distort some of the words in a specific ver
  - To be a resource for anyone interested in studying the Quran.
  - Add a feature about  specific words in the Quran  to educate about those words  
  - To make things easy for all of us to make the website for the Quran more thorough.
+ 
+| Software  | Version   |
+|---------  |---------  |
+| laravel   |  8.1      |
+| php       | 8.0       |
+| Vs code   |1.72.0     |
