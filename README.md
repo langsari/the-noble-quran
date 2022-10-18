@@ -4,9 +4,7 @@
 So we want to continue this project to make this project more complete and add some functions.
 
 # Problem Definition
-- Almost all Muslims today are able to read the Quran. But there are also many people who read it and do not understand the meaning of the Qur'an, and there are many people who misread the Quran because they do not know the correct way of reading it.
-
-So we have seen this problem. We have added a function to translate both Thai and English languages. and add a function to teach the correct reading method
+- Almost all Muslims today are able to read the Quran. But there are also many people who read it and do not understand the meaning of the Qur'an, and there are many people who misread the Quran because they do not know the correct way of reading it. So we have seen this problem. We have added a function to translate both Thai and English languages. and add a function to teach the correct reading method
 
 # Objective
 
