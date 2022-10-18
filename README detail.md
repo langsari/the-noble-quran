@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Introduction :
 
     Today we will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
@@ -72,7 +72,3 @@ As for the features that we have added it's reset password funtion and azkar for
     Our project summary is We have seen some flaws in the project. So we added some functions and added some things to the project. 
 That is to add a password reset function, add azkar, edit background and alphabet color for more clear on website, add meaning thai of quran, and add audio for each verses. 
 Finally, all of this that we have added. It is to provide users with the most convenient use of our website. 
-We therefore try to add functions and build on it as best we can.
-=======
-# Introduction
->>>>>>> parent of 2a9261bb (Update README detail.md)
