@@ -13,6 +13,9 @@ So we want to continue this project to make this project more complete and add s
 - For  everyone can listen to Al-Quran.
 
 # Requirements
+- Function tajweed.
+- Function translate the meaning of the Quran into English and Thai.
+- Audio Quran recitation.
 
 
 # Constraints
