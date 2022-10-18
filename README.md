@@ -1,71 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Overview :
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Quran.th
-The Quran Web application in Thai Language : My final project of IT student
->>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
+The Holy Quran is the most sacred book and the word of Allah that given to the prophet Muhammad through the angel Jibril, for the passed it on to his followers. So, the Quran is not a philosophy, poetry, literature, and sorcery, but is a warning from the Lord. The sublime language idioms of the Quran that makes a difference from any of the writings in the world, there is also a profound meaning in the Quranic verses containing questions, answers, warnings and challenges, which are incomparable and not to be  found in any other book in the world. 
+The Holy Quran is the book that Allah guides humanity with a complete code of life. And the Quran teaches every aspect of human life which a person needs to know and study about . Being a Muslim, it is our belief that the learning of the Holy Quran is the primary and highly signified learning which is the solution to all problems and issues of our life. Allah(SWT) said :
+كَمَآ أَرْسَلْنَا فِيكُمْ رَسُولًا مِّنكُمْ يَتْلُوا۟ عَلَيْكُمْ ءَايَـٰتِنَا وَيُزَكِّيكُمْ وَيُعَلِّمُكُمُ ٱلْكِتَـٰبَ وَٱلْحِكْمَةَ وَيُعَلِّمُكُم مَّا لَمْ تَكُونُوا۟ تَعْلَمُونَ
+Since We have sent you a messenger from among yourselves—reciting to you Our revelations, purifying you, teaching you the Book and wisdom, and teaching you what you never knew— 2:151
+Islam religion gives importance to learning and encourages reading the Quran, which Allah prescribing many merits for who read the quran. When the Quran was revealed, its first word was “Iqra”, which means to read. However, knowing the meaning of the Quran is also essential to studying it.
 
 
-hello
+# Problem Statement :
+
+As I mentioned above, for The Quran website, The website which exists does not completely consist of basic features if compared with website quran.com. For quran.com contains Quran-Text, Quran-Translation, Navigation, Audio and Search-Button. And the Quran website in Thai is also complicated to make it difficult to use. Also, these websites are outdated and not constantly updated. Thus, it led me to develop THE NOBLE QURAN WEB APPLICATION in the form of a web application and make it functionally. The next chapter provides the related work in this area.
+
+# Objective :
+1. To design and develop Quran Web Application.
+2. To add completeness to the Quran website.
+3. To allow users to use the Quran website easily.
+4. To make convenience for users in learning The Quran.
+
+# Software Requirement : 
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   | 8.1      |
+| php       | 7.4.19    |
+| Laragon   | 5.0.0     |
+| Vs code   |1.72.0     |
+
+# Requirement :
+
+Our requirement is the classification of the Quran. for user convenience In case the user wants to study the story of each Quran Because the Quran has mentioned many things. And if users want to know or study the story of the Quran, they can learn from various topics. contained in the Quran.
+
+# Constraints :
+The limitation of the function we do is Users can learn the topics of the Quran that we have preliminarily on our website. At this time, not all topics in the Quran may be covered. In the future, we may develop more topics. to cover as much as possible
+
+# Software Method :
+- Use Case Diagram 
+- Activity diagram
