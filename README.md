@@ -37,6 +37,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Software Method :
 * Activity diagram
+* Sequence diagram
 * Use Case Diagram
 * Class Diagram
 
@@ -47,6 +48,11 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Sequence diagram
 
 ![Sequesnce dr](https://user-images.githubusercontent.com/96815756/196511736-3faa287f-e733-40e2-931c-327a6722f615.png)
+
+* Use Case Diagram
+
+![286268752_441035508162536_4959068076365646630_n](https://user-images.githubusercontent.com/96815756/196513462-aa131256-242d-4054-a4af-6d17e5c51146.jpg)
+
 
 # interface  
 
