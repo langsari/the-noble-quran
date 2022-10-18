@@ -87,7 +87,7 @@ class QuransController extends Controller
     //}
 
     public function dua() {
-        $dua=Dua::all();
+        $dua=Dua::paginate(10);
         return view('quran.dua' ,compact('dua'));
     }
  

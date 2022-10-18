@@ -67,7 +67,7 @@ class QuranController extends Controller
     }
 
     public function duaa() {
-        $duaa=Dua::all();
+        $duaa=Dua::paginate(10);
         return view('enduser.dua' ,compact('duaa'));
     }
 

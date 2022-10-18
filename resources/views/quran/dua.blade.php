@@ -15,22 +15,22 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Doa From Alquran</title>
+    <title>Dua</title>
 </head>
 <body>
-    <h1>Doa daily life</h1>
+    <h1>ดูอาจากอัลกุรอาน</h1>
     <div class="py-12">
         <div class="container">
             <div class="row">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>
-                            <th scope="col">surah number</th>
-                            <th scope="col">surah name</th>
-                            <th scope="col">ayat number</th>
-                            <th scope="col">dua</th>
-                            <th scope="col">meaning</th>
+                            <th scope="col">ลำดับ</th>
+                            <th scope="col">ซูเราะห์ที่</th>
+                            <th scope="col">ชื่อซูเราะห์</th>
+                            <th scope="col">อายัตที่</th>
+                            <th scope="col">ดูอา</th>
+                            <th scope="col">ความหมาย</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,5 +49,6 @@
             </div>
         </div>
     </div>
+    {{$dua->links()}}
 </body>
 </html>
