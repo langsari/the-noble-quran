@@ -39,6 +39,20 @@ So we want to continue this project to make this project more complete and add s
 ![Data](https://user-images.githubusercontent.com/93647715/196413804-54249478-6429-49d8-b4a1-4b2826809a46.png)
 
 # User Interface Disign
+- Home page
 
+- surah page
+
+- tajweed page
 
 # Database
+
+# Language requirements
+- HTML
+- CSS
+- PHP
+
+
+# Conclusion
+
+
