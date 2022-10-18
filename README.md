@@ -66,6 +66,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
  - Add a feature about  specific words in the Quran  to educate about those words  
  - To make things easy for all of us to make the website for the Quran more thorough.
 
+
 # software requirement
  
 | Software  | Version   |
@@ -73,3 +74,9 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 | Laravel   |  8.1      |
 | php       | 8.0       |
 | Vs code   |1.72.0     |
+
+# Conclusion
+
+The Quran is considered the life of everyone.  A person who has the Quran is a person who lives, and in the Noble Quran there are many functions.  which we have added is  specific words in the Quran  It's a word that we come across very often, and most importantly, there are still a lot of people who misread about them.  So there was an idea to add that function.  to educate about those words
+  All this to make it easy for all of us to search Quran and learn Quran.
+
