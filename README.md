@@ -1,68 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Introduction :
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Today we will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
+As for the features that we have added it's reset password funtion and azkar for user can read in our website.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Problem Definition :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Problems or bugs with this website are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Objective :
 
-## Learning Laravel
+The purpose we put the password reset function is because when the user changes the password. can change immediately will make app users more convenient And besides, we have added Thai meaning for users to know the meaning of that verse as well and also we add azkar too.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Software Requirement : 
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   |  8.1      |
+| php       | 7.4.19    |
+| Laragon   | 5.0.0     |
+| Vs code   |1.72.0     |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Requirement :
 
-## Laravel Sponsors
+Our requirement is for password reset function. for user convenience In case the user wants to change the password Maybe you don't want anyone to know your old password. Or the old password might be difficult to remember for whatever reason. Users can reset or change their password instantly. and also if the user wants to know the meaning Users can immediately access the meaning in the website and user can also press azkar button and read it.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+# Constraints :
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+The limitation of the password reset function that we have done is Let users access our website quran if you forget your password or want to change your password, you can press reset and change your password right away. After that, the system will change the password for the user. After the system completes.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Software Method :
 
-## Code of Conduct
+- Use Case Diagram 
+- Data Flow Diagram
+- Activity diagram
+- Class Diagram
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Use Case Diagram :
+A use case diagram is a visual representation of how users interact with the various systems that make up a larger system. The main goal of designing a use case diagram is to fully describe the system's functionality and to solicit user requests. This is regarded as where system analysis and design should begin.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://user-images.githubusercontent.com/96815487/196363262-c7f6abba-1ef9-4c3d-90eb-cf8ebd4ce107.png)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Quran.th
-The Quran Web application in Thai Language : My final project of IT student
->>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
+
+## Data Flow Diagram :
+A data flow diagram demonstrates the path that information takes through a system or process. It contains the numerous subprocesses the data flows through, data inputs and outputs, and data stores.
+
+![image](https://user-images.githubusercontent.com/96815487/196363323-4a0fb2f9-4e2e-4ebc-9d7d-96c6a4238afc.png)
+
+
+## Activity diagram :
+Activity diagrams are a method for describing work flow, business processes, and procedural logic. They serve a similar purpose to flowcharts in many aspects, but the main distinction between the two is that they permit parallel behavior.
+
+![image](https://user-images.githubusercontent.com/96815487/196363416-5467a766-a7a7-47cd-b427-e7dbaa662fc2.png)
+
+
+## Class Diagram :
+Class diagrams are the blueprints of your system or subsystem. We can use class diagrams to model the objects that make up the system, to display the relationships between the objects, and to describe what those objects do and the services that they provide.
+
+![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
+
+
+
+
+# User Interface Design :
+
+![image](https://user-images.githubusercontent.com/96815487/196363754-f637c1f7-5598-4f61-b578-cf68245a1a15.png)
+![image](https://user-images.githubusercontent.com/96815487/196363877-81eaa878-fccc-47d3-8943-2f737debcc3e.png)
+![image](https://user-images.githubusercontent.com/96815487/196363960-b7d6cf59-2083-4bf6-9d77-70ada36a6b26.png)
+![image](https://user-images.githubusercontent.com/96815487/196364057-c84d1add-fa8a-482d-ab9a-c9661cb4f9fe.png)
+![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
+
+# Conclutsion :
+
+  Our project summary is We have seen some flaws in the project. So we added some functions and added some things to the project. 
+That is to add a password reset function, add azkar, edit background and alphabet color for more clear on website, add meaning thai of quran, and add audio for each verses. Finally, all of this that we have added. It is to provide users with the most convenient use of our website.
