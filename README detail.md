@@ -28,7 +28,7 @@ Software Method
 
 Use Case Diagram 
 
-![image](https://user-images.githubusercontent.com/96815487/196361963-ec3e09cf-055e-49e5-9750-8868580a046a.png)
+
 
 
 Data Flow Diagram
