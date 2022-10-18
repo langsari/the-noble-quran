@@ -82,10 +82,13 @@ The Quran Web application in Thai Language : My final project of IT student
 
 
 # Use case diagram
+![Use case diagram drawio](https://user-images.githubusercontent.com/93647715/196412362-8fe28f9c-f477-4dd4-a647-4c911be82899.png)
 
 # Activity Diagram
+![activity diagram drawio](https://user-images.githubusercontent.com/93647715/196412715-68f982f1-4abc-4688-b196-e05b79bde29e.png)
 
-# Data Diagram
+# Data flow Diagram
+![Data](https://user-images.githubusercontent.com/93647715/196413804-54249478-6429-49d8-b4a1-4b2826809a46.png)
 
 # User Interface Disign
 
