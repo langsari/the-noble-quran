@@ -1,4 +1,4 @@
-#Introduction :
+#Introduction
 
 Today I will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
 As for the features that we have added it's reset password funtion and azkar for user can read in our website.
