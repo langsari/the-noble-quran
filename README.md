@@ -49,4 +49,12 @@ All praise belongs to Allah.  Who gave His servants the Scriptures, and He did n
 The Holy Quran is the Holy Book or the Scripture of the Muslims. It lays down for them the law and commandments, codes for their social and moral behaviour, and contains a comprehensive religious philosophy. The language of the Quran is Arabic. It is a compilation of the verbal revelations given to the Holy Prophet Muhammad(Peace be upon him)
 
 # introuction
+Many people who read the Qur'an also distort some of the words in a specific verse.  We have created a page feature in it.  Provide knowledge of specific words in the Quran so that everyone can read them correctly.  and explain about that word and tell where it is in the Quran
 
+# PROBLEM STATEMENT 
+
+ From what we have noticed, there are only a few websites.  Doing about the Quran website and people nowadays most people are online.
+
+ live with the phone  which we have created the Holy Quran website  to be something that is beneficial to all Muslims  In the Quran we have added features which are  specific words in the Quran  It's a word that we come across very often.  And more importantly, there are still many people who misread those words.  So there was an idea to add that function.  to educate about those words
+
+ All this to make it easy for all of us to search Quran and learn Quran.
