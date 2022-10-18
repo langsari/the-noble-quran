@@ -35,7 +35,7 @@
      direction: rtl;
      font-size: 26px;
      line-height: 200%;
-     color: green;
+     color:#008080;
    }
    .highlight{ 
   background:black; 
@@ -428,13 +428,31 @@
       </audio>
       <br>
 
-      <div class="ayat">كَلَّا ۖ بَلْ ۜ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا۟ يَكْسِبُونَ<p></div>
+      <div class="ayat">كَلَّا ۖ   <span class="kalimah">  بَلْ ۜ رَانَ    </span>عَلَىٰ قُلُوبِهِم مَّا كَانُوا۟ يَكْسِبُونَ<p></div>
         <p class="t">อ่านต่อเนื่องอิสฮารลามที่รอฮฺเพราะสักตะฮฺ</p>
-        <p>(อัล-มุฏ็อฟฟิฟีน : 14 )</p> <br>
+        <p>(อัล-มุฏ็อฟฟิฟีน : 14)</p> <br>
       <audio controls >
       <source src="" type="">
       </audio>
       <br>
+
+    
+      <div class="ayat"> ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ (1) خَلَقَ ٱلْإِنسَـٰنَ مِنْ  <span class="kalimah">  عَلَقٍ (2) ٱقْرَأْ</span> وَرَبُّكَ ٱلْأَكْرَمُ (3) <p></div>
+        <p class="t">เวลาอ่านต่อเนื่อง บัสมาละ กับต้นซูเราะห์ อาลัก ฮัมซะฮฺนั้นเป็นฮัมซะฮฺวาสัล เเละคำนี้เมื่อจะอ่าน อาลากีนิกเราะฮฺ</p>
+        <p>( อัล-อาลัก :1,2,3)</p> <br>
+      <audio controls >
+      <source src="" type="">
+      </audio>
+      <br>
+    
+      <div class="ayat">وَيْلٌۭ لِّكُلِّ هُمَزَةٍۢ <span class="kalimah">   لُّمَزَةٍ (1) ٱلَّذِى  </span> جَمَعَ مَالًۭا وَعَدَّدَهُۥ  (2)<p></div>
+        <p class="t"></p>
+        <p>( :)</p> <br>
+      <audio controls >
+      <source src="" type="">
+      </audio>
+      <br>
+   
 
       <div class="ayat"><p></div>
         <p class="t"></p>
@@ -444,7 +462,7 @@
       </audio>
       <br>
    
-      <span class="kalimah">  كَلَّا ۖ بَلْ ۜ    </span>
+      <span class="kalimah">   لُّمَزَةٍ (1) ٱلَّذِى  </span>
 
 
 </div>
