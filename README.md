@@ -58,3 +58,10 @@ Many people who read the Qur'an also distort some of the words in a specific ver
  live with the phone  which we have created the Holy Quran website  to be something that is beneficial to all Muslims  In the Quran we have added features which are  specific words in the Quran  It's a word that we come across very often.  And more importantly, there are still many people who misread those words.  So there was an idea to add that function.  to educate about those words
 
  All this to make it easy for all of us to search Quran and learn Quran.
+ 
+ # OBJECTIVE
+ 1 To design and develop Quran Web Application in Thai language.
+ 2 To make convenience for user in learning The Quran.
+ 3 To be a resource for anyone interested in studying the Quran.
+ 4 Add a feature about  specific words in the Quran  to educate about those words  
+ 5 To make things easy for all of us to make the website for the Quran more thorough.
