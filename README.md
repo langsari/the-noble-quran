@@ -23,6 +23,15 @@ So we want to continue this project to make this project more complete and add s
 - There is only one audio file of Sheik.
 - No tabsir.
 
+# software requirement
+ 
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   |  8.1      |
+| php       | 8.0       |
+| Vs code   |1.72.0     |
+
+
 # Software Method
 - Use case diagram
 - Activity diagram
@@ -49,7 +58,7 @@ So we want to continue this project to make this project more complete and add s
 
 # Language requirements
 - HTML
-- CSS
+- BLADE
 - PHP
 
 
