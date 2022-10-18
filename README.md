@@ -11,7 +11,7 @@ Problems or bugs with this website are Can't change password When the user wants
 #### Reset password feature
 - For convenience when users want to change their password
 - to respond when the user forgets the password
-#### thai translation feature
+#### Thai translation feature
 - for users to know and understand the meaning of each verse
 - for readers to use in daily life
 - for Thai users to understand
