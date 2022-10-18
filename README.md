@@ -49,7 +49,7 @@ So we want to continue this project to make this project more complete and add s
 
 # Language requirements
 - HTML
-- CSS
+- BLADE
 - PHP
 
 
