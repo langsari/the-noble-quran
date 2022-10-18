@@ -4,15 +4,15 @@
 So we want to continue this project to make this project more complete and add some functions.
 
 # Problem Definition
-- Almost all Muslims today are able to read the Quran. But there are also many people who read it and do not understand the meaning of the Qur'an, and there are many people who misread the Quran because they do not know the correct way of reading it. So we have seen this problem. We have added a function to translate both Thai and English languages. and add a function to teach the correct reading method
+- Almost all Muslims today are able to read the Quran. But there are also many people who read it and do not understand the meaning of the Qur'an, and there are many people who misread the Quran because they do not know the correct way of reading it. So we have seen this problem. We have added a function to translate both Thai and English languages. and add a function to teach the correct reading method.
 
 # Objective
 
 # Requirements
-- TO provide convenience for people who want to read Al-Quran 
-- For everyone can understand the meaning of Al-Quran
-- For everyone to learn how to read correctly
-- For  everyone can listen to Al-Quran
+- TO provide convenience for people who want to read Al-Quran anytime, anywhere.
+- For everyone can understand the meaning of Al-Quran.
+- For everyone to learn how to read correctly.
+- For  everyone can listen to Al-Quran.
 
 # Constraints
 
@@ -32,5 +32,6 @@ So we want to continue this project to make this project more complete and add s
 ![Data](https://user-images.githubusercontent.com/93647715/196413804-54249478-6429-49d8-b4a1-4b2826809a46.png)
 
 # User Interface Disign
+
 
 # Database
