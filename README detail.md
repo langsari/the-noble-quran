@@ -1,11 +1,11 @@
 Introduction
 
-Today I will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
+Today we will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
 As for the features that we have added it's reset password funtion and azkar for user can read in our website.
 
 Problem Definition
 
-Problems or bugs with this app are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
+Problems or bugs with this website are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
 
 Objective
 
