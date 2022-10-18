@@ -557,6 +557,7 @@ class ComposerStaticInit4568e73c683cfd35a02bc7b2a24e86b4
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Arabic' => __DIR__ . '/../..' . '/app/Models/Arabic.php',
         'App\\Models\\Datasurah' => __DIR__ . '/../..' . '/app/Models/Datasurah.php',
+        'App\\Models\\Dua' => __DIR__ . '/../..' . '/app/Models/Dua.php',
         'App\\Models\\Note' => __DIR__ . '/../..' . '/app/Models/Note.php',
         'App\\Models\\Qurantafseer' => __DIR__ . '/../..' . '/app/Models/Qurantafseer.php',
         'App\\Models\\Tafseer' => __DIR__ . '/../..' . '/app/Models/Tafseer.php',

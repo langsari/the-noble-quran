@@ -10,6 +10,7 @@ use App\Models\Thai;
 use App\Models\Tafseer;
 use App\Models\Qurantafseer;
 use App\Models\Note;
+use App\Models\Dua;
 
 use DB;
 use Illuminate\Support\Facades\Route;
@@ -80,9 +81,14 @@ class QuransController extends Controller
     //   return view('quran.dua',compact('tafseers'));
     //}
 
+    //public function dua() {
+    //    $tafseers = Datasurah::with('tafseer');
+    //    return view('quran.dua',compact('tafseers'));
+    //}
+
     public function dua() {
-        $tafseers = Datasurah::with('tafseer');
-        return view('quran.dua',compact('tafseers'));
+        $dua=Dua::all();
+        return view('quran.dua' ,compact('dua'));
     }
  
     public function tafseer_vdo()

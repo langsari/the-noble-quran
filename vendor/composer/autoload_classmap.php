@@ -41,6 +41,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Arabic' => $baseDir . '/app/Models/Arabic.php',
     'App\\Models\\Datasurah' => $baseDir . '/app/Models/Datasurah.php',
+    'App\\Models\\Dua' => $baseDir . '/app/Models/Dua.php',
     'App\\Models\\Note' => $baseDir . '/app/Models/Note.php',
     'App\\Models\\Qurantafseer' => $baseDir . '/app/Models/Qurantafseer.php',
     'App\\Models\\Tafseer' => $baseDir . '/app/Models/Tafseer.php',
