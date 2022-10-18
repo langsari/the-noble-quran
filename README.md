@@ -63,9 +63,11 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # interface 
 
 ![quran](https://user-images.githubusercontent.com/96815756/196480309-d460ca2c-f642-45cf-ab0f-85c429549d61.png)
+
 ![quran5](https://user-images.githubusercontent.com/96815756/196481581-e1b00988-5803-40a7-a7ca-7e314680bb26.png)
 
 ![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
+
 ![quran4](https://user-images.githubusercontent.com/96815756/196480512-9541a9b5-a7d1-4189-9ff4-44d29beddbf8.png)
 
 # Conclusion
