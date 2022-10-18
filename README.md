@@ -38,7 +38,6 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Software Method :
 * Activity diagram
 * Use Case Diagram
-* Data Flow Diagram
 * Class Diagram
 
 # Activity diagram
