@@ -56,6 +56,7 @@ So we want to continue this project to make this project more complete and add s
 ![tajweed page](https://user-images.githubusercontent.com/93647715/196516045-e49f4cd7-7301-4838-b16a-87cab5afee2b.jpg)
 
 # Database
+![data](https://user-images.githubusercontent.com/93647715/196516299-926192fc-a13a-42de-98fe-c28d497b4d9c.jpg)
 
 # Language requirements
 - HTML
