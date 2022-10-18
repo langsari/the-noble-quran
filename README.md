@@ -30,7 +30,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 | Software  | Version   |
 |---------  |---------  |
 | Laravel   |  8.1      |
-| php       | 8.0       |
+| php       | 7.4.19    |
 | Vs code   |1.72.0     |
 
 
