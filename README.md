@@ -67,4 +67,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
 
-#introuction
+# Overview
+
+All praise belongs to Allah.  Who gave His servants the Scriptures, and He did not make any distortions.  I praise You, Subhanah, for making Your Book a guide for the believers.  And I praise to whom the Qur'an is revealed to light your heart.  and a radiance to your bosom.  and have adhered to the right path
+
+The Holy Quran is the Holy Book or the Scripture of the Muslims. It lays down for them the law and commandments, codes for their social and moral behaviour, and contains a comprehensive religious philosophy. The language of the Quran is Arabic. It is a compilation of the verbal revelations given to the Holy Prophet Muhammad(Peace be upon him)
+
+# introuction
+
