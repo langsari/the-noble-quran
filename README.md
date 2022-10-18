@@ -64,7 +64,13 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 ![quran](https://user-images.githubusercontent.com/96815756/196480309-d460ca2c-f642-45cf-ab0f-85c429549d61.png)
 
+# feature Spacificword
+
 ![quran5](https://user-images.githubusercontent.com/96815756/196481581-e1b00988-5803-40a7-a7ca-7e314680bb26.png)
+
+# Source Code
+![quran6](https://user-images.githubusercontent.com/96815756/196483236-a674eb1f-ce3b-4977-b542-d128b6b1f0a1.png)
+
 
 ![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
 
