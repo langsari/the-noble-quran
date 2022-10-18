@@ -35,13 +35,13 @@ function showSlides(n, no) {
             padding: 0;
             background-color: white;
             padding-top: 80px;
-            background-color: none;
+            background-color: #E5E7E9;
         }
         
         .headazkar{
             display: flex;
             justify-content: center;
-            background-color: none;
+            background-color: #E5E7E9;
         }
 
         .headazkar .button{
@@ -62,154 +62,28 @@ function showSlides(n, no) {
         background-color: #34495E; 
         color: white; 
         border: 2px solid #283747;
+        margin-bottom: 35px;
+        margin-top: 30px;
         }
 
         .headazkar .button1:hover {
         background-color: #FBFCFC;
         color: black;
         }
-        * {
-          box-sizing: border-box;
-          background-color: ;
-          
+        .py-12{
+          background-color:#E5E7E9;
         }
-
-        .mySlides2 {
-          display: none;
-        }
-        img {
-          vertical-align: middle;
-        }
-        /* Slideshow container */
-        .slideshow-container {
-          max-width: 500px;
-          position: relative;
-          margin: auto;
-        }
-        /* Next & previous buttons */
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-        }
-        /* Position the "next button" to the right */
-          .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-          }
-          /* On hover, add a grey background color */
-          .prev:hover, .next:hover {
-            background-color: #34495E;
-            color: black;
-          }
-          .iframe .box{
-            background-color: black;
-            color: #FBFCFC;
-            width: 100px;
-            height: 50px;
-          }
     </style>
 </head>
 <body>
     <div class="space"></div>
     <div class="headazkar">
-    <button class="button button1">Azkar Nabawi</button><br>
+    <button class="button button1">THE WORDS IN QURAN</button><br>
     </div>
-    <!-- <div class="slideshow-container"> 
-  <div class="mySlides2">
-    <img src="/img/1.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/2.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/3.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/4.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/5.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/6.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/7.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/8.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/9.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/10.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/11.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/12.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/13.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/14.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/15.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/16.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/17.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/18.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/19.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/20.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/21.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/22.jpg" style="width:100%">
-  </div>
-  <div class="mySlides2">
-    <img src="/img/23.jpg" style="width:100%">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-</div> 
-
-  <center>
-  <iframe style='width:900px;height:500px' src='https://online.pubhtml5.com/hpnum/pyju/'  seamless='seamless' scrolling='no' frameborder='0' allowtransparency='true' allowfullscreen='true' ><span class="box">Azkar</span></iframe>
-  </center>
-  <center>
-  <a href="https://publuu.com/flip-book/49403/148078/page/1?cover" class="show-publuu-viewer" style="width: auto; height: 240px; position: relative; display: inline-block;"><img src="https://g2.publuu.com/cover.php?iid=148078&pid=49403&page=1&time=1666084313" style="height: 100%;"></a><script src="https://cms1.publuu.com/js/embed-viewer.js"></script>
-  </center> -->
-
   <div class="py-12">
       <div class="container">
-        <table class="table table-bordered">
-            <thead>
+        <table class="table table-bordered ">
+            <thead class="table-dark">
               <tr>
                 <th scope="col">No.</th>
                 <th scope="col">คำศัพท์</th>

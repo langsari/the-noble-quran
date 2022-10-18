@@ -51,7 +51,7 @@
   margin-top: 30px;
   margin-right: 10px;
   margin-left: 10px;
-  margin-bottom: 10px;"  
+  margin-bottom: 10px;"
   type="buttom" class="btn btn-outline-light" >
   <p class="arabic" >{{ $datasurah->surah_arab}}</p>
   <span >{{ $datasurah->th_name}}</span></button></a>
