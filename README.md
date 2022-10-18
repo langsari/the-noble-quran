@@ -49,10 +49,11 @@ So we want to continue this project to make this project more complete and add s
 
 # User Interface Disign
 - Home page
-
-- surah page
-
+![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
+- Surah page
+ ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
 - tajweed page
+![tajweed page](https://user-images.githubusercontent.com/93647715/196516045-e49f4cd7-7301-4838-b16a-87cab5afee2b.jpg)
 
 # Database
 
