@@ -76,9 +76,9 @@ The Quran Web application in Thai Language : My final project of IT student
 # Constraints
 
 # Software Method
--Use case diagram
--Activity diagram
--Data flow diagram
+- Use case diagram
+- Activity diagram
+- Data flow diagram
 
 
 # Use case diagram
