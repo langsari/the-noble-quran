@@ -19,13 +19,16 @@
     <title>Tajweed</title>
 
     <style>
+        
         @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mitr:wght@300&display=swap');
         .tajweed{
             text-align:center;
             color:#008997;
             margin-top:20px;
-            font-family: 'Mitr', sans-serif;
+            font-family: 'Archivo Black', sans-serif;
             font-size:100px;
+            font-size:150px;
         }
         .sakinah{
             margin-left:70px;
@@ -48,18 +51,20 @@
             margin-top:25px;
             font-family: 'Mitr', sans-serif;
             font-size:25px;
+            color:#7B7D7D;
 
         }
         .expain{
-            margin-left:100px;
+            margin-left:120px;
             font-family: 'Mitr', sans-serif;
-            font-size:15px;
+            font-size:17px;
 
         }
         .ayat{
             margin-left:250px;
             margin-top:20px;
             font-size:20px;
+            color:#008997;
 
         }
 

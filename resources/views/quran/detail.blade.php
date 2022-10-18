@@ -10,6 +10,7 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Mitr:wght@300&display=swap');
       @font-face {
         font-family:'Uthmani' ;
         src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
