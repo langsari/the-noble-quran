@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
 
  @font-face {
   font-family:'Uthmani' ;
@@ -10,6 +13,9 @@
    direction: rtl;
    padding: 0 5px;
    margin: 0;
+}
+.thai{
+   font-family: 'Mitr', serif;
 }
 .latin{
   font-family:  serif;
@@ -40,28 +46,30 @@
   color: white;
   }
 .open-button {
-  background-color:#86DCEC ;
+  background-color:#05386b ;
   color: #F2F5F5;
   padding: 14px 16px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  
   bottom: 10px;
   right: 20px;
   width: 60px;
+  border-radius: 5px;
+  font-family: 'Mitr', sans-serif;
 }
 .open-button2 {
-  background-color: #E473A1;
+  background-color: #152D35;
   color: #F2F5F5;
   padding: 14px 16px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  
   bottom: 10px;
   right: 20px;
   width: 100px;
+  border-radius: 5px;
+  font-family: 'Mitr', sans-serif;
 }
 .open-button3 {
   background-color: #9be2cd;;
@@ -89,16 +97,18 @@
   cursor: pointer;
 }
 .open-button5 {
-  background-color:#86DCEC ;
+  background-color:#05386b ;
   color: #F2F5F5;
   padding: 14px 16px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  
+  border-radius: 5px;
   bottom: 10px;
   right: 20px;
   width: 100px;
+  margin-bottom: 5px;
+  font-family: 'Mitr', sans-serif;
 }
 
 
@@ -143,19 +153,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Navbar */
 .topnav {
   overflow: hidden;
-  background-color:#9be2cd;
+  background-color:#425F57;
+  padding: 6px 8px;
 }
 
 .topnav a {
   float: left;
   display: block;
   color: rgb(253, 252, 252);
+  font-family: 'Kanit', sans-serif;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 18px 16px;
+  margin-right: 10px;
   text-decoration: none;
   font-size: 17px;
+  border-radius: 10px;
 }
 
 .topnav a:hover {
@@ -164,8 +179,9 @@ body {
 }
 
 .topnav a.active {
-  background-color:#9be2cd;
-  color: white;
+  background-color:#A8E890;
+  color: #112031;
+  font-weight: bold;
 }
 
 .topnav .search-container {
@@ -176,6 +192,7 @@ body {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
+  font-family: 'Kanit', sans-serif;
   border: none;
 }
 
@@ -186,12 +203,23 @@ body {
   margin-right: 16px;
   background: #ddd;
   font-size: 17px;
+  font-family: 'Kanit', sans-serif;
   border: none;
   cursor: pointer;
 }
 
 .topnav .search-container button:hover {
   background: #ccc;
+}
+
+.img{
+  margin-top: 30px;
+}
+
+.text-capitalize-lead{
+  font-weight: bold;
+  font-family: 'Mitr', sans-serif;
+  padding-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {

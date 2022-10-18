@@ -10,6 +10,14 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
 <style>
       @font-face {
         font-family:'Uthmani' ;
@@ -45,9 +53,9 @@
         color: red;
         }
         .t {
-  background-color: white;
-  color: grey;
-  font-family:  serif;
+  background-color: #F6F2D4;
+  color: #2C3333;
+  font-family: 'Mitr', sans-serif;
         font-size: 15px;
         font-weight: normal;
         direction: rtl;
@@ -90,13 +98,22 @@
     right: 12px;
     top: 24px;
 }
-        
+.col-md-3{
+    background-color: #F6F2D4;
+    font-family: 'Mitr', serif;
+  }
+button{
+    font-family: 'Mitr', serif;
+}   
+.bs-example{
+  font-family: 'Mitr', serif;
+}
      
 
       </style>
        <br>
     <br>
- <div style = background-color:#00000; class="search-area">
+ <div style = background-color:#F6F2D4; class="search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">
   
@@ -429,7 +446,7 @@ $(document).ready(function(){
           </ul>
           <br>
   <br>
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+         <h4 style = "font-family: 'Mitr', serif;" class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4> <!-- edit -->
          <br> 
          
          <div class="col-sm-3">

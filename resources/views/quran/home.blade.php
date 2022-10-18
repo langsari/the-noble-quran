@@ -43,7 +43,7 @@
       </style>
 
 
-<div style = background-color:#9be2cd; class=" row text-center ">
+<div style = "background-color:#749F82; padding-bottom: 30px;" class=" row text-center "> <!-- หน้าชื่อซูเราะห์ที่เป็น grid -->
   @foreach($datasurahs as $datasurah)     
 <div class="col-sm-3">
  <a href="{{ route('arabic', $datasurah) }}">
@@ -54,7 +54,7 @@
   margin-bottom: 10px;"  
   type="buttom" class="btn btn-outline-light" >
   <p class="arabic" >{{ $datasurah->surah_arab}}</p>
-  <span >{{ $datasurah->th_name}}</span></button></a>
+  <span class="thai" >{{ $datasurah->th_name}}</span></button></a>
   </div>
  <br>
         @endforeach

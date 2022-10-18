@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
  
     
@@ -133,8 +134,9 @@ if (searchword != "") {
 
 <style>footer {
 text-align: center;
+font-family: 'Kanit', sans-serif;
 padding: 3px;
-background-color:#9be2cd;
+background-color:#425F57;
 color: white;
 }</style>
 <body>

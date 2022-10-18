@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
 
  
@@ -49,21 +50,21 @@
   
   </div>
 </div>
-<div style = background-color:#9be2cd; class=" row text-center ">
+<div style = background-color:#749F82; class=" row text-center ">
 
       <!-- Header -->
       <header class="masthead  text-white text-center">
 
-<div style = background-color:#9be2cd;>
+<div style = background-color:#749F82;>
   <h1 class="jumbotron-heading"></h1>
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
     <br>
     <br>
-      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <img class="img" src="{{ URL::to('img/logo-lg-w.png') }}">
       <br><br>
-      <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
+      <h2 class="text-capitalize-lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="col-md-3"></div>
     </div>
 
@@ -79,8 +80,9 @@
 
 <style>footer {
 text-align: center;
+font-family: 'Kanit', sans-serif;
 padding: 3px;
-background-color:#9be2cd;
+background-color:#425F57;
 color: white;
 }</style>
 <body>

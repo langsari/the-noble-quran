@@ -9,6 +9,15 @@
     <script src=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
 <style>
       @font-face {
         font-family:'Uthmani' ;
@@ -54,9 +63,9 @@
 
     }
     .t {
-  background-color: white;
-  color: grey;
-  font-family:  serif;
+  background-color: #F6F2D4;
+  color: #2C3333;
+  font-family: 'Mitr', sans-serif;
         font-size: 15px;
         font-weight: normal;
         direction: rtl;
@@ -87,19 +96,29 @@
   padding:1px; 
   border:#00CC00 dotted 1px; 
 }
-        
+  .col-md-3{
+    background-color: #F6F2D4;
+    font-family: 'Mitr', serif;
+  }
+  button{
+    font-family: 'Mitr', serif;
+}   
+  .bs-example{
+  font-family: 'Mitr', serif;
+}
+  
      
 
       </style>
        <br>
     <br>
- <div style = background-color:#00000; class="search-area">
+ <div style = background-color:#F6F2D4; class="search-area"> <!-- หน้าอัลกุรอานพร้อมแปล -->
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>
 <br>
 
-<ul class="list-group bg-white list-group-horizontal  ">
+<ul class="list-group bg-white list-group-horizontal">
 
 <!-- read quran-->
 <!-- Button trigger modal -->
@@ -230,7 +249,7 @@
 
 
 <!-- dropdown surah&& ayah : can link-->
-    <div class="col-md-3 ">
+    <div class="col-md-3">
              
              <div class="form-s2 ">
                  <div>
@@ -244,7 +263,7 @@
     </div>
     </div>
 
-    <div class ="col-md-3 ">
+    <div class ="col-md-3">
    
     <select class="form-control  " name="menu1" id="{{$data->id}}">
     <option value="#" >อายะห์</option>
@@ -262,7 +281,7 @@
 <br>
 <br>
 <!-- detail The Quran -->
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+         <h4 style = "font-family: 'Mitr', serif;" class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
          <br> 
          
          <div class="col-sm-3">
