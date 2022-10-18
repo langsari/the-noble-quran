@@ -86,10 +86,6 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 ## Requirement : 
 
-(M) Mandatory requirement (what the system must do) 
-(D) Desirable requirement (what the system preferably should do) 
-(O) Optional requirement (what the system may do)
-
 - REQ_01 Dua from Quran verses 
 - REQ_01.1 Admin CRUD dua from Quran verses (M)
 - REQ_01.2 Display dua from Quran verses to end-user (M)
