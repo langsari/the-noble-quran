@@ -19,6 +19,8 @@ So we want to continue this project to make this project more complete and add s
 
 
 # Constraints
+- Can only open on website, can't open in phone
+- There is only one audio file of Czech.
 
 # Software Method
 - Use case diagram
