@@ -1,16 +1,27 @@
 # Introduction :
 
-Today we will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear.
-As for the features that we have added it's reset password funtion and azkar for user can read in our website.
+Today we will talk about the project of the seniors that the teacher gave us to develop further. We have seen that some functions that seniors do. There are some bugs, such as no password reset button. meaningless quran invisible font color Some verses are not read. So we want to continue to make it better. So we have extracted from the existing database and put it in and have fixed the font color and background to be more clear. As for the features that we have added it's reset password funtion and quran vocab for user can read in our website. 
 
 
 # Problem Definition :
 
-Problems or bugs with this website are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and azkar because azkar also it important to read every morning and evening it a sunnah too.
+Problems or bugs with this website are Can't change password When the user wants to change the password Maybe in case someone knows the user's password. make the user want to change It can't be changed. For this reason, we added a password change function and also added a Thai language meaning and quran vocab Because it is necessary for Muslims to understand what allah said in the Quran.
 
 # Objective :
+#### Reset password feature
+- For convenience when users want to change their password
+- to respond when the user forgets the password
+#### thai translation feature
+- for users to know and understand the meaning of each verse
+- for readers to use in daily life
+- for Thai users to understand
+#### Quran audio feature
+- for users can listen
+- for guideline to learn how to read correctly according to Tajweed.
+#### Quran Vocab feature
+- for Muslims to understand and know what Allah says in the Quran
+- to practice memorizing the words in the Quran
 
-The purpose we put the password reset function is because when the user changes the password. can change immediately will make app users more convenient And besides, we have added Thai meaning for users to know the meaning of that verse as well and also we add azkar too.
 
 # Software Requirement : 
 | Software  | Version   |
