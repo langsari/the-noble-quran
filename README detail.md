@@ -26,18 +26,19 @@ The limitation of the password reset function that we have done is Let users acc
 - Activity diagram
 - Class Diagram
 
-#####Use Case Diagram :
+
+#Use Case Diagram :
 
 ![image](https://user-images.githubusercontent.com/96815487/196363262-c7f6abba-1ef9-4c3d-90eb-cf8ebd4ce107.png)
 
 
 
-####Data Flow Diagram :
+#Data Flow Diagram :
 
 ![image](https://user-images.githubusercontent.com/96815487/196363323-4a0fb2f9-4e2e-4ebc-9d7d-96c6a4238afc.png)
 
 
-###Activity diagram :
+#Activity diagram :
 
 ![image](https://user-images.githubusercontent.com/96815487/196363416-5467a766-a7a7-47cd-b427-e7dbaa662fc2.png)
 
@@ -45,6 +46,8 @@ The limitation of the password reset function that we have done is Let users acc
 ##Class Diagram :
 
 ![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
+
+
 
 
 #User Interface Design :
