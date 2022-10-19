@@ -33,6 +33,11 @@ The current limitation is There is not enough information and knowledge to solve
 | Laragon   | 5.0.0     |
 | Vs code   |1.72.0     |
 
+# Software Method :
+Activity diagram
+
+![306351395_637029867888009_1923031057358542847_n](https://user-images.githubusercontent.com/96861429/196728841-af7a93a3-7722-4a3e-b6ad-61f3ba7e2802.jpg)
+
 
 
 
