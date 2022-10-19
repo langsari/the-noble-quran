@@ -37,19 +37,19 @@ At present, there are very few reliable Thai translation sites of the Quran from
 > **Use case diagram :**
 
 ![use case](https://user-images.githubusercontent.com/82018181/196589704-78441fd1-8393-4d00-a9c8-d29d0df18276.png)
-
+<br>
 > **Activity diagram :**
 
 ![activity diagram](https://user-images.githubusercontent.com/82018181/196589716-92a760f5-c206-49ee-b414-b7cf54ea5da4.png)
-
+<br>
 > **Class diagram :**
-
+<br>
 > **User interface :**
 
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587727-7394f715-e099-466b-8b34-eabc08ffd303.png">
 
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
-
+<br>
 ## Development :
 
 ## Running the test :
