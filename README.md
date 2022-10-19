@@ -38,3 +38,10 @@ The limitation of the function we do is Users can learn the topics of the Quran 
 # Software Method :
 - Use Case Diagram 
 - Activity diagram
+
+## Use Case Diagram :
+
+## Activity diagram :
+
+# Source Code :
+
