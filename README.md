@@ -53,7 +53,8 @@ The limitation of the password reset function that we have done is Let users acc
 A use case diagram is a visual representation of how users interact with the various systems that make up a larger system. The main goal of designing a use case diagram is to fully describe the system's functionality and to solicit user requests. This is regarded as where system analysis and design should begin.
 
 ![image](https://user-images.githubusercontent.com/96815487/196363262-c7f6abba-1ef9-4c3d-90eb-cf8ebd4ce107.png)
-![Screenshot 2022-10-19 013002](https://user-images.githubusercontent.com/96815451/196642941-0b7024f1-ddbf-4c9b-a168-6aed8fc8b132.png)
+
+                ![Screenshot 2022-10-19 013002](https://user-images.githubusercontent.com/96815451/196642941-0b7024f1-ddbf-4c9b-a168-6aed8fc8b132.png)
 
 
 ## Data Flow Diagram :
