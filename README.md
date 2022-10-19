@@ -63,21 +63,6 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 ![quran5](https://user-images.githubusercontent.com/96815756/196481581-e1b00988-5803-40a7-a7ca-7e314680bb26.png)
 
 # Source Code
-
-   <h1 class="title">คำที่ควรสังเกตในอัลกุรอาน</h1>
-    
-   @foreach($specific as $row)
-   <div class="ayat"><p>{{$row->text_specific}}</p></div>
-        <p class="t">{{$row->explain_texts}}</p>
-        <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
-       
-   <audio controls >
-      <source src="" type="audio/mpeg">
-      </audio>
-      <hr color=black > 
-      <br>
-
-        @endforeach
      
 ![quran6](https://user-images.githubusercontent.com/96815756/196483236-a674eb1f-ce3b-4977-b542-d128b6b1f0a1.png)
 
