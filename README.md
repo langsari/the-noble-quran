@@ -80,7 +80,39 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 We have used bootstrap to create a table and retrieve the data from the database and display it as rows.
 
-![MLP 3](https://user-images.githubusercontent.com/96815451/196614015-12df2a04-be59-4296-a128-8acdc867d3a7.png)
+```</head>
+<body>
+    <div class="space"></div>
+    <div class="headazkar">
+    <button class="button button1">THE WORDS IN QURAN</button><br>
+    </div>
+  <div class="py-12">
+      <div class="container">
+        <table class="table table-bordered ">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">คำศัพท์</th>
+                <th scope="col">คำอ่าน</th>
+                <th scope="col">ความหมาย</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              @php($i=1)
+              @foreach($dictionary as $row)
+              <tr>
+                  <th>{{$i++}}</th>
+                  <td>{{$row->vocab}}</td>
+                  <td>{{$row->read}}</td>
+                  <td>{{$row->meaning}}</td>
+                  <td>{{$row->english}}</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+      </div>
+  </div>```
 
 ## Route :
 
