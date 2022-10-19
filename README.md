@@ -120,7 +120,10 @@ We have used bootstrap to create a table and retrieve the data from the database
 
 Its main function is to provide a route for users to access the desired page through a URL.
 
-![MLP 4](https://user-images.githubusercontent.com/96815451/196614689-c471591f-84c1-4450-b128-90b287f7bfb2.png)
+```php
+//dictionary route
+Route::get('enduser/Azkars', [QuranController::class, 'dictionary'])->name('Azkars');
+```
 
 ## Migrate file :
 
