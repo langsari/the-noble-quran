@@ -129,8 +129,19 @@ Route::get('enduser/Azkars', [QuranController::class, 'dictionary'])->name('Azka
 
 It is a file used to create tables through the terminal and send them to the database. with the order $ php artisan serve make:model (name table) -m
 
-![MLP 5](https://user-images.githubusercontent.com/96815451/196614841-65745839-61bd-4338-9550-2236cbfc3afc.png)
-
+```php
+public function up()
+    {
+        Schema::create('dictiories', function (Blueprint $table) {
+            $table->id();
+            $table->string('vocab', 190);
+            $table->string('read', 190);
+            $table->string('meaning', 190);
+            $table->timestamps();
+        });
+    }
+    ```
+    
 ## Model file :
 
 The model file is responsible for connecting to the database.
