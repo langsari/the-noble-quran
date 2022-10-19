@@ -69,7 +69,7 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 ## Development :
 
-## Running the test :
+## Test :
 
 1. Open Laragon and click on start button.
 2. Click on database for open phpmyadmin and create database then import database file.
