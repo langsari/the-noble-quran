@@ -82,7 +82,22 @@ public function Tajweed(){
         return view('quran.Tajweed', compact('tajweed'));
 ```
 # Import data for show data on website :
-![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
+```
+<body>
+    <h1 class="tajweed"> <strong> Tajweed </strong>  </h1>
+    <hr>
+<h2 class="sakinah">( นูนซากีนะห์ )</h2>
+    @foreach($tajweed as $row)
+    <div>
+    <h5 class="hukum">{{$row->name}} </h5>
+<p class="expain"> {{$row->audio}}</p>
+<p class="ayat"> {{$row->ayat}}</p>
+<h2 class="memsakinah"> {{$row->hukum}}</h2>
+</div>@endforeach
+<br>
+<br>
+</body>
+```
 # view :
 - It is the part that must be displayed through the Web Browser, written with the basics of HTML inserted as well. Script PHP or JavaScript according to the syntax of each language used
 - Working relationship with Controller
