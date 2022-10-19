@@ -78,7 +78,7 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 ## Veiw file :
 
-display page
+We have used bootstrap to create a table and retrieve the data from the database and display it as rows.
 
 ![MLP 3](https://user-images.githubusercontent.com/96815451/196614015-12df2a04-be59-4296-a128-8acdc867d3a7.png)
 
