@@ -54,7 +54,7 @@ A use case diagram is a visual representation of how users interact with the var
 
 ![image](https://user-images.githubusercontent.com/96815487/196363262-c7f6abba-1ef9-4c3d-90eb-cf8ebd4ce107.png)
 
-                ![Screenshot 2022-10-19 013002](https://user-images.githubusercontent.com/96815451/196642941-0b7024f1-ddbf-4c9b-a168-6aed8fc8b132.png)
+![Screenshot 2022-10-19 013002](https://user-images.githubusercontent.com/96815451/196642941-0b7024f1-ddbf-4c9b-a168-6aed8fc8b132.png)
 
 
 ## Data Flow Diagram :
