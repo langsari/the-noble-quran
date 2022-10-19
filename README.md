@@ -64,13 +64,11 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Source Code
 
-
+# Route
 ```php
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
 
-     
-![quran6](https://user-images.githubusercontent.com/96815756/196483236-a674eb1f-ce3b-4977-b542-d128b6b1f0a1.png)
 
 # Result
 ![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
