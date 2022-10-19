@@ -58,7 +58,18 @@ So we want to continue this project to make this project more complete and add s
 ```Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
 # models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
-![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
+```<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Tajweed extends Model
+{
+    use HasFactory;
+}
+```
 # controller :
 - It is the part that runs first when the program is called from the Web Browser.
 - It is the interface between the user and the program.
