@@ -66,7 +66,7 @@ A[Round edge] -->B(Hard edge)
     B --> Buttom{Decision}
     C -->|No|  A[Round edge]
     C -->|Yes| E[Reset password page]
-​```
+```
 
 ### Vocab in quran
 ```
