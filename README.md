@@ -73,32 +73,6 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 ![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
 
-
-# User Interface Design :
-: Homepage 
-
-![MLP 1](https://user-images.githubusercontent.com/96815451/196613074-e5aed631-25c9-4b02-bf09-597f29c7fc27.png)
-
-: Login Page 
-
-![image](https://user-images.githubusercontent.com/96815487/196363877-81eaa878-fccc-47d3-8943-2f737debcc3e.png)
-
-: Put Email to reset password Page
-
-![image](https://user-images.githubusercontent.com/96815487/196363960-b7d6cf59-2083-4bf6-9d77-70ada36a6b26.png)
-
-: Receive link to reset password
-
-![image](https://user-images.githubusercontent.com/96815487/196364057-c84d1add-fa8a-482d-ab9a-c9661cb4f9fe.png)
-
-: Reset Password Page 
-
-![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
-
-: Quran vocabulary page
-
-![MLP 2](https://user-images.githubusercontent.com/96815451/196613631-339f1df8-6459-4a9f-8e63-42e7fce4b6b3.png)
-
 # Source code :
 
 ## Veiw file :
@@ -136,6 +110,32 @@ The controller is responsible for processing. Receive user requirements and extr
 This is a database that we have created to include information about Vocabulary in the Qur'an
 
 ![MLP 8](https://user-images.githubusercontent.com/96815451/196615301-636a2fc6-a75b-4638-83c6-6a4f40b631e5.png)
+
+# User Interface Design :
+: Homepage 
+
+![MLP 1](https://user-images.githubusercontent.com/96815451/196613074-e5aed631-25c9-4b02-bf09-597f29c7fc27.png)
+
+: Login Page 
+
+![image](https://user-images.githubusercontent.com/96815487/196363877-81eaa878-fccc-47d3-8943-2f737debcc3e.png)
+
+: Put Email to reset password Page
+
+![image](https://user-images.githubusercontent.com/96815487/196363960-b7d6cf59-2083-4bf6-9d77-70ada36a6b26.png)
+
+: Receive link to reset password
+
+![image](https://user-images.githubusercontent.com/96815487/196364057-c84d1add-fa8a-482d-ab9a-c9661cb4f9fe.png)
+
+: Reset Password Page 
+
+![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
+
+: Quran vocabulary page
+
+![MLP 2](https://user-images.githubusercontent.com/96815451/196613631-339f1df8-6459-4a9f-8e63-42e7fce4b6b3.png)
+
 
 # Conclutsion :
 
