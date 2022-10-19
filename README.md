@@ -106,7 +106,100 @@ class CreateSpecificWordsTable extends Migration
     }
 }
 ```
+## views
+```php
+@extends('quran.navbar')
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>specificword</title>
+</head>
+
+<style>
+
+.t {
+  background-color: white;
+  color: black;
+  font-family:  serif;
+        font-size: 15px;
+        direction: rtl;
+        font-weight: normal;
+        
+        padding: 0;
+        margin: 0;
+}
+@font-face {
+    font-family: quran-font;
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/font/AmiriQuranColored.woff') format('truetype');
+  }
+  
+  .ayat{
+     font-family: quran-font;
+     direction: rtl;
+     font-size: 26px;
+     line-height: 200%;
+     color: black;
+   }
+   .ayat .kalimah{
+    font-family: quran-font;
+     direction: rtl;
+     font-size: 26px;
+     line-height: 200%;
+     color:#008080;
+   }
+   .title{
+    text-align: center;
+
+}
+</style>
+
+<br>
+    <br>
+ <div style = background-color:white; class="search-area">
+ <div class="row">
+    <div class="col-md-8 mx-auto">
+<br>
+<br>
+
+
+<body>
+
+
+
+    <h1 class="title">คำที่ควรสังเกตในอัลกุรอาน</h1>
+    
+    @foreach($specific as $row)
+    <div class="ayat"><p>{{$row->text_specific}}</p></div>
+        <p class="t">{{$row->explain_texts}}</p>
+        <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
+       
+      <audio controls >
+      <source src="" type="audio/mpeg">
+      </audio>
+      <hr color=black > 
+      <br>
+
+        @endforeach
+     
+     
+     
+</body>
+
+</html>
+
+    
+          
+```
 # Result
 ![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
 
