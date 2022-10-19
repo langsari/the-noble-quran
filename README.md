@@ -132,6 +132,9 @@ We use orange theme because make people feel alert and not lazy . and one the mo
 
 ![Screenshot 2022-10-19 082536](https://user-images.githubusercontent.com/96861429/196583846-a8bd4d30-f835-4d52-be89-a251cdffc10a.png)
 การเเสดงผลหลังดึงข้อมูลจาก database
+
+.
+.
 ![309445721_677454160465277_5276363645776308690_n](https://user-images.githubusercontent.com/96861429/196705217-49ce8dad-e068-4c28-9279-ece3b255f521.jpg)
 ![308438527_3292150181072492_6022515477244370567_n](https://user-images.githubusercontent.com/96861429/196705234-af3ffddf-cabc-4654-a5ff-9b2254d8613b.jpg)
 icon for using function change languages
