@@ -95,7 +95,7 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 ![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
 
-: Quran vocabulary
+: Quran vocabulary page
 
 ![MLP 2](https://user-images.githubusercontent.com/96815451/196613631-339f1df8-6459-4a9f-8e63-42e7fce4b6b3.png)
 
