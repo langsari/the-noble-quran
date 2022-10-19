@@ -105,7 +105,98 @@ public function Tajweed(){
 - It is the part that must be displayed through the Web Browser, written with the basics of HTML inserted as well. Script PHP or JavaScript according to the syntax of each language used
 - Working relationship with Controller
 - View is a display that brings data from Controller to display, can set Style Sheet and Templates so that all web applications have the same standards.
-![tajweed page](https://user-images.githubusercontent.com/93647715/196645414-256325d7-b058-4aae-a4a0-e6fd33f41b54.jpg)
+```php
+@extends('quran.navbar')
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <title>Tajweed</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mitr:wght@300&display=swap');
+        .tajweed{
+            text-align:center;
+            color:#008997;
+            margin-top:20px;
+            margin-bottom:20px;
+            font-family: 'Kanit', sans-serif;
+            font-size:70px;
+        }
+        .sakinah{
+            margin-left:70px;
+            margin-top:25px;
+            font-family: 'Mitr', sans-serif;
+            font-size:50px;
+            color:#008997;
+            
+        }
+        .memsakinah{
+            margin-left:70px;
+            margin-top:40px;
+            font-family: 'Mitr', sans-serif;
+            font-size:50px;
+            color:#008997;
+
+        }
+        .hukum{
+            margin-left:100px;
+            margin-top:25px;
+            font-family: 'Mitr', sans-serif;
+            font-size:25px;
+            color:#7B7D7D;
+
+        }
+        .expain{
+            margin-left:120px;
+            font-family: 'Mitr', sans-serif;
+            font-size:17px;
+
+        }
+        .ayat{
+            margin-left:250px;
+            margin-top:20px;
+            font-size:20px;
+            color:#008997;
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <h1 class="tajweed"> <strong> Tajweed </strong>  </h1>
+    <hr>
+<h2 class="sakinah">( นูนซากีนะห์ )</h2>
+    @foreach($tajweed as $row)
+    <div>
+    <h5 class="hukum">{{$row->name}} </h5>
+<p class="expain"> {{$row->audio}}</p>
+<p class="ayat"> {{$row->ayat}}</p>
+<h2 class="memsakinah"> {{$row->hukum}}</h2>
+</div>@endforeach
+<br>
+<br>
+</body>
+</html>
+
+``
 
 
 # User Interface Disign :
