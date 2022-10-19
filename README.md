@@ -75,7 +75,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
        Spacificwords : + string text_spacific
        Spacificwords : + string explain_text
        Spacificwords : + show ()
-       ```
+  ```
 
 # interface  text
 
