@@ -83,6 +83,14 @@ Activity diagrams are a method for describing work flow, business processes, and
 
 ### Reset password 
 
+@startuml
+(*)-->"Request Reset password"
+-->"Get request page "
+-->"Type new password"
+-->"Save new password"
+-->(*)
+@enduml
+
 
 ### Vocab in quran
 @startuml
