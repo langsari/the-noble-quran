@@ -38,28 +38,29 @@ So we want to continue this project to make this project more complete and add s
 - models
 - controller
 - Import data for show data on website 
+- view
 
-# Creat table of function Tajweed
+# Creat table of function Tajweed :
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
-# routes
+# routes :
 - is the part used to store files in the routing (Url) of the Web
 ![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
-# models 
+# models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
 ![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
-# controller
+# controller :
 - It is the part that runs first when the program is called from the Web Browser.
 - It is the interface between the user and the program.
 - have contact with Database (database) with Model and display data via View
 - It is the main processing part of the program.
 ![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
-# Import data for show data on website 
+# Import data for show data on website :
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
-# view
+# view :
 - It is the part that must be displayed through the Web Browser, written with the basics of HTML inserted as well. Script PHP or JavaScript according to the syntax of each language used
 - Working relationship with Controller
 - View is a display that brings data from Controller to display, can set Style Sheet and Templates so that all web applications have the same standards.
- ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
+![tajweed page](https://user-images.githubusercontent.com/93647715/196645414-256325d7-b058-4aae-a4a0-e6fd33f41b54.jpg)
 
 
 # User Interface Disign :
@@ -67,8 +68,7 @@ So we want to continue this project to make this project more complete and add s
 ![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
 - Surah page
  ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
- - Surah page
- ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
+ 
  
  
 # Database :
