@@ -80,7 +80,8 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 We have used bootstrap to create a table and retrieve the data from the database and display it as rows.
 
-```</head>
+```php
+</head>
 <body>
     <div class="space"></div>
     <div class="headazkar">
