@@ -216,7 +216,7 @@ This code we use html for display specific words from database and we use css to
         //Use <p> for show surah name and ayat num get from database use this link {{$row->name_surah}} and {{$row->ayat_num}}
     <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
        
-    //Use <audio controls > for show audio 
+    //Use audio controls  for show audio 
       <audio controls >
       <source src="" type="audio/mpeg">
       </audio>
