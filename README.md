@@ -52,6 +52,20 @@ So we want to continue this project to make this project more complete and add s
 - tajweed page
 ![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
 
+# User Interface Disign :
+- Home page
+![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
+- Surah page
+ ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
+ 
+ 
+# Database :
+![data](https://user-images.githubusercontent.com/93647715/196516299-926192fc-a13a-42de-98fe-c28d497b4d9c.jpg)
+
+# Language requirements :
+- HTML
+- BLADE
+- PHP
 
 
 # Software Method :
@@ -68,22 +82,6 @@ So we want to continue this project to make this project more complete and add s
 
 # Data flow Diagram :
 ![Data](https://user-images.githubusercontent.com/93647715/196413804-54249478-6429-49d8-b4a1-4b2826809a46.png)
-
-# User Interface Disign :
-- Home page
-![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
-- Surah page
- ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
-
-
-
-# Database :
-![data](https://user-images.githubusercontent.com/93647715/196516299-926192fc-a13a-42de-98fe-c28d497b4d9c.jpg)
-
-# Language requirements :
-- HTML
-- BLADE
-- PHP
 
 
 # Conclusion :
