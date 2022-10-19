@@ -88,17 +88,19 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Source Code
 
 ## Route
-
+This code use for connecting bitween database and view
 ```php
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
 ## migrations
+
 ```php
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+
 
 class CreateSpecificWordsTable extends Migration
 {
@@ -148,9 +150,9 @@ class CreateSpecificWordsTable extends Migration
     <title>specificword</title>
 </head>
 
-    //
+    //use css for front in decoration
 <style>
-
+// t is class name of explain_texts
 .t {
   background-color: white;
   color: black;
@@ -201,14 +203,19 @@ class CreateSpecificWordsTable extends Migration
 <body>
 
 
-
+//Heading 
     <h1 class="title">คำที่ควรสังเกตในอัลกุรอาน</h1>
     
+    //Use lop condition for show all in database 
     @foreach($specific as $row)
+    //Use <p> for show ayat get from database use this link {{$row->text_specific}}
     <div class="ayat"><p>{{$row->text_specific}}</p></div>
-        <p class="t">{{$row->explain_texts}}</p>
-        <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
+         //Use <p> for show explain get from database use this link {{$row->explain_texts}}
+    <p class="t">{{$row->explain_texts}}</p>
+        //Use <p> for show surah name and ayat num get from database use this link {{$row->name_surah}} and {{$row->ayat_num}}
+    <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
        
+    //Use <audio controls > for show audio 
       <audio controls >
       <source src="" type="audio/mpeg">
       </audio>
