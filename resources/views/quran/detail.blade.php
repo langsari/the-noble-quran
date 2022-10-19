@@ -10,6 +10,7 @@
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     </script>
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400&family=Noto+Naskh+Arabic&family=Noto+Sans+Thai&display=swap');
       @font-face {
         font-family:'Uthmani' ;
         src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
@@ -63,6 +64,9 @@
         direction: rtl;
         padding: 0;
         margin: 0;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        font-family: 'Noto Naskh Arabic', serif;
+        font-family: 'Noto Sans Thai', sans-serif;
 }
     @font-face {
     font-family: quran-font;

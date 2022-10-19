@@ -7,29 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azkar Page1</title>
-    <script>
-let slideIndex = [1,1];
-let slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-  let i;
-  let x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}    
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex[no]-1].style.display = "block";  
-}
-</script>
     <style>
-
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400&family=Noto+Naskh+Arabic&family=Noto+Sans+Thai&display=swap');
         .space{
             margin: 0;
             padding: 0;
@@ -42,6 +22,8 @@ function showSlides(n, no) {
             display: flex;
             justify-content: center;
             background-color: #E5E7E9;
+            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+            font-family: 'Noto Sans Thai', sans-serif;
         }
 
         .headazkar .button{
@@ -72,6 +54,9 @@ function showSlides(n, no) {
         }
         .py-12{
           background-color:#E5E7E9;
+          font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+          font-family: 'Noto Naskh Arabic', serif;
+          font-family: 'Noto Sans Thai', sans-serif;
         }
     </style>
 </head>

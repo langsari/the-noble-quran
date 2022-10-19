@@ -54,6 +54,9 @@
         direction: rtl;
         padding: 0;
         margin: 0;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        font-family: 'Noto Naskh Arabic', serif;
+        font-family: 'Noto Sans Thai', sans-serif;
 }
 .select {
   background-color: black;

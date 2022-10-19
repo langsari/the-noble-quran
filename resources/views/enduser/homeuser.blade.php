@@ -1,6 +1,7 @@
 @extends('enduser.shortnav')
 @section('content')
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400&family=Noto+Naskh+Arabic&family=Noto+Sans+Thai&display=swap');
       @font-face {
         font-family:'Uthmani' ;
         src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
@@ -33,7 +34,11 @@
         padding: 0 5px;
         margin: 0;
         color: red;
-
+    }
+    .col-sm-3{
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        font-family: 'Noto Naskh Arabic', serif;
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     
         

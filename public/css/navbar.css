@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400&family=Noto+Sans+Thai&display=swap');
  @font-face {
   font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
@@ -160,6 +160,8 @@ body {
   text-decoration: none;
   font-size: 16px;
   margin-top: 5px;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 
 .topnav a:hover {
@@ -188,6 +190,8 @@ body {
   border-radius: 15px;
   margin-right: 12px;
   margin-top: 15px;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 
 .topnav .search-container button {
@@ -202,6 +206,8 @@ body {
   border-radius: 15px;
   cursor: pointer;
   margin-top: 15px;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 
 .topnav .search-container button:hover {
@@ -258,5 +264,5 @@ body {
     margin: 0 auto;
     display: block;
 }
-}
+
 

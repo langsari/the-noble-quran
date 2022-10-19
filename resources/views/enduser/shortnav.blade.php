@@ -81,13 +81,16 @@
 @yield('content')
 
 </div>
-
 <style>footer {
 text-align: center;
 padding: 3px;
 background-color:#2C3E50;
 color: white;
-}</style>
+}
+h2{
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+</style>
 <body>
 
 <footer>

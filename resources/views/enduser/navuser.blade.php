@@ -67,11 +67,17 @@
 
 </div>
 
-<style>footer {
-text-align: center;
-padding: 3px;
-background-color:#2C3E50;
-color: white;
+<style>
+  
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300;400&family=Noto+Naskh+Arabic&family=Noto+Sans+Thai&display=swap');
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color:#2C3E50;
+    color: white;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-family: 'Noto Naskh Arabic', serif;
+    font-family: 'Noto Sans Thai', sans-serif;
 }</style>
 <body>
 
