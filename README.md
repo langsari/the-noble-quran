@@ -36,7 +36,7 @@ So we want to continue this project to make this project more complete and add s
 
 - Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
-- routes > web.php 
+- Creat routes > web.php 
 ![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
 - modles
 ![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
