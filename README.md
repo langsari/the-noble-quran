@@ -201,9 +201,10 @@ class CreateSpecificWordsTable extends Migration
           
 ```
 # Result
-![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
 
-![quran4](https://user-images.githubusercontent.com/96815756/196480512-9541a9b5-a7d1-4189-9ff4-44d29beddbf8.png)
+![ผลลัพ](https://user-images.githubusercontent.com/96815756/196645073-b38c1c32-7121-4985-adea-cad3ae6d87d7.png)
+
+![ผลลัพ1](https://user-images.githubusercontent.com/96815756/196645151-ff2ae474-2e99-4ed3-93c7-2517e0e30f8b.png)
 
 # Conclusion
 
