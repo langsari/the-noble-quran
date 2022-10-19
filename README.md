@@ -38,23 +38,46 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Software Method :
 * Activity diagram
 * Sequence diagram
-* Use Case Diagram
 * Class Diagram
 
 # Activity diagram
+@startuml
 
-![ativity](https://user-images.githubusercontent.com/96815756/196511272-445f4f1d-d61a-4df3-8697-6ed04071c4a9.png)
+(*) --> " Click spacificword page"
+(*) --> " Query all spacificword in database "
+(*) --> " Get all spacificword in databas"
+(*) --> " Display  spacificword "
+ --> (*)
+ 
+@enduml
+
+
 
 # Sequence diagram
+```Sequence
+    User -> Home page : press spacificwords
+    Home page -> Spacificwords page : Show Spacificwords
+    Spacificwords page : Get in Database
+    Database --> Spacificwords pade : Return Spacificwords 
+    Spacificwords page --> User : Display   Spacificword page
+ ```
+      
+    
 
-![Sequesnce dr](https://user-images.githubusercontent.com/96815756/196511736-3faa287f-e733-40e2-931c-327a6722f615.png)
 
-# Use Case Diagram
+# Class Diagram
 
-![286268752_441035508162536_4959068076365646630_n](https://user-images.githubusercontent.com/96815756/196513462-aa131256-242d-4054-a4af-6d17e5c51146.jpg)
+```mermaid
+   Class Diagram
+       Spacificwords : - int id
+       Spacificwords : + string name_surah
+       Spacificwords : + int ayan_num
+       Spacificwords : + string text_spacific
+       Spacificwords : + string explain_text
+       Spacificwords : + show ()
+       ```
 
-
-# interface  
+# interface  text
 
 ![quran](https://user-images.githubusercontent.com/96815756/196480309-d460ca2c-f642-45cf-ab0f-85c429549d61.png)
 
