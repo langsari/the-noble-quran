@@ -74,12 +74,10 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 ![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
 
 
-
-
 # User Interface Design :
 : Homepage 
 
-![image](https://user-images.githubusercontent.com/96815487/196363754-f637c1f7-5598-4f61-b578-cf68245a1a15.png)
+![MLP 1](https://user-images.githubusercontent.com/96815451/196613074-e5aed631-25c9-4b02-bf09-597f29c7fc27.png)
 
 : Login Page 
 
@@ -96,6 +94,36 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 : Reset Password Page 
 
 ![image](https://user-images.githubusercontent.com/96815487/196364206-899106a3-845e-4087-bc5f-f1d10ae10300.png)
+
+: Quran vocabulary page
+
+![MLP 2](https://user-images.githubusercontent.com/96815451/196613631-339f1df8-6459-4a9f-8e63-42e7fce4b6b3.png)
+
+# Source code :
+
+## Veiw file :
+
+![MLP 3](https://user-images.githubusercontent.com/96815451/196614015-12df2a04-be59-4296-a128-8acdc867d3a7.png)
+
+## Route :
+
+![MLP 4](https://user-images.githubusercontent.com/96815451/196614689-c471591f-84c1-4450-b128-90b287f7bfb2.png)
+
+## My grate file :
+
+![MLP 5](https://user-images.githubusercontent.com/96815451/196614841-65745839-61bd-4338-9550-2236cbfc3afc.png)
+
+## Model file :
+
+![MLP 6](https://user-images.githubusercontent.com/96815451/196615143-c7f7116d-9b90-451b-86aa-784d9706106b.png)
+
+## Controller file :
+
+![MLP 7](https://user-images.githubusercontent.com/96815451/196615239-8352fefa-594c-48d4-bae4-e01b7ffdbd92.png)
+
+## Data base :
+
+![MLP 8](https://user-images.githubusercontent.com/96815451/196615301-636a2fc6-a75b-4638-83c6-6a4f40b631e5.png)
 
 # Conclutsion :
 
