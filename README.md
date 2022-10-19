@@ -58,7 +58,8 @@ So we want to continue this project to make this project more complete and add s
 ```Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
 # models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
-```<?php
+```
+<?php
 
 namespace App\Models;
 
