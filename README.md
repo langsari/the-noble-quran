@@ -38,11 +38,11 @@ So we want to continue this project to make this project more complete and add s
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
 - Creat routes > web.php 
 ![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
-- Creat modles for connect with database
+- Creat models for connect with database
 ![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
 - controller
 ![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
-- Import data 
+- Import data for show data on website 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
 - tajweed page
 ![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
