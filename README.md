@@ -11,13 +11,13 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 ## Objective :
 
-- Thai users can know the dua that is the verse of the Quran and they can be used in daily life.
-- To make it convenient for Thai users to learn The Quran.
+1. Thai users can know the dua that is the verse of the Quran and they can be used in daily life.
+2. To make it convenient for Thai users to learn The Quran.
 
 ## SCOPE Who is your target :
 
-- The target is for Thai speakers of all ages.
-- The Web application is available for visitors to learn The Quran verses used as dua in daily life.
+1. The target is for Thai speakers of all ages.
+2. The Web application is available for visitors to learn The Quran verses used as dua in daily life.
 
 ## Requirement : 
 
@@ -32,7 +32,7 @@ At present, there are very few reliable Thai translation sites of the Quran from
 | REQ_01.1      | Admin CRUD dua from Quran verses | M |
 | REQ_01.2      | Display dua from Quran verses to end-user | M |
 
-## Design
+## Design :
 
 > **Use case diagram :**
 
