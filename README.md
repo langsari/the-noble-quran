@@ -47,17 +47,38 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 > **Use case diagram :**
 
-![use case](https://user-images.githubusercontent.com/82018181/196589704-78441fd1-8393-4d00-a9c8-d29d0df18276.png)
+```
+@startuml
+rectangle Dua {
+  User -- (Login)
+  (Login) .> (Register) : include
+  User -- (Display Dua Translation)
+  User -- (Read Dua Page)
+  (Login) -- Admin
+  (CRUD Quran Translation) -- Admin
+  (CRUD Dua page) -- Admin
+}
+@enduml
+```
 
 <br>
 
 > **Activity diagram :**
 
-![activity diagram](https://user-images.githubusercontent.com/82018181/196589716-92a760f5-c206-49ee-b414-b7cf54ea5da4.png)
-
-<br>
-
-> **Class diagram :**
+```
+@startuml
+(*)-->"Click Manage Dua"
+-right->"Display Manage Dua form "
+-->"CRUD DUA"
+If "Validate" then
+-right-> [Error] "Display Error"
+--> "CRUD DUA"
+else
+--> [Valid]"DRUD in Dua database"
+Endif
+-->(*)
+@enduml
+```
 
 <br>
 
@@ -70,6 +91,7 @@ At present, there are very few reliable Thai translation sites of the Quran from
 ## Development :
 
 ```
+
 ```
 
 ## Test :
