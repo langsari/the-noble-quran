@@ -29,7 +29,7 @@ The current limitation is There is not enough information and knowledge to solve
 
 
 
-
+# Code : 
   <div class="setbut"> 
     <div class="dropdown">
         <span><a class="setbut-1" href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
@@ -117,6 +117,9 @@ form.top{
   align-items: center;
 }
 
+description
+Create an if else statement to create a condition for the switch, and the switch will select the condition that we selected from the if else statement.
+In the switch, there is a break statement so that the selected condition will run and other conditions will not work until the user selects that condition.
 
 # User interface : 
 
