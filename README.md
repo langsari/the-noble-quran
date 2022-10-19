@@ -8,12 +8,18 @@ The problem with the website is not the website itself. But at the function that
 The purpose of developing and adding this function comes from I can see the channel for further development. Starting with the audio function, you can listen to the Qur'an from your favorite Sheikh or Imam, and another function is to increase the interest in the ayah Tell the history of that ailment
 
 # SOFWARE REQUIREMENT ;
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   |  8.1      |
+| php       | 7.4.19    |
+| Laragon   | 5.0.0     |
+| Vs code   |1.72.0     |
 
 # REQUIREMENT ;
--Dark/lighting mode
--quran audio feature
--history of surah
--about ayah
+- Dark/lighting mode
+- quran audio feature
+- history of surah
+- about ayah
 
 # CONSTRAINTS ;
 - The audio function also supports only three to foure cores in the initial stage. 
