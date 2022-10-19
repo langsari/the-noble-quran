@@ -60,6 +60,13 @@ A data flow diagram demonstrates the path that information takes through a syste
 
 ### Reset password 
 
+```
+reset password 
+A[Round edge] -->B(Hard edge)
+    B --> Buttom{Decision}
+    C -->|No|  A[Round edge]
+    C -->|Yes| E[Reset password page]
+​```
 
 ### Vocab in quran
 ```
