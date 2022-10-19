@@ -41,7 +41,8 @@ So we want to continue this project to make this project more complete and add s
 
 # Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
-- Creat routes > web.php 
+# routes
+- is the part used to store files in the routing (Url) of the Web
 ![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
 # models 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
