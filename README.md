@@ -57,7 +57,8 @@ public function up()
 - is the part used to store files in the routing (Url) of the Web
 
 ```php
-Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
+Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');
+```
 # models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
 ```php
