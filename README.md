@@ -76,7 +76,11 @@ class Tajweed extends Model
 - It is the interface between the user and the program.
 - have contact with Database (database) with Model and display data via View
 - It is the main processing part of the program.
-![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
+```
+public function Tajweed(){
+        $tajweed=Tajweed::all();
+        return view('quran.Tajweed', compact('tajweed'));
+```
 # Import data for show data on website :
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
 # view :
