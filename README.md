@@ -31,7 +31,7 @@ The current limitation is There is not enough information and knowledge to solve
 | php       | 7.4.19    |
 | Laragon   | 5.0.0     |
 | Vs code   |1.72.0     |
-| composer  |2.4.2      |
+
 
 # Software Method :
 Activity diagram
