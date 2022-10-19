@@ -33,10 +33,15 @@ So we want to continue this project to make this project more complete and add s
 | Vs code   |1.72.0     |
 
 # Source Code :
+- routes > web.php 
+![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
+
 - Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
-- Import data :
+
+- Import data 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
+
 
 
 # Software Method :
