@@ -56,10 +56,11 @@ public function up()
 # routes :
 - is the part used to store files in the routing (Url) of the Web
 
-```Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
+```php
+Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
 # models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
-```
+```php
 <?php
 
 namespace App\Models;
@@ -77,13 +78,13 @@ class Tajweed extends Model
 - It is the interface between the user and the program.
 - have contact with Database (database) with Model and display data via View
 - It is the main processing part of the program.
-```
+```php
 public function Tajweed(){
         $tajweed=Tajweed::all();
         return view('quran.Tajweed', compact('tajweed'));
 ```
 # Import data for show data on website :
-```
+```php
 <body>
     <h1 class="tajweed"> <strong> Tajweed </strong>  </h1>
     <hr>
