@@ -41,6 +41,10 @@ So we want to continue this project to make this project more complete and add s
 - Creat models for connect with database
 ![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
 - controller
+- It is the part that runs first when the program is called from the Web Browser.
+- It is the interface between the user and the program.
+- have contact with Database (database) with Model and display data via View
+- It is the main processing part of the program.
 ![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
 - Import data for show data on website 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
