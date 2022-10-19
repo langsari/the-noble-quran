@@ -103,25 +103,37 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 ## Veiw file :
 
+display page
+
 ![MLP 3](https://user-images.githubusercontent.com/96815451/196614015-12df2a04-be59-4296-a128-8acdc867d3a7.png)
 
 ## Route :
 
+Its main function is to provide a route for users to access the desired page through a URL.
+
 ![MLP 4](https://user-images.githubusercontent.com/96815451/196614689-c471591f-84c1-4450-b128-90b287f7bfb2.png)
 
-## My grate file :
+## Migrate file :
+
+It is a file used to create tables through the terminal and send them to the database. with the order $ php artisan serve make:model (name table) -m
 
 ![MLP 5](https://user-images.githubusercontent.com/96815451/196614841-65745839-61bd-4338-9550-2236cbfc3afc.png)
 
 ## Model file :
 
+The model file is responsible for connecting to the database.
+
 ![MLP 6](https://user-images.githubusercontent.com/96815451/196615143-c7f7116d-9b90-451b-86aa-784d9706106b.png)
 
 ## Controller file :
 
+The controller is responsible for processing. Receive user requirements and extract data from database. to send to users
+
 ![MLP 7](https://user-images.githubusercontent.com/96815451/196615239-8352fefa-594c-48d4-bae4-e01b7ffdbd92.png)
 
 ## Data base :
+
+This is a database that we have created to include information about Vocabulary in the Qur'an
 
 ![MLP 8](https://user-images.githubusercontent.com/96815451/196615301-636a2fc6-a75b-4638-83c6-6a4f40b631e5.png)
 
