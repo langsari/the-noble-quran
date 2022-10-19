@@ -32,29 +32,25 @@ At present, there are very few reliable Thai translation sites of the Quran from
 | REQ_01.1      | Admin CRUD dua from Quran verses | M |
 | REQ_01.2      | Display dua from Quran verses to end-user | M |
 
-## Use case diagram :
+## Design
+
+- Use case diagram :
 
 ![use case](https://user-images.githubusercontent.com/82018181/196589704-78441fd1-8393-4d00-a9c8-d29d0df18276.png)
 
-
-
-## Activity diagram :
+- Activity diagram :
 
 ![activity diagram](https://user-images.githubusercontent.com/82018181/196589716-92a760f5-c206-49ee-b414-b7cf54ea5da4.png)
 
-
-
-## Class diagram :
-
-
+- Class diagram :
 
 ## User interface :
 
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587727-7394f715-e099-466b-8b34-eabc08ffd303.png">
 
-
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
 
+## Development :
 
 ## Running the test :
 
