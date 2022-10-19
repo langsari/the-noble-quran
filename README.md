@@ -55,6 +55,11 @@ So we want to continue this project to make this project more complete and add s
 ![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
 # Import data for show data on website 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
+# view
+- It is the part that must be displayed through the Web Browser, written with the basics of HTML inserted as well. Script PHP or JavaScript according to the syntax of each language used
+- Working relationship with Controller
+- View is a display that brings data from Controller to display, can set Style Sheet and Templates so that all web applications have the same standards.
+ ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
 
 
 # User Interface Disign :
