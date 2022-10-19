@@ -33,14 +33,24 @@ So we want to continue this project to make this project more complete and add s
 | Vs code   |1.72.0     |
 
 # Source Code :
-- routes > web.php 
-![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
 
 - Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
 
+- routes > web.php 
+![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
+
+- modles
+![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
+
+- controller
+![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
+
 - Import data 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
+
+- tajweed page
+![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
 
 
 
@@ -64,8 +74,7 @@ So we want to continue this project to make this project more complete and add s
 ![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
 - Surah page
  ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
-- tajweed page
-![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
+
 
 
 # Database :
