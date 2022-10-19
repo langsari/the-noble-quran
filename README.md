@@ -64,7 +64,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Source Code
 
-//specificwords
+
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 
      
