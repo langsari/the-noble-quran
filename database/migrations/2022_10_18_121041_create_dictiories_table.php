@@ -15,9 +15,9 @@ class CreateDictioriesTable extends Migration
     {
         Schema::create('dictiories', function (Blueprint $table) {
             $table->id();
-            $table->string('vocab',190);
-            $table->string('read',190);
-            $table->string('meaning',190);
+            $table->string('vocab', 190);
+            $table->string('read', 190);
+            $table->string('meaning', 190);
             $table->timestamps();
         });
     }
