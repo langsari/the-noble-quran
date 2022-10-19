@@ -63,6 +63,10 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 ![quran5](https://user-images.githubusercontent.com/96815756/196481581-e1b00988-5803-40a7-a7ca-7e314680bb26.png)
 
 # Source Code
+
+//specificwords
+Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
+
      
 ![quran6](https://user-images.githubusercontent.com/96815756/196483236-a674eb1f-ce3b-4977-b542-d128b6b1f0a1.png)
 
