@@ -46,7 +46,9 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 ## User interface :
 
+image.png
 
+image.png
 
 ## Running the test :
 
