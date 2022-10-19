@@ -140,7 +140,7 @@ public function up()
             $table->timestamps();
         });
     }
-    ```
+ ```
     
 ## Model file :
 
