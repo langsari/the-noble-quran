@@ -42,6 +42,11 @@ The limitation of the function we do is Users can learn the topics of the Quran 
 ## Use Case Diagram :
 
 ## Activity diagram :
+@startuml
+(*)  --> "click ontology button"
+--> "display ontology page"
+--> (*)
+
 
 # Source Code :
 
