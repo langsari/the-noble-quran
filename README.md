@@ -13,7 +13,7 @@ we will talk about the seniors project for devolop , adap. we have to explore th
 The flaw seen in the survey is that there is no proper setting button for translation. We therefore developed a button to change the language to suit the use of the user. 
 # Objective : 
 Reduce the use of the increased area of the translated language. 
--The more languages that are translated, the more that requires more Therefore, we have to develop a button that allows users to select only one language that the user wants. 
+-The more languages that are translated, the more that requires more Therefore, we have to develop a button that allows users to select only one language that the user wants.we will add thai translation and english translation to project.
 # SCOPE Who is your target : 
 -For everyone who wants to visit both Muslims and non-Muslims And For thai  or foreginer user to learn quran.
 # Requirement : 
