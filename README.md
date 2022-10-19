@@ -57,7 +57,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 ```Sequence
     User -> Home page : press spacificwords
     Home page -> Spacificwords page : Show Spacificwords
-    Spacificwords page : Get in Database
+    Spacificwords page -> Database : Get in Database
     Database --> Spacificwords pade : Return Spacificwords 
     Spacificwords page --> User : Display   Spacificword page
  ```
