@@ -196,7 +196,40 @@ public function Tajweed(){
 </body>
 </html>
 
-``
+```
+
+
+
+# Software Method :
+- Use case diagram
+- Activity diagram
+
+# Use case diagram :
+```
+@startuml
+User ->(Show quran text)
+User ->(Read Tajweed) 
+User ->(Listen quran audio) 
+User ->(Show verse Translatetion) 
+User ->(Search surah) 
+
+Admin ->(CRUD Dash bord)
+Admin ->(CRUD Quran text)
+Admin ->(CRUD Staff)
+Admin ->(CRUD Quran Audio)
+@enduml   
+```
+
+
+# Activity Diagram :
+```
+@startuml
+(*)-->"Request tajweed page"
+-->"Get request page "
+-->"Show tajweed page"
+-->(*)
+@enduml
+```
 
 
 # User Interface Disign :
@@ -204,9 +237,9 @@ public function Tajweed(){
 ![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
 - Surah page
  ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
- 
- 
- 
+- Tajweed page
+ ![tajweed page](https://user-images.githubusercontent.com/93647715/196737614-a73b026d-e0d6-4a52-97c2-c36cffe6e740.jpg)
+
 # Database :
 ![data](https://user-images.githubusercontent.com/93647715/196516299-926192fc-a13a-42de-98fe-c28d497b4d9c.jpg)
 
@@ -214,22 +247,6 @@ public function Tajweed(){
 - HTML
 - BLADE
 - PHP
-
-
-# Software Method :
-- Use case diagram
-- Activity diagram
-- Data flow diagram
-
-
-# Use case diagram :
-
-
-# Activity Diagram :
-
-
-# Data flow Diagram :
-
 
 
 # Conclusion :
