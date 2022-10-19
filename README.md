@@ -33,12 +33,18 @@ So we want to continue this project to make this project more complete and add s
 | Vs code   |1.72.0     |
 
 # Source Code :
+- Creat table of function Tajweed
+- routes
+- models
+- controller
+- Import data for show data on website 
 
 - Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
 - Creat routes > web.php 
 ![rout ](https://user-images.githubusercontent.com/93647715/196604792-4f42f1be-1f77-4299-b891-ff2fecf0cf8a.jpg)
-- Creat models for connect with database
+# models 
+- Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
 ![model](https://user-images.githubusercontent.com/93647715/196605162-b56e4417-78c3-44a2-9c31-432b21bc6422.jpg)
 # controller
 - It is the part that runs first when the program is called from the Web Browser.
