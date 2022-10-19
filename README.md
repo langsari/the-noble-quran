@@ -87,7 +87,8 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Source Code
 
-# Route
+## Route
+
 ```php
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
@@ -130,7 +131,8 @@ class CreateSpecificWordsTable extends Migration
 }
 ```
 ## views
-```php
+```html
+
 @extends('quran.navbar')
 
 
@@ -146,6 +148,7 @@ class CreateSpecificWordsTable extends Migration
     <title>specificword</title>
 </head>
 
+    //
 <style>
 
 .t {
