@@ -28,8 +28,8 @@
     <div style = "background-color: #F7F6DC;" class="py-12">
         <div class="container">
             <div class="row">
-                <table style = " font-family: 'Mitr', sans-serif;  " class="table">
-                    <thead>
+                <table style = " font-family: 'Mitr', sans-serif; " class="table">
+                    <thead style = " background-color: #CFFF8D; ">
                         <tr>
                             <th scope="col">ลำดับ</th>
                             <th scope="col">ซูเราะห์ที่</th>
