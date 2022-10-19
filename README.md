@@ -68,5 +68,5 @@ At present, there are very few reliable Thai translation sites of the Quran from
 4. Type php artisan serve in VScode terminal and click the link to enter the Quran.th web page.
 
 ```html
-<?php echo "hello"?>
+<html> <p>hello</p> </html>
 ```
