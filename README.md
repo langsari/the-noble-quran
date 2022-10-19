@@ -1,6 +1,6 @@
 # Quran.th :-
 
-## Introduction :
+> **Introduction :**
 
 The Quran is the holy scriptures or scriptures of Muslims. It is a provision for Muslims. The language of the Quran is Arabic. Perhaps many people who read the Quran do not know that certain words or verses in the Quran can or are dua that every Muslim reads every day. whether it is all the time of prayer, Remembrance of Allah in the morning and evening or various duas.
 That's why our group has added a feature in this project “Quran.th for Thai language” so that everyone can access the dua feature that is a verse of the Quran.
@@ -68,6 +68,9 @@ At present, there are very few reliable Thai translation sites of the Quran from
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
 
 ## Development :
+
+```
+```
 
 ## Test :
 
