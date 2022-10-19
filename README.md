@@ -54,6 +54,7 @@ So we want to continue this project to make this project more complete and add s
  ```   
 # routes :
 - is the part used to store files in the routing (Url) of the Web
+
 ```Route::get('/Tajweed',[QuransController::class,'Tajweed'])->name('Tajweed');```
 # models : 
 - Take care of communication between Object and Database without developers having to deal with the hassle of using SQL commandg.
