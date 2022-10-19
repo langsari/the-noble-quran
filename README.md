@@ -67,8 +67,6 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
 
-<br>
-
 ## Development :
 
 ## Running the test :
