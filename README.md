@@ -134,6 +134,8 @@ class CreateSpecificWordsTable extends Migration
 ```
 ## views
 This code we use html for display specific words from database and we use css to decorate specific words page
+Use loop condition for show all specific words in database 
+
 ```html
 
 @extends('quran.navbar')
@@ -151,9 +153,9 @@ This code we use html for display specific words from database and we use css to
     <title>specificword</title>
 </head>
 
-    //use css for front in decoration
+    
 <style>
-// t is class name of explain_texts
+
 .t {
   background-color: white;
   color: black;
@@ -204,19 +206,15 @@ This code we use html for display specific words from database and we use css to
 <body>
 
 
-//Heading 
+
     <h1 class="title">คำที่ควรสังเกตในอัลกุรอาน</h1>
     
-    //Use lop condition for show all in database 
+    
     @foreach($specific as $row)
-    //Use <p> for show ayat get from database use this link {{$row->text_specific}}
     <div class="ayat"><p>{{$row->text_specific}}</p></div>
-         //Use <p> for show explain get from database use this link {{$row->explain_texts}}
     <p class="t">{{$row->explain_texts}}</p>
-        //Use <p> for show surah name and ayat num get from database use this link {{$row->name_surah}} and {{$row->ayat_num}}
     <p>({{$row->name_surah}} : {{$row->ayat_num}})</p>
        
-    //Use audio controls  for show audio 
       <audio controls >
       <source src="" type="audio/mpeg">
       </audio>
