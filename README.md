@@ -45,12 +45,12 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 
 ## User interface :
+
+<img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587727-7394f715-e099-466b-8b34-eabc08ffd303.png">
+
+
 ![user interface](https://user-images.githubusercontent.com/82018181/196586676-ecfa41fb-f578-45ce-a587-740311ddc95a.png)
 
-
-image.png
-
-image.png
 
 ## Running the test :
 
