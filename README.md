@@ -32,7 +32,7 @@ So we want to continue this project to make this project more complete and add s
 | Laragon   | 5.0.0     |
 | Vs code   |1.72.0     |
 
-#Import files.sql in database
+# Import files.sql in database :
 - Creat table of function Tajweed
 ![creat data](https://user-images.githubusercontent.com/93647715/196603607-51fed63f-49e3-48ef-ac28-5496d222d36b.jpg)
 
