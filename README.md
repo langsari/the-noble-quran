@@ -67,7 +67,7 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 
 # Class Diagram
 
-```mermaid
+```
    Class Diagram
        Spacificwords : - int id
        Spacificwords : + string name_surah
