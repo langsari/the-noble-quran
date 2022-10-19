@@ -164,8 +164,14 @@ class dictiory extends Model
 
 The controller is responsible for processing. Receive user requirements and extract data from database. to send to users
 
-![MLP 7](https://user-images.githubusercontent.com/96815451/196615239-8352fefa-594c-48d4-bae4-e01b7ffdbd92.png)
-
+```php
+public function dictionary()
+    {
+        $dictionary = dictiory::all();
+        return view('enduser.Azkars', compact('dictionary'));
+    }
+ ```
+ 
 ## Data base :
 
 This is a database that we have created to include information about Vocabulary in the Qur'an
