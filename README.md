@@ -15,8 +15,7 @@ The flaw seen in the survey is that there is no proper setting button for transl
 Reduce the use of the increased area of the translated language. 
 -The more languages that are translated, the more that requires more Therefore, we have to develop a button that allows users to select only one language that the user wants. 
 # SCOPE Who is your target : 
--For everyone who wants to visit both Muslims and non-Muslims 
--For thai user or foreginer to learn quran
+-For everyone who wants to visit both Muslims and non-Muslims And For thai  or foreginer user to learn quran.
 # Requirement : 
 We want to create a translation and explanation that best matches the text of the Qur'an. and the appropriate setting button and the function that is more attractive.
 
