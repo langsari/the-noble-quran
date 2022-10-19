@@ -112,7 +112,8 @@ We have used bootstrap to create a table and retrieve the data from the database
             </tbody>
           </table>
       </div>
-  </div>```
+  </div>
+  ```
 
 ## Route :
 
