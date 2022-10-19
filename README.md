@@ -146,7 +146,19 @@ public function up()
 
 The model file is responsible for connecting to the database.
 
-![MLP 6](https://user-images.githubusercontent.com/96815451/196615143-c7f7116d-9b90-451b-86aa-784d9706106b.png)
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class dictiory extends Model
+{
+    use HasFactory;
+}
+```
 
 ## Controller file :
 
