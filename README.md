@@ -93,7 +93,7 @@ This code use for connecting bitween database and view
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
 ## migrations
-
+This code use for create SpecificWords table in database
 ```php
 <?php
 
@@ -133,6 +133,7 @@ class CreateSpecificWordsTable extends Migration
 }
 ```
 ## views
+This code we use html for display specific words in database and we use css to decorate specific words page
 ```html
 
 @extends('quran.navbar')
