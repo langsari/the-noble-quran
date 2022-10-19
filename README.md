@@ -65,10 +65,47 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Source Code
 
 # Route
-```php
+```
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
+## migrations
+```
+<?php
 
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateSpecificWordsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('specific_words', function (Blueprint $table) {
+            $table->id();
+            $table->string('name_surah');
+            $table->integer('ayat_num');
+            $table->string('text_specific');
+            $table->string('explain_texts');
+            
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('specific_words');
+    }
+}
+```
 
 # Result
 ![quran3](https://user-images.githubusercontent.com/96815756/196480431-e71bf892-c82a-4a18-b77c-3c1ab1bcecd1.png)
