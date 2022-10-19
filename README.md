@@ -24,7 +24,14 @@ We want to create a translation and explanation that best matches the text of th
 # Constraints : 
 The current limitation is There is not enough information and knowledge to solve the problems encountered and to add functions that are not fully as planned. But we will continue to develop to achieve the goal.
 
-#Activity diagram : 
+
+# Software Requirement : 
+| Software  | Version   |
+|---------  |---------  |
+| Laravel   |  8.1      |
+| php       | 7.4.19    |
+| Laragon   | 5.0.0     |
+| Vs code   |1.72.0     |
 
 
 
@@ -145,4 +152,7 @@ We use orange theme because make people feel alert and not lazy . and one the mo
 ![309445721_677454160465277_5276363645776308690_n](https://user-images.githubusercontent.com/96861429/196705217-49ce8dad-e068-4c28-9279-ece3b255f521.jpg)
 ![308438527_3292150181072492_6022515477244370567_n](https://user-images.githubusercontent.com/96861429/196705234-af3ffddf-cabc-4654-a5ff-9b2254d8613b.jpg)
 icon for using function change languages
+
+
+
 
