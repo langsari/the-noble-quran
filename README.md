@@ -54,6 +54,24 @@ A use case diagram is a visual representation of how users interact with the var
 
 ### Reset password & Vocab in quran
 
+@startuml
+User ->(Show quran text)
+User ->(Read vocab) 
+User ->(Listen quran audio) 
+User ->(Show verse thai Translate) 
+User ->(Search surah) 
+
+visitor->(Show quran text)
+visitor->(Listen quran audio)
+visitor->(Show verse thai Translate)
+visitor->(Search surah)
+
+Admin ->(CRUD Dash bord)
+Admin ->(CRUD Quran text)
+Admin ->(CRUD Staff)
+Admin ->(CRUD Quran Audio)
+@enduml 
+
 
 ## Flowchart :
 A data flow diagram demonstrates the path that information takes through a system or process. It contains the numerous subprocesses the data flows through, data inputs and outputs, and data stores.
@@ -104,6 +122,28 @@ Activity diagrams are a method for describing work flow, business processes, and
 Class diagrams are the blueprints of your system or subsystem. We can use class diagrams to model the objects that make up the system, to display the relationships between the objects, and to describe what those objects do and the services that they provide.
 
 ### Reset password 
+
+```Reset password
+classDiagram
+      Actor <|-- User
+      Actor <|-- Data base
+      Actor <|-- Admin
+
+      class User{
+          +Name
+          -Email()
+          -Password()
+      }
+      class Data base{
+          -Keep data for user
+          -Keep user account()
+      }
+      class Admin{
+          -System administrator()
+          -Can add more funtion()
+          
+      }
+```
 
 
 ### Vocab in quran
