@@ -25,12 +25,23 @@ At present, there are very few reliable Thai translation sites of the Quran from
 - D - Desirable requirement (what the system preferably should do)
 - O - Optional requirement (what the system may do)
 
-
 | Requirements ID | Requirement Description | Priority |
 | ------------- | ------------- | -------- |
 | REQ_01        | Dua from Quran verses    |          |
 | REQ_01.1      | Admin CRUD dua from Quran verses | M |
 | REQ_01.2      | Display dua from Quran verses to end-user | M |
+
+<br>
+
+> Software requirement
+ 
+| Software  | Version  |
+|---------  |--------- |
+| Laravel   | 8.1      |
+| php       | 7.4.19   |
+| Vs code   | 1.72     |
+| Laragon   | 5.0.0    |
+| Composer  | 2.4.0    |   
 
 ## Design :
 
@@ -64,8 +75,8 @@ At present, there are very few reliable Thai translation sites of the Quran from
 
 1. Open Laragon and click on start button.
 2. Click on database for open phpmyadmin and create database then import database file.
-3. Open VScode and open project folder on it.
-4. Type php artisan serve in VScode terminal and click the link to enter the Quran.th web page.
+3. Open VS code and open project folder on it.
+4. Type php artisan serve in VS code terminal and click the link to enter the Quran.th web page.
 
 ```
 ```
