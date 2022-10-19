@@ -44,7 +44,7 @@ The limitation of the password reset function that we have done is Let users acc
 # Software Method :
 
 - Use Case Diagram 
-- Data Flow Diagram
+- Flowchart 
 - Activity diagram
 - Class Diagram
 
@@ -52,27 +52,55 @@ The limitation of the password reset function that we have done is Let users acc
 ## Use Case Diagram :
 A use case diagram is a visual representation of how users interact with the various systems that make up a larger system. The main goal of designing a use case diagram is to fully describe the system's functionality and to solicit user requests. This is regarded as where system analysis and design should begin.
 
-![image](https://user-images.githubusercontent.com/96815487/196363262-c7f6abba-1ef9-4c3d-90eb-cf8ebd4ce107.png)
-
-![Screenshot 2022-10-19 013002](https://user-images.githubusercontent.com/96815451/196642941-0b7024f1-ddbf-4c9b-a168-6aed8fc8b132.png)
+### Reset password & Vocab in quran
 
 
-## Data Flow Diagram :
+## Flowchart :
 A data flow diagram demonstrates the path that information takes through a system or process. It contains the numerous subprocesses the data flows through, data inputs and outputs, and data stores.
 
-![image](https://user-images.githubusercontent.com/96815487/196363323-4a0fb2f9-4e2e-4ebc-9d7d-96c6a4238afc.png)
+### Reset password 
 
+
+### Vocab in quran
+```mermaid
+dictionary
+A[Round edge] -->B(Hard edge)
+    B --> Buttom{Decision}
+    C -->|No|  A[Round edge]
+    C -->|Yes| E[Vocab page]
+```
 
 ## Activity diagram :
 Activity diagrams are a method for describing work flow, business processes, and procedural logic. They serve a similar purpose to flowcharts in many aspects, but the main distinction between the two is that they permit parallel behavior.
 
-![image](https://user-images.githubusercontent.com/96815487/196363416-5467a766-a7a7-47cd-b427-e7dbaa662fc2.png)
+### Reset password 
 
+
+### Vocab in quran
+@startuml
+(*)-->"Request Vocab page"
+-->"Get request page "
+-->"Show Vocab page"
+-->(*)
+@enduml
 
 ## Class Diagram :
 Class diagrams are the blueprints of your system or subsystem. We can use class diagrams to model the objects that make up the system, to display the relationships between the objects, and to describe what those objects do and the services that they provide.
 
-![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
+### Reset password 
+
+
+### Vocab in quran
+```mermaid
+classDiagram
+        dictionary: +int id
+        dictionary: +String vocab
+        dictionary: +String read
+        dictionary: +String meaning
+	 	dictionary: +String meaning
+		dictionary: Show()
+      }
+```
 
 # Source code :
 
