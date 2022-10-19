@@ -118,6 +118,7 @@ form.top{
 }
 
 description
+.
 Create an if else statement to create a condition for the switch, and the switch will select the condition that we selected from the if else statement.
 In the switch, there is a break statement so that the selected condition will run and other conditions will not work until the user selects that condition.
 
