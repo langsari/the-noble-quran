@@ -54,13 +54,14 @@ So we want to continue this project to make this project more complete and add s
 ![contro](https://user-images.githubusercontent.com/93647715/196605329-cc137490-bd40-4939-8673-6ff829713e98.jpg)
 # Import data for show data on website 
 ![import data](https://user-images.githubusercontent.com/93647715/196604336-c25ec54d-9802-40ba-951a-28e8c0388f30.jpg)
-- tajweed page
-![taj](https://user-images.githubusercontent.com/93647715/196563980-0efa2a37-2ca9-46a0-af1c-f4f7d6d17cc1.jpg)
+
 
 # User Interface Disign :
 - Home page
 ![page](https://user-images.githubusercontent.com/93647715/196515802-f9a76462-e0a4-4a29-8ebc-cf19a008420b.jpg)
 - Surah page
+ ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
+ - Surah page
  ![Surah page](https://user-images.githubusercontent.com/93647715/196515925-b84d523c-3682-4010-8f00-07b2c1ae9e02.jpg)
  
  
@@ -84,6 +85,8 @@ So we want to continue this project to make this project more complete and add s
 
 # Activity Diagram :
 ![activity diagram drawio](https://user-images.githubusercontent.com/93647715/196412715-68f982f1-4abc-4688-b196-e05b79bde29e.png)
+
+
 
 # Data flow Diagram :
 ![Data](https://user-images.githubusercontent.com/93647715/196413804-54249478-6429-49d8-b4a1-4b2826809a46.png)
