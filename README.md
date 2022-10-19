@@ -92,7 +92,7 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 
 
 ### Vocab in quran
-```mermaid
+```
 classDiagram
         dictionary: +int id
         dictionary: +String vocab
