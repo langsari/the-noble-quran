@@ -62,7 +62,7 @@ A data flow diagram demonstrates the path that information takes through a syste
 
 
 ### Vocab in quran
-```mermaid
+```
 dictionary
 A[Round edge] -->B(Hard edge)
     B --> Buttom{Decision}
