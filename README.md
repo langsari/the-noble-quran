@@ -52,7 +52,7 @@ The limitation of the password reset function that we have done is Let users acc
 ## Use Case Diagram :
 A use case diagram is a visual representation of how users interact with the various systems that make up a larger system. The main goal of designing a use case diagram is to fully describe the system's functionality and to solicit user requests. This is regarded as where system analysis and design should begin.
 
-### Reset password & Vocab in quran
+##### Reset password & Vocab in quran
 
 @startuml
 User ->(Show quran text)
@@ -76,7 +76,7 @@ Admin ->(CRUD Quran Audio)
 ## Flowchart :
 A data flow diagram demonstrates the path that information takes through a system or process. It contains the numerous subprocesses the data flows through, data inputs and outputs, and data stores.
 
-### Reset password 
+##### Reset password 
 
 ```
 reset password 
@@ -86,7 +86,7 @@ A[Round edge] -->B(Hard edge)
     C -->|Yes| E[Reset password page]
 ```
 
-### Vocab in quran
+##### Vocab in quran
 ```
 dictionary
 A[Round edge] -->B(Hard edge)
@@ -99,7 +99,7 @@ A[Round edge] -->B(Hard edge)
 ## Activity diagram :
 Activity diagrams are a method for describing work flow, business processes, and procedural logic. They serve a similar purpose to flowcharts in many aspects, but the main distinction between the two is that they permit parallel behavior.
 
-### Reset password 
+##### Reset password 
 
 @startuml
 (*)-->"Request Reset password"
@@ -109,8 +109,8 @@ Activity diagrams are a method for describing work flow, business processes, and
 -->(*)
 @enduml
 
+##### Vocab in quran
 
-### Vocab in quran
 @startuml
 (*)-->"Request Vocab page"
 -->"Get request page "
@@ -121,7 +121,7 @@ Activity diagrams are a method for describing work flow, business processes, and
 ## Class Diagram :
 Class diagrams are the blueprints of your system or subsystem. We can use class diagrams to model the objects that make up the system, to display the relationships between the objects, and to describe what those objects do and the services that they provide.
 
-### Reset password 
+##### Reset password 
 
 ```Reset password
 classDiagram
@@ -145,8 +145,8 @@ classDiagram
       }
 ```
 
+##### Vocab in quran
 
-### Vocab in quran
 ```
 classDiagram
         dictionary: +int id
