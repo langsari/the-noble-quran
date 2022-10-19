@@ -74,12 +74,10 @@ Class diagrams are the blueprints of your system or subsystem. We can use class 
 ![image](https://user-images.githubusercontent.com/96815487/196363500-7fdf9f1b-40cb-42bb-ac4f-5e7129ebfb33.png)
 
 
-
-
 # User Interface Design :
 : Homepage 
 
-![MLP 1](https://user-images.githubusercontent.com/96815451/196612650-879ea579-ec64-42cd-9a7a-55179d7b67f2.png)
+![MLP 1](https://user-images.githubusercontent.com/96815451/196613074-e5aed631-25c9-4b02-bf09-597f29c7fc27.png)
 
 : Login Page 
 
