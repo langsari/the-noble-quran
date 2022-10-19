@@ -41,7 +41,8 @@ So we want to continue this project to make this project more complete and add s
 - view
 
 # Creat table of function Tajweed :
-```public function up()
+```php
+public function up()
     {
         Schema::create('tajweeds', function (Blueprint $table) {
             $table->id();
