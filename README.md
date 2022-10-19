@@ -65,11 +65,11 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 # Source Code
 
 # Route
-```
+```Route
 Route::get('/specificwords',[QuransController::class, 'specificwords'])->name('specificwords');
 ```
 ## migrations
-```
+```migrations
 <?php
 
 use Illuminate\Database\Migrations\Migration;
