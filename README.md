@@ -88,7 +88,7 @@ Endif
 
 1- Open terminal and go to folder the-noble-quran and run command
 ```terminal
-    php artisan make:model -Dua -migration
+    $php artisan make:model Dua -migration
 ```
 This command will create 2 files which are 
  - Dua.php in app\Models folder which is file for connect to table on database
@@ -140,7 +140,7 @@ class CreateDuasTable extends Migration
 
 3- Open terminal and go to folder the-noble-quran and run command
 ```terminal
-    php artisan migration
+    $php artisan migrate
 ```
 This command will migrate our table and column that have been create and will appear on phpMyAdmin <br>
 >*note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back*
@@ -329,4 +329,7 @@ At resource\view\quran create dua page and put the code to display page and also
 1. Download zip file and extract to folder 'www' on laragon or 'htdocs' on xxamp or clone it.
 2. Run laragon or xxamp and go to phpMyAdmin and create database name laravel then import file laravel.sql.
 3. open code editor and open .env.config file then set database connection to match yours then rename file to .env
-4. open terminal and run commadn $php artisan serve and click the link to enter the Quran.th web page.
+4. open terminal and run command then click the link to enter the Quran.th web page.
+```terminal
+    $php artisan serve
+```
