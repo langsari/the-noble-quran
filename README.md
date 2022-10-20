@@ -1,4 +1,4 @@
-                                                                         # **Quran.th :-**
+# **Quran.th :-**
 
 ## Introduction :
 
