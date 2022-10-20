@@ -1,6 +1,6 @@
-# Quran.th :-
+                                                                         # **Quran.th :-**
 
-> **Introduction :**
+## Introduction :
 
 The Quran is the holy scriptures or scriptures of Muslims. It is a provision for Muslims. The language of the Quran is Arabic. Perhaps many people who read the Quran do not know that certain words or verses in the Quran can or are dua that every Muslim reads every day. whether it is all the time of prayer, Remembrance of Allah in the morning and evening or various duas.
 That's why our group has added a feature in this project “Quran.th for Thai language” so that everyone can access the dua feature that is a verse of the Quran.
@@ -143,7 +143,7 @@ class CreateDuasTable extends Migration
     php artisan migration
 ```
 This command will migrate our table and column that have been create and will appear on phpMyAdmin <br>
->note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back
+>*note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back*
 
 <br>
 
@@ -313,24 +313,21 @@ At resource\view\quran create dua page and put the code to display page and also
 
 
 
-> **User interface :**
+## Result
 
+>hompage
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587727-7394f715-e099-466b-8b34-eabc08ffd303.png">
+<br>
 
+>Dua page
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
 
-## Development :
+<br>
 
-```
-
-```
-
-## Test :
+## How to run this project :
 
 1. Open Laragon and click on start button.
 2. Click on database for open phpmyadmin and create database then import database file.
 3. Open VS code and open project folder on it.
 4. Type php artisan serve in VS code terminal and click the link to enter the Quran.th web page.
 
-```
-```
