@@ -82,7 +82,7 @@ Endif
 
 <br>
 
-## Development && Source code
+## Development
 
 ### Database :
 
