@@ -326,7 +326,7 @@ At resource\view\quran create dua page and put the code to display page and also
 
 ## How to run this project :
 
-1. Download zip file and extract to folder 'www' on laragon or 'htdocs' on xxamp.
+1. Download zip file and extract to folder 'www' on laragon or 'htdocs' on xxamp or clone it.
 2. Run laragon or xxamp and go to phpMyAdmin and create database name laravel then import file laravel.sql.
 3. open code editor and open .env.config file then set database connection to match yours then rename file to .env
 4. open terminal and run commadn $php artisan serve and click the link to enter the Quran.th web page.
