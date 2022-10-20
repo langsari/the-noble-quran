@@ -41,16 +41,15 @@ Many people who read the Qur'an also distort some of the words in a specific ver
 * Class Diagram
 
 # Activity diagram
+``` 
 @startuml
-
 (*) --> " Click spacificword page"
 (*) --> " Query all spacificword in database "
 (*) --> " Get all spacificword in databas"
 (*) --> " Display  spacificword "
  --> (*)
- 
 @enduml
-
+``` 
 
 
 # Sequence diagram
