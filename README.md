@@ -82,7 +82,7 @@ Endif
 
 <br>
 
-## Development
+## Development :
 
 ### Database :
 
@@ -315,11 +315,12 @@ At resource\view\quran create dua page and put the code to display page and also
 
 ## Result
 
->hompage
+> Hompage
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587727-7394f715-e099-466b-8b34-eabc08ffd303.png">
+
 <br>
 
->Dua page
+> Dua page
 <img width="1266" alt="image" src="https://user-images.githubusercontent.com/95903407/196587898-3d2d19e4-7176-4f30-ab77-85fdfd314f7e.png">
 
 <br>
