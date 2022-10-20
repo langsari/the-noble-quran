@@ -40,12 +40,19 @@ The purpose of developing and adding this function comes from I can see the chan
 
 # USER INTERFACE DIAGRAM
 Homepage-
+Source Code :
+-add Tafsser imam and drobdown
+![image](https://user-images.githubusercontent.com/109578693/196898080-a28ebe3d-1ad2-473c-9fb9-bc3555979feb.png)
+
 
 ![image](https://user-images.githubusercontent.com/109578693/196589091-aedbeb79-1330-4509-a2cc-4530e3e53bf9.png)
-
+History code 
+![image](https://user-images.githubusercontent.com/109578693/196898905-17fc3dee-6e9e-45f6-8bd3-e5750ea54a24.png)
 History-
 
 ![image](https://user-images.githubusercontent.com/109578693/196589126-68057134-7380-4d27-80c9-c7b75f4d174a.png)
+Source Code
+![image](https://user-images.githubusercontent.com/109578693/196899201-a501fa1f-a64f-4757-8a44-8772c7efc176.png)
 
 Dark/lighting mode-
 
