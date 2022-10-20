@@ -62,7 +62,11 @@ Dark/lighting mode-
 Audio functions-
 
 ![image](https://user-images.githubusercontent.com/109578693/196589209-5b2db842-e058-4b40-8a93-155394036a09.png)
+
+
 ![image](https://user-images.githubusercontent.com/109578693/196589224-3375adbc-d6fa-4e38-9b1b-1d6151566dfa.png)
+
+
 ![image](https://user-images.githubusercontent.com/109578693/196589248-1a7b4ce9-47bb-4fa1-be6d-76cff697c215.png)
 
 # CONCLUSION ;
