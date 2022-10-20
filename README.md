@@ -84,8 +84,9 @@ Endif
 
 ## Development && Source code
 
-> Database
-Open terminal and go to folder the-noble-quran and run command
+#### Database :
+
+1- Open terminal and go to folder the-noble-quran and run command
 ```terminal
     php artisan make:model -Dua -migration
 ```
@@ -95,7 +96,7 @@ This command will create 2 files which are
 
 <br>
 
-At create_duas_table in database\migrations folder create column
+2- At create_duas_table in database\migrations folder create column
 ```php
 <?php
 
@@ -137,7 +138,7 @@ class CreateDuasTable extends Migration
 
 <br>
 
-Open terminal and go to folder the-noble-quran and run command
+3- Open terminal and go to folder the-noble-quran and run command
 ```terminal
     php artisan migration
 ```
@@ -146,7 +147,7 @@ note: there is problem on this step which is it show error that the name dua mig
 
 <br>
 
-insert data to laravel.sql or insert on phpMyAdmin
+4- insert data to laravel.sql or insert on phpMyAdmin
 ```sql
 INSERT INTO `duas` (`id`, `surah_num`, `surah_name`, `ayat_num`, `ayat_text`, `ayat_meaning`) VALUES
 (1, 2, 'อัลบะเกาะเราะฮฺ', 127, 'رَبَّنَا تَقَبَّلۡ مِنَّآۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلۡعَلِيمُ', '“พระผู้อภิบาลของเรา โปรดรับการงานของพวกเรา แน่นอนท่านนั้นได้ยิน และรู้ดียิ่ง”\r\n'),
@@ -206,11 +207,10 @@ INSERT INTO `duas` (`id`, `surah_num`, `surah_name`, `ayat_num`, `ayat_text`, `a
 (55, 26, 'อัชชุอะรออฺ', 78, 'ٱلَّذِي خَلَقَنِي فَهُوَ يَهۡدِ\r\nوَٱلَّذِي هُوَ يُطۡعِمُنِي وَيَسۡقِينِ\r\nوَإِذَا مَرِضۡتُ فَهُوَ يَشۡفِينِ\r\nوَٱلَّذِي يُمِيتُنِي ثُمَّ يُحۡيِ\r\nوَٱلَّذِيٓ أَطۡمَعُ أَن يَغۡفِرَ لِي خَطِيٓ‍َٔتِي يَوۡمَ ٱلدِّ\r\nرَبِّ هَبۡ لِي حُكۡمٗا وَأَلۡحِقۡنِي بِٱلصَّٰلِحِينَ\r\nوَٱجۡعَل لِّي لِسَانَ صِدۡقٖ فِي ٱلۡأٓخِرِينَ\r\nوَٱجۡعَلۡنِي مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ', '“ซึ่งพระองค์ทรงสร้างฉัน แล้วพระองค์ทรงชี้แนะทางแก่ฉัน \r\nและพระองค์ทรงประทานอาหารให้ฉันและทรงให้น้ำดื่มแก่ฉัน\r\nและเมื่อฉันป่วย ดังนั้นพระองค์ทรงให้ฉันหายป่วย\r\nและผู้ทรงให้ฉันตายแล้วทรงให้ฉันมีชีวิต\r\nและผู้ที่ฉันหวังว่า จะทรงอภัยแก่ฉันซึ่งความผิดพลาดในวันแห่งการตอบแทน\r\nข้าแต่พระเจ้าของฉัน! ขอพระองค์ทรงประทานความรู้และทรงให้ฉันอยู่รวมกับหมู่คนดีทั้งหลาย\r\nและทรงทำให้ฉันได้รับการรำลึกอย่างดีในหมู่ชนรุ่นต่อ ๆ ไป\r\nและทรงทำให้ฉันอยู่ในหมู่ผู้รับมรดกแห่งสวนสวรรค์อันร่มรื่น”');
 
 ```
-This command will migrate our table and column that have been create and will appear on phpMyAdmin
 
 <br>
 
-> Route
+#### Route
 At web.php file in route folder add the path of dua page which is url and also add fuchtion controller and call class dua and specify the path of it throug command use
 ```php
     use App\Http\Controllers\QuransController;
@@ -221,7 +221,7 @@ At web.php file in route folder add the path of dua page which is url and also a
 <br>
 
 
-> Controller
+#### Controller
 At Http\QuransController.php file in controller folder specify path of model Dua.php and create function dua and call data from database
 ```php
     use App\Models\Dua;
@@ -235,7 +235,7 @@ At Http\QuransController.php file in controller folder specify path of model Dua
 
 <br>
 
->View
+#### View
 At resource\view\quran\nav.blade.php at menu on navber and link to /dua route
 ```php
   <a href="{{ route('dua')}}">ดูอา</a>
