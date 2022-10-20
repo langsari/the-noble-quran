@@ -63,8 +63,10 @@ Audio functions-
 
 ![image](https://user-images.githubusercontent.com/109578693/196589209-5b2db842-e058-4b40-8a93-155394036a09.png)
 
+![image](https://user-images.githubusercontent.com/109578693/196900551-964beb7f-a0bf-43ea-ac87-36e26da5159d.png)
 
 ![image](https://user-images.githubusercontent.com/109578693/196589224-3375adbc-d6fa-4e38-9b1b-1d6151566dfa.png)
+![image](https://user-images.githubusercontent.com/109578693/196900625-76c57ca7-51c7-4222-8aa1-bfc7f6f59a35.png)
 
 
 ![image](https://user-images.githubusercontent.com/109578693/196589248-1a7b4ce9-47bb-4fa1-be6d-76cff697c215.png)
