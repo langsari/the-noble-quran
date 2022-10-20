@@ -143,7 +143,7 @@ class CreateDuasTable extends Migration
     php artisan migration
 ```
 This command will migrate our table and column that have been create and will appear on phpMyAdmin <br>
-note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files and run this command then paste all migration files back
+note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back
 
 <br>
 
