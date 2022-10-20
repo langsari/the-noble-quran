@@ -84,7 +84,7 @@ Endif
 
 ## Development && Source code
 
-#### Database :
+### Database :
 
 1- Open terminal and go to folder the-noble-quran and run command
 ```terminal
