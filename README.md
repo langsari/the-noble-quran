@@ -96,7 +96,7 @@ This command will create 2 files which are
 
 <br>
 
-2- At create_duas_table in database\migrations folder create column
+2- At create_duas_table.php file in database\migrations folder create column
 ```php
 <?php
 
@@ -326,8 +326,7 @@ At resource\view\quran create dua page and put the code to display page and also
 
 ## How to run this project :
 
-1. Open Laragon and click on start button.
-2. Click on database for open phpmyadmin and create database then import database file.
-3. Open VS code and open project folder on it.
-4. Type php artisan serve in VS code terminal and click the link to enter the Quran.th web page.
-
+1. Download zip file and extract to folder 'www' on laragon or 'htdocs' on xxamp.
+2. Run laragon or xxamp and go to phpMyAdmin and create database name laravel then import file laravel.sql.
+3. open code editor and open .env.config file then set database connection to match yours then rename file to .env
+4. open terminal and run commadn $php artisan serve and click the link to enter the Quran.th web page.
