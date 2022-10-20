@@ -91,7 +91,7 @@ Endif
     php artisan make:model -Dua -migration
 ```
 This command will create 2 files which are 
- - Dua.php in app\Models foleder which is files for connect to table on database
+ - Dua.php in app\Models folder which is file for connect to table on database
  - create_duas_table in database\migrations folder which is create table and allow to up or down column
 
 <br>
@@ -143,7 +143,7 @@ class CreateDuasTable extends Migration
     php artisan migration
 ```
 This command will migrate our table and column that have been create and will appear on phpMyAdmin <br>
-note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back
+>note: there is problem on this step which is it show error that the name dua migration file is have take to another migration file, so the solve is I have to copy all migration files then delete all files and run this command then paste all migration files back
 
 <br>
 
@@ -243,7 +243,7 @@ At resource\view\quran\nav.blade.php at menu on navber and link to /dua route
 
 <br>
 
-At resource\view\quran create dua page and put the code to display page and all so call database via function dua that have been create on QuransController
+At resource\view\quran create dua page and put the code to display page and also call database via function dua that have been create on QuransController
 ```html
 @extends('quran.navbar')
 @section('content')
