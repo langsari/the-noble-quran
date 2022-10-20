@@ -210,7 +210,7 @@ INSERT INTO `duas` (`id`, `surah_num`, `surah_name`, `ayat_num`, `ayat_text`, `a
 
 <br>
 
-#### Route
+### Route
 At web.php file in route folder add the path of dua page which is url and also add fuchtion controller and call class dua and specify the path of it throug command use
 ```php
     use App\Http\Controllers\QuransController;
@@ -221,7 +221,7 @@ At web.php file in route folder add the path of dua page which is url and also a
 <br>
 
 
-#### Controller
+### Controller
 At Http\QuransController.php file in controller folder specify path of model Dua.php and create function dua and call data from database
 ```php
     use App\Models\Dua;
@@ -235,7 +235,7 @@ At Http\QuransController.php file in controller folder specify path of model Dua
 
 <br>
 
-#### View
+### View
 At resource\view\quran\nav.blade.php at menu on navber and link to /dua route
 ```php
   <a href="{{ route('dua')}}">ดูอา</a>
