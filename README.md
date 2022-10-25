@@ -86,8 +86,11 @@ sigh in Page->User: sigh in
  ```
  
  
- ```@font-face {
- ``` font-family:'Uthmani' ;
+ ```
+ @font-face {
+ 
+ ``` 
+ font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
 ```
@@ -374,8 +377,11 @@ body {
 ## views
 
 
-```<body>
-```<div class="topnav fixed-top ">
+```
+<body>
+```
+<div class="topnav fixed-top ">
+    
 ```
 <a class="active" href="<?php echo e(route('homepage')); ?>">Quran.th</a>
   <a href="<?php echo e(route('tafseer_home')); ?>">ตัฟซีร</a>
