@@ -86,7 +86,9 @@ sigh in Page->User: sigh in
     
  ## Navbar
  ```
+ ```
  @font-face {
+ ```
   font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
@@ -100,7 +102,8 @@ sigh in Page->User: sigh in
    margin: 0;
 }
 ```
-.latin{
+```
+.latin{ ```
   font-family:  serif;
   font-size: 17px;
   font-weight: normal;
