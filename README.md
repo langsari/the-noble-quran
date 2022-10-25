@@ -233,7 +233,7 @@ sigh in Page->User: sigh in
     background-color:#e29bb1;
     color: white;
   }.text {
-    ```
+   
     color: white;
     font-size: 10vw; 
     font-weight: bold;
