@@ -90,6 +90,7 @@ sigh in Page->User: sigh in
   font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
+```
 .arabic{
    font-family: 'Uthmani', serif;
    font-size: 23px;
@@ -98,6 +99,7 @@ sigh in Page->User: sigh in
    padding: 0 5px;
    margin: 0;
 }
+```
 .latin{
   font-family:  serif;
   font-size: 17px;
@@ -106,10 +108,12 @@ sigh in Page->User: sigh in
   padding: 0;
   margin: 0;
 }
+```
 .arabic_number {
   font-size: 28px;
   font-weight: normal;
 }
+```
   .cautions {
   
   font-size: 13px;
@@ -120,12 +124,14 @@ sigh in Page->User: sigh in
   color: red;
 
 }
+```
 .foot {
   text-align: center;
   padding: 3px;
   background-color:#e29bb1 ;
   color: white;
   }
+  ```
 .open-button {
   background-color:#86DCEC ;
   color: #F2F5F5;
@@ -138,6 +144,7 @@ sigh in Page->User: sigh in
   right: 20px;
   width: 60px;
 }
+```
 .open-button2 {
   background-color: #E473A1;
   color: #F2F5F5;
@@ -150,6 +157,7 @@ sigh in Page->User: sigh in
   right: 20px;
   width: 100px;
 }
+```
 .open-button3 {
   background-color: #e29bb1;
   color: #F2F5F5;
@@ -162,6 +170,7 @@ sigh in Page->User: sigh in
   right: 20px;
   width: 100px;
 }
+```
 .open-button4 {
   background-color: #e29bb1;
   color: #F2F5F5;
@@ -175,6 +184,7 @@ sigh in Page->User: sigh in
   margin: 4px 2px;
   cursor: pointer;
 }
+```
 .open-button5 {
   background-color:#86DCEC ;
   color: #F2F5F5;
@@ -187,8 +197,7 @@ sigh in Page->User: sigh in
   right: 20px;
   width: 100px;
 }
-
-
+```
 
 .latin2{
   font-family:  serif;
@@ -198,12 +207,13 @@ sigh in Page->User: sigh in
   padding: 0;
   margin: 0;
 }
+```
  .arabic_number {
    font-size: 28px;
    font-weight: normal;
    
 }
-
+```
 .footer {
     text-align: center;
     padding: 3px;
@@ -216,25 +226,25 @@ sigh in Page->User: sigh in
     font-weight: bold;
     text-align: center;
   }
-
+   ```
   .header-dark {
     background-color:#e29bb1;
     background-size:cover;
     padding-bottom:80px;
   }
-
+  ```
 * {box-sizing: border-box;}
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+```
 .topnav {
   overflow: hidden;
   background-color:#e29bb1;
 }
-
+```
 .topnav a {
   float: left;
   display: block;
@@ -244,28 +254,28 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
+```
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
+```
 .topnav a.active {
   background-color:#e29bb1;
   color: white;
 }
-
+```
 .topnav .search-container {
   float: right;
 }
-
+```
 .topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
-
+```
 .topnav .search-container button {
   float: right;
   padding: 6px;
@@ -276,11 +286,11 @@ body {
   border: none;
   cursor: pointer;
 }
-
+```
 .topnav .search-container button:hover {
   background: #ccc;
 }
-
+```
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
@@ -302,7 +312,7 @@ body {
       max-width: 800px;
       margin: 30px auto;
   }
-
+  ```
 
 
 .modal-body {
@@ -319,7 +329,7 @@ body {
   color:#fff;
   opacity:1;
 }
-
+```
 .bs-example{
   margin: 20px;
 }
