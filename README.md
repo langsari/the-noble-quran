@@ -88,12 +88,11 @@ sigh in Page->User: sigh in
  ```
  ```
  @font-face {
- ```
-  font-family:'Uthmani' ;
+ ``` font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
 ```
-.arabic{
+```.arabic{
    font-family: 'Uthmani', serif;
    font-size: 23px;
    font-weight: normal;
@@ -102,8 +101,7 @@ sigh in Page->User: sigh in
    margin: 0;
 }
 ```
-```
-.latin{ ```
+```.latin{
   font-family:  serif;
   font-size: 17px;
   font-weight: normal;
@@ -112,7 +110,7 @@ sigh in Page->User: sigh in
   margin: 0;
 }
 ```
-.arabic_number {
+```.arabic_number {
   font-size: 28px;
   font-weight: normal;
 }
