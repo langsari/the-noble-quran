@@ -115,7 +115,8 @@ sigh in Page->User: sigh in
   font-weight: normal;
 }
 ```
-  .cautions {
+```
+.cautions {
   
   font-size: 13px;
   font-weight: normal;
@@ -126,12 +127,14 @@ sigh in Page->User: sigh in
 
 }
 ```
+```
 .foot {
   text-align: center;
   padding: 3px;
   background-color:#e29bb1 ;
   color: white;
   }
+  ```
   ```
 .open-button {
   background-color:#86DCEC ;
@@ -146,6 +149,7 @@ sigh in Page->User: sigh in
   width: 60px;
 }
 ```
+```
 .open-button2 {
   background-color: #E473A1;
   color: #F2F5F5;
@@ -159,6 +163,7 @@ sigh in Page->User: sigh in
   width: 100px;
 }
 ```
+```
 .open-button3 {
   background-color: #e29bb1;
   color: #F2F5F5;
@@ -171,6 +176,7 @@ sigh in Page->User: sigh in
   right: 20px;
   width: 100px;
 }
+```
 ```
 .open-button4 {
   background-color: #e29bb1;
@@ -186,6 +192,7 @@ sigh in Page->User: sigh in
   cursor: pointer;
 }
 ```
+```
 .open-button5 {
   background-color:#86DCEC ;
   color: #F2F5F5;
@@ -199,7 +206,7 @@ sigh in Page->User: sigh in
   width: 100px;
 }
 ```
-
+```
 .latin2{
   font-family:  serif;
   font-size: 20px;
@@ -209,11 +216,13 @@ sigh in Page->User: sigh in
   margin: 0;
 }
 ```
+```
  .arabic_number {
    font-size: 28px;
    font-weight: normal;
    
 }
+```
 ```
 .footer {
     text-align: center;
@@ -221,18 +230,21 @@ sigh in Page->User: sigh in
     background-color:#e29bb1;
     color: white;
   }.text {
-    
+    ```
+    ```
     color: white;
     font-size: 10vw; 
     font-weight: bold;
     text-align: center;
   }
    ```
+   ```
   .header-dark {
     background-color:#e29bb1;
     background-size:cover;
     padding-bottom:80px;
   }
+  ```
   ```
 * {box-sizing: border-box;}
 
@@ -241,10 +253,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 ```
+```
 .topnav {
   overflow: hidden;
   background-color:#e29bb1;
 }
+```
 ```
 .topnav a {
   float: left;
@@ -256,19 +270,23 @@ body {
   font-size: 17px;
 }
 ```
+```
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
+```
 ```
 .topnav a.active {
   background-color:#e29bb1;
   color: white;
 }
 ```
+```
 .topnav .search-container {
   float: right;
 }
+```
 ```
 .topnav input[type=text] {
   padding: 6px;
@@ -276,6 +294,7 @@ body {
   font-size: 17px;
   border: none;
 }
+```
 ```
 .topnav .search-container button {
   float: right;
@@ -288,14 +307,17 @@ body {
   cursor: pointer;
 }
 ```
+```
 .topnav .search-container button:hover {
   background: #ccc;
 }
+```
 ```
 @media screen and (max-width: 600px) {
   .topnav .search-container {
     float: none;
   }
+  ```
   ```
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
@@ -306,9 +328,11 @@ body {
     padding: 14px;
   }
   ```
+  ```
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+  ```
   ```
   body {margin:2rem;}
 
@@ -317,12 +341,13 @@ body {
       margin: 30px auto;
   }
   ```
-
+  ```
 
 .modal-body {
   position:relative;
   padding:0px;
 }
+```
 ```
 .close {
   position:absolute;
@@ -335,9 +360,11 @@ body {
   opacity:1;
 }
 ```
+```
 .bs-example{
   margin: 20px;
 }
+```
 ```
 .modal-dialog iframe{
     margin: 0 auto;
