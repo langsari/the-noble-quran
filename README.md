@@ -295,6 +295,7 @@ body {
   .topnav .search-container {
     float: none;
   }
+  ```
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
@@ -303,9 +304,11 @@ body {
     margin: 0;
     padding: 14px;
   }
+  ```
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+  ```
   body {margin:2rem;}
 
 .modal-dialog {
@@ -319,6 +322,7 @@ body {
   position:relative;
   padding:0px;
 }
+```
 .close {
   position:absolute;
   right:-30px;
@@ -333,6 +337,7 @@ body {
 .bs-example{
   margin: 20px;
 }
+```
 .modal-dialog iframe{
     margin: 0 auto;
     display: block;
