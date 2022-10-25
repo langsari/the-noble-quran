@@ -26,8 +26,7 @@ As I mentioned above, for The Quran website, The website which exists does not c
 Our requirement is user convenience. In case the user wants to study the story of each Quran This time we have added a Qibla slot as well so that users can search and learn from the information we have put in. If users want to know or study the story of the Quran, they can learn from various topics. contained in the Quran.
 
 # Constraints :
-The limitation of the function we do is Users can learn the topics of the Quran that we have preliminarily on our website. At this time, not all topics in the Quran may be covered. In the future, we may develop more topics. to cover as much as possible.
-
+User can easily access Quran, open it from mobile. Convenient to open when outside the house. There are all surahs with meanings and attached sounds of every verse for users to read correctly. We also intend to develop the website. To make the website useful to users as much as possible.
 
 # Software Method : 
 - Activity Diagram
