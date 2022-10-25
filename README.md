@@ -83,7 +83,6 @@ sigh in Page->User: sigh in
     </div>
   ```
    ## Navbar
- ```
  
  
  ```
@@ -389,14 +388,17 @@ body {
   <a href="<?php echo e(route('tafseer_home')); ?>">ตัฟซีร</a>
 
 ```
+```
   <a href="<?php echo e(route('login')); ?>">เข้าสู่ระบบ</a>
     
+```
 ```
   <a href="<?php echo e(route('register')); ?>">กิบลัต</a>
     
 ```
   <div class="search-container">
-      ```
+```
+```
      <form action="<?php echo e(route('web.find')); ?>" method="GET">
       <input type="text" placeholder="ค้นหา.." name="query" value="<?php echo e(request()->input('query')); ?>">
       <button type="submit">ค้นหา</button>
