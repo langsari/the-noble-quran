@@ -94,7 +94,8 @@ sigh in Page->User: sigh in
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
 ```
-```.arabic{
+```
+.arabic{
    font-family: 'Uthmani', serif;
    font-size: 23px;
    font-weight: normal;
@@ -103,7 +104,8 @@ sigh in Page->User: sigh in
    margin: 0;
 }
 ```
-```.latin{
+```
+.latin{
   font-family:  serif;
   font-size: 17px;
   font-weight: normal;
@@ -385,12 +387,16 @@ body {
 ```
 <a class="active" href="<?php echo e(route('homepage')); ?>">Quran.th</a>
   <a href="<?php echo e(route('tafseer_home')); ?>">ตัฟซีร</a>
+
 ```
   <a href="<?php echo e(route('login')); ?>">เข้าสู่ระบบ</a>
+    
 ```
   <a href="<?php echo e(route('register')); ?>">กิบลัต</a>
+    
 ```
   <div class="search-container">
+      ```
      <form action="<?php echo e(route('web.find')); ?>" method="GET">
       <input type="text" placeholder="ค้นหา.." name="query" value="<?php echo e(request()->input('query')); ?>">
       <button type="submit">ค้นหา</button>
