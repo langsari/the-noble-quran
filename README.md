@@ -234,7 +234,6 @@ sigh in Page->User: sigh in
     color: white;
   }.text {
     ```
-    ```
     color: white;
     font-size: 10vw; 
     font-weight: bold;
