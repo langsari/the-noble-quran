@@ -81,9 +81,8 @@ sigh in Page->User: sigh in
       <h2 class="text-capitalize lead"></h2>
       <div class="col-md-3"></div>
     </div>
-    ```
-    
- ## Navbar
+  ```
+   ## Navbar
  ```
  ```
  @font-face {
@@ -371,4 +370,22 @@ body {
 }
 }
 ```
+## views
+```
+<body>
+```
+<div class="topnav fixed-top ">
+  ```
+<a class="active" href="<?php echo e(route('homepage')); ?>">Quran.th</a>
+  <a href="<?php echo e(route('tafseer_home')); ?>">ตัฟซีร</a>
 
+  <a href="<?php echo e(route('login')); ?>">เข้าสู่ระบบ</a>
+  
+  <a href="<?php echo e(route('register')); ?>">กิบลัต</a>
+```
+  <div class="search-container">
+     <form action="<?php echo e(route('web.find')); ?>" method="GET">
+      <input type="text" placeholder="ค้นหา.." name="query" value="<?php echo e(request()->input('query')); ?>">
+      <button type="submit">ค้นหา</button>
+    </form>
+```
