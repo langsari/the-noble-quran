@@ -52,11 +52,7 @@ interface SessionStorageInterface
     /**
      * Returns the session name.
      *
-<<<<<<< Updated upstream
-     * @return string The session name
-=======
      * @return string
->>>>>>> Stashed changes
      */
     public function getName();
 

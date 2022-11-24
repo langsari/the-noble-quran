@@ -78,17 +78,6 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
      */
     private static $freshCache = [];
 
-<<<<<<< Updated upstream
-    public const VERSION = '5.3.9';
-    public const VERSION_ID = 50309;
-    public const MAJOR_VERSION = 5;
-    public const MINOR_VERSION = 3;
-    public const RELEASE_VERSION = 9;
-    public const EXTRA_VERSION = '';
-
-    public const END_OF_MAINTENANCE = '01/2022';
-    public const END_OF_LIFE = '01/2022';
-=======
     public const VERSION = '5.4.15';
     public const VERSION_ID = 50415;
     public const MAJOR_VERSION = 5;
@@ -98,7 +87,6 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
 
     public const END_OF_MAINTENANCE = '11/2024';
     public const END_OF_LIFE = '11/2025';
->>>>>>> Stashed changes
 
     public function __construct(string $environment, bool $debug)
     {
@@ -817,11 +805,7 @@ abstract class Kernel implements KernelInterface, RebootableInterface, Terminabl
      * We don't use the PHP php_strip_whitespace() function
      * as we want the content to be readable and well-formatted.
      *
-<<<<<<< Updated upstream
-     * @return string The PHP string with the comments removed
-=======
      * @return string
->>>>>>> Stashed changes
      */
     public static function stripComments(string $source)
     {

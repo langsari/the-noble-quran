@@ -84,11 +84,7 @@ class File extends \SplFileInfo
     /**
      * Moves the file to a new location.
      *
-<<<<<<< Updated upstream
-     * @return self A File object representing the new file
-=======
      * @return self
->>>>>>> Stashed changes
      *
      * @throws FileException if the target file could not be created
      */

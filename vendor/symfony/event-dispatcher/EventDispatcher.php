@@ -47,15 +47,9 @@ class EventDispatcher implements EventDispatcherInterface
      */
     public function dispatch(object $event, string $eventName = null): object
     {
-<<<<<<< Updated upstream
-        $eventName = $eventName ?? \get_class($event);
-
-        if (null !== $this->optimized) {
-=======
         $eventName ??= \get_class($event);
 
         if (isset($this->optimized)) {
->>>>>>> Stashed changes
             $listeners = $this->optimized[$eventName] ?? (empty($this->listeners[$eventName]) ? [] : $this->optimizeListeners($eventName));
         } else {
             $listeners = $this->getListeners($eventName);
@@ -71,11 +65,7 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListeners(string $eventName = null)
-=======
     public function getListeners(string $eventName = null): array
->>>>>>> Stashed changes
     {
         if (null !== $eventName) {
             if (empty($this->listeners[$eventName])) {
@@ -101,11 +91,7 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListenerPriority(string $eventName, $listener)
-=======
     public function getListenerPriority(string $eventName, callable|array $listener): ?int
->>>>>>> Stashed changes
     {
         if (empty($this->listeners[$eventName])) {
             return null;
@@ -134,11 +120,7 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function hasListeners(string $eventName = null)
-=======
     public function hasListeners(string $eventName = null): bool
->>>>>>> Stashed changes
     {
         if (null !== $eventName) {
             return !empty($this->listeners[$eventName]);
@@ -156,11 +138,7 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function addListener(string $eventName, $listener, int $priority = 0)
-=======
     public function addListener(string $eventName, callable|array $listener, int $priority = 0)
->>>>>>> Stashed changes
     {
         $this->listeners[$eventName][$priority][] = $listener;
         unset($this->sorted[$eventName], $this->optimized[$eventName]);
@@ -169,11 +147,7 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function removeListener(string $eventName, $listener)
-=======
     public function removeListener(string $eventName, callable|array $listener)
->>>>>>> Stashed changes
     {
         if (empty($this->listeners[$eventName])) {
             return;

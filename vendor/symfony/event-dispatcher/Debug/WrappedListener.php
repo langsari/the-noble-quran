@@ -43,11 +43,7 @@ final class WrappedListener
         $this->priority = $priority;
 
         if (\is_array($listener)) {
-<<<<<<< Updated upstream
-            $this->name = \is_object($listener[0]) ? get_debug_type($listener[0]) : $listener[0];
-=======
             [$this->name, $this->callableRef] = $this->parseListener($listener);
->>>>>>> Stashed changes
             $this->pretty = $this->name.'::'.$listener[1];
             $this->callableRef .= '::'.$listener[1];
         } elseif ($listener instanceof \Closure) {

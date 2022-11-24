@@ -47,17 +47,9 @@ class CacheWarmerAggregate implements CacheWarmerInterface
     }
 
     /**
-<<<<<<< Updated upstream
-     * Warms up the cache.
-     *
-     * @return string[] A list of classes or files to preload on PHP 7.4+
-     */
-    public function warmUp(string $cacheDir)
-=======
      * {@inheritdoc}
      */
     public function warmUp(string $cacheDir): array
->>>>>>> Stashed changes
     {
         if ($collectDeprecations = $this->debug && !\defined('PHPUNIT_COMPOSER_INSTALL')) {
             $collectedLogs = [];

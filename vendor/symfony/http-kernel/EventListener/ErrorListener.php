@@ -19,10 +19,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
-<<<<<<< Updated upstream
-=======
 use Symfony\Component\HttpKernel\Exception\HttpException;
->>>>>>> Stashed changes
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -41,14 +38,10 @@ class ErrorListener implements EventSubscriberInterface
      */
     protected $exceptionsMapping;
 
-<<<<<<< Updated upstream
-    public function __construct($controller, LoggerInterface $logger = null, bool $debug = false)
-=======
     /**
      * @param array<class-string, array{log_level: string|null, status_code: int<100,599>|null}> $exceptionsMapping
      */
     public function __construct($controller, LoggerInterface $logger = null, bool $debug = false, array $exceptionsMapping = [])
->>>>>>> Stashed changes
     {
         $this->controller = $controller;
         $this->logger = $logger;

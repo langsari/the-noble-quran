@@ -33,11 +33,7 @@ class YamlFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
-=======
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
->>>>>>> Stashed changes
     {
         if (!class_exists(Yaml::class)) {
             throw new LogicException('Dumping translations in the YAML format requires the Symfony Yaml component.');

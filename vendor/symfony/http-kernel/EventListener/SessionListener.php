@@ -28,23 +28,11 @@ use Symfony\Component\HttpKernel\Event\RequestEvent;
  */
 class SessionListener extends AbstractSessionListener
 {
-<<<<<<< Updated upstream
-    public function __construct(ContainerInterface $container, bool $debug = false)
-    {
-        parent::__construct($container, $debug);
-    }
-
-=======
->>>>>>> Stashed changes
     public function onKernelRequest(RequestEvent $event)
     {
         parent::onKernelRequest($event);
 
-<<<<<<< Updated upstream
-        if (!$event->isMainRequest() || !$this->container->has('session')) {
-=======
         if (!$event->isMainRequest() || (!$this->container->has('session') && !$this->container->has('session_factory'))) {
->>>>>>> Stashed changes
             return;
         }
 

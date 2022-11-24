@@ -26,11 +26,7 @@ class IcuResFileLoader implements LoaderInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function load($resource, string $locale, string $domain = 'messages')
-=======
     public function load(mixed $resource, string $locale, string $domain = 'messages'): MessageCatalogue
->>>>>>> Stashed changes
     {
         if (!stream_is_local($resource)) {
             throw new InvalidResourceException(sprintf('This is not a local file "%s".', $resource));
@@ -77,11 +73,7 @@ class IcuResFileLoader implements LoaderInterface
      * @param array           $messages Used internally for recursive calls
      * @param string          $path     Current path being parsed, used internally for recursive calls
      */
-<<<<<<< Updated upstream
-    protected function flatten(\ResourceBundle $rb, array &$messages = [], string $path = null)
-=======
     protected function flatten(\ResourceBundle $rb, array &$messages = [], string $path = null): array
->>>>>>> Stashed changes
     {
         foreach ($rb as $key => $value) {
             $nodePath = $path ? $path.'.'.$key : $key;

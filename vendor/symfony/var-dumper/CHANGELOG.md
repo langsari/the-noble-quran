@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< Updated upstream
-=======
 5.4
 ---
 
@@ -10,7 +8,6 @@ CHANGELOG
  * Add casters for Symfony's UUIDs and ULIDs
  * Add support for `Fiber`
 
->>>>>>> Stashed changes
 5.2.0
 -----
 

@@ -22,28 +22,6 @@ use Symfony\Component\DependencyInjection\ServiceLocator;
  */
 class TranslatorPathsPass extends AbstractRecursivePass
 {
-<<<<<<< Updated upstream
-    private $translatorServiceId;
-    private $debugCommandServiceId;
-    private $updateCommandServiceId;
-    private $resolverServiceId;
-    private $level = 0;
-    private $paths = [];
-    private $definitions = [];
-    private $controllers = [];
-
-    public function __construct(string $translatorServiceId = 'translator', string $debugCommandServiceId = 'console.command.translation_debug', string $updateCommandServiceId = 'console.command.translation_update', string $resolverServiceId = 'argument_resolver.service')
-    {
-        if (0 < \func_num_args()) {
-            trigger_deprecation('symfony/translation', '5.3', 'Configuring "%s" is deprecated.', __CLASS__);
-        }
-
-        $this->translatorServiceId = $translatorServiceId;
-        $this->debugCommandServiceId = $debugCommandServiceId;
-        $this->updateCommandServiceId = $updateCommandServiceId;
-        $this->resolverServiceId = $resolverServiceId;
-    }
-=======
     private int $level = 0;
 
     /**
@@ -60,7 +38,6 @@ class TranslatorPathsPass extends AbstractRecursivePass
      * @var array<string, array<string, bool>>
      */
     private array $controllers = [];
->>>>>>> Stashed changes
 
     public function process(ContainerBuilder $container)
     {
@@ -105,11 +82,7 @@ class TranslatorPathsPass extends AbstractRecursivePass
         }
     }
 
-<<<<<<< Updated upstream
-    protected function processValue($value, bool $isRoot = false)
-=======
     protected function processValue(mixed $value, bool $isRoot = false): mixed
->>>>>>> Stashed changes
     {
         if ($value instanceof Reference) {
             if ('translator' === (string) $value) {

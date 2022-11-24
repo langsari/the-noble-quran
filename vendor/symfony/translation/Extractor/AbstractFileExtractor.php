@@ -44,17 +44,9 @@ abstract class AbstractFileExtractor
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return bool
-     *
-     * @throws InvalidArgumentException
-     */
-    protected function isFile(string $file)
-=======
      * @throws InvalidArgumentException
      */
     protected function isFile(string $file): bool
->>>>>>> Stashed changes
     {
         if (!is_file($file)) {
             throw new InvalidArgumentException(sprintf('The "%s" file does not exist.', $file));

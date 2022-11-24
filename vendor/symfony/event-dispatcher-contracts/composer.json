@@ -16,11 +16,7 @@
         }
     ],
     "require": {
-<<<<<<< Updated upstream
-        "php": ">=7.2.5",
-=======
         "php": ">=8.1",
->>>>>>> Stashed changes
         "psr/event-dispatcher": "^1"
     },
     "suggest": {
@@ -32,11 +28,7 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
-<<<<<<< Updated upstream
-            "dev-main": "2.4-dev"
-=======
             "dev-main": "3.1-dev"
->>>>>>> Stashed changes
         },
         "thanks": {
             "name": "symfony/contracts",

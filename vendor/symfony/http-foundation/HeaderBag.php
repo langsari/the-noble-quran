@@ -106,15 +106,9 @@ class HeaderBag implements \IteratorAggregate, \Countable
     }
 
     /**
-<<<<<<< Updated upstream
-     * Returns a header value by name.
-     *
-     * @return string|null The first header value or default value
-=======
      * Returns the first header by name or the default one.
      *
      * @return string|null
->>>>>>> Stashed changes
      */
     public function get(string $key, string $default = null)
     {
@@ -165,11 +159,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Returns true if the HTTP header is defined.
      *
-<<<<<<< Updated upstream
-     * @return bool true if the parameter exists, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function has(string $key)
     {
@@ -179,11 +169,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Returns true if the given HTTP header contains the given value.
      *
-<<<<<<< Updated upstream
-     * @return bool true if the value is contained in the header, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function contains(string $key, string $value)
     {
@@ -207,11 +193,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Returns the HTTP header value converted to a date.
      *
-<<<<<<< Updated upstream
-     * @return \DateTimeInterface|null The parsed DateTime or the default value if the header does not exist
-=======
      * @return \DateTimeInterface|null
->>>>>>> Stashed changes
      *
      * @throws \RuntimeException When the HTTP header is not parseable
      */
@@ -243,11 +225,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Returns true if the Cache-Control directive is defined.
      *
-<<<<<<< Updated upstream
-     * @return bool true if the directive exists, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasCacheControlDirective(string $key)
     {
@@ -257,11 +235,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Returns a Cache-Control directive value by name.
      *
-<<<<<<< Updated upstream
-     * @return bool|string|null The directive value if defined, null otherwise
-=======
      * @return bool|string|null
->>>>>>> Stashed changes
      */
     public function getCacheControlDirective(string $key)
     {
@@ -310,11 +284,7 @@ class HeaderBag implements \IteratorAggregate, \Countable
     /**
      * Parses a Cache-Control HTTP header.
      *
-<<<<<<< Updated upstream
-     * @return array An array representing the attribute values
-=======
      * @return array
->>>>>>> Stashed changes
      */
     protected function parseCacheControl(string $header)
     {

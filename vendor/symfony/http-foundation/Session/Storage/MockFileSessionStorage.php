@@ -28,11 +28,7 @@ class MockFileSessionStorage extends MockArraySessionStorage
     private $savePath;
 
     /**
-<<<<<<< Updated upstream
-     * @param string $savePath Path of directory to save session files
-=======
      * @param string|null $savePath Path of directory to save session files
->>>>>>> Stashed changes
      */
     public function __construct(string $savePath = null, string $name = 'MOCKSESSID', MetadataBag $metaBag = null)
     {

@@ -168,11 +168,7 @@ class UploadedFile extends File
     /**
      * Moves the file to a new location.
      *
-<<<<<<< Updated upstream
-     * @return File A File object representing the new file
-=======
      * @return File
->>>>>>> Stashed changes
      *
      * @throws FileException if, for any reason, the file could not have been moved
      */

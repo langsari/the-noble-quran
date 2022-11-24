@@ -40,11 +40,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null)
-=======
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> Stashed changes
     {
         $trans = $this->translator->trans($id = (string) $id, $parameters, $domain, $locale);
         $this->log($id, $domain, $locale);
@@ -77,11 +73,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getCatalogue(string $locale = null)
-=======
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> Stashed changes
     {
         return $this->translator->getCatalogue($locale);
     }

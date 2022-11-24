@@ -26,11 +26,7 @@ class IcuDatFileLoader extends IcuResFileLoader
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function load($resource, string $locale, string $domain = 'messages')
-=======
     public function load(mixed $resource, string $locale, string $domain = 'messages'): MessageCatalogue
->>>>>>> Stashed changes
     {
         if (!stream_is_local($resource.'.dat')) {
             throw new InvalidResourceException(sprintf('This is not a local file "%s".', $resource));

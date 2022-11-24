@@ -171,11 +171,7 @@ class Router implements RouterInterface, RequestMatcherInterface
     /**
      * Gets an option value.
      *
-<<<<<<< Updated upstream
-     * @return mixed The value
-=======
      * @return mixed
->>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException
      */

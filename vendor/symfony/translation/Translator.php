@@ -22,10 +22,7 @@ use Symfony\Component\Translation\Formatter\MessageFormatter;
 use Symfony\Component\Translation\Formatter\MessageFormatterInterface;
 use Symfony\Component\Translation\Loader\LoaderInterface;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
-<<<<<<< Updated upstream
-=======
 use Symfony\Contracts\Translation\TranslatableInterface;
->>>>>>> Stashed changes
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 // Help opcache.preload discover always-needed symbols
@@ -110,11 +107,7 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
      *
      * @throws InvalidArgumentException If the locale contains invalid characters
      */
-<<<<<<< Updated upstream
-    public function addResource(string $format, $resource, string $locale, string $domain = null)
-=======
     public function addResource(string $format, mixed $resource, string $locale, string $domain = null)
->>>>>>> Stashed changes
     {
         if (null === $domain) {
             $domain = 'messages';
@@ -181,11 +174,7 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null)
-=======
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> Stashed changes
     {
         if (null === $id || '' === $id) {
             return '';
@@ -206,13 +195,10 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
             }
         }
 
-<<<<<<< Updated upstream
-=======
         $parameters = array_map(function ($parameter) use ($locale) {
             return $parameter instanceof TranslatableInterface ? $parameter->trans($this, $locale) : $parameter;
         }, $parameters);
 
->>>>>>> Stashed changes
         $len = \strlen(MessageCatalogue::INTL_DOMAIN_SUFFIX);
         if ($this->hasIntlFormatter
             && ($catalogue->defines($id, $domain.MessageCatalogue::INTL_DOMAIN_SUFFIX)
@@ -227,11 +213,7 @@ class Translator implements TranslatorInterface, TranslatorBagInterface, LocaleA
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getCatalogue(string $locale = null)
-=======
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> Stashed changes
     {
         if (!$locale) {
             $locale = $this->getLocale();

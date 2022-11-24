@@ -990,11 +990,7 @@ class Process implements \IteratorAggregate
     }
 
     /**
-<<<<<<< Updated upstream
-     * Gets the process timeout (max. runtime).
-=======
      * Gets the process timeout in seconds (max. runtime).
->>>>>>> Stashed changes
      *
      * @return float|null
      */

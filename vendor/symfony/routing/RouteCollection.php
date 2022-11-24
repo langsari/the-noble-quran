@@ -45,11 +45,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
     private $resources = [];
 
     /**
-<<<<<<< Updated upstream
-     * @var int[]
-=======
      * @var array<string, int>
->>>>>>> Stashed changes
      */
     private $priorities = [];
 
@@ -93,21 +89,13 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * @param int $priority
      */
-<<<<<<< Updated upstream
-    public function add(string $name, Route $route/*, int $priority = 0*/)
-=======
     public function add(string $name, Route $route/* , int $priority = 0 */)
->>>>>>> Stashed changes
     {
         if (\func_num_args() < 3 && __CLASS__ !== static::class && __CLASS__ !== (new \ReflectionMethod($this, __FUNCTION__))->getDeclaringClass()->getName() && !$this instanceof \PHPUnit\Framework\MockObject\MockObject && !$this instanceof \Prophecy\Prophecy\ProphecySubjectInterface && !$this instanceof \Mockery\MockInterface) {
             trigger_deprecation('symfony/routing', '5.1', 'The "%s()" method will have a new "int $priority = 0" argument in version 6.0, not defining it is deprecated.', __METHOD__);
         }
 
-<<<<<<< Updated upstream
-        unset($this->routes[$name], $this->priorities[$name]);
-=======
         unset($this->routes[$name], $this->priorities[$name], $this->aliases[$name]);
->>>>>>> Stashed changes
 
         $this->routes[$name] = $route;
 
@@ -137,11 +125,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * Gets a route by name.
      *
-<<<<<<< Updated upstream
-     * @return Route|null A Route instance or null when not found
-=======
      * @return Route|null
->>>>>>> Stashed changes
      */
     public function get(string $name)
     {
@@ -174,11 +158,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
     public function remove($name)
     {
         foreach ((array) $name as $n) {
-<<<<<<< Updated upstream
-            unset($this->routes[$n], $this->priorities[$n]);
-=======
             unset($this->routes[$n], $this->priorities[$n], $this->aliases[$n]);
->>>>>>> Stashed changes
         }
     }
 
@@ -191,25 +171,18 @@ class RouteCollection implements \IteratorAggregate, \Countable
         // we need to remove all routes with the same names first because just replacing them
         // would not place the new route at the end of the merged array
         foreach ($collection->all() as $name => $route) {
-<<<<<<< Updated upstream
-            unset($this->routes[$name], $this->priorities[$name]);
-=======
             unset($this->routes[$name], $this->priorities[$name], $this->aliases[$name]);
->>>>>>> Stashed changes
             $this->routes[$name] = $route;
 
             if (isset($collection->priorities[$name])) {
                 $this->priorities[$name] = $collection->priorities[$name];
             }
-<<<<<<< Updated upstream
-=======
         }
 
         foreach ($collection->getAliases() as $name => $alias) {
             unset($this->routes[$name], $this->priorities[$name], $this->aliases[$name]);
 
             $this->aliases[$name] = $alias;
->>>>>>> Stashed changes
         }
 
         foreach ($collection->getResources() as $resource) {
@@ -242,21 +215,12 @@ class RouteCollection implements \IteratorAggregate, \Countable
     {
         $prefixedRoutes = [];
         $prefixedPriorities = [];
-<<<<<<< Updated upstream
-=======
         $prefixedAliases = [];
->>>>>>> Stashed changes
 
         foreach ($this->routes as $name => $route) {
             $prefixedRoutes[$prefix.$name] = $route;
             if (null !== $canonicalName = $route->getDefault('_canonical_route')) {
                 $route->setDefault('_canonical_route', $prefix.$canonicalName);
-<<<<<<< Updated upstream
-            }
-            if (isset($this->priorities[$name])) {
-                $prefixedPriorities[$prefix.$name] = $this->priorities[$name];
-=======
->>>>>>> Stashed changes
             }
             if (isset($this->priorities[$name])) {
                 $prefixedPriorities[$prefix.$name] = $this->priorities[$name];
@@ -269,10 +233,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
 
         $this->routes = $prefixedRoutes;
         $this->priorities = $prefixedPriorities;
-<<<<<<< Updated upstream
-=======
         $this->aliases = $prefixedAliases;
->>>>>>> Stashed changes
     }
 
     /**

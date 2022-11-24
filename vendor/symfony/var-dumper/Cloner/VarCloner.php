@@ -27,21 +27,12 @@ class VarCloner extends AbstractCloner
         $len = 1;                       // Length of $queue
         $pos = 0;                       // Number of cloned items past the minimum depth
         $refsCounter = 0;               // Hard references counter
-<<<<<<< Updated upstream
-        $queue = [[$var]];    // This breadth-first queue is the return value
-        $hardRefs = [];            // Map of original zval ids to stub objects
-        $objRefs = [];             // Map of original object handles to their stub object counterpart
-        $objects = [];             // Keep a ref to objects to ensure their handle cannot be reused while cloning
-        $resRefs = [];             // Map of original resource handles to their stub object counterpart
-        $values = [];              // Map of stub objects' ids to original values
-=======
         $queue = [[$var]];              // This breadth-first queue is the return value
         $hardRefs = [];                 // Map of original zval ids to stub objects
         $objRefs = [];                  // Map of original object handles to their stub object counterpart
         $objects = [];                  // Keep a ref to objects to ensure their handle cannot be reused while cloning
         $resRefs = [];                  // Map of original resource handles to their stub object counterpart
         $values = [];                   // Map of stub objects' ids to original values
->>>>>>> Stashed changes
         $maxItems = $this->maxItems;
         $maxString = $this->maxString;
         $minDepth = $this->minDepth;
@@ -189,12 +180,9 @@ class VarCloner extends AbstractCloner
 
                                 $a[$gk] = &$gv;
                             }
-<<<<<<< Updated upstream
-=======
                             unset($gv);
                         } else {
                             $a = $v;
->>>>>>> Stashed changes
                         }
                         break;
 

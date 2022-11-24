@@ -41,26 +41,6 @@ interface OperationInterface
 
     /**
      * Returns all valid messages ('all') after operation.
-<<<<<<< Updated upstream
-     *
-     * @return array
-     */
-    public function getMessages(string $domain);
-
-    /**
-     * Returns new messages ('new') after operation.
-     *
-     * @return array
-     */
-    public function getNewMessages(string $domain);
-
-    /**
-     * Returns obsolete messages ('obsolete') after operation.
-     *
-     * @return array
-     */
-    public function getObsoleteMessages(string $domain);
-=======
      */
     public function getMessages(string $domain): array;
 
@@ -73,7 +53,6 @@ interface OperationInterface
      * Returns obsolete messages ('obsolete') after operation.
      */
     public function getObsoleteMessages(string $domain): array;
->>>>>>> Stashed changes
 
     /**
      * Returns resulting catalogue ('result').

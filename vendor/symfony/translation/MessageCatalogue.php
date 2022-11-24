@@ -64,11 +64,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function all(string $domain = null)
-=======
     public function all(string $domain = null): array
->>>>>>> Stashed changes
     {
         if (null !== $domain) {
             // skip messages merge if intl-icu requested explicitly
@@ -104,11 +100,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function has(string $id, string $domain = 'messages')
-=======
     public function has(string $id, string $domain = 'messages'): bool
->>>>>>> Stashed changes
     {
         if (isset($this->messages[$domain][$id]) || isset($this->messages[$domain.self::INTL_DOMAIN_SUFFIX][$id])) {
             return true;
@@ -124,11 +116,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function defines(string $id, string $domain = 'messages')
-=======
     public function defines(string $id, string $domain = 'messages'): bool
->>>>>>> Stashed changes
     {
         return isset($this->messages[$domain][$id]) || isset($this->messages[$domain.self::INTL_DOMAIN_SUFFIX][$id]);
     }
@@ -136,11 +124,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function get(string $id, string $domain = 'messages')
-=======
     public function get(string $id, string $domain = 'messages'): string
->>>>>>> Stashed changes
     {
         if (isset($this->messages[$domain.self::INTL_DOMAIN_SUFFIX][$id])) {
             return $this->messages[$domain.self::INTL_DOMAIN_SUFFIX][$id];
@@ -274,11 +258,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getMetadata(string $key = '', string $domain = 'messages')
-=======
     public function getMetadata(string $key = '', string $domain = 'messages'): mixed
->>>>>>> Stashed changes
     {
         if ('' == $domain) {
             return $this->metadata;
@@ -300,11 +280,7 @@ class MessageCatalogue implements MessageCatalogueInterface, MetadataAwareInterf
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function setMetadata(string $key, $value, string $domain = 'messages')
-=======
     public function setMetadata(string $key, mixed $value, string $domain = 'messages')
->>>>>>> Stashed changes
     {
         $this->metadata[$domain][$key] = $value;
     }

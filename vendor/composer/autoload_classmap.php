@@ -9,10 +9,7 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
-<<<<<<< Updated upstream
-=======
     'App\\Http\\Controllers\\ApprovalController' => $baseDir . '/app/Http/Controllers/ApprovalController.php',
->>>>>>> Stashed changes
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -20,23 +17,6 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-<<<<<<< Updated upstream
-    'App\\Http\\Controllers\\DetailController' => $baseDir . '/app/Http/Controllers/DetailController.php',
-    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
-    'App\\Http\\Controllers\\JoinTableController' => $baseDir . '/app/Http/Controllers/JoinTableController.php',
-    'App\\Http\\Controllers\\JoinTranslationController' => $baseDir . '/app/Http/Controllers/JoinTranslationController.php',
-    'App\\Http\\Controllers\\JointranController' => $baseDir . '/app/Http/Controllers/JointranController.php',
-    'App\\Http\\Controllers\\LiveSearch' => $baseDir . '/app/Http/Controllers/LiveSearch.php',
-    'App\\Http\\Controllers\\MquranController' => $baseDir . '/app/Http/Controllers/MquranController.php',
-    'App\\Http\\Controllers\\PageController' => $baseDir . '/app/Http/Controllers/PageController.php',
-    'App\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
-    'App\\Http\\Controllers\\QuranController' => $baseDir . '/app/Http/Controllers/QuranController.php',
-    'App\\Http\\Controllers\\QuransController' => $baseDir . '/app/Http/Controllers/QuransController.php',
-    'App\\Http\\Controllers\\SearchController' => $baseDir . '/app/Http/Controllers/SearchController.php',
-    'App\\Http\\Controllers\\TafseerController' => $baseDir . '/app/Http/Controllers/TafseerController.php',
-    'App\\Http\\Controllers\\TafseersController' => $baseDir . '/app/Http/Controllers/TafseersController.php',
-    'App\\Http\\Controllers\\Userss' => $baseDir . '/app/Http/Controllers/Userss.php',
-=======
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\ManageQuranController' => $baseDir . '/app/Http/Controllers/ManageQuranController.php',
     'App\\Http\\Controllers\\ManageUserController' => $baseDir . '/app/Http/Controllers/ManageUserController.php',
@@ -49,7 +29,6 @@ return array(
     'App\\Http\\Controllers\\SearchuserController' => $baseDir . '/app/Http/Controllers/SearchuserController.php',
     'App\\Http\\Controllers\\StaffController' => $baseDir . '/app/Http/Controllers/StaffController.php',
     'App\\Http\\Controllers\\TafseersController' => $baseDir . '/app/Http/Controllers/TafseersController.php',
->>>>>>> Stashed changes
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -62,21 +41,11 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Arabic' => $baseDir . '/app/Models/Arabic.php',
     'App\\Models\\Datasurah' => $baseDir . '/app/Models/Datasurah.php',
-<<<<<<< Updated upstream
-    'App\\Models\\People' => $baseDir . '/app/Models/People.php',
-    'App\\Models\\Post' => $baseDir . '/app/Models/Post.php',
-    'App\\Models\\Tafseer' => $baseDir . '/app/Models/Tafseer.php',
-    'App\\Models\\Thai' => $baseDir . '/app/Models/Thai.php',
-    'App\\Models\\Translation' => $baseDir . '/app/Models/Translation.php',
-    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
-    'App\\Models\\country' => $baseDir . '/app/Models/country.php',
-=======
     'App\\Models\\Note' => $baseDir . '/app/Models/Note.php',
     'App\\Models\\Qurantafseer' => $baseDir . '/app/Models/Qurantafseer.php',
     'App\\Models\\Tafseer' => $baseDir . '/app/Models/Tafseer.php',
     'App\\Models\\Thai' => $baseDir . '/app/Models/Thai.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
->>>>>>> Stashed changes
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -108,10 +77,7 @@ return array(
     'Barryvdh\\Debugbar\\DataFormatter\\SimpleFormatter' => $vendorDir . '/barryvdh/laravel-debugbar/src/DataFormatter/SimpleFormatter.php',
     'Barryvdh\\Debugbar\\DebugbarViewEngine' => $vendorDir . '/barryvdh/laravel-debugbar/src/DebugbarViewEngine.php',
     'Barryvdh\\Debugbar\\Facade' => $vendorDir . '/barryvdh/laravel-debugbar/src/Facade.php',
-<<<<<<< Updated upstream
-=======
     'Barryvdh\\Debugbar\\Facades\\Debugbar' => $vendorDir . '/barryvdh/laravel-debugbar/src/Facades/Debugbar.php',
->>>>>>> Stashed changes
     'Barryvdh\\Debugbar\\JavascriptRenderer' => $vendorDir . '/barryvdh/laravel-debugbar/src/JavascriptRenderer.php',
     'Barryvdh\\Debugbar\\LaravelDebugbar' => $vendorDir . '/barryvdh/laravel-debugbar/src/LaravelDebugbar.php',
     'Barryvdh\\Debugbar\\LumenServiceProvider' => $vendorDir . '/barryvdh/laravel-debugbar/src/LumenServiceProvider.php',
@@ -143,10 +109,7 @@ return array(
     'Brick\\Math\\Internal\\Calculator\\GmpCalculator' => $vendorDir . '/brick/math/src/Internal/Calculator/GmpCalculator.php',
     'Brick\\Math\\Internal\\Calculator\\NativeCalculator' => $vendorDir . '/brick/math/src/Internal/Calculator/NativeCalculator.php',
     'Brick\\Math\\RoundingMode' => $vendorDir . '/brick/math/src/RoundingMode.php',
-<<<<<<< Updated upstream
-=======
     'Carbon\\AbstractTranslator' => $vendorDir . '/nesbot/carbon/src/Carbon/AbstractTranslator.php',
->>>>>>> Stashed changes
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonConverterInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonConverterInterface.php',
     'Carbon\\CarbonImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
@@ -243,20 +206,14 @@ return array(
     'Database\\Seeders\\CreateUsersSeeder' => $baseDir . '/database/seeders/CreateUsersSeeder.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'Database\\Seeders\\DatasurahSeeder' => $baseDir . '/database/seeders/DatasurahSeeder.php',
-<<<<<<< Updated upstream
-=======
     'Database\\Seeders\\NoteSeeder' => $baseDir . '/database/seeders/NoteSeeder.php',
     'Database\\Seeders\\QurantafseerSeeder' => $baseDir . '/database/seeders/QurantafseerSeeder.php',
->>>>>>> Stashed changes
     'Database\\Seeders\\TafseerSeeder' => $baseDir . '/database/seeders/TafseerSeeder.php',
     'Database\\Seeders\\ThaiSeeder' => $baseDir . '/database/seeders/ThaiSeeder.php',
     'DebugBar\\Bridge\\CacheCacheCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/CacheCacheCollector.php',
     'DebugBar\\Bridge\\DoctrineCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/DoctrineCollector.php',
     'DebugBar\\Bridge\\MonologCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/MonologCollector.php',
-<<<<<<< Updated upstream
-=======
     'DebugBar\\Bridge\\NamespacedTwigProfileCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/NamespacedTwigProfileCollector.php',
->>>>>>> Stashed changes
     'DebugBar\\Bridge\\Propel2Collector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/Propel2Collector.php',
     'DebugBar\\Bridge\\PropelCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/PropelCollector.php',
     'DebugBar\\Bridge\\SlimCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/SlimCollector.php',
@@ -347,15 +304,9 @@ return array(
     'Doctrine\\Common\\Cache\\Psr6\\DoctrineProvider' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/DoctrineProvider.php',
     'Doctrine\\Common\\Cache\\Psr6\\InvalidArgument' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/InvalidArgument.php',
     'Doctrine\\Common\\Cache\\Psr6\\TypedCacheItem' => $vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/TypedCacheItem.php',
-<<<<<<< Updated upstream
-    'Doctrine\\Common\\EventArgs' => $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common/EventArgs.php',
-    'Doctrine\\Common\\EventManager' => $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common/EventManager.php',
-    'Doctrine\\Common\\EventSubscriber' => $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common/EventSubscriber.php',
-=======
     'Doctrine\\Common\\EventArgs' => $vendorDir . '/doctrine/event-manager/src/EventArgs.php',
     'Doctrine\\Common\\EventManager' => $vendorDir . '/doctrine/event-manager/src/EventManager.php',
     'Doctrine\\Common\\EventSubscriber' => $vendorDir . '/doctrine/event-manager/src/EventSubscriber.php',
->>>>>>> Stashed changes
     'Doctrine\\Common\\Lexer\\AbstractLexer' => $vendorDir . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
     'Doctrine\\DBAL\\Abstraction\\Result' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Abstraction/Result.php',
     'Doctrine\\DBAL\\Cache\\ArrayStatement' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Cache/ArrayStatement.php',
@@ -932,11 +883,8 @@ return array(
     'Facade\\Ignition\\SolutionProviders\\RunningLaravelDuskInProductionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/RunningLaravelDuskInProductionProvider.php',
     'Facade\\Ignition\\SolutionProviders\\SolutionProviderRepository' => $vendorDir . '/facade/ignition/src/SolutionProviders/SolutionProviderRepository.php',
     'Facade\\Ignition\\SolutionProviders\\TableNotFoundSolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/TableNotFoundSolutionProvider.php',
-<<<<<<< Updated upstream
-=======
     'Facade\\Ignition\\SolutionProviders\\UndefinedLivewireMethodSolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/UndefinedLivewireMethodSolutionProvider.php',
     'Facade\\Ignition\\SolutionProviders\\UndefinedLivewirePropertySolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/UndefinedLivewirePropertySolutionProvider.php',
->>>>>>> Stashed changes
     'Facade\\Ignition\\SolutionProviders\\UndefinedPropertySolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/UndefinedPropertySolutionProvider.php',
     'Facade\\Ignition\\SolutionProviders\\UndefinedVariableSolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/UndefinedVariableSolutionProvider.php',
     'Facade\\Ignition\\SolutionProviders\\UnknownValidationSolutionProvider' => $vendorDir . '/facade/ignition/src/SolutionProviders/UnknownValidationSolutionProvider.php',
@@ -956,10 +904,7 @@ return array(
     'Facade\\Ignition\\Support\\ComposerClassMap' => $vendorDir . '/facade/ignition/src/Support/ComposerClassMap.php',
     'Facade\\Ignition\\Support\\FakeComposer' => $vendorDir . '/facade/ignition/src/Support/FakeComposer.php',
     'Facade\\Ignition\\Support\\LaravelVersion' => $vendorDir . '/facade/ignition/src/Support/LaravelVersion.php',
-<<<<<<< Updated upstream
-=======
     'Facade\\Ignition\\Support\\LivewireComponentParser' => $vendorDir . '/facade/ignition/src/Support/LivewireComponentParser.php',
->>>>>>> Stashed changes
     'Facade\\Ignition\\Support\\Packagist\\Package' => $vendorDir . '/facade/ignition/src/Support/Packagist/Package.php',
     'Facade\\Ignition\\Support\\Packagist\\Packagist' => $vendorDir . '/facade/ignition/src/Support/Packagist/Packagist.php',
     'Facade\\Ignition\\Support\\SentReports' => $vendorDir . '/facade/ignition/src/Support/SentReports.php',
@@ -1881,11 +1826,8 @@ return array(
     'Illuminate\\Database\\Eloquent\\Casts\\AsCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsCollection.php',
     'Illuminate\\Database\\Eloquent\\Casts\\AsEncryptedArrayObject' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsEncryptedArrayObject.php',
     'Illuminate\\Database\\Eloquent\\Casts\\AsEncryptedCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsEncryptedCollection.php',
-<<<<<<< Updated upstream
-=======
     'Illuminate\\Database\\Eloquent\\Casts\\AsStringable' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/AsStringable.php',
     'Illuminate\\Database\\Eloquent\\Casts\\Attribute' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Casts/Attribute.php',
->>>>>>> Stashed changes
     'Illuminate\\Database\\Eloquent\\Collection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Collection.php',
     'Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php',
     'Illuminate\\Database\\Eloquent\\Concerns\\HasAttributes' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php',
@@ -1897,10 +1839,7 @@ return array(
     'Illuminate\\Database\\Eloquent\\Concerns\\QueriesRelationships' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.php',
     'Illuminate\\Database\\Eloquent\\Factories\\BelongsToManyRelationship' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/BelongsToManyRelationship.php',
     'Illuminate\\Database\\Eloquent\\Factories\\BelongsToRelationship' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/BelongsToRelationship.php',
-<<<<<<< Updated upstream
-=======
     'Illuminate\\Database\\Eloquent\\Factories\\CrossJoinSequence' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/CrossJoinSequence.php',
->>>>>>> Stashed changes
     'Illuminate\\Database\\Eloquent\\Factories\\Factory' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php',
     'Illuminate\\Database\\Eloquent\\Factories\\HasFactory' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/HasFactory.php',
     'Illuminate\\Database\\Eloquent\\Factories\\Relationship' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Relationship.php',
@@ -2151,10 +2090,7 @@ return array(
     'Illuminate\\Foundation\\Testing\\RefreshDatabase' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/RefreshDatabase.php',
     'Illuminate\\Foundation\\Testing\\RefreshDatabaseState' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/RefreshDatabaseState.php',
     'Illuminate\\Foundation\\Testing\\TestCase' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php',
-<<<<<<< Updated upstream
-=======
     'Illuminate\\Foundation\\Testing\\Traits\\CanConfigureMigrationCommands' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/Traits/CanConfigureMigrationCommands.php',
->>>>>>> Stashed changes
     'Illuminate\\Foundation\\Testing\\WithFaker' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/WithFaker.php',
     'Illuminate\\Foundation\\Testing\\WithoutEvents' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/WithoutEvents.php',
     'Illuminate\\Foundation\\Testing\\WithoutMiddleware' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Testing/WithoutMiddleware.php',
@@ -2473,17 +2409,11 @@ return array(
     'Illuminate\\Support\\HtmlString' => $vendorDir . '/laravel/framework/src/Illuminate/Support/HtmlString.php',
     'Illuminate\\Support\\InteractsWithTime' => $vendorDir . '/laravel/framework/src/Illuminate/Support/InteractsWithTime.php',
     'Illuminate\\Support\\ItemNotFoundException' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/ItemNotFoundException.php',
-<<<<<<< Updated upstream
-    'Illuminate\\Support\\LazyCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/LazyCollection.php',
-    'Illuminate\\Support\\Manager' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Manager.php',
-    'Illuminate\\Support\\MessageBag' => $vendorDir . '/laravel/framework/src/Illuminate/Support/MessageBag.php',
-=======
     'Illuminate\\Support\\Js' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Js.php',
     'Illuminate\\Support\\LazyCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/LazyCollection.php',
     'Illuminate\\Support\\Manager' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Manager.php',
     'Illuminate\\Support\\MessageBag' => $vendorDir . '/laravel/framework/src/Illuminate/Support/MessageBag.php',
     'Illuminate\\Support\\MultipleInstanceManager' => $vendorDir . '/laravel/framework/src/Illuminate/Support/MultipleInstanceManager.php',
->>>>>>> Stashed changes
     'Illuminate\\Support\\MultipleItemsFoundException' => $vendorDir . '/laravel/framework/src/Illuminate/Collections/MultipleItemsFoundException.php',
     'Illuminate\\Support\\NamespacedItemResolver' => $vendorDir . '/laravel/framework/src/Illuminate/Support/NamespacedItemResolver.php',
     'Illuminate\\Support\\Optional' => $vendorDir . '/laravel/framework/src/Illuminate/Support/Optional.php',
@@ -2617,25 +2547,17 @@ return array(
     'Illuminate\\View\\ViewName' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewName.php',
     'Illuminate\\View\\ViewServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
-<<<<<<< Updated upstream
-    'Laravel\\Sanctum\\Contracts\\HasAbilities' => $vendorDir . '/laravel/sanctum/src/Contracts/HasAbilities.php',
-    'Laravel\\Sanctum\\Contracts\\HasApiTokens' => $vendorDir . '/laravel/sanctum/src/Contracts/HasApiTokens.php',
-=======
     'Laravel\\Sanctum\\Console\\Commands\\PruneExpired' => $vendorDir . '/laravel/sanctum/src/Console/Commands/PruneExpired.php',
     'Laravel\\Sanctum\\Contracts\\HasAbilities' => $vendorDir . '/laravel/sanctum/src/Contracts/HasAbilities.php',
     'Laravel\\Sanctum\\Contracts\\HasApiTokens' => $vendorDir . '/laravel/sanctum/src/Contracts/HasApiTokens.php',
     'Laravel\\Sanctum\\Events\\TokenAuthenticated' => $vendorDir . '/laravel/sanctum/src/Events/TokenAuthenticated.php',
     'Laravel\\Sanctum\\Exceptions\\MissingAbilityException' => $vendorDir . '/laravel/sanctum/src/Exceptions/MissingAbilityException.php',
->>>>>>> Stashed changes
     'Laravel\\Sanctum\\Exceptions\\MissingScopeException' => $vendorDir . '/laravel/sanctum/src/Exceptions/MissingScopeException.php',
     'Laravel\\Sanctum\\Guard' => $vendorDir . '/laravel/sanctum/src/Guard.php',
     'Laravel\\Sanctum\\HasApiTokens' => $vendorDir . '/laravel/sanctum/src/HasApiTokens.php',
     'Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController' => $vendorDir . '/laravel/sanctum/src/Http/Controllers/CsrfCookieController.php',
-<<<<<<< Updated upstream
-=======
     'Laravel\\Sanctum\\Http\\Middleware\\CheckAbilities' => $vendorDir . '/laravel/sanctum/src/Http/Middleware/CheckAbilities.php',
     'Laravel\\Sanctum\\Http\\Middleware\\CheckForAnyAbility' => $vendorDir . '/laravel/sanctum/src/Http/Middleware/CheckForAnyAbility.php',
->>>>>>> Stashed changes
     'Laravel\\Sanctum\\Http\\Middleware\\CheckForAnyScope' => $vendorDir . '/laravel/sanctum/src/Http/Middleware/CheckForAnyScope.php',
     'Laravel\\Sanctum\\Http\\Middleware\\CheckScopes' => $vendorDir . '/laravel/sanctum/src/Http/Middleware/CheckScopes.php',
     'Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful' => $vendorDir . '/laravel/sanctum/src/Http/Middleware/EnsureFrontendRequestsAreStateful.php',
@@ -2671,10 +2593,7 @@ return array(
     'Laravel\\Ui\\UiCommand' => $vendorDir . '/laravel/ui/src/UiCommand.php',
     'Laravel\\Ui\\UiServiceProvider' => $vendorDir . '/laravel/ui/src/UiServiceProvider.php',
     'League\\CommonMark\\CommonMarkConverter' => $vendorDir . '/league/commonmark/src/CommonMarkConverter.php',
-<<<<<<< Updated upstream
-=======
     'League\\CommonMark\\ConverterInterface' => $vendorDir . '/league/commonmark/src/ConverterInterface.php',
->>>>>>> Stashed changes
     'League\\CommonMark\\Delimiter\\Delimiter' => $vendorDir . '/league/commonmark/src/Delimiter/Delimiter.php',
     'League\\CommonMark\\Delimiter\\DelimiterInterface' => $vendorDir . '/league/commonmark/src/Delimiter/DelimiterInterface.php',
     'League\\CommonMark\\Delimiter\\DelimiterParser' => $vendorDir . '/league/commonmark/src/Delimiter/DelimiterParser.php',
@@ -2778,8 +2697,6 @@ return array(
     'League\\CommonMark\\Extension\\DescriptionList\\Renderer\\DescriptionTermRenderer' => $vendorDir . '/league/commonmark/src/Extension/DescriptionList/Renderer/DescriptionTermRenderer.php',
     'League\\CommonMark\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlExtension' => $vendorDir . '/league/commonmark/src/Extension/DisallowedRawHtml/DisallowedRawHtmlExtension.php',
     'League\\CommonMark\\Extension\\DisallowedRawHtml\\DisallowedRawHtmlRenderer' => $vendorDir . '/league/commonmark/src/Extension/DisallowedRawHtml/DisallowedRawHtmlRenderer.php',
-<<<<<<< Updated upstream
-=======
     'League\\CommonMark\\Extension\\Embed\\Bridge\\OscaroteroEmbedAdapter' => $vendorDir . '/league/commonmark/src/Extension/Embed/Bridge/OscaroteroEmbedAdapter.php',
     'League\\CommonMark\\Extension\\Embed\\DomainFilteringAdapter' => $vendorDir . '/league/commonmark/src/Extension/Embed/DomainFilteringAdapter.php',
     'League\\CommonMark\\Extension\\Embed\\Embed' => $vendorDir . '/league/commonmark/src/Extension/Embed/Embed.php',
@@ -2789,7 +2706,6 @@ return array(
     'League\\CommonMark\\Extension\\Embed\\EmbedProcessor' => $vendorDir . '/league/commonmark/src/Extension/Embed/EmbedProcessor.php',
     'League\\CommonMark\\Extension\\Embed\\EmbedRenderer' => $vendorDir . '/league/commonmark/src/Extension/Embed/EmbedRenderer.php',
     'League\\CommonMark\\Extension\\Embed\\EmbedStartParser' => $vendorDir . '/league/commonmark/src/Extension/Embed/EmbedStartParser.php',
->>>>>>> Stashed changes
     'League\\CommonMark\\Extension\\ExtensionInterface' => $vendorDir . '/league/commonmark/src/Extension/ExtensionInterface.php',
     'League\\CommonMark\\Extension\\ExternalLink\\ExternalLinkExtension' => $vendorDir . '/league/commonmark/src/Extension/ExternalLink/ExternalLinkExtension.php',
     'League\\CommonMark\\Extension\\ExternalLink\\ExternalLinkProcessor' => $vendorDir . '/league/commonmark/src/Extension/ExternalLink/ExternalLinkProcessor.php',
@@ -2811,10 +2727,7 @@ return array(
     'League\\CommonMark\\Extension\\Footnote\\Renderer\\FootnoteRefRenderer' => $vendorDir . '/league/commonmark/src/Extension/Footnote/Renderer/FootnoteRefRenderer.php',
     'League\\CommonMark\\Extension\\Footnote\\Renderer\\FootnoteRenderer' => $vendorDir . '/league/commonmark/src/Extension/Footnote/Renderer/FootnoteRenderer.php',
     'League\\CommonMark\\Extension\\FrontMatter\\Data\\FrontMatterDataParserInterface' => $vendorDir . '/league/commonmark/src/Extension/FrontMatter/Data/FrontMatterDataParserInterface.php',
-<<<<<<< Updated upstream
-=======
     'League\\CommonMark\\Extension\\FrontMatter\\Data\\LibYamlFrontMatterParser' => $vendorDir . '/league/commonmark/src/Extension/FrontMatter/Data/LibYamlFrontMatterParser.php',
->>>>>>> Stashed changes
     'League\\CommonMark\\Extension\\FrontMatter\\Data\\SymfonyYamlFrontMatterParser' => $vendorDir . '/league/commonmark/src/Extension/FrontMatter/Data/SymfonyYamlFrontMatterParser.php',
     'League\\CommonMark\\Extension\\FrontMatter\\Exception\\InvalidFrontMatterException' => $vendorDir . '/league/commonmark/src/Extension/FrontMatter/Exception/InvalidFrontMatterException.php',
     'League\\CommonMark\\Extension\\FrontMatter\\FrontMatterExtension' => $vendorDir . '/league/commonmark/src/Extension/FrontMatter/FrontMatterExtension.php',
@@ -2940,11 +2853,8 @@ return array(
     'League\\CommonMark\\Renderer\\Block\\DocumentRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Block/DocumentRenderer.php',
     'League\\CommonMark\\Renderer\\Block\\ParagraphRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Block/ParagraphRenderer.php',
     'League\\CommonMark\\Renderer\\ChildNodeRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/ChildNodeRendererInterface.php',
-<<<<<<< Updated upstream
-=======
     'League\\CommonMark\\Renderer\\DocumentRendererInterface' => $vendorDir . '/league/commonmark/src/Renderer/DocumentRendererInterface.php',
     'League\\CommonMark\\Renderer\\HtmlDecorator' => $vendorDir . '/league/commonmark/src/Renderer/HtmlDecorator.php',
->>>>>>> Stashed changes
     'League\\CommonMark\\Renderer\\HtmlRenderer' => $vendorDir . '/league/commonmark/src/Renderer/HtmlRenderer.php',
     'League\\CommonMark\\Renderer\\Inline\\NewlineRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Inline/NewlineRenderer.php',
     'League\\CommonMark\\Renderer\\Inline\\TextRenderer' => $vendorDir . '/league/commonmark/src/Renderer/Inline/TextRenderer.php',
@@ -2961,10 +2871,7 @@ return array(
     'League\\CommonMark\\Util\\UrlEncoder' => $vendorDir . '/league/commonmark/src/Util/UrlEncoder.php',
     'League\\CommonMark\\Util\\Xml' => $vendorDir . '/league/commonmark/src/Util/Xml.php',
     'League\\CommonMark\\Xml\\FallbackNodeXmlRenderer' => $vendorDir . '/league/commonmark/src/Xml/FallbackNodeXmlRenderer.php',
-<<<<<<< Updated upstream
-=======
     'League\\CommonMark\\Xml\\MarkdownToXmlConverter' => $vendorDir . '/league/commonmark/src/Xml/MarkdownToXmlConverter.php',
->>>>>>> Stashed changes
     'League\\CommonMark\\Xml\\XmlNodeRendererInterface' => $vendorDir . '/league/commonmark/src/Xml/XmlNodeRendererInterface.php',
     'League\\CommonMark\\Xml\\XmlRenderer' => $vendorDir . '/league/commonmark/src/Xml/XmlRenderer.php',
     'League\\Config\\Configuration' => $vendorDir . '/league/config/src/Configuration.php',
@@ -4019,104 +3926,7 @@ return array(
     'PhpParser\\Parser\\Tokens' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Parser/Tokens.php',
     'PhpParser\\PrettyPrinterAbstract' => $vendorDir . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
     'PhpParser\\PrettyPrinter\\Standard' => $vendorDir . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
-<<<<<<< Updated upstream
-    'Prophecy\\Argument' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument.php',
-    'Prophecy\\Argument\\ArgumentsWildcard' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
-    'Prophecy\\Argument\\Token\\AnyValueToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
-    'Prophecy\\Argument\\Token\\AnyValuesToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValuesToken.php',
-    'Prophecy\\Argument\\Token\\ApproximateValueToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ApproximateValueToken.php',
-    'Prophecy\\Argument\\Token\\ArrayCountToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ArrayCountToken.php',
-    'Prophecy\\Argument\\Token\\ArrayEntryToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ArrayEntryToken.php',
-    'Prophecy\\Argument\\Token\\ArrayEveryEntryToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ArrayEveryEntryToken.php',
-    'Prophecy\\Argument\\Token\\CallbackToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/CallbackToken.php',
-    'Prophecy\\Argument\\Token\\ExactValueToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ExactValueToken.php',
-    'Prophecy\\Argument\\Token\\IdenticalValueToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/IdenticalValueToken.php',
-    'Prophecy\\Argument\\Token\\InArrayToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/InArrayToken.php',
-    'Prophecy\\Argument\\Token\\LogicalAndToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/LogicalAndToken.php',
-    'Prophecy\\Argument\\Token\\LogicalNotToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/LogicalNotToken.php',
-    'Prophecy\\Argument\\Token\\NotInArrayToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/NotInArrayToken.php',
-    'Prophecy\\Argument\\Token\\ObjectStateToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/ObjectStateToken.php',
-    'Prophecy\\Argument\\Token\\StringContainsToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/StringContainsToken.php',
-    'Prophecy\\Argument\\Token\\TokenInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/TokenInterface.php',
-    'Prophecy\\Argument\\Token\\TypeToken' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/Token/TypeToken.php',
-    'Prophecy\\Call\\Call' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Call/Call.php',
-    'Prophecy\\Call\\CallCenter' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Call/CallCenter.php',
-    'Prophecy\\Comparator\\ClosureComparator' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Comparator/ClosureComparator.php',
-    'Prophecy\\Comparator\\Factory' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Comparator/Factory.php',
-    'Prophecy\\Comparator\\ProphecyComparator' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Comparator/ProphecyComparator.php',
-    'Prophecy\\Doubler\\CachedDoubler' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/CachedDoubler.php',
-    'Prophecy\\Doubler\\ClassPatch\\ClassPatchInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ClassPatchInterface.php',
-    'Prophecy\\Doubler\\ClassPatch\\DisableConstructorPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/DisableConstructorPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\HhvmExceptionPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/HhvmExceptionPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\KeywordPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/KeywordPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\MagicCallPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/MagicCallPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\ProphecySubjectPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ProphecySubjectPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\ReflectionClassNewInstancePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ReflectionClassNewInstancePatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\SplFileInfoPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/SplFileInfoPatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\ThrowablePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ThrowablePatch.php',
-    'Prophecy\\Doubler\\ClassPatch\\TraversablePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/TraversablePatch.php',
-    'Prophecy\\Doubler\\DoubleInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/DoubleInterface.php',
-    'Prophecy\\Doubler\\Doubler' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Doubler.php',
-    'Prophecy\\Doubler\\Generator\\ClassCodeGenerator' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/ClassCodeGenerator.php',
-    'Prophecy\\Doubler\\Generator\\ClassCreator' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/ClassCreator.php',
-    'Prophecy\\Doubler\\Generator\\ClassMirror' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/ClassMirror.php',
-    'Prophecy\\Doubler\\Generator\\Node\\ArgumentNode' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/ArgumentNode.php',
-    'Prophecy\\Doubler\\Generator\\Node\\ArgumentTypeNode' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/ArgumentTypeNode.php',
-    'Prophecy\\Doubler\\Generator\\Node\\ClassNode' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/ClassNode.php',
-    'Prophecy\\Doubler\\Generator\\Node\\MethodNode' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/MethodNode.php',
-    'Prophecy\\Doubler\\Generator\\Node\\ReturnTypeNode' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/ReturnTypeNode.php',
-    'Prophecy\\Doubler\\Generator\\Node\\TypeNodeAbstract' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/TypeNodeAbstract.php',
-    'Prophecy\\Doubler\\Generator\\ReflectionInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/ReflectionInterface.php',
-    'Prophecy\\Doubler\\Generator\\TypeHintReference' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/TypeHintReference.php',
-    'Prophecy\\Doubler\\LazyDouble' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/LazyDouble.php',
-    'Prophecy\\Doubler\\NameGenerator' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/NameGenerator.php',
-    'Prophecy\\Exception\\Call\\UnexpectedCallException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Call/UnexpectedCallException.php',
-    'Prophecy\\Exception\\Doubler\\ClassCreatorException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/ClassCreatorException.php',
-    'Prophecy\\Exception\\Doubler\\ClassMirrorException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/ClassMirrorException.php',
-    'Prophecy\\Exception\\Doubler\\ClassNotFoundException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/ClassNotFoundException.php',
-    'Prophecy\\Exception\\Doubler\\DoubleException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/DoubleException.php',
-    'Prophecy\\Exception\\Doubler\\DoublerException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/DoublerException.php',
-    'Prophecy\\Exception\\Doubler\\InterfaceNotFoundException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/InterfaceNotFoundException.php',
-    'Prophecy\\Exception\\Doubler\\MethodNotExtendableException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/MethodNotExtendableException.php',
-    'Prophecy\\Exception\\Doubler\\MethodNotFoundException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/MethodNotFoundException.php',
-    'Prophecy\\Exception\\Doubler\\ReturnByReferenceException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Doubler/ReturnByReferenceException.php',
-    'Prophecy\\Exception\\Exception' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Exception.php',
-    'Prophecy\\Exception\\InvalidArgumentException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/InvalidArgumentException.php',
-    'Prophecy\\Exception\\Prediction\\AggregateException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/AggregateException.php',
-    'Prophecy\\Exception\\Prediction\\FailedPredictionException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/FailedPredictionException.php',
-    'Prophecy\\Exception\\Prediction\\NoCallsException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/NoCallsException.php',
-    'Prophecy\\Exception\\Prediction\\PredictionException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/PredictionException.php',
-    'Prophecy\\Exception\\Prediction\\UnexpectedCallsCountException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/UnexpectedCallsCountException.php',
-    'Prophecy\\Exception\\Prediction\\UnexpectedCallsException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prediction/UnexpectedCallsException.php',
-    'Prophecy\\Exception\\Prophecy\\MethodProphecyException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prophecy/MethodProphecyException.php',
-    'Prophecy\\Exception\\Prophecy\\ObjectProphecyException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prophecy/ObjectProphecyException.php',
-    'Prophecy\\Exception\\Prophecy\\ProphecyException' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Exception/Prophecy/ProphecyException.php',
-    'Prophecy\\PhpDocumentor\\ClassAndInterfaceTagRetriever' => $vendorDir . '/phpspec/prophecy/src/Prophecy/PhpDocumentor/ClassAndInterfaceTagRetriever.php',
-    'Prophecy\\PhpDocumentor\\ClassTagRetriever' => $vendorDir . '/phpspec/prophecy/src/Prophecy/PhpDocumentor/ClassTagRetriever.php',
-    'Prophecy\\PhpDocumentor\\LegacyClassTagRetriever' => $vendorDir . '/phpspec/prophecy/src/Prophecy/PhpDocumentor/LegacyClassTagRetriever.php',
-    'Prophecy\\PhpDocumentor\\MethodTagRetrieverInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/PhpDocumentor/MethodTagRetrieverInterface.php',
-    'Prophecy\\Prediction\\CallPrediction' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prediction/CallPrediction.php',
-    'Prophecy\\Prediction\\CallTimesPrediction' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prediction/CallTimesPrediction.php',
-    'Prophecy\\Prediction\\CallbackPrediction' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prediction/CallbackPrediction.php',
-    'Prophecy\\Prediction\\NoCallsPrediction' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prediction/NoCallsPrediction.php',
-    'Prophecy\\Prediction\\PredictionInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prediction/PredictionInterface.php',
-    'Prophecy\\Promise\\CallbackPromise' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Promise/CallbackPromise.php',
-    'Prophecy\\Promise\\PromiseInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Promise/PromiseInterface.php',
-    'Prophecy\\Promise\\ReturnArgumentPromise' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Promise/ReturnArgumentPromise.php',
-    'Prophecy\\Promise\\ReturnPromise' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Promise/ReturnPromise.php',
-    'Prophecy\\Promise\\ThrowPromise' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Promise/ThrowPromise.php',
-    'Prophecy\\Prophecy\\MethodProphecy' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/MethodProphecy.php',
-    'Prophecy\\Prophecy\\ObjectProphecy' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/ObjectProphecy.php',
-    'Prophecy\\Prophecy\\ProphecyInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/ProphecyInterface.php',
-    'Prophecy\\Prophecy\\ProphecySubjectInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/ProphecySubjectInterface.php',
-    'Prophecy\\Prophecy\\Revealer' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/Revealer.php',
-    'Prophecy\\Prophecy\\RevealerInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophecy/RevealerInterface.php',
-    'Prophecy\\Prophet' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Prophet.php',
-    'Prophecy\\Util\\ExportUtil' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Util/ExportUtil.php',
-    'Prophecy\\Util\\StringUtil' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Util/StringUtil.php',
-=======
     'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
->>>>>>> Stashed changes
     'ProtoneMedia\\LaravelCrossEloquentSearch\\ModelToSearchThrough' => $vendorDir . '/protonemedia/laravel-cross-eloquent-search/src/ModelToSearchThrough.php',
     'ProtoneMedia\\LaravelCrossEloquentSearch\\OrderByRelevanceException' => $vendorDir . '/protonemedia/laravel-cross-eloquent-search/src/OrderByRelevanceException.php',
     'ProtoneMedia\\LaravelCrossEloquentSearch\\Search' => $vendorDir . '/protonemedia/laravel-cross-eloquent-search/src/Search.php',
@@ -4344,10 +4154,7 @@ return array(
     'Psy\\VersionUpdater\\Installer' => $vendorDir . '/psy/psysh/src/VersionUpdater/Installer.php',
     'Psy\\VersionUpdater\\IntervalChecker' => $vendorDir . '/psy/psysh/src/VersionUpdater/IntervalChecker.php',
     'Psy\\VersionUpdater\\NoopChecker' => $vendorDir . '/psy/psysh/src/VersionUpdater/NoopChecker.php',
-<<<<<<< Updated upstream
-=======
     'Psy\\VersionUpdater\\SelfUpdate' => $vendorDir . '/psy/psysh/src/VersionUpdater/SelfUpdate.php',
->>>>>>> Stashed changes
     'Ramsey\\Collection\\AbstractArray' => $vendorDir . '/ramsey/collection/src/AbstractArray.php',
     'Ramsey\\Collection\\AbstractCollection' => $vendorDir . '/ramsey/collection/src/AbstractCollection.php',
     'Ramsey\\Collection\\AbstractSet' => $vendorDir . '/ramsey/collection/src/AbstractSet.php',
@@ -4434,10 +4241,7 @@ return array(
     'Ramsey\\Uuid\\Generator\\RandomLibAdapter' => $vendorDir . '/ramsey/uuid/src/Generator/RandomLibAdapter.php',
     'Ramsey\\Uuid\\Generator\\TimeGeneratorFactory' => $vendorDir . '/ramsey/uuid/src/Generator/TimeGeneratorFactory.php',
     'Ramsey\\Uuid\\Generator\\TimeGeneratorInterface' => $vendorDir . '/ramsey/uuid/src/Generator/TimeGeneratorInterface.php',
-<<<<<<< Updated upstream
-=======
     'Ramsey\\Uuid\\Generator\\UnixTimeGenerator' => $vendorDir . '/ramsey/uuid/src/Generator/UnixTimeGenerator.php',
->>>>>>> Stashed changes
     'Ramsey\\Uuid\\Guid\\Fields' => $vendorDir . '/ramsey/uuid/src/Guid/Fields.php',
     'Ramsey\\Uuid\\Guid\\Guid' => $vendorDir . '/ramsey/uuid/src/Guid/Guid.php',
     'Ramsey\\Uuid\\Guid\\GuidBuilder' => $vendorDir . '/ramsey/uuid/src/Guid/GuidBuilder.php',
@@ -4462,16 +4266,11 @@ return array(
     'Ramsey\\Uuid\\Provider\\Time\\SystemTimeProvider' => $vendorDir . '/ramsey/uuid/src/Provider/Time/SystemTimeProvider.php',
     'Ramsey\\Uuid\\Rfc4122\\Fields' => $vendorDir . '/ramsey/uuid/src/Rfc4122/Fields.php',
     'Ramsey\\Uuid\\Rfc4122\\FieldsInterface' => $vendorDir . '/ramsey/uuid/src/Rfc4122/FieldsInterface.php',
-<<<<<<< Updated upstream
-    'Ramsey\\Uuid\\Rfc4122\\NilTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/NilTrait.php',
-    'Ramsey\\Uuid\\Rfc4122\\NilUuid' => $vendorDir . '/ramsey/uuid/src/Rfc4122/NilUuid.php',
-=======
     'Ramsey\\Uuid\\Rfc4122\\MaxTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/MaxTrait.php',
     'Ramsey\\Uuid\\Rfc4122\\MaxUuid' => $vendorDir . '/ramsey/uuid/src/Rfc4122/MaxUuid.php',
     'Ramsey\\Uuid\\Rfc4122\\NilTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/NilTrait.php',
     'Ramsey\\Uuid\\Rfc4122\\NilUuid' => $vendorDir . '/ramsey/uuid/src/Rfc4122/NilUuid.php',
     'Ramsey\\Uuid\\Rfc4122\\TimeTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/TimeTrait.php',
->>>>>>> Stashed changes
     'Ramsey\\Uuid\\Rfc4122\\UuidBuilder' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidBuilder.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidInterface' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidInterface.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidV1' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV1.php',
@@ -4479,12 +4278,9 @@ return array(
     'Ramsey\\Uuid\\Rfc4122\\UuidV3' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV3.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidV4' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV4.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidV5' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV5.php',
-<<<<<<< Updated upstream
-=======
     'Ramsey\\Uuid\\Rfc4122\\UuidV6' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV6.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidV7' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV7.php',
     'Ramsey\\Uuid\\Rfc4122\\UuidV8' => $vendorDir . '/ramsey/uuid/src/Rfc4122/UuidV8.php',
->>>>>>> Stashed changes
     'Ramsey\\Uuid\\Rfc4122\\Validator' => $vendorDir . '/ramsey/uuid/src/Rfc4122/Validator.php',
     'Ramsey\\Uuid\\Rfc4122\\VariantTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/VariantTrait.php',
     'Ramsey\\Uuid\\Rfc4122\\VersionTrait' => $vendorDir . '/ramsey/uuid/src/Rfc4122/VersionTrait.php',
@@ -4717,14 +4513,11 @@ return array(
     'Symfony\\Component\\Console\\Command\\ListCommand' => $vendorDir . '/symfony/console/Command/ListCommand.php',
     'Symfony\\Component\\Console\\Command\\LockableTrait' => $vendorDir . '/symfony/console/Command/LockableTrait.php',
     'Symfony\\Component\\Console\\Command\\SignalableCommandInterface' => $vendorDir . '/symfony/console/Command/SignalableCommandInterface.php',
-<<<<<<< Updated upstream
-=======
     'Symfony\\Component\\Console\\Completion\\CompletionInput' => $vendorDir . '/symfony/console/Completion/CompletionInput.php',
     'Symfony\\Component\\Console\\Completion\\CompletionSuggestions' => $vendorDir . '/symfony/console/Completion/CompletionSuggestions.php',
     'Symfony\\Component\\Console\\Completion\\Output\\BashCompletionOutput' => $vendorDir . '/symfony/console/Completion/Output/BashCompletionOutput.php',
     'Symfony\\Component\\Console\\Completion\\Output\\CompletionOutputInterface' => $vendorDir . '/symfony/console/Completion/Output/CompletionOutputInterface.php',
     'Symfony\\Component\\Console\\Completion\\Suggestion' => $vendorDir . '/symfony/console/Completion/Suggestion.php',
->>>>>>> Stashed changes
     'Symfony\\Component\\Console\\ConsoleEvents' => $vendorDir . '/symfony/console/ConsoleEvents.php',
     'Symfony\\Component\\Console\\Cursor' => $vendorDir . '/symfony/console/Cursor.php',
     'Symfony\\Component\\Console\\DependencyInjection\\AddConsoleCommandPass' => $vendorDir . '/symfony/console/DependencyInjection/AddConsoleCommandPass.php',
@@ -4966,10 +4759,7 @@ return array(
     'Symfony\\Component\\HttpFoundation\\Session\\SessionBagInterface' => $vendorDir . '/symfony/http-foundation/Session/SessionBagInterface.php',
     'Symfony\\Component\\HttpFoundation\\Session\\SessionBagProxy' => $vendorDir . '/symfony/http-foundation/Session/SessionBagProxy.php',
     'Symfony\\Component\\HttpFoundation\\Session\\SessionFactory' => $vendorDir . '/symfony/http-foundation/Session/SessionFactory.php',
-<<<<<<< Updated upstream
-=======
     'Symfony\\Component\\HttpFoundation\\Session\\SessionFactoryInterface' => $vendorDir . '/symfony/http-foundation/Session/SessionFactoryInterface.php',
->>>>>>> Stashed changes
     'Symfony\\Component\\HttpFoundation\\Session\\SessionInterface' => $vendorDir . '/symfony/http-foundation/Session/SessionInterface.php',
     'Symfony\\Component\\HttpFoundation\\Session\\SessionUtils' => $vendorDir . '/symfony/http-foundation/Session/SessionUtils.php',
     'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\AbstractSessionHandler' => $vendorDir . '/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php',
@@ -5312,10 +5102,7 @@ return array(
     'Symfony\\Component\\String\\Slugger\\AsciiSlugger' => $vendorDir . '/symfony/string/Slugger/AsciiSlugger.php',
     'Symfony\\Component\\String\\Slugger\\SluggerInterface' => $vendorDir . '/symfony/string/Slugger/SluggerInterface.php',
     'Symfony\\Component\\String\\UnicodeString' => $vendorDir . '/symfony/string/UnicodeString.php',
-<<<<<<< Updated upstream
-=======
     'Symfony\\Component\\Translation\\CatalogueMetadataAwareInterface' => $vendorDir . '/symfony/translation/CatalogueMetadataAwareInterface.php',
->>>>>>> Stashed changes
     'Symfony\\Component\\Translation\\Catalogue\\AbstractOperation' => $vendorDir . '/symfony/translation/Catalogue/AbstractOperation.php',
     'Symfony\\Component\\Translation\\Catalogue\\MergeOperation' => $vendorDir . '/symfony/translation/Catalogue/MergeOperation.php',
     'Symfony\\Component\\Translation\\Catalogue\\OperationInterface' => $vendorDir . '/symfony/translation/Catalogue/OperationInterface.php',
@@ -5493,10 +5280,7 @@ return array(
     'Symfony\\Polyfill\\Php72\\Php72' => $vendorDir . '/symfony/polyfill-php72/Php72.php',
     'Symfony\\Polyfill\\Php73\\Php73' => $vendorDir . '/symfony/polyfill-php73/Php73.php',
     'Symfony\\Polyfill\\Php80\\Php80' => $vendorDir . '/symfony/polyfill-php80/Php80.php',
-<<<<<<< Updated upstream
-=======
     'Symfony\\Polyfill\\Php80\\PhpToken' => $vendorDir . '/symfony/polyfill-php80/PhpToken.php',
->>>>>>> Stashed changes
     'Symfony\\Polyfill\\Php81\\Php81' => $vendorDir . '/symfony/polyfill-php81/Php81.php',
     'Tests\\CreatesApplication' => $baseDir . '/tests/CreatesApplication.php',
     'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
@@ -5567,100 +5351,5 @@ return array(
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-<<<<<<< Updated upstream
-    'phpDocumentor\\Reflection\\DocBlock' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
-    'phpDocumentor\\Reflection\\DocBlockFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
-    'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Description' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Description.php',
-    'phpDocumentor\\Reflection\\DocBlock\\DescriptionFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/DescriptionFactory.php',
-    'phpDocumentor\\Reflection\\DocBlock\\ExampleFinder' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/ExampleFinder.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Serializer' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Serializer.php',
-    'phpDocumentor\\Reflection\\DocBlock\\StandardTagFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/StandardTagFactory.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tag' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tag.php',
-    'phpDocumentor\\Reflection\\DocBlock\\TagFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/TagFactory.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Author' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Author.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\BaseTag' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/BaseTag.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Covers' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Covers.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Deprecated' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Deprecated.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Example' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Example.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Factory\\StaticMethod' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Factory/StaticMethod.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter\\AlignFormatter' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter/AlignFormatter.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Formatter\\PassthroughFormatter' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Formatter/PassthroughFormatter.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Generic' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Generic.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\InvalidTag' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/InvalidTag.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Link' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Link.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Method' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Method.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Param' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Param.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Property' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Property.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\PropertyRead' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/PropertyRead.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\PropertyWrite' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/PropertyWrite.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Fqsen' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Fqsen.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Reference' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Reference.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Reference\\Url' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Reference/Url.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Return_' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Return_.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\See' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/See.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Since' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Since.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Source' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Source.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\TagWithType' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/TagWithType.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Throws' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Throws.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Uses' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Uses.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Var_' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Var_.php',
-    'phpDocumentor\\Reflection\\DocBlock\\Tags\\Version' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock/Tags/Version.php',
-    'phpDocumentor\\Reflection\\Element' => $vendorDir . '/phpdocumentor/reflection-common/src/Element.php',
-    'phpDocumentor\\Reflection\\Exception\\PcreException' => $vendorDir . '/phpdocumentor/reflection-docblock/src/Exception/PcreException.php',
-    'phpDocumentor\\Reflection\\File' => $vendorDir . '/phpdocumentor/reflection-common/src/File.php',
-    'phpDocumentor\\Reflection\\Fqsen' => $vendorDir . '/phpdocumentor/reflection-common/src/Fqsen.php',
-    'phpDocumentor\\Reflection\\FqsenResolver' => $vendorDir . '/phpdocumentor/type-resolver/src/FqsenResolver.php',
-    'phpDocumentor\\Reflection\\Location' => $vendorDir . '/phpdocumentor/reflection-common/src/Location.php',
-    'phpDocumentor\\Reflection\\Project' => $vendorDir . '/phpdocumentor/reflection-common/src/Project.php',
-    'phpDocumentor\\Reflection\\ProjectFactory' => $vendorDir . '/phpdocumentor/reflection-common/src/ProjectFactory.php',
-    'phpDocumentor\\Reflection\\PseudoType' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoType.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\CallableString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/CallableString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\False_' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/False_.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\HtmlEscapedString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/HtmlEscapedString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\LiteralString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/LiteralString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\LowercaseString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/LowercaseString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\NonEmptyLowercaseString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/NonEmptyLowercaseString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\NonEmptyString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/NonEmptyString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\NumericString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/NumericString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\PositiveInteger' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/PositiveInteger.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\TraitString' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/TraitString.php',
-    'phpDocumentor\\Reflection\\PseudoTypes\\True_' => $vendorDir . '/phpdocumentor/type-resolver/src/PseudoTypes/True_.php',
-    'phpDocumentor\\Reflection\\Type' => $vendorDir . '/phpdocumentor/type-resolver/src/Type.php',
-    'phpDocumentor\\Reflection\\TypeResolver' => $vendorDir . '/phpdocumentor/type-resolver/src/TypeResolver.php',
-    'phpDocumentor\\Reflection\\Types\\AbstractList' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/AbstractList.php',
-    'phpDocumentor\\Reflection\\Types\\AggregatedType' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/AggregatedType.php',
-    'phpDocumentor\\Reflection\\Types\\ArrayKey' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/ArrayKey.php',
-    'phpDocumentor\\Reflection\\Types\\Array_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Array_.php',
-    'phpDocumentor\\Reflection\\Types\\Boolean' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Boolean.php',
-    'phpDocumentor\\Reflection\\Types\\Callable_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Callable_.php',
-    'phpDocumentor\\Reflection\\Types\\ClassString' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/ClassString.php',
-    'phpDocumentor\\Reflection\\Types\\Collection' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Collection.php',
-    'phpDocumentor\\Reflection\\Types\\Compound' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Compound.php',
-    'phpDocumentor\\Reflection\\Types\\Context' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Context.php',
-    'phpDocumentor\\Reflection\\Types\\ContextFactory' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/ContextFactory.php',
-    'phpDocumentor\\Reflection\\Types\\Expression' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Expression.php',
-    'phpDocumentor\\Reflection\\Types\\Float_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Float_.php',
-    'phpDocumentor\\Reflection\\Types\\Integer' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Integer.php',
-    'phpDocumentor\\Reflection\\Types\\InterfaceString' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/InterfaceString.php',
-    'phpDocumentor\\Reflection\\Types\\Intersection' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Intersection.php',
-    'phpDocumentor\\Reflection\\Types\\Iterable_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Iterable_.php',
-    'phpDocumentor\\Reflection\\Types\\Mixed_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Mixed_.php',
-    'phpDocumentor\\Reflection\\Types\\Never_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Never_.php',
-    'phpDocumentor\\Reflection\\Types\\Null_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Null_.php',
-    'phpDocumentor\\Reflection\\Types\\Nullable' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Nullable.php',
-    'phpDocumentor\\Reflection\\Types\\Object_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Object_.php',
-    'phpDocumentor\\Reflection\\Types\\Parent_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Parent_.php',
-    'phpDocumentor\\Reflection\\Types\\Resource_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Resource_.php',
-    'phpDocumentor\\Reflection\\Types\\Scalar' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Scalar.php',
-    'phpDocumentor\\Reflection\\Types\\Self_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Self_.php',
-    'phpDocumentor\\Reflection\\Types\\Static_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Static_.php',
-    'phpDocumentor\\Reflection\\Types\\String_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/String_.php',
-    'phpDocumentor\\Reflection\\Types\\This' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/This.php',
-    'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
-    'phpDocumentor\\Reflection\\Utils' => $vendorDir . '/phpdocumentor/reflection-docblock/src/Utils.php',
-=======
->>>>>>> Stashed changes
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
 );

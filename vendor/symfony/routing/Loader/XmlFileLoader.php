@@ -317,7 +317,6 @@ class XmlFileLoader extends FileLoader
 
                 throw new \InvalidArgumentException(sprintf('The routing file "%s" must not specify both the "stateless" attribute and the defaults key "_stateless" for ', $path).$name);
             }
-<<<<<<< Updated upstream
 
             $defaults['_stateless'] = XmlUtils::phpize($stateless);
         }
@@ -326,16 +325,6 @@ class XmlFileLoader extends FileLoader
             $hosts = $node->hasAttribute('host') ? $node->getAttribute('host') : null;
         }
 
-=======
-
-            $defaults['_stateless'] = XmlUtils::phpize($stateless);
-        }
-
-        if (!$hosts) {
-            $hosts = $node->hasAttribute('host') ? $node->getAttribute('host') : null;
-        }
-
->>>>>>> Stashed changes
         return [$defaults, $requirements, $options, $condition, $paths, $prefixes, $hosts];
     }
 

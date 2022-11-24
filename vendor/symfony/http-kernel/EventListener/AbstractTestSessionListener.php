@@ -30,11 +30,8 @@ trigger_deprecation('symfony/http-kernel', '5.4', '"%s" is deprecated use "%s" i
  * @author Fabien Potencier <fabien@symfony.com>
  *
  * @internal
-<<<<<<< Updated upstream
-=======
  *
  * @deprecated since Symfony 5.4, use AbstractSessionListener instead
->>>>>>> Stashed changes
  */
 abstract class AbstractTestSessionListener implements EventSubscriberInterface
 {

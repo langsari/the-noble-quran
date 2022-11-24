@@ -23,11 +23,7 @@ class PhpFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
-=======
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
->>>>>>> Stashed changes
     {
         return "<?php\n\nreturn ".var_export($messages->all($domain), true).";\n";
     }

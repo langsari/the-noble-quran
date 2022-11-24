@@ -35,22 +35,11 @@ use Symfony\Component\Translation\Util\XliffUtils;
 #[AsCommand(name: 'lint:xliff', description: 'Lint an XLIFF file and outputs encountered errors')]
 class XliffLintCommand extends Command
 {
-<<<<<<< Updated upstream
-    protected static $defaultName = 'lint:xliff';
-    protected static $defaultDescription = 'Lint an XLIFF file and outputs encountered errors';
-
-    private $format;
-    private $displayCorrectFiles;
-    private $directoryIteratorProvider;
-    private $isReadableProvider;
-    private $requireStrictFileNames;
-=======
     private string $format;
     private bool $displayCorrectFiles;
     private ?\Closure $directoryIteratorProvider;
     private ?\Closure $isReadableProvider;
     private bool $requireStrictFileNames;
->>>>>>> Stashed changes
 
     public function __construct(string $name = null, callable $directoryIteratorProvider = null, callable $isReadableProvider = null, bool $requireStrictFileNames = true)
     {
@@ -67,10 +56,6 @@ class XliffLintCommand extends Command
     protected function configure()
     {
         $this
-<<<<<<< Updated upstream
-            ->setDescription(self::$defaultDescription)
-=======
->>>>>>> Stashed changes
             ->addArgument('filename', InputArgument::IS_ARRAY, 'A file, a directory or "-" for reading from STDIN')
             ->addOption('format', null, InputOption::VALUE_REQUIRED, 'The output format')
             ->setHelp(<<<EOF

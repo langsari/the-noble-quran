@@ -289,11 +289,7 @@ class RequestContext
     /**
      * Gets a parameter value.
      *
-<<<<<<< Updated upstream
-     * @return mixed The parameter value or null if nonexistent
-=======
      * @return mixed
->>>>>>> Stashed changes
      */
     public function getParameter(string $name)
     {
@@ -303,11 +299,7 @@ class RequestContext
     /**
      * Checks if a parameter value is set for the given parameter.
      *
-<<<<<<< Updated upstream
-     * @return bool True if the parameter value is set, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasParameter(string $name)
     {

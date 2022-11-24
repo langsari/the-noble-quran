@@ -30,11 +30,7 @@ use Psr\EventDispatcher\StoppableEventInterface;
  */
 class Event implements StoppableEventInterface
 {
-<<<<<<< Updated upstream
-    private $propagationStopped = false;
-=======
     private bool $propagationStopped = false;
->>>>>>> Stashed changes
 
     /**
      * {@inheritdoc}

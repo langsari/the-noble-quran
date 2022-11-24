@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< Updated upstream
-=======
 5.4
 ---
 
@@ -12,7 +10,6 @@ CHANGELOG
  * Add support for configuring log level, and status code by exception class
  * Allow ignoring "kernel.reset" methods that don't exist with "on_invalid" attribute
 
->>>>>>> Stashed changes
 5.3
 ---
 

@@ -183,11 +183,7 @@ class Route implements \Serializable
     /**
      * Checks if a scheme requirement has been set.
      *
-<<<<<<< Updated upstream
-     * @return bool true if the scheme requirement exists, otherwise false
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasScheme(string $scheme)
     {
@@ -270,13 +266,9 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return mixed The option value or null when not given
-=======
      * Returns the option value or null when not found.
      *
      * @return mixed
->>>>>>> Stashed changes
      */
     public function getOption(string $name)
     {
@@ -284,11 +276,7 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return bool true if the option is set, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasOption(string $name)
     {
@@ -331,11 +319,7 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return mixed The default value or null when not given
-=======
      * @return mixed
->>>>>>> Stashed changes
      */
     public function getDefault(string $name)
     {
@@ -343,11 +327,7 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return bool true if the default value is set, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasDefault(string $name)
     {
@@ -409,11 +389,7 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return string|null The regex or null when not given
-=======
      * @return string|null
->>>>>>> Stashed changes
      */
     public function getRequirement(string $key)
     {
@@ -421,11 +397,7 @@ class Route implements \Serializable
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return bool true if a requirement is specified, false otherwise
-=======
      * @return bool
->>>>>>> Stashed changes
      */
     public function hasRequirement(string $key)
     {

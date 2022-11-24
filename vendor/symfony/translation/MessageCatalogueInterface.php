@@ -39,11 +39,7 @@ interface MessageCatalogueInterface
      *
      * @param string $domain The domain name
      */
-<<<<<<< Updated upstream
-    public function all(string $domain = null);
-=======
     public function all(string $domain = null): array;
->>>>>>> Stashed changes
 
     /**
      * Sets a message translation.
@@ -60,11 +56,7 @@ interface MessageCatalogueInterface
      * @param string $id     The message id
      * @param string $domain The domain name
      */
-<<<<<<< Updated upstream
-    public function has(string $id, string $domain = 'messages');
-=======
     public function has(string $id, string $domain = 'messages'): bool;
->>>>>>> Stashed changes
 
     /**
      * Checks if a message has a translation (it does not take into account the fallback mechanism).
@@ -72,11 +64,7 @@ interface MessageCatalogueInterface
      * @param string $id     The message id
      * @param string $domain The domain name
      */
-<<<<<<< Updated upstream
-    public function defines(string $id, string $domain = 'messages');
-=======
     public function defines(string $id, string $domain = 'messages'): bool;
->>>>>>> Stashed changes
 
     /**
      * Gets a message translation.
@@ -84,11 +72,7 @@ interface MessageCatalogueInterface
      * @param string $id     The message id
      * @param string $domain The domain name
      */
-<<<<<<< Updated upstream
-    public function get(string $id, string $domain = 'messages');
-=======
     public function get(string $id, string $domain = 'messages'): string;
->>>>>>> Stashed changes
 
     /**
      * Sets translations for a given domain.

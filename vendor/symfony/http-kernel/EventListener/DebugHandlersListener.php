@@ -49,11 +49,7 @@ class DebugHandlersListener implements EventSubscriberInterface
      * @param bool           $scream           Enables/disables screaming mode, where even silenced errors are logged
      * @param bool           $scope            Enables/disables scoping mode
      */
-<<<<<<< Updated upstream
-    public function __construct(callable $exceptionHandler = null, LoggerInterface $logger = null, $levels = \E_ALL, ?int $throwAt = \E_ALL, bool $scream = true, $fileLinkFormat = null, bool $scope = true, LoggerInterface $deprecationLogger = null)
-=======
     public function __construct(callable $exceptionHandler = null, LoggerInterface $logger = null, $levels = \E_ALL, ?int $throwAt = \E_ALL, bool $scream = true, $scope = true, $deprecationLogger = null, $fileLinkFormat = null)
->>>>>>> Stashed changes
     {
         if (!\is_bool($scope)) {
             trigger_deprecation('symfony/http-kernel', '5.4', 'Passing a $fileLinkFormat is deprecated.');
@@ -105,19 +101,11 @@ class DebugHandlersListener implements EventSubscriberInterface
                     }
                 } else {
                     $levels = $this->levels;
-<<<<<<< Updated upstream
                 }
 
                 if ($this->scream) {
                     $handler->screamAt($levels);
                 }
-=======
-                }
-
-                if ($this->scream) {
-                    $handler->screamAt($levels);
-                }
->>>>>>> Stashed changes
                 if ($this->scope) {
                     $handler->scopeAt($levels & ~\E_USER_DEPRECATED & ~\E_DEPRECATED);
                 } else {

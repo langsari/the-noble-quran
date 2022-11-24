@@ -62,11 +62,7 @@ interface KernelInterface extends HttpKernelInterface
     /**
      * Returns a bundle.
      *
-<<<<<<< Updated upstream
-     * @return BundleInterface A BundleInterface instance
-=======
      * @return BundleInterface
->>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException when the bundle is not enabled
      */
@@ -84,11 +80,7 @@ interface KernelInterface extends HttpKernelInterface
      * where BundleName is the name of the bundle
      * and the remaining part is the relative path in the bundle.
      *
-<<<<<<< Updated upstream
-     * @return string The absolute path of the resource
-=======
      * @return string
->>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException if the file cannot be found or the name is not valid
      * @throws \RuntimeException         if the name contains invalid/unsafe characters
@@ -137,11 +129,7 @@ interface KernelInterface extends HttpKernelInterface
      * For caches and artifacts that can be warmed at compile-time and deployed as read-only,
      * use the new "build directory" returned by the {@see getBuildDir()} method.
      *
-<<<<<<< Updated upstream
-     * @return string The cache directory
-=======
      * @return string
->>>>>>> Stashed changes
      */
     public function getCacheDir();
 

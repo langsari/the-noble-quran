@@ -12,11 +12,7 @@
                 $class = substr($exception['class'], $separator);
                 ?>
                 <?php if ('' === $class) { ?>
-<<<<<<< Updated upstream
-                    </br>
-=======
                     <br>
->>>>>>> Stashed changes
                 <?php } else { ?>
                     <h3 class="trace-class">
                         <?php if ('' !== $namespace) { ?>

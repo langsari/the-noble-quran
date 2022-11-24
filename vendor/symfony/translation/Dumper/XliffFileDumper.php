@@ -29,11 +29,7 @@ class XliffFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
-=======
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
->>>>>>> Stashed changes
     {
         $xliffVersion = '1.2';
         if (\array_key_exists('xliff_version', $options)) {

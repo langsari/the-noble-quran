@@ -36,11 +36,7 @@ class ImmutableEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function addListener(string $eventName, $listener, int $priority = 0)
-=======
     public function addListener(string $eventName, callable|array $listener, int $priority = 0)
->>>>>>> Stashed changes
     {
         throw new \BadMethodCallException('Unmodifiable event dispatchers must not be modified.');
     }
@@ -56,11 +52,7 @@ class ImmutableEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function removeListener(string $eventName, $listener)
-=======
     public function removeListener(string $eventName, callable|array $listener)
->>>>>>> Stashed changes
     {
         throw new \BadMethodCallException('Unmodifiable event dispatchers must not be modified.');
     }
@@ -76,11 +68,7 @@ class ImmutableEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListeners(string $eventName = null)
-=======
     public function getListeners(string $eventName = null): array
->>>>>>> Stashed changes
     {
         return $this->dispatcher->getListeners($eventName);
     }
@@ -88,11 +76,7 @@ class ImmutableEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListenerPriority(string $eventName, $listener)
-=======
     public function getListenerPriority(string $eventName, callable|array $listener): ?int
->>>>>>> Stashed changes
     {
         return $this->dispatcher->getListenerPriority($eventName, $listener);
     }
@@ -100,11 +84,7 @@ class ImmutableEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function hasListeners(string $eventName = null)
-=======
     public function hasListeners(string $eventName = null): bool
->>>>>>> Stashed changes
     {
         return $this->dispatcher->hasListeners($eventName);
     }

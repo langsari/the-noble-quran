@@ -18,28 +18,6 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class TranslatorPass implements CompilerPassInterface
 {
-<<<<<<< Updated upstream
-    private $translatorServiceId;
-    private $readerServiceId;
-    private $loaderTag;
-    private $debugCommandServiceId;
-    private $updateCommandServiceId;
-
-    public function __construct(string $translatorServiceId = 'translator.default', string $readerServiceId = 'translation.reader', string $loaderTag = 'translation.loader', string $debugCommandServiceId = 'console.command.translation_debug', string $updateCommandServiceId = 'console.command.translation_update')
-    {
-        if (0 < \func_num_args()) {
-            trigger_deprecation('symfony/translation', '5.3', 'Configuring "%s" is deprecated.', __CLASS__);
-        }
-
-        $this->translatorServiceId = $translatorServiceId;
-        $this->readerServiceId = $readerServiceId;
-        $this->loaderTag = $loaderTag;
-        $this->debugCommandServiceId = $debugCommandServiceId;
-        $this->updateCommandServiceId = $updateCommandServiceId;
-    }
-
-=======
->>>>>>> Stashed changes
     public function process(ContainerBuilder $container)
     {
         if (!$container->hasDefinition('translator.default')) {
@@ -76,13 +54,8 @@ class TranslatorPass implements CompilerPassInterface
         }
 
         $paths = array_keys($container->getDefinition('twig.template_iterator')->getArgument(1));
-<<<<<<< Updated upstream
-        if ($container->hasDefinition($this->debugCommandServiceId)) {
-            $definition = $container->getDefinition($this->debugCommandServiceId);
-=======
         if ($container->hasDefinition('console.command.translation_debug')) {
             $definition = $container->getDefinition('console.command.translation_debug');
->>>>>>> Stashed changes
             $definition->replaceArgument(4, $container->getParameter('twig.default_path'));
 
             if (\count($definition->getArguments()) > 6) {

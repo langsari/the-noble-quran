@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< Updated upstream
-=======
 6.1
 ---
 
@@ -16,7 +14,6 @@ CHANGELOG
    running the XLIFF linter command in a Github Actions environment.
  * Translation providers are not experimental anymore
 
->>>>>>> Stashed changes
 5.3
 ---
 

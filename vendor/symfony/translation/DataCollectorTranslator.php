@@ -43,11 +43,7 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null)
-=======
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
->>>>>>> Stashed changes
     {
         $trans = $this->translator->trans($id = (string) $id, $parameters, $domain, $locale);
         $this->collectMessage($locale, $domain, $id, $trans, $parameters);
@@ -66,11 +62,7 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getLocale()
-=======
     public function getLocale(): string
->>>>>>> Stashed changes
     {
         return $this->translator->getLocale();
     }
@@ -78,11 +70,7 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getCatalogue(string $locale = null)
-=======
     public function getCatalogue(string $locale = null): MessageCatalogueInterface
->>>>>>> Stashed changes
     {
         return $this->translator->getCatalogue($locale);
     }
@@ -100,11 +88,7 @@ class DataCollectorTranslator implements TranslatorInterface, TranslatorBagInter
      *
      * @return string[]
      */
-<<<<<<< Updated upstream
-    public function warmUp(string $cacheDir)
-=======
     public function warmUp(string $cacheDir): array
->>>>>>> Stashed changes
     {
         if ($this->translator instanceof WarmableInterface) {
             return (array) $this->translator->warmUp($cacheDir);

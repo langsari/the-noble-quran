@@ -80,11 +80,7 @@
      direction: rtl;
      font-size: 26px;
      line-height: 200%;
-<<<<<<< Updated upstream
-     color: #FFFFFF;
-=======
      color: #000000;
->>>>>>> Stashed changes
    }
    .highlight{ 
   background:#00FF00; 
@@ -97,27 +93,12 @@
       </style>
        <br>
     <br>
-<<<<<<< Updated upstream
- <div style = background-color:#00000; class="search-area">
-=======
  <div style = background-color:#ffffff; class="search-area">
->>>>>>> Stashed changes
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>
 <br>
 
-<<<<<<< Updated upstream
-<ul class="list-group bg-white list-group-horizontal  ">
-
-<!-- read quran-->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal">
-  โหมดอ่านอัลกุรอาน
-</button>
-
-<!-- Modal -->
-=======
 <ul class="list-group list-group-horizontal justify-content-center">
 <!--
 <ul class="list-group bg-white list-group-horizontal  ">
@@ -131,7 +112,6 @@
 -->
 <!-- Modal -->
 <!--
->>>>>>> Stashed changes
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -139,14 +119,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
       </div>
-<<<<<<< Updated upstream
-      <div class="modal-body">
-       
-
-=======
 
       <div class="modal-body">
->>>>>>> Stashed changes
       <div class="quran-font-intro ">
         <p>
         @foreach($arabics->arabic as $arabic )
@@ -163,16 +137,6 @@
     </div>
   </div>
 </div>
-<<<<<<< Updated upstream
-
-<!-- tafseer -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal2">
-  ตัฟซีรอัลกุรอาน
-</button>
-
-<!-- Modal -->
-=======
 -->
 <!-- tafseer -->
 <!-- Button trigger modal -->
@@ -183,7 +147,6 @@
 -->
 <!-- Modal -->
 <!--
->>>>>>> Stashed changes
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -217,14 +180,9 @@
     </div>
   </div>
 </div>
-<<<<<<< Updated upstream
-
-     <!--VDO Tafseer -->
-=======
 -->
      <!--VDO Tafseer -->
      <!--
->>>>>>> Stashed changes
   <div class="bs-example">
             <a href="#Geeks2"
                class="btn  btn-dark"
@@ -275,11 +233,7 @@
             });
         });
     </script>
-<<<<<<< Updated upstream
-
-=======
 -->
->>>>>>> Stashed changes
 
 <!-- dropdown surah&& ayah : can link-->
     <div class="col-md-3 ">
@@ -309,11 +263,7 @@
      urlmenu.onchange = function() {
       window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
   };</script> 
-<<<<<<< Updated upstream
-
-=======
   
->>>>>>> Stashed changes
 </ul>
 <br>
 <br>
@@ -321,8 +271,6 @@
          <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
          <br> 
          
-<<<<<<< Updated upstream
-=======
          <div class=" list-group list-group-horizontal justify-content-center">         
 <!-- read quran-->
 <!-- Button trigger modal -->
@@ -450,7 +398,6 @@
     </script>
 </div>
          
->>>>>>> Stashed changes
          <div class="col-sm-3">
          <div class="form-group row">
         </div>

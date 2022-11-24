@@ -31,14 +31,10 @@ use Symfony\Component\VarDumper\Cloner\Data;
  */
 class RequestDataCollector extends DataCollector implements EventSubscriberInterface, LateDataCollectorInterface
 {
-<<<<<<< Updated upstream
-    protected $controllers;
-=======
     /**
      * @var \SplObjectStorage<Request, callable>
      */
     private $controllers;
->>>>>>> Stashed changes
     private $sessionUsages = [];
     private $requestStack;
 
@@ -114,11 +110,7 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
             'session_metadata' => $sessionMetadata,
             'session_attributes' => $sessionAttributes,
             'session_usages' => array_values($this->sessionUsages),
-<<<<<<< Updated upstream
-            'stateless_check' => $this->requestStack && $this->requestStack->getMainRequest()->attributes->get('_stateless', false),
-=======
             'stateless_check' => $this->requestStack && ($mainRequest = $this->requestStack->getMainRequest()) && $mainRequest->attributes->get('_stateless', false),
->>>>>>> Stashed changes
             'flashes' => $flashes,
             'path_info' => $request->getPathInfo(),
             'controller' => 'n/a',

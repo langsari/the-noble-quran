@@ -14,13 +14,6 @@ namespace Symfony\Component\Translation;
 use Symfony\Component\Translation\Exception\InvalidArgumentException;
 
 /**
-<<<<<<< Updated upstream
- * TranslatorBagInterface.
- *
- * @method MessageCatalogueInterface[] getCatalogues() Returns all catalogues of the instance
- *
-=======
->>>>>>> Stashed changes
  * @author Abdellatif Ait boudad <a.aitboudad@gmail.com>
  */
 interface TranslatorBagInterface
@@ -32,9 +25,6 @@ interface TranslatorBagInterface
      *
      * @throws InvalidArgumentException If the locale contains invalid characters
      */
-<<<<<<< Updated upstream
-    public function getCatalogue(string $locale = null);
-=======
     public function getCatalogue(string $locale = null): MessageCatalogueInterface;
 
     /**
@@ -43,5 +33,4 @@ interface TranslatorBagInterface
      * @return MessageCatalogueInterface[]
      */
     public function getCatalogues(): array;
->>>>>>> Stashed changes
 }

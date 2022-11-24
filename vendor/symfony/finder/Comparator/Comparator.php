@@ -43,12 +43,9 @@ class Comparator
         return $this->target;
     }
 
-<<<<<<< Updated upstream
-=======
     /**
      * @deprecated set the target via the constructor instead
      */
->>>>>>> Stashed changes
     public function setTarget(string $target)
     {
         trigger_deprecation('symfony/finder', '5.4', '"%s" is deprecated. Set the target via the constructor instead.', __METHOD__);
@@ -75,13 +72,7 @@ class Comparator
      */
     public function setOperator(string $operator)
     {
-<<<<<<< Updated upstream
-        if ('' === $operator) {
-            $operator = '==';
-        }
-=======
         trigger_deprecation('symfony/finder', '5.4', '"%s" is deprecated. Set the operator via the constructor instead.', __METHOD__);
->>>>>>> Stashed changes
 
         $this->doSetOperator('' === $operator ? '==' : $operator);
     }

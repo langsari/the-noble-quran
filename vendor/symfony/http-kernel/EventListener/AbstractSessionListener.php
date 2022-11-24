@@ -16,10 +16,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-<<<<<<< Updated upstream
-=======
 use Symfony\Component\HttpFoundation\Session\SessionUtils;
->>>>>>> Stashed changes
 use Symfony\Component\HttpKernel\Event\FinishRequestEvent;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
@@ -50,12 +47,6 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
     private $sessionUsageStack = [];
     private $debug;
 
-<<<<<<< Updated upstream
-    public function __construct(ContainerInterface $container = null, bool $debug = false)
-    {
-        $this->container = $container;
-        $this->debug = $debug;
-=======
     /**
      * @var array<string, mixed>
      */
@@ -66,7 +57,6 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         $this->container = $container;
         $this->debug = $debug;
         $this->sessionOptions = $sessionOptions;
->>>>>>> Stashed changes
     }
 
     public function onKernelRequest(RequestEvent $event)
@@ -105,11 +95,7 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
 
     public function onKernelResponse(ResponseEvent $event)
     {
-<<<<<<< Updated upstream
-        if (!$event->isMainRequest()) {
-=======
         if (!$event->isMainRequest() || (!$this->container->has('initialized_session') && !$event->getRequest()->hasSession())) {
->>>>>>> Stashed changes
             return;
         }
 
@@ -207,30 +193,6 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
                     );
                 }
             }
-        }
-
-        if ($session instanceof Session ? $session->getUsageIndex() === end($this->sessionUsageStack) : !$session->isStarted()) {
-            return;
-        }
-
-        if ($autoCacheControl) {
-            $response
-                ->setExpires(new \DateTime())
-                ->setPrivate()
-                ->setMaxAge(0)
-                ->headers->addCacheControlDirective('must-revalidate');
-        }
-
-        if (!$event->getRequest()->attributes->get('_stateless', false)) {
-            return;
-        }
-
-        if ($this->debug) {
-            throw new UnexpectedSessionUsageException('Session was used while the request was declared stateless.');
-        }
-
-        if ($this->container->has('logger')) {
-            $this->container->get('logger')->warning('Session was used while the request was declared stateless.');
         }
 
         if ($session instanceof Session ? $session->getUsageIndex() === end($this->sessionUsageStack) : !$session->isStarted()) {

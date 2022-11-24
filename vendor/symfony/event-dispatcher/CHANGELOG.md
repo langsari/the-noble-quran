@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< Updated upstream
-=======
 6.0
 ---
 
@@ -13,7 +11,6 @@ CHANGELOG
 
  * Allow `#[AsEventListener]` attribute on methods
 
->>>>>>> Stashed changes
 5.3
 ---
 

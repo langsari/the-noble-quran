@@ -1,8 +1,6 @@
 CHANGELOG
 =========
 
-<<<<<<< Updated upstream
-=======
 5.4
 ---
 
@@ -11,7 +9,6 @@ CHANGELOG
  * Deprecate `upload_progress.*` and `url_rewriter.tags` session options
  * Allow setting session options via DSN
 
->>>>>>> Stashed changes
 5.3
 ---
 

@@ -23,11 +23,7 @@ class ArrayLoader implements LoaderInterface
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function load($resource, string $locale, string $domain = 'messages')
-=======
     public function load(mixed $resource, string $locale, string $domain = 'messages'): MessageCatalogue
->>>>>>> Stashed changes
     {
         $resource = $this->flatten($resource);
         $catalogue = new MessageCatalogue($locale);

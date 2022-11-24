@@ -651,11 +651,7 @@ class Request
      * It builds a normalized query string, where keys/value pairs are alphabetized,
      * have consistent escaping and unneeded delimiters are removed.
      *
-<<<<<<< Updated upstream
-     * @return string A normalized query string for the Request
-=======
      * @return string
->>>>>>> Stashed changes
      */
     public static function normalizeQueryString(?string $qs)
     {
@@ -922,11 +918,7 @@ class Request
      *
      * @return string The raw URL (i.e. not urldecoded)
      */
-<<<<<<< Updated upstream
-    private function getBaseUrlReal()
-=======
     private function getBaseUrlReal(): string
->>>>>>> Stashed changes
     {
         if (null === $this->baseUrl) {
             $this->baseUrl = $this->prepareBaseUrl();
@@ -1104,11 +1096,7 @@ class Request
      * - "/a/b/c/other" -> "other"
      * - "/a/x/y"       -> "../../x/y"
      *
-<<<<<<< Updated upstream
-     * @return string The relative target path
-=======
      * @return string
->>>>>>> Stashed changes
      */
     public function getRelativeUriForPath(string $path)
     {
@@ -1320,11 +1308,7 @@ class Request
     /**
      * Gets the mime type associated with the format.
      *
-<<<<<<< Updated upstream
-     * @return string|null The associated mime type (null if not found)
-=======
      * @return string|null
->>>>>>> Stashed changes
      */
     public function getMimeType(string $format)
     {
@@ -1338,11 +1322,7 @@ class Request
     /**
      * Gets the mime types associated with the format.
      *
-<<<<<<< Updated upstream
-     * @return array The associated mime types
-=======
      * @return array
->>>>>>> Stashed changes
      */
     public static function getMimeTypes(string $format)
     {
@@ -1356,11 +1336,7 @@ class Request
     /**
      * Gets the format associated with the mime type.
      *
-<<<<<<< Updated upstream
-     * @return string|null The format (null if not found)
-=======
      * @return string|null
->>>>>>> Stashed changes
      */
     public function getFormat(?string $mimeType)
     {
@@ -1410,11 +1386,7 @@ class Request
      *
      * @see getPreferredFormat
      *
-<<<<<<< Updated upstream
-     * @return string|null The request format
-=======
      * @return string|null
->>>>>>> Stashed changes
      */
     public function getRequestFormat(?string $default = 'html')
     {
@@ -1815,21 +1787,10 @@ class Request
 
         if (!$this->isSecure()) {
             // see https://tools.ietf.org/html/rfc8674#section-3
-<<<<<<< Updated upstream
-            $this->isSafeContentPreferred = false;
-
-            return $this->isSafeContentPreferred;
-        }
-
-        $this->isSafeContentPreferred = AcceptHeader::fromString($this->headers->get('Prefer'))->has('safe');
-
-        return $this->isSafeContentPreferred;
-=======
             return $this->isSafeContentPreferred = false;
         }
 
         return $this->isSafeContentPreferred = AcceptHeader::fromString($this->headers->get('Prefer'))->has('safe');
->>>>>>> Stashed changes
     }
 
     /*

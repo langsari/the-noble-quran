@@ -66,8 +66,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Quran.th
 The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
-<<<<<<< Updated upstream
-=======
 
 ##Run Project : The Quran Web Application for Thai Language
 
@@ -83,4 +81,3 @@ The Quran Web application in Thai Language : My final project of IT student
 -Run `php artisan db:seed` to run seeders, if any.\
 -Run `php artisan serve`\
 -#####You can now access your project at localhost:8000 :)
->>>>>>> Stashed changes

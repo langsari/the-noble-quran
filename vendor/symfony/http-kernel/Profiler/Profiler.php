@@ -77,11 +77,7 @@ class Profiler implements ResetInterface
     /**
      * Loads the Profile for the given token.
      *
-<<<<<<< Updated upstream
-     * @return Profile|null A Profile instance
-=======
      * @return Profile|null
->>>>>>> Stashed changes
      */
     public function loadProfile(string $token)
     {
@@ -136,11 +132,7 @@ class Profiler implements ResetInterface
     /**
      * Collects data for the given Response.
      *
-<<<<<<< Updated upstream
-     * @return Profile|null A Profile instance or null if the profiler is disabled
-=======
      * @return Profile|null
->>>>>>> Stashed changes
      */
     public function collect(Request $request, Response $response, \Throwable $exception = null)
     {

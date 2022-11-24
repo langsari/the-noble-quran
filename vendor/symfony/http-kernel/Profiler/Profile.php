@@ -137,11 +137,7 @@ class Profile
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return int The time
-=======
      * @return int
->>>>>>> Stashed changes
      */
     public function getTime()
     {
@@ -212,11 +208,7 @@ class Profile
     /**
      * Gets a Collector by name.
      *
-<<<<<<< Updated upstream
-     * @return DataCollectorInterface A DataCollectorInterface instance
-=======
      * @return DataCollectorInterface
->>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException if the collector does not exist
      */

@@ -99,11 +99,7 @@ class VarDumper
     {
         $contextProviders = [];
 
-<<<<<<< Updated upstream
-        if (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) && (class_exists(Request::class))) {
-=======
         if (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) && class_exists(Request::class)) {
->>>>>>> Stashed changes
             $requestStack = new RequestStack();
             $requestStack->push(Request::createFromGlobals());
             $contextProviders['request'] = new RequestContextProvider($requestStack);

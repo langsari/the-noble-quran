@@ -106,9 +106,6 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
             throw $exception;
         }
 
-<<<<<<< Updated upstream
-        $response = $this->handleThrowable($exception, $request, self::MAIN_REQUEST);
-=======
         if ($pop = $request !== $this->requestStack->getMainRequest()) {
             $this->requestStack->push($request);
         }
@@ -120,7 +117,6 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
                 $this->requestStack->pop();
             }
         }
->>>>>>> Stashed changes
 
         $response->sendHeaders();
         $response->sendContent();

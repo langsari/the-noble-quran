@@ -307,17 +307,9 @@ class PhpExtractor extends AbstractFileExtractor implements ExtractorInterface
     }
 
     /**
-<<<<<<< Updated upstream
-     * @return bool
-     *
-     * @throws \InvalidArgumentException
-     */
-    protected function canBeExtracted(string $file)
-=======
      * @throws \InvalidArgumentException
      */
     protected function canBeExtracted(string $file): bool
->>>>>>> Stashed changes
     {
         return $this->isFile($file) && 'php' === pathinfo($file, \PATHINFO_EXTENSION);
     }

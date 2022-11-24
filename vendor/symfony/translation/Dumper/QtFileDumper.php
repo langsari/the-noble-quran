@@ -23,11 +23,7 @@ class QtFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
-=======
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
->>>>>>> Stashed changes
     {
         $dom = new \DOMDocument('1.0', 'utf-8');
         $dom->formatOutput = true;

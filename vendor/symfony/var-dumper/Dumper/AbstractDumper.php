@@ -178,11 +178,7 @@ abstract class AbstractDumper implements DataDumperInterface, DumperInterface
     /**
      * Converts a non-UTF-8 string to UTF-8.
      *
-<<<<<<< Updated upstream
-     * @return string|null The string converted to UTF-8
-=======
      * @return string|null
->>>>>>> Stashed changes
      */
     protected function utf8Encode(?string $s)
     {

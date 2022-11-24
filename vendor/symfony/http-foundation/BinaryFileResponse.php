@@ -351,17 +351,12 @@ class BinaryFileResponse extends Response
                 }
             }
 
-<<<<<<< Updated upstream
-        if ($this->deleteFileAfterSend && is_file($this->file->getPathname())) {
-            unlink($this->file->getPathname());
-=======
             fclose($out);
             fclose($file);
         } finally {
             if ($this->deleteFileAfterSend && is_file($this->file->getPathname())) {
                 unlink($this->file->getPathname());
             }
->>>>>>> Stashed changes
         }
 
         return $this;

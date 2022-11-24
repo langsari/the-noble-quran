@@ -78,11 +78,7 @@ class AnnotationFileLoader extends FileLoader
     /**
      * Returns the full class name for the first class in the file.
      *
-<<<<<<< Updated upstream
-     * @return string|false Full class name if found, false otherwise
-=======
      * @return string|false
->>>>>>> Stashed changes
      */
     protected function findClass(string $file)
     {

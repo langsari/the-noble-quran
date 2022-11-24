@@ -13,10 +13,7 @@ namespace Symfony\Component\EventDispatcher\Debug;
 
 use Psr\EventDispatcher\StoppableEventInterface;
 use Psr\Log\LoggerInterface;
-<<<<<<< Updated upstream
-=======
 use Symfony\Component\EventDispatcher\EventDispatcher;
->>>>>>> Stashed changes
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -57,11 +54,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function addListener(string $eventName, $listener, int $priority = 0)
-=======
     public function addListener(string $eventName, callable|array $listener, int $priority = 0)
->>>>>>> Stashed changes
     {
         $this->dispatcher->addListener($eventName, $listener, $priority);
     }
@@ -77,11 +70,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function removeListener(string $eventName, $listener)
-=======
     public function removeListener(string $eventName, callable|array $listener)
->>>>>>> Stashed changes
     {
         if (isset($this->wrappedListeners[$eventName])) {
             foreach ($this->wrappedListeners[$eventName] as $index => $wrappedListener) {
@@ -107,11 +96,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListeners(string $eventName = null)
-=======
     public function getListeners(string $eventName = null): array
->>>>>>> Stashed changes
     {
         return $this->dispatcher->getListeners($eventName);
     }
@@ -119,11 +104,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function getListenerPriority(string $eventName, $listener)
-=======
     public function getListenerPriority(string $eventName, callable|array $listener): ?int
->>>>>>> Stashed changes
     {
         // we might have wrapped listeners for the event (if called while dispatching)
         // in that case get the priority by wrapper
@@ -141,11 +122,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
     /**
      * {@inheritdoc}
      */
-<<<<<<< Updated upstream
-    public function hasListeners(string $eventName = null)
-=======
     public function hasListeners(string $eventName = null): bool
->>>>>>> Stashed changes
     {
         return $this->dispatcher->hasListeners($eventName);
     }
@@ -155,11 +132,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
      */
     public function dispatch(object $event, string $eventName = null): object
     {
-<<<<<<< Updated upstream
-        $eventName = $eventName ?? \get_class($event);
-=======
         $eventName ??= \get_class($event);
->>>>>>> Stashed changes
 
         if (null === $this->callStack) {
             $this->callStack = new \SplObjectStorage();
@@ -194,14 +167,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
         return $event;
     }
 
-<<<<<<< Updated upstream
-    /**
-     * @return array
-     */
-    public function getCalledListeners(Request $request = null)
-=======
     public function getCalledListeners(Request $request = null): array
->>>>>>> Stashed changes
     {
         if (null === $this->callStack) {
             return [];
@@ -219,14 +185,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
         return $called;
     }
 
-<<<<<<< Updated upstream
-    /**
-     * @return array
-     */
-    public function getNotCalledListeners(Request $request = null)
-=======
     public function getNotCalledListeners(Request $request = null): array
->>>>>>> Stashed changes
     {
         try {
             $allListeners = $this->dispatcher instanceof EventDispatcher ? $this->getListenersWithPriority() : $this->getListenersWithoutPriority();
@@ -294,11 +253,7 @@ class TraceableEventDispatcher implements EventDispatcherInterface, ResetInterfa
      * @param string $method    The method name
      * @param array  $arguments The method arguments
      */
-<<<<<<< Updated upstream
-    public function __call(string $method, array $arguments)
-=======
     public function __call(string $method, array $arguments): mixed
->>>>>>> Stashed changes
     {
         return $this->dispatcher->{$method}(...$arguments);
     }

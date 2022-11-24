@@ -29,11 +29,7 @@ class PhpExecutableFinder
     /**
      * Finds The PHP executable.
      *
-<<<<<<< Updated upstream
-     * @return string|false The PHP executable path or false if it cannot be found
-=======
      * @return string|false
->>>>>>> Stashed changes
      */
     public function find(bool $includeArgs = true)
     {

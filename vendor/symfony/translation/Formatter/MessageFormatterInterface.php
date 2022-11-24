@@ -24,9 +24,5 @@ interface MessageFormatterInterface
      * @param string $locale     The message locale
      * @param array  $parameters An array of parameters for the message
      */
-<<<<<<< Updated upstream
-    public function format(string $message, string $locale, array $parameters = []);
-=======
     public function format(string $message, string $locale, array $parameters = []): string;
->>>>>>> Stashed changes
 }

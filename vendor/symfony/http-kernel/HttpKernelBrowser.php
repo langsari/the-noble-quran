@@ -58,15 +58,9 @@ class HttpKernelBrowser extends AbstractBrowser
      *
      * @param Request $request
      *
-<<<<<<< Updated upstream
-     * @return Response A Response instance
-     */
-    protected function doRequest($request)
-=======
      * @return Response
      */
     protected function doRequest(object $request)
->>>>>>> Stashed changes
     {
         $response = $this->kernel->handle($request, HttpKernelInterface::MAIN_REQUEST, $this->catchExceptions);
 
@@ -84,11 +78,7 @@ class HttpKernelBrowser extends AbstractBrowser
      *
      * @return string
      */
-<<<<<<< Updated upstream
-    protected function getScript($request)
-=======
     protected function getScript(object $request)
->>>>>>> Stashed changes
     {
         $kernel = var_export(serialize($this->kernel), true);
         $request = var_export(serialize($request), true);
@@ -140,11 +130,7 @@ EOF;
     /**
      * {@inheritdoc}
      *
-<<<<<<< Updated upstream
-     * @return Request A Request instance
-=======
      * @return Request
->>>>>>> Stashed changes
      */
     protected function filterRequest(DomRequest $request)
     {
@@ -171,11 +157,7 @@ EOF;
      *
      * @see UploadedFile
      *
-<<<<<<< Updated upstream
-     * @return array An array with all uploaded files marked as already moved
-=======
      * @return array
->>>>>>> Stashed changes
      */
     protected function filterFiles(array $files)
     {
@@ -210,19 +192,11 @@ EOF;
     /**
      * {@inheritdoc}
      *
-<<<<<<< Updated upstream
-     * @param Request $request
-     *
-     * @return DomResponse A DomResponse instance
-     */
-    protected function filterResponse($response)
-=======
      * @param Response $response
      *
      * @return DomResponse
      */
     protected function filterResponse(object $response)
->>>>>>> Stashed changes
     {
         // this is needed to support StreamedResponse
         ob_start();

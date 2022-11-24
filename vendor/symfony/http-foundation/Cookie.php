@@ -156,15 +156,8 @@ class Cookie
      * Converts expires formats to a unix timestamp.
      *
      * @param int|string|\DateTimeInterface $expire
-<<<<<<< Updated upstream
-     *
-     * @return int
-     */
-    private static function expiresTimestamp($expire = 0)
-=======
      */
     private static function expiresTimestamp($expire = 0): int
->>>>>>> Stashed changes
     {
         // convert expiration time to a Unix timestamp
         if ($expire instanceof \DateTimeInterface) {
@@ -189,17 +182,10 @@ class Cookie
     {
         $cookie = clone $this;
         $cookie->path = '' === $path ? '/' : $path;
-<<<<<<< Updated upstream
 
         return $cookie;
     }
 
-=======
-
-        return $cookie;
-    }
-
->>>>>>> Stashed changes
     /**
      * Creates a cookie copy that only be transmitted over a secure HTTPS connection from the client.
      *
@@ -233,11 +219,7 @@ class Cookie
      */
     public function withRaw(bool $raw = true): self
     {
-<<<<<<< Updated upstream
-        if ($raw && false !== strpbrk($this->name, self::$reservedCharsList)) {
-=======
         if ($raw && false !== strpbrk($this->name, self::RESERVED_CHARS_LIST)) {
->>>>>>> Stashed changes
             throw new \InvalidArgumentException(sprintf('The cookie name "%s" contains invalid characters.', $this->name));
         }
 

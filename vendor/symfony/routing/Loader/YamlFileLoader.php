@@ -287,8 +287,6 @@ class YamlFileLoader extends FileLoader
         if (isset($config['stateless']) && isset($config['defaults']['_stateless'])) {
             throw new \InvalidArgumentException(sprintf('The routing file "%s" must not specify both the "stateless" key and the defaults key "_stateless" for "%s".', $path, $name));
         }
-<<<<<<< Updated upstream
-=======
     }
 
     /**
@@ -312,6 +310,5 @@ class YamlFileLoader extends FileLoader
                 }
             }
         }
->>>>>>> Stashed changes
     }
 }
