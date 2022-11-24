@@ -21,11 +21,21 @@ interface EventDispatcherInterface extends PsrEventDispatcherInterface
     /**
      * Dispatches an event to all registered listeners.
      *
+<<<<<<< Updated upstream
      * @param object      $event     The event to pass to the event handlers/listeners
      * @param string|null $eventName The name of the event to dispatch. If not supplied,
      *                               the class of $event should be used instead.
      *
      * @return object The passed $event MUST be returned
+=======
+     * @template T of object
+     *
+     * @param T           $event     The event to pass to the event handlers/listeners
+     * @param string|null $eventName The name of the event to dispatch. If not supplied,
+     *                               the class of $event should be used instead.
+     *
+     * @return T The passed $event MUST be returned
+>>>>>>> Stashed changes
      */
     public function dispatch(object $event, string $eventName = null): object;
 }

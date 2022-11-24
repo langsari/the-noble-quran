@@ -66,3 +66,21 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Quran.th
 The Quran Web application in Thai Language : My final project of IT student
 >>>>>>> 7c86acc795646b1c5bfe6812cf07d9118f9b9b2f
+<<<<<<< Updated upstream
+=======
+
+##Run Project : The Quran Web Application for Thai Language
+
+-Download : Wamp or mamp\
+-Create a database locally named `Quran`  utf8_general_ci\
+-Download composer https://getcomposer.org/download/\
+-Pull Laravel/php project from git provider.\
+-Copy all in `.env.example`, paste to new file and named to `.env` in your project root and fill the database information\
+-Open the console and cd your project root directory\
+-Run `composer install` or `php composer.phar install`\
+-Run `php artisan key:generate`\
+-Run `php artisan migrate`\
+-Run `php artisan db:seed` to run seeders, if any.\
+-Run `php artisan serve`\
+-#####You can now access your project at localhost:8000 :)
+>>>>>>> Stashed changes

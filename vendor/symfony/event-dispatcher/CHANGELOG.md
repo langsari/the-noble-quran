@@ -1,6 +1,19 @@
 CHANGELOG
 =========
 
+<<<<<<< Updated upstream
+=======
+6.0
+---
+
+ * Remove `LegacyEventDispatcherProxy`
+
+5.4
+---
+
+ * Allow `#[AsEventListener]` attribute on methods
+
+>>>>>>> Stashed changes
 5.3
 ---
 

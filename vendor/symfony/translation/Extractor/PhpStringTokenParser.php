@@ -64,10 +64,12 @@ class PhpStringTokenParser
      * Parses a string token.
      *
      * @param string $str String token content
-     *
-     * @return string The parsed string
      */
+<<<<<<< Updated upstream
     public static function parse(string $str)
+=======
+    public static function parse(string $str): string
+>>>>>>> Stashed changes
     {
         $bLength = 0;
         if ('b' === $str[0]) {
@@ -90,10 +92,12 @@ class PhpStringTokenParser
      *
      * @param string      $str   String without quotes
      * @param string|null $quote Quote type
-     *
-     * @return string String with escape sequences parsed
      */
+<<<<<<< Updated upstream
     public static function parseEscapeSequences(string $str, string $quote = null)
+=======
+    public static function parseEscapeSequences(string $str, string $quote = null): string
+>>>>>>> Stashed changes
     {
         if (null !== $quote) {
             $str = str_replace('\\'.$quote, $quote, $str);
@@ -124,10 +128,12 @@ class PhpStringTokenParser
      *
      * @param string $startToken Doc string start token content (<<<SMTHG)
      * @param string $str        String token content
-     *
-     * @return string Parsed string
      */
+<<<<<<< Updated upstream
     public static function parseDocString(string $startToken, string $str)
+=======
+    public static function parseDocString(string $startToken, string $str): string
+>>>>>>> Stashed changes
     {
         // strip last newline (thanks tokenizer for sticking it into the string!)
         $str = preg_replace('~(\r\n|\n|\r)$~', '', $str);

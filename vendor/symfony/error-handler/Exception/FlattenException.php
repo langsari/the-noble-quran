@@ -205,6 +205,9 @@ class FlattenException
         return $this->statusText;
     }
 
+    /**
+     * @return $this
+     */
     public function setStatusText(string $statusText): self
     {
         $this->statusText = $statusText;
@@ -261,7 +264,11 @@ class FlattenException
     /**
      * @return $this
      */
+<<<<<<< Updated upstream
     public function setPrevious(self $previous): self
+=======
+    public function setPrevious(?self $previous): self
+>>>>>>> Stashed changes
     {
         $this->previous = $previous;
 
@@ -298,7 +305,10 @@ class FlattenException
     }
 
     /**
+<<<<<<< Updated upstream
      *
+=======
+>>>>>>> Stashed changes
      * @return $this
      */
     public function setTrace(array $trace, ?string $file, ?int $line): self

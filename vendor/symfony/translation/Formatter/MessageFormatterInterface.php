@@ -23,8 +23,10 @@ interface MessageFormatterInterface
      * @param string $message    The message (may also be an object that can be cast to string)
      * @param string $locale     The message locale
      * @param array  $parameters An array of parameters for the message
-     *
-     * @return string
      */
+<<<<<<< Updated upstream
     public function format(string $message, string $locale, array $parameters = []);
+=======
+    public function format(string $message, string $locale, array $parameters = []): string;
+>>>>>>> Stashed changes
 }

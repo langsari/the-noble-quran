@@ -45,6 +45,7 @@
 
 <div style = background-color:#9be2cd; class=" row text-center ">
   @foreach($datasurahs as $datasurah)     
+<<<<<<< Updated upstream
 <div class="col-sm-3">
  <a href="{{ route('arabic', $datasurah) }}">
   <button style= "height: 90px; width:240px; 
@@ -52,6 +53,15 @@
   margin-right: 10px;
   margin-left: 10px;
   margin-bottom: 10px;"  
+=======
+<div class="col-sm-4">
+ <a href="{{ route('arabic', $datasurah) }}">
+  <button style= "height: 90px; width:240px; 
+  margin-top: 16px;
+  margin-right: 19px;
+  margin-left: 19px;
+  margin-bottom: 16px;"  
+>>>>>>> Stashed changes
   type="buttom" class="btn btn-outline-light" >
   <p class="arabic" >{{ $datasurah->surah_arab}}</p>
   <span >{{ $datasurah->th_name}}</span></button></a>

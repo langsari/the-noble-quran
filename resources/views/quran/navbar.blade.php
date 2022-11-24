@@ -40,9 +40,16 @@
   <a href="{{ route('register') }}">สมัคร</a>
 
   <div class="search-container">
+<<<<<<< Updated upstream
      <form action="{{ route('web.find') }}" method="GET">
       <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
       <button type="submit">ค้นหา</button>
+=======
+  
+     <form action="{{ route('web.find') }}" method="GET">
+      <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+      <button class="bi bi-search" type="submit">ค้นหา</button>
+>>>>>>> Stashed changes
     </form>
 
 

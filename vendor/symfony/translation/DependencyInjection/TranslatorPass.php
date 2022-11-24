@@ -18,6 +18,7 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class TranslatorPass implements CompilerPassInterface
 {
+<<<<<<< Updated upstream
     private $translatorServiceId;
     private $readerServiceId;
     private $loaderTag;
@@ -37,15 +38,17 @@ class TranslatorPass implements CompilerPassInterface
         $this->updateCommandServiceId = $updateCommandServiceId;
     }
 
+=======
+>>>>>>> Stashed changes
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition($this->translatorServiceId)) {
+        if (!$container->hasDefinition('translator.default')) {
             return;
         }
 
         $loaders = [];
         $loaderRefs = [];
-        foreach ($container->findTaggedServiceIds($this->loaderTag, true) as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('translation.loader', true) as $id => $attributes) {
             $loaderRefs[$id] = new Reference($id);
             $loaders[$id][] = $attributes[0]['alias'];
             if (isset($attributes[0]['legacy-alias'])) {
@@ -53,8 +56,8 @@ class TranslatorPass implements CompilerPassInterface
             }
         }
 
-        if ($container->hasDefinition($this->readerServiceId)) {
-            $definition = $container->getDefinition($this->readerServiceId);
+        if ($container->hasDefinition('translation.reader')) {
+            $definition = $container->getDefinition('translation.reader');
             foreach ($loaders as $id => $formats) {
                 foreach ($formats as $format) {
                     $definition->addMethodCall('addLoader', [$format, $loaderRefs[$id]]);
@@ -63,7 +66,7 @@ class TranslatorPass implements CompilerPassInterface
         }
 
         $container
-            ->findDefinition($this->translatorServiceId)
+            ->findDefinition('translator.default')
             ->replaceArgument(0, ServiceLocatorTagPass::register($container, $loaderRefs))
             ->replaceArgument(3, $loaders)
         ;
@@ -73,16 +76,21 @@ class TranslatorPass implements CompilerPassInterface
         }
 
         $paths = array_keys($container->getDefinition('twig.template_iterator')->getArgument(1));
+<<<<<<< Updated upstream
         if ($container->hasDefinition($this->debugCommandServiceId)) {
             $definition = $container->getDefinition($this->debugCommandServiceId);
+=======
+        if ($container->hasDefinition('console.command.translation_debug')) {
+            $definition = $container->getDefinition('console.command.translation_debug');
+>>>>>>> Stashed changes
             $definition->replaceArgument(4, $container->getParameter('twig.default_path'));
 
             if (\count($definition->getArguments()) > 6) {
                 $definition->replaceArgument(6, $paths);
             }
         }
-        if ($container->hasDefinition($this->updateCommandServiceId)) {
-            $definition = $container->getDefinition($this->updateCommandServiceId);
+        if ($container->hasDefinition('console.command.translation_extract')) {
+            $definition = $container->getDefinition('console.command.translation_extract');
             $definition->replaceArgument(5, $container->getParameter('twig.default_path'));
 
             if (\count($definition->getArguments()) > 7) {

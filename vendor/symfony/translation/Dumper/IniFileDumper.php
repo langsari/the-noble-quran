@@ -23,7 +23,11 @@ class IniFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
+<<<<<<< Updated upstream
     public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = [])
+=======
+    public function formatCatalogue(MessageCatalogue $messages, string $domain, array $options = []): string
+>>>>>>> Stashed changes
     {
         $output = '';
 
@@ -38,7 +42,7 @@ class IniFileDumper extends FileDumper
     /**
      * {@inheritdoc}
      */
-    protected function getExtension()
+    protected function getExtension(): string
     {
         return 'ini';
     }

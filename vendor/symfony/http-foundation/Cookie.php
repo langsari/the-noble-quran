@@ -34,7 +34,7 @@ class Cookie
     private $sameSite;
     private $secureDefault = false;
 
-    private static $reservedCharsList = "=,; \t\r\n\v\f";
+    private const RESERVED_CHARS_LIST = "=,; \t\r\n\v\f";
     private const RESERVED_CHARS_FROM = ['=', ',', ';', ' ', "\t", "\r", "\n", "\v", "\f"];
     private const RESERVED_CHARS_TO = ['%3D', '%2C', '%3B', '%20', '%09', '%0D', '%0A', '%0B', '%0C'];
 
@@ -92,7 +92,7 @@ class Cookie
     public function __construct(string $name, string $value = null, $expire = 0, ?string $path = '/', string $domain = null, bool $secure = null, bool $httpOnly = true, bool $raw = false, ?string $sameSite = 'lax')
     {
         // from PHP source code
-        if ($raw && false !== strpbrk($name, self::$reservedCharsList)) {
+        if ($raw && false !== strpbrk($name, self::RESERVED_CHARS_LIST)) {
             throw new \InvalidArgumentException(sprintf('The cookie name "%s" contains invalid characters.', $name));
         }
 
@@ -156,10 +156,15 @@ class Cookie
      * Converts expires formats to a unix timestamp.
      *
      * @param int|string|\DateTimeInterface $expire
+<<<<<<< Updated upstream
      *
      * @return int
      */
     private static function expiresTimestamp($expire = 0)
+=======
+     */
+    private static function expiresTimestamp($expire = 0): int
+>>>>>>> Stashed changes
     {
         // convert expiration time to a Unix timestamp
         if ($expire instanceof \DateTimeInterface) {
@@ -184,10 +189,17 @@ class Cookie
     {
         $cookie = clone $this;
         $cookie->path = '' === $path ? '/' : $path;
+<<<<<<< Updated upstream
 
         return $cookie;
     }
 
+=======
+
+        return $cookie;
+    }
+
+>>>>>>> Stashed changes
     /**
      * Creates a cookie copy that only be transmitted over a secure HTTPS connection from the client.
      *
@@ -221,7 +233,11 @@ class Cookie
      */
     public function withRaw(bool $raw = true): self
     {
+<<<<<<< Updated upstream
         if ($raw && false !== strpbrk($this->name, self::$reservedCharsList)) {
+=======
+        if ($raw && false !== strpbrk($this->name, self::RESERVED_CHARS_LIST)) {
+>>>>>>> Stashed changes
             throw new \InvalidArgumentException(sprintf('The cookie name "%s" contains invalid characters.', $this->name));
         }
 
@@ -257,7 +273,7 @@ class Cookie
     /**
      * Returns the cookie as a string.
      *
-     * @return string The cookie
+     * @return string
      */
     public function __toString()
     {

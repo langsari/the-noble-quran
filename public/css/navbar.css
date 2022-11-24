@@ -3,6 +3,10 @@
   font-family:'Uthmani' ;
   src: url('assets/font/UthmanicHafs1Ver09.otf')format('truetype');
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .arabic{
    font-family: 'Uthmani', serif;
    font-size: 23px;
@@ -102,7 +106,10 @@
 }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .latin2{
   font-family:  serif;
   font-size: 20px;
@@ -136,7 +143,15 @@
     padding-bottom:80px;
   }
 
+<<<<<<< Updated upstream
 * {box-sizing: border-box;}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+>>>>>>> Stashed changes
 
 body {
   margin: 0;
@@ -146,6 +161,10 @@ body {
 .topnav {
   overflow: hidden;
   background-color:#9be2cd;
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
 }
 
 .topnav a {
@@ -156,6 +175,11 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+<<<<<<< Updated upstream
+=======
+  display: flex;
+  gap: var(--gap, 1rem);
+>>>>>>> Stashed changes
 }
 
 .topnav a:hover {
@@ -195,8 +219,15 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+<<<<<<< Updated upstream
   .topnav .search-container {
     float: none;
+=======
+ 
+  .topnav .search-container {
+    float: none;
+    background: orange ;
+>>>>>>> Stashed changes
   }
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
@@ -216,8 +247,11 @@ body {
       margin: 30px auto;
   }
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 .modal-body {
   position:relative;
   padding:0px;
@@ -242,3 +276,8 @@ body {
 }
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes

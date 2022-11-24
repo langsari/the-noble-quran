@@ -17,6 +17,8 @@ use Symfony\Component\HttpFoundation\Exception\BadRequestException;
  * ParameterBag is a container for key/value pairs.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ *
+ * @implements \IteratorAggregate<string, mixed>
  */
 class ParameterBag implements \IteratorAggregate, \Countable
 {
@@ -35,9 +37,15 @@ class ParameterBag implements \IteratorAggregate, \Countable
      *
      * @param string|null $key The name of the parameter to return or null to get them all
      *
+<<<<<<< Updated upstream
      * @return array An array of parameters
      */
     public function all(/*string $key = null*/)
+=======
+     * @return array
+     */
+    public function all(/* string $key = null */)
+>>>>>>> Stashed changes
     {
         $key = \func_num_args() > 0 ? func_get_arg(0) : null;
 
@@ -55,7 +63,7 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the parameter keys.
      *
-     * @return array An array of parameter keys
+     * @return array
      */
     public function keys()
     {
@@ -103,7 +111,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns true if the parameter is defined.
      *
+<<<<<<< Updated upstream
      * @return bool true if the parameter exists, false otherwise
+=======
+     * @return bool
+>>>>>>> Stashed changes
      */
     public function has(string $key)
     {
@@ -121,7 +133,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the alphabetic characters of the parameter value.
      *
+<<<<<<< Updated upstream
      * @return string The filtered value
+=======
+     * @return string
+>>>>>>> Stashed changes
      */
     public function getAlpha(string $key, string $default = '')
     {
@@ -131,7 +147,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the alphabetic characters and digits of the parameter value.
      *
+<<<<<<< Updated upstream
      * @return string The filtered value
+=======
+     * @return string
+>>>>>>> Stashed changes
      */
     public function getAlnum(string $key, string $default = '')
     {
@@ -141,7 +161,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the digits of the parameter value.
      *
+<<<<<<< Updated upstream
      * @return string The filtered value
+=======
+     * @return string
+>>>>>>> Stashed changes
      */
     public function getDigits(string $key, string $default = '')
     {
@@ -152,7 +176,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the parameter value converted to integer.
      *
+<<<<<<< Updated upstream
      * @return int The filtered value
+=======
+     * @return int
+>>>>>>> Stashed changes
      */
     public function getInt(string $key, int $default = 0)
     {
@@ -162,7 +190,11 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the parameter value converted to boolean.
      *
+<<<<<<< Updated upstream
      * @return bool The filtered value
+=======
+     * @return bool
+>>>>>>> Stashed changes
      */
     public function getBoolean(string $key, bool $default = false)
     {
@@ -205,7 +237,7 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns an iterator for parameters.
      *
-     * @return \ArrayIterator An \ArrayIterator instance
+     * @return \ArrayIterator<string, mixed>
      */
     #[\ReturnTypeWillChange]
     public function getIterator()
@@ -216,7 +248,7 @@ class ParameterBag implements \IteratorAggregate, \Countable
     /**
      * Returns the number of parameters.
      *
-     * @return int The number of parameters
+     * @return int
      */
     #[\ReturnTypeWillChange]
     public function count()

@@ -20,6 +20,7 @@ use Symfony\Component\DependencyInjection\Reference;
  */
 class TranslationDumperPass implements CompilerPassInterface
 {
+<<<<<<< Updated upstream
     private $writerServiceId;
     private $dumperTag;
 
@@ -33,15 +34,17 @@ class TranslationDumperPass implements CompilerPassInterface
         $this->dumperTag = $dumperTag;
     }
 
+=======
+>>>>>>> Stashed changes
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition($this->writerServiceId)) {
+        if (!$container->hasDefinition('translation.writer')) {
             return;
         }
 
-        $definition = $container->getDefinition($this->writerServiceId);
+        $definition = $container->getDefinition('translation.writer');
 
-        foreach ($container->findTaggedServiceIds($this->dumperTag, true) as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('translation.dumper', true) as $id => $attributes) {
             $definition->addMethodCall('addDumper', [$attributes[0]['alias'], new Reference($id)]);
         }
     }

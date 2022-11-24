@@ -12,8 +12,6 @@
 namespace Symfony\Component\Finder\Comparator;
 
 /**
- * Comparator.
- *
  * @author Fabien Potencier <fabien@symfony.com>
  */
 class Comparator
@@ -21,25 +19,47 @@ class Comparator
     private $target;
     private $operator = '==';
 
+    public function __construct(string $target = null, string $operator = '==')
+    {
+        if (null === $target) {
+            trigger_deprecation('symfony/finder', '5.4', 'Constructing a "%s" without setting "$target" is deprecated.', __CLASS__);
+        }
+
+        $this->target = $target;
+        $this->doSetOperator($operator);
+    }
+
     /**
      * Gets the target value.
      *
-     * @return string The target value
+     * @return string
      */
     public function getTarget()
     {
+        if (null === $this->target) {
+            trigger_deprecation('symfony/finder', '5.4', 'Calling "%s" without initializing the target is deprecated.', __METHOD__);
+        }
+
         return $this->target;
     }
 
+<<<<<<< Updated upstream
+=======
+    /**
+     * @deprecated set the target via the constructor instead
+     */
+>>>>>>> Stashed changes
     public function setTarget(string $target)
     {
+        trigger_deprecation('symfony/finder', '5.4', '"%s" is deprecated. Set the target via the constructor instead.', __METHOD__);
+
         $this->target = $target;
     }
 
     /**
      * Gets the comparison operator.
      *
-     * @return string The operator
+     * @return string
      */
     public function getOperator()
     {
@@ -50,18 +70,20 @@ class Comparator
      * Sets the comparison operator.
      *
      * @throws \InvalidArgumentException
+     *
+     * @deprecated set the operator via the constructor instead
      */
     public function setOperator(string $operator)
     {
+<<<<<<< Updated upstream
         if ('' === $operator) {
             $operator = '==';
         }
+=======
+        trigger_deprecation('symfony/finder', '5.4', '"%s" is deprecated. Set the operator via the constructor instead.', __METHOD__);
+>>>>>>> Stashed changes
 
-        if (!\in_array($operator, ['>', '<', '>=', '<=', '==', '!='])) {
-            throw new \InvalidArgumentException(sprintf('Invalid operator "%s".', $operator));
-        }
-
-        $this->operator = $operator;
+        $this->doSetOperator('' === $operator ? '==' : $operator);
     }
 
     /**
@@ -73,6 +95,10 @@ class Comparator
      */
     public function test($test)
     {
+        if (null === $this->target) {
+            trigger_deprecation('symfony/finder', '5.4', 'Calling "%s" without initializing the target is deprecated.', __METHOD__);
+        }
+
         switch ($this->operator) {
             case '>':
                 return $test > $this->target;
@@ -87,5 +113,14 @@ class Comparator
         }
 
         return $test == $this->target;
+    }
+
+    private function doSetOperator(string $operator): void
+    {
+        if (!\in_array($operator, ['>', '<', '>=', '<=', '==', '!='])) {
+            throw new \InvalidArgumentException(sprintf('Invalid operator "%s".', $operator));
+        }
+
+        $this->operator = $operator;
     }
 }

@@ -171,7 +171,11 @@ class Router implements RouterInterface, RequestMatcherInterface
     /**
      * Gets an option value.
      *
+<<<<<<< Updated upstream
      * @return mixed The value
+=======
+     * @return mixed
+>>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException
      */
@@ -303,7 +307,7 @@ class Router implements RouterInterface, RequestMatcherInterface
     /**
      * Gets the UrlGenerator instance associated with this Router.
      *
-     * @return UrlGeneratorInterface A UrlGeneratorInterface instance
+     * @return UrlGeneratorInterface
      */
     public function getGenerator()
     {
@@ -315,7 +319,8 @@ class Router implements RouterInterface, RequestMatcherInterface
             $routes = $this->getRouteCollection();
             $compiled = is_a($this->options['generator_class'], CompiledUrlGenerator::class, true);
             if ($compiled) {
-                $routes = (new CompiledUrlGeneratorDumper($routes))->getCompiledRoutes();
+                $generatorDumper = new CompiledUrlGeneratorDumper($routes);
+                $routes = array_merge($generatorDumper->getCompiledRoutes(), $generatorDumper->getCompiledAliases());
             }
             $this->generator = new $this->options['generator_class']($routes, $this->context, $this->logger, $this->defaultLocale);
         } else {
@@ -373,7 +378,7 @@ class Router implements RouterInterface, RequestMatcherInterface
 
     private static function getCompiledRoutes(string $path): array
     {
-        if ([] === self::$cache && \function_exists('opcache_invalidate') && filter_var(ini_get('opcache.enable'), \FILTER_VALIDATE_BOOLEAN) && (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) || filter_var(ini_get('opcache.enable_cli'), \FILTER_VALIDATE_BOOLEAN))) {
+        if ([] === self::$cache && \function_exists('opcache_invalidate') && filter_var(\ini_get('opcache.enable'), \FILTER_VALIDATE_BOOLEAN) && (!\in_array(\PHP_SAPI, ['cli', 'phpdbg'], true) || filter_var(\ini_get('opcache.enable_cli'), \FILTER_VALIDATE_BOOLEAN))) {
             self::$cache = null;
         }
 

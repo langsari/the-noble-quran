@@ -22,6 +22,7 @@ use Symfony\Component\DependencyInjection\ServiceLocator;
  */
 class TranslatorPathsPass extends AbstractRecursivePass
 {
+<<<<<<< Updated upstream
     private $translatorServiceId;
     private $debugCommandServiceId;
     private $updateCommandServiceId;
@@ -42,10 +43,28 @@ class TranslatorPathsPass extends AbstractRecursivePass
         $this->updateCommandServiceId = $updateCommandServiceId;
         $this->resolverServiceId = $resolverServiceId;
     }
+=======
+    private int $level = 0;
+
+    /**
+     * @var array<string, bool>
+     */
+    private array $paths = [];
+
+    /**
+     * @var array<int, Definition>
+     */
+    private array $definitions = [];
+
+    /**
+     * @var array<string, array<string, bool>>
+     */
+    private array $controllers = [];
+>>>>>>> Stashed changes
 
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition($this->translatorServiceId)) {
+        if (!$container->hasDefinition('translator')) {
             return;
         }
 
@@ -70,12 +89,12 @@ class TranslatorPathsPass extends AbstractRecursivePass
                 }
             }
             if ($paths) {
-                if ($container->hasDefinition($this->debugCommandServiceId)) {
-                    $definition = $container->getDefinition($this->debugCommandServiceId);
+                if ($container->hasDefinition('console.command.translation_debug')) {
+                    $definition = $container->getDefinition('console.command.translation_debug');
                     $definition->replaceArgument(6, array_merge($definition->getArgument(6), $paths));
                 }
-                if ($container->hasDefinition($this->updateCommandServiceId)) {
-                    $definition = $container->getDefinition($this->updateCommandServiceId);
+                if ($container->hasDefinition('console.command.translation_extract')) {
+                    $definition = $container->getDefinition('console.command.translation_extract');
                     $definition->replaceArgument(7, array_merge($definition->getArgument(7), $paths));
                 }
             }
@@ -86,10 +105,14 @@ class TranslatorPathsPass extends AbstractRecursivePass
         }
     }
 
+<<<<<<< Updated upstream
     protected function processValue($value, bool $isRoot = false)
+=======
+    protected function processValue(mixed $value, bool $isRoot = false): mixed
+>>>>>>> Stashed changes
     {
         if ($value instanceof Reference) {
-            if ((string) $value === $this->translatorServiceId) {
+            if ('translator' === (string) $value) {
                 for ($i = $this->level - 1; $i >= 0; --$i) {
                     $class = $this->definitions[$i]->getClass();
 
@@ -124,8 +147,8 @@ class TranslatorPathsPass extends AbstractRecursivePass
 
     private function findControllerArguments(ContainerBuilder $container): array
     {
-        if ($container->hasDefinition($this->resolverServiceId)) {
-            $argument = $container->getDefinition($this->resolverServiceId)->getArgument(0);
+        if ($container->hasDefinition('argument_resolver.service')) {
+            $argument = $container->getDefinition('argument_resolver.service')->getArgument(0);
             if ($argument instanceof Reference) {
                 $argument = $container->getDefinition($argument);
             }
@@ -133,8 +156,8 @@ class TranslatorPathsPass extends AbstractRecursivePass
             return $argument->getArgument(0);
         }
 
-        if ($container->hasDefinition('debug.'.$this->resolverServiceId)) {
-            $argument = $container->getDefinition('debug.'.$this->resolverServiceId)->getArgument(0);
+        if ($container->hasDefinition('debug.'.'argument_resolver.service')) {
+            $argument = $container->getDefinition('debug.'.'argument_resolver.service')->getArgument(0);
             if ($argument instanceof Reference) {
                 $argument = $container->getDefinition($argument);
             }

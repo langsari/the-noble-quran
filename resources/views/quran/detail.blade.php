@@ -80,7 +80,11 @@
      direction: rtl;
      font-size: 26px;
      line-height: 200%;
+<<<<<<< Updated upstream
      color: #FFFFFF;
+=======
+     color: #000000;
+>>>>>>> Stashed changes
    }
    .highlight{ 
   background:#00FF00; 
@@ -93,12 +97,17 @@
       </style>
        <br>
     <br>
+<<<<<<< Updated upstream
  <div style = background-color:#00000; class="search-area">
+=======
+ <div style = background-color:#ffffff; class="search-area">
+>>>>>>> Stashed changes
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>
 <br>
 
+<<<<<<< Updated upstream
 <ul class="list-group bg-white list-group-horizontal  ">
 
 <!-- read quran-->
@@ -108,6 +117,21 @@
 </button>
 
 <!-- Modal -->
+=======
+<ul class="list-group list-group-horizontal justify-content-center">
+<!--
+<ul class="list-group bg-white list-group-horizontal  ">
+-->
+<!-- read quran-->
+<!-- Button trigger modal -->
+<!--
+<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal">
+  โหมดอ่านอัลกุรอาน
+</button>
+-->
+<!-- Modal -->
+<!--
+>>>>>>> Stashed changes
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -115,9 +139,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
       </div>
+<<<<<<< Updated upstream
       <div class="modal-body">
        
 
+=======
+
+      <div class="modal-body">
+>>>>>>> Stashed changes
       <div class="quran-font-intro ">
         <p>
         @foreach($arabics->arabic as $arabic )
@@ -134,6 +163,7 @@
     </div>
   </div>
 </div>
+<<<<<<< Updated upstream
 
 <!-- tafseer -->
 <!-- Button trigger modal -->
@@ -142,6 +172,18 @@
 </button>
 
 <!-- Modal -->
+=======
+-->
+<!-- tafseer -->
+<!-- Button trigger modal -->
+<!--
+<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal2">
+  ตัฟซีรอัลกุรอาน
+</button>
+-->
+<!-- Modal -->
+<!--
+>>>>>>> Stashed changes
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -175,8 +217,14 @@
     </div>
   </div>
 </div>
+<<<<<<< Updated upstream
 
      <!--VDO Tafseer -->
+=======
+-->
+     <!--VDO Tafseer -->
+     <!--
+>>>>>>> Stashed changes
   <div class="bs-example">
             <a href="#Geeks2"
                class="btn  btn-dark"
@@ -227,7 +275,11 @@
             });
         });
     </script>
+<<<<<<< Updated upstream
 
+=======
+-->
+>>>>>>> Stashed changes
 
 <!-- dropdown surah&& ayah : can link-->
     <div class="col-md-3 ">
@@ -257,7 +309,11 @@
      urlmenu.onchange = function() {
       window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
   };</script> 
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
 </ul>
 <br>
 <br>
@@ -265,6 +321,136 @@
          <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
          <br> 
          
+<<<<<<< Updated upstream
+=======
+         <div class=" list-group list-group-horizontal justify-content-center">         
+<!-- read quran-->
+<!-- Button trigger modal -->
+<button type="button"  class="btn btn-outline-info " data-toggle="modal" data-target="#myModal">
+  โหมดอ่านอัลกุรอาน
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
+      </div>
+      <div class="modal-body">
+       
+
+      <div class="quran-font-intro ">
+        <p>
+        @foreach($arabics->arabic as $arabic )
+      {{$arabic->text}} 
+       [{{$arabic->thais->ayat}}]
+      @endforeach</p>
+      </div>
+    
+      </div>
+      <div class="modal-footer">
+        <!-- botton ปิด in read quran -->
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- tafseer -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-info " data-toggle="modal" data-target="#myModal2">
+  ตัฟซีรอัลกุรอาน
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel2"></h4>
+      </div>
+      <div class="modal-body">
+       
+      @foreach($tafseers->qurantafseer as $tafseer ) 
+      @if($tafseer->status == 'อนุมัติ') 
+      <h4>{{$tafseer->name}}(อายะห์ที่ {{$tafseer->arabic_id}})</h4>
+        <p>
+       
+      {{$tafseer->qurantafseer}} 
+     
+      </p>
+   
+    <div class ="card-text">   
+        <strong>ที่มา : </strong>
+        {{ $tafseer->resource }}
+      </div> 
+      <hr>
+      @endif  
+      @endforeach
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!--VDO Tafseer -->
+  <div  class="bs-example" >
+            <a href="#Geeks2" class="btn btn-outline-info" data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
+            <div id="Geeks2" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-hidden="true">×</button>
+                                    <h4 class="modal-title">วิดีโอตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>
+                        </div>
+                        <div class="modal-body">
+                        @foreach($datasurah->tafseer as $tafseer )
+                           @if($tafseer->status == 'อนุมัติ') 
+                        <p>{{$tafseer->name}}</p>
+                            <iframe id="Geeks3" width="450" height="350"
+                           src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
+                            frameborder="0" allowfullscreen>
+                            </iframe>
+                            <br>
+                            <br>
+                          
+                          @endif  
+                            @endforeach
+                        </div>
+
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+       
+                     </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+            var url = $("#Geeks3").attr('src');
+            $("#Geeks2").on('hide.bs.modal', function() {
+                $("#Geeks3").attr('src', '');
+            });
+            $("#Geeks2").on('show.bs.modal', function() {
+                $("#Geeks3").attr('src', url);
+            });
+        });
+    </script>
+</div>
+         
+>>>>>>> Stashed changes
          <div class="col-sm-3">
          <div class="form-group row">
         </div>

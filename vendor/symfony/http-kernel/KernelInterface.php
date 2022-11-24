@@ -31,7 +31,7 @@ interface KernelInterface extends HttpKernelInterface
     /**
      * Returns an array of bundles to register.
      *
-     * @return iterable|BundleInterface[] An iterable of bundle instances
+     * @return iterable<mixed, BundleInterface>
      */
     public function registerBundles();
 
@@ -55,14 +55,18 @@ interface KernelInterface extends HttpKernelInterface
     /**
      * Gets the registered bundle instances.
      *
-     * @return BundleInterface[] An array of registered bundle instances
+     * @return array<string, BundleInterface>
      */
     public function getBundles();
 
     /**
      * Returns a bundle.
      *
+<<<<<<< Updated upstream
      * @return BundleInterface A BundleInterface instance
+=======
+     * @return BundleInterface
+>>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException when the bundle is not enabled
      */
@@ -80,7 +84,11 @@ interface KernelInterface extends HttpKernelInterface
      * where BundleName is the name of the bundle
      * and the remaining part is the relative path in the bundle.
      *
+<<<<<<< Updated upstream
      * @return string The absolute path of the resource
+=======
+     * @return string
+>>>>>>> Stashed changes
      *
      * @throws \InvalidArgumentException if the file cannot be found or the name is not valid
      * @throws \RuntimeException         if the name contains invalid/unsafe characters
@@ -90,14 +98,14 @@ interface KernelInterface extends HttpKernelInterface
     /**
      * Gets the environment.
      *
-     * @return string The current environment
+     * @return string
      */
     public function getEnvironment();
 
     /**
      * Checks if debug mode is enabled.
      *
-     * @return bool true if debug mode is enabled, false otherwise
+     * @return bool
      */
     public function isDebug();
 
@@ -118,7 +126,7 @@ interface KernelInterface extends HttpKernelInterface
     /**
      * Gets the request start time (not available if debug is disabled).
      *
-     * @return float The request start timestamp
+     * @return float
      */
     public function getStartTime();
 
@@ -129,21 +137,25 @@ interface KernelInterface extends HttpKernelInterface
      * For caches and artifacts that can be warmed at compile-time and deployed as read-only,
      * use the new "build directory" returned by the {@see getBuildDir()} method.
      *
+<<<<<<< Updated upstream
      * @return string The cache directory
+=======
+     * @return string
+>>>>>>> Stashed changes
      */
     public function getCacheDir();
 
     /**
      * Gets the log directory.
      *
-     * @return string The log directory
+     * @return string
      */
     public function getLogDir();
 
     /**
      * Gets the charset of the application.
      *
-     * @return string The charset
+     * @return string
      */
     public function getCharset();
 }

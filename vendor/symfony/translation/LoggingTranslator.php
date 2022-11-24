@@ -21,15 +21,11 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  */
 class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, LocaleAwareInterface
 {
-    /**
-     * @var TranslatorInterface|TranslatorBagInterface
-     */
-    private $translator;
-
-    private $logger;
+    private TranslatorInterface $translator;
+    private LoggerInterface $logger;
 
     /**
-     * @param TranslatorInterface $translator The translator must implement TranslatorBagInterface
+     * @param TranslatorInterface&TranslatorBagInterface&LocaleAwareInterface $translator The translator must implement TranslatorBagInterface
      */
     public function __construct(TranslatorInterface $translator, LoggerInterface $logger)
     {
@@ -44,7 +40,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * {@inheritdoc}
      */
+<<<<<<< Updated upstream
     public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null)
+=======
+    public function trans(?string $id, array $parameters = [], string $domain = null, string $locale = null): string
+>>>>>>> Stashed changes
     {
         $trans = $this->translator->trans($id = (string) $id, $parameters, $domain, $locale);
         $this->log($id, $domain, $locale);
@@ -69,7 +69,7 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * {@inheritdoc}
      */
-    public function getLocale()
+    public function getLocale(): string
     {
         return $this->translator->getLocale();
     }
@@ -77,7 +77,11 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
     /**
      * {@inheritdoc}
      */
+<<<<<<< Updated upstream
     public function getCatalogue(string $locale = null)
+=======
+    public function getCatalogue(string $locale = null): MessageCatalogueInterface
+>>>>>>> Stashed changes
     {
         return $this->translator->getCatalogue($locale);
     }
@@ -92,10 +96,8 @@ class LoggingTranslator implements TranslatorInterface, TranslatorBagInterface, 
 
     /**
      * Gets the fallback locales.
-     *
-     * @return array The fallback locales
      */
-    public function getFallbackLocales()
+    public function getFallbackLocales(): array
     {
         if ($this->translator instanceof Translator || method_exists($this->translator, 'getFallbackLocales')) {
             return $this->translator->getFallbackLocales();

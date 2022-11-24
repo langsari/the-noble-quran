@@ -24,17 +24,13 @@ interface MessageCatalogueInterface
 
     /**
      * Gets the catalogue locale.
-     *
-     * @return string The locale
      */
-    public function getLocale();
+    public function getLocale(): string;
 
     /**
      * Gets the domains.
-     *
-     * @return array An array of domains
      */
-    public function getDomains();
+    public function getDomains(): array;
 
     /**
      * Gets the messages within a given domain.
@@ -42,10 +38,12 @@ interface MessageCatalogueInterface
      * If $domain is null, it returns all messages.
      *
      * @param string $domain The domain name
-     *
-     * @return array An array of messages
      */
+<<<<<<< Updated upstream
     public function all(string $domain = null);
+=======
+    public function all(string $domain = null): array;
+>>>>>>> Stashed changes
 
     /**
      * Sets a message translation.
@@ -61,30 +59,36 @@ interface MessageCatalogueInterface
      *
      * @param string $id     The message id
      * @param string $domain The domain name
-     *
-     * @return bool true if the message has a translation, false otherwise
      */
+<<<<<<< Updated upstream
     public function has(string $id, string $domain = 'messages');
+=======
+    public function has(string $id, string $domain = 'messages'): bool;
+>>>>>>> Stashed changes
 
     /**
      * Checks if a message has a translation (it does not take into account the fallback mechanism).
      *
      * @param string $id     The message id
      * @param string $domain The domain name
-     *
-     * @return bool true if the message has a translation, false otherwise
      */
+<<<<<<< Updated upstream
     public function defines(string $id, string $domain = 'messages');
+=======
+    public function defines(string $id, string $domain = 'messages'): bool;
+>>>>>>> Stashed changes
 
     /**
      * Gets a message translation.
      *
      * @param string $id     The message id
      * @param string $domain The domain name
-     *
-     * @return string The message translation
      */
+<<<<<<< Updated upstream
     public function get(string $id, string $domain = 'messages');
+=======
+    public function get(string $id, string $domain = 'messages'): string;
+>>>>>>> Stashed changes
 
     /**
      * Sets translations for a given domain.
@@ -119,17 +123,15 @@ interface MessageCatalogueInterface
 
     /**
      * Gets the fallback catalogue.
-     *
-     * @return self|null A MessageCatalogueInterface instance or null when no fallback has been set
      */
-    public function getFallbackCatalogue();
+    public function getFallbackCatalogue(): ?self;
 
     /**
      * Returns an array of resources loaded to build this collection.
      *
-     * @return ResourceInterface[] An array of resources
+     * @return ResourceInterface[]
      */
-    public function getResources();
+    public function getResources(): array;
 
     /**
      * Adds a resource for this collection.

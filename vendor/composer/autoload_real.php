@@ -25,6 +25,7 @@ class ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52
         require __DIR__ . '/platform_check.php';
 
         spl_autoload_register(array('ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52', 'loadClassLoader'), true, true);
+<<<<<<< Updated upstream
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(\dirname(__FILE__)));
         spl_autoload_unregister(array('ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52', 'loadClassLoader'));
 
@@ -57,6 +58,17 @@ class ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52
         } else {
             $includeFiles = require __DIR__ . '/autoload_files.php';
         }
+=======
+        self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
+        spl_autoload_unregister(array('ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52', 'loadClassLoader'));
+
+        require __DIR__ . '/autoload_static.php';
+        call_user_func(\Composer\Autoload\ComposerStaticInita89a4e5ed7b8b196171d5dd91f268b52::getInitializer($loader));
+
+        $loader->register(true);
+
+        $includeFiles = \Composer\Autoload\ComposerStaticInita89a4e5ed7b8b196171d5dd91f268b52::$files;
+>>>>>>> Stashed changes
         foreach ($includeFiles as $fileIdentifier => $file) {
             composerRequirea89a4e5ed7b8b196171d5dd91f268b52($fileIdentifier, $file);
         }
@@ -65,11 +77,19 @@ class ComposerAutoloaderInita89a4e5ed7b8b196171d5dd91f268b52
     }
 }
 
+<<<<<<< Updated upstream
+=======
+/**
+ * @param string $fileIdentifier
+ * @param string $file
+ * @return void
+ */
+>>>>>>> Stashed changes
 function composerRequirea89a4e5ed7b8b196171d5dd91f268b52($fileIdentifier, $file)
 {
     if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-        require $file;
-
         $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+
+        require $file;
     }
 }

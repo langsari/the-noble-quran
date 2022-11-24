@@ -27,14 +27,22 @@ interface DebugLoggerInterface
      * timestamp, message, priority, and priorityName.
      * It can also have an optional context key containing an array.
      *
+<<<<<<< Updated upstream
      * @return array An array of logs
+=======
+     * @return array
+>>>>>>> Stashed changes
      */
     public function getLogs(Request $request = null);
 
     /**
      * Returns the number of errors.
      *
+<<<<<<< Updated upstream
      * @return int The number of errors
+=======
+     * @return int
+>>>>>>> Stashed changes
      */
     public function countErrors(Request $request = null);
 

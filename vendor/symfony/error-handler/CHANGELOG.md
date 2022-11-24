@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+<<<<<<< Updated upstream
+=======
+5.4
+---
+
+ * Make `DebugClassLoader` trigger deprecation notices on missing return types
+ * Add `SYMFONY_PATCH_TYPE_DECLARATIONS='force=2'` mode to `DebugClassLoader` to turn annotations into native return types
+
+>>>>>>> Stashed changes
 5.2.0
 -----
 
