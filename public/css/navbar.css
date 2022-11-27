@@ -150,7 +150,10 @@ body {
 .topnav {
   overflow: hidden;
   background-color:#9be2cd;
-  
+}
+
+.topnav .fixed-top{
+  background: linear-gradient(#00adc0, #027464);
 }
 
 .topnav a {
@@ -161,13 +164,58 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  
+}
+.topnav span.text {
+  font-size: 17px;
+  
+}
+.topnav ul {
   display: flex;
-  gap: var(--gap, 1rem);
+  float: right;
+  
+}
+.topnav ul li {
+  position: relative;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+.topnav ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
+}
+.topnav ul li a .icon {
+  position: relative;
+  line-height: 50px;
+  transition: 0.5s;
+  font-size: 25px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.topnav ul li.active a .icon {
+  font-size: 25px;
+  transform: translateY(-6px);
+}
+
+.topnav ul li a .text {
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  bottom: 20px;
+  font-weight: 400;
+  transition: 0.25s;
+  text-transform: uppercase;
+  transform: scale(0);
+  
+}
+.topnav ul li.active a .text{
+  transform: scale(1);
 }
 
 .topnav a.active {
@@ -177,26 +225,66 @@ body {
 
 .topnav .search-container {
   float: right;
-}
-
-.topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
+  font-size: 17px;
+  border: none;
+
+}
+.search-bar{
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 1px 5px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #cac7ff;
+}
+
+
+.search-bar button ion-icon{
+  width: 25px;
+  color: white;
+  
+}
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  background: #2ec4b2;
+  cursor: pointer;
+}
+.topnav input[type=text] {
+  padding: 6px;
   font-size: 17px;
   border: none;
 }
 
 .topnav .search-container button {
   float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
+  
+  
   font-size: 17px;
   border: none;
   cursor: pointer;
 }
-
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+   
+}
 .topnav .search-container button:hover {
   background: #ccc;
 }

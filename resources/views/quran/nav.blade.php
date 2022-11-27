@@ -17,20 +17,56 @@
   
 <body>
 
-<div class="topnav fixed-top flex">  
+<div class="topnav fixed-top"> 
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
-<a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
-<a href="{{ route('login') }}">เข้าสู่ระบบ</a>
-<a href="{{ route('register') }}">สมัคร</a>
+<ul> 
+<li class="list active">
+<a  href="{{ route('tafseer_home') }}">
+  <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+  <span class="text">ตัฟซีร</span>
+</a>
+</li>
+<li class="list active"> 
+<a href="{{ route('login') }}">
+  <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
+  <span class="text">เข้าสู่ระบบ</span>
+</a>
+</li> 
+</a>
+<li class="list active">
+<a href="{{ route('register') }}">
+  <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+  <span class="text">สมัคร</span>
+</li>
+</a>
+</a>
+<div class="indicator"></div>
+</ul> 
+<script>
+  let list = document.querySelectorAll('.list');
+  function setActiveClass(){
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) =>
+  item.addEventListener('mouseover' , setActiveClass))
+</script>
+
+
   
-  <div class="search-container">
-  <form action="{{ route('web.find') }}" method="GET">
+
+<div class="search-container">
+  <form action="{{ route('web.find') }}" method="GET" class="search-bar">
     <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
-    <button type="submit">ค้นหา</button>
+    <button type="submit"><ion-icon name="search-outline"></ion-icon</button>
   </form>
   </div>
 </div>
-</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<br>
 <div style = background-color:#9be2cd; class=" row text-center ">
 
 <!-- Header -->
