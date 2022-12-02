@@ -135,6 +135,10 @@
     background-size:cover;
     padding-bottom:80px;
   }
+  
+  .hero{
+    background:linear-gradient(#dce35b , #45b649);
+  }
 
 * {
   margin: 0;
@@ -148,12 +152,12 @@ body {
 }
 
 .topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
   overflow: hidden;
-  background-color:#9be2cd;
-}
-
-.topnav .fixed-top{
-  background: linear-gradient(#00adc0, #027464);
 }
 
 .topnav a {
@@ -164,7 +168,6 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  
 }
 .topnav span.text {
   font-size: 17px;
@@ -219,7 +222,6 @@ body {
 }
 
 .topnav a.active {
-  background-color:#9be2cd;
   color: white;
 }
 
@@ -234,7 +236,7 @@ body {
 .search-bar{
   width: 100%;
   max-width: 700px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(6, 225, 115, 0.144);
   display: flex;
   align-items: center;
   border-radius: 60px;
@@ -249,7 +251,7 @@ body {
   outline: none;
   padding: 24px 20px;
   font-size: 20px;
-  color: #cac7ff;
+  color: #cbfff1;
 }
 
 
@@ -289,6 +291,27 @@ body {
   background: #ccc;
 }
 
+.popular-searches {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+ 
+}
+.popular-searches a{
+  margin-inline: 5px;
+  border: 2px;
+  border-radius: 3em;
+  box-shadow: 0 3px 11px 1px rgb(0 0 0 / 3%);
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+.popular-searches a:hover{
+  color: #027464;
+}
 @media screen and (max-width: 600px) {
  
   .topnav .search-container {

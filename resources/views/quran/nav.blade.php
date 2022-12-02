@@ -16,8 +16,8 @@
 
   
 <body>
-
-<div class="topnav fixed-top"> 
+<div class="hero">
+<div class="topnav " id=topnav> <!-- BGnav -->
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
 <ul> 
 <li class="list active">
@@ -66,13 +66,24 @@
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<br>
-<div style = background-color:#9be2cd; class=" row text-center ">
 
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("topnav").style.top = "0";
+  } else {
+    document.getElementById("topnav").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+<br>
+<div class="row text-center ">
 <!-- Header -->
 <header class="masthead  text-white text-center">
-
-<div style = background-color:#9be2cd;>
+<div class="top"><!-- BGhead -->
   <h1 class="jumbotron-heading"></h1>
   <div class="row">
     <div class="col-md-3"></div>
@@ -85,7 +96,19 @@
       <div class="col-md-3"></div>
     </div>
 
+<!--popular search -->
+  
+  <div class="popular-searches">
+        <a class=" btn btn-light"href="/ayatul-kursi"><span >Ayatul Kursi</span></a>
+        <a class=" btn btn-light"href="/surah-ya-sin"><span >Surah Yaseen</span></a>
+        <a class=" btn btn-light"href="/surah-al-mulk"><span >Surah Al Mulk</span></a>
+        <a class=" btn btn-light"href="/surah-ar-rahman"><span >Surah Ar-Rahman</span></a>
+        <a class=" btn btn-light"href="/surah-al-waqiah"><span >Surah Al Waqi'ah</span></a> 
   </div>
+
+<!--end popular search -->
+</div>
+</div>
 </div>
 </div>
 </header>
