@@ -312,6 +312,14 @@ body {
 .popular-searches a:hover{
   color: #027464;
 }
+.quran{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+}
 @media screen and (max-width: 600px) {
  
   .topnav .search-container {
@@ -357,6 +365,15 @@ body {
 .modal-dialog iframe{
     margin: 0 auto;
     display: block;
+}
+.grid{
+  display: block;
+  padding: 25px;
+  .col{
+    background-color:while;
+    margin-bottom: 16px
+    padding: 16px;
+  }
 }
 }
 
