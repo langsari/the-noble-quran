@@ -152,7 +152,7 @@ body {
 }
 
 .topnav {
-  position: fixed;
+  
   top: 0;
   width: 100%;
   display: block;
@@ -176,6 +176,7 @@ body {
 .topnav ul {
   display: flex;
   float: right;
+  padding: 14px 16px;
   
 }
 .topnav ul li {
@@ -366,15 +367,7 @@ body {
     margin: 0 auto;
     display: block;
 }
-.grid{
-  display: block;
-  padding: 25px;
-  .col{
-    background-color:while;
-    margin-bottom: 16px
-    padding: 16px;
-  }
-}
+
 }
 
 

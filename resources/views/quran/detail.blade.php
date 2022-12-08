@@ -416,7 +416,7 @@
       <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
        @endif
       <br>
-      <audio controls ><i class="fas fa-play-circle"></i>
+      <audio controls >
       <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
       </audio>
       <br>

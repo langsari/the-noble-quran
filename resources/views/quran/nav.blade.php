@@ -59,7 +59,7 @@
 <div class="search-container">
   <form action="{{ route('web.find') }}" method="GET" class="search-bar">
     <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
-    <button type="submit"><ion-icon name="search-outline"></ion-icon</button>
+    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
   </form>
   </div>
 </div>
@@ -79,7 +79,7 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 </script>
-<br>
+
 <div class="row text-center ">
 <!-- Header -->
 <header class="masthead  text-white text-center">

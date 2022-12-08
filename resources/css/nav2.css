@@ -55,6 +55,15 @@ body {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+.boxicon{
+  -webkit-margin-before: var(--gap-size);
+    margin-block-start: var(--gap-size);
+    display: flex;
+    direction: ltr;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 @media screen and (max-width: 600px) {
   .topnav .search-container {
