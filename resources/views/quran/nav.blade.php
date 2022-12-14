@@ -88,8 +88,6 @@ var currentScrollPos = window.pageYOffset;
   <div class="row">
   <div class="quran">
     <div class="col-md-8">
-    <br>
-    <br>
       <img src="{{ URL::to('img/logo-lg-w.png') }}">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>

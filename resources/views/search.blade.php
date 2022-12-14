@@ -13,23 +13,23 @@
    
 <style>
 
-   *{
+*{
    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   padding: 0;
+   box-sizing: border-box;
    }
-   .insearch{
+.insearch{
     max-width: 50rem;
     margin-inline: auto;
    
    }
-   .infosearch{
+.infosearch{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
    }
-    .highlight{ 
+.highlight{ 
   background:#00FF00; 
   padding:1px; 
   border:#00CC00 dotted 1px; 
@@ -40,7 +40,7 @@
   border: none;
 }
 .infosearch{
-   width: 100%;
+  width: 100%;
   max-width: 700px;
   
   display: flex;
@@ -76,13 +76,12 @@
    border: none; 
 }
 .table {
-    border-collapse: inherit;
+    
     border-spacing: 0 10px;
     
 }
 .boxs{
    height: 100%;
-   display: flex;
    align-items: center;
    padding: 0 20px 0 20px; 
    
@@ -93,7 +92,7 @@
 
 }
 .tbody tr {
-    border-top: 12px solid transparent;
+    border-top: 0px solid transparent;
     border-bottom: 12px solid transparent;
 }
 .surahn{
@@ -114,7 +113,7 @@
    float: right;
    padding: 0;
    margin: 0 5px 0px 20px;
-   j 
+  
       
    
 }
@@ -123,8 +122,11 @@
    font-size: 17px;
    color: #000;
    direction: ltr;
-   float: left;
-   
+   float: left;  
+}
+.pagination{
+   display: flex;
+   text-align: center;
 }
 </style>
 
@@ -203,12 +205,12 @@
                </table>
                </body>
 
-
-               <div class="pagination-block">
+               
+               <div class="pagination-block" >
                    <?php //{{ $texts->links('layouts.paginationlinks') }} ?>
                    {{  $texts->appends(request()->input())->links('layouts.paginationlinks') }}
                </div>
-
+              
              @endif
           </div>
        </div>

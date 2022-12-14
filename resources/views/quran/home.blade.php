@@ -138,8 +138,6 @@
     
   
 </style>
-
-
 <div class="surahh">
 <div  class="grid ">
   @foreach($datasurahs as $datasurah)     

@@ -1,5 +1,5 @@
 @if($paginator->hasPages())
-<ul class="pagination">
+<ul class="pagination justify-content-center">
   <!-- Prevoius Page Link -->
   @if($paginator->onFirstPage())
     <li class="page-item disabled"><a class="page-link"><span>&laquo;</span></a></li>
