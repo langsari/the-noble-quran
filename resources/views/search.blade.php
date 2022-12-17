@@ -76,20 +76,13 @@
    border: none; 
 }
 .table {
-    
     border-spacing: 0 10px;
     
 }
 .boxs{
    height: 100%;
    align-items: center;
-   padding: 0 20px 0 20px; 
-   
-   
-   
-}
-.table>tbody>tr>td{
-
+   padding: 0 20px 0 20px;   
 }
 .tbody tr {
     border-top: 0px solid transparent;
@@ -120,7 +113,7 @@
 .tha{
    display: block;
    font-size: 17px;
-   color: #000;
+   color: #959494;
    direction: ltr;
    float: left;  
 }
@@ -179,13 +172,9 @@
                                     {{$text->th_name}}[{{$text->datasurah_id}}:{{ $text->ayat}}] <!-- surah name --> 
                                     </div>
                                     <br>
-<br>
-<br>
                                     <div class="arb">
                                     {{ $text->text }} <!-- arbic -->
                                     </div>
-<br>
-<br>
 <br>
 <br>
 <br>

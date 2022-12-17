@@ -52,20 +52,11 @@
   list.forEach((item) =>
   item.addEventListener('mouseover' , setActiveClass))
 </script>
-
+</div>
 
   
 
-<div class="search-container">
-  <form action="{{ route('web.find') }}" method="GET" class="search-bar">
-    <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
-    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
-  </form>
-  </div>
-</div>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script>
 var prevScrollpos = window.pageYOffset;
@@ -91,7 +82,16 @@ var currentScrollPos = window.pageYOffset;
       <img src="{{ URL::to('img/logo-lg-w.png') }}">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
-      
+      <div class="search-container">
+  <form action="{{ route('web.find') }}" method="GET" class="search-bar">
+    <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+  </form>
+  </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
   </div>
 <!--popular search -->

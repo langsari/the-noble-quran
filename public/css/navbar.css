@@ -163,7 +163,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: rgb(253, 252, 252);
+  color: rgb(8, 8, 8);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -210,7 +210,7 @@ body {
 .topnav ul li a .text {
   position: absolute;
   font-size: 12px;
-  color: white;
+  color: black;
   bottom: 20px;
   font-weight: 400;
   transition: 0.25s;
@@ -223,26 +223,26 @@ body {
 }
 
 .topnav a.active {
-  color: white;
+  color: black;
 }
 
-.topnav .search-container {
-  float: right;
+.top .search-container {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
-
+  justify-content: center;
+  display: flex;
 }
 .search-bar{
   width: 100%;
   max-width: 700px;
-  background: rgba(6, 225, 115, 0.144);
+  background: white;
   display: flex;
   align-items: center;
   border-radius: 60px;
   padding: 1px 5px;
-  backdrop-filter: blur(4px) saturate(180%);
+  
 }
 
 .search-bar input{
@@ -250,7 +250,7 @@ body {
   flex: 1;
   border: 0;
   outline: none;
-  padding: 24px 20px;
+  padding: 10px 15px;
   font-size: 20px;
   color: #cbfff1;
 }
@@ -266,8 +266,9 @@ body {
   border-radius: 50%;
   width: 27px;
   height: 27px;
-  background: #2ec4b2;
+  background: #48b749;
   cursor: pointer;
+  
 }
 .topnav input[type=text] {
   padding: 6px;
@@ -275,9 +276,7 @@ body {
   border: none;
 }
 
-.topnav .search-container button {
-  float: right;
-  
+.top .search-container button {
   
   font-size: 17px;
   border: none;
@@ -288,7 +287,7 @@ body {
   color: black;
    
 }
-.topnav .search-container button:hover {
+.top .search-container button:hover {
   background: #ccc;
 }
 
@@ -298,7 +297,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 24px 20px;
+  padding: 0 0 24px 20px;
  
 }
 .popular-searches a{
