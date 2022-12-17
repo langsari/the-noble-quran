@@ -105,10 +105,7 @@
    margin-bottom: 6px;
    float: right;
    padding: 0;
-   margin: 0 5px 0px 20px;
-  
-      
-   
+   margin: 0 5px 0px 20px;  
 }
 .tha{
    display: block;
