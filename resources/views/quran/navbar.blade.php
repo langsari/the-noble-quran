@@ -34,11 +34,43 @@
 <div class="topnav fixed-top ">
   
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
-  <a href="{{ route('tafseer_home') }}">ตัฟซีร</a>
+<ul> 
+<li class="list active">
+<a  href="{{ route('tafseer_home') }}">
+  <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+  <span class="text">ตัฟซีร</span>
+</a>
+</li>
+<li class="list active"> 
+<a href="{{ route('login') }}">
+  <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
+  <span class="text">เข้าสู่ระบบ</span>
+</a>
+</li> 
+<li class="list active">
+<a href="{{ route('register') }}">
+  <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+  <span class="text">สมัคร</span>
+</a>
+</li>
+<div class="indicator"></div>
+</ul> 
+<script>
+  let list = document.querySelectorAll('.list');
+  function setActiveClass(){
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) =>
+  item.addEventListener('mouseover' , setActiveClass))
+</script>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <a href="{{ route('login') }}">เข้าสู่ระบบ</a>
-  <a href="{{ route('register') }}">สมัคร</a>
 
+  <!--
   <div class="search-container">
   
      <form action="{{ route('web.find') }}" method="GET">
@@ -48,7 +80,7 @@
 
 
 
-     <!-- <body>
+      <body> 
   <input type="text" id="searchtxt" />
   <input type="button" value="search" onClick="replaceText();" id="highlightButton" />
   <p>
@@ -99,7 +131,7 @@ var repstr = "<span class='highlight'>" + searchword + "</span>";
 // }
 }
    </script>
-    <!-- <script>
+     <script>
    function replaceText() { 
 
 $("body").find(".highlight").removeClass("highlight");
@@ -126,11 +158,9 @@ if (searchword != "") {
 </div>
 </header>
 </div>
-
 @yield('content')
 
 </div>
-
 <style>footer {
 text-align: center;
 padding: 3px;

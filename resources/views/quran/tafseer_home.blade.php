@@ -11,6 +11,11 @@
 </head>
 
 <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   .table{
     font-family: 'Uthmani', serif;
   }
