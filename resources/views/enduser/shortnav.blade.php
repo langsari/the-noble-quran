@@ -18,7 +18,7 @@
 
 <body>
 <div  class="hero ">
-<div  class="topnav " > <!-- BGnav -->
+<div  class="topnav" > <!-- BGnav -->
 <a class="active" href="{{ route('homeuser') }}">Quran.th</a>
 <ul> 
 <li class="list active">
