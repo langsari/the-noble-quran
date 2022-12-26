@@ -20,16 +20,7 @@
     font-family: 'Uthmani', serif;
   }
   .tabtop{
-    
-
-    background-image: linear-gradient(to right, #abbaab 0%, #ffffff 51%, #abbaab 100%);
-    
-    transition: .5s;
-    
-    
-    box-shadow: 0 0 20px #eee;
-    
-    
+    background-image: linear-gradient(to right, #abbaab 0%, #ffffff 51%, #abbaab 100%);  
   }
   .table-hover tbody tr:hover td {
     background-color: #85FFBD;

@@ -1,11 +1,59 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+  .closeshow{
+  display: flex;
+  float: right;
+  padding: 0 15px;
+  color: #9e9ea7;
+  color: #1266f1;
+  }
+  .closeshow a{
+  color: #7f7f8b;
+  }
+  .noteshow{
+  display: flex;
+  float: left;
+  padding: 0 10px;
+  color: #7f7f8b;
+  font-family: 'Uthmani', serif;
+  
+  }
+  
+  .actionn ul{
+    display: flex;
+    padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+    
+    
+  }
+  .actionn ul li {
+    position: relative;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  .actionn ul li a{
+    color: black;
+  }
+  .actionn ul li .bt{
+    display: flex;
+    border-style: none;
+    black
+    
+  }
+  
+</style>
+
+
 <div class="container">
-    <div class="row justify-content-center">
+    <!--<div class="row justify-content-center">
     
             <div class="card">
-                <div class="card-header">
+                <div class="card-header"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   
 
@@ -66,15 +114,32 @@
     ยินดีต้องรับคุณ{{Auth::user()->name}}
 
         </h>   -->
-    <center>
-      <h2>โน้ตของคุณ</h2>
-</center>
+      
+        <div class="noteshow">
+      
+        <h6>โน้ตของคุณ<h6>
+        </div>
+
+
+        <div class="closeshow">
+        <a href ="javascript:history.back()"  > 
+        <span class="icon"><ion-icon name="close-outline"></ion-icon></span>
+        </a>
+
+      
+        </div>          
+      
+
 
 <!-- <a href="javascript:history.back()" class="btn btn-warning">กลับไปหน้าซูเราะห์</a> -->
+<!--
           <a href ="{{ route('homeuser')}}" class ="btn btn-dark my-3"> Quran.th </a>
           <a href ="javascript:history.back()"  class ="btn btn-dark my-3"> กลับ </a>
-
+-->
           <!-- <a href="javascript:history.back()" class="btn btn-primary">กลับ</a> -->
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>      
 </div> 
 <!-- 
@@ -85,7 +150,7 @@
 
 @endif -->
 
-<table class="table table-bordered">
+<table class="table table-hover table-borderless  ">
 
  <tr>
     <th class="font-weight-bold" >ที่</th>
@@ -114,8 +179,8 @@
         
 
 
-          <div class="dropdown"> {{-- Dropdown --}}
-                    <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
+ <!--          <div class="dropdown"> {{-- Dropdown --}}
+                   <button class="btn btn-danger btn-sm dropdown-toggle" type="button" id="actionDropdown"
                         data-mdb-toggle="dropdown" aria-expanded="false">
                         Action
                     </button>
@@ -136,8 +201,29 @@
                         </li>
                     </ul>
                 </div>
+                <ion-icon name="trash-outline"></ion-icon>
+-->
+              <div class="actionn">
+                <ul >
+                        <li class="active"><a href="{{ route('notes.show', $value->id) }}">
+                        <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                        </a></li> {{-- View --}}
+                        
+                        <li class="active"><a  href="{{ route('notes.edit', $value->id) }}">
+                        <span class="icon"><ion-icon name="pencil-outline"></ion-icon></ion-icon></span>
+                        </a></li> {{-- Edit --}}
+                            
 
-
+                        <li class="active">
+                            <form action="{{ route('notes.destroy', $value->id) }}" method="post"> {{-- Delete --}}
+                                @csrf
+                                @method('delete')
+                              
+                                <button type="submit" class="bt" ><ion-icon name="trash-outline"></ion-icon></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
         </td>
     </tr>    
  @endforeach

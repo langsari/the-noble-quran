@@ -42,8 +42,10 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h4>
+      <h5 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        
       </div>
       <div class="modal-body">
         <form>
