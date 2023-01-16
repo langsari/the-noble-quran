@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
 <style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
   .closeshow{
   display: flex;
   float: left;
@@ -42,14 +48,17 @@
   .actionn ul li .bt{
     display: flex;
     border-style: none;
-    black
+    
     
   }
   
 </style>
 
 
-<div class="container">
+<body style = background-color:#EFDEFF;>
+  
+
+<div class="container-fluid">
     <!--<div class="row justify-content-center">
     
             <div class="card">
@@ -116,6 +125,7 @@
         </h>   -->
 
         <div class="closeshow">
+        
         <a href ="javascript:history.back()"  > 
         <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
         </a>
@@ -208,6 +218,7 @@
                         
                         <li class="active"><a  href="{{ route('notes.edit', $value->id) }}">
                         <span class="icon"><ion-icon name="pencil-outline"></ion-icon></ion-icon></span>
+                        
                         </a></li> {{-- Edit --}}
                             
 
@@ -231,3 +242,4 @@
 
 
 @endsection
+</body>
