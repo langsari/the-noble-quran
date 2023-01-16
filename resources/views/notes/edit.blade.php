@@ -2,7 +2,6 @@
 
 
 @section('content')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -19,7 +18,7 @@
 
 <div class="row mt-2">
     <div class ="col-md-12">
-      <h2>แก้ไข1</h2>
+      <h2>แก้ไข</h2>
           <a href ="{{ route('notes.index') }}" class ="btn btn-success my-3">กลับ</a>
     </div>      
 </div> 
