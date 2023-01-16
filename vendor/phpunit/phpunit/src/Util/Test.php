@@ -659,7 +659,7 @@ final class Test
                         $mode,
                         $element
                     ),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }
