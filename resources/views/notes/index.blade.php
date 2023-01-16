@@ -10,8 +10,8 @@
   }
   .closeshow{
   display: flex;
-  float: right;
-  padding: 0 15px;
+  float: left;
+  padding: 3px  0 0 15px;
   color: #9e9ea7;
   color: #1266f1;
   }
@@ -123,21 +123,18 @@
     ยินดีต้องรับคุณ{{Auth::user()->name}}
 
         </h>   -->
-      
-        <div class="noteshow">
-      
-        <h6>โน้ตของคุณ<h6>
-        </div>
-
 
         <div class="closeshow">
         
         <a href ="javascript:history.back()"  > 
-        <span class="icon"><ion-icon name="close-outline"></ion-icon></span>
+        <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
         </a>
-
+        </div> 
+        
+        <div class="noteshow">
       
-        </div>          
+        <h6>โน้ตของคุณ<h6>
+        </div>
       
 
 
