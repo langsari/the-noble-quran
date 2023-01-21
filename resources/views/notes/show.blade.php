@@ -35,6 +35,7 @@
   
   
 </style>
+<body style = background-color:#B5E2B6;>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -77,14 +78,14 @@
 
     </div>      
 </div> 
-<br>
+<br> 
 <div class="row">
-    <div class ="card p-3"> 
+    <div class ="card p-3 border-0"> 
       <div class ="card-title"> 
         <strong>หัวข้อ : </strong>
           {{ $note->title}}
       </div>
-
+<br>
       <div class ="card-text">   
         <strong>คำอธิบาย : </strong>
           {{ $note->description}}
@@ -92,3 +93,4 @@
     </div>  
 </div>  
 @endsection
+<body>
