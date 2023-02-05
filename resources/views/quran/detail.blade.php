@@ -84,11 +84,13 @@
 }
 .btt{
   padding: 0 0 24px 20px;
+  font-size: 15px;
 }
 .btt button{
   color: #48b749;
   border: 1px solid;
   border-radius: 20px
+  
 }
 .btt button:hover{
   background-color: #48b749;
@@ -97,7 +99,7 @@
 .btt a{
   color: #48b749;
   border: 1px solid;
-  border-radius: 20px 
+  border-radius: 15px 
 }
 .btt a:hover{
   background-color: #48b749;
@@ -106,7 +108,7 @@
 .form-control{
   color: #48b749;
   border: 1px solid;
-  border-radius: 20px 
+  border-radius: 15px 
 }
 .form-control option{
   background-color: #48b749;
@@ -135,6 +137,24 @@
   font-size: 20px;
   
 }
+.btn{
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  padding: 0px 5px;
+}
+.btn .icon{
+  font-size: 20px;
+  
+}
+.iconn{
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: start;
+  align-items: center;
+
+}
         
      
 
@@ -146,6 +166,8 @@
     <div class="col-md-8 mx-auto">
 <br>
 <br>
+
+<ul class="list-group list-group-horizontal justify-content-left ">
 <!--
 <ul class="list-group bg-white list-group-horizontal  ">
 -->
@@ -280,8 +302,45 @@
         });
     </script>
 -->
-<ul class="list-group list-group-horizontal justify-content-center ">
 
+
+
+
+<!-- dropdown surah&& ayah : can link-->
+    
+    <div class="col-md-2 ">
+    <div class="form-s2 ">
+    <div>
+    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
+    <option value="#" style="color:white" >ซูเราะห์</option>
+    @foreach($datas as $data)
+    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
+   {{$data->th_name}}</option>@endforeach </select>
+    </div>
+    </div>
+    </div>
+
+    <div class ="col-md-2 ">
+   
+    <select class="form-control  " name="menu1" id="{{$data->id}}">
+    <option value="#" >อายะห์</option>
+    @foreach($arabics->arabic as $arabic )  
+   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option> 
+    @endforeach
+   </select>
+  
+  <script>var urlmenu = document.getElementById( 'menu1' );
+     urlmenu.onchange = function() {
+      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
+  };</script> 
+
+</ul>
+
+<!-- detail The Quran -->
+         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+         <br> 
+         
+        <div class=" list-group list-group-horizontal justify-content-center"> 
 <!-- read quran-->
 <!-- Button trigger modal -->
 <div class=btt>
@@ -407,41 +466,11 @@
             });
         });
     </script>
+</div>
 
 
-<!-- dropdown surah&& ayah : can link-->
-    
-    <div class="col-md-2 ">
-    <div class="form-s2 ">
-    <div>
-    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
-    <option value="#" style="color:white" >ซูเราะห์</option>
-    @foreach($datas as $data)
-    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
-   {{$data->th_name}}</option>@endforeach </select>
-    </div>
-    </div>
-    </div>
 
-    <div class ="col-md-2 ">
-   
-    <select class="form-control  " name="menu1" id="{{$data->id}}">
-    <option value="#" >อายะห์</option>
-    @foreach($arabics->arabic as $arabic )  
-   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option> 
-    @endforeach
-   </select>
-  
-  <script>var urlmenu = document.getElementById( 'menu1' );
-     urlmenu.onchange = function() {
-      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
-  };</script> 
 
-</ul>
-<!-- detail The Quran -->
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
-         <br> 
-         
          <div class="col-sm-3">
          <div class="form-group row">
         </div>
@@ -460,11 +489,14 @@
       <p class="latin">({{$arabic->thais->ayat}}){{$arabic->thais->Text}}</p>
        @endif
       <br>
+      <!--
       <audio controls >
       <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
       </audio>
-    
-          
+      -->
+      <div class=iconn>
+      <button class ="btn"onclick="myFunction(true)">
+      <span class=icon><ion-icon name="caret-forward-circle-outline"></ion-icon></span></button>  
             
             <!-- Bookmark
             
@@ -513,15 +545,17 @@
 <!-- Button trigger modal TAFSEER -->
  <button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
  <span class="icon"><ion-icon name="book-outline"></ion-icon></span></button>
+ </div>
  <div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
   @if($arabic->thais->tafseer == '')  <p class="cautions">*อายะห์นี้ยังไม่มีตัฟซีรภาษาไทย*</p> @endif
   <p>{{$arabic->thais->tafseer}}</p>
   </div>
 </div>
+
+<hr>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<hr>
 
 @endforeach
 </div> 
