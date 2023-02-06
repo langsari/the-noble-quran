@@ -96,7 +96,7 @@ This command will create 2 files which are
 
 <br>
 
-2- Add table At create_duas_table.php file in database\migrations folder create column
+2- At create_duas_table.php file in database\migrations folder create column
 ```php
 <?php
 
