@@ -4,12 +4,22 @@
 <style>
   .closeshow{
   display: flex;
+  float: left;
+  padding: 3px  0 0 15px;
+  color: #9e9ea7;
+  color: #1266f1;
+  }
+  .closeshow a{
+  color: #7f7f8b;
+  }
+  .backshow{
+  display: flex;
   float: right;
   padding: 0 15px;
   color: #9e9ea7;
   color: #1266f1;
   }
-  .closeshow a{
+  .backshow a{
   color: #7f7f8b;
   }
   .noteshow{
@@ -24,7 +34,7 @@
   .actionn ul{
     display: flex;
     padding: 0;
-  justify-content: flex-start;
+   justify-content: center;
   align-items: center;
     
     
@@ -46,8 +56,9 @@
     
   }
   
+  
 </style>
-
+<body style = background-color:#B5E2B6;>
 
 <div class="container">
     <!--<div class="row justify-content-center">
@@ -114,21 +125,23 @@
     ยินดีต้องรับคุณ{{Auth::user()->name}}
 
         </h>   -->
-      
+
+        <div class="closeshow">
+        <a href ="javascript:history.back()"  > 
+        <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
+        </a>
+        </div> 
+        
         <div class="noteshow">
       
         <h6>โน้ตของคุณ<h6>
         </div>
-
-
-        <div class="closeshow">
-        <a href ="javascript:history.back()"  > 
+      
+        <div class="backshow">
+        <a href ="{{ route('homeuser')}}"  > 
         <span class="icon"><ion-icon name="close-outline"></ion-icon></span>
         </a>
-
-      
-        </div>          
-      
+        </div> 
 
 
 <!-- <a href="javascript:history.back()" class="btn btn-warning">กลับไปหน้าซูเราะห์</a> -->
@@ -152,7 +165,7 @@
 
 <table class="table table-hover table-borderless  ">
 
- <tr>
+ <tr align="center ">
     <th class="font-weight-bold" >ที่</th>
     <th class="font-weight-bold">หัวข้อ</th>
     <th class="font-weight-bold">คำอธิบาย</th>
@@ -162,13 +175,13 @@
  </tr>
 
  @foreach ($data as $key => $value)
-    <tr>
+    <tr align="center ">
        
         <td>{{ $loop->iteration }} </td> 
         <td>{{ $value->title }}</td>
         <td>{{ Str::limit($value->description, 100) }}</td>
         <!-- <td>{{$value->user->name}}</td> -->
-        <td>
+        <td >
          <!-- <form action="{{ route('notes.destroy', $value->id) }}" method="post">
              <a href="{{ route('notes.show', $value->id) }}" class="btn btn-primary">ดู</a>
              <a href="{{ route('notes.edit', $value->id) }}" class="btn btn-secondary">แก้ไข</a>
@@ -234,3 +247,4 @@
 
 
 @endsection
+</body>
