@@ -47,7 +47,7 @@ class Caster
         if ($hasDebugInfo) {
             try {
                 $debugInfo = $obj->__debugInfo();
-            } catch (\Throwable $e) {
+            } catch (\Exception $e) {
                 // ignore failing __debugInfo()
                 $hasDebugInfo = false;
             }

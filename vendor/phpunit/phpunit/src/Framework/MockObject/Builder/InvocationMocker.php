@@ -194,8 +194,6 @@ final class InvocationMocker implements InvocationStubber, MethodNameMatch
      * @throws MethodParametersAlreadyConfiguredException
      *
      * @return $this
-     *
-     * @deprecated
      */
     public function withConsecutive(...$arguments): self
     {

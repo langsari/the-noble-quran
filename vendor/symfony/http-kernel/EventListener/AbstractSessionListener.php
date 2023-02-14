@@ -200,11 +200,10 @@ abstract class AbstractSessionListener implements EventSubscriberInterface, Rese
         }
 
         if ($autoCacheControl) {
-            $maxAge = $response->headers->hasCacheControlDirective('public') ? 0 : (int) $response->getMaxAge();
             $response
-                ->setExpires(new \DateTimeImmutable('+'.$maxAge.' seconds'))
+                ->setExpires(new \DateTime())
                 ->setPrivate()
-                ->setMaxAge($maxAge)
+                ->setMaxAge(0)
                 ->headers->addCacheControlDirective('must-revalidate');
         }
 

@@ -25,7 +25,7 @@
   font-weight: normal;
 }
   .cautions {
-
+  
   font-size: 13px;
   font-weight: normal;
   direction: ltr;
@@ -47,7 +47,7 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-
+  
   bottom: 10px;
   right: 20px;
   width: 60px;
@@ -59,7 +59,7 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-
+  
   bottom: 10px;
   right: 20px;
   width: 100px;
@@ -71,7 +71,7 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-
+  
   bottom: 10px;
   right: 20px;
   width: 100px;
@@ -96,7 +96,7 @@
   border: none;
   cursor: pointer;
   opacity: 0.8;
-
+  
   bottom: 10px;
   right: 20px;
   width: 100px;
@@ -114,7 +114,7 @@
  .arabic_number {
    font-size: 28px;
    font-weight: normal;
-
+   
 }
 
 .footer {
@@ -123,9 +123,9 @@
     background-color:#9be2cd;
     color: white;
   }.text {
-
+    
     color: white;
-    font-size: 10vw;
+    font-size: 10vw; 
     font-weight: bold;
     text-align: center;
   }
@@ -135,8 +135,8 @@
     background-size:cover;
     padding-bottom:80px;
   }
-
-    .hero{
+  
+  .hero{
     background:linear-gradient(#add100, #7b920a);
     position: static;
     top: 0;
@@ -149,7 +149,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
 }
 
 body {
@@ -165,8 +165,6 @@ body {
   overflow: hidden;
 }
 
-
-
 .topnav a {
   float: left;
   display: block;
@@ -178,13 +176,13 @@ body {
 }
 .topnav span.text {
   font-size: 17px;
-
+  
 }
 .topnav ul {
   display: flex;
   float: right;
   padding: 0 10px;
-
+  
 }
 .topnav ul li {
   position: relative;
@@ -199,7 +197,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  
 
 }
 .topnav ul li a .icon {
@@ -223,7 +221,7 @@ body {
   transition: 0.25s;
   text-transform: uppercase;
   transform: scale(0);
-
+  
 }
 .topnav ul li.active a .text{
   transform: scale(1);
@@ -249,7 +247,7 @@ body {
   align-items: center;
   border-radius: 60px;
   padding: 1px 5px;
-
+  
 }
 
 .search-bar input{
@@ -266,7 +264,7 @@ body {
 .search-bar button ion-icon{
   width: 25px;
   color: white;
-
+  
 }
 .search-bar button{
   border: 0;
@@ -275,7 +273,7 @@ body {
   height: 27px;
   background: #48b749;
   cursor: pointer;
-
+  
 }
 .topnav input[type=text] {
   padding: 6px;
@@ -284,7 +282,7 @@ body {
 }
 
 .top .search-container button {
-
+  
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -292,7 +290,7 @@ body {
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-
+   
 }
 .top .search-container button:hover {
   background: #ccc;
@@ -305,7 +303,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 0 24px 20px;
-
+ 
 }
 .popular-searches a{
   margin-inline: 5px;
@@ -325,10 +323,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 20px 20px;
+  padding: 1px 0 24px 12px;
 }
 @media screen and (max-width: 600px) {
-
+ 
   .topnav .search-container {
     float: none;
     background: orange ;
@@ -342,7 +340,7 @@ body {
     padding: 14px;
   }
   .topnav input[type=text] {
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;  
   }
   body {margin:2rem;}
 
@@ -375,3 +373,6 @@ body {
 }
 
 }
+
+
+

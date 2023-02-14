@@ -554,7 +554,7 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }
@@ -599,22 +599,22 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         // @codeCoverageIgnoreStart
         switch ($exception) {
             case Deprecated::class:
-                $this->addWarning('Expecting E_DEPRECATED and E_USER_DEPRECATED is deprecated and will no longer be possible in PHPUnit 10.');
+                $this->addWarning('Support for using expectException() with PHPUnit\Framework\Error\Deprecated is deprecated and will be removed in PHPUnit 10. Use expectDeprecation() instead.');
 
                 break;
 
             case Error::class:
-                $this->addWarning('Expecting E_ERROR and E_USER_ERROR is deprecated and will no longer be possible in PHPUnit 10.');
+                $this->addWarning('Support for using expectException() with PHPUnit\Framework\Error\Error is deprecated and will be removed in PHPUnit 10. Use expectError() instead.');
 
                 break;
 
             case Notice::class:
-                $this->addWarning('Expecting E_STRICT, E_NOTICE, and E_USER_NOTICE is deprecated and will no longer be possible in PHPUnit 10.');
+                $this->addWarning('Support for using expectException() with PHPUnit\Framework\Error\Notice is deprecated and will be removed in PHPUnit 10. Use expectNotice() instead.');
 
                 break;
 
             case WarningError::class:
-                $this->addWarning('Expecting E_WARNING and E_USER_WARNING is deprecated and will no longer be possible in PHPUnit 10.');
+                $this->addWarning('Support for using expectException() with PHPUnit\Framework\Error\Warning is deprecated and will be removed in PHPUnit 10. Use expectWarning() instead.');
 
                 break;
         }
@@ -658,123 +658,63 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         $this->doesNotPerformAssertions = true;
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectDeprecation(): void
     {
-        $this->addWarning('Expecting E_DEPRECATED and E_USER_DEPRECATED is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectedException = Deprecated::class;
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectDeprecationMessage(string $message): void
     {
-        $this->addWarning('Expecting E_DEPRECATED and E_USER_DEPRECATED is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessage($message);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectDeprecationMessageMatches(string $regularExpression): void
     {
-        $this->addWarning('Expecting E_DEPRECATED and E_USER_DEPRECATED is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessageMatches($regularExpression);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectNotice(): void
     {
-        $this->addWarning('Expecting E_STRICT, E_NOTICE, and E_USER_NOTICE is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectedException = Notice::class;
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectNoticeMessage(string $message): void
     {
-        $this->addWarning('Expecting E_STRICT, E_NOTICE, and E_USER_NOTICE is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessage($message);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectNoticeMessageMatches(string $regularExpression): void
     {
-        $this->addWarning('Expecting E_STRICT, E_NOTICE, and E_USER_NOTICE is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessageMatches($regularExpression);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectWarning(): void
     {
-        $this->addWarning('Expecting E_WARNING and E_USER_WARNING is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectedException = WarningError::class;
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectWarningMessage(string $message): void
     {
-        $this->addWarning('Expecting E_WARNING and E_USER_WARNING is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessage($message);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectWarningMessageMatches(string $regularExpression): void
     {
-        $this->addWarning('Expecting E_WARNING and E_USER_WARNING is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessageMatches($regularExpression);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectError(): void
     {
-        $this->addWarning('Expecting E_ERROR and E_USER_ERROR is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectedException = Error::class;
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectErrorMessage(string $message): void
     {
-        $this->addWarning('Expecting E_ERROR and E_USER_ERROR is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessage($message);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/5062
-     */
     public function expectErrorMessageMatches(string $regularExpression): void
     {
-        $this->addWarning('Expecting E_ERROR and E_USER_ERROR is deprecated and will no longer be possible in PHPUnit 10.');
-
         $this->expectExceptionMessageMatches($regularExpression);
     }
 
@@ -836,7 +776,7 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }
@@ -1825,7 +1765,7 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }
@@ -1885,13 +1825,9 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
      * @psalm-param class-string<RealInstanceType>|string $originalClassName
      *
      * @psalm-return class-string<MockObject&RealInstanceType>
-     *
-     * @deprecated
      */
     protected function getMockClass(string $originalClassName, $methods = [], array $arguments = [], string $mockClassName = '', bool $callOriginalConstructor = false, bool $callOriginalClone = true, bool $callAutoload = true, bool $cloneArguments = false): string
     {
-        $this->addWarning('PHPUnit\Framework\TestCase::getMockClass() is deprecated and will be removed in PHPUnit 10.');
-
         $this->recordDoubledType($originalClassName);
 
         $mock = $this->getMockObjectGenerator()->getMock(
@@ -2597,7 +2533,7 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }

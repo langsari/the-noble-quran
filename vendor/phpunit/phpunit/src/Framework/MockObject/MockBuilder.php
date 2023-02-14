@@ -114,7 +114,6 @@ final class MockBuilder
      * @throws \PHPUnit\Framework\InvalidArgumentException
      * @throws ClassAlreadyExistsException
      * @throws ClassIsFinalException
-     * @throws ClassIsReadonlyException
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws OriginalConstructorInvocationRequiredException
@@ -242,7 +241,7 @@ final class MockBuilder
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }
@@ -284,7 +283,7 @@ final class MockBuilder
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }

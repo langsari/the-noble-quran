@@ -39,21 +39,21 @@ class HtmlExtension extends AbstractExtension
     public function getPseudoClassTranslators(): array
     {
         return [
-            'checked' => [$this, 'translateChecked'],
-            'link' => [$this, 'translateLink'],
-            'disabled' => [$this, 'translateDisabled'],
-            'enabled' => [$this, 'translateEnabled'],
-            'selected' => [$this, 'translateSelected'],
-            'invalid' => [$this, 'translateInvalid'],
-            'hover' => [$this, 'translateHover'],
-            'visited' => [$this, 'translateVisited'],
+            'checked' => $this->translateChecked(...),
+            'link' => $this->translateLink(...),
+            'disabled' => $this->translateDisabled(...),
+            'enabled' => $this->translateEnabled(...),
+            'selected' => $this->translateSelected(...),
+            'invalid' => $this->translateInvalid(...),
+            'hover' => $this->translateHover(...),
+            'visited' => $this->translateVisited(...),
         ];
     }
 
     public function getFunctionTranslators(): array
     {
         return [
-            'lang' => [$this, 'translateLang'],
+            'lang' => $this->translateLang(...),
         ];
     }
 

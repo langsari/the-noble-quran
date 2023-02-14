@@ -522,10 +522,10 @@ class Request
         $cookies = [];
 
         foreach ($this->cookies as $k => $v) {
-            $cookies[] = \is_array($v) ? http_build_query([$k => $v], '', '; ', \PHP_QUERY_RFC3986) : "$k=$v";
+            $cookies[] = $k.'='.$v;
         }
 
-        if ($cookies) {
+        if (!empty($cookies)) {
             $cookieHeader = 'Cookie: '.implode('; ', $cookies)."\r\n";
         }
 

@@ -37,7 +37,6 @@ use Countable;
 use DOMAttr;
 use DOMDocument;
 use DOMElement;
-use Generator;
 use PHPUnit\Framework\Constraint\ArrayHasKey;
 use PHPUnit\Framework\Constraint\Callback;
 use PHPUnit\Framework\Constraint\ClassHasAttribute;
@@ -279,10 +278,6 @@ abstract class Assert
      */
     public static function assertCount(int $expectedCount, $haystack, string $message = ''): void
     {
-        if ($haystack instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $haystack parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         if (!$haystack instanceof Countable && !is_iterable($haystack)) {
             throw InvalidArgumentException::create(2, 'countable or iterable');
         }
@@ -305,10 +300,6 @@ abstract class Assert
      */
     public static function assertNotCount(int $expectedCount, $haystack, string $message = ''): void
     {
-        if ($haystack instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $haystack parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         if (!$haystack instanceof Countable && !is_iterable($haystack)) {
             throw InvalidArgumentException::create(2, 'countable or iterable');
         }
@@ -460,10 +451,6 @@ abstract class Assert
      */
     public static function assertEmpty($actual, string $message = ''): void
     {
-        if ($actual instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $actual parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         static::assertThat($actual, static::isEmpty(), $message);
     }
 
@@ -477,10 +464,6 @@ abstract class Assert
      */
     public static function assertNotEmpty($actual, string $message = ''): void
     {
-        if ($actual instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $actual parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         static::assertThat($actual, static::logicalNot(static::isEmpty()), $message);
     }
 
@@ -1185,13 +1168,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertClassHasAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        self::createWarning('assertClassHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidClassAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1209,13 +1188,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertClassNotHasAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        self::createWarning('assertClassNotHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidClassAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1239,13 +1214,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertClassHasStaticAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        self::createWarning('assertClassHasStaticAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidClassAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1267,13 +1238,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertClassNotHasStaticAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        self::createWarning('assertClassNotHasStaticAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidClassAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1299,13 +1266,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertObjectHasAttribute(string $attributeName, $object, string $message = ''): void
     {
-        self::createWarning('assertObjectHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidObjectAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1329,13 +1292,9 @@ abstract class Assert
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      * @throws Exception
      * @throws ExpectationFailedException
-     *
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
      */
     public static function assertObjectNotHasAttribute(string $attributeName, $object, string $message = ''): void
     {
-        self::createWarning('assertObjectNotHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         if (!self::isValidObjectAttributeName($attributeName)) {
             throw InvalidArgumentException::create(1, 'valid attribute name');
         }
@@ -1942,14 +1901,6 @@ abstract class Assert
      */
     public static function assertSameSize($expected, $actual, string $message = ''): void
     {
-        if ($expected instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $expected parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
-        if ($actual instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $actual parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         if (!$expected instanceof Countable && !is_iterable($expected)) {
             throw InvalidArgumentException::create(1, 'countable or iterable');
         }
@@ -1978,14 +1929,6 @@ abstract class Assert
      */
     public static function assertNotSameSize($expected, $actual, string $message = ''): void
     {
-        if ($expected instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $expected parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
-        if ($actual instanceof Generator) {
-            self::createWarning('Passing an argument of type Generator for the $actual parameter is deprecated. Support for this will be removed in PHPUnit 10.');
-        }
-
         if (!$expected instanceof Countable && !is_iterable($expected)) {
             throw InvalidArgumentException::create(1, 'countable or iterable');
         }
@@ -2725,33 +2668,18 @@ abstract class Assert
         );
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
-     */
     public static function classHasAttribute(string $attributeName): ClassHasAttribute
     {
-        self::createWarning('classHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         return new ClassHasAttribute($attributeName);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
-     */
     public static function classHasStaticAttribute(string $attributeName): ClassHasStaticAttribute
     {
-        self::createWarning('classHasStaticAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         return new ClassHasStaticAttribute($attributeName);
     }
 
-    /**
-     * @deprecated https://github.com/sebastianbergmann/phpunit/issues/4601
-     */
     public static function objectHasAttribute($attributeName): ObjectHasAttribute
     {
-        self::createWarning('objectHasAttribute() is deprecated and will be removed in PHPUnit 10.');
-
         return new ObjectHasAttribute($attributeName);
     }
 

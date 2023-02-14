@@ -254,7 +254,7 @@ final class MockMethod
             } catch (TemplateException $e) {
                 throw new RuntimeException(
                     $e->getMessage(),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }
@@ -371,7 +371,7 @@ final class MockMethod
         } catch (\ReflectionException $e) {
             throw new ReflectionException(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }

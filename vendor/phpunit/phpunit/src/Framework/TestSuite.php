@@ -47,8 +47,6 @@ use ReflectionMethod;
 use Throwable;
 
 /**
- * @template-implements IteratorAggregate<int, Test>
- *
  * @internal This class is not covered by the backward compatibility promise for PHPUnit
  */
 class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
@@ -183,7 +181,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
-                        $e->getCode(),
+                        (int) $e->getCode(),
                         $e
                     );
                 }
@@ -266,7 +264,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
         } catch (ReflectionException $e) {
             throw new Exception(
                 $e->getMessage(),
-                $e->getCode(),
+                (int) $e->getCode(),
                 $e
             );
         }
@@ -321,7 +319,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }
@@ -342,7 +340,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
-                        $e->getCode(),
+                        (int) $e->getCode(),
                         $e
                     );
                 }
@@ -424,7 +422,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                 } catch (ReflectionException $e) {
                     throw new Exception(
                         $e->getMessage(),
-                        $e->getCode(),
+                        (int) $e->getCode(),
                         $e
                     );
                 }
@@ -446,7 +444,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
             } catch (ReflectionException $e) {
                 throw new Exception(
                     $e->getMessage(),
-                    $e->getCode(),
+                    (int) $e->getCode(),
                     $e
                 );
             }
@@ -454,15 +452,6 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
 
             if (dirname($class->getFileName()) === __DIR__) {
                 continue;
-            }
-
-            if ($class->isAbstract() && $class->isSubclassOf(TestCase::class)) {
-                $this->addWarning(
-                    sprintf(
-                        'Abstract test case classes with "Test" suffix are deprecated (%s)',
-                        $class->getName()
-                    )
-                );
             }
 
             if (!$class->isAbstract()) {
@@ -475,7 +464,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                     } catch (ReflectionException $e) {
                         throw new Exception(
                             $e->getMessage(),
-                            $e->getCode(),
+                            (int) $e->getCode(),
                             $e
                         );
                     }
@@ -628,7 +617,7 @@ class TestSuite implements IteratorAggregate, Reorderable, SelfDescribing, Test
                         call_user_func([$this->name, $beforeClassMethod]);
                     }
                 }
-            } catch (SkippedTestSuiteError|SkippedTestError $error) {
+            } catch (SkippedTestSuiteError $error) {
                 foreach ($this->tests() as $test) {
                     $result->startTest($test);
                     $result->addFailure($test, $error, 0);
