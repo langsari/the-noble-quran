@@ -35,7 +35,7 @@
         font-weight: normal;
       }
         .cautions {
-        
+
         font-size: 13px;
         font-weight: normal;
         direction: ltr;
@@ -44,7 +44,7 @@
         color: red;
       }
         .cautions2 {
-        
+
         font-size: 13px;
         font-weight: normal;
         direction: ltr;
@@ -69,7 +69,7 @@
     font-weight: 400;
     src: url('assets/font/AmiriQuranColored.woff') format('truetype');
   }
-  
+
   .quran-font {
     font-family: quran-font;
     font-size: 26px;
@@ -82,13 +82,13 @@
      line-height: 200%;
      color: #000000;
    }
-   .highlight{ 
-  background:#00FF00; 
-  padding:1px; 
-  border:#00CC00 dotted 1px; 
+   .highlight{
+  background:#00FF00;
+  padding:1px;
+  border:#00CC00 dotted 1px;
 }
-        
-     
+
+
 
       </style>
        <br>
@@ -124,15 +124,15 @@
       <div class="quran-font-intro ">
         <p>
         @foreach($arabics->arabic as $arabic )
-      {{$arabic->text}} 
+      {{$arabic->text}}
        [{{$arabic->thais->ayat}}]
       @endforeach</p>
       </div>
-    
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
+
       </div>
     </div>
   </div>
@@ -155,27 +155,27 @@
        <h4 class="modal-title" id="myModalLabel2"></h4>
       </div>
       <div class="modal-body">
-       
-      @foreach($tafseers->qurantafseer as $tafseer ) 
-      @if($tafseer->status == 'อนุมัติ') 
+
+      @foreach($tafseers->qurantafseer as $tafseer )
+      @if($tafseer->status == 'อนุมัติ')
       <h4>{{$tafseer->name}}(อายะห์ที่ {{$tafseer->arabic_id}})</h4>
         <p>
-       
-      {{$tafseer->qurantafseer}} 
-     
+
+      {{$tafseer->qurantafseer}}
+
       </p>
-   
-    <div class ="card-text">   
+
+    <div class ="card-text">
         <strong>ที่มา : </strong>
         {{ $tafseer->resource }}
-      </div> 
+      </div>
       <hr>
-      @endif  
+      @endif
       @endforeach
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
+
       </div>
     </div>
   </div>
@@ -187,7 +187,7 @@
             <a href="#Geeks2"
                class="btn  btn-dark"
                data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
- 
+
             <div id="Geeks2" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -200,7 +200,7 @@
                         </div>
                         <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
-                           @if($tafseer->status == 'อนุมัติ') 
+                           @if($tafseer->status == 'อนุมัติ')
                         <p>{{$tafseer->name}}</p>
                             <iframe id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
@@ -208,14 +208,14 @@
                             </iframe>
                             <br>
                             <br>
-                          
-                          @endif  
+
+                          @endif
                             @endforeach
                         </div>
 
                         <div class="modal-footer">
                         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
+
                      </div>
                     </div>
                 </div>
@@ -237,10 +237,10 @@
 
 <!-- dropdown surah&& ayah : can link-->
     <div class="col-md-3 ">
-             
+
              <div class="form-s2 ">
                  <div>
-   
+
     <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
     <option value="#" style="color:white" >ซูเราะห์</option>
     @foreach($datas as $data)
@@ -251,27 +251,27 @@
     </div>
 
     <div class ="col-md-3 ">
-   
+
     <select class="form-control  " name="menu1" id="{{$data->id}}">
     <option value="#" >อายะห์</option>
-    @foreach($arabics->arabic as $arabic )  
-   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option> 
+    @foreach($arabics->arabic as $arabic )
+   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option>
     @endforeach
    </select>
-   
+
   <script>var urlmenu = document.getElementById( 'menu1' );
      urlmenu.onchange = function() {
       window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
-  };</script> 
-  
+  };</script>
+
 </ul>
 <br>
 <br>
 <!-- detail The Quran -->
          <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
-         <br> 
-         
-         <div class=" list-group list-group-horizontal justify-content-center">         
+         <br>
+
+         <div class=" list-group list-group-horizontal justify-content-center">
 <!-- read quran-->
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-outline-info " data-toggle="modal" data-target="#myModal">
@@ -287,21 +287,21 @@
         <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
       </div>
       <div class="modal-body">
-       
+
 
       <div class="quran-font-intro ">
         <p>
         @foreach($arabics->arabic as $arabic )
-      {{$arabic->text}} 
+      {{$arabic->text}}
        [{{$arabic->thais->ayat}}]
       @endforeach</p>
       </div>
-    
+
       </div>
       <div class="modal-footer">
         <!-- botton ปิด in read quran -->
-        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button> 
-       
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+
       </div>
     </div>
   </div>
@@ -322,27 +322,27 @@
        <h4 class="modal-title" id="myModalLabel2"></h4>
       </div>
       <div class="modal-body">
-       
-      @foreach($tafseers->qurantafseer as $tafseer ) 
-      @if($tafseer->status == 'อนุมัติ') 
+
+      @foreach($tafseers->qurantafseer as $tafseer )
+      @if($tafseer->status == 'อนุมัติ')
       <h4>{{$tafseer->name}}(อายะห์ที่ {{$tafseer->arabic_id}})</h4>
         <p>
-       
-      {{$tafseer->qurantafseer}} 
-     
+
+      {{$tafseer->qurantafseer}}
+
       </p>
-   
-    <div class ="card-text">   
+
+    <div class ="card-text">
         <strong>ที่มา : </strong>
         {{ $tafseer->resource }}
-      </div> 
+      </div>
       <hr>
-      @endif  
+      @endif
       @endforeach
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
+
       </div>
     </div>
   </div>
@@ -363,7 +363,7 @@
                         </div>
                         <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
-                           @if($tafseer->status == 'อนุมัติ') 
+                           @if($tafseer->status == 'อนุมัติ')
                         <p>{{$tafseer->name}}</p>
                             <iframe id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
@@ -371,14 +371,14 @@
                             </iframe>
                             <br>
                             <br>
-                          
-                          @endif  
+
+                          @endif
                             @endforeach
                         </div>
 
                         <div class="modal-footer">
                         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
-       
+
                      </div>
                     </div>
                 </div>
@@ -397,22 +397,22 @@
         });
     </script>
 </div>
-         
+
          <div class="col-sm-3">
          <div class="form-group row">
         </div>
         </div>
         @foreach($arabics->arabic as $arabic )
-                
+
         <div class="quran-font-intro ">
         <p>
         {{$arabic->text}}
         </p>
-      
+
        </div>
        <p class="t">{{$arabic->transliteration}}</p>
        <!-- checked ststus before display on screen if user CRUD Quran -->
-       @if($arabic->thais->status == 'อนุมัติ') 
+       @if($arabic->thais->status == 'อนุมัติ')
       <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
        @endif
       <br>
@@ -420,10 +420,10 @@
       <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
       </audio>
       <br>
-          
-            
+
+
             <!-- Bookmark
-            
+
    <button type="button" class="btn btn-outline-secondary">
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
   <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
@@ -452,9 +452,9 @@
             <label for="message-text" class="control-label">คำอธิบาย :</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
-        
+
           <p class="cautions">*กรุณาเข้าสู่ระบบก่อนสร้างโน้ต*</p>  <a class="cautions2" href="{{ route('login') }}">ไปที่หน้าเข้าสู่ระบบ</a>
-         
+
         </form>
       </div>
       <div class="modal-footer">
@@ -481,5 +481,5 @@
 <hr>
 
 @endforeach
-</div> 
+</div>
 @endsection

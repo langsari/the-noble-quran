@@ -38,7 +38,7 @@ class IcuDatFileLoader extends IcuResFileLoader
 
         try {
             $rb = new \ResourceBundle($locale, $resource);
-        } catch (\Exception) {
+        } catch (\Exception $e) {
             $rb = null;
         }
 
