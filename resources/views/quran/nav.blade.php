@@ -14,24 +14,24 @@
    <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-  
+
 <body>
 <div class="hero">
 <div class="topnav " id=topnav> <!-- BGnav -->
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
-<ul> 
+<ul>
 <li class="list active">
 <a  href="{{ route('tafseer_home') }}">
   <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
   <span class="text">ตัฟซีร</span>
 </a>
 </li>
-<li class="list active"> 
+<li class="list active">
 <a href="{{ route('login') }}">
   <span class="icon"><ion-icon name="log-in-outline"></ion-icon></span>
   <span class="text">เข้าสู่ระบบ</span>
 </a>
-</li> 
+</li>
 </a>
 <li class="list active">
 <a href="{{ route('register') }}">
@@ -41,7 +41,7 @@
 </a>
 </a>
 <div class="indicator"></div>
-</ul> 
+</ul>
 <script>
   let list = document.querySelectorAll('.list');
   function setActiveClass(){
@@ -54,7 +54,7 @@
 </script>
 </div>
 
-  
+
 
 
 
@@ -95,13 +95,13 @@ var currentScrollPos = window.pageYOffset;
     </div>
   </div>
 <!--popular search -->
-  
+
   <div class="popular-searches">
         <a class=" btn btn-light"href="/ayatul-kursi"><span >Ayatul Kursi</span></a>
         <a class=" btn btn-light"href="/surah-ya-sin"><span >Surah Yaseen</span></a>
         <a class=" btn btn-light"href="/surah-al-mulk"><span >Surah Al Mulk</span></a>
         <a class=" btn btn-light"href="/surah-ar-rahman"><span >Surah Ar-Rahman</span></a>
-        <a class=" btn btn-light"href="/surah-al-waqiah"><span >Surah Al Waqi'ah</span></a> 
+        <a class=" btn btn-light"href="/surah-al-waqiah"><span >Surah Al Waqi'ah</span></a>
   </div>
 
 <!--end popular search -->
@@ -138,5 +138,5 @@ color: white;
 </body>
 </html>
 
-            
-           
+
+

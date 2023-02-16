@@ -28,7 +28,7 @@
         font-weight: normal;
       }
         .cautions {
-        
+
         font-size: 13px;
         font-weight: normal;
         direction: ltr;
@@ -63,7 +63,7 @@
       background-color:while;
       grid-gap: 10px;
       grid-template-columns: repeat(3, 1fr);
-      
+
 
     }
     .col{
@@ -72,42 +72,56 @@
       min-height: 0;
       padding-right: 0;
       padding-left: 0;
-      background-color: while;
+      background-color: white;
       cursor: pointer;
       color: initial;
       border: 1px solid #91740c3d;
       border-radius: 5px;
-      
+
     }
     .list{
     height: 100%;
-    
+
     display: flex;
     align-items: center;
-    padding: 10px 18px;
+    padding: 10px 10px;
     }
     .surah-no{
       font-size: 17px;
-      justify-content: start;
       color: #48b749;
       font-weight: 600;
-      padding-right: 20px;
-      margin-top: -25px;
+      padding-left: 18px;
+      padding-right: 18px;
+      width: 34px;
+      height: 40px;
+      background-image: url(https://quran.kemenag.go.id/assets/images/icons/ic-frame-number.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      margin: 0;
+      line-height: 16px;
+      text-align: center;
     }
-    .info{
+
+     .info{
     flex-grow: 1;
     overflow: hidden;
     white-space: nowrap;
     display: block;
     min-width: 0;
     margin-right: 8px;
-    
+    padding-left: 20px;
+
     }
     .title{
       display: block;
       font-size: 17px;
       color: #000;
-  
+
     }
     .ayah{
       font-family: 'Uthmani', serif;
@@ -133,14 +147,14 @@
     }
     .info a{
       text-decoration: none;
-    
+
     }
-    
-  
+
+
 </style>
 <div class="surahh">
 <div  class="grid ">
-  @foreach($datasurahs as $datasurah)     
+  @foreach($datasurahs as $datasurah)
   <div class="col">
   <div class="list">
   <span class="surah-no">{{ $datasurah->id}}</span>
@@ -153,14 +167,14 @@
   <div class="subtitle">
   <span class="plase" >{{ $datasurah->type}}</span>
   <span class="ayah" > {{ $datasurah->whole_ayah}} </span>
-  
+
   </div></a>
   </div>
   </div>
   </div>
- 
+
     @endforeach
- 
+
 </div>
 </div>
  @endsection
@@ -169,4 +183,3 @@
 
 
 
- 

@@ -58,6 +58,7 @@
   padding: 0;
   margin: 0;
 }
+
 @font-face {
     font-family: quran-font;
     font-style: normal;
@@ -65,22 +66,75 @@
     src: url('assets/font/AmiriQuranColored.woff') format('truetype');
   }
 
-  .quran-font {
-    font-family: quran-font;
-    font-size: 26px;
-    color: #FFFFFF;
-  }
-  .quran-font-intro  p{
-     font-family: quran-font;
-     direction: rtl;
-     font-size: 26px;
-     line-height: 200%;
-     color: #000000;
-   }
-   .highlight{
+.quran-font {
+  font-family: quran-font;
+  font-size: 26px;
+  color: #FFFFFF;
+}
+.quran-font-intro  p{
+  font-family: quran-font;
+  direction: rtl;
+  font-size: 26px;
+  line-height: 200%;
+  color: #000000;
+}
+.highlight{
   background:#00FF00;
   padding:1px;
   border:#00CC00 dotted 1px;
+}
+.btt{
+  padding: 0 0 24px 20px;
+}
+.btt button{
+  color: #48b749;
+  border: 1px solid;
+  border-radius: 20px
+}
+.btt button:hover{
+  background-color: #48b749;
+    color: #fff;
+}
+.btt a{
+  color: #48b749;
+  border: 1px solid;
+  border-radius: 20px
+}
+.btt a:hover{
+  background-color: #48b749;
+    color: #fff;
+}
+.form-control{
+  color: #48b749;
+  border: 1px solid;
+  border-radius: 20px
+}
+.form-control option{
+  background-color: #48b749;
+  color: #fff;
+}
+.col-md-2{
+  direction: inherit;
+}
+.open-button{
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  padding: 0px 5px;
+}
+.open-button .icon{
+  font-size: 20px;
+}
+.open-button2{
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  padding: 2px 0px;
+  width: 0;
+}
+.open-button2 .icon{
+  font-size: 20px;
+
 }
 
 
@@ -94,7 +148,8 @@
 <br>
 <br>
 
-<ul class="list-group list-group-horizontal justify-content-left ">
+
+
 <!--
 <ul class="list-group bg-white list-group-horizontal  ">
 -->
@@ -229,55 +284,16 @@
         });
     </script>
 -->
-
-
-
+<ul class="list-group list-group-horizontal justify-content-center ">
 
 <!-- dropdown surah&& ayah : can link-->
-    <div class="col-md-3 ">
-
-             <div class="form-s2 ">
-                 <div>
-
-    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
-    <option value="#" style="color:white" >ซูเราะห์</option>
-    @foreach($datas as $data)
-    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
-   {{$data->th_name}}</option>@endforeach </select>
-    </div>
-    </div>
-    </div>
-
-    <div class ="col-md-2 ">
-
-    <option value="#" >อายะห์</option>
-    @foreach($arabics->arabic as $arabic )
-
-  <script>var urlmenu = document.getElementById( 'menu1' );
-     urlmenu.onchange = function() {
-      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
-  };</script>
-
-
-  <script>var urlmenu = document.getElementById( 'menu1' );
-     urlmenu.onchange = function() {
-      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
-  };</script>
-
-
-</ul>
-
-<!-- detail The Quran -->
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
-         <br>
-
-        <div class=" list-group list-group-horizontal justify-content-center">
 <!-- read quran-->
 <!-- Button trigger modal -->
 <div class=btt>
 <button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal">
   โหมดอ่านอัลกุรอาน
 </button>
+
 </div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -300,7 +316,8 @@
 
       </div>
       <div class="modal-footer">
-
+        <!-- botton ปิด in read quran -->
+        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
 
       </div>
     </div>
@@ -365,9 +382,15 @@
                     <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
                            @if($tafseer->status == 'อนุมัติ')
+                        <p>{{$tafseer->name}}</p>
                             <iframe id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
                             frameborder="0" allowfullscreen>
+                            </iframe>
+                            <br>
+                            <br>
+
+                          @endif
                             @endforeach
                         </div>
 
@@ -391,17 +414,52 @@
             });
         });
     </script>
-</div>
 
 
+<!-- dropdown surah&& ayah : can link-->
 
+    <div class="col-md-2 ">
+    <div class="form-s2 ">
+    <div>
+    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
+    <option value="#" style="color:white" >ซูเราะห์</option>
+    @foreach($datas as $data)
+    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
+   {{$data->th_name}}</option>@endforeach </select>
+    </div>
+    </div>
+    </div>
+
+    <div class ="col-md-2 ">
+
+    <select class="form-control  " name="menu1" id="{{$data->id}}">
+    <option value="#" >อายะห์</option>
+    @foreach($arabics->arabic as $arabic )
+   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option>
+    @endforeach
+   </select>
+
+  <script>var urlmenu = document.getElementById( 'menu1' );
+     urlmenu.onchange = function() {
+      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
+  };</script>
+
+</ul>
+<!-- detail The Quran -->
+         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+         <br>
 
          <div class="col-sm-3">
          <div class="form-group row">
         </div>
+        </div>
         @foreach($arabics->arabic as $arabic )
 
         <div class="quran-font-intro ">
+        <p>
+        {{$arabic->text}}
+        </p>
+
        </div>
        <p class="t">{{$arabic->transliteration}}</p>
        <!-- checked ststus before display on screen if user CRUD Quran -->
@@ -409,14 +467,12 @@
       <p class="latin">({{$arabic->thais->ayat}}){{$arabic->thais->Text}}</p>
        @endif
       <br>
-      <!--
+
       <audio controls >
       <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
       </audio>
-      -->
-      <div class=iconn>
-      <button class ="btn"onclick="myFunction(true)">
-      <span class=icon><ion-icon name="caret-forward-circle-outline"></ion-icon></span></button>
+
+
 
             <!-- Bookmark
 
@@ -428,6 +484,7 @@
  -->
 
    <!-- Note -->
+
    <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">
    <span class="icon"><ion-icon name="create-outline"></ion-icon></span></button>
 
@@ -463,9 +520,9 @@
 </div>
 
 <!-- Button trigger modal TAFSEER -->
+
  <button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
  <span class="icon"><ion-icon name="book-outline"></ion-icon></span></button>
- </div>
  <div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
   @if($arabic->thais->tafseer == '')  <p class="cautions">*อายะห์นี้ยังไม่มีตัฟซีรภาษาไทย*</p> @endif
@@ -473,9 +530,10 @@
   </div>
 </div>
 
-<hr>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<hr>
 
 @endforeach
 </div>

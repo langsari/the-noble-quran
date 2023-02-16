@@ -364,7 +364,7 @@ final class Test
     public static function getBackupSettings(string $className, string $methodName): array
     {
         return [
-            'backupGlobals'          => self::getBooleanAnnotationSetting(
+            'backupGlobals' => self::getBooleanAnnotationSetting(
                 $className,
                 $methodName,
                 'backupGlobals'
@@ -659,7 +659,7 @@ final class Test
                         $mode,
                         $element
                     ),
-                    (int) $e->getCode(),
+                    $e->getCode(),
                     $e
                 );
             }
