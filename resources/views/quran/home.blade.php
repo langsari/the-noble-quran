@@ -56,6 +56,7 @@
     padding-inline-start: var(--flow-side-spacing);
     -webkit-padding-end: var(--flow-side-spacing);
     padding-inline-end: var(--flow-side-spacing);
+    
     }
     .grid{
       display: grid;
@@ -63,8 +64,6 @@
       background-color:while;
       grid-gap: 10px;
       grid-template-columns: repeat(3, 1fr);
-
-
     }
     .col{
       position: relative;

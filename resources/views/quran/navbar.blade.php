@@ -31,7 +31,7 @@
 
 <body>
 
-<div class="topnav fixed-top ">
+<div class="topnav fixed-top " style="background: linear-gradient(#add100, #7b920a)">
   
 <a class="active" href="{{ route('homepage') }}">Quran.th</a>
 <ul> 

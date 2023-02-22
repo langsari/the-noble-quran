@@ -32,14 +32,22 @@
   <span class="text">เข้าสู่ระบบ</span>
 </a>
 </li>
-</a>
+
 <li class="list active">
 <a href="{{ route('register') }}">
   <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
   <span class="text">สมัคร</span>
+</a>
 </li>
+
+ 
+<li class="list active">
+<a  href="{{ route('tafseer_home') }}">
+  <span class="icon"><ion-icon name="moon-outline" id="icon"></ion-icon></span>
+  <span class="text">มืด</span>
 </a>
-</a>
+</li>
+
 <div class="indicator"></div>
 </ul>
 <script>
@@ -137,6 +145,4 @@ color: white;
 </html>
 </body>
 </html>
-
-
 

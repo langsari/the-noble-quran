@@ -135,9 +135,13 @@
       background-size:cover;
       padding-bottom:80px;
     }
+    :root{
+    --primary-color: linear-gradient(#add100, #7b920a);
+    --secondary-color: #212121;
+  }
 
     .hero{
-      background:linear-gradient(#add100, #7b920a);
+      background:var(--primary-color);
       position: static;
       top: 0;
       right: 0;
@@ -152,10 +156,8 @@
 
   }
 
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  
+  
 
   .topnav {
     position: static;
@@ -173,7 +175,7 @@
   .topnav a {
     float: left;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -222,7 +224,7 @@
   .topnav ul li a .text {
     position: absolute;
     font-size: 12px;
-    color: black;
+    color: white;
     bottom: 20px;
     font-weight: 400;
     transition: 0.25s;
@@ -235,7 +237,7 @@
   }
 
   .topnav a.active {
-    color: black;
+    color: white;
   }
 
   .top .search-container {
