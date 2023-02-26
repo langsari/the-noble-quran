@@ -52,7 +52,7 @@
   .actionn ul li .bt{
     display: flex;
     border-style: none;
-    black
+   
     
   }
   

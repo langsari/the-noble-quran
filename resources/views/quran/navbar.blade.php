@@ -29,7 +29,7 @@
 
   
 
-<body>
+<body class="bgdetail">
 <div class="detail">
 <div class="topnav">
   
@@ -53,6 +53,14 @@
   <span class="text">สมัคร</span>
 </a>
 </li>
+<div class="dark-light">
+<li class="list active">
+<a href="#" onclick="myFunction()">
+  <span  class="icon"><ion-icon name="moon-outline" ></ion-icon></span>
+  <span class="text">มืด</span>
+</a>
+</li>
+</div>
 <div class="indicator"></div>
 </ul> 
 <script>

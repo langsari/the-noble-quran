@@ -25,7 +25,7 @@
 <li class="list active">
 <a  href="{{ route('tafseer_homeuser') }}">
   <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-  <span class="text">ตัฟซีร</span>
+  <span class="text">ตัฟซีร.</span>
 </a>
 </li>
 

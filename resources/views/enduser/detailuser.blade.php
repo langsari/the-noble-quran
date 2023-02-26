@@ -96,7 +96,7 @@
       </style>
        <br>
     <br>
- <div style = background-color:#00000; class="search-area">
+ <div style = background-color:#ffffff; class="search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">
   

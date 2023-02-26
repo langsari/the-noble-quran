@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
+<script  src="{{ URL::to('js/dark-mode.js') }}"></script>
 <style>
       @font-face {
         font-family:'Uthmani' ;
@@ -49,11 +50,9 @@
         color: blue;
 
     }
-
-
-
 </style>
- <div style = background-color:#ffffff; class="search-area">
+
+ <div class="search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>
@@ -212,7 +211,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
+        <!-- <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4> -->
       </div>
       <div class="modal-body">
 
@@ -255,6 +254,7 @@
       @foreach($tafseers->qurantafseer as $tafseer )
       @if($tafseer->status == 'อนุมัติ')
       <h4>{{$tafseer->name}}(อายะห์ที่ {{$tafseer->arabic_id}})</h4>
+      <br>
         <p>
 
       {{$tafseer->qurantafseer}}
@@ -288,7 +288,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">วิดีโอตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>
+                    <!-- <h4 class="modal-title">วิดีโอตัฟซีรซูเราะห์{{$arabics->th_name}}</h4> -->
                     </div>
                     <div class="modal-body">
                         @foreach($datasurah->tafseer as $tafseer )
@@ -378,7 +378,7 @@
       <p class="latin">({{$arabic->thais->ayat}}){{$arabic->thais->Text}}</p>
        @endif
       <br>
-
+      <div class="deicon">
       <audio controls >
       <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
       </audio>
@@ -395,7 +395,7 @@
  -->
 
    <!-- Note -->
-
+    
    <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">
    <span class="icon"><ion-icon name="create-outline"></ion-icon></span></button>
 
@@ -403,8 +403,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h4>
+      <div class="closeshow">
+      <h4 class="modal-title" id="exampleModalLabel">สร้างโน้ต</h4>
+      </div>
+      <div class="backshow">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
       </div>
       <div class="modal-body">
         <form>
@@ -430,9 +434,10 @@
   </div>
 </div>
 
+
 <!-- Button trigger modal TAFSEER -->
 
- <button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
+<button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
  <span class="icon"><ion-icon name="book-outline"></ion-icon></span></button>
  <div class="collapse" id="collapseExample{{$arabic['id']}}">
   <div class="well">
@@ -441,11 +446,13 @@
   </div>
 </div>
 
-
+ </div>
+ <hr>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<hr>
+
 
 @endforeach
 </div>
+
 @endsection

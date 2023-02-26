@@ -41,7 +41,7 @@
     color: white;
     }
   .open-button {
-    background-color:#86DCEC ;
+    
     color: #F2F5F5;
     padding: 14px 16px;
     border: none;
@@ -148,6 +148,14 @@
     --boder-lis:#91740c3d;
     --no-lis:#48b749;
     --title-lis:#000;
+    --nav-detail:linear-gradient(#add100, #7b920a);
+    --bg-detail:#fff;
+    --bt-top:#48b749;
+    --text-dark:#fff;
+    --bt-ayat:#fff;
+    --bg-read:#fff;
+    --icon-close:#9e9ea7;
+
   }
  .bg{
     background-color:var(--bg-body) ;
@@ -165,6 +173,14 @@
     --boder-lis:#464b50;
     --no-lis:#ccc;
     --title-lis:#F2F5F5;
+    --nav-detail:#242526;
+    --bg-detail:#18191a;
+    --bt-top:#ccc;
+    --text-dark:#000000;
+    --bt-ayat:#464b50;
+    --bg-read:#1f2125;
+    --icon-close:#fff;
+  
   }
 /*nev */
     .hero{
@@ -384,6 +400,7 @@
     background-color:while;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
+    
   }
   .col{
     position: relative;
@@ -518,12 +535,15 @@
 
   }
 /*navbar */
+
+.bgdetail{
+  background:var(--bg-detail);
+}
   .detail{
-    background:var(--bg-hero-color);
+    background:var(--nav-detail);
   }
 
   .t {
-    background-color: white;
     color: grey;
     font-family:  serif;
     font-size: 15px;
@@ -561,47 +581,72 @@
     padding: 0 0 24px 20px;
   }
   .btt button{
-    color: #48b749;
+    color: var(--bt-top);
     border: 1px solid;
     border-radius: 20px
   }
   .btt button:hover{
-    background-color: #48b749;
-      color: #fff;
+    background-color: var(--bt-top);
+      color: var(--text-dark);
   }
   .btt a{
-    color: #48b749;
+    color: var(--bt-top);
     border: 1px solid;
     border-radius: 20px
   }
   .btt a:hover{
-    background-color: #48b749;
-      color: #fff;
+    background-color: var(--bt-top);
+      color: var(--text-dark);
   }
   .form-control{
-    color: #48b749;
+    background-color: var(--bt-ayat);
+    color: var(--bt-top);
     border: 1px solid;
     border-radius: 20px
   }
   .form-control option{
-    background-color: #48b749;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+  }
+  .arabic{
+    color: var(--text-in);
+  }
+  .quran-font-intro p{
+    color: var(--text-in);
+  }
+  .latin{
+    color: var(--text-in);
   }
   .col-md-2{
     direction: inherit;
   }
+  .closeshow{
+    display: flex;
+    float: left;
+    padding: 3px  320px 0 0;
+    color: #9ea0a7;
+    
+    }
+    .backshow{
+      display: flex;
+      float: right;
+      padding: 0 15px;
+      color: #9ea0a7;
+      
+      }
   .open-button{
-    background-color: #fff;
-    color: #000000;
+    background-color: var(--bg-body);
+    color: var(--text-in);
     border: none;
     padding: 0px 5px;
+    
   }
   .open-button .icon{
     font-size: 20px;
   }
   .open-button2{
-    background-color: #fff;
-    color: #000000;
+    background-color: var(--bg-body);
+    color: var(--text-in);
     border: none;
     padding: 2px 0px;
     width: 0;
@@ -609,4 +654,16 @@
   .open-button2 .icon{
     font-size: 20px;
   
+  }
+  .modal-content {
+    background-color:var(--bg-read) ;
+  }
+.close{
+  color:var(--icon-close) ;
+}
+.modal-body h4{
+color: var(--text-in); 
+}
+.modal-body p{
+  color: var(--text-in); 
   }
