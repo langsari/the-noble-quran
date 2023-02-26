@@ -135,13 +135,40 @@
       background-size:cover;
       padding-bottom:80px;
     }
+
     :root{
-    --primary-color: linear-gradient(#add100, #7b920a);
-    --secondary-color: #212121;
+    --bg-body:#fff;
+    --bg-hero-color: linear-gradient(#add100, #7b920a);
+    --icon-color: #fff;
+    --text-color:#fff;
+    --sreach-bar:#fff;
+    --text-in:#000;
+    --bt-search-icon:#48b749;
+    --bg-col:#fff;
+    --boder-lis:#91740c3d;
+    --no-lis:#48b749;
+    --title-lis:#000;
+  }
+ .bg{
+    background-color:var(--bg-body) ;
   }
 
+  .dark-mode{
+    --bg-body:#18191a;
+    --bg-hero-color: #18191a;
+    --icon-color: #ccc;
+    --text-color:#ccc;
+    --sreach-bar:#ccc;
+    --text-in:#ccc;
+    --bt-search-icon:#242526;
+    --bg-col:#242526;
+    --boder-lis:#464b50;
+    --no-lis:#ccc;
+    --title-lis:#F2F5F5;
+  }
+/*nev */
     .hero{
-      background:var(--primary-color);
+      background:var(--bg-hero-color);
       position: static;
       top: 0;
       right: 0;
@@ -156,8 +183,6 @@
 
   }
 
-  
-  
 
   .topnav {
     position: static;
@@ -175,12 +200,12 @@
   .topnav a {
     float: left;
     display: block;
-    color: white;
+    color: var(--icon-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-
+    
   }
   .topnav span.text {
     font-size: 17px;
@@ -224,7 +249,7 @@
   .topnav ul li a .text {
     position: absolute;
     font-size: 12px;
-    color: white;
+    color: var(--text-color);
     bottom: 20px;
     font-weight: 400;
     transition: 0.25s;
@@ -237,7 +262,7 @@
   }
 
   .topnav a.active {
-    color: white;
+    color: var(--text-color);
   }
 
   .top .search-container {
@@ -251,7 +276,7 @@
   .search-bar{
     width: 100%;
     max-width: 700px;
-    background: white;
+    background: var(--sreach-bar);
     display: flex;
     align-items: center;
     border-radius: 60px;
@@ -262,17 +287,18 @@
   .search-bar input{
     background: transparent;
     flex: 1;
-    border: 0;
+    border-radius: 60px;
+    border:none;
     outline: none;
     padding: 10px 15px;
     font-size: 20px;
-    color: #cbfff1;
+    color: var(--text-in);
   }
 
 
   .search-bar button ion-icon{
     width: 25px;
-    color: white;
+    color: var(--icon-color);
 
   }
   .search-bar button{
@@ -280,7 +306,7 @@
     border-radius: 50%;
     width: 27px;
     height: 27px;
-    background: #48b749;
+    background: var(--bt-search-icon);
     cursor: pointer;
 
   }
@@ -334,6 +360,115 @@
     align-items: center;
     padding: 1px 0 24px 12px;
   }
+/*home*/
+  .surahh{
+    max-width: 80rem;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  --flow-side-spacing: var(--spacing-small);
+  -webkit-padding-start: var(--flow-side-spacing);
+  padding-inline-start: var(--flow-side-spacing);
+  -webkit-padding-end: var(--flow-side-spacing);
+  padding-inline-end: var(--flow-side-spacing);
+  
+  }
+  .grid{
+    display: grid;
+    padding: 16px 200px;
+    background-color:while;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col{
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: var(--bg-col);
+    cursor: pointer;
+    color: initial;
+    border: 1px solid var(--boder-lis);
+    border-radius: 5px;
+
+  }
+  .list{
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  }
+
+  .surah-no{
+    font-size: 17px;
+    color: var(--no-lis);
+    font-weight: 600;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 34px;
+    height: 40px;
+    background-image: url(https://quran.kemenag.go.id/assets/images/icons/ic-frame-number.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin: 0;
+    line-height: 16px;
+    text-align: center;
+  }
+
+   .info{
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  min-width: 0;
+  margin-right: 8px;
+  padding-left: 20px;
+
+  }
+  .title{
+    display: block;
+    font-size: 17px;
+    color: var(--title-lis);
+
+  }
+  .ayah{
+    font-family: 'Uthmani', serif;
+    font-weight: normal;
+    font-size: 15px;
+    direction: rtl;
+    padding: 0;
+    margin: 0 5px 0px 20px;
+    float: right;
+  }
+  .subtitle{
+    display: block;
+    font-size: 13px;
+    color: #bdbdbd;
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: .3px
+  }
+  .col:hover{
+    background-color: #e4cb6821;
+    box-shadow: 0 4px 21px -3px rgba(51,51,51,.15);
+    border-color: #48b749;
+  }
+  .info a{
+    text-decoration: none;
+
+  }
   @media screen and (max-width: 600px) {
 
     .topnav .search-container {
@@ -381,4 +516,97 @@
       display: block;
   }
 
+  }
+/*navbar */
+  .detail{
+    background:var(--bg-hero-color);
+  }
+
+  .t {
+    background-color: white;
+    color: grey;
+    font-family:  serif;
+    font-size: 15px;
+    font-weight: normal;
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+  }
+  
+  @font-face {
+      font-family: quran-font;
+      font-style: normal;
+      font-weight: 400;
+      src: url('assets/font/AmiriQuranColored.woff') format('truetype');
+    }
+  
+  .quran-font {
+    font-family: quran-font;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .quran-font-intro  p{
+    font-family: quran-font;
+    direction: rtl;
+    font-size: 26px;
+    line-height: 200%;
+    color: #000000;
+  }
+  .highlight{
+    background:#00FF00;
+    padding:1px;
+    border:#00CC00 dotted 1px;
+  }
+  .btt{
+    padding: 0 0 24px 20px;
+  }
+  .btt button{
+    color: #48b749;
+    border: 1px solid;
+    border-radius: 20px
+  }
+  .btt button:hover{
+    background-color: #48b749;
+      color: #fff;
+  }
+  .btt a{
+    color: #48b749;
+    border: 1px solid;
+    border-radius: 20px
+  }
+  .btt a:hover{
+    background-color: #48b749;
+      color: #fff;
+  }
+  .form-control{
+    color: #48b749;
+    border: 1px solid;
+    border-radius: 20px
+  }
+  .form-control option{
+    background-color: #48b749;
+    color: #fff;
+  }
+  .col-md-2{
+    direction: inherit;
+  }
+  .open-button{
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 0px 5px;
+  }
+  .open-button .icon{
+    font-size: 20px;
+  }
+  .open-button2{
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 2px 0px;
+    width: 0;
+  }
+  .open-button2 .icon{
+    font-size: 20px;
+  
   }

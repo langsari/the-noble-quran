@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
 <style>
       @font-face {
         font-family:'Uthmani' ;
@@ -48,100 +49,10 @@
         color: blue;
 
     }
-.t {
-  background-color: white;
-  color: grey;
-  font-family:  serif;
-  font-size: 15px;
-  font-weight: normal;
-  direction: rtl;
-  padding: 0;
-  margin: 0;
-}
-
-@font-face {
-    font-family: quran-font;
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/font/AmiriQuranColored.woff') format('truetype');
-  }
-
-.quran-font {
-  font-family: quran-font;
-  font-size: 26px;
-  color: #FFFFFF;
-}
-.quran-font-intro  p{
-  font-family: quran-font;
-  direction: rtl;
-  font-size: 26px;
-  line-height: 200%;
-  color: #000000;
-}
-.highlight{
-  background:#00FF00;
-  padding:1px;
-  border:#00CC00 dotted 1px;
-}
-.btt{
-  padding: 0 0 24px 20px;
-}
-.btt button{
-  color: #48b749;
-  border: 1px solid;
-  border-radius: 20px
-}
-.btt button:hover{
-  background-color: #48b749;
-    color: #fff;
-}
-.btt a{
-  color: #48b749;
-  border: 1px solid;
-  border-radius: 20px
-}
-.btt a:hover{
-  background-color: #48b749;
-    color: #fff;
-}
-.form-control{
-  color: #48b749;
-  border: 1px solid;
-  border-radius: 20px
-}
-.form-control option{
-  background-color: #48b749;
-  color: #fff;
-}
-.col-md-2{
-  direction: inherit;
-}
-.open-button{
-  background-color: #fff;
-  color: #000000;
-  border: none;
-  padding: 0px 5px;
-}
-.open-button .icon{
-  font-size: 20px;
-}
-.open-button2{
-  background-color: #fff;
-  color: #000000;
-  border: none;
-  padding: 2px 0px;
-  width: 0;
-}
-.open-button2 .icon{
-  font-size: 20px;
-
-}
 
 
 
-      </style>
-       <br>
-    <br>
+</style>
  <div style = background-color:#ffffff; class="search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">

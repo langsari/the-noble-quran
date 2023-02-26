@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-   <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 
-<body>
+<body class="bg">
 <div class="hero">
 <div class="topnav " id=topnav> <!-- BGnav -->
-<a class="active" href="{{ route('homepage') }}">Quran.th</a>
-<ul>
+  <a class="active" href="{{ route('homepage') }}">Quran.th</a>
+  <ul>
 <li class="list active">
 <a  href="{{ route('tafseer_home') }}">
   <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
@@ -39,14 +39,20 @@
   <span class="text">สมัคร</span>
 </a>
 </li>
-
- 
+<div class="dark-light">
 <li class="list active">
-<a  href="{{ route('tafseer_home') }}">
-  <span class="icon"><ion-icon name="moon-outline" id="icon"></ion-icon></span>
+<a href="#" onclick="myFunction()">
+  <span  class="icon"><ion-icon name="moon-outline" ></ion-icon></span>
   <span class="text">มืด</span>
 </a>
 </li>
+</div>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 
 <div class="indicator"></div>
 </ul>
@@ -91,10 +97,10 @@ var currentScrollPos = window.pageYOffset;
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="search-container">
-  <form action="{{ route('web.find') }}" method="GET" class="search-bar">
-    <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
-    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
-  </form>
+     <form action="{{ route('web.find') }}" method="GET" class="search-bar">
+     <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
+     <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+     </form>
   </div>
 </div>
 
