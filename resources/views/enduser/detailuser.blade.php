@@ -1,14 +1,11 @@
 @extends('enduser.navuser')
 @section('content')
 
-<link rel="stylesheet" href=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-    </script>
-    <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
+<script  src="{{ URL::to('js/dark-mode.js') }}"></script>
 
 <style>
       @font-face {
@@ -44,61 +41,16 @@
         margin: 0;
         color: red;
         }
-        .t {
-  background-color: white;
-  color: grey;
-  font-family:  serif;
-        font-size: 15px;
-        font-weight: normal;
-        direction: rtl;
-        padding: 0;
-        margin: 0;
-}
-.select {
-  background-color: black;
-  color: white;
-  font-family:  serif;
-        font-size: 15px;
-        font-weight: normal;
-        direction: rtl;
-        padding: 0;
-        margin: 0;
-}
-
-    
-    @font-face {
-    font-family: quran-font;
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/font/AmiriQuranColored.woff') format('truetype');
-  }
-  
-  .quran-font {
-    font-family: quran-font;
-    font-size: 26px;
-    color: #FFFFFF;
-  }
-  .quran-font-intro  p{
-     font-family: quran-font;
-     direction: rtl;
-     font-size: 26px;
-     line-height: 200%;
-     color: #FFFFFF;
-   }
-.navigation {
-    position: absolute;
-    right: 12px;
-    top: 24px;
-}
+        
         
      
 
       </style>
-       <br>
-    <br>
- <div style = background-color:#ffffff; class="search-area">
- <div class="row">
-    <div class="col-md-8 mx-auto">
+<div class="search-area">
+<div class="row">
+<div class="col-md-8 mx-auto">
+<br>
+<br>
   
  <!--  vdo Tafseer link all
     <a href="{{ route('tafseer_detail',$datasurah) }}" class="link-dark" >วิดีโอตัฟซีร ซูเราะห์ {{$arabics->th_name}} </a>
@@ -210,28 +162,28 @@ $(document).ready(function(){
     -->
 
 
-<br>
+
 
  
 
-  <ul class="list-group bg-white list-group-horizontal  ">
+<ul class="list-group list-group-horizontal justify-content-center ">
 
 
 
 <!-- read -->
 <!-- Button trigger modal -->
- 
-<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal">
+<div class=btt>
+<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#myModal">
   โหมดอ่านอัลกุรอาน
 </button>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4>
+        <!-- <h4 class="modal-title" id="myModalLabel">{{$arabics->surah_arab}}</h4> -->
       </div>
       <div class="modal-body">
        
@@ -246,6 +198,7 @@ $(document).ready(function(){
     
       </div>
       <div class="modal-footer">
+        <!-- botton ปิด in read quran -->
         <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
        
       </div>
@@ -253,31 +206,28 @@ $(document).ready(function(){
   </div>
 </div>
 
-<!-- read -->
+<!-- tafseer -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal2">
+<div class=btt>
+<button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal2">
   ตัฟซีรอัลกุรอาน
 </button>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        @foreach($tafseers->qurantafseer as $tafseer ) 
-        @if($tafseer->status == 'อนุมัติ') 
-<h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
+        
       </div>
       <div class="modal-body">
        
-
-   
-        <p>
-       
-      {{$tafseer->qurantafseer}} 
-     
-      </p>
+      @foreach($tafseers->qurantafseer as $tafseer ) 
+      @if($tafseer->status == 'อนุมัติ') 
+      <h4 class="modal-title" id="myModalLabel2">{{$tafseer->name}}</h4>
+      <br>
+      <p>{{$tafseer->qurantafseer}} </p>
     <hr>
     <div class ="card-text">   
         <strong>แปลโดย : </strong>
@@ -294,48 +244,38 @@ $(document).ready(function(){
   </div>
 </div>
 
-     <!--VDO Tafseer -->
-  
-
-
-
-  <div class="bs-example">
-            <a href="#Geeks2"
-               class="btn  btn-dark"
-               data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
- 
-            <div id="Geeks2" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button"
-                                    class="close"
-                                    data-dismiss="modal"
-                                    aria-hidden="true">×</button>
-                                    <h4 class="modal-title">ตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>
-                        </div>
-                        <div class="modal-body">
-                        @foreach($datasurah->tafseer as $tafseer )
-                        <p>{{$tafseer->name}}</p>
-                            <iframe id="Geeks3" width="450" height="350"
-                           src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
-                            frameborder="0" allowfullscreen>
-                            </iframe>
-                            <br>
-                            <br>
+<!--VDO Tafseer -->
+<div class="bs-example">
+<div class=btt>
+<a href="#Geeks2" class="btn btn-outline-success" data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
+</div> 
+  <div id="Geeks2" class="modal fade">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <!-- <h4 class="modal-title">ตัฟซีรซูเราะห์{{$arabics->th_name}}</h4>-->
+  </div>
+  <div class="modal-body">
+  @foreach($datasurah->tafseer as $tafseer )
+  <p>{{$tafseer->name}}</p>
+  <!--  youtube -->
+  <iframe id="Geeks3" width="450" height="350" src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}" frameborder="0" allowfullscreen></iframe>
+  <br>
+  <br>
                           
                             
-                            @endforeach
-                        </div>
+  @endforeach
+  </div>
 
-                        <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-success" data-dismiss="modal">ปิด</button>
        
-      </div>
-                    </div>
-                </div>
-          </div>
-      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
       <script>
         $(document).ready(function() {
@@ -373,31 +313,25 @@ $(document).ready(function(){
    
 
     <!-- dropdown : can link-->
-    <div class="col-md-3 ">
-             
-             <div class="form-s2 ">
-                 <div>
-   
+    <div class="col-md-2 ">
+    <div class="form-s2 ">
+    <div>
     <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
     <option value="#"  style="color:white bg-black" >ซูเราะห์</option>
     @foreach($datas as $data)
     <option value="{{ route('surah', $data) }}" title="{{$data->th_name}}">
 {{$data->th_name}} [{{$data->whole_ayah}}]</option>@endforeach </select>
-      
     </div>
     </div>
     </div>
 
-    <div class ="col-md-3 ">
+    <div class ="col-md-2 ">
     <select class="form-control  " name="menu1" id="{{$data->id}}">
     <option value="#" class="select">อายะห์</option>
     @foreach($arabics->arabic as $arabic )  
    <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option> 
     @endforeach
    </select>
-
-   
-
 
 <script>var urlmenu = document.getElementById( 'menu1' );
  urlmenu.onchange = function() {
@@ -426,32 +360,30 @@ $(document).ready(function(){
      <li class="list-group-item  list-group-item-secondary"> <select id="ayahlist" class="ayah-list"><option  value="0" rel="0" >0-0</option>
            <option  value="1" rel="3" >1-3</option><option  value="4" rel="5" >4-5</option><option  value="6" rel="6" >6-6</option><option  value="7" rel="8" >7-8</option><option  value="9" rel="10" >9-10</option><option  value="11" rel="13" >11-13</option><option  value="14" rel="17" >14-17</option><option  value="18" rel="19" >18-19</option><option  value="20" rel="20" >20-20</option><option  value="21" rel="22" >21-22</option><option  value="23" rel="24" >23-24</option><option  value="25" rel="25" >25-25</option><option  value="26" rel="27" >26-27</option><option  value="28" rel="29" >28-29</option><option  value="30" rel="31" >30-31</option><option  value="32" rel="34" >32-34</option><option  value="35" rel="35" >35-35</option><option  value="36" rel="36" >36-36</option><option  value="37" rel="37" >37-37</option><option  value="38" rel="38" >38-38</option><option  value="39" rel="40" >39-40</option><option  value="41" rel="44" >41-44</option><option  value="45" rel="48" >45-48</option><option  value="49" rel="49" >49-49</option><option  value="50" rel="50" >50-50</option><option  value="51" rel="51" >51-51</option><option  value="52" rel="52" >52-52</option><option  value="53" rel="54" >53-54</option><option  value="55" rel="55" >55-55</option><option  value="56" rel="56" >56-56</option><option  value="57" rel="58" >57-58</option><option  value="59" rel="62" >59-62</option><option  value="63" rel="68" >63-68</option><option  value="69" rel="69" >69-69</option><option  value="70" rel="71" >70-71</option><option  selected  value="72" rel="73" >72-73</option></select>   </li>
   -->
-          </ul>
-          <br>
-  <br>
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
-         <br> 
-         
-         <div class="col-sm-3">
-                <div class="form-group row">
-                </div>
-                </div>
-                @foreach($arabics->arabic as $arabic )
-      <div class="quran-font-intro ">
-        <p>
-        {{$arabic->text}}
-        </p>
-      </div>
-      <p class="t">{{$arabic->transliteration}}</p>
-        <!-- checked ststus before display on screen if user CRUD Quran -->
-        @if($arabic->thais->status == 'อนุมัติ') 
-            <p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
-        @endif  
-            <br>
-            <audio controls >
-                <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
-            </audio>
-            <br>
+</ul>
+<!-- detail the quran -->
+<h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+<br> 
+
+<div class="col-sm-3">
+<div class="form-group row">
+</div>
+</div>
+@foreach($arabics->arabic as $arabic )
+
+<div class="quran-font-intro ">
+<p>{{$arabic->text}}</p>
+</div>
+<p class="t">{{$arabic->transliteration}}</p>
+<!-- checked ststus before display on screen if user CRUD Quran -->
+@if($arabic->thais->status == 'อนุมัติ') 
+<p class="latin">[{{$arabic->thais->ayat}}]{{$arabic->thais->Text}}</p>
+@endif  
+<br>
+<div class="deicon">
+  <audio controls >
+  <source src="/mp3/{{$arabic->thais->audio}}" type="audio/mpeg">
+  </audio>
           
             
             <!-- Bookmark
@@ -508,17 +440,21 @@ $(document).ready(function(){
 </ul>
 @endif 
   <!-- Note   -->
-<form action="{{ route('notes.store') }}" method="post">
+<form  action="{{ route('notes.store') }}" method="post">
     @csrf
-  <button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">โน๊ต</button>
-
+<button type="button" class="open-button5 "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">
+<span class="icon"><ion-icon name="create-outline"></ion-icon></span></button>
 
  <div class="modal fade" id="exampleModal{{$arabic['id']}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+      <div class="closeshow">
+      <h4 class="modal-title" id="exampleModalLabel{{$arabic['id']}}">สร้างโน้ต</h4>
+      </div>
+      <div class="backshow">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel{{$arabic['id']}}">สร้างโน้ต</h4>
+      </div> 
       </div>
       <div class="modal-body">
         <form>
@@ -625,20 +561,25 @@ $(document).ready(function(){
 
   <!-- Button trigger modal TAFSEER _TEXT2-->
 
- 
-<form><button class="open-button2 "  type="button" data-toggle="collapse"
- data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
-ตัฟซีร
-</button>
+
+<button class="open-button2 "  type="button" data-toggle="collapse" data-target="#collapseExample{{$arabic['id']}}" aria-expanded="false" aria-controls="collapseExample">
+<span class="icon"><ion-icon name="book-outline"></ion-icon></span></button>
 <div class="collapse" id="collapseExample{{$arabic['id']}}">
+
   <div class="well">
   @if($arabic->thais->tafseer == '')  <p class="cautions">*อายะห์นี้ยังไม่มีตัฟซีรภาษาไทย*</p> @endif
   <p>{{$arabic->thais->tafseer}}</p>
   </div>
 </div>
-<form>
 
-<hr></form>
+
+</div>
+<hr>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 @endforeach
 </div> 

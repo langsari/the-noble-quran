@@ -10,22 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
+
+<body class="bgdetail">
+<div class="detail">
+<div class="topnav">
   
-
-<body>
-
-<div class="hero">
-<div class="topnav fixed-top" > <!-- BGnav -->
 <a class="active" href="{{ route('homeuser') }}">Quran.th</a>
-<ul> 
+<ul>
 <li class="list active">
 <a  href="{{ route('tafseer_homeuser') }}">
   <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
-  <span class="text">ตัฟซีร.</span>
+  <span class="text">ตัฟซีร</span>
 </a>
 </li>
 
@@ -48,7 +48,17 @@
        @csrf
     </form>
 </li>
-</ul>
+
+<div class="dark-light">
+<li class="list active">
+<a href="#" onclick="myFunction()">
+  <span  class="icon"><ion-icon name="moon-outline" ></ion-icon></span>
+  <span class="text">มืด</span>
+</a>
+</li>
+</div>
+<div class="indicator"></div>
+</ul> 
 <script>
   let list = document.querySelectorAll('.list');
   function setActiveClass(){
@@ -59,31 +69,26 @@
   list.forEach((item) =>
   item.addEventListener('mouseover' , setActiveClass))
 </script>
-                            
-
-<!--
-     <div class="search-container">
-     <form action="{{ route('web.findsearch') }}" method="GET">
-      <input type="text" placeholder="ค้นหา.." name="query" value="{{ request()->input('query') }}">
-      <button type="submit">ค้นหา</button>
-    </form> -->
-  </div>
-
-  </div>
 </div>
+</div>
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  
+</div>
+</div>
+</div>
 
 </div>
 </div>
 </header>
 </div>
 <br>
-
 @yield('content')
 
 </div>
-
 <style>footer {
 text-align: center;
 padding: 3px;
@@ -108,3 +113,4 @@ color: white;
 
             
            
+

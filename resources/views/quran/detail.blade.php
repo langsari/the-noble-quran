@@ -203,7 +203,6 @@
 <button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal">
   โหมดอ่านอัลกุรอาน
 </button>
-
 </div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

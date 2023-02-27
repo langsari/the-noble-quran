@@ -90,8 +90,7 @@
     cursor: pointer;
   }
   .open-button5 {
-    background-color:#86DCEC ;
-    color: #F2F5F5;
+    
     padding: 14px 16px;
     border: none;
     cursor: pointer;
@@ -667,3 +666,14 @@ color: var(--text-in);
 .modal-body p{
   color: var(--text-in); 
   }
+
+.open-button5{
+  background-color: var(--bg-body);
+  color: var(--text-in);
+  border: none;
+  padding: 0px 5px;
+  }
+  .open-button5 .icon{
+    font-size: 20px;
+  }
+  
