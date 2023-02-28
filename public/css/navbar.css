@@ -34,12 +34,7 @@
     color: red;
 
   }
-  .foot {
-    text-align: center;
-    padding: 3px;
-    background-color:#9be2cd;
-    color: white;
-    }
+  
   .open-button {
     
     color: #F2F5F5;
@@ -117,11 +112,12 @@
   }
 
   .footer {
-      text-align: center;
-      padding: 3px;
-      background-color:#9be2cd;
-      color: white;
-    }.text {
+    text-align: center;
+    padding: 3px;
+    background-color:#9be2cd;
+    color: white;
+    }
+    .text {
 
       color: white;
       font-size: 10vw;
@@ -154,11 +150,13 @@
     --bt-ayat:#fff;
     --bg-read:#fff;
     --icon-close:#9e9ea7;
+    
 
   }
  .bg{
     background-color:var(--bg-body) ;
   }
+  
 
   .dark-mode{
     --bg-body:#18191a;
@@ -179,6 +177,8 @@
     --bt-ayat:#464b50;
     --bg-read:#1f2125;
     --icon-close:#fff;
+    
+    
   
   }
 /*nev */
@@ -190,6 +190,7 @@
       left: 0;
       z-index: 1030;
     }
+  
 
   * {
     margin: 0;
@@ -221,6 +222,11 @@
     text-decoration: none;
     font-size: 17px;
     
+  }
+  .active img{
+    width: 80;
+    height: ;
+
   }
   .topnav span.text {
     font-size: 17px;
@@ -677,3 +683,9 @@ color: var(--text-in);
     font-size: 20px;
   }
   
+  .foot {
+    text-align: center;
+    padding: 3px;
+    background-color:var(--bt-search-icon);
+    color: white;
+    }

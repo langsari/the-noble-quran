@@ -20,7 +20,7 @@
 <body class="bg">
 <div class="hero">
 <div class="topnav " id=topnav> <!-- BGnav -->
-  <a class="active" href="{{ route('homepage') }}">Quran.th</a>
+  <a class="active" href="{{ route('homepage') }}"><img src="{{ URL::to('img/logo-homes.png') }}" width="" height="40" ></a>
   <ul>
 <li class="list active">
 <a  href="{{ route('tafseer_home') }}">
@@ -90,7 +90,7 @@ var currentScrollPos = window.pageYOffset;
   <div class="row">
   <div class="quran">
     <div class="col-md-8">
-      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <img src="{{ URL::to('img/logo-arabic2.png') }}" width="373" height="373">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="search-container">
@@ -127,20 +127,15 @@ var currentScrollPos = window.pageYOffset;
 
 </div>
 
-<style>footer {
-text-align: center;
-padding: 3px;
-background-color:#9be2cd;
-color: white;
-}</style>
-<body>
 
-<footer>
+
+
+<footer class="foot">
 <p>Quran.th<br>
 <p>suraiya1707@gmail.com<p></p>
 </footer>
 
-</body>
+
 <div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
