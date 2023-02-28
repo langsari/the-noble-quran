@@ -41,11 +41,11 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
 
 
 </style>
-<div class="surahh">
+<div class="container-md p-3 border surahh">
 <div  class="grid ">
   @foreach($datasurahs as $datasurah)
   <div class="col">

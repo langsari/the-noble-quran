@@ -52,7 +52,7 @@
     }
 </style>
 
- <div class="search-area">
+ <div class="container-md search-area">
  <div class="row">
     <div class="col-md-8 mx-auto">
 <br>
@@ -194,6 +194,33 @@
         });
     </script>
 -->
+<ul class="md-12 list-group list-group-horizontal justify-content-center ">
+    <div class="col-md-2 ">
+        <div class="form-s2 ">
+        <div>
+        <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
+        <option value="#" style="color:white" >ซูเราะห์</option>
+        @foreach($datas as $data)
+        <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
+       {{$data->th_name}}</option>@endforeach </select>
+        </div>
+        </div>
+        </div>
+
+        <div class ="col-md-2 ">
+
+        <select class="form-control  " name="menu1" id="{{$data->id}}">
+        <option value="#" >อายะห์</option>
+        @foreach($arabics->arabic as $arabic )
+       <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option>
+        @endforeach
+       </select>
+
+      <script>var urlmenu = document.getElementById( 'menu1' );
+         urlmenu.onchange = function() {
+          window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
+      };</script>
+</ul>
 <ul class="list-group list-group-horizontal justify-content-center ">
 
 <!-- dropdown surah&& ayah : can link-->
@@ -201,11 +228,11 @@
 <!-- Button trigger modal -->
 <div class=btt>
 <button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal">
-  โหมดอ่านอัลกุรอาน
+  โหมดอ่านอัลกรุอ่าน
 </button>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="col-md mx-auto modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -237,11 +264,11 @@
 <!-- Button trigger modal -->
 <div class=btt>
 <button type="button" class="btn btn-outline-success " data-toggle="modal" data-target="#myModal2">
-  ตัฟซีรอัลกุรอาน
+  ตัฟซีรอัลกรุอ่าน
 </button>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="col-md mx-auto modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -279,10 +306,10 @@
      <!--VDO Tafseer -->
 
   <div class="bs-example">
-  <div class=btt>
-  <a href="#Geeks2" class="btn btn-outline-success" data-toggle="modal">ดูวิดีโอตัฟซีรอัลกุรอาน</a>
+  <div class=btt >
+  <button href="#Geeks2" class="btn btn-outline-success" data-toggle="modal">ดูวิดีโอตัฟซีร</button>
   </div>
-            <div id="Geeks2" class="modal fade">
+            <div id="Geeks2" class="col-md mx-auto modal fade">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -293,7 +320,7 @@
                         @foreach($datasurah->tafseer as $tafseer )
                            @if($tafseer->status == 'อนุมัติ')
                         <p>{{$tafseer->name}}</p>
-                            <iframe id="Geeks3" width="450" height="350"
+                            <iframe class="col-md"id="Geeks3" width="450" height="350"
                            src="https://www.youtube.com/embed/{{$tafseer->youtubeId}}"
                             frameborder="0" allowfullscreen>
                             </iframe>
@@ -328,35 +355,11 @@
 
 <!-- dropdown surah&& ayah : can link-->
 
-    <div class="col-md-2 ">
-    <div class="form-s2 ">
-    <div>
-    <select class="form-control "  name="forma" onchange="location = this.options[this.selectedIndex].value;" id="surah_list">
-    <option value="#" style="color:white" >ซูเราะห์</option>
-    @foreach($datas as $data)
-    <option value="{{ route('arabic', $data) }}" title="{{$data->th_name}}">
-   {{$data->th_name}}</option>@endforeach </select>
-    </div>
-    </div>
-    </div>
 
-    <div class ="col-md-2 ">
-
-    <select class="form-control  " name="menu1" id="{{$data->id}}">
-    <option value="#" >อายะห์</option>
-    @foreach($arabics->arabic as $arabic )
-   <option value="{{$arabic->thais->ayat}}">{{$arabic->thais->ayat}}</option>
-    @endforeach
-   </select>
-
-  <script>var urlmenu = document.getElementById( 'menu1' );
-     urlmenu.onchange = function() {
-      window.open( 'viewclass.php?classname=' + this.options[ this.selectedIndex ].value );
-  };</script>
 
 </ul>
 <!-- detail The Quran -->
-         <h4 class="arabic text-center ">[{{$arabics->surah_arab}}]{{$arabics->th_name}}</h4>
+         <h4 class="arabic text-center ">{{$arabics->th_name}}<br>[{{$arabics->surah_arab}}]</h4>
          <br>
 
          <div class="col-sm-3">
@@ -394,7 +397,7 @@
  -->
 
    <!-- Note -->
-    
+
    <button type="button" class="open-button "  data-toggle="modal" data-target="#exampleModal{{$arabic['id']}}" data-whatever="@mdo">
    <span class="icon"><ion-icon name="create-outline"></ion-icon></span></button>
 
