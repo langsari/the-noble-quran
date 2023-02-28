@@ -36,7 +36,7 @@
   }
   
   .open-button {
-    
+
     color: #F2F5F5;
     padding: 14px 16px;
     border: none;
@@ -85,7 +85,8 @@
     cursor: pointer;
   }
   .open-button5 {
-    
+    background-color:#86DCEC ;
+    color: #F2F5F5;
     padding: 14px 16px;
     border: none;
     cursor: pointer;
@@ -177,9 +178,13 @@
     --bt-ayat:#464b50;
     --bg-read:#1f2125;
     --icon-close:#fff;
+<<<<<<< HEAD
     
     
   
+=======
+
+>>>>>>> 2f4548bfbf512dd9255d9403f2a993499ff8067a
   }
 /*nev */
     .hero{
@@ -221,7 +226,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    
+
   }
   .active img{
     width: 80;
@@ -397,16 +402,18 @@
   padding-inline-start: var(--flow-side-spacing);
   -webkit-padding-end: var(--flow-side-spacing);
   padding-inline-end: var(--flow-side-spacing);
-  
+
   }
   .grid{
     display: grid;
-    padding: 16px 200px;
+    justify-content: center;
     background-color:while;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
   }
+
+
   .col{
     position: relative;
     width: 100%;
@@ -428,6 +435,13 @@
   padding: 10px 10px;
   }
 
+  .list-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+  }
+
   .surah-no{
     font-size: 17px;
     color: var(--no-lis);
@@ -436,7 +450,6 @@
     padding-right: 18px;
     width: 34px;
     height: 40px;
-    background-image: url(https://quran.kemenag.go.id/assets/images/icons/ic-frame-number.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -508,7 +521,7 @@
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
-    body {margin:2rem;}
+
 
   .modal-dialog {
         max-width: 800px;
@@ -530,9 +543,7 @@
     opacity:1;
   }
 
-  .bs-example{
-    margin: 20px;
-  }
+
   .modal-dialog iframe{
       margin: 0 auto;
       display: block;
@@ -557,14 +568,14 @@
     padding: 0;
     margin: 0;
   }
-  
+
   @font-face {
       font-family: quran-font;
       font-style: normal;
       font-weight: 400;
       src: url('assets/font/AmiriQuranColored.woff') format('truetype');
     }
-  
+
   .quran-font {
     font-family: quran-font;
     font-size: 26px;
@@ -624,27 +635,30 @@
   }
   .col-md-2{
     direction: inherit;
-  }
+    padding: 10px;
+    font-size: 15px;
+}
+
   .closeshow{
     display: flex;
     float: left;
     padding: 3px  320px 0 0;
     color: #9ea0a7;
-    
+
     }
     .backshow{
       display: flex;
       float: right;
       padding: 0 15px;
       color: #9ea0a7;
-      
+
       }
   .open-button{
     background-color: var(--bg-body);
     color: var(--text-in);
     border: none;
     padding: 0px 5px;
-    
+
   }
   .open-button .icon{
     font-size: 20px;
@@ -658,7 +672,7 @@
   }
   .open-button2 .icon{
     font-size: 20px;
-  
+
   }
   .modal-content {
     background-color:var(--bg-read) ;
@@ -667,18 +681,12 @@
   color:var(--icon-close) ;
 }
 .modal-body h4{
-color: var(--text-in); 
+color: var(--text-in);
 }
 .modal-body p{
-  color: var(--text-in); 
-  }
-
-.open-button5{
-  background-color: var(--bg-body);
   color: var(--text-in);
-  border: none;
-  padding: 0px 5px;
   }
+<<<<<<< HEAD
   .open-button5 .icon{
     font-size: 20px;
   }
@@ -689,3 +697,5 @@ color: var(--text-in);
     background-color:var(--bt-search-icon);
     color: white;
     }
+=======
+>>>>>>> 2f4548bfbf512dd9255d9403f2a993499ff8067a

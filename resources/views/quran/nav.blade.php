@@ -11,14 +11,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="{{ URL::to('css/navbar.css') }}">
     <script  src="{{ URL::to('js/dark-mode.js') }}"></script>
-
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 
-
-<body class="bg">
-<div class="hero">
+<body>
+    <div class=" bg">
+<div class="container-fluid hero">
 <div class="topnav " id=topnav> <!-- BGnav -->
   <a class="active" href="{{ route('homepage') }}"><img src="{{ URL::to('img/logo-homes.png') }}" width="" height="40" ></a>
   <ul>
@@ -90,7 +97,7 @@ var currentScrollPos = window.pageYOffset;
   <div class="row">
   <div class="quran">
     <div class="col-md-8">
-      <img src="{{ URL::to('img/logo-arabic2.png') }}" width="373" height="373">
+      <img src="{{ URL::to('img/logo-lg-w.png') }}">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="search-container">
@@ -127,10 +134,15 @@ var currentScrollPos = window.pageYOffset;
 
 </div>
 
+<style>footer {
+text-align: center;
+padding: 3px;
+background-color:#9be2cd;
+color: white;
+}</style>
+<body>
 
-
-
-<footer class="foot">
+<footer>
 <p>Quran.th<br>
 <p>suraiya1707@gmail.com<p></p>
 </footer>
