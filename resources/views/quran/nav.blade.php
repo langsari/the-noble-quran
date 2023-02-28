@@ -23,8 +23,8 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 
-<body>
-    <div class=" bg">
+<body class="bg">
+    <div class=" ">
 <div class="container-fluid hero">
 <div class="topnav " id=topnav> <!-- BGnav -->
   <a class="active" href="{{ route('homepage') }}"><img src="{{ URL::to('img/logo-homes.png') }}" width="" height="40" ></a>
@@ -97,7 +97,7 @@ var currentScrollPos = window.pageYOffset;
   <div class="row">
   <div class="quran">
     <div class="col-md-8">
-      <img src="{{ URL::to('img/logo-lg-w.png') }}">
+      <img src="{{ URL::to('img/logo-arabic6.png') }}" class="img-fluid" width="373" height="373">
       <br><br>
       <h2 class="text-capitalize lead">พระมหาคัมภีร์อัลกุรอาน</h2>
       <div class="search-container">

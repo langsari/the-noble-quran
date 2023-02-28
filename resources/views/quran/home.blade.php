@@ -45,7 +45,8 @@
 
 
 </style>
-<div class="container-md p-3 border surahh">
+<br>
+<div class="container-md p-3 surahh">
 <div  class="grid ">
   @foreach($datasurahs as $datasurah)
   <div class="col">
